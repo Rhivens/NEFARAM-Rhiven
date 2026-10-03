@@ -12,7 +12,7 @@ This file records important validation steps before the real playthrough.
 - Waiting room / configuration screen: **OK**
 - Clean exit without creating a gameplay save: **OK**
 
-## Current test
+## Current tests
 
 ### Dragonborn UI
 
@@ -23,7 +23,31 @@ Status: **VALIDATED**
 - Existing NEFARAM UI stack: **functional**
 - Dragonborn UI visual overrides: **OK**
 - No blocking compatibility issue observed
-- One window remains without the Dragonborn reskin; cosmetic only and deferred for later review
+- Safe to keep enabled in `ELEANOR Stable`
+
+### Dragonborn Reskin - Skyrim Character Sheet
+
+Status: **VALIDATED**
+
+- In-game test: **OK**
+- Character Sheet opens normally: **OK**
+- Dragonborn visual style applied correctly: **OK**
+- No visible layout or text issue observed
+- Safe to keep enabled in `ELEANOR Stable`
+
+### FWMF + Skyrim Paper Map by Caro Tuts
+
+Status: **VALIDATED**
+
+- FWMF base: `Flat World Map Framework FOMOD Lite - Rhiven` v1.9.990
+- Map: `Skyrim Paper Map by Caro Tuts for FWMF - Rhiven`
+- MO2 section: `42 - FWMF Maps - Rhiven`
+- In-game map test: **OK**
+- Paper map rendering: **OK**
+- No purple map / missing texture issue observed
+- Map markers and map behavior: **OK**
+- Caro Tuts map adds no ESP
+- FWMF plugins remain at the bottom of the plugin order, after the late NEFARAM / LOD stack
 - Safe to keep enabled in `ELEANOR Stable`
 
 ## Test entry template
