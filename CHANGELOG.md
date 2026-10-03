@@ -28,6 +28,22 @@
 - Installed `Dragonborn Reskin - Skyrim Character Sheet - Rhiven`.
 - Character Sheet reskin validated successfully in-game.
 
+### Wheeler / Perfected Wheeler
+
+- Restored Wheeler functionality using the modern Perfected Wheeler branch.
+- Installed `Wheeler - Quick Action Wheel Of Skyrim - Rhiven`.
+- Installed `Perfected Wheeler - Apocrypha Menu Framework - Rhiven`.
+- Reused NEFARAM's existing `SKSE Menu Framework` as the supported configuration framework.
+- Did **not** reinstall the legacy `dMenu` / `dMenu NG` chain.
+- Installed `Dragonborn - Wheeler Reskin - Rhiven`.
+- Installed `Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven`.
+- Confirmed Perfected Wheeler appears in the SKSE Mod Control Panel.
+- Confirmed Wheeler opens correctly in-game.
+- Confirmed resize / layout settings work correctly.
+- Initial test used the default `Caps Lock` binding; final Rhiven keymap will be rebuilt before the real playthrough.
+- Confirmed the four Wheeler mods add no ESP/plugin.
+- Wheeler stack marked **Validated**.
+
 ### FWMF / Paper Map
 
 - Created MO2 separator `42 - FWMF Maps - Rhiven`.
