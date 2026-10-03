@@ -35,6 +35,31 @@ Status: **VALIDATED**
 - No visible layout or text issue observed
 - Safe to keep enabled in `ELEANOR Stable`
 
+### Wheeler / Perfected Wheeler
+
+Status: **VALIDATED**
+
+Installed stack:
+
+- `Wheeler - Quick Action Wheel Of Skyrim - Rhiven`
+- `Perfected Wheeler - Apocrypha Menu Framework - Rhiven`
+- `Dragonborn - Wheeler Reskin - Rhiven`
+- `Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven`
+
+Validation:
+
+- In-game launch: **OK**
+- Wheeler opens correctly: **OK**
+- Perfected Wheeler detected in SKSE Menu Framework: **OK**
+- Settings panel / Mod Control Panel: **OK**
+- Resize / wheel layout controls: **OK**
+- Dragonborn reskin: **OK**
+- Edge UI color option: **OK**
+- Test binding on `Caps Lock`: **OK**
+- No ESP/plugin added by the four Wheeler mods
+- Final hotkey layout intentionally deferred until the real playthrough setup
+- Decision: keep enabled in `ELEANOR Stable`
+
 ### FWMF + Skyrim Paper Map by Caro Tuts
 
 Status: **VALIDATED**
