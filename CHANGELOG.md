@@ -22,7 +22,9 @@
 - Enabled Sovngarde Font.
 - Enabled More Informative Console patch.
 - Initial conflict review showed primarily expected UI/visual overwrites.
-- In-game validation in progress.
+- In-game validation completed successfully.
+- Dragonborn UI marked **Validated**.
+- One window remains outside the reskin; cosmetic only and deferred for later review.
 
 ### Repository
 
