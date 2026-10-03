@@ -15,7 +15,7 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | Mod | Status | Section | Reason / Notes |
 |---|---|---|---|
 | Terrain Helper - Generated INI - Rhiven | Validated | 02 - SKSE Utility Mods | Isolates generated `TerrainHelper.ini` from MO2 Overwrite |
-| Dragonborn UI - SkyUI Reskin - Rhiven | Testing | 04 - User Interface | UI reskin installed over the existing NEFARAM UI stack |
+| Dragonborn UI - SkyUI Reskin - Rhiven | Validated | 04 - User Interface | UI reskin validated in-game; existing NEFARAM UI stack kept active |
 
 ## Planned / candidates
 
