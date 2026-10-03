@@ -16,20 +16,15 @@ This file records important validation steps before the real playthrough.
 
 ### Dragonborn UI
 
-Status: **In progress**
+Status: **VALIDATED**
 
-Things to verify:
-
-- Main menu renders correctly
-- Inventory and magic menus open correctly
-- Journal / system menu works
-- Map opens correctly
-- Console and More Informative Console render correctly
-- HUD and widgets remain functional
-- No missing icons
-- No broken fonts
-- No unexpected menu scaling
-- No CTD related to UI
+- In-game test: **OK**
+- Core menus and UI: **OK**
+- Existing NEFARAM UI stack: **functional**
+- Dragonborn UI visual overrides: **OK**
+- No blocking compatibility issue observed
+- One window remains without the Dragonborn reskin; cosmetic only and deferred for later review
+- Safe to keep enabled in `ELEANOR Stable`
 
 ## Test entry template
 
