@@ -28,8 +28,11 @@ This repository is used to keep a clean and reproducible record of every change 
 
 ### Load order snapshots
 
-- [MO2 left pane](load-order/MO2-LEFT.md)
-- [MO2 right pane / plugins](load-order/MO2-RIGHT.md)
+- [Load-order index](load-order/README.md)
+- [Original NEFARAM — MO2 left pane](load-order/NEFARAM-ORIGINAL-MO2-LEFT.md)
+- [Original NEFARAM — MO2 right pane / plugins](load-order/NEFARAM-ORIGINAL-MO2-RIGHT.md)
+- [Rhiven modded — MO2 left pane](load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md)
+- [Rhiven modded — MO2 right pane / plugins](load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md)
 
 ### History
 
