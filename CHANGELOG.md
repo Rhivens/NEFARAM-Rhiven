@@ -1,5 +1,66 @@
 # Changelog
 
+## 2026-10-04
+
+### Blood architecture
+
+- Kept stock `Just Blood - Dirt and Blood Lite` for actor blood.
+- Installed `Enhanced Blood Textures - Rhiven` v4.0 in **SPID Compatible** mode.
+- Installed `Enhanced Blood Textures SE - Settings Loader (SPID Version) - Rhiven` v2.0.2.
+- Installed `EBT - Just Blood Body Patch - Rhiven` to prevent EBT body-blood overlap with Just Blood.
+- Validated the split:
+  - **EBT = environment**
+  - **Just Blood = actors**
+
+### Bathing in Skyrim Renewed
+
+- Installed `Bathing in Skyrim - Renewed - Rhiven` v2.7.11.
+- Installed source scripts and MO2 support files.
+- Enabled Base Object Swapper, Description Framework, SkyPatcher and Widget Addon compatibility.
+- Selected Zaki SOS / CBBE texture families in the BiSR FOMOD.
+- Installed `Bathing in Skyrim - BAIN (Multi-Language) - Rhiven`.
+- Confirmed the BAIN package currently provides no French language pack; localized plugin support retained for future translation work.
+
+### BiSR addon stack
+
+- Installed `Zaki 8K-4K Textures for Bathing in Skyrim Renewed - Rhiven`.
+- Installed `Bathing in Skyrim - Renewed - Animal Fat and Linen - Rhiven`.
+- Installed `Bathing in Skyrim - Generic Soap Distribution - Rhiven`.
+- Installed `Bathing in Skyrim - Renewed - Seamless Soap - Rhiven`.
+- Installed `Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES - Rhiven`.
+- Installed `Bathing in Skyrim - Wash Me - Rhiven` v1.3.
+- Wash Me FOMOD:
+  - Any follower
+  - NSFW
+  - Big basin
+- Installed original `Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven` v1.7.2.
+- Widget FOMOD set to `None of the above` because NEFARAM uses SunHelm.
+- BiSR is loaded after the Widget Addon so its Renewed compatibility patch wins.
+- Reviewed Artisan Soaps but did not retain it because Seamless Soap was preferred for the final visual stack.
+- Added `Dirtiness Lvl5 Fix for Widget Addon` to Nexus tracking only; not installed unless needed.
+
+### Animations / Pandora
+
+- Moved Malignis Animations to the bottom of `24 - Animations`.
+- Corrected Pandora output path from the game Data directory to:
+  - `C:\JEUX\NEFARAM\mods\Pandora Output`
+- Pandora detected:
+  - `FNIS_BiS_WashMe_List`
+  - `FNIS_Bathing_in_Skyrim_List`
+  - `FNIS_Bathing_in_Skyrim_Malignis_List`
+- Pandora generation completed successfully with **38,349 total animations added**.
+
+### Validation
+
+- Game launch: **OK**
+- New BiSR MCM/options: **OK**
+- Blood options / MCM: **OK**
+- Animations: **OK**
+- No blocking animation or compatibility issue observed.
+- Blood + hygiene stack marked **Validated**.
+- Heavy-plugin count after the stack: **203**.
+- Added dedicated documentation: `docs/09-SURVIVAL-BLOOD-HYGIENE.md`.
+
 ## 2026-10-03
 
 ### Baseline
