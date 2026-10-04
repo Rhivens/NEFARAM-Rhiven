@@ -78,7 +78,7 @@ Status: **VALIDATED**
 
 - FWMF base: `Flat World Map Framework FOMOD Lite - Rhiven` v1.9.990
 - Map: `Skyrim Paper Map by Caro Tuts for FWMF - Rhiven`
-- MO2 section: `42 - FWMF Maps - Rhiven`
+- MO2 section: `43 - FWMF Maps - Rhiven`
 - In-game map test: **OK**
 - Paper map rendering: **OK**
 - No purple map / missing texture issue observed
@@ -143,6 +143,33 @@ Status: **PREPARED — IN-GAME VISUAL VALIDATION PENDING**
 - Added outfit plugins are already ESL-flagged / ESP-FE
 - Personal outfit plugins kept together before FWMF, preserving the late-loader / generated-plugin architecture
 - Next step: in-game visual / physics validation
+
+### Lakeview Manor - As It Should Be
+
+Status: **INSTALLED — GAMEPLAY VALIDATION PENDING**
+
+Installed stack:
+
+- `Lakeview. Manor - As It Should Be - Rhiven`
+- `Lakeview Manor - As It Should Be - (CC) Fishing Compatibility Patch - Rhiven`
+- `Lakeview Manor - As It Should Be - FR - Rhiven`
+
+MO2 section:
+
+- `41 - Homes Eleanor`
+
+Validation cannot be completed immediately because normal Hearthfire progression is required first:
+
+- complete the required Falkreath Jarl progression;
+- obtain and purchase the Lakeview Manor plot;
+- build the manor far enough to access the affected areas.
+
+When available in the real playthrough, test exterior placement, interior, cellar, lighting, activators, storage, Fishing compatibility and NPC navigation.
+
+Decision:
+
+- keep installed;
+- do **not** mark Validated until Lakeview Manor can be tested in normal gameplay.
 
 ## Test entry template
 
