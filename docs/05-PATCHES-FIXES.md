@@ -12,6 +12,45 @@ This file documents every Rhiven-specific compatibility patch, manual fix, gener
 - Action: moved into its own dedicated mod
 - Reason: keep MO2 Overwrite clean and preserve stock files
 
+### EBT / Just Blood body blood separation
+
+- **Target mods:** Enhanced Blood Textures 4.0 + Just Blood - Dirt and Blood Lite
+- **Patch:** `EBT - Just Blood Body Patch - Rhiven`
+- **Problem:** EBT and Just Blood can both provide actor body blood visuals
+- **Fix:** neutralize EBT body blood decals and leave actor blood to Just Blood
+- **Load-order requirement:** patch must load after EBT in the MO2 left pane
+- **Test status:** **VALIDATED**
+- **Notes:** no ESP/plugin added
+
+### Widget Addon compatibility with Bathing in Skyrim Renewed
+
+- **Target mods:** Widget Addon 1.7.2 + Bathing in Skyrim Renewed 2.7.11
+- **Problem:** original widget targets the legacy Bathing in Skyrim implementation
+- **Fix:** enable the Widget Addon compatibility option in the BiSR FOMOD
+- **Load-order requirement:** Widget Addon above BiSR so the BiSR compatibility files win conflicts
+- **Test status:** **VALIDATED**
+- **Notes:** `Dirtiness Lvl5 Fix` remains tracked but intentionally not installed unless level-5 dirtiness breaks the widget
+
+### ConsoleUtil compatibility for Wash Me
+
+- **Target mod:** Bathing in Skyrim - Wash Me - Renewed
+- **Problem:** Nexus lists ConsoleUtilSSE NG as a recommended optional dependency
+- **Decision:** do **not** install ConsoleUtilSSE NG because NEFARAM already uses `ConsoleUtil Extended`
+- **Reason:** ConsoleUtil Extended is intended as the replacement implementation and duplicate ConsoleUtil installs should be avoided
+- **Test status:** **VALIDATED**
+
+### Pandora output path correction
+
+- **Tool:** Pandora Behaviour Engine
+- **Problem:** Output Folder was pointing directly to `Game Root\Data`
+- **Fix:** changed Pandora Output Folder to:
+  - `C:\JEUX\NEFARAM\mods\Pandora Output`
+- **Skyrim Data remains:**
+  - `C:\JEUX\NEFARAM\Game Root\Data`
+- **Rule:** output points to the root of the MO2 `Pandora Output` mod, not to `meshes` or another subfolder
+- **Test status:** **VALIDATED**
+- **Result:** Pandora generation completed successfully
+
 ## Future patch template
 
 ### Patch name
