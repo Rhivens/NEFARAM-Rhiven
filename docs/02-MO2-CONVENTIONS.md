@@ -36,7 +36,11 @@ Examples:
 - `03 - Fixes`
 - `04 - User Interface`
 - ...
-- `41 - Added Mods`
+- `41 - Homes Eleanor`
+- `42 - Added Mods (En attente)`
+- `43 - FWMF Maps - Rhiven`
+
+The `42 - Added Mods (En attente)` block is intentionally temporary and can be renamed once its contents form a coherent category.
 
 ## General rule
 
@@ -47,3 +51,5 @@ Whenever practical:
 3. document why the override exists;
 4. test after each logical modification block;
 5. avoid adding/removing large scripted mods after the real playthrough begins.
+
+MO2 left-pane separators are organizational only. Right-pane plugin placement still follows each mod's actual records, dependencies and compatibility requirements; worldspace, cell, navmesh, landscape or similar content should not be forced into a generic late-load parking zone.
