@@ -60,6 +60,18 @@ Validation:
 - Final hotkey layout intentionally deferred until the real playthrough setup
 - Decision: keep enabled in `ELEANOR Stable`
 
+### Compare Equipment NG 0.3.18
+
+Status: **VALIDATED**
+
+- Installed in `04 - User Interface` after the Dragonborn / Wheeler reskin block
+- Pure SKSE implementation: **no ESP/plugin**
+- Equipment comparison windows: **OK**
+- Difference indicators: **OK**
+- Armor-type mismatch color warning: **OK**
+- Dragonborn UI compatibility during test: **OK**
+- Decision: keep enabled in `ELEANOR Stable`
+
 ### FWMF + Skyrim Paper Map by Caro Tuts
 
 Status: **VALIDATED**
@@ -116,6 +128,21 @@ Decision:
 
 - keep the complete stack enabled in `ELEANOR Stable`
 - `Dirtiness Lvl5 Fix` remains tracked only and will be installed only if the widget fails at dirtiness level 5
+
+### Eleanor outfit block / BodySlide
+
+Status: **PREPARED — IN-GAME VISUAL VALIDATION PENDING**
+
+- Created separator `15.1 - Outfits Eleanor`
+- Installed the current personal outfit batch
+- Created dedicated `Bodyslide Output - Eleanor`
+- Output path: `C:\JEUX\NEFARAM\mods\Bodyslide Output - Eleanor`
+- BodySlide preset: `- Zeroed Sliders -`
+- BodySlide generation: **COMPLETED**
+- MME Milk Harness v3: CBBE 3BA **CM** variants selected
+- Added outfit plugins are already ESL-flagged / ESP-FE
+- Personal outfit plugins kept together before FWMF, preserving the late-loader / generated-plugin architecture
+- Next step: in-game visual / physics validation
 
 ## Test entry template
 
