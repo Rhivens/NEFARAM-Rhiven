@@ -27,6 +27,7 @@ This repository is used to keep a clean and reproducible record of every change 
 - [08 - Testing & validation](docs/08-TESTING.md)
 - [09 - Survival, blood & hygiene](docs/09-SURVIVAL-BLOOD-HYGIENE.md)
 - [10 - Eleanor outfits](docs/10-OUTFITS-ELEANOR.md)
+- [11 - Home Eleanor](docs/11-HOME-ELEANOR.md)
 
 ### Load order snapshots
 
