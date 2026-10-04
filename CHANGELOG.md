@@ -2,6 +2,18 @@
 
 ## 2026-10-04
 
+### User Interface / QoL
+
+- Installed `Compare Equipment NG` v0.3.18 in `04 - User Interface`.
+- Kept QuickLoot IE optional / not required for this setup.
+- Confirmed the mod is pure SKSE and adds no ESP/plugin.
+- In-game validation:
+  - comparison cards: **OK**
+  - item differences: **OK**
+  - armor-type mismatch color warning: **OK**
+  - Dragonborn UI compatibility: **OK**
+- Compare Equipment NG marked **Validated**.
+
 ### Blood architecture
 
 - Kept stock `Just Blood - Dirt and Blood Lite` for actor blood.
@@ -49,6 +61,35 @@
   - `FNIS_Bathing_in_Skyrim_List`
   - `FNIS_Bathing_in_Skyrim_Malignis_List`
 - Pandora generation completed successfully with **38,349 total animations added**.
+
+### Eleanor outfits / BodySlide
+
+- Created dedicated separator `15.1 - Outfits Eleanor`.
+- Added the first personal Eleanor outfit batch:
+  - Invicta Couture Black Rose
+  - Silver Witch
+  - DX Fetish Fashion Volume II
+  - Invicta Couture Lingerie
+  - Chain Bikini Armor
+  - Dark Rebel
+  - Aradia Bikini
+  - Aether
+  - Lady Ritual
+  - Bisquits Priestess of Mara
+  - Forgotten Princess
+  - COCO 2B Wedding Outfit
+  - MME Milk Harness v3
+- Kept required BHUNP source packages for the Invicta conversions while using their CBBE 3BA conversions for Eleanor.
+- Created dedicated generated-output mod `Bodyslide Output - Eleanor`.
+- Corrected BodySlide output path to:
+  - `C:\JEUX\NEFARAM\mods\Bodyslide Output - Eleanor`
+- Used `- Zeroed Sliders -` to preserve OBody NG morph handling.
+- Generated the full added-outfit BodySlide batch.
+- Selected CBBE 3BA **Complex Material (CM)** variants for MME Milk Harness v3 instead of PBR.
+- Confirmed the newly added outfit plugins are already ESL-flagged / ESP-FE.
+- Adopted a plugin-order convention that keeps personal additions together before FWMF while preserving the technical late-loader / generated-plugin structure.
+- Added dedicated documentation: `docs/10-OUTFITS-ELEANOR.md`.
+- In-game visual / physics validation of the outfit batch remains pending.
 
 ### Validation
 
