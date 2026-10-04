@@ -75,6 +75,48 @@ Status: **VALIDATED**
 - FWMF plugins remain at the bottom of the plugin order, after the late NEFARAM / LOD stack
 - Safe to keep enabled in `ELEANOR Stable`
 
+### Blood + Bathing in Skyrim Renewed stack
+
+Status: **VALIDATED**
+
+Core design:
+
+- EBT = environment
+- Just Blood = actors
+- BiSR = hygiene
+- SunHelm = needs
+- Campfire = camping
+
+Validation:
+
+- Enhanced Blood Textures 4.0 SPID: **OK**
+- EBT Settings Loader SPID: **OK**
+- Just Blood retained: **OK**
+- EBT / Just Blood body patch: **OK**
+- Bathing in Skyrim Renewed 2.7.11 MCM detected: **OK**
+- Blood-related MCM/options detected: **OK**
+- BiSR addon stack detected: **OK**
+- Widget Addon detected and patched by BiSR: **OK**
+- Malignis animations: **OK**
+- Wash Me - Renewed: **OK**
+- No animation error observed
+- No blocking file conflict observed in the final stack
+- Plugin count after stack: **203 heavy plugins**
+
+Pandora validation:
+
+- `FNIS_BiS_WashMe_List`: detected
+- `FNIS_Bathing_in_Skyrim_List`: detected
+- `FNIS_Bathing_in_Skyrim_Malignis_List`: detected
+- Total animations added: **38,349**
+- Generation completed successfully
+- Final Pandora output isolated in the MO2 `Pandora Output` mod
+
+Decision:
+
+- keep the complete stack enabled in `ELEANOR Stable`
+- `Dirtiness Lvl5 Fix` remains tracked only and will be installed only if the widget fails at dirtiness level 5
+
 ## Test entry template
 
 ### YYYY-MM-DD — Change tested
