@@ -25,6 +25,7 @@ This repository is used to keep a clean and reproducible record of every change 
 - [06 - User Interface](docs/06-UI.md)
 - [07 - French translations](docs/07-TRANSLATIONS-FR.md)
 - [08 - Testing & validation](docs/08-TESTING.md)
+- [09 - Survival, blood & hygiene](docs/09-SURVIVAL-BLOOD-HYGIENE.md)
 
 ### Load order snapshots
 
