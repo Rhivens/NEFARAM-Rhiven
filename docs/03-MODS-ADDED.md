@@ -56,6 +56,9 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | Lakeview. Manor - As It Should Be - Rhiven | Installed | 41 - Homes Eleanor | Eleanor's future Lakeview Manor overhaul; full gameplay validation pending access to the Hearthfire property |
 | Lakeview Manor - As It Should Be - (CC) Fishing Compatibility Patch - Rhiven | Installed | 41 - Homes Eleanor | Compatibility patch for Creation Club Fishing content |
 | Lakeview Manor - As It Should Be - FR - Rhiven | Installed | 41 - Homes Eleanor | French translation layer for the Lakeview Manor overhaul |
+| Fertility Adventures Redux - Rhiven | Testing | 42 - Fertility System | Narrative pregnancy / partner reaction layer; installed before BFNG so the BFNG FOMOD integration can detect and patch it |
+| Beeing Female NG 3.6.0 - Rhiven | Testing | 42 - Fertility System | Preferred fertility / pregnancy framework replacing the optional stock Fertility Mode; technical initialization and Pandora compatibility validated |
+| Beeing Female NG - HUD Re-Alignment Patch - Rhiven | Testing | 42 - Fertility System | Repacked preset-only addon adding Align1-Align6 INI layouts under BeeingFemale/HUD; structural compatibility with BFNG 3.6.0 verified, final in-game placement pending |
 
 ## Reviewed but not retained
 
@@ -63,9 +66,12 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 |---|---|---|
 | Artisan Soaps for Bathing in Skyrim Renewed | Rejected | Visual overlap with the selected Seamless Soap stack; simpler setup preferred |
 | Dirtiness Lvl5 Fix for Widget Addon - Bathing In Skyrim Renewed | Planned | Tracked on Nexus but not installed; only needed if the widget disappears at dirtiness level 5 |
+| Inflation Framework NG | Planned | Tracked on Nexus only; reserve option if BFNG / FHU / MME BodyMorph coexistence cannot be tuned cleanly through their native MCM settings |
 
 ## Planned / candidates
 
 No Wheeler-related legacy dependency is currently planned. The older `dMenu + dMenu NG + Wheeler Refined` stack was intentionally not restored because Perfected Wheeler works correctly with the SKSE Menu Framework already included in NEFARAM 17.3.6.
 
 The dirtiness level 5 widget fix remains a conditional candidate only.
+
+`Inflation Framework NG` is also tracked only. The first real-playthrough tests will use native BodyMorph handling in BFNG, Fill Her Up and Milk Mod Economy; the framework will be reconsidered only if a reproducible morph-coexistence problem appears.

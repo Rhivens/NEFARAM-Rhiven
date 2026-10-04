@@ -28,6 +28,7 @@ This repository is used to keep a clean and reproducible record of every change 
 - [09 - Survival, blood & hygiene](docs/09-SURVIVAL-BLOOD-HYGIENE.md)
 - [10 - Eleanor outfits](docs/10-OUTFITS-ELEANOR.md)
 - [11 - Home Eleanor](docs/11-HOME-ELEANOR.md)
+- [12 - Fertility system](docs/12-FERTILITY-SYSTEM.md)
 
 ### Load order snapshots
 

@@ -171,6 +171,77 @@ Decision:
 - keep installed;
 - do **not** mark Validated until Lakeview Manor can be tested in normal gameplay.
 
+### Beeing Female NG 3.6.0 + Fertility Adventures Redux
+
+Status: **TECHNICAL INTEGRATION VALIDATED — GAMEPLAY / MCM TUNING PENDING**
+
+Installed stack:
+
+- `Fertility Adventures Redux - Rhiven`
+- `Beeing Female NG 3.6.0 - Rhiven`
+- `Beeing Female NG - HUD Re-Alignment Patch - Rhiven`
+
+BFNG FOMOD integration:
+
+- Open Animation Replacer: **selected**
+- Fertility Adventures Redux patch: **selected**
+- SPID item distribution: **selected**
+- P.A.I.A base patch: **selected**
+- P.A.I.A Expansion patch: **selected**
+- SlaveTats womb / birth-count tattoo packs: **selected**
+- FMR-Immersive Effects patch: **not selected**
+- RS Children child actors: **not selected**
+- Creature child actors: **not selected**
+
+Initial launch:
+
+- BFNG 3.6.0 initialization: **OK**
+- BFNG MCM registration: **OK**
+- Skyrim / SKSE / PapyrusUtil checks: **OK**
+- SexLab compatibility: **OK**
+- Bathing in Skyrim compatibility: **OK**
+- BF item distribution: **OK**
+- Console: **no blocking BFNG error observed**
+- Initial animation status before regeneration: `BeeingFemale Animations = NO COMPATIBILITY`
+
+Pandora regeneration:
+
+- `FNIS_BeeingFemale_List`: **detected**
+- Total animations added: **38,367**
+- Generation completed successfully
+- Post-Pandora BFNG status: `BeeingFemale Animations = COMPATIBLE`
+
+HUD Re-Alignment Patch:
+
+- original archive inspected before installation
+- preset structure compared with BFNG 3.6.0 `default.ini` / `LeftOver.ini`
+- same current widget sections / key structure confirmed
+- archive cleaned and repacked without the root README that confused MO2
+- final path: `BeeingFemale/HUD/Align1.ini` through `Align6.ini`
+- final visual preset selection: **deferred**
+
+Design decisions for the definitive playthrough:
+
+- stock optional `Fertility Mode`: **OFF**
+- pregnancy scope: **player only**
+- NPC pregnancy: **OFF**
+- child output: **Gem**
+- BFNG visual scaling: **BodyMorph / CBBE 3BA profile**
+- SkyChild migration: **rejected for this integration**
+- existing `Simple Children` stack: **kept unchanged**
+- `Inflation Framework NG`: **tracked only / not installed**
+- FHU / MME / BFNG morph amplitudes: tune natively in MCM first
+- full MCM configuration intentionally deferred until the definitive character start and NEFARAM difficulty preset selection
+
+Heavy-plugin count at this stage: **211**.
+
+Decision:
+
+- keep the BFNG / FAR stack enabled;
+- translations still pending;
+- do not perform final gameplay tuning on the temporary test character.
+
+
 ## Test entry template
 
 ### YYYY-MM-DD — Change tested

@@ -2,6 +2,49 @@
 
 ## 2026-10-04
 
+### Fertility system / Beeing Female NG
+
+- Kept stock optional `Fertility Mode` disabled.
+- Installed `Fertility Adventures Redux - Rhiven`.
+- Installed `Beeing Female NG 3.6.0 - Rhiven`.
+- Installed a cleaned / repacked `Beeing Female NG - HUD Re-Alignment Patch - Rhiven` containing only:
+  - `BeeingFemale/HUD/Align1.ini` through `Align6.ini`
+- BFNG FOMOD selections:
+  - Open Animation Replacer
+  - Fertility Adventures Redux patch
+  - SPID item distribution
+  - P.A.I.A base patch
+  - P.A.I.A Expansion patch
+  - SlaveTats womb / birth-count tattoo packs
+- Deliberately skipped:
+  - FMR-Immersive Effects patch
+  - RS Children child actors
+  - Creature child actors
+  - SkyChild integration
+- Confirmed NEFARAM uses `Simple Children`; no child-replacer migration was introduced.
+- `Inflation Framework NG` reviewed and placed on Nexus tracking only; not installed unless native BodyMorph coexistence proves insufficient.
+- Initial game launch:
+  - BFNG 3.6.0 initialized correctly
+  - MCM detected
+  - SexLab compatibility: OK
+  - Bathing in Skyrim compatibility: OK
+  - BF items distributed correctly through the selected integration
+  - console showed no BFNG blocking error
+- Pandora regenerated after BFNG installation:
+  - `FNIS_BeeingFemale_List` detected
+  - generation completed successfully
+  - **38,367 total animations added**
+- Re-test after Pandora:
+  - `BeeingFemale Animations = COMPATIBLE`
+- Intended real-playthrough configuration is documented but **not applied yet**:
+  - player pregnancy only
+  - NPC pregnancy disabled
+  - birth output = Gem
+  - BodyMorph profile = CBBE 3BA
+  - final HUD / morph amplitudes / fertility probabilities deferred to the global MCM setup after the definitive character start
+- Heavy-plugin count at this stage: **211**.
+- Added dedicated documentation: `docs/12-FERTILITY-SYSTEM.md`.
+
 ### Eleanor home / Lakeview Manor
 
 - Created dedicated MO2 separator `41 - Homes Eleanor`.
