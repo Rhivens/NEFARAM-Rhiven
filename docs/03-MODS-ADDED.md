@@ -22,8 +22,8 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | Dragonborn - Wheeler Reskin - Rhiven | Validated | 04 - User Interface | Dragonborn-style Wheeler appearance; validated in-game |
 | Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven | Validated | 04 - User Interface | Optional Edge UI color scheme loaded after the main Wheeler reskin |
 | Compare Equipment NG 0.3.18 | Validated | 04 - User Interface | Pure SKSE QoL mod; comparison cards, difference indicators and armor-type warning tested successfully; no ESP/plugin |
-| Flat World Map Framework FOMOD Lite - Rhiven | Validated | 42 - FWMF Maps - Rhiven | FWMF 1.9.990 base framework; installed with Skyrim map support and current NEFARAM compatibility patches |
-| Skyrim Paper Map by Caro Tuts for FWMF - Rhiven | Validated | 42 - FWMF Maps - Rhiven | Paper map assets for Skyrim; no ESP added; validated in-game |
+| Flat World Map Framework FOMOD Lite - Rhiven | Validated | 43 - FWMF Maps - Rhiven | FWMF 1.9.990 base framework; installed with Skyrim map support and current NEFARAM compatibility patches |
+| Skyrim Paper Map by Caro Tuts for FWMF - Rhiven | Validated | 43 - FWMF Maps - Rhiven | Paper map assets for Skyrim; no ESP added; validated in-game |
 | Enhanced Blood Textures - Rhiven | Validated | 30 - Character Visual | EBT 4.0 installed in SPID mode; used for environmental blood visuals |
 | Enhanced Blood Textures SE - Settings Loader (SPID Version) - Rhiven | Validated | 30 - Character Visual | Settings Loader matched to the EBT SPID install |
 | EBT - Just Blood Body Patch - Rhiven | Validated | 30 - Character Visual | Disables EBT body blood decals so Just Blood remains responsible for actor blood |
@@ -53,6 +53,9 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | COCO 2B Wedding Outfit - CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA outfit; BodySlide generated |
 | [Predator] MME Milk Harness v3 - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA Complex Material variants selected; BodySlide generated |
 | Bodyslide Output - Eleanor | Installed | 15.1 - Outfits Eleanor | Dedicated generated-mesh output for personal outfit additions |
+| Lakeview. Manor - As It Should Be - Rhiven | Installed | 41 - Homes Eleanor | Eleanor's future Lakeview Manor overhaul; full gameplay validation pending access to the Hearthfire property |
+| Lakeview Manor - As It Should Be - (CC) Fishing Compatibility Patch - Rhiven | Installed | 41 - Homes Eleanor | Compatibility patch for Creation Club Fishing content |
+| Lakeview Manor - As It Should Be - FR - Rhiven | Installed | 41 - Homes Eleanor | French translation layer for the Lakeview Manor overhaul |
 
 ## Reviewed but not retained
 
