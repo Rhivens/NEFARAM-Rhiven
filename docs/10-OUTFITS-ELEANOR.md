@@ -85,7 +85,7 @@ Current Rhiven plugin-order convention:
 - personal additions without a specific late-load requirement are kept together near the bottom of the normal plugin order
 - they are placed **before FWMF**
 - technical late-loader / generated-plugin ordering is preserved
-- FWMF remains the final dedicated map block
+- FWMF remains the final dedicated map block under `43 - FWMF Maps - Rhiven`
 
 This avoids scattering personal outfit plugins throughout the stock NEFARAM load order while keeping the late-load architecture intact.
 
