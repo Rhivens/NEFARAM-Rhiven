@@ -21,6 +21,7 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | Perfected Wheeler - Apocrypha Menu Framework - Rhiven | Validated | 04 - User Interface | Modern Wheeler implementation using the existing NEFARAM SKSE Menu Framework; no dMenu / dMenu NG needed |
 | Dragonborn - Wheeler Reskin - Rhiven | Validated | 04 - User Interface | Dragonborn-style Wheeler appearance; validated in-game |
 | Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven | Validated | 04 - User Interface | Optional Edge UI color scheme loaded after the main Wheeler reskin |
+| Compare Equipment NG 0.3.18 | Validated | 04 - User Interface | Pure SKSE QoL mod; comparison cards, difference indicators and armor-type warning tested successfully; no ESP/plugin |
 | Flat World Map Framework FOMOD Lite - Rhiven | Validated | 42 - FWMF Maps - Rhiven | FWMF 1.9.990 base framework; installed with Skyrim map support and current NEFARAM compatibility patches |
 | Skyrim Paper Map by Caro Tuts for FWMF - Rhiven | Validated | 42 - FWMF Maps - Rhiven | Paper map assets for Skyrim; no ESP added; validated in-game |
 | Enhanced Blood Textures - Rhiven | Validated | 30 - Character Visual | EBT 4.0 installed in SPID mode; used for environmental blood visuals |
@@ -36,6 +37,22 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | Bathing in Skyrim - Wash Me - Rhiven | Validated | 21 - Survival | Wash Me Renewed 1.3; Any follower / NSFW / Big basin |
 | Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Validated | 21 - Survival | Original widget addon 1.7.2, patched by BiSR for Renewed compatibility |
 | Malignis Animations - Bathing in Skyrim Renewed - Rhiven | Validated | 24 - Animations | BiSR bathing animations; placed at the bottom of the animation block |
+| Invicta Couture Black Rose BHUNPv4 Extra 2K - Rhiven | Installed | 15.1 - Outfits Eleanor | Original asset / texture package for the 3BA conversion |
+| Invicta Couture Black Rose CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA conversion; BodySlide generated |
+| [qdaro] Silver Witch 3BA SMP - Rhiven | Installed | 15.1 - Outfits Eleanor | 3BA SMP outfit; BodySlide generated |
+| DX Fetish Fashion Volume 2 SE - CBBE Physics 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | 3BA outfit; BodySlide generated |
+| Invicta Couture Lingerie BHUNP SMP - Rhiven | Installed | 15.1 - Outfits Eleanor | Original asset / texture package for the 3BA conversion |
+| Invicta Couture Lingerie CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA conversion; BodySlide generated |
+| Chain Bikini Armor - CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA outfit; BodySlide generated |
+| ELLE - Dark Rebel 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | 3BA outfit; BodySlide generated |
+| Minou Aradia Bikini SE 3BAv2 - Rhiven | Installed | 15.1 - Outfits Eleanor | 3BAv2 outfit; BodySlide generated |
+| Aether CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA outfit; BodySlide generated |
+| Lady Ritual CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA outfit; BodySlide generated |
+| Bisquits Priestess of Mara - Rhiven | Installed | 15.1 - Outfits Eleanor | Outfit added to Eleanor wardrobe block; BodySlide generated where applicable |
+| Forgotten Princess - CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA outfit; BodySlide generated |
+| COCO 2B Wedding Outfit - CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA outfit; BodySlide generated |
+| [Predator] MME Milk Harness v3 - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA Complex Material variants selected; BodySlide generated |
+| Bodyslide Output - Eleanor | Installed | 15.1 - Outfits Eleanor | Dedicated generated-mesh output for personal outfit additions |
 
 ## Reviewed but not retained
 
