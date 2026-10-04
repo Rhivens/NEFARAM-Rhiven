@@ -2,6 +2,20 @@
 
 ## 2026-10-04
 
+### Eleanor home / Lakeview Manor
+
+- Created dedicated MO2 separator `41 - Homes Eleanor`.
+- Created temporary holding separator `42 - Added Mods (En attente)`.
+- Renumbered the dedicated map block to `43 - FWMF Maps - Rhiven`.
+- Installed:
+  - `Lakeview. Manor - As It Should Be - Rhiven`
+  - `Lakeview Manor - As It Should Be - (CC) Fishing Compatibility Patch - Rhiven`
+  - `Lakeview Manor - As It Should Be - FR - Rhiven`
+- Lakeview is intentionally isolated from NEFARAM's existing player-home block and related fixes / patches.
+- Full in-game validation is **pending** because normal Hearthfire progression is required: Falkreath Jarl progression, plot purchase and manor construction.
+- Added dedicated documentation: `docs/11-HOME-ELEANOR.md`.
+
+
 ### User Interface / QoL
 
 - Installed `Compare Equipment NG` v0.3.18 in `04 - User Interface`.
@@ -148,7 +162,7 @@
 
 ### FWMF / Paper Map
 
-- Created MO2 separator `42 - FWMF Maps - Rhiven`.
+- Created MO2 separator `43 - FWMF Maps - Rhiven` (renumbered from the original personal `42` separator after adding Eleanor's home block).
 - Installed `Flat World Map Framework FOMOD Lite - Rhiven` v1.9.990.
 - Selected Flat Map Markers AE Updated for Skyrim 1.6.629–1.7.99.
 - Selected Skyrim-only map whitelist for the initial setup.
