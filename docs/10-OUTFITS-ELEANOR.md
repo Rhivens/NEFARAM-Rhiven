@@ -38,24 +38,39 @@ For the MME Milk Harness v3, the selected BodySlide variants are the **CBBE 3BA 
 
 ## Installed outfit stack
 
-Current MO2 order inside `15.1 - Outfits Eleanor`:
+Final MO2 order inside `15.1 - Outfits Eleanor`:
 
 1. `Invicta Couture Black Rose BHUNPv4 Extra 2K - Rhiven`
 2. `Invicta Couture Black Rose CBBE 3BA - Rhiven`
-3. `[qdaro] Silver Witch 3BA SMP - Rhiven`
-4. `DX Fetish Fashion Volume 2 SE - CBBE Physics 3BA - Rhiven`
-5. `Invicta Couture Lingerie BHUNP SMP - Rhiven`
-6. `Invicta Couture Lingerie CBBE 3BA - Rhiven`
+3. `Invicta Couture Lingerie BHUNP SMP - Rhiven`
+4. `Invicta Couture Lingerie CBBE 3BA - Rhiven`
+5. `[qdaro] Silver Witch 3BA SMP - Rhiven`
+6. `DX Fetish Fashion Volume 2 SE - CBBE Physics 3BA - Rhiven`
 7. `Chain Bikini Armor - CBBE 3BA - Rhiven`
 8. `ELLE - Dark Rebel 3BA - Rhiven`
-9. `Minou Aradia Bikini SE 3BAv2 - Rhiven`
-10. `Aether CBBE 3BA - Rhiven`
-11. `Lady Ritual CBBE 3BA - Rhiven`
-12. `Bisquits Priestess of Mara - Rhiven`
-13. `Forgotten Princess - CBBE 3BA - Rhiven`
-14. `COCO 2B Wedding Outfit - CBBE 3BA - Rhiven`
-15. `[Predator] MME Milk Harness v3 - Rhiven`
-16. `Bodyslide Output - Eleanor`
+9. `ELLE - Delicate Zhuque 3BA - Rhiven`
+10. `Minou Aradia Bikini SE 3BAv2 - Rhiven`
+11. `Aether CBBE 3BA - Rhiven`
+12. `Lady Ritual CBBE 3BA - Rhiven`
+13. `Bisquits Priestess of Mara - Rhiven`
+14. `Forgotten Princess - CBBE 3BA - Rhiven`
+15. `COCO 2B Wedding Outfit - CBBE 3BA - Rhiven`
+16. `COCO Luscious Lady - CBBE 3BA - Rhiven`
+17. `COCO Caress of Venus - CBBE 3BA - Rhiven`
+18. `[Predator] MME Milk Harness v3 - Rhiven`
+19. `Nocturne Armor 3BA - SMP - Rhiven`
+20. `Spartan Hoplite Female Version - CBBE 3BA - Rhiven`
+21. `Daggerfall Archmage Outfit Remake - 3BA PBR 2K - Rhiven`
+22. `Daggerfall Archmage Outfit Remake - 3BA PBR 2K Update 1.2 - Rhiven`
+23. `Daggerfall Archmage Outfit Remake - 3BA NON CS PBR - Rhiven`
+24. `Daggerfall Hood Cape Fix And Physics Tweak Courtesy HDM - Rhiven`
+25. `Sexy Tsun Armor 3BA ESL - Rhiven`
+26. `Leolic Armor - Rhiven`
+27. `Elf Stalhrim Bikini Armor - CBBE 3BA - Rhiven`
+28. `Dark Dreams - Rhiven`
+29. `Dark Dreams 3BA BodySlide - Rhiven`
+30. `Misc High Heels Stilettos Eins - SSE CBBE - Rhiven`
+31. `Bodyslide Output - Eleanor`
 
 ## Source / conversion handling
 
@@ -78,7 +93,7 @@ The outfit lists `Heel sound footstep sound replacement` as a requirement, but t
 
 ## Plugin handling
 
-The newly added outfit plugins are already **ESL-flagged / ESP-FE**, so no additional ESL conversion pass is required.
+The added outfit plugins are predominantly **ESL-flagged / ESP-FE**. `Dark Dreams.esp` remains a normal heavy ESP: xEdit reports that it could only be turned into ESL after compacting FormIDs, so it is deliberately left untouched. No risky compacting pass is performed just to save a plugin slot.
 
 Current Rhiven plugin-order convention:
 
@@ -96,7 +111,8 @@ This avoids scattering personal outfit plugins throughout the stock NEFARAM load
 - Dedicated BodySlide output: **YES**
 - BodySlide generation completed: **YES**
 - Zeroed Sliders used: **YES**
-- Plugins already ESL-flagged / ESP-FE: **YES**
+- Plugins predominantly ESL-flagged / ESP-FE: **YES**
+- `Dark Dreams.esp` kept as a heavy ESP: **YES**
 - In-game visual validation: **PENDING**
 
 The outfit block is ready for the next in-game validation pass.
