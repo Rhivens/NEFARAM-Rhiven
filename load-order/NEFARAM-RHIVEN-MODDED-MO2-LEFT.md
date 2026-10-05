@@ -968,6 +968,38 @@ Glasses Pack Vol.1
 CAEKD - Clothing and Armor Exposure Keyword Distribution
 Piercings of the Daedra - CBBE 3BA - HIMBO
 PASH - Piercings Auto Show and Hide
+[15.1 - Outfits Eleanor]
+Invicta Couture Black Rose BHUNPv4 Extra 2K - Rhiven
+Invicta Couture Black Rose CBBE 3BA - Rhiven
+Invicta Couture Lingerie BHUNP SMP - Rhiven
+Invicta Couture Lingerie CBBE 3BA - Rhiven
+[qdaro] Silver Witch 3BA SMP - Rhiven
+DX Fetish Fashion Volume 2 SE - CBBE Physics 3BA - Rhiven
+Chain Bikini Armor - CBBE 3BA - Rhiven
+ELLE - Dark Rebel 3BA - Rhiven
+ELLE - Delicate Zhuque 3BA - Rhiven
+Minou Aradia Bikini SE 3BAv2 - Rhiven
+Aether CBBE 3BA - Rhiven
+Lady Ritual CBBE 3BA - Rhiven
+Bisquits Priestess of Mara - Rhiven
+Forgotten Princess - CBBE 3BA - Rhiven
+COCO 2B Wedding Outfit - CBBE 3BA - Rhiven
+COCO Luscious Lady - CBBE 3BA - Rhiven
+COCO Caress of Venus - CBBE 3BA - Rhiven
+[Predator] MME Milk Harness v3 - Rhiven
+Nocturne Armor 3BA - SMP - Rhiven
+Spartan Hoplite Female Version - CBBE 3BA - Rhiven
+Daggerfall Archmage Outfit Remake - 3BA PBR 2K - Rhiven
+Daggerfall Archmage Outfit Remake - 3BA PBR 2K Update 1.2 - Rhiven
+Daggerfall Archmage Outfit Remake - 3BA NON CS PBR - Rhiven
+Daggerfall Hood Cape Fix And Physics Tweak Courtesy HDM - Rhiven
+Sexy Tsun Armor 3BA ESL - Rhiven
+Leolic Armor - Rhiven
+Elf Stalhrim Bikini Armor - CBBE 3BA - Rhiven
+Dark Dreams - Rhiven
+Dark Dreams 3BA BodySlide - Rhiven
+Misc High Heels Stilettos Eins - SSE CBBE - Rhiven
+Bodyslide Output - Eleanor
 [16 - Weapons]
 Creation Club Base Content - Items Rebalanced
 Awesome Artifacts
