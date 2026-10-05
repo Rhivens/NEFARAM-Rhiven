@@ -56,6 +56,12 @@ Rule:
 
 ### UI / controls preparation
 
+- [ ] **Restore a clearly visible vanilla-style Skyrim crosshair before the definitive playthrough.**
+  - Audit `Contextual Crosshair` first; disable or reconfigure it if it suppresses / shrinks the reticle.
+  - Check crosshair-related settings in True Directional Movement, SmoothCam / its presets, and any HUD layer that can hide or replace the reticle.
+  - Re-test `Better Third Person Selection - BTPS` with the final crosshair setup; keep BTPS only if object selection remains comfortable and predictable.
+  - Validate in first person and third person: aiming, picking small objects, doors/containers, NPC activation, bows/spells.
+  - Prefer a small Rhiven config/override over adding another crosshair mod if the vanilla reticle can be restored cleanly.
 - [ ] Review all mods that add hotkeys.
 - [ ] Prepare the final personal hotkey plan.
 - [ ] Check for obvious hotkey conflicts before the real start.
