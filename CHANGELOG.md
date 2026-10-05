@@ -2,6 +2,26 @@
 
 ## 2026-10-05
 
+### Eleanor outfits — final stack
+
+- Finalized the `15.1 - Outfits Eleanor` block with the definitive personal outfit list.
+- Added the second outfit batch:
+  - ELLE - Delicate Zhuque 3BA
+  - COCO Luscious Lady
+  - COCO Caress of Venus
+  - Nocturne Armor 3BA - SMP
+  - Spartan Hoplite Female Version
+  - Daggerfall Archmage Outfit Remake 3BA stack, including 1.2 update, NON CS PBR override and hood/cape physics fix
+  - Sexy Tsun Armor 3BA ESL
+  - Leolic Armor
+  - Elf Stalhrim Bikini Armor
+  - Dark Dreams + 3BA BodySlide conversion
+  - Misc High Heels Stilettos Eins
+- Kept Daggerfall's NON CS PBR files below the PBR base/update so they win the intended mesh/material overrides for the ENB setup.
+- xEdit `Check for Errors` returned **0 errors** for the newly checked outfit plugins.
+- Confirmed `Dark Dreams.esp` requires FormID compacting before ESL flagging; it is intentionally kept as a heavy ESP.
+- `Bodyslide Output - Eleanor` remains last in the personal outfit block.
+
 ### Pre-playthrough checklist
 
 - Added `docs/13-PRE-PLAYTHROUGH-CHECKLIST.md` as the definitive launch checklist for NEFARAM-Rhiven.
