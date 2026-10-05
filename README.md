@@ -29,6 +29,7 @@ This repository is used to keep a clean and reproducible record of every change 
 - [10 - Eleanor outfits](docs/10-OUTFITS-ELEANOR.md)
 - [11 - Home Eleanor](docs/11-HOME-ELEANOR.md)
 - [12 - Fertility system](docs/12-FERTILITY-SYSTEM.md)
+- [13 - Pre-playthrough checklist](docs/13-PRE-PLAYTHROUGH-CHECKLIST.md)
 
 ### Load order snapshots
 

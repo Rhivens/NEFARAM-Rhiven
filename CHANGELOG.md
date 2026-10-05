@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-05
+
+### Pre-playthrough checklist
+
+- Added `docs/13-PRE-PLAYTHROUGH-CHECKLIST.md` as the definitive launch checklist for NEFARAM-Rhiven.
+- Split the checklist into **Pre-install / Before New Game**, **Post-install / New Game**, and **Future / Optional backlog**.
+- Added the planned outfit keyword / KID audit, translation pass, final MCM session, Lakeview validation, Pandora / generated-output checks and final go/no-go criteria.
+
 ## 2026-10-04
 
 ### Fertility system / Beeing Female NG
