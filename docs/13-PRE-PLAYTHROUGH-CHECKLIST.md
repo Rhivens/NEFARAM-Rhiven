@@ -139,6 +139,6 @@ These checks wait until Lakeview is legitimately available in the real playthrou
 
 Items here do **not** block the definitive playthrough.
 
-- [ ] Revisit Outfit Gallery - Visual Outfit Manager after the base build is finished.
-- [ ] Investigate a possible future in-world wardrobe / container integration for Outfit Gallery.
-- [ ] Reconsider Inflation Framework NG only if native morph coexistence becomes a real problem.
+- [ ] **Outfit Gallery - Visual Outfit Manager:** study a possible patch allowing outfit pieces to be retrieved from one or more designated in-world wardrobe / storage containers instead of requiring Eleanor to carry the full wardrobe in her inventory.
+- [ ] **Campfire 2026:** re-evaluate after a few days of community feedback; compare the Regular build against the current NEFARAM Campfire setup before deciding whether to adopt it.
+- [ ] **Inflation Framework NG:** keep on hold and only study / test it if BFNG + Fill Her Up + Milk Mod Economy BodyMorph behavior becomes unstable, cumulative or difficult to tune cleanly through their native MCM settings.
