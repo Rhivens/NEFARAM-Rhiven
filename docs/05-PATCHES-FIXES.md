@@ -51,6 +51,23 @@ This file documents every Rhiven-specific compatibility patch, manual fix, gener
 - **Test status:** **VALIDATED**
 - **Result:** Pandora generation completed successfully
 
+### On-demand bikini armor enchanting fix
+
+- **Target mods:** bikini / skimpy armor pieces used by Eleanor
+- **Trigger:** only when a specific armor piece cannot be enchanted in-game
+- **Decision:** do not install a broad third-party enchanting fix pre-emptively; patch only the affected pieces actually encountered during play
+- **Procedure:**
+  1. Open the affected armor plugin in xEdit with only its required masters.
+  2. Locate the relevant `ARMO` record.
+  3. Copy it as an override into the dedicated Rhiven personal patch plugin.
+  4. Add the missing enchanting-related keyword used by the equivalent enchantable armor records.
+  5. Save the patch and keep it loading after the source armor plugin.
+  6. Re-test enchanting in-game.
+- **Rule:** never edit the original armor mod directly.
+- **Reason:** keeps the build minimal, avoids unnecessary overrides, and preserves update safety.
+- **Test status:** **ON DEMAND**
+- **Notes:** if multiple pieces from the same armor pack prove affected, batch them into the same Rhiven patch instead of creating separate plugins.
+
 ## Future patch template
 
 ### Patch name
