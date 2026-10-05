@@ -62,6 +62,12 @@ Rule:
   - Re-test `Better Third Person Selection - BTPS` with the final crosshair setup; keep BTPS only if object selection remains comfortable and predictable.
   - Validate in first person and third person: aiming, picking small objects, doors/containers, NPC activation, bows/spells.
   - Prefer a small Rhiven config/override over adding another crosshair mod if the vanilla reticle can be restored cleanly.
+- [ ] **Paper map Find Location marker - Rhiven:** study a custom `map.swf` edit inspired by *Red-Circle In Paper Map* instead of overwriting the current UI stack with a third-party SWF.
+  - Identify the winning `map.swf` in MO2 first.
+  - Back up the winning SWF and inspect it with JPEXS Free Flash Decompiler.
+  - Replace only the Find Location marker asset (red circle or custom Rhiven marker), avoiding ActionScript / class changes.
+  - Package the edited SWF as a dedicated Rhiven UI override.
+  - Validate map opening, Find Location, zoom, panning and general FWMF / Dear Diary Dark Mode compatibility in-game.
 - [ ] Review all mods that add hotkeys.
 - [ ] Prepare the final personal hotkey plan.
 - [ ] Check for obvious hotkey conflicts before the real start.
