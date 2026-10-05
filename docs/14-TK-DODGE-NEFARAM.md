@@ -4,7 +4,7 @@
 >
 > Target: **NEFARAM 17.3.6**, Skyrim AE 1.6.1170, Pandora, MCO/TDM/Precision stack.
 >
-> Source basis: NEFARAM Discord guide by **thoshy**, updated for NEFARAM 17 on **2026-08-05**, with troubleshooting reports through **2026-09-25**.
+> Source basis: NEFARAM Discord community guide, updated for NEFARAM 17 on **2026-08-05**, with troubleshooting reports through **2026-09-25**.
 
 ## Goal
 
@@ -349,7 +349,7 @@ Only then consider an optional animation replacer.
 
 ## Source note
 
-This procedure is based on the NEFARAM Discord thread **"How to add TK Dodge to Nefaram"**, authored by **thoshy**, updated for **NEFARAM 17** on 2026-08-05, plus troubleshooting exchanges from September 2026.
+This procedure is based on a NEFARAM Discord community thread about adding TK Dodge, updated for **NEFARAM 17** on 2026-08-05, plus troubleshooting exchanges from September 2026.
 
 Rhiven-specific decisions in this document:
 
