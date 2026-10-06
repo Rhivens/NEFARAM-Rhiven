@@ -30,6 +30,7 @@ This repository is used to keep a clean and reproducible record of every change 
 - [11 - Home Eleanor](docs/11-HOME-ELEANOR.md)
 - [12 - Fertility system](docs/12-FERTILITY-SYSTEM.md)
 - [13 - Pre-playthrough checklist](docs/13-PRE-PLAYTHROUGH-CHECKLIST.md)
+- [14 - Update 17.3.6 -> 17.3.7](docs/14-UPDATE-17.3.6-TO-17.3.7.md)
 
 ### Load order snapshots
 
