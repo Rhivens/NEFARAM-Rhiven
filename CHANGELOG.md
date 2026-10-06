@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-06
+
+### NEFARAM 17.3.7 migration preparation
+
+- NEFARAM 17.3.7 detected as a save-compatible update.
+- Chosen strategy: controlled manual migration instead of running Wabbajack over the customized installation.
+- Identified the 17.3.7 delta:
+  - Inventory Refresh Fix
+  - Standing Stealth
+  - Meshes Optimization Project
+  - SLSF Reloaded LL update
+- Confirmed current Core Impact Framework is 1.2.8 while Standing Stealth requires CIF 2.0.3+.
+- Target CIF version identified as 2.0.7.
+- Target SLSF package currently identified as `SLSF Reloaded 4.1.1.zip`; detailed release-note comparison still pending.
+- Meshes Optimization Project held for review pending NEFARAM Discord guidance on FOMOD / overwrite choices.
+- Added dedicated migration document: `docs/14-UPDATE-17.3.6-TO-17.3.7.md`.
+
 ## 2026-10-05
 
 ### Eleanor outfits — final stack
