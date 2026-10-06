@@ -174,22 +174,25 @@ Status: **TO REVIEW - WAITING FOR NEFARAM DISCORD DETAILS**
 
 NEFARAM 17.3.7 states that SLSF Reloaded LL was updated.
 
-Target package currently identified:
+Current NEFARAM 17.3.6 version: **4.1.0**
 
-`SLSF Reloaded 4.1.1.zip`
+Target NEFARAM 17.3.7 version: **4.1.1**
 
-Current installed version in NEFARAM-Rhiven still needs to be confirmed before replacement.
+Reason for the NEFARAM update:
+
+- the author removed the previously distributed **4.1.0** package
+- **4.1.1** was published as its replacement / update
+- this is therefore a maintenance-version refresh rather than a deliberate NEFARAM feature change
 
 Planned checks:
 
-- retrieve LoversLab changelog / release notes for 4.1.1
-- retrieve any NEFARAM Discord note about the update
-- compare package structure with current installed version
+- retrieve LoversLab changelog / release notes for 4.1.1 if available
+- compare package structure with 4.1.0
 - preserve existing configuration if appropriate
 - inspect plugin / script conflicts
 - test SLSF initialization and MCM after update
 
-Status: **TO REVIEW - NEEDS RELEASE NOTES / CURRENT VERSION COMPARISON**
+Status: **TO REVIEW - VERSION TARGET CONFIRMED (4.1.0 -> 4.1.1)**
 
 ---
 
