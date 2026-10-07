@@ -68,6 +68,25 @@ This file documents every Rhiven-specific compatibility patch, manual fix, gener
 - **Test status:** **ON DEMAND**
 - **Notes:** if multiple pieces from the same armor pack prove affected, batch them into the same Rhiven patch instead of creating separate plugins.
 
+### OMNOMS / O.S.H.I.T Object Impact Framework override
+
+- **Target mods:** OMNOMS 1.3.0 + O.S.H.I.T + Object Impact Framework
+- **File:** `SKSE\\Plugins\\ObjectImpactFramework\\OSHIT-OIF.json`
+- **Problem:** the O.S.H.I.T OIF config can make Mimics destructible on impact, which can destroy the Mimic/container state and make its loot inaccessible.
+- **Fix:** enable the OMNOMS `OSHIT Patch` and ensure the OMNOMS version of `OSHIT-OIF.json` wins the MO2 file conflict.
+- **Current left-pane priority:** TNTR -> EET -> O.S.H.I.T -> OMNOMS -> Deadly Bear Trap -> Watch Your Step.
+- **Important:** OMNOMS must remain below O.S.H.I.T in the MO2 left pane for this specific file override.
+- **Structural test status:** **VALIDATED**
+- **Gameplay test status:** **PENDING EARLY REAL-PLAYTHROUGH TESTING**
+
+### OMNOMS SkyPatcher distribution
+
+- **Framework:** `SkyPatcher - AE - Rhiven`
+- **Enabled distribution:** Magic Vendors + Spell Tomes
+- **Disabled distribution:** General Vendors
+- **Purpose:** distribute the OMNOMS `Banish Mimic` scroll without adding a broad generic-vendor distribution.
+- **Test status:** **INITIALIZATION VALIDATED / IN-GAME ACQUISITION PENDING**
+
 ## Future patch template
 
 ### Patch name
