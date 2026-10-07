@@ -12,6 +12,13 @@ This file records important validation steps before the real playthrough.
 - Waiting room / configuration screen: **OK**
 - Clean exit without creating a gameplay save: **OK**
 
+### Current NEFARAM 17.3.7 baseline
+
+- Manual 17.3.6 -> 17.3.7 migration: **COMPLETED**
+- MO2 launch: **OK**
+- Game launch: **OK**
+- Current Rhiven instance: **active on 17.3.7**
+
 ## Current tests
 
 ### Dragonborn UI
@@ -241,6 +248,58 @@ Decision:
 - translations still pending;
 - do not perform final gameplay tuning on the temporary test character.
 
+
+### TNTR / EET / OMNOMS trap ecosystem
+
+Status: **TECHNICAL INITIALIZATION VALIDATED — FIELD GAMEPLAY PENDING**
+
+Installed / integrated stack:
+
+- `SkyPatcher - AE - Rhiven`
+- `Object Impact Framework (OIF) - Rhiven`
+- `Trap Needs to be Real Trap - Rhiven` — TNTR 0.74
+- `EET Extra Evil Traps - Rhiven` — EET 1.2.3
+- `O Skyrim Has Insane Traps - Rhiven`
+- `OMNOMS Not So Obvious Mimics - Rhiven` — OMNOMS 1.3.0
+- `Deadly Bear Trap - Rhiven`
+- `Watch Your Step - Rhiven` — v1.2
+
+Installation / conflict validation:
+
+- TNTR 0.74 selected as the supported base for EET / OMNOMS: **OK**
+- TNTR OAR patch: **selected**
+- TNTR Nemesis-style behavior patch for Pandora: **selected**
+- EET Bear Trap patch for TNTR 0.73/0.74: **selected**
+- EET Snare Trap patch for TNTR 0.73/0.74: **selected**
+- OMNOMS patched Mimic script: **selected**
+- OMNOMS activation-text replacement: **selected**
+- OMNOMS experimental vanilla-chest shader replacement: **not selected**
+- OMNOMS O.S.H.I.T patch: **selected**
+- OMNOMS OIF config verified to win over O.S.H.I.T after MO2 priority correction: **OK**
+- SkyPatcher distribution: Magic Vendors + Spell Tomes enabled; General Vendors disabled
+
+Initial launch / MCM validation:
+
+- New Game test launch: **OK**
+- CTD during startup / initialization: **none observed**
+- obvious abnormal behavior during initialization: **none observed**
+- TNTR MCM: **registered**
+- TNTR: Extra Evil Traps MCM: **registered**
+- TNTR: Not So Obvious Mimics MCM: **registered**
+
+Known points to verify early in the definitive playthrough:
+
+- trigger and escape at least one TNTR Bear Trap and Snare Trap / QTE;
+- verify one OMNOMS Mimic encounter and post-encounter container / loot behavior;
+- verify O.S.H.I.T and Watch Your Step trap placement without animation deadlocks;
+- specifically watch Fill Her Up Baka deflation during TNTR trap animations;
+- verify Devious Devices and Acheron / Practical Defeat interactions;
+- perform these checks early enough that the entire TNTR stack can still be removed if a reproducible save-impacting problem appears.
+
+Decision:
+
+- keep enabled for now;
+- do **not** mark the gameplay stack fully Validated until early real-playthrough field tests pass.
 
 ## Test entry template
 
