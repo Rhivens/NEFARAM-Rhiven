@@ -1,12 +1,12 @@
 # NEFARAM - Rhiven
 
-Personal customization, maintenance notes and technical documentation for **NEFARAM 17.3.6**.
+Personal customization, maintenance notes and technical documentation for **NEFARAM 17.3.7**.
 
 This repository is used to keep a clean and reproducible record of every change made to the stock NEFARAM installation: added/removed mods, patches, fixes, translations, UI work, load orders, generated outputs and testing notes.
 
 ## Current baseline
 
-- **NEFARAM:** 17.3.6
+- **NEFARAM:** 17.3.7
 - **MO2 profile:** `ELEANOR Stable`
 - Stock installation validated before customization
 - Real playthrough will start from the supplied **NEFARAM_Start** save
