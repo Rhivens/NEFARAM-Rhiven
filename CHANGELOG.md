@@ -79,6 +79,38 @@
 - Status: **Validated** for initial integration; normal long-term inventory refresh behavior will be observed during the real playthrough.
 
 
+### Private Needs - Orgasm 1.11.1
+
+- Installed / updated `Private Needs - Orgasm 1.11.1 - Rhiven` in `44 - Added Mods NSFW`.
+- Previous personal reference version was 1.8.3; 1.11.1 includes substantial SKSE-side runtime changes and fixes.
+- Rhiven usage remains deliberately limited to **natural needs**:
+  - bladder
+  - bowel
+  - urination / defecation animations and interactions
+  - orgasm-related urination disabled in MCM
+- Optional integrations intentionally skipped for now:
+  - Dynamic Bloodpool Framework / puddles
+  - Dooty
+  - SkyrimNet
+- Initial in-game validation:
+  - launch: **OK**
+  - bladder fullness percentage displayed correctly
+  - bowel fullness percentage displayed correctly
+  - vanilla chair / furniture toilet interaction works correctly
+  - no CTD observed
+- The tested functionality worked before a new Pandora generation, so no missing behavior dependency was observed for the current use case.
+- Status: **Validated for the Rhiven natural-needs configuration**.
+
+### NakedStart 1.1.0 — rejected
+
+- Tested `NAKED START - NO ESP NO CRASH 1.1.0` as a possible no-record naked-start solution.
+- Correct SKSE plugin structure confirmed.
+- Multiple NEFARAM start tests retained the complete randomly assigned outfit / weapon set.
+- Config tests with a longer settle window and item-menu shutdown disabled did not change the behavior.
+- Likely incompatibility: NEFARAM begins from the supplied `NEFARAM_Start` save and then runs its custom Skyrim Unbound / RaceMenu / teleport sequence, while NakedStart expects a true Skyrim `New Game` event to arm itself.
+- Decision: **Rejected / removed from final build**.
+
+
 ### Riverhome
 
 - Installed Riverwood Riverhome SE/AE Port as an additional Eleanor home.
