@@ -87,6 +87,30 @@ This file documents every Rhiven-specific compatibility patch, manual fix, gener
 - **Purpose:** distribute the OMNOMS `Banish Mimic` scroll without adding a broad generic-vendor distribution.
 - **Test status:** **INITIALIZATION VALIDATED / IN-GAME ACQUISITION PENDING**
 
+### PAMA / NEFARAM ZaZ ankle chains override
+
+- **Target mods:** Bad Ends Revived: Windhelm + `NEFARAM Patches`
+- **Patch mod:** `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`
+- **File:** `meshes\\ZaZ-UltimateDataPack\\ZaZ - HDT\\ZaZAnkleChainsRagdolls_1.nif`
+- **Problem:** Bad Ends Windhelm ships its own older copy of the ZaZ ankle-chain ragdoll mesh and wins by MO2 priority when kept in the dedicated late PAMA block.
+- **Fix:** copy the NEFARAM-patched version into a dedicated Rhiven compatibility mod placed after Bad Ends Windhelm.
+- **Reason:** preserve the NEFARAM-specific ZaZ mesh while keeping the whole PAMA stack below the NEFARAM late-loader architecture.
+- **Test status:** **STRUCTURAL FIX APPLIED / IN-GAME VISUAL CHECK PENDING**
+
+### PAMA / Windhelm navmesh compatibility patch
+
+- **Target mods:** Bad Ends Revived: Windhelm + WindhelmSSE + Capital Windhelm Expansion / Skyrim Sewers integration
+- **Patch:** `PAMA - Windhelm Navmesh Patch - Rhiven.esp`
+- **Plugin type:** ESP with ESL flag
+- **Problem:** `PrisonAlternative_Executions_WindHelm.esp` reintroduced old / vanilla-like navmesh geometry over newer Windhelm fixes.
+- **Fixes preserved:**
+  - `000FC117` / `WindhelmBridge04` copied from `WindhelmSSE - Exterior NavMesh Fixes.esp`
+  - `0004B66C` / `WindhelmCandlehearthHallExterior` copied from `CapitalWindhelmExpansion - SkyrimSewers.esp`
+- **Explicit master added:** `PrisonAlternative_Executions_WindHelm.esp`
+- **Load-order requirement:** patch must load after Bad Ends Windhelm and the Windhelm source/fix plugins it reconciles.
+- **xEdit validation:** `Check for Errors` — **0 errors, 7 records processed**
+- **Test status:** **XEDIT VALIDATED / IN-GAME PATHING CHECK PENDING**
+
 ## Future patch template
 
 ### Patch name
