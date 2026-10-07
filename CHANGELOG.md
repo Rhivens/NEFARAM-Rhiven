@@ -1,5 +1,82 @@
 # Changelog
 
+## 2026-10-07
+
+### NEFARAM 17.3.7 — active Rhiven baseline
+
+- Current customized instance now runs on **NEFARAM 17.3.7**.
+- The active setup includes the 17.3.7 migration components previously staged for review:
+  - Inventory Refresh Fix
+  - Standing Stealth
+  - Core Impact Framework 2.0.7
+  - Meshes Optimization Project
+  - SLSF Reloaded 4.1.1
+- Refreshed the MO2 left-pane and right-pane/plugin snapshots so the repository matches the current local instance.
+
+### Riverhome
+
+- Installed Riverwood Riverhome SE/AE Port as an additional Eleanor home.
+- xEdit review found an invalid deleted override of vanilla cell `0005EAC7` (`aaaMarkers`) in `Riverhome v1.4.esp`.
+- Removed only the bad Riverhome override while preserving the actual Riverhome cell.
+- Re-ran xEdit `Check for Errors`: **0 errors**.
+- In-game validation:
+  - exterior integration: **OK**
+  - bridge / river placement: **OK**
+  - interior: **OK**
+  - no obvious terrain break or major visual conflict observed
+- No DynDOLOD / xLODGen regeneration performed yet; exterior LOD will be handled during the final generated-output pass.
+
+### Road Signs Overhaul 2.0
+
+- Installed:
+  - `Road Signs Overhaul 2.0 - Rhiven`
+  - `Road Signs 2.0 - Questionable Clutter Remover (BOS) - Rhiven`
+  - `Road Signs Overhaul 2.0 - Blended Roads Patch(BOS) - Rhiven`
+- Kept the existing `Skyrim Vanilla Remix Signs` texture stack.
+- In-game validation showed readable, correctly placed signs around Riverwood / Whiterun / Falkreath routes.
+- No LOD regeneration required at this stage.
+- Added a future checklist task for a **Rhiven French texture-only road-sign translation** while preserving the original visual style.
+
+### TK Dodge
+
+- Created dedicated MO2 separator `37.1 - TK Dodge` inside Late Loaders.
+- Installed the final TK Dodge stack:
+  - `IFrame Generator RE AE Support - Rhiven`
+  - `TK Dodge For RE - Rhiven`
+  - `TK Dodge RE - Script Free - Rhiven`
+  - `TK dodge firstperson 8 ways dodge - Rhiven`
+  - `TK Dodge Animation Pandora Fix Patch - Rhiven`
+  - `TK Dodge NG - Rhiven`
+  - `Dynamic Dodge Animation - Rhiven`
+- TK Dodge RE FOMOD:
+  - standalone
+  - sheathed dodge enabled
+  - concentration-spell cancel enabled
+  - forward dodge scurry fix enabled
+- Dynamic Dodge Animation configured for:
+  - `TK Dodge RE-0.55-rc3`
+  - `Sway` attack-cancel behavior
+- TK Dodge NG initial configuration keeps `StepDodge = false` for rolling dodges.
+- Pandora correctly detected:
+  - `TK Dodge RE / Ultimate Combat`
+  - `TK Dodge Standalone`
+- Pandora generation completed successfully with **38,375 total animations added**.
+- In-game validation completed successfully:
+  - out-of-combat dodge: **OK**
+  - combat dodge: **OK**
+  - no T-pose / behavior failure observed
+- TK Dodge stack marked **Validated**.
+
+### Documentation / repository maintenance
+
+- Added Markdown technical counterparts for easier repository-side consultation:
+  - `docs/guides/NEFARAM_Guide_Installation_Creation_Kit_MO2_FR.md`
+  - `docs/guides/NEFARAM_Guide_TK_Dodge_FR.md`
+  - `docs/guides/NEFARAM_Modding_Guide_1.4_FR.md`
+- Kept the original DOCX guides as the richer visual references.
+- Updated `docs/13-PRE-PLAYTHROUGH-CHECKLIST.md` with the future French Road Signs texture task.
+- Synchronized the current MO2 left/right load-order reference files with the local NEFARAM-Rhiven instance.
+
 ## 2026-10-06
 
 ### NEFARAM 17.3.7 migration preparation
