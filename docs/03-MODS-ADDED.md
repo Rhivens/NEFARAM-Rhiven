@@ -72,6 +72,8 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 | Outfit Gallery - Visual Outfit Manager - Rhiven | Validated | 43 - Added Mods SFW | SKSE-based visual wardrobe manager for Eleanor; F8 opens the gallery and F9 captures the current outfit; initial in-game UI test successful |
 | Regional Outfitters - Stalls of Skyrim - Rhiven | Validated | 43 - Added Mods SFW | SkyPatcher-driven themed armor/gear merchants; installed with Capital Windhelm, Obscure's College of Winterhold and AI Overhaul patches; multiple-city coc validation completed without CTD or obvious placement issue |
 
+| Private Needs - Orgasm 1.11.1 - Rhiven | Validated | 44 - Added Mods NSFW | Updated from previously used 1.8.3; used only for bladder/bowel needs, orgasm-related features disabled; initial in-game test confirmed bladder/bowel percentages and chair/toilet furniture interaction |
+
 ## Reviewed but not retained
 
 | Mod | Status | Reason |
@@ -79,6 +81,7 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 | Artisan Soaps for Bathing in Skyrim Renewed | Rejected | Visual overlap with the selected Seamless Soap stack; simpler setup preferred |
 | Dirtiness Lvl5 Fix for Widget Addon - Bathing In Skyrim Renewed | Planned | Tracked on Nexus but not installed; only needed if the widget disappears at dirtiness level 5 |
 | Inflation Framework NG | Planned | Tracked on Nexus only; reserve option if BFNG / FHU / MME BodyMorph coexistence cannot be tuned cleanly through their native MCM settings |
+| NAKED START - NO ESP NO CRASH 1.1.0 | Rejected | Does not trigger with NEFARAM's supplied-start-save / Skyrim Unbound workflow; repeated tests kept the complete randomly assigned starting equipment despite timing/config changes |
 
 ## Planned / candidates
 
