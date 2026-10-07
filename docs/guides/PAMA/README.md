@@ -1,9 +1,9 @@
 # Chantier PAMA — Prison Alternative / NEFARAM-Rhiven
 
-> **Statut : préparation / audit avant installation**
+> **Statut : intégration / validation en cours**
 >
-> Ce document centralise le chantier d'intégration du bloc PAMA dans NEFARAM-Rhiven.  
-> Aucun ordre de plugins définitif n'est considéré comme validé tant que les conflits de cellules/navmeshes et les tests en jeu n'ont pas été réalisés.
+> Le socle PAMA est maintenant installé et partiellement validé dans NEFARAM-Rhiven.  
+> Deadly Furniture, Prison Alternative, Sovngarde Aftermath, Punishment Pack, Outdoor Event Pack et Bad Ends Windhelm sont installés. Windhelm dispose déjà de correctifs Rhiven dédiés ; Riften, Solitude et Orkish Bounty Hunters restent à intégrer / auditer.
 
 ## Objectif
 
@@ -58,11 +58,11 @@ Orkish Bounty Hunters
 - Troubles of Heroine
 - Simple Slavery / Simple Slavery Rebuild
 
-## Dépendance à ajouter / traiter comme quasi-obligatoire
+## Dépendance technique PAMA
 
 ### Next-Gen Decapitations
 
-Fortement recommandé par Pama´s Deadly Furniture et requis par Pama Sovngarde Aftermath.
+Fortement recommandé par Pama´s Deadly Furniture et requis par Pama Sovngarde Aftermath. **Installé et actif** dans `43 - Added Mods SFW`.
 
 Le retour Discord NEFARAM confirme également que ce correctif est utilisé pour supprimer des CTD liés aux décapitations.
 
@@ -75,6 +75,12 @@ bAdvancedNPCMaintenance = 0
 ```
 
 Objectif : permettre la restauration correcte de la tête du joueur après une décapitation suivie d'un passage par Sovngarde.
+
+La configuration Sovngarde est isolée dans le mod MO2 dédié :
+
+`Next-Gen Decapitations - Sovngarde INI - Rhiven`
+
+Le mod original reste donc intact et l'override INI peut être activé/désactivé indépendamment.
 
 ## Ordre MO2 gauche provisoire
 
@@ -142,12 +148,16 @@ Bad Ends Revived: Windhelm modifie notamment :
 
 Le build NEFARAM-Rhiven contient déjà **Capital Windhelm Expansion** avec plusieurs correctifs de navmesh/collision.
 
-**Avant validation :**
+**Audit réalisé le 2026-10-07 :**
 
-- ouvrir le load order complet dans xEdit ;
-- vérifier les cellules et navmeshes modifiés ;
-- ne pas appliquer automatiquement la recommandation "plugin PAMA tout en bas" ;
-- créer un patch dédié si nécessaire.
+- `PrisonAlternative_Executions_WindHelm.esp` réinjectait des données de navmesh anciennes / proches du vanilla par-dessus le stack Windhelm ;
+- `000FC117` (`WindhelmBridge04`) doit conserver la version de `WindhelmSSE - Exterior NavMesh Fixes.esp` ;
+- `0004B66C` (`WindhelmCandlehearthHallExterior`) doit conserver la version de `CapitalWindhelmExpansion - SkyrimSewers.esp` ;
+- création du patch ESL-flagged `PAMA - Windhelm Navmesh Patch - Rhiven.esp` ;
+- `PrisonAlternative_Executions_WindHelm.esp` ajouté explicitement comme master du patch ;
+- xEdit `Check for Errors` : **0 erreur / 7 records**.
+
+Un conflit de mesh ZaZ sur `ZaZAnkleChainsRagdolls_1.nif` a également été résolu avec le mod dédié `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`, qui réapplique la version issue de `NEFARAM Patches` après Bad Ends Windhelm.
 
 ### Riften — priorité élevée
 
@@ -218,6 +228,104 @@ Après validation des tests non létaux :
 - vérifier la restauration correcte après décapitation ;
 - contrôler l'absence d'interception parasite par Acheron.
 
+## Progression réelle — 2026-10-07
+
+### Organisation MO2
+
+Création du séparateur dédié :
+
+`44 - PRISON PAMA SYSTEM`
+
+Ordre actuellement installé :
+
+1. `Next-Gen Decapitations - Sovngarde INI - Rhiven`
+2. `PamaDeadlyFurniture_V3.4.5_SE_AE (Revision2) - Rhiven`
+3. `Prison Alternative - Rhiven`
+4. `PamaSovngardeAftermath_V1.0.0_SE_AE - Rhiven`
+5. `PAPunishmentPack_V1.3.0_SE_AE - Rhiven`
+6. `PAOutdoorEventPack_V1.3_SE_AE - Rhiven`
+7. `PA_Extension_BadEndsRevived_WindHelm_V1.3.0_SE_AE - Rhiven`
+8. `PAMA - Windhelm Navmesh Patch - Rhiven`
+9. `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`
+
+Les sources Papyrus de Prison Alternative sont conservées séparément dans `Prison Alternative - Scripts Sources - Rhiven` et restent désactivées en jeu.
+
+### Validation Deadly Furniture
+
+- MCM détecté : **OK**
+- PO3 Papyrus Extender détecté : **OK**
+- StringUtil détecté : **OK**
+- Baka Fill Her Up détecté : **OK**
+- `coc pamaTestZone` : **OK**
+- mode non létal : **OK**
+  - pseudo-mort / ragdoll ;
+  - retour du joueur sur clic ;
+  - pas de CTD observé.
+- Pandora après installation : `FNIS_PamaFurnitureScr_List` détecté.
+- Total Pandora observé à cette étape : **39 142** animations.
+
+### Validation Prison Alternative
+
+- installation SE/AE + version ZaZ-compatible : **OK**
+- aucun conflit fichier observé : **OK**
+- MCM 2.0.3 : **OK**
+- Event Registry initial : événements de base présents une seule fois : **OK**
+- arrestation vanilla à Blancherive : **OK**
+- transfert en prison : **OK**
+- progression via lit : **OK**
+- lit vanilla existant à Blancherive confirmé :
+  - EditorID `CivilWarCot01L`
+  - Base FormID `000E2826`
+  - RefID `0009DC89`
+- aucun lit supplémentaire nécessaire à Blancherive.
+- la note « lit vanilla » devient donc un **contrôle par prison**, pas une règle de remplacement systématique.
+- Pandora après PA : **39 184** animations, soit **+42**.
+
+### Validation Sovngarde Aftermath
+
+- MCM 1.0.0 : **OK**
+- mod actif : **OK**
+- Pandora : aucun ajout supplémentaire, total maintenu à **39 184**.
+- test létal contrôlé via guillotine dans `pamaTestZone` :
+  - exécution / décapitation : **OK**
+  - aucun CTD observé : **OK**
+  - transfert automatique vers Sovngarde Aftermath : **OK**
+- le scénario complet n'a volontairement pas été terminé afin d'éviter de spoiler la future partie.
+- reste à tester plus tard :
+  - fin du scénario ;
+  - retour Tamriel ;
+  - restauration correcte de la tête avec `iCanBeResurrected = 2`.
+
+### Punishment Pack
+
+- installation : **OK**
+- aucun conflit fichier observé : **OK**
+- Pandora : **39 200** animations, soit **+16**.
+
+### Outdoor Event Pack
+
+- installation : **OK**
+- aucun conflit fichier observé : **OK**
+- Pandora : total inchangé à **39 200**.
+
+### Bad Ends Windhelm
+
+- installation : **OK**
+- Pandora : **39 222** animations, soit **+22**.
+- conflit de mesh ZaZ traité par patch Rhiven dédié.
+- conflit navmesh confirmé et corrigé par patch xEdit dédié.
+- validation xEdit du patch : **0 erreur**.
+- test en jeu des placements / pathing Windhelm reste à effectuer.
+
+### À reprendre
+
+1. installer et auditer **Bad Ends Riften** avec `Riften of Reverie` ;
+2. installer et auditer **Bad Ends Solitude** ;
+3. installer **Orkish Bounty Hunters** ;
+4. tester les nouveaux Events PA et leurs registres ;
+5. effectuer les tests de terrain / pathing par ville ;
+6. terminer plus tard le test complet Sovngarde → Tamriel.
+
 ## Modules PAMA évalués mais non retenus dans le cœur du chantier
 
 ### Pama´s Permanent Crucifixes 2.0
@@ -284,14 +392,14 @@ docs/guides/PAMA/
 - [x] Identification des risques DD / DCL / defeat / random scenes
 - [x] Identification des conflits potentiels Windhelm / Riften / Solitude
 - [x] Identification de Next-Gen Decapitations comme dépendance technique importante
-- [ ] Ajouter les fiches Markdown sources
-- [ ] Installer le bloc
-- [ ] Vérifier les conflits xEdit
+- [x] Ajouter les fiches Markdown sources
+- [ ] Installer le bloc complet — **socle + Windhelm installés ; Riften / Solitude / OBH restants**
+- [ ] Vérifier les conflits xEdit — **Windhelm terminé ; Riften / Solitude restants**
 - [ ] Définir le load order droit définitif
-- [ ] Configurer les MCM
-- [ ] Régénérer Pandora
-- [ ] Tester en mode non létal
-- [ ] Tester les exécutions létales + Sovngarde
+- [ ] Configurer les MCM — **réglages de test appliqués ; tuning final différé**
+- [x] Régénérer Pandora pour les modules actuellement installés
+- [x] Tester Deadly Furniture / Prison Alternative en mode non létal
+- [ ] Tester les exécutions létales + Sovngarde — **transfert vers Sovngarde validé ; retour Tamriel différé**
 - [ ] Valider le bloc
 - [ ] Reporter les mods retenus dans `docs/03-MODS-ADDED.md`
 - [ ] Reporter les tests dans `docs/08-TESTING.md`
