@@ -90,3 +90,24 @@ No Wheeler-related legacy dependency is currently planned. The older `dMenu + dM
 The dirtiness level 5 widget fix remains a conditional candidate only.
 
 `Inflation Framework NG` is also tracked only. The first real-playthrough tests will use native BodyMorph handling in BFNG, Fill Her Up and Milk Mod Economy; the framework will be reconsidered only if a reproducible morph-coexistence problem appears.
+
+
+## PAMA / Prison Alternative block — 2026-10-07
+
+Dedicated MO2 separator: `44 - PRISON PAMA SYSTEM`.
+
+| Mod / Patch | Status | Notes |
+|---|---|---|
+| Next-Gen Decapitations | Testing | Installed in SFW additions; required/recommended foundation for PAMA decapitation handling |
+| Next-Gen Decapitations - Sovngarde INI - Rhiven | Testing | Dedicated INI override: `iCanBeResurrected = 2`, `bAdvancedNPCMaintenance = 0` |
+| PamaDeadlyFurniture 3.4.5 Revision 2 - Rhiven | Validated (core) | Nonlethal device flow validated in `pamaTestZone`; lethal guillotine test also reached Sovngarde without CTD |
+| Prison Alternative 2.0.3 - Rhiven | Validated (core) | SE/AE + ZaZ-compatible install; Whiterun arrest / jail / cot / sentence progression validated |
+| Prison Alternative - Scripts Sources - Rhiven | Support / Disabled | Papyrus sources kept separately for future inspection or edits; disabled for normal play |
+| Pama Sovngarde Aftermath 1.0.0 - Rhiven | Testing | MCM OK; transfer after lethal PAMA execution validated; full return intentionally deferred |
+| Prison Alternative - Punishment Pack 1.3.0 - Rhiven | Testing | Installed cleanly; Pandora +16 animations |
+| Prison Alternative - Outdoor Event Pack 1.3 - Rhiven | Testing | Installed cleanly; no additional Pandora animations |
+| Bad Ends Revived: Windhelm 1.3.0 - Rhiven | Testing | Installed; Pandora +22; requires Rhiven navmesh + ZaZ mesh compatibility patches |
+| PAMA - Windhelm Navmesh Patch - Rhiven | xEdit Validated | ESL-flagged compatibility patch for navmeshes `000FC117` and `0004B66C`; 0 xEdit errors |
+| PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven | Structural Fix | Reapplies NEFARAM's `ZaZAnkleChainsRagdolls_1.nif` after Bad Ends Windhelm |
+
+Still pending from the planned core: **Bad Ends Riften, Bad Ends Solitude, Orkish Bounty Hunters**.
