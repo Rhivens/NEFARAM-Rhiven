@@ -126,6 +126,8 @@ These tasks are intentionally performed only after the definitive playthrough ha
 - [ ] Verify BFNG widgets and cycle state during normal play.
 - [ ] Verify Wheeler / UI / map behavior in normal gameplay.
 - [ ] Watch the first sessions for repeated errors or abnormal save growth.
+- [ ] Test the TNTR trap ecosystem very early in the definitive playthrough: Bear Trap, Snare/QTE, OMNOMS Mimic, O.S.H.I.T and Watch Your Step.
+- [ ] Verify TNTR interactions with Fill Her Up Baka, Devious Devices and Acheron / Practical Defeat before significant progression.
 
 ### Lakeview Manor / Eleanor home
 
