@@ -1,6 +1,6 @@
 # 10 - Eleanor outfits
 
-This document tracks the personal outfit collection added for Eleanor on top of **NEFARAM 17.3.6**.
+This document tracks the personal outfit collection added for Eleanor on top of **NEFARAM 17.3.7**.
 
 ## MO2 organization
 
