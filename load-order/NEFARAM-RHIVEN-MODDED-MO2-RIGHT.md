@@ -1,3 +1,10 @@
+# NEFARAM Rhiven Modded — MO2 Right Panel / Plugins (Dernière mise à jour le 07-10-2026 à 11h55)
+
+Current customized plugin load order for the Rhiven setup.
+
+Replace the content of the block below whenever the validated plugin order changes.
+
+```text
 # NEFARAM Rhiven Modded — MO2 Right Pane / Plugins
 
 Current customized plugin load order for the Rhiven setup.
@@ -177,6 +184,7 @@ JELSnowyMountainFlowers.esl
 DynDOLOD.esm
 Helios.esp
 titkit.esl
+BeeingFemale.esm
 Deep Chanterelle.esp
 ChanterelleENBPatch.esl
 iWant Status Bars.esp
@@ -435,6 +443,8 @@ KSHairdosSMP.esp
 KSWigsSMP.esp
 [dint999] HairPack02.esp
 [dint999] HairPack0.esp
+[dint999] HairPack02 A (female).esp
+[dint999] HairPack02 B (female).esp
 [Dint999] BDOr_Hairstyles.esp
 KaliliesBrows.esp
 Lamenthia's Marks of Beauty.esp
@@ -465,7 +475,6 @@ UnholyBodyTattoo.esp
 BM_Brows_HPH.esp
 VanillaArgoniansRedux.esp
 ALT1 Facial Hair HPH Standalone AIO.esp
-GoamElvenEars.esp
 RaceMenu.esp
 RaceMenuPlugin.esp
 RaceMenu Undress.esp
@@ -561,6 +570,7 @@ GTS Spells Addon.esp
 GTS Spells Addon - Mysticism Patch.esp
 GTS Spells Addon - Adamant Patch.esp
 Paralysis Freezes Objects.esp
+Sillyspells.esp
 JS Instruments of Skyrim SE - Uniques.esp
 StormLightning.esp
 Embers XD.esp
@@ -1440,6 +1450,7 @@ Environs - Whiterun Watchtower.esp
 Environs - Abandoned Abodes - Simple Children Patch.esp
 Environs - Abandoned Abodes - 3DNPCs Patch.esp
 Environs - Hroggars House - Lawless Patch.esp
+StandingStonesAIO PsBoss.esp
 Ryn's Standing Stones.esp
 Ryn's Standing Stones - USSEP patch.esp
 StandingSoundStones_Ryns Patch.esp
@@ -1844,7 +1855,6 @@ Bruma Map Adjustment.esp
 WyrmstoothMapTweaks.esp
 _NEFARAM_Start.esp
 _NEFARAM_____MAIN_____.esp
-_NEFARAM_CustomDistrib.esp
 _NEFARAM_GhaanDistribution.esp
 _NEFARAM_StringsFixes.esp
 _NEFARAM_Seasons NAT.esp
@@ -1853,6 +1863,8 @@ _NEFARAM_NinirimSlot49.esp
 _NEFARAM_Chanterelle.esp
 _NEFARAM_Vicn.esp
 _NEFARAM_Meridia.esp
+GoamElvenEars.esp
+_NEFARAM_CustomDistrib.esp
 _NEFARAM_PantiesDistrib.esp
 _NEFARAM_Hair.esp
 _NEFARAM_GuardPatch.esp
@@ -1879,14 +1891,75 @@ Synthesis_4.esp
 _NEFARAM_____AFTERSynthesis_____.esp
 DynDOLOD.esp
 Occlusion.esp
+Racemenu Handnails.esp
+ZMDs Feet Nail Art for RaceMenu v1.esp
+[Dint999] FacePartMod.esp
+[Dint999] FacePartMod+Mikan_Eyes.esp
+[Dint999] FacePartMod+Kala_Eyes.esp
+Brows.esp
+Pocky Punk's Make Up Addon_females.esp
+YMMP.esp
+evgmodularSMPhair.esp
+EvgModularWigs.esp
 dD - Enhanced Blood Main.esp
 Bathing in Skyrim.esp
 WA_BathWidget.esp
 Bathing in Skyrim - Renewed Animal Fat and Linen.esp
 Malignis Sound FX.esp
 Bathing in Skyrim - Wash Me.esp
+hdm_InvictaBlackRose.esp
+[qdaro] Silver Witch.esp
+DX FetishFashion II.esp
+hdm_InvictaLingerie.esp
+MuChainBikiniArmor.esp
+[ELLE] Dark Rebel.esp
+Aradia Bikini SE.esp
+Aether Outfit.esp
+LadyRitual.esp
+Bisquits Priestess of Mara.esp
+[Dint999] Fogotten Princess Set.esp
+[COCO] 2B Wedding Outfit.esp
+NocturneArmor.esp
+[ELLE] Delicate Zhuque.esp
+[Odd] RyanReos Spartan Hoplite.esp
+HB_archmage.esp
+[CV] Sexy Tsun Armor.esp
+Leolic.esp
+MuElfStahlrimBikiniArmor.esp
+[COCO] Luscious Lady.esp
+[COCO] CaressofVenus.esp
+Dark Dreams.esp
+MiscHeelsEins_CBBE.esp
+[Predator] MME Harness.esp
+Phoenix_Katana_.esp
+NewStatueOfShalidorMagicLights.esp
+Optional.DibellaStatuesFixes.esp
+MehrunesNoSnowShader.esp
+MalacathNoSnowShader.esp
+AzuraNoSnowShader.esp
+RoadSignsOverhaul 2.0.esp
+LKVM_LT04.esp
+LKVM Main House.esp
+LKVM Cellar and Exterior.esp
+LKVM_NOGrass.esp
+LKVMII_LT01.esp
+LKVM CC Fishing Patch.esp
+Riverhome v1.4.esp
+BetterThirdPersonSelection.esp
+Fertility Adventures.esp
+BeeingFemaleAdultPack.esp
+BeeingFemaleBasicAddOn.esp
+BeeingFemaleSE_Opt.esp
+InnBath.esp
+Xtended Stay.esp
+Xtended Stay - Close Dialogue.esp
+Xtended Stay - Bruma.esp
+Xtended Stay - Bruma - Close Dialogue.esp
+ArousedBodyMorphs.esp
 Water for ENB - Patch - FWMF for Fantasy Paper Maps.esp
 FWMF for Fantasy Paper Maps.esp
 MCM for FWMF.esp
 Lux patch for FWMF.esp
+```
+
 ```
