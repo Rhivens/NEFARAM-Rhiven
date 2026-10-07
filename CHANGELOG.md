@@ -13,6 +13,40 @@
   - SLSF Reloaded 4.1.1
 - Refreshed the MO2 left-pane and right-pane/plugin snapshots so the repository matches the current local instance.
 
+### PAMA / Prison Alternative — staged integration
+
+- Created dedicated MO2 separator `44 - PRISON PAMA SYSTEM`.
+- Installed and began validating:
+  - Next-Gen Decapitations
+  - Pama's Deadly Furniture 3.4.5 Revision 2
+  - Prison Alternative 2.0.3
+  - Pama Sovngarde Aftermath 1.0.0
+  - Punishment Pack 1.3.0
+  - Outdoor Event Pack 1.3
+  - Bad Ends Revived: Windhelm 1.3.0
+- Added dedicated `Next-Gen Decapitations - Sovngarde INI - Rhiven` override with the Sovngarde resurrection settings.
+- Deadly Furniture:
+  - nonlethal ragdoll / recovery flow validated in `pamaTestZone`
+  - lethal guillotine execution tested without CTD
+- Prison Alternative:
+  - MCM and Event Registry initialized correctly
+  - vanilla arrest and Whiterun prison handoff validated
+  - existing vanilla `CivilWarCot01L` (BaseID `000E2826`) works correctly; no replacement required in Whiterun
+- Sovngarde Aftermath:
+  - MCM initialized
+  - lethal PAMA execution correctly transferred the test character to Sovngarde
+  - full return scenario intentionally left untested to avoid spoilers
+- Pandora checkpoints progressed from 39,142 (Deadly Furniture) to 39,222 animations after the currently installed PAMA modules.
+- Bad Ends Windhelm xEdit audit found obsolete / vanilla-like navmesh overrides.
+- Created `PAMA - Windhelm Navmesh Patch - Rhiven.esp`:
+  - `000FC117` restored from WindhelmSSE Exterior NavMesh Fixes
+  - `0004B66C` restored from Capital Windhelm Expansion - Skyrim Sewers
+  - ESP flagged ESL
+  - Bad Ends Windhelm added as explicit master
+  - xEdit Check for Errors: **0 errors / 7 records**
+- Created `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven` so the NEFARAM-patched `ZaZAnkleChainsRagdolls_1.nif` wins over the older Bad Ends Windhelm copy.
+- Remaining PAMA core work: Riften audit, Solitude audit, Orkish Bounty Hunters, city pathing tests, and the complete Sovngarde return test.
+
 ### TNTR / trap ecosystem — initial integration
 
 - Added modern runtime frameworks in `43 - Added Mods SFW`:
