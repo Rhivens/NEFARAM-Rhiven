@@ -69,6 +69,9 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 | Deadly Bear Trap - Rhiven | Testing | 44 - Added Mods NSFW | Additional bear-trap placement layer used with the TNTR/EET ecosystem |
 | Watch Your Step - Rhiven | Testing | 44 - Added Mods NSFW | v1.2 main file for TNTR >0.46 / ESP-FE references; old O.S.H.I.T v0.4-only optional file intentionally skipped |
 
+| Outfit Gallery - Visual Outfit Manager - Rhiven | Validated | 43 - Added Mods SFW | SKSE-based visual wardrobe manager for Eleanor; F8 opens the gallery and F9 captures the current outfit; initial in-game UI test successful |
+| Regional Outfitters - Stalls of Skyrim - Rhiven | Validated | 43 - Added Mods SFW | SkyPatcher-driven themed armor/gear merchants; installed with Capital Windhelm, Obscure's College of Winterhold and AI Overhaul patches; multiple-city coc validation completed without CTD or obvious placement issue |
+
 ## Reviewed but not retained
 
 | Mod | Status | Reason |
