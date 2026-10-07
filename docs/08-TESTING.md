@@ -301,6 +301,51 @@ Decision:
 - keep enabled for now;
 - do **not** mark the gameplay stack fully Validated until early real-playthrough field tests pass.
 
+### Private Needs - Orgasm 1.11.1
+
+Status: **VALIDATED FOR RHIVEN NATURAL-NEEDS USE**
+
+Configuration intent:
+
+- used for bladder / bowel simulation only;
+- orgasm-related urination features intentionally disabled in MCM;
+- Dynamic Bloodpool Framework not installed because puddles are not required;
+- optional Dooty integration not installed;
+- optional SkyrimNet integration deferred until / unless SkyrimNet is actually added later.
+
+Initial in-game validation:
+
+- game launch: **OK**
+- mod initialization: **OK**
+- bladder fullness percentage visible: **OK**
+- bowel fullness percentage visible: **OK**
+- chair / furniture toilet interaction: **OK**
+- no CTD observed during the initial test
+- functionality worked before an additional Pandora regeneration, indicating the tested functions did not depend on a missing behavior-generation pass in this setup
+
+Notes:
+
+- v1.11.1 represents a substantial architecture update from the previously used 1.8.3 branch, with more runtime work moved into SKSE.
+- long-term checks remain sensible for equipment re-equip behavior, Devious Devices interaction and normal needs progression during the real playthrough.
+
+Decision:
+
+- keep enabled in the Rhiven build.
+
+### NakedStart 1.1.0
+
+Status: **REJECTED — NEFARAM START WORKFLOW INCOMPATIBLE**
+
+- Plugin files were correctly installed under `SKSE\\Plugins`.
+- Repeated NEFARAM start tests retained the full randomly assigned starting outfit / weapon set.
+- Increasing the settle window and disabling item-menu shutdown did not change the result.
+- NEFARAM starts from the supplied `NEFARAM_Start` save and then runs its Skyrim Unbound / RaceMenu / teleport workflow instead of beginning from Skyrim's normal `New Game` event.
+- NakedStart is designed to arm only on a true new game, so the NEFARAM supplied-save workflow is the likely incompatibility point.
+
+Decision:
+
+- remove / do not retain NakedStart in the final build.
+
 ## Test entry template
 
 ### YYYY-MM-DD — Change tested
