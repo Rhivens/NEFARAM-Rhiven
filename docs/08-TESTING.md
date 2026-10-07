@@ -346,6 +346,70 @@ Decision:
 
 - remove / do not retain NakedStart in the final build.
 
+### PAMA / Prison Alternative integration
+
+Status: **CORE TECHNICAL INTEGRATION VALIDATED — CITY ADDONS / FULL GAMEPLAY PENDING**
+
+Current installed block:
+
+- Next-Gen Decapitations + dedicated Sovngarde INI override
+- Pama's Deadly Furniture 3.4.5 Revision 2
+- Prison Alternative 2.0.3
+- Pama Sovngarde Aftermath 1.0.0
+- Punishment Pack 1.3.0
+- Outdoor Event Pack 1.3
+- Bad Ends Revived: Windhelm 1.3.0
+- Rhiven Windhelm navmesh patch
+- Rhiven NEFARAM ZaZ ankle-chain mesh patch
+
+Validation completed:
+
+- Deadly Furniture MCM / requirements detected: **OK**
+- Deadly Furniture nonlethal test in `pamaTestZone`: **OK**
+- player pseudo-death → ragdoll → recovery: **OK**
+- Prison Alternative MCM / base Event Registry: **OK**
+- vanilla arrest → Whiterun jail handoff: **OK**
+- Whiterun vanilla cot `CivilWarCot01L` / BaseID `000E2826`: **OK**
+- prison sleep / sentence progression: **OK**
+- Sovngarde Aftermath MCM: **OK**
+- lethal guillotine execution: **OK**
+- decapitation without CTD: **OK**
+- automatic transfer to Sovngarde Aftermath: **OK**
+- full Sovngarde return intentionally not completed to avoid story / scenario spoilers.
+
+Pandora checkpoints:
+
+- Deadly Furniture: **39,142**
+- Prison Alternative: **39,184** (+42)
+- Sovngarde Aftermath: **39,184** (+0)
+- Punishment Pack: **39,200** (+16)
+- Outdoor Event Pack: **39,200** (+0)
+- Bad Ends Windhelm: **39,222** (+22)
+- all listed runs completed without reported Pandora errors.
+
+Windhelm xEdit validation:
+
+- PAMA overwrite of navmesh `000FC117` corrected using `WindhelmSSE - Exterior NavMesh Fixes.esp`
+- PAMA overwrite of navmesh `0004B66C` corrected using `CapitalWindhelmExpansion - SkyrimSewers.esp`
+- dedicated patch ESL-flagged
+- explicit Bad Ends Windhelm master added
+- xEdit `Check for Errors`: **0 errors / 7 records**
+
+Pending:
+
+- Windhelm in-game placement / NPC pathing test
+- Bad Ends Riften installation + xEdit audit against Riften of Reverie
+- Bad Ends Solitude installation + placement / navmesh audit
+- Orkish Bounty Hunters installation / defeat interaction test
+- full execution → Sovngarde quest → Tamriel return / restored head test
+- Fill Her Up timing / deflation checks during Outdoor events
+- final Acheron / Practical Defeat coexistence tests
+
+Decision:
+
+- keep current PAMA core enabled;
+- continue city-by-city integration before the definitive Eleanor playthrough.
+
 ## Test entry template
 
 ### YYYY-MM-DD — Change tested
