@@ -1,11 +1,18 @@
-# NEFARAM Rhiven Modded — MO2 Left Pane
+# NEFARAM Rhiven Modded — MO2 Left Panel (dernière mise à jour le 07-10-2026 11h55)
 
 Current customized MO2 left-pane snapshot.
 
 Replace the content of the block below whenever the validated Rhiven setup changes.
 
 ```text
-[NEFARAM 17.3]
+# NEFARAM Rhiven Modded — MO2 Left Panel
+
+Current customized MO2 left-pane snapshot.
+
+Replace the content of the block below whenever the validated Rhiven setup changes.
+
+```text
+[NEFARAM 17.3.7]
 [01 - Major Patches]
 SSE Creation Kit Fonixdata Lip Sync Fix
 Skyrim Remastered - Optimized (Part 1)
@@ -116,6 +123,8 @@ XEMI Utility
 Luma Utility
 Mini's Micro-Systems Framework (MMSF)
 Native EditorID Fix
+Inventory Refresh Fix
+XPMF - Extended Projected Materials Framework
 [03 - Fixes]
 Actor Limit Fix
 Hide Quest Items in Container Menu
@@ -324,6 +333,7 @@ Wheeler - Quick Action Wheel Of Skyrim - Rhiven
 Perfected Wheeler - Apocrypha Menu Framework - Rhiven
 Dragonborn - Wheeler Reskin - Rhiven
 Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven
+Compare Equipment NG - Rhiven
 [05 - Landscape]
 Chanterelle World
 Chanterelle Horse Herds
@@ -340,13 +350,14 @@ Revamped Assets Skyrim - Weapon Racks Patch
 High Poly Project
 Rally's Solstheim AIO
 Simplicity of Snow
-Simplicity of Snow - Parallax Meshes
+Simplicity of Snow - Parallax Meshes - DECOCHE
 Paraphernalia - Snow Colour Fixes
 Shaders of Solstheim - Ash and Moss
 Better Dyndolod Red Mountain Plume
 Septentrional Landscapes SE - 8K
 Blended Roads
 Blended Roads Meshes
+Simplicity of Snow Sulfur Ash Moss
 Blended Roads - Simplicity of Snow Patch
 Blended Roads Redone SE - 8K
 Blended Roads Redone Bridges 2K
@@ -438,6 +449,7 @@ Fluffworks Patches
 Skeleton Replacer HD 2K SE
 Amon - Sk Fix for Animals and Creatures
 [07 - Architecture]
+Standing Stones AIO with New Fixes - Rhiven
 Boreal Boats SE - 8K - Parallax
 Rudy HQ - Nordic Ruins SE
 Skyrim Textures Redone - SkyHaven
@@ -804,6 +816,7 @@ Magicka Sabers
 Immersive Illusion Spells
 Simple Object Stasis - Paralysis Prevents Physics Mess
 Mysterium Xarxes - A SimonRim Addon for The Cause
+Spells of Silly
 [13 - Quests - Changes]
 Timing is Everything SE
 Caught Red Handed - Quest Expansion
@@ -1234,7 +1247,8 @@ Wolf attack animations
 NPC No Block - Exhaustion
 Comprehensive Attack Rate Patch - SKSE
 Unarmed Behaviors Expanded
-Core Impact Framework (CIF)
+Core Impact Framework (CIF) - DECOCHE
+Core Impact Framework (CIF) 2.0.7
 Sanguine Symphony
 Sanguine Symphony - More Subtle Sound FX (AOS - ISC - Improvement - Fixes)
 Dragons Use Thu'um
@@ -1242,6 +1256,7 @@ Smart NPC Potions - Enemies Use Potions and Poisons
 Blade and Blunt - A Combat Overhaul
 Blade and Blunt - I4 icons
 Accurate Projectile Collision
+Standing Stealth
 [21 - Survival]
 SunHelm Survival
 Nordic UI Icons for Sunhelm and iNeed Wigdets
@@ -1472,7 +1487,8 @@ Look Around - Searching Animations For NPCs
 Improved Table Transition Animations
 EVG Animation Variance
 P.A.I.A
-NPC Animation Remix (DAR)
+NPC Animation Remix (DAR) - DECOCHE
+NPC Animation Remix (DAR) 2.4.2
 Gesture Animation Remix (DAR)
 Male Player Animations (DAR)
 First Person Animation Teleport Bug Fix
@@ -1671,6 +1687,7 @@ Mesh Glow Removal Project - Dwemer Metals Retexture SE
 Helios
 KreatE
 DALC Fix Preset
+Meshes Optimization Project
 [28 - Seasons]
 Seasons of Skyrim SKSE
 Turn of the Seasons
@@ -1754,6 +1771,7 @@ Chooey's KS Hairdos Retexture
 KS Hairdos - HDT SMP (Physics)
 Chooey's KS Hairdos Retexture - HDT-SMP Addon
 [Dint] HairPack02
+[Dint999] HairPack02 SSE 1.13 - Rhiven
 [Dint999] BDOR Hairs
 Citizens of Tamriel Visual Overhaul - Salt and Wind
 Expressive Facial Animation -Male Edition-
@@ -1827,6 +1845,15 @@ Enhanced Blood Textures - Rhiven
 Enhanced Blood Textures SE - Settings Loader (SPID version) - Rhiven
 EBT - Just Blood Body Patch - Rhiven
 TitKit by Monsto SSE
+3D Hand Nails for Racemenu - Rhiven
+ZMDs Feet Soles Nail Texture Overlays RaceMenu SE - Rhiven
+[Dint999] FacePartMod (SSE) v0.72b - Rhiven
+Hvergelmir's Aesthetics - Brows - Rhiven
+Pocky's 4k human female makeup standalone - Rhiven
+YMMP YevMods Makeup Pack - Rhiven
+Modular SMP Hairstyles - Rhiven
+Hair Suppression Fix - Rhiven
+Modular SMP Wigs - Rhiven
 [31 - CBBE 3BA HIMBO]
 Feminine Khajiit Textures (Grey Cat and Leopard) [CBBE]
 CBPC - Physics with Collisions
@@ -1894,6 +1921,11 @@ Cozy's Allendra - High Poly Preset
 Shatanica Ultimate Preset
 Bruneis - High Poly Head Character Preset
 GoS - Serana High Poly RaceMenu Preset
+Walkuere - a Tinraa RM preset CBBE 3BA - Rhiven
+Stoja - High Poly Nord Female Preset - Rhiven
+Princess Nyx of Leyawiin - Character Preset - Rhiven
+CV Preset Pack I - Rhiven
+Foxy RaceMenu Preset - Rhiven
 [34 - Sexlab Frameworks]
 SexLab Framework
 SLGP
@@ -1911,7 +1943,8 @@ ZaZ Animation Pack
 ZAZ NPC Fixer
 SLO Aroused NG
 SL smooth expressions
-SLSF Reloaded
+SLSF Reloaded - DECOCHE
+SLSF Reloaded 4.1.1
 Amputator Framework Tweaked
 Patched SE SL TOOLS Updated
 Simple Slavery Plus Plus
@@ -2059,6 +2092,14 @@ NEFARAM Start Patch
 NEFARAM Presets
 LoreBox NEFARAM
 NEFARAM AND Keywords
+[37.1 - TK Dodge]
+IFrame Generator RE AE Support - Rhiven
+TK Dodge For RE - Rhiven
+TK Dodge RE - Script Free - Rhiven
+TK dodge firstperson 8 ways dodge - Rhiven
+TK Dodge Animation Pandora Fix Patch - Rhiven
+TK Dodge NG - Rhiven
+Dynamic Dodge Animation - Rhiven
 [38 - Overwrites]
 Creation Kit Output
 PCA Output
@@ -2075,15 +2116,15 @@ Bruma - All Fixes for Custom LODs - Seasons
 [39 - OPTIONAL MODS]
 Auto Resolution
 Enable for MORE skimpy clothes distribution
-Texture Downscaler
-Cached Recursive Directory Walk
-Disable skimpy clothes on NPCs (but you can still craft them)
-Enable for Widescreen support
-PI-CHO ENB Performance ini, READ THE INCLUDED FILE NOT PLUG AND PLAY
-ENB Frame Generation
-Fertility Mode
+Texture Downscaler - DECOCHE
+Cached Recursive Directory Walk - A ACTIVER EN FIN DE CUSTOMISATION
+Disable skimpy clothes on NPCs (but you can still craft them) - DECOCHE
+Enable for Widescreen support - DECOCHE
+PI-CHO ENB Performance ini, READ THE INCLUDED FILE NOT PLUG AND PLAY - DECOCHE (Utilisation de Cabbage)
+ENB Frame Generation - A TESTER EN FIN DE CUSTOMISATION
+Fertility Mode - DECOCHE
 Better Third Person Selection - BTPS
-SoulsyHUD
+SoulsyHUD - DECOCHE
 [40 - Female Skin Options (Enable all mods with the same [prefix] and disable the others)]
 [BnP] Main Texture - Frostnip
 [BnP] Futanari Patch
@@ -2095,9 +2136,48 @@ SoulsyHUD
 [Diamond Skin] Cosplay Basics Patch
 [Realore Skin Ultima] Main Texture
 [Realore Skin Ultima] Futanari patch
-[41 - Added Mods]
-[42 - FWMF Maps - Rhiven]
+[PB's Silky Skin] Main Texture - Rhiven
+MuDynamicNormalMap - Rhiven
+[41 - Homes Eleanor]
+Road Signs Overhaul 2.0 - Rhiven
+Road Sings 2.0 - Questionable Clutter Remover (BOS) - Rhiven
+Road Signs Overhaul 2.0 - Blended Roads Patch(BOS) - Rhiven
+Riverwood Riverhome - SE-AE Port - Rhiven
+Lakeview. Manor - As It Should Be - Rhiven
+Lakeview Manor - As It Should Be - (CC) Fishing Compatibility Patch - Rhiven
+Lakeview Manor - As It Should Be - FR - Rhiven
+[42 - Fertility System]
+Fertility Adventures Redux - Rhiven
+Beeing Female NG - Rhiven
+BeeingFemale NG HUD Re Alignment Patch V1.0.1 - Rhiven
+[43 - Added Mods SFW]
+Simple Inn Bath
+Xtended Stay
+Phoenix Katana - Rhiven
+[44 - Architecture NSFW]
+New Statue of Shalidor SE 1A - Rhiven
+New Dibella Statues SE 2.0 - Rhiven
+New Dibella Statues SE 2.0 Fixes - Rhiven
+New Mara Statue SE 4k - Rhiven
+New Mara Statue SE Hair Patch - Rhiven
+New Mara Statue Bowl Replacer - Rhiven
+New Dragon Word Wall 2k 4k- Rhiven
+New Statue of Mehrunes Dagon V2 - Rhiven
+New Statue of Mehrunes Dagon Altar - Rhiven
+New Statue of Mehrunes Dagon No Snow Shader - Rhiven
+New Statue of Malacath SE V1 - Rhiven
+New Statue of Malacath SE No Snow Shaders - Rhiven
+New Statue of Talos SE - Rhiven
+New Nocturnal Statue SE V2 - Rhiven
+New Statue of Meridia 1.1. Dirty SE - Rhiven
+New Shrine of Azura 2.0 V1 SE - Rhiven
+New Shrine of Azura No Snow Shaders - Rhiven
+[44 - Added Mods NSFW]
+Aroused BodyMorphs
+[45 - FWMF Maps - Rhiven]
 Flat World Map Framework Lite - Rhiven
 Skyrim Paper Map by Caro Tuts for FWMF - Rhiven
 Overwrite
+```
+
 ```
