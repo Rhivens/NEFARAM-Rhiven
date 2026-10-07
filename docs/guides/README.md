@@ -42,3 +42,12 @@ Les futurs guides techniques peuvent être ajoutés dans ce dossier lorsqu'ils d
 - procédure de diagnostic ou de dépannage.
 
 Les modifications spécifiques au build courant doivent continuer à être documentées dans les fiches principales du dossier `docs/` et dans le `CHANGELOG.md`.
+
+
+## Chantier PAMA — Prison Alternative
+
+Un chantier dédié documente l'intégration progressive de l'écosystème **PAMA / Prison Alternative** dans NEFARAM-Rhiven : architecture, dépendances, compatibilités, risques de navmesh, ordre MO2 provisoire et protocole de test.
+
+**Dossier :** [PAMA/README.md](PAMA/README.md)
+
+> Statut actuel : audit terminé, intégration et tests à venir.
