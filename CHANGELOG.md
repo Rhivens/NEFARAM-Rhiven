@@ -13,6 +13,44 @@
   - SLSF Reloaded 4.1.1
 - Refreshed the MO2 left-pane and right-pane/plugin snapshots so the repository matches the current local instance.
 
+### TNTR / trap ecosystem — initial integration
+
+- Added modern runtime frameworks in `43 - Added Mods SFW`:
+  - `SkyPatcher - AE - Rhiven`
+  - `Object Impact Framework (OIF) - Rhiven`
+- Added the TNTR trap stack in `44 - Added Mods NSFW`:
+  - `Trap Needs to be Real Trap - Rhiven` — TNTR 0.74
+  - `EET Extra Evil Traps - Rhiven` — EET 1.2.3
+  - `O Skyrim Has Insane Traps - Rhiven`
+  - `OMNOMS Not So Obvious Mimics - Rhiven` — OMNOMS 1.3.0
+  - `Deadly Bear Trap - Rhiven`
+  - `Watch Your Step - Rhiven` — v1.2
+- TNTR FOMOD selections:
+  - Replacer enabled
+  - New Baka Traps enabled
+  - OAR patch selected
+  - Nemesis-style behavior patch selected for use with Pandora
+- EET configured with patched Bear Trap and Snare Trap scripts for TNTR 0.73 / 0.74.
+- OMNOMS configured with:
+  - patched TNTR v0.7x Mimic script
+  - Mimic activation-text replacement
+  - experimental vanilla-chest shader replacement disabled
+  - SkyPatcher distribution to Magic Vendors + Spell Tomes
+  - General Vendors distribution disabled
+  - O.S.H.I.T compatibility patch enabled
+- Corrected MO2 conflict priority so OMNOMS loads after O.S.H.I.T and its `SKSE\\Plugins\\ObjectImpactFramework\\OSHIT-OIF.json` override wins as intended.
+- Watch Your Step uses the current v1.2 main file for TNTR >0.46; the old O.S.H.I.T v0.4-only optional file was not installed.
+- Initial New Game validation:
+  - game launch: **OK**
+  - no startup CTD observed
+  - no obvious initialization anomaly observed
+  - TNTR MCM registered
+  - TNTR: Extra Evil Traps MCM registered
+  - TNTR: Not So Obvious Mimics MCM registered
+- Stack status: **technical initialization validated / real-game field testing still pending**.
+- Planned early-playthrough checks include Mimics, Bear Trap, Snare/QTE, O.S.H.I.T / Watch Your Step placement, and interactions with Fill Her Up Baka, Devious Devices and Acheron / Practical Defeat.
+- Load-order snapshot refresh intentionally deferred until the remaining planned mods are installed.
+
 ### Riverhome
 
 - Installed Riverwood Riverhome SE/AE Port as an additional Eleanor home.
