@@ -1,6 +1,6 @@
 # 03 - Added mods
 
-This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
+This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 
 ## Status legend
 
@@ -60,6 +60,15 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 | Beeing Female NG 3.6.0 - Rhiven | Testing | 42 - Fertility System | Preferred fertility / pregnancy framework replacing the optional stock Fertility Mode; technical initialization and Pandora compatibility validated |
 | Beeing Female NG - HUD Re-Alignment Patch - Rhiven | Testing | 42 - Fertility System | Repacked preset-only addon adding Align1-Align6 INI layouts under BeeingFemale/HUD; structural compatibility with BFNG 3.6.0 verified, final in-game placement pending |
 
+| SkyPatcher - AE - Rhiven | Installed | 43 - Added Mods SFW | Runtime patching / distribution framework added for modern mod integrations; used by OMNOMS for Banish Mimic scroll distribution |
+| Object Impact Framework (OIF) - Rhiven | Installed | 43 - Added Mods SFW | SKSE framework required by O.S.H.I.T.; installed as the framework only, without the optional Cut Food config |
+| Trap Needs to be Real Trap - Rhiven | Testing | 44 - Added Mods NSFW | TNTR 0.74 base; Replacer + New Baka Traps + OAR patch + Nemesis-style behavior patch selected for Pandora-compatible generation |
+| EET Extra Evil Traps - Rhiven | Testing | 44 - Added Mods NSFW | Extra Evil Traps 1.2.3; Bear Trap and Snare Trap patches selected for TNTR 0.73/0.74 |
+| O Skyrim Has Insane Traps - Rhiven | Testing | 44 - Added Mods NSFW | O.S.H.I.T trap-placement / impact layer; requires OIF |
+| OMNOMS Not So Obvious Mimics - Rhiven | Testing | 44 - Added Mods NSFW | OMNOMS 1.3.0; patched Mimic script, hidden activation text, SkyPatcher distribution via Magic Vendors + Spell Tomes, O.S.H.I.T compatibility patch enabled |
+| Deadly Bear Trap - Rhiven | Testing | 44 - Added Mods NSFW | Additional bear-trap placement layer used with the TNTR/EET ecosystem |
+| Watch Your Step - Rhiven | Testing | 44 - Added Mods NSFW | v1.2 main file for TNTR >0.46 / ESP-FE references; old O.S.H.I.T v0.4-only optional file intentionally skipped |
+
 ## Reviewed but not retained
 
 | Mod | Status | Reason |
@@ -70,7 +79,7 @@ This file tracks mods added on top of the stock NEFARAM 17.3.6 installation.
 
 ## Planned / candidates
 
-No Wheeler-related legacy dependency is currently planned. The older `dMenu + dMenu NG + Wheeler Refined` stack was intentionally not restored because Perfected Wheeler works correctly with the SKSE Menu Framework already included in NEFARAM 17.3.6.
+No Wheeler-related legacy dependency is currently planned. The older `dMenu + dMenu NG + Wheeler Refined` stack was intentionally not restored because Perfected Wheeler works correctly with the SKSE Menu Framework already included in NEFARAM 17.3.7.
 
 The dirtiness level 5 widget fix remains a conditional candidate only.
 
