@@ -57,7 +57,7 @@ Planned checks:
 - inspect MO2 file conflicts
 - in-game inventory open / refresh / equip test
 
-Status: **TO REVIEW**
+Status: **VALIDATED**
 
 ---
 
@@ -84,9 +84,9 @@ Requirements:
 
 Important consequence for NEFARAM-Rhiven:
 
-The current setup uses **Core Impact Framework 1.2.8**, so Standing Stealth cannot be added safely without first updating CIF.
+The pre-migration setup used **Core Impact Framework 1.2.8**. The active 17.3.7 instance now uses **Core Impact Framework 2.0.7**, satisfying the Standing Stealth requirement.
 
-Status: **TO REVIEW**
+Status: **VALIDATED**
 
 ---
 
@@ -96,7 +96,7 @@ Source:
 
 https://www.nexusmods.com/skyrimspecialedition/mods/146873
 
-Current NEFARAM-Rhiven version: **1.2.8**
+Previous NEFARAM-Rhiven version: **1.2.8**
 
 Target version required / observed: **2.0.7**
 
@@ -127,7 +127,7 @@ Planned checks:
 - test CIF-dependent effects in game
 - only then install / enable Standing Stealth
 
-Status: **TO REVIEW**
+Status: **VALIDATED**
 
 ---
 
@@ -166,7 +166,7 @@ Planned checks before installation:
 
 Do not install this mod blindly from default FOMOD choices.
 
-Status: **TO REVIEW - WAITING FOR NEFARAM DISCORD DETAILS**
+Status: **VALIDATED**
 
 ---
 
@@ -192,7 +192,7 @@ Planned checks:
 - inspect plugin / script conflicts
 - test SLSF initialization and MCM after update
 
-Status: **TO REVIEW - VERSION TARGET CONFIRMED (4.1.0 -> 4.1.1)**
+Status: **VALIDATED — 4.1.1**
 
 ---
 
@@ -213,7 +213,9 @@ Status: **TO REVIEW - VERSION TARGET CONFIRMED (4.1.0 -> 4.1.1)**
 ## Current migration status
 
 - Wabbajack update: **NOT USED**
-- Current validated base: **NEFARAM 17.3.6**
-- Target base: **NEFARAM 17.3.7**
+- Previous validated base: **NEFARAM 17.3.6**
+- Current active base: **NEFARAM 17.3.7**
 - Save compatibility announced by NEFARAM: **YES**
-- Manual migration: **IN PREPARATION**
+- Manual migration: **COMPLETED / VALIDATED**
+- Integrated delta: Inventory Refresh Fix, Core Impact Framework 2.0.7, Standing Stealth, Meshes Optimization Project and SLSF Reloaded 4.1.1
+- Current MO2 left/right snapshots refreshed for the 17.3.7 Rhiven instance
