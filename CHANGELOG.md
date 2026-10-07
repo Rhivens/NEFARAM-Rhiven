@@ -51,6 +51,34 @@
 - Planned early-playthrough checks include Mimics, Bear Trap, Snare/QTE, O.S.H.I.T / Watch Your Step placement, and interactions with Fill Her Up Baka, Devious Devices and Acheron / Practical Defeat.
 - Load-order snapshot refresh intentionally deferred until the remaining planned mods are installed.
 
+### Outfit Gallery - Visual Outfit Manager
+
+- Installed `Outfit Gallery - Visual Outfit Manager - Rhiven` in `43 - Added Mods SFW`.
+- Initial file-conflict review showed only documentation / license file overlaps with other CommonLibSSE-based mods; no functional conflict observed.
+- In-game validation:
+  - SKSE menu opens correctly: **OK**
+  - default gallery hotkey `F8`: **OK**
+  - no startup CTD observed
+- Purpose: provide Eleanor with a scalable visual wardrobe manager for the large personal outfit / armor collection.
+- Status: **Validated**.
+
+### Regional Outfitters - Stalls of Skyrim
+
+- Installed `Regional Outfitters - Stalls of Skyrim - Rhiven` in `43 - Added Mods SFW`.
+- SkyPatcher framework reused from the current Rhiven setup.
+- FOMOD compatibility patches selected for mods present in NEFARAM-Rhiven:
+  - Capital Windhelm
+  - Obscure's College of Winterhold
+  - AI Overhaul
+- Other city / college overhaul patches left disabled because the corresponding mods are not present in the current modlist.
+- In-game validation performed with console `coc` tests across several cities.
+- Results:
+  - game stability: **OK**
+  - no CTD observed
+  - no obvious stall / vendor placement problem observed in the tested locations
+- Status: **Validated** for initial integration; normal long-term inventory refresh behavior will be observed during the real playthrough.
+
+
 ### Riverhome
 
 - Installed Riverwood Riverhome SE/AE Port as an additional Eleanor home.
