@@ -1,9 +1,31 @@
 # Chantier PAMA — Prison Alternative / NEFARAM-Rhiven
 
-> **Statut : intégration / validation en cours**
+> **Statut : bloc PAMA installé et validé pour l’intégration dans NEFARAM-Rhiven**
 >
-> Le socle PAMA est maintenant installé et partiellement validé dans NEFARAM-Rhiven.  
-> Deadly Furniture, Prison Alternative, Sovngarde Aftermath, Punishment Pack, Outdoor Event Pack et Bad Ends Windhelm sont installés. Windhelm dispose déjà de correctifs Rhiven dédiés ; Riften, Solitude et Orkish Bounty Hunters restent à intégrer / auditer.
+> Le cœur PAMA est désormais installé dans son ensemble et les principaux audits xEdit / tests en jeu sont terminés. Les quelques points restant ouverts relèvent de la surveillance en partie réelle et ne bloquent pas l’intégration.
+>
+> ### Positionnement par rapport à NEFARAM original
+>
+> NEFARAM fournit en bas de sa structure MO2 des séparateurs génériques **Added Mods**. La configuration Rhiven conserve ce principe, mais cette zone personnelle a été réorganisée et **numérotée** afin de garder un ordre lisible et reproductible.
+>
+> Le bloc PAMA est regroupé dans le séparateur dédié `44 - PRISON PAMA SYSTEM`. Ce séparateur n’existe pas tel quel dans NEFARAM stock : il s’agit d’une organisation personnelle construite au-dessus de NEFARAM 17.3.7.
+>
+> ### Ordre logique retenu
+>
+> 1. Next-Gen Decapitations - Sovngarde INI - Rhiven
+> 2. Pama's Deadly Furniture 3.4.5 Revision 2
+> 3. Prison Alternative 2.0.3
+> 4. Pama Sovngarde Aftermath 1.0.0
+> 5. Punishment Pack 1.3.0
+> 6. Outdoor Event Pack 1.3
+> 7. Bad Ends Windhelm 1.3.0
+> 8. patches Rhiven Windhelm
+> 9. Bad Ends Riften 1.3.2
+> 10. Bad Ends Solitude 1.8.0 Revision 2
+> 11. PAMA - Solitude Location Patch - Rhiven
+> 12. Orkish Bounty Hunters 0.4
+>
+> Cet ordre décrit surtout la **position MO2 gauche / architecture fonctionnelle**. Il ne doit pas être recopié mécaniquement dans le panneau droit sans contrôle des masters et des overrides.
 
 ## Objectif
 
