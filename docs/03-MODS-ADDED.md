@@ -118,3 +118,17 @@ Current Pandora total after the complete PAMA block: **39,298 animations**.
 
 The full planned PAMA core is now installed. Remaining work is limited to long-term / real-playthrough observation and the intentionally deferred complete Sovngarde return test.
 
+## Missives / SL Dirty Deeds — 2026-10-08
+
+MO2 location: `46 - Added Mods NSFW` (left pane); order retained as listed below. French translation is intentionally deferred until the modpack is fully installed and stable.
+
+| Mod / Patch | Status | Notes |
+|---|---|---|
+| Missives 2.03 SSE - Rhiven | Testing | Nexus base kept enabled under the replacement in MO2; its shared `Missives.esp` / BSA / MCM files are overridden by the higher-priority replacement |
+| Replacing Boards for Missives - Rhiven | Testing | Standalone replacement v2.12 (RU_EN); overwrites `Missives.esp`, `Missives.bsa` and MCM config; HD themed boards, additional locations and integrated Solstheim support; Whiterun board visual placement and interaction verified in-game |
+| SL Dirty Deeds Missives - Rhiven | Testing | v1.4.2; `SL Dirty Deeds Missives.esp` plus `SL Dirty Deeds Missives - 1.4.2 - Race Edits.esp`; 15+ repeatable SexLab contracts; notes seen on Whiterun board; actual quest/scene completion left for real playthrough |
+| SL Dirty Deeds - Race Compatibility - Rhiven | xEdit Validated | ESL-flagged patch `SL Dirty Deeds - Race Compatibility - Rhiven.esp` overrides WolfRace `0001320A`: restores male height `1.000000` from Synthesis / MoreNastyCritters while retaining `Allow PC Dialogue`; xEdit Check for Errors: 0 errors / 2 records |
+
+Race Edits review with full load order: FalmerRace, GiantRace, TrollRace and TrollFrostRace retained their relevant prior values and added `Allow PC Dialogue`; WolfRace required the targeted height compatibility patch. All three mod plugins separately passed initial xEdit Check for Errors (Missives: 2,399 records; Dirty Deeds: 340; Race Edits: 6; 0 errors each).
+
+In-game checkpoint: Missives MCM General / Rewards opened; Whiterun board visible and accessible without obvious clipping; Dirty Deeds notes visible in board inventory. Not yet tested: accepting/completing a Dirty Deeds mission, SexLab scene triggering/rewards, repeatability, and checks at additional board locations. No translation work performed.
