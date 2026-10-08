@@ -104,9 +104,9 @@ La configuration Sovngarde est isolée dans le mod MO2 dédié :
 
 Le mod original reste donc intact et l'override INI peut être activé/désactivé indépendamment.
 
-## Ordre MO2 gauche provisoire
+## Ordre MO2 gauche retenu
 
-Ordre de travail proposé, à confirmer pendant l'installation :
+Ordre actuellement retenu pour l'intégration :
 
 1. Pama´s Deadly Furniture (scripts)
 2. Prison Alternative - A modular Prison System
@@ -339,14 +339,15 @@ Les sources Papyrus de Prison Alternative sont conservées séparément dans `Pr
 - validation xEdit du patch : **0 erreur**.
 - test en jeu des placements / pathing Windhelm reste à effectuer.
 
-### À reprendre
+### Validation finale du cœur PAMA — 2026-10-08
 
-1. installer et auditer **Bad Ends Riften** avec `Riften of Reverie` ;
-2. installer et auditer **Bad Ends Solitude** ;
-3. installer **Orkish Bounty Hunters** ;
-4. tester les nouveaux Events PA et leurs registres ;
-5. effectuer les tests de terrain / pathing par ville ;
-6. terminer plus tard le test complet Sovngarde → Tamriel.
+- **Bad Ends Riften 1.3.2** : installé ; Pandora **39 252** ; audit xEdit ciblé terminé ; aucun patch navmesh requis. Un léger chevauchement visuel avec un puits vanilla sera corrigé directement en partie réelle après identification de la référence.
+- **Bad Ends Solitude 1.8.0 Revision 2** : installé ; Pandora **39 298** ; audit xEdit et contrôle de pathing terminés. Le patch `PAMA - Solitude Location Patch - Rhiven.esp` restaure `SolitudeLocation` sur `SolitudeOrigin [00037EE9]` ; xEdit : **0 erreur / 17 records**.
+- **Orkish Bounty Hunters 0.4** : installé et testé sur les branches principales (ambush, KO scripté, transfert, camp, escape, recapture). Un CTD isolé pendant une recapture n'a pas été reproduit lors des essais suivants.
+- **Pandora final du bloc testé : 39 298 animations**.
+- **Bloc PAMA : validé pour intégration**.
+
+Restent volontairement différés à la vraie partie : le scénario complet Sovngarde → Tamriel, quelques observations longue durée et la surveillance du CTD OBH isolé s'il réapparaît.
 
 ## Modules PAMA évalués mais non retenus dans le cœur du chantier
 
@@ -415,14 +416,14 @@ docs/guides/PAMA/
 - [x] Identification des conflits potentiels Windhelm / Riften / Solitude
 - [x] Identification de Next-Gen Decapitations comme dépendance technique importante
 - [x] Ajouter les fiches Markdown sources
-- [ ] Installer le bloc complet — **socle + Windhelm installés ; Riften / Solitude / OBH restants**
-- [ ] Vérifier les conflits xEdit — **Windhelm terminé ; Riften / Solitude restants**
-- [ ] Définir le load order droit définitif
+- [x] Installer le bloc complet
+- [x] Vérifier les conflits xEdit ciblés — **Windhelm / Riften / Solitude terminés**
+- [x] Définir l'ordre d'intégration du bloc PAMA
 - [ ] Configurer les MCM — **réglages de test appliqués ; tuning final différé**
 - [x] Régénérer Pandora pour les modules actuellement installés
 - [x] Tester Deadly Furniture / Prison Alternative en mode non létal
 - [ ] Tester les exécutions létales + Sovngarde — **transfert vers Sovngarde validé ; retour Tamriel différé**
-- [ ] Valider le bloc
+- [x] Valider le bloc pour intégration
 - [ ] Reporter les mods retenus dans `docs/03-MODS-ADDED.md`
 - [ ] Reporter les tests dans `docs/08-TESTING.md`
 - [ ] Ajouter l'intégration au `CHANGELOG.md`
