@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-10-08
+
+### PAMA / Prison Alternative — core block validated
+
+- Completed installation of the planned PAMA core with Bad Ends Riften 1.3.2, Bad Ends Solitude 1.8.0 Revision 2 and Orkish Bounty Hunters 0.4.
+- Added a concise PAMA README header explaining how the Rhiven setup extends NEFARAM's original `Added Mods` area with numbered personal separators and a dedicated `44 - PRISON PAMA SYSTEM` block.
+- Bad Ends Riften:
+  - Pandora total: **39,252** (+30)
+  - targeted xEdit audit completed
+  - PAMA navmesh retained; no compatibility patch required
+  - minor vanilla-well visual overlap deferred to the definitive playthrough
+- Bad Ends Solitude:
+  - Pandora total: **39,298** (+46)
+  - targeted xEdit and in-game pathing checks completed
+  - Animal Research / Saffron pathing observed working
+  - added `PAMA - Solitude Location Patch - Rhiven.esp` to restore `SolitudeLocation` on `SolitudeOrigin [00037EE9]`
+  - xEdit Check for Errors: **0 errors / 17 records**
+- Orkish Bounty Hunters:
+  - manual ambush start validated
+  - scripted poison / KO flow validated without defeat-framework interception
+  - jail, camp, escape and recapture paths validated
+  - one isolated recapture CTD was not reproducible during repeated retests
+- Final Pandora checkpoint for the complete tested PAMA block: **39,298 animations**.
+- Decision: PAMA core accepted for the Rhiven build; remaining work is limited to real-playthrough observation and the intentionally deferred full Sovngarde return scenario.
+
 ## 2026-10-07
 
 ### NEFARAM 17.3.7 — active Rhiven baseline
