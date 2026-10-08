@@ -2,6 +2,17 @@
 
 ## 2026-10-08
 
+### Missives / Replacing Boards / SL Dirty Deeds — installed and first in-game check
+
+- Installed `Missives 2.03 SSE - Rhiven`, `Replacing Boards for Missives - Rhiven` (v2.12) and `SL Dirty Deeds Missives - Rhiven` (v1.4.2) under `46 - Added Mods NSFW`.
+- Replacing Boards is the higher-priority complete Missives replacement: `Missives.esp`, `Missives.bsa` and MCM configuration are overridden; original Nexus installation is retained beneath it in MO2.
+- Enabled Dirty Deeds' core ESP and `Race Edits` ESP after `Missives.esp`.
+- Initial xEdit Check for Errors: Missives 2,399 records / 0 errors; Dirty Deeds 340 / 0; Race Edits 6 / 0.
+- Full-load-order audit of the five modified creature races found a male-height rollback in WolfRace `0001320A` (1.000000 → 1.200000) from Race Edits; Falmer, Giant, Troll and Frost Troll relevant changes retained.
+- Created `SL Dirty Deeds - Race Compatibility - Rhiven.esp` (ESL-flagged), loaded after Race Edits: restores WolfRace male height to `1.000000` while keeping `Allow PC Dialogue`. xEdit Check for Errors: **0 errors / 2 records**.
+- In-game Whiterun check: Missives MCM General / Rewards displayed correctly; replacement noticeboard placed and accessible without obvious clipping; Dirty Deeds contract notes present in its inventory.
+- Status: **installation and initial integration validated; full Dirty Deeds quest and scene tests deferred to the real playthrough**. French translations deferred until modpack completion.
+
 ### PAMA / Prison Alternative — core block validated
 
 - Completed installation of the planned PAMA core with Bad Ends Riften 1.3.2, Bad Ends Solitude 1.8.0 Revision 2 and Orkish Bounty Hunters 0.4.
