@@ -1,4 +1,6 @@
-# Chantier PAMA — Prison Alternative / NEFARAM-Rhiven
+# Chantier PAMA — Prison Alternative / NEFARAM-Rhiven (FR)
+
+> 🇫🇷 **Version française** — English version: [README_EN.md](README_EN.md)
 
 > **Statut : bloc PAMA installé et validé pour l’intégration dans NEFARAM-Rhiven**
 >
