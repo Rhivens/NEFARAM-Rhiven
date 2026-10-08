@@ -130,6 +130,7 @@ These tasks are intentionally performed only after the definitive playthrough ha
 - [ ] Watch the first sessions for repeated errors or abnormal save growth.
 - [ ] Test the TNTR trap ecosystem very early in the definitive playthrough: Bear Trap, Snare/QTE, OMNOMS Mimic, O.S.H.I.T and Watch Your Step.
 - [ ] Verify TNTR interactions with Fill Her Up Baka, Devious Devices and Acheron / Practical Defeat before significant progression.
+- [ ] **Riften / Bad Ends:** during the definitive Eleanor playthrough, disable the vanilla well that clips through the PAMA execution scaffold (console `disable` after positively identifying the well reference); re-check the scaffold area afterward.
 
 ### Lakeview Manor / Eleanor home
 
