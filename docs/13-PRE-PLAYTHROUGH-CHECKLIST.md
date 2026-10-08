@@ -109,6 +109,8 @@ These tasks are intentionally performed only after the definitive playthrough ha
 ### Mega MCM session
 
 - [ ] Perform the full MCM configuration session.
+- [ ] **Enable Bathing in Skyrim Renewed (BiSR)** in its MCM; it is disabled by default.
+- [ ] **Enable Private Needs - Orgasm (PNO)** in its MCM; it is disabled by default.
 - [ ] Configure BFNG with the planned player-only / Gem / CBBE 3BA settings.
 - [ ] Tune BFNG / Fill Her Up / Milk Mod Economy morph amplitudes conservatively.
 - [ ] Configure the remaining gameplay / survival systems consistently with the selected difficulty.
