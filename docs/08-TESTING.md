@@ -348,7 +348,7 @@ Decision:
 
 ### PAMA / Prison Alternative integration
 
-Status: **CORE TECHNICAL INTEGRATION VALIDATED — CITY ADDONS / FULL GAMEPLAY PENDING**
+Status: **CORE BLOCK VALIDATED FOR INTEGRATION**
 
 Current installed block:
 
@@ -361,21 +361,31 @@ Current installed block:
 - Bad Ends Revived: Windhelm 1.3.0
 - Rhiven Windhelm navmesh patch
 - Rhiven NEFARAM ZaZ ankle-chain mesh patch
+- Bad Ends Revived: Riften 1.3.2
+- Bad Ends Revived: Solitude 1.8.0 Revision 2
+- Rhiven Solitude Location patch
+- Orkish Bounty Hunters 0.4
 
 Validation completed:
 
-- Deadly Furniture MCM / requirements detected: **OK**
-- Deadly Furniture nonlethal test in `pamaTestZone`: **OK**
-- player pseudo-death → ragdoll → recovery: **OK**
+- Deadly Furniture MCM / requirements: **OK**
+- Deadly Furniture controlled test in `pamaTestZone`: **OK**
 - Prison Alternative MCM / base Event Registry: **OK**
 - vanilla arrest → Whiterun jail handoff: **OK**
 - Whiterun vanilla cot `CivilWarCot01L` / BaseID `000E2826`: **OK**
 - prison sleep / sentence progression: **OK**
-- Sovngarde Aftermath MCM: **OK**
-- lethal guillotine execution: **OK**
-- decapitation without CTD: **OK**
-- automatic transfer to Sovngarde Aftermath: **OK**
-- full Sovngarde return intentionally not completed to avoid story / scenario spoilers.
+- Sovngarde Aftermath handoff from PAMA: **OK**
+- full Sovngarde return intentionally deferred to avoid scenario spoilers
+- Bad Ends Windhelm targeted xEdit audit: **OK with dedicated Rhiven patches**
+- Bad Ends Riften targeted xEdit audit: **OK, no navmesh patch required**
+- Bad Ends Solitude targeted xEdit / in-game pathing audit: **OK with dedicated Location patch**
+- Falkreath prison bed checked as vanilla `Bedroll01` / BaseID `00036ED3` / RefID `000EF426`
+- Orkish Bounty Hunters manual ambush start: **OK**
+- OBH scripted poison / KO flow: **OK**
+- OBH jail outcome: **OK**
+- OBH camp outcome: **OK**
+- OBH escape and recapture: **OK**
+- one isolated OBH recapture CTD was observed once and could not be reproduced during repeated retests
 
 Pandora checkpoints:
 
@@ -385,30 +395,37 @@ Pandora checkpoints:
 - Punishment Pack: **39,200** (+16)
 - Outdoor Event Pack: **39,200** (+0)
 - Bad Ends Windhelm: **39,222** (+22)
-- all listed runs completed without reported Pandora errors.
+- Bad Ends Riften: **39,252** (+30)
+- Bad Ends Solitude: **39,298** (+46)
+- all listed runs completed without reported Pandora errors
 
 Windhelm xEdit validation:
 
-- PAMA overwrite of navmesh `000FC117` corrected using `WindhelmSSE - Exterior NavMesh Fixes.esp`
-- PAMA overwrite of navmesh `0004B66C` corrected using `CapitalWindhelmExpansion - SkyrimSewers.esp`
+- navmesh `000FC117` restored from `WindhelmSSE - Exterior NavMesh Fixes.esp`
+- navmesh `0004B66C` restored from `CapitalWindhelmExpansion - SkyrimSewers.esp`
 - dedicated patch ESL-flagged
-- explicit Bad Ends Windhelm master added
 - xEdit `Check for Errors`: **0 errors / 7 records**
 
-Pending:
+Riften validation:
 
-- Windhelm in-game placement / NPC pathing test
-- Bad Ends Riften installation + xEdit audit against Riften of Reverie
-- Bad Ends Solitude installation + placement / navmesh audit
-- Orkish Bounty Hunters installation / defeat interaction test
-- full execution → Sovngarde quest → Tamriel return / restored head test
-- Fill Her Up timing / deflation checks during Outdoor events
-- final Acheron / Practical Defeat coexistence tests
+- PAMA navmesh `000429CE` intentionally kept
+- Riften of Reverie does not override this navmesh
+- no dedicated navmesh patch required
+- minor visual overlap from a vanilla well will be handled in the definitive playthrough after positive console identification
+
+Solitude validation:
+
+- PAMA and Animal Research touch the same broad navmesh, but tested gameplay zones are spatially distinct
+- Saffron exterior pathing / wall-lean behavior observed in game: **OK**
+- no navmesh merge retained
+- `PAMA - Solitude Location Patch - Rhiven.esp` restores `SolitudeLocation` on `SolitudeOrigin [00037EE9]`
+- xEdit `Check for Errors`: **0 errors / 17 records**
 
 Decision:
 
-- keep current PAMA core enabled;
-- continue city-by-city integration before the definitive Eleanor playthrough.
+- keep the complete PAMA core enabled;
+- treat the block as validated for integration;
+- continue only with normal real-playthrough observation and the intentionally deferred full Sovngarde return test.
 
 ## Test entry template
 
