@@ -92,22 +92,29 @@ The dirtiness level 5 widget fix remains a conditional candidate only.
 `Inflation Framework NG` is also tracked only. The first real-playthrough tests will use native BodyMorph handling in BFNG, Fill Her Up and Milk Mod Economy; the framework will be reconsidered only if a reproducible morph-coexistence problem appears.
 
 
-## PAMA / Prison Alternative block — 2026-10-07
+## PAMA / Prison Alternative block — 2026-10-08
 
 Dedicated MO2 separator: `44 - PRISON PAMA SYSTEM`.
 
 | Mod / Patch | Status | Notes |
 |---|---|---|
-| Next-Gen Decapitations | Testing | Installed in SFW additions; required/recommended foundation for PAMA decapitation handling |
-| Next-Gen Decapitations - Sovngarde INI - Rhiven | Testing | Dedicated INI override: `iCanBeResurrected = 2`, `bAdvancedNPCMaintenance = 0` |
-| PamaDeadlyFurniture 3.4.5 Revision 2 - Rhiven | Validated (core) | Nonlethal device flow validated in `pamaTestZone`; lethal guillotine test also reached Sovngarde without CTD |
-| Prison Alternative 2.0.3 - Rhiven | Validated (core) | SE/AE + ZaZ-compatible install; Whiterun arrest / jail / cot / sentence progression validated |
-| Prison Alternative - Scripts Sources - Rhiven | Support / Disabled | Papyrus sources kept separately for future inspection or edits; disabled for normal play |
-| Pama Sovngarde Aftermath 1.0.0 - Rhiven | Testing | MCM OK; transfer after lethal PAMA execution validated; full return intentionally deferred |
-| Prison Alternative - Punishment Pack 1.3.0 - Rhiven | Testing | Installed cleanly; Pandora +16 animations |
-| Prison Alternative - Outdoor Event Pack 1.3 - Rhiven | Testing | Installed cleanly; no additional Pandora animations |
-| Bad Ends Revived: Windhelm 1.3.0 - Rhiven | Testing | Installed; Pandora +22; requires Rhiven navmesh + ZaZ mesh compatibility patches |
+| Next-Gen Decapitations | Validated for PAMA integration | Installed in SFW additions; foundation for the current PAMA setup |
+| Next-Gen Decapitations - Sovngarde INI - Rhiven | Validated | Dedicated INI override: `iCanBeResurrected = 2`, `bAdvancedNPCMaintenance = 0` |
+| PamaDeadlyFurniture 3.4.5 Revision 2 - Rhiven | Validated | Core furniture flow tested successfully in `pamaTestZone` |
+| Prison Alternative 2.0.3 - Rhiven | Validated | SE/AE + ZaZ-compatible install; Whiterun arrest / jail / cot / sentence progression validated |
+| Prison Alternative - Scripts Sources - Rhiven | Support / Disabled | Papyrus sources kept separately for inspection or future edits; disabled for normal play |
+| Pama Sovngarde Aftermath 1.0.0 - Rhiven | Validated for integration | Handoff from PAMA validated; full return scenario intentionally deferred |
+| Prison Alternative - Punishment Pack 1.3.0 - Rhiven | Validated for integration | Installed cleanly; Pandora +16 animations |
+| Prison Alternative - Outdoor Event Pack 1.3 - Rhiven | Validated for integration | Installed cleanly; no additional Pandora animations |
+| Bad Ends Revived: Windhelm 1.3.0 - Rhiven | Validated with patches | Pandora +22; Rhiven navmesh + ZaZ compatibility patches retained |
 | PAMA - Windhelm Navmesh Patch - Rhiven | xEdit Validated | ESL-flagged compatibility patch for navmeshes `000FC117` and `0004B66C`; 0 xEdit errors |
 | PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven | Structural Fix | Reapplies NEFARAM's `ZaZAnkleChainsRagdolls_1.nif` after Bad Ends Windhelm |
+| Bad Ends Revived: Riften 1.3.2 - Rhiven | Validated for integration | Pandora +30; targeted xEdit audit found no navmesh patch requirement; minor visual well overlap deferred to real playthrough |
+| Bad Ends Revived: Solitude 1.8.0 Revision 2 - Rhiven | Validated with patch | Pandora +46; targeted xEdit / in-game pathing checks completed |
+| PAMA - Solitude Location Patch - Rhiven | xEdit Validated | ESL-flagged patch restoring `SolitudeLocation` on `SolitudeOrigin [00037EE9]`; 0 xEdit errors |
+| Orkish Bounty Hunters 0.4 - Rhiven | Validated for integration | Ambush, scripted KO, jail, camp, escape and recapture paths tested; one isolated CTD was not reproduced |
 
-Still pending from the planned core: **Bad Ends Riften, Bad Ends Solitude, Orkish Bounty Hunters**.
+Current Pandora total after the complete PAMA block: **39,298 animations**.
+
+The full planned PAMA core is now installed. Remaining work is limited to long-term / real-playthrough observation and the intentionally deferred complete Sovngarde return test.
+
