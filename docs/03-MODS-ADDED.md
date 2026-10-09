@@ -132,3 +132,22 @@ MO2 location: `46 - Added Mods NSFW` (left pane); order retained as listed below
 Race Edits review with full load order: FalmerRace, GiantRace, TrollRace and TrollFrostRace retained their relevant prior values and added `Allow PC Dialogue`; WolfRace required the targeted height compatibility patch. All three mod plugins separately passed initial xEdit Check for Errors (Missives: 2,399 records; Dirty Deeds: 340; Race Edits: 6; 0 errors each).
 
 In-game checkpoint: Missives MCM General / Rewards opened; Whiterun board visible and accessible without obvious clipping; Dirty Deeds notes visible in board inventory. Not yet tested: accepting/completing a Dirty Deeds mission, SexLab scene triggering/rewards, repeatability, and checks at additional board locations. No translation work performed.
+
+## Simple Offence Suppression MCM — 2026-10-09
+
+| Mod | Status | MO2 location | Validation / Notes |
+|---|---|---|---|
+| Simple Offence Suppression MCM - Rhiven | Testing — MCM validated | Block `22`, directly below stock `Simple Offence Suppression` | MCM addon v0.6 for the existing stock SKSE/DLL-only mod; no MO2 file conflicts observed; `Simple Offence Suppression MCM.esp` ESL-flagged, observed priority 1950 / FE:C67. In-game MCM opened with new stealth / out-of-combat friendly-fire options. Existing `SKSE Output/po3_SimpleOffenceSuppression.ini` retained the same settings before and after the test; genuine combat friendly-fire behavior not tested yet. |
+
+## Fitting Room / Menu Studio / FLICK — 2026-10-09
+
+MO2: `43 - Added Mods SFW`. This is a **trial installation**. Keep `Outfit Gallery - Visual Outfit Manager - Rhiven` installed but disabled during this comparison; the final wardrobe tool decision is deferred to the definitive playthrough preparation.
+
+| Mod | Status | Notes |
+|---|---|---|
+| FLICK - Fuzz's Legally Intelligible Core Kit - Rhiven | Testing — UI initialized | FLICK NG framework; no MO2 file conflicts observed, and its settings sidebar hosts Fitting Room and Menu Studio |
+| Menu Studio - Rhiven | Testing — visual integration observed | v1.2.0; no ESP / no MO2 file conflicts observed. FOMOD: `The dressing room` + `The star dome`. Player shown in the star-themed menu environment using existing `Show Player In Menus` + Persistent Zoom Fix; no replacement of the existing SkyUI 5.2 / Dragonborn UI stack |
+| Fitting Room - Rhiven | Testing — initial outfit preview validated | v1.2.0; FOMOD: `Freeform`, `Leave my face alone`, `All dyes unlocked`. FLICK settings registered and editor opens with `N` **from the inventory**. Outfit/plugin browser detects installed outfit sets including Aether; live preview on Eleanor and Menu Studio star background observed. `FittingRoom.ini` contains `iEditorKeyDIK=49` (N), `iDirectEntryKeyDIK=0` (no in-world shortcut), `bLooksRaceMenu=false` and `bReassertAppearance=false`. Appearance/transmog does not grant actual inventory items. Scene compatibility option enabled but SexLab/DD behavior untested. |
+| Outfit Gallery - Visual Outfit Manager - Rhiven (existing) | Installed — temporarily disabled for comparison | Retained in MO2; final choice between Outfit Gallery (wardrobe tool), Fitting Room (visual transmog), or coexistence remains undecided. Do not remove either until decision at playthrough start. |
+
+Optional future cosmetic project: custom `Eleanor's Dressing Room` environment/backdrop for Menu Studio. Keep separate from build completion.
