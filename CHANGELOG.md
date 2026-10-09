@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-09
+
+### Simple Offence Suppression MCM 0.6
+
+- Installed `Simple Offence Suppression MCM - Rhiven` immediately beneath stock `Simple Offence Suppression` in MO2 block `22`; the original is an SKSE DLL mod without ESP.
+- No new file conflicts observed; `Simple Offence Suppression MCM.esp` is ESL-flagged (observed MO2 plugin priority 1950 / FE:C67).
+- MCM initialized in-game; options for allowing friendly fire outside combat and while sneaking are visible. The copy of `po3_SimpleOffenceSuppression.ini` in SKSE Output was apparently rewritten but values remained unchanged in the before/after files.
+- Status: **MCM initialized; actual friendly-fire damage and AI reaction testing deferred to real gameplay**.
+
+### FLICK / Menu Studio / Fitting Room 1.2.0 — wardrobe experiment
+
+- Installed `FLICK - Fuzz's Legally Intelligible Core Kit - Rhiven`, `Menu Studio - Rhiven` (1.2.0), and `Fitting Room - Rhiven` (1.2.0) in `43 - Added Mods SFW`; FLICK/Menu Studio showed no file conflicts; Menu Studio has no ESP.
+- Reused existing `ImGui Icons`, `Show Player In Menus`, and `Show Player In Menus - Persistent Zoom Fix`; kept the existing SkyUI 5.2 / Dragonborn UI configuration intact.
+- Menu Studio FOMOD: `The dressing room` + `The star dome`; starry studio environment observed in-game. Custom `Eleanor's Dressing Room` backdrop retained as a future optional creative project.
+- Fitting Room FOMOD: `Freeform`, `Leave my face alone`, `All dyes unlocked`; face replacement/RaceMenu preset loading disabled, dyes available, no prerequisite physical outfit.
+- FLICK configuration pages registered and opened in-game. Changed Fitting Room editor shortcut to `N` (`iEditorKeyDIK=49`); editor opens **while Skyrim inventory is open**, not directly from open-world gameplay (`iDirectEntryKeyDIK=0`).
+- Real in-game editor verified: scanned outfit plugin collections, listed Aether and many other outfit sets, and previewed Aether on Eleanor inside Menu Studio's star environment. This is a **visual transmog / appearance**, not actual gear added to inventory.
+- `Outfit Gallery - Visual Outfit Manager - Rhiven` remains installed but was unchecked only during the Fitting Room test. **Do not remove either wardrobe tool yet**: choose Outfit Gallery, Fitting Room or coexistence at pre-playthrough decision point.
+- Pending: verify saved/applied transmog persists outside editor, decide desired physical-gear vs cosmetic appearance workflow, confirm scenes/undressing (SexLab / Devious Devices), and test any keybind conflicts. Scene suspension is configured but not yet validated with SexLab.
+
 ## 2026-10-08
 
 ### Missives / Replacing Boards / SL Dirty Deeds — installed and first in-game check
