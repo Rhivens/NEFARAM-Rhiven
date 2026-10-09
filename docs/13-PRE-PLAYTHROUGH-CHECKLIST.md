@@ -21,6 +21,12 @@ Rule:
 
 ### Outfit integration
 
+- [ ] **Decide Eleanor's definitive wardrobe workflow before starting the real playthrough:** compare `Outfit Gallery - Visual Outfit Manager - Rhiven` (managing outfits / real gear) versus `Fitting Room - Rhiven` (cosmetic transmog without adding real clothes), or deliberately retain both if they provide useful complementary functions.
+  - Both mods are currently kept in MO2; **Outfit Gallery is only temporarily disabled for Fitting Room testing**, not removed.
+  - Record which mod(s) should be active in the definitive profile; verify no competing shortcuts or overlapping equipment features.
+  - Fitting Room 1.2.0 initial in-game check: FLICK/editor works from inventory with `N`, outfits such as Aether appear and preview on Eleanor; Menu Studio uses `The dressing room` + `The star dome`. Saving/applied appearance persistence and SexLab/Devious Devices undressing behavior remain unverified.
+  - Keep `Leave my face alone` / `Freeform` / `All dyes unlocked` unless intentionally changed; check transmog suspension during scenes and avoid assuming that cosmetically worn pieces count as real equipment.
+
 - [ ] Complete in-game visual / physics validation of the personal Eleanor outfit block.
 - [ ] Audit added Eleanor outfits against the existing Advanced Nudity Detection / OSL / modesty keyword stack.
 - [ ] Identify which personal outfits are already covered by existing KID rules.
@@ -156,6 +162,7 @@ These checks wait until Lakeview is legitimately available in the real playthrou
 
 Items here do **not** block the definitive playthrough.
 
+- [ ] **Eleanor's Dressing Room (Menu Studio):** consider a custom backdrop / dressing-room scene after stabilization and FR translation; optional cosmetic project, not a launch blocker.
 - [ ] **Outfit Gallery - Visual Outfit Manager:** study a possible patch allowing outfit pieces to be retrieved from one or more designated in-world wardrobe / storage containers instead of requiring Eleanor to carry the full wardrobe in her inventory.
 - [ ] **RaceMenuAtelier - SKSE RM UI:** test it on the definitive New Game before actual play begins, ideally in the Skyrim Unbound waiting room; validate character creation, camera / UI behavior and preset handling, and remove it immediately if it causes crashes or instability.
 - [ ] **Campfire 2026:** re-evaluate after a few days of community feedback; compare the Regular build against the current NEFARAM Campfire setup before deciding whether to adopt it.
