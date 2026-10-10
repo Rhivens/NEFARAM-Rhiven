@@ -2,7 +2,7 @@
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-Principe général : **finir les ajouts, figer le modpack, auditer le bloc tatouages, finaliser le rendu graphique, passer en français, effectuer le contrôle technique final, puis seulement lancer la partie définitive et configurer les MCM.**
+Principe général (roadmap locale **v1.1**) : **terminer les deux mods d'animations, installer et auditer le bloc tatouages, figer les ajouts gameplay, finaliser le rendu graphique (ENB actuel vs Community Shaders), travailler Vel'Dun / le HUD, passer Skyrim et les mods en français, vérifier la checklist pré-finale, puis lancer la partie définitive et configurer les MCM.**
 
 Baseline actuelle : **NEFARAM 17.3.7**, profil MO2 **ELEANOR Stable**.
 
@@ -18,77 +18,45 @@ Baseline actuelle : **NEFARAM 17.3.7**, profil MO2 **ELEANOR Stable**.
 - [ ] Pour les anciens mods issus de V16, contrôler les dépendances modernes avant installation : runtime Skyrim, SKSE, Address Library, DLL éventuelles, SexLab, Papyrus, animations et frameworks associés.
 - [ ] Ne pas remplacer un ancien mod qui fonctionne encore proprement uniquement parce qu'il est ancien.
 - [ ] Après chaque bloc validé, mettre à jour la documentation du dépôt si nécessaire.
-- [ ] Une fois la Phase 3 terminée : **gel fonctionnel du modpack**. Aucun nouvel ajout gameplay sauf correction nécessaire.
+- [ ] Une fois la Phase 2 terminée : **gel fonctionnel du modpack**. Aucun nouvel ajout gameplay sauf correction nécessaire.
 
 ---
 
-## Phase 1 - Derniers ajouts simples / faible risque
+## Phase 1 - Dernières animations (à installer)
 
-Installer d'abord les mods les moins susceptibles de perturber les frameworks.
+Les gros mods gameplay / LoversLab ont été étudiés. Il ne reste dans la roadmap locale v1.1 que les animations et le bloc tatouages avant le gel fonctionnel.
 
-### 1.1 Fancy Magecore
+### 1.1 Gulan0 - Female Random Idle v1.0
 
-- [ ] Étudier la fiche et les prérequis.
-- [ ] Installer.
-- [ ] Vérifier les conflits MO2.
-- [ ] Vérifier en jeu meshes, textures, équipements et éventuels effets.
-- [ ] Contrôler xEdit si plugin présent.
-
-Source : https://www.nexusmods.com/skyrimspecialedition/mods/141579
-
-### 1.2 Fitting Room - ESO Style Transmog
-
-- [ ] Vérifier les dépendances et compatibilités avec l'UI / inventaire existant.
-- [ ] Installer.
-- [ ] Tester l'ouverture de l'interface et la persistance des apparences.
-- [ ] Vérifier l'absence de conflit majeur avec les systèmes d'équipement de NEFARAM.
-
-Source : https://www.nexusmods.com/skyrimspecialedition/mods/185342
-
-### 1.3 Vindictus Fall Night Dress CBBE 3BA HDT-SMP Higheel
-
-- [ ] Installer après validation des prérequis 3BA / SMP / High Heel.
-- [ ] Lancer BodySlide si nécessaire.
-- [ ] Vérifier morphs, physics, clipping, poids 0/100 et comportement en mouvement.
-- [ ] Vérifier l'intégration aux règles de détection de nudité / modesty si nécessaire.
-
-Source : https://www.loverslab.com/files/file/42204-vindictus-fall-night-dress-cbbe-3ba-hdt-smp-higheel/
-
----
-
-## Phase 2 - Animations et systèmes légers
-
-### 2.1 Gulan0 - Female Random Idle v1.0
-
-- [ ] Vérifier le type d'animation et les frameworks requis.
-- [ ] Installer.
-- [ ] Regénérer Pandora si requis.
-- [ ] Tester idle debout, transitions et interruption par déplacement/combat.
+- [ ] Vérifier le framework d'animations, les dépendances et les conflits d'idles.
+- [ ] Installer et contrôler les priorités MO2.
+- [ ] Régénérer Pandora uniquement si requis.
+- [ ] Tester idles debout, transitions et interruption par marche / combat.
 
 Source : https://www.nexusmods.com/skyrimspecialedition/mods/165916
 
-### 2.2 Gulan0 Animations - Walk / Run / Sprinting Rework
+### 1.2 Gulan0 Animations - Walk / Run / Sprinting Rework
 
-- [ ] Vérifier les conflits avec les animations locomotion déjà présentes.
-- [ ] Installer après le pack idle.
-- [ ] Regénérer Pandora si requis.
-- [ ] Tester marche, course, sprint, arme sortie/rangée et transitions.
+- [ ] Vérifier les animations de locomotion déjà présentes.
+- [ ] Installer après les idles et contrôler les conflits MO2.
+- [ ] Régénérer Pandora si requis.
+- [ ] Tester marche, course, sprint, armes et transitions.
 
 Source : https://www.nexusmods.com/skyrimspecialedition/mods/164743
 
-### 2.3 Campfire 2026
+### Éléments sortis des ajouts restants
 
-- [ ] Comparer avec la version / intégration Campfire déjà présente dans NEFARAM.
-- [ ] Vérifier précisément SKSE, PapyrusUtil, scripts et patches requis.
-- [ ] Ne pas écraser automatiquement les composants NEFARAM sans audit.
-- [ ] Installer seulement après validation des conflits.
-- [ ] Tester création de camp, feu, repos, démontage et sauvegarde/rechargement.
-
-Source : https://www.nexusmods.com/skyrimspecialedition/mods/193929
+- **Fancy Magecore** : installé ; validation visuelle définitive encore à faire.
+- **Fitting Room** : installé en test comparatif avec Outfit Gallery ; décision définitive suivie dans la checklist 13.
+- **Campfire 2026** : **écarté** après évaluation bénéfice/risque ; garder le socle Campfire NEFARAM existant. Ne pas le réintroduire comme installation planifiée.
+- **Bandit Paradise 1.6.5** : **exclu** après audit, effort d'intégration et risques narratifs/Script/SexLab jugés disproportionnés.
+- **Devious Carriages Redux 1.0.6** : installé avec patch CFTO et voix ; contrôle statique effectué, tests fonctionnels différés.
+- **TDF Aroused Rape v3.2** : module Aroused Rape uniquement (pas l'ancien Sexy Idles) installé ; SSEEdit 90 records, 0 erreur ; tests en jeu différés.
+- **SexLab Dangerous Nights 2 SE 2.6** : ajouté au bloc NSFW ; audit ESP/Papyrus/MCM réalisé, SSEEdit 147 records, 0 erreur ; contrôle du nettoyage des acteurs et tests in-game encore à effectuer. Réglages initiaux MCM consignés dans la checklist 13.
 
 ---
 
-## Phase 3 - Bloc tatouages : installation et audit complet
+## Phase 2 - Bloc tatouages : installation et audit complet
 
 Ce bloc doit être traité comme **un ensemble cohérent**, pas comme une suite de mods indépendants.
 
@@ -110,14 +78,14 @@ Sources :
 - https://www.loverslab.com/files/file/26261-zaki-tattoo-pack-lese/
 - https://www.loverslab.com/files/file/30951-alpia-scribbles-slavetats-pack/
 
-### 3.1 Compatibilité générale
+### 2.1 Compatibilité générale
 
 - [ ] Vérifier les versions requises de SlaveTats / SexLab / JContainers / PapyrusUtil et autres dépendances.
 - [ ] Comparer avec le fonctionnement connu sous l'ancien NEFARAM V16.
 - [ ] Vérifier que les mods ne reposent pas sur une API supprimée ou renommée.
 - [ ] Rechercher les éventuels patches modernes nécessaires.
 
-### 3.2 Audit JSON
+### 2.2 Audit JSON
 
 Pour chaque pack contenant des JSON :
 
@@ -133,7 +101,7 @@ Pour chaque pack contenant des JSON :
 - [ ] Vérifier les caractères spéciaux / encodage.
 - [ ] Corriger uniquement via un override Rhiven lorsque c'est possible.
 
-### 3.3 Cohérence fonctionnelle du bloc
+### 2.3 Cohérence fonctionnelle du bloc
 
 - [ ] Vérifier l'application d'un tatouage par SlaveTats.
 - [ ] Vérifier l'application via Rape Tattoos Continued.
@@ -146,7 +114,7 @@ Pour chaque pack contenant des JSON :
 - [ ] Tester sauvegarde -> sortie jeu -> rechargement.
 - [ ] Vérifier l'absence de disparition ou duplication d'overlays.
 
-### 3.4 Validation du bloc
+### 2.4 Validation du bloc
 
 - [ ] Aucun JSON invalide.
 - [ ] Aucun chemin texture mort connu.
@@ -156,47 +124,7 @@ Pour chaque pack contenant des JSON :
 
 ---
 
-## Phase 4 - Mods gameplay / SexLab à risque plus élevé
-
-Ces mods passent **après** les ajouts simples et le bloc tatouages afin de faciliter le diagnostic en cas de problème.
-
-### 4.1 Devious Carriages Redux 1.0.6
-
-- [ ] Copier la fiche complète / changelog / requirements dans le chat pour audit.
-- [ ] Vérifier compatibilité avec la version actuelle de Skyrim / SKSE.
-- [ ] Vérifier SexLab / Devious Devices / autres frameworks requis.
-- [ ] Contrôler scripts, quêtes et conflits xEdit.
-- [ ] Tester trajet, déclenchement, scène, fin de trajet et sauvegarde/rechargement.
-
-Source : https://www.loverslab.com/files/file/38214-devious-carriages-redux/
-
-### 4.2 Bandit Paradise 1.6.5 - ETUDE SERIEUSE
-
-- [ ] Ne pas installer immédiatement.
-- [ ] Faire un audit complet de la fiche.
-- [ ] Identifier scripts, quêtes, worldspace/cells, leveled lists, spawns et frameworks.
-- [ ] Vérifier compatibilité avec les grands systèmes NEFARAM.
-- [ ] Chercher les retours récents correspondant au runtime / SexLab actuels.
-- [ ] Contrôler le plugin dans xEdit avant décision.
-- [ ] Décision finale : installer / différer / rejeter.
-
-Source : https://www.loverslab.com/files/file/45522-bandit-paradise/
-
-### 4.3 TDF SexLab Aroused Rape and Aroused Sexy Idles v3.2 - A VOIR
-
-- [ ] Faire l'audit de la fiche avant installation.
-- [ ] Vérifier compatibilité SexLab actuelle.
-- [ ] Vérifier le système d'arousal utilisé.
-- [ ] Identifier les recouvrements avec les systèmes déjà présents dans NEFARAM.
-- [ ] Vérifier les animations et comportements requis.
-- [ ] Contrôler la charge script / événements.
-- [ ] Décision finale : installer / différer / rejeter.
-
-Source : https://www.loverslab.com/files/file/4095-tdf-sexlab-aroused-rape-and-aroused-sexy-idles-v32/
-
----
-
-## Phase 5 - Gel fonctionnel du modpack
+## Phase 3 - Gel fonctionnel du modpack
 
 Quand toutes les décisions des phases précédentes sont prises :
 
@@ -210,7 +138,7 @@ Quand toutes les décisions des phases précédentes sont prises :
 
 ---
 
-## Phase 6 - Etude graphique finale
+## Phase 4 - Étude graphique finale
 
 Cette phase commence **uniquement lorsque la liste des mods fonctionnels est figée**.
 
@@ -238,6 +166,10 @@ Travail :
 - [ ] Vérifier compatibilités avec météo, éclairages, parallax, grass, water, skin, SMP et UI.
 - [ ] Mesurer performances et rendu dans les mêmes scènes que l'ENB.
 
+### Documentation NEFARAM et décision graphique
+
+- [ ] Retrouver et étudier la fiche officielle de modifications / recommandations graphiques NEFARAM Discord déjà conservée dans le dépôt GitHub.
+
 ### Décision graphique
 
 - [ ] Comparer **ENB optimisé vs Community Shaders** sur la machine réelle.
@@ -247,7 +179,21 @@ Travail :
 
 ---
 
-## Phase 7 - Passage complet en français
+## Phase 5 - Vel'Dun UI / HUD & interface Eleanor
+
+Ce chantier se déroule **après le choix graphique et avant les traductions / la partie définitive**, sur profil de test, sans reconstruire précipitamment l'interface NEFARAM.
+
+- [ ] Auditer et intégrer **Vel'Dun UI**, en vérifiant les versions de SkyUI et MCM Helper de NEFARAM, ainsi que les options FOMOD réellement utiles.
+- [ ] Contrôler la cohabitation avec Dear Diary Dark Mode, Wheeler, TrueHUD, les widgets et le système de menus actuel.
+- [ ] Conserver les reskins Dragonborn UI désactivés pendant l'évaluation ; prévoir un retour arrière réversible.
+- [ ] Valider affichage 3D, carte / inventaire, HUD, hotkeys et stabilité en jeu.
+- [ ] Suivre le **chantier HUD détaillé** dans [guides/HUD/README.md](guides/HUD/README.md) ; ne pas dupliquer ici ses choix et ses tests.
+
+Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
+
+---
+
+## Phase 6 - Passage complet en français
 
 A effectuer après gel du load order pour éviter de retraduire des plugins encore mouvants.
 
@@ -262,7 +208,7 @@ A effectuer après gel du load order pour éviter de retraduire des plugins enco
 
 ---
 
-## Phase 8 - Contrôle technique pré-final
+## Phase 7 - Contrôle technique pré-final
 
 Cette phase complète la checklist `13-PRE-PLAYTHROUGH-CHECKLIST.md`.
 
@@ -321,16 +267,16 @@ Cette phase complète la checklist `13-PRE-PLAYTHROUGH-CHECKLIST.md`.
 
 ---
 
-## Phase 9 - Lancement de la partie définitive
+## Phase 8 - Lancement de la partie définitive
 
-### 9.1 Départ propre
+### 8.1 Départ propre
 
 - [ ] Démarrer depuis **NEFARAM_Start**.
 - [ ] Créer Rhiven / personnage définitif.
 - [ ] Laisser les scripts de démarrage et enregistrements MCM se stabiliser.
 - [ ] Sauvegarde propre de référence avant configuration lourde.
 
-### 9.2 Mega-session MCM
+### 8.2 Mega-session MCM
 
 - [ ] Appliquer le preset NEFARAM prévu.
 - [ ] Configurer les MCM par blocs logiques.
@@ -342,7 +288,7 @@ Cette phase complète la checklist `13-PRE-PLAYTHROUGH-CHECKLIST.md`.
 - [ ] Rechercher les conflits de touches.
 - [ ] Faire une sauvegarde de référence après configuration.
 
-### 9.3 Validation avant vraie partie
+### 8.3 Validation avant vraie partie
 
 - [ ] Quitter complètement Skyrim.
 - [ ] Relancer.
