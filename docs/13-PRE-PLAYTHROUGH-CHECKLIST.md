@@ -58,6 +58,8 @@ Rule:
 - [ ] Align Simple Inn Bath cost with the chosen inn economy.
 - [ ] Validate Xtended Stay with the final inn-price configuration.
 - [ ] Review survival / hygiene interaction after all related mods are finalized.
+- [ ] **SexLab Dangerous Nights 2 SE 2.6:** once installed in `[46 - Added Mods NSFW]`, check its MO2 file conflicts, plugin dependencies and xEdit errors before the definitive new game; static Papyrus review is preliminary, not an in-game compatibility guarantee.
+- [ ] Verify that **SexLab Adventures → Sleep Rape** (if installed) is disabled to avoid competing sleep-triggered events; keep **SL Nightlife** disabled before starting the definitive game, as already planned. Check the exact installed names rather than treating SL Nights and SL Nightlife as interchangeable.
 - [ ] Confirm Bathing in Skyrim Renewed + Simple Inn Bath behavior in at least one inn.
 
 ### UI / controls preparation
@@ -119,6 +121,16 @@ These tasks are intentionally performed only after the definitive playthrough ha
 - [ ] **Enable Private Needs - Orgasm (PNO)** in its MCM; it is disabled by default.
 - [ ] Configure BFNG with the planned player-only / Gem / CBBE 3BA settings.
 - [ ] Tune BFNG / Fill Her Up / Milk Mod Economy morph amplitudes conservatively.
+- [ ] **SexLab Dangerous Nights 2 SE 2.6 — initial conservative MCM profile (PROPOSED, NOT YET IN-GAME VALIDATED):**
+  - Enable the mod only when ready to test it; keep a separate baseline save before the first sleep event.
+  - `Surroundings scan`: `spawn only` initially (avoid scanning pre-existing NPCs).
+  - `No attacker escape`: **OFF** (`NoEscape = false`; allow the mod's normal exit/cleanup sequence).
+  - Creature attacks: **OFF** for initial tests.
+  - Followers as victims / attackers and follower betrayal: **OFF** initially; test NFF/followers separately later.
+  - Player-home chance: **0%**; civilized areas **5%**; dangerous areas **40%**; wilderness **20%** (proposed low-intensity starting values, not official defaults).
+  - Sleeping-naked modifier, special wake-up animation and sleep-outfit handling: **OFF** for initial isolation tests.
+  - Mark special player homes / cells safe if needed; do not activate competing sleep-event systems.
+  - Once validated, raise chances or re-enable individual options one by one and record Eleanor's final MCM preset.
 - [ ] Configure the remaining gameplay / survival systems consistently with the selected difficulty.
 - [ ] Finalize Wheeler hotkeys and layout.
 - [ ] Finalize all other hotkeys.
@@ -134,6 +146,7 @@ These tasks are intentionally performed only after the definitive playthrough ha
 - [ ] Verify BFNG widgets and cycle state during normal play.
 - [ ] Verify Wheeler / UI / map behavior in normal gameplay.
 - [ ] Watch the first sessions for repeated errors or abnormal save growth.
+- [ ] **Dangerous Nights 2:** run several controlled sleep encounters on a disposable test save; confirm SexLab startup/end, player control restoration, actor departure, follower handling and save/reload. Observe logs and save/reference growth; **ESP/script static inspection does not prove that spawned actors are fully deleted**.
 - [ ] Test the TNTR trap ecosystem very early in the definitive playthrough: Bear Trap, Snare/QTE, OMNOMS Mimic, O.S.H.I.T and Watch Your Step.
 - [ ] Verify TNTR interactions with Fill Her Up Baka, Devious Devices and Acheron / Practical Defeat before significant progression.
 - [ ] **Riften / Bad Ends:** during the definitive Eleanor playthrough, disable the vanilla well that clips through the PAMA execution scaffold (console `disable` after positively identifying the well reference); re-check the scaffold area afterward.
