@@ -97,3 +97,9 @@ Capture après renommage et rechargement : les entrées `Horse Breeding/1B - Hor
 La capture de la page 2 montre `Dragonwhore breeding/LA - make me a mommy` comme **`(EXCLUDED)`**, ainsi que `Cow/LA - Massage my tits`. Sur la page 4, `Kitten/LB - tamed`, `Dog/LB - Submissive`, `Horse Breeding/Spermtank LB` et `Cow/LB - Milktank` apparaissent également **`(EXCLUDED)`**. Les autres tatouages `Mage`, `Crime`, `Nord`, `Bandit`, `General`, `Prostitute` sont toujours affectés à des groupes corporels ordinaires.
 
 **Bilan MCM : au moins une entrée vérifiée pour chacun des six thèmes exclus** (BBC déjà vu page 1). Test représentatif concluant, non exhaustif ; les applications aléatoires et Full Body restent à tester.
+
+## Contrôle MCM Full Face — 11/10/2026 (page 40)
+
+Sur la page 40 RTC, des entrées Full Face sont autorisées : `Toilet Prison` et `Slut Pop` en groupe `FACE`, `Public Whore` et `Prostitute + Addons` en `FACE`, ainsi que `Nord Breeder (head)` en `FOREHEAD`. Les entrées Full Face `BBC 2`, `BBC 3` et `Kitten` restent correctement `(EXCLUDED)`. Les variantes `Public Whore (red)` et `Prostitute + Addons (red)` demeurent exclues, sans preuve qu'il s'agisse d'un dysfonctionnement (exclusions héritées possibles).
+
+**Attention :** page Full **visage/tête**, ne démontre pas encore l'activation ni le rendu des Full **Body**. Vérification corporelle et application en jeu toujours en attente.
