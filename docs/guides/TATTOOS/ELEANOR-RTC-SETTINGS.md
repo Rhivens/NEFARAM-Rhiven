@@ -14,7 +14,7 @@ Conserver intacts les mods auteurs Alpia, Zaki, RTC 2.0.3 et son patch QoL rev1.
   Zaki RTC Settings - Rhiven
   Eleanor RTC Settings - Rhiven/
     README.txt
-    SKSE/Plugins/RapeTattoos/99-Eleanor-RTC.json
+    SKSE/Plugins/RapeTattoos/zzz-Eleanor-RTC.json
 ```
 Le préfixe numérique `99-` est prévu pour appliquer les overrides après les presets non numérotés, conformément à l'ordre documenté dans QoL rev1. Vérification effective à effectuer en jeu. **Ne pas placer un `settings.json` concurrent dans ce mod.**
 
@@ -45,7 +45,7 @@ Le JSON Eleanor doit rester un **delta de configuration** : ne pas recopier aveu
 
 ## Validation à venir
 - [x] Presets Alpia et Zaki fournis et comparés statiquement.
-- [x] `99-Eleanor-RTC.json` installé dans mod MO2 distinct.
+- [x] `zzz-Eleanor-RTC.json` installé dans mod MO2 distinct.
 - [ ] Vérifier que le patch QoL fusionne et applique **en dernier** les overrides Eleanor ; contrôler les logs.
 - [ ] Vérifier `(excluded)` pour chaque collection interdite et les Full activés.
 - [ ] Vérifier l'égalité effective des libellés de groupes entre Alpia et Zaki.
@@ -67,4 +67,21 @@ Voir [Alpia](./ALPIA-08-2026-QOL.md), [Zaki](./ZAKI-GENERAL-RTC.md) et [guide g�
 
 ### Problème constaté — à diagnostiquer
 
-Sur `Tattoos Page 1`, `Alpia Scribbles V2\\Dog\\1b - heart cum.dds` apparaît dans le groupe **`MISC 1 - B`**, alors que la configuration Eleanor doit exclure l'ensemble de `Dog`. En revanche, `Horse Breeding\\handjob 25g 1b.dds` apparaît `(EXCLUDED)` mais cette exclusion existe déjà dans la configuration Alpia de référence. **Conclusion :** pages RTC chargées, priorité/fusion de `99-Eleanor-RTC.json` **non confirmée** ; ne pas valider encore le preset. Vérifier si les fichiers personnalisés sont lus, leur ordre de fusion et les erreurs de journal avant de modifier les configurations.
+Sur `Tattoos Page 1`, `Alpia Scribbles V2\\Dog\\1b - heart cum.dds` apparaît dans le groupe **`MISC 1 - B`**, alors que la configuration Eleanor doit exclure l'ensemble de `Dog`. En revanche, `Horse Breeding\\handjob 25g 1b.dds` apparaît `(EXCLUDED)` mais cette exclusion existe déjà dans la configuration Alpia de référence. **Conclusion :** pages RTC chargées, priorité/fusion de `zzz-Eleanor-RTC.json` **non confirmée** ; ne pas valider encore le preset. Vérifier si les fichiers personnalisés sont lus, leur ordre de fusion et les erreurs de journal avant de modifier les configurations.
+
+## Correctif confirmé par la console — 11/10/2026
+
+Le premier nom `99-Eleanor-RTC.json` était fusionné **avant** Alpia et Zaki et ses overrides étaient ensuite écrasés. Renommage effectué dans MO2 : **`zzz-Eleanor-RTC.json`** (contenu JSON inchangé).
+
+Ordre **observé dans la console** après relance du jeu et `Test / Reload configs` :
+
+```text
+Merged Alpia V2 rtats settings.json - 1205 mappings
+Merged Zaki-General-RTC-Rhiven.json - 841 mappings
+Merged zzz-Eleanor-RTC.json - 753 mappings
+Combined tattoo library contains 2920 tattoo mappings
+```
+
+**Validation acquise :** découverte du fichier et priorité de fusion désormais correctes. **Validation restante :** vérifier dans les pages MCM que Dog, Kitten, Horse Breeding, BBC, Cow et Dragonwhore breeding deviennent `(EXCLUDED)`, et contrôler les Full Body en jeu. La console signale toujours l'absence du dossier facultatif `Documents/My Games/Skyrim Special Edition/JCUser/rTats/presets/` ; l'analyse se poursuit malgré cet avertissement.
+
+**Pour une nouvelle installation / partie :** conserver `zzz-Eleanor-RTC.json`, puis exécuter `Test / Reload configs` ; ne pas revenir à `99-Eleanor-RTC.json` et ne pas utiliser `Merge all into settings.json` sans sauvegarde.
