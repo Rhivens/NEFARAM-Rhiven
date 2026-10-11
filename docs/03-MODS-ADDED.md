@@ -36,6 +36,12 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 | Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES - Rhiven | Validated | 21 - Survival | Optional more-visible bubble effect for Seamless Soap |
 | Bathing in Skyrim - Wash Me - Rhiven | Validated | 21 - Survival | Wash Me Renewed 1.3; Any follower / NSFW / Big basin |
 | Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Validated | 21 - Survival | Original widget addon 1.7.2, patched by BiSR for Renewed compatibility |
+| Gulan0-Female Random Idle 1.0 - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Evaluated successfully with OAR; Seamless Varied Feminine Idles preferred for the player; retained locally as an optional future library. |
+| Gulan0-Female Random Idle 2.0 - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Over 100 additional idle variants; tested but not selected for final setup. |
+| Gulan0 OAR Settings - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Archived idle OAR user config: priority 900009 and 62 disabled variants; no active game files while unchecked. |
+| Gulan0 - Walk-Run-Sprint- OAR-player - Rhiven | Validated | 24 - Animations | Player-only female movement via OAR; walk, run and sprint confirmed in animation log; priority overridden by separate user settings. |
+| Gulan0 - Female-run-Update OAR - Rhiven | Validated (sprint only) | 24 - Animations | Historical MO2 name; August 2026 five-file run update removed after visual A/B test. Retains only female Sprint Revised mt_sprintforward.hkx; rename to Gulan0 - Sprint Revised - Rhiven recommended. |
+| Gulan0 Walk Run Sprint OAR Settings - Rhiven | Validated | 24 - Animations | Standalone OAR user.json; priority 1000002 for Gulan0_female, player-only conditions; saved independently of Skyrim save. |
 | Malignis Animations - Bathing in Skyrim Renewed - Rhiven | Validated | 24 - Animations | BiSR bathing animations; placed at the bottom of the animation block |
 | Invicta Couture Black Rose BHUNPv4 Extra 2K - Rhiven | Installed | 15.1 - Outfits Eleanor | Original asset / texture package for the 3BA conversion |
 | Invicta Couture Black Rose CBBE 3BA - Rhiven | Installed | 15.1 - Outfits Eleanor | CBBE 3BA conversion; BodySlide generated |
