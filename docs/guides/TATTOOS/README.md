@@ -4,9 +4,11 @@
 
 Objectif : conserver les interfaces utiles pour de futurs mods Papyrus exploitant les tatouages, sans confondre mécanismes documentés, hypothèses et tests réalisés.
 
-## Documentation Alpia 08.2026
+## Guides des intégrations RTC (11/10/2026)
 
 - [**Fiche d'intégration Alpia + RTC QoL rev1**](./ALPIA-08-2026-QOL.md) — état MO2, emplacements des JSON, audit croisé et checklist de test.
+- [**Zaki Tattoos General + audit No Overlap**](./ZAKI-GENERAL-RTC.md) — 841 règles, comparatif avec le preset tiers et précautions.
+- [**Eleanor RTC Settings**](./ELEANOR-RTC-SETTINGS.md) — delta JSON personnalisé, exclusions et tests à prévoir.
 - [Documentation originale d'Alpia (DOCX)](./Alpia%20Scribbles%20Slavetats%20Pack.docx) — détails FOMOD, illustrations et cartes UV.
 
 ## 1. Composants et responsabilités
@@ -17,7 +19,7 @@ Objectif : conserver les interfaces utiles pour de futurs mods Papyrus exploitan
 | Rape Tattoos Continued (RTC) 2.0.3 | Déclenchement / choix / application de tatouages, notamment après des événements SexLab |
 | Fade Tattoos Continued 2.1.0 | Suivi de tatouages temporaires et disparition progressive ; gestion manuelle via MCM |
 | Packs SlaveTats (Alpia Scribbles, Zaki…) | Textures et catalogue de tatouages ; ne constituent pas le moteur de déclenchement |
-| No Overlap for Rape Tattoo | Candidat : examiner les configurations fournies avant de décider d'une installation ou d'une adaptation |
+| No Overlap for Rape Tattoo | Preset JSON tiers analysé (528 clés Zaki + 254 Sexy Supplemental) ; **non installé** |
 | Remove Your Tats SE | Candidat optionnel : mécanisme de retrait de tatouages ; non indispensable au fonctionnement du duo RTC/Fade |
 
 RTC et Fade Continued remplacent leurs anciennes versions respectives : ne pas installer leurs originaux en parallèle.
@@ -98,7 +100,7 @@ Documents/My Games/Skyrim Special Edition/JCUser/rTats/
 - Des exemples de configuration de couleurs sont fournis par RTC dans `rapeTattoos/colorConfigs/` (avec README).
 - Sauvegarder le dossier `JCUser/rTats` **séparément du profil MO2** lorsque l'on fige les réglages ; vérifier les droits d'écriture en cas de non-persistance.
 
-**Packs Alpia : à auditer.** Identifier les JSON réellement livrés et leur destination, comparer leurs clés au format attendu par RTC 2.0.3, rechercher doublons, exclusions, chemins morts et risque d'écrasement de la configuration utilisateur. Ne pas inventer ni fusionner des JSON avant examen.
+**QoL rev1 est actif :** charge plusieurs presets supplémentaires dans `SKSE/Plugins/RapeTattoos/`. Les audits Alpia et Zaki ont été effectués, et le delta `99-Eleanor-RTC.json` est installé dans un mod MO2 distinct. La fusion et la persistance **restent à contrôler en jeu**. Voir les guides ci-dessus.
 
 ## 5. Compatibilités et précautions
 
@@ -114,7 +116,8 @@ Documents/My Games/Skyrim Special Edition/JCUser/rTats/
 ## 6. Checklist de validation technique
 
 - [ ] Contrôler les masters, fichiers gagnants MO2 et erreurs xEdit de RTC/Fade.
-- [ ] Inspecter les packs Alpia et Zaki et les JSON livrés ; compléter cette fiche avec les formats **réellement observés**.
+- [x] Inspecter statiquement les JSON Alpia et Zaki, et documenter No Overlap.
+- [x] Installer le delta JSON Eleanor dans un mod MO2 séparé (test en jeu à faire).
 - [ ] Vérifier le `skee.ini` gagnant et ses limites effectives.
 - [ ] Tester une application RTC sur sauvegarde jetable, puis la synchronisation et le rechargement.
 - [ ] Tester l'expiration Fade, la gestion des tatouages verrouillés et les paramètres joueur/PNJ/ZaZ.
@@ -126,7 +129,7 @@ Documents/My Games/Skyrim Special Edition/JCUser/rTats/
 
 - [Rape Tattoos Continued 2.0.3](https://www.loverslab.com/files/file/27999-rape-tattoos-continued/) — fiche auteur, sections « For Modders », « Configuring tattoo groups », « Compatibility » et « Troubleshooting ».
 - [Fade Tattoos Continued 2.1.0](https://www.loverslab.com/files/file/27994-fade-tattoos-continued/) — fiche auteur.
-- [No Overlap for Rape Tattoo](https://www.loverslab.com/files/file/45084-no-overlap-for-rape-tattoo/) — à analyser.
+- [No Overlap for Rape Tattoo](https://www.loverslab.com/files/file/45084-no-overlap-for-rape-tattoo/) — audit statique réalisé, non installé.
 - [Alpia Scribbles SlaveTats Pack](https://www.loverslab.com/files/file/30951-alpia-scribbles-slavetats-pack/) — à analyser.
 - [Zaki Tattoo Pack](https://www.loverslab.com/files/file/26261-zaki-tattoo-pack-lese/) — à analyser.
 - [Remove Your Tats SE](https://www.loverslab.com/files/file/31435-remove-your-tats-se/) — optionnel.
