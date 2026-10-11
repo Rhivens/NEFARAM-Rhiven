@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11
+
+### Animations Eleanor — Seamless conservé, Gulan0 locomotion validé
+
+- Investigated Gulan0 Female Random Idle V1 and V2 in OAR 3.2.0; priority 900009 allowed in-game testing, and an OAR user.json recorded 62 unwanted variants disabled.
+- After comparing with the old NEFARAM V16 notes and the current NEFARAM stock animations, decided to keep **Seamless Varied Feminine Idles** for idle poses. Gulan0 Idle V1, V2 and idle settings remain locally present but **unchecked** in MO2.
+- Installed **Gulan0 Walk-Run-Sprint OAR-player**; confirmed player-only OAR conditions and 11 female movement HKX (5 walk / 5 run / 1 sprint).
+- Found Legacy DAR submod 1000001 winning original movement events. Applied a Gulan0 female priority override **1000002** via a separate OAR user.json and verified walk/run/sprint replacements in Animation Log.
+- Compared August 2026 female_run_Update with original Gulan0 running animations and **removed the five update HKX** by aesthetic preference; kept the **female Sprint Revised** replacement `mt_sprintforward.hkx` only.
+- Preserved the original animations and unmodified conditions of NEFARAM's special animation frameworks. OAR user configurations staged in dedicated Rhiven MO2 mods; future-new-game settings do not depend on the temporary start-save.
+- Added [ANIMATIONS technical guide](docs/guides/ANIMATIONS/README.md) with installation, diagnostics, priority/persistence and rollback procedures.
+- Status: **animation configuration selected and observed working; rare gameplay states still to be monitored during Eleanor's real playthrough**.
+
 ## 2026-10-09
 
 ### Simple Offence Suppression MCM 0.6
