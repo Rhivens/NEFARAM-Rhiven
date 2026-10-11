@@ -91,3 +91,9 @@ Combined tattoo library contains 2920 tattoo mappings
 Capture après renommage et rechargement : les entrées `Horse Breeding/1B - Horsecock Property.dds`, `Cow/1B - Livestock Sex Slave.dds` et trois entrées `BBC` sont affichées **`(EXCLUDED)`**. Sur le même écran, les entrées autorisées `Nord` et `General` restent dans `MISC 1 - B`, tandis que `Crime/RA side - punish.dds` est affecté à `RIGHT ARM`. Deux entrées `Dog` avaient également été constatées exclues lors du test précédent.
 
 **Résultat :** conformité observée de ces cas représentatifs dans le MCM. **Restent à vérifier :** `Kitten`, `Dragonwhore breeding`, les règles Full Body et l'application effective en jeu. Les observations ne garantissent pas que chaque entrée des six collections est correcte.
+
+## Vérification supplémentaire MCM — 11/10/2026 (pages 2 et 4)
+
+La capture de la page 2 montre `Dragonwhore breeding/LA - make me a mommy` comme **`(EXCLUDED)`**, ainsi que `Cow/LA - Massage my tits`. Sur la page 4, `Kitten/LB - tamed`, `Dog/LB - Submissive`, `Horse Breeding/Spermtank LB` et `Cow/LB - Milktank` apparaissent également **`(EXCLUDED)`**. Les autres tatouages `Mage`, `Crime`, `Nord`, `Bandit`, `General`, `Prostitute` sont toujours affectés à des groupes corporels ordinaires.
+
+**Bilan MCM : au moins une entrée vérifiée pour chacun des six thèmes exclus** (BBC déjà vu page 1). Test représentatif concluant, non exhaustif ; les applications aléatoires et Full Body restent à tester.
