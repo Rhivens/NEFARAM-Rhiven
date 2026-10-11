@@ -56,3 +56,15 @@ Le JSON Eleanor doit rester un **delta de configuration** : ne pas recopier aveu
 **À éviter :** bouton MCM `Merge all into settings.json` avant sauvegarde et contrôle du dossier de destination. Les mods auteurs restent inchangés.
 
 Voir [Alpia](./ALPIA-08-2026-QOL.md), [Zaki](./ZAKI-GENERAL-RTC.md) et [guide général](./README.md).
+
+## Observation en jeu — 11/10/2026 (première ouverture MCM)
+
+1. Charger une sauvegarde de test et ouvrir `Rape Tattoos` dans le MCM.
+2. Dans l'onglet `General`, sélectionner **`LOAD TATTOO CONFIG PAGES`** (bouton en haut à droite sous `Tattoo configuration`).
+3. Attendre que les onglets `Tattoos Page 1`, `Tattoos Page 2`, etc. apparaissent à gauche.
+4. Vérifier les groupes dans `Name & Assigned Set` et les clés `Texture Path` ; cela confirme la présence des pages, **pas nécessairement la bonne fusion des overrides**.
+5. Contrôler une référence d'une collection exclue et une entrée non exclue, puis journaliser le résultat **avant toute sauvegarde définitive**.
+
+### Problème constaté — à diagnostiquer
+
+Sur `Tattoos Page 1`, `Alpia Scribbles V2\\Dog\\1b - heart cum.dds` apparaît dans le groupe **`MISC 1 - B`**, alors que la configuration Eleanor doit exclure l'ensemble de `Dog`. En revanche, `Horse Breeding\\handjob 25g 1b.dds` apparaît `(EXCLUDED)` mais cette exclusion existe déjà dans la configuration Alpia de référence. **Conclusion :** pages RTC chargées, priorité/fusion de `99-Eleanor-RTC.json` **non confirmée** ; ne pas valider encore le preset. Vérifier si les fichiers personnalisés sont lus, leur ordre de fusion et les erreurs de journal avant de modifier les configurations.
