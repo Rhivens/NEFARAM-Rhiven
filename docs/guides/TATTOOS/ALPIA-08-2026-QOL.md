@@ -16,7 +16,7 @@ Tous ces ajouts sont à la fin de `[35 - SexLab Content]`, après `Advanced Nudi
 | 2 | `Rape Tattoos Continued - Rhiven` — 2.0.3 | Moteur de sélection et d'application |
 | 3 | `Rape Tats Continued 2.0.3 QoL Extension - Rhiven` — rev1 | Patch des scripts RTC, fusion automatique des JSON |
 | 4 | `Alpia Slavetats Pack - Rhiven` — 08.2026 All-in-One | Catalogue SlaveTats et textures |
-| 5 | `Alpia Rtats Settings - Rhiven` | Preset RTC principal Alpia |
+| 5 | `Alpia Rtats Settings All in One - Rhiven` | Preset RTC principal Alpia |
 
 **Ne pas inverser RTC et QoL :** les fichiers du correctif doivent gagner les conflits contre les originaux RTC. Conflits attendus : `rapeTattoos.pex`, `rapeTattoos_mcm.pex`, `rapeTattoos_utils.pex` et leurs trois sources `.psc`.
 
@@ -113,7 +113,7 @@ Dans RTC, `Group` représente une zone **logique** ; la limite usuelle est d'un 
 - La configuration Alpia contient **119 entrées exclues** et **48 non assignées** (regroupement des libellés sans distinction de casse).
 - Les variations `Front Lower` / `front lower` ou `(Excluded)` / `(excluded)` méritent une vérification du comportement JContainers / Papyrus avant toute « normalisation » automatique.
 
-**Ne pas installer No Overlap à l'aveugle :** il faut d'abord établir si ses règles complètent ou remplacent utilement celles d'Alpia.
+**No Overlap audité le 11/10/2026 :** il s'agit de presets JSON tiers (528 règles Zaki, 254 Sexy Supplemental dans sa variante mixte), non installés. Voir [Zaki](./ZAKI-GENERAL-RTC.md). Le delta [Eleanor](./ELEANOR-RTC-SETTINGS.md) exclut six thèmes Alpia et harmonise des noms de groupes ; efficacité à confirmer en jeu.
 
 ## 6. Fonctions utiles du MCM RTC QoL
 
@@ -138,7 +138,8 @@ Le correctif conserve les noms de ModEvents `RapeTattoos_addTattoo` et `RapeTatt
 - [ ] Appliquer quelques tatouages, sauvegarder, recharger ; contrôler l'intégration Fade Tattoos.
 - [ ] Vérifier où `settings.json` et `colorConfig.json` sont réellement créés/modifiés et leur persistance.
 - [ ] Conserver le debug désactivé et ne pas augmenter les limites `skee.ini` sans besoin mesuré.
-- [ ] Étudier Zaki et No Overlap **après** ces contrôles ou après leur audit statique spécifique.
+- [x] Réaliser les audits statiques Zaki et No Overlap ; documents disponibles.
+- [x] Installer le delta Eleanor dans un mod séparé ; **validation en jeu à venir**.
 
 ## 8. Sources et limites
 
