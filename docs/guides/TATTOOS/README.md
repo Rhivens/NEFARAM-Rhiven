@@ -135,3 +135,7 @@ Documents/My Games/Skyrim Special Edition/JCUser/rTats/
 - [Remove Your Tats SE](https://www.loverslab.com/files/file/31435-remove-your-tats-se/) — optionnel.
 
 **Principe de maintenance :** documenter les interfaces publiques et les configurations réellement éprouvées ; garder les adaptations Rhiven isolées et réversibles.
+
+## Étape MCM obligatoire — nouvelle partie (11/10/2026)
+
+Après initialisation du MCM **Rape Tattoos**, ouvrir `General` puis cliquer **`LOAD TATTOO CONFIG PAGES`**. Vérifier l'apparition des pages `Tattoos Page 1`, `Tattoos Page 2`, etc. Attention : l'affichage des pages ne garantit pas la priorité du JSON Eleanor. **Test du 11/10/2026 :** une entrée `Dog` apparaît encore dans `MISC 1 - B` alors que le preset devrait l'exclure ; voir [diagnostic Eleanor](./ELEANOR-RTC-SETTINGS.md). **Statut : anomalie non résolue.**
