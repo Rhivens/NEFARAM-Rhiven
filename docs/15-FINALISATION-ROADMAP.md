@@ -22,28 +22,24 @@ Baseline actuelle : **NEFARAM 17.3.7**, profil MO2 **ELEANOR Stable**.
 
 ---
 
-## Phase 1 - Dernières animations (à installer)
+## Phase 1 - Dernières animations — décisions du 11/10/2026
 
-Les gros mods gameplay / LoversLab ont été étudiés. Il ne reste dans la roadmap locale v1.1 que les animations et le bloc tatouages avant le gel fonctionnel.
+- [x] **Gulan0 Female Random Idle v1.0 + v2.0** : installation, OAR et sélection par variante testées. **Non retenues dans la configuration active** : trois mods Gulan0 Idle / Settings conservés mais **DÉCOCHÉS** dans MO2. **Seamless Varied Feminine Idles** (déjà fourni par NEFARAM) reste privilégié pour Eleanor.
+- [x] **Gulan0 Animations - Walk / Run / Sprinting Rework** : version **OAR Player Only** installée et animations marche/course/sprint confirmées dans l'Animation Log. Priorité utilisateur **1000002** conservée dans un mod dédié.
+- [x] **Sprint Revised** : fichier féminin `mt_sprintforward.hkx` conservé.
+- [x] **female_run_Update (août 2026)** : cinq HKX de course testés puis **retirés** après comparaison esthétique ; course originale Gulan0 conservée.
+- [x] Sauvegarde et rangement des réglages OAR `user.json` dans des mods Rhiven.
+- [ ] Surveillance en partie réelle des états spéciaux (armes, entraves, transitions de locomotion).
 
-### 1.1 Gulan0 - Female Random Idle v1.0
+**Procédure détaillée et architecture :** [Guide ANIMATIONS / OAR](guides/ANIMATIONS/README.md).
 
-- [ ] Vérifier le framework d'animations, les dépendances et les conflits d'idles.
-- [ ] Installer et contrôler les priorités MO2.
-- [ ] Régénérer Pandora uniquement si requis.
-- [ ] Tester idles debout, transitions et interruption par marche / combat.
+Sources :
+- https://www.nexusmods.com/skyrimspecialedition/mods/165916
+- https://www.nexusmods.com/skyrimspecialedition/mods/185003
+- https://www.nexusmods.com/skyrimspecialedition/mods/164743
 
-Source : https://www.nexusmods.com/skyrimspecialedition/mods/165916
-
-### 1.2 Gulan0 Animations - Walk / Run / Sprinting Rework
-
-- [ ] Vérifier les animations de locomotion déjà présentes.
-- [ ] Installer après les idles et contrôler les conflits MO2.
-- [ ] Régénérer Pandora si requis.
-- [ ] Tester marche, course, sprint, armes et transitions.
-
-Source : https://www.nexusmods.com/skyrimspecialedition/mods/164743
-
+---
+ 
 ### Éléments sortis des ajouts restants
 
 - **Fancy Magecore** : installé ; validation visuelle définitive encore à faire.
