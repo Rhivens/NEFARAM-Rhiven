@@ -4,6 +4,11 @@
 
 Objectif : conserver les interfaces utiles pour de futurs mods Papyrus exploitant les tatouages, sans confondre mécanismes documentés, hypothèses et tests réalisés.
 
+## Documentation Alpia 08.2026
+
+- [**Fiche d'intégration Alpia + RTC QoL rev1**](./ALPIA-08-2026-QOL.md) — état MO2, emplacements des JSON, audit croisé et checklist de test.
+- [Documentation originale d'Alpia (DOCX)](./Alpia%20Scribbles%20Slavetats%20Pack.docx) — détails FOMOD, illustrations et cartes UV.
+
 ## 1. Composants et responsabilités
 
 | Composant | Fonction |
