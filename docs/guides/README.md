@@ -51,3 +51,7 @@ Un chantier dédié documente l'intégration progressive de l'écosystème **PAM
 **Dossier :** [PAMA/README.md](PAMA/README.md)
 
 > Statut actuel : audit terminé, intégration et tests à venir.
+
+## Animations — OAR / Eleanor
+
+- [**Guide OAR / Gulan0 / Seamless — réglages Rhiven**](ANIMATIONS/README.md) : priorités, fichier `user.json`, configuration finale Player Only, correctif sprint et diagnostic des remplacements Legacy DAR.
