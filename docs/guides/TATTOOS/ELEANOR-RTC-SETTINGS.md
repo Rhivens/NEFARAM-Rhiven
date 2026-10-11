@@ -103,3 +103,9 @@ La capture de la page 2 montre `Dragonwhore breeding/LA - make me a mommy` comme
 Sur la page 40 RTC, des entrées Full Face sont autorisées : `Toilet Prison` et `Slut Pop` en groupe `FACE`, `Public Whore` et `Prostitute + Addons` en `FACE`, ainsi que `Nord Breeder (head)` en `FOREHEAD`. Les entrées Full Face `BBC 2`, `BBC 3` et `Kitten` restent correctement `(EXCLUDED)`. Les variantes `Public Whore (red)` et `Prostitute + Addons (red)` demeurent exclues, sans preuve qu'il s'agisse d'un dysfonctionnement (exclusions héritées possibles).
 
 **Attention :** page Full **visage/tête**, ne démontre pas encore l'activation ni le rendu des Full **Body**. Vérification corporelle et application en jeu toujours en attente.
+
+## Validation MCM Full Body — 11/10/2026 (page 16)
+
+La page `Tattoos Page 16` montre des entrées Alpia `Crime` (Defamation, Battery, Addon), `Bondage`, `Beggar` et `Bandit` affectées au groupe **`FULL BODY`**. Les variantes corporelles `Cow` (Milk Cow 2, Cow) et `BBC` (Random 3) apparaissent **`(EXCLUDED)`**.
+
+**Validé au niveau MCM :** groupe Full Body correctement proposé pour des collections autorisées ; exclusions de thèmes conservées aussi sur les tatouages intégraux. **Non encore testé :** attribution via événement RTC, apparition des overlays, persistance et Fade Tattoos en situation réelle.
