@@ -85,3 +85,9 @@ Combined tattoo library contains 2920 tattoo mappings
 **Validation acquise :** découverte du fichier et priorité de fusion désormais correctes. **Validation restante :** vérifier dans les pages MCM que Dog, Kitten, Horse Breeding, BBC, Cow et Dragonwhore breeding deviennent `(EXCLUDED)`, et contrôler les Full Body en jeu. La console signale toujours l'absence du dossier facultatif `Documents/My Games/Skyrim Special Edition/JCUser/rTats/presets/` ; l'analyse se poursuit malgré cet avertissement.
 
 **Pour une nouvelle installation / partie :** conserver `zzz-Eleanor-RTC.json`, puis exécuter `Test / Reload configs` ; ne pas revenir à `99-Eleanor-RTC.json` et ne pas utiliser `Merge all into settings.json` sans sauvegarde.
+
+## Contrôle MCM complémentaire — 11/10/2026
+
+Capture après renommage et rechargement : les entrées `Horse Breeding/1B - Horsecock Property.dds`, `Cow/1B - Livestock Sex Slave.dds` et trois entrées `BBC` sont affichées **`(EXCLUDED)`**. Sur le même écran, les entrées autorisées `Nord` et `General` restent dans `MISC 1 - B`, tandis que `Crime/RA side - punish.dds` est affecté à `RIGHT ARM`. Deux entrées `Dog` avaient également été constatées exclues lors du test précédent.
+
+**Résultat :** conformité observée de ces cas représentatifs dans le MCM. **Restent à vérifier :** `Kitten`, `Dragonwhore breeding`, les règles Full Body et l'application effective en jeu. Les observations ne garantissent pas que chaque entrée des six collections est correcte.
