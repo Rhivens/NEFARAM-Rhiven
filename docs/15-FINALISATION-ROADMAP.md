@@ -2,7 +2,7 @@
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-Principe général (roadmap locale **v1.1**) : **terminer les deux mods d'animations, installer et auditer le bloc tatouages, figer les ajouts gameplay, finaliser le rendu graphique (ENB actuel vs Community Shaders), travailler Vel'Dun / le HUD, passer Skyrim et les mods en français, vérifier la checklist pré-finale, puis lancer la partie définitive et configurer les MCM.**
+Principe général (roadmap locale **v1.2**) : **terminer les deux mods d'animations, installer et auditer le bloc tatouages, figer les ajouts gameplay, installer et valider techniquement l'UI / le HUD, finaliser le rendu graphique (ENB actuel vs Community Shaders), passer Skyrim et les mods en français, vérifier la checklist pré-finale, puis lancer la partie définitive et configurer les MCM.**
 
 Baseline actuelle : **NEFARAM 17.3.7**, profil MO2 **ELEANOR Stable**.
 
@@ -134,9 +134,23 @@ Quand toutes les décisions des phases précédentes sont prises :
 
 ---
 
-## Phase 4 - Étude graphique finale
+## Phase 4 - Installation technique UI / HUD Eleanor
 
-Cette phase commence **uniquement lorsque la liste des mods fonctionnels est figée**.
+Ce chantier technique se déroule **avant l'étude graphique**, sur profil de test, sans reconstruire précipitamment l'interface NEFARAM. Installer et vérifier la compatibilité des composants UI ; **reporter les réglages détaillés des widgets et les préférences HUD à la session de configuration des MCM (phase 8)**. Leur ordre précis dans cette session reste à déterminer.
+
+- [ ] Auditer et intégrer **Vel'Dun UI**, en vérifiant les versions de SkyUI et MCM Helper de NEFARAM, ainsi que les options FOMOD réellement utiles.
+- [ ] Contrôler la cohabitation avec Dear Diary Dark Mode, Wheeler, TrueHUD, les widgets et le système de menus actuel.
+- [ ] Conserver les reskins Dragonborn UI désactivés pendant l'évaluation ; prévoir un retour arrière réversible.
+- [ ] Valider le bon fonctionnement technique (affichage 3D, carte / inventaire, HUD de base, hotkeys essentielles et stabilité), sans figer la disposition des widgets.
+- [ ] Suivre le **chantier HUD détaillé** dans [guides/HUD/README.md](guides/HUD/README.md) ; ne pas dupliquer ici ses choix et ses tests.
+
+Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
+
+---
+
+## Phase 5 - Étude graphique finale
+
+Cette phase commence **après le gel fonctionnel et l'installation technique de l'UI**, lorsque la liste des mods fonctionnels est figée.
 
 ### Option A - Optimisation de l'ENB actuel
 
@@ -172,20 +186,6 @@ Travail :
 - [ ] Décider sur rendu + stabilité + performances, pas sur préférence théorique.
 - [ ] Documenter la solution gagnante.
 - [ ] Une fois validée : **gel graphique**.
-
----
-
-## Phase 5 - Vel'Dun UI / HUD & interface Eleanor
-
-Ce chantier se déroule **après le choix graphique et avant les traductions / la partie définitive**, sur profil de test, sans reconstruire précipitamment l'interface NEFARAM.
-
-- [ ] Auditer et intégrer **Vel'Dun UI**, en vérifiant les versions de SkyUI et MCM Helper de NEFARAM, ainsi que les options FOMOD réellement utiles.
-- [ ] Contrôler la cohabitation avec Dear Diary Dark Mode, Wheeler, TrueHUD, les widgets et le système de menus actuel.
-- [ ] Conserver les reskins Dragonborn UI désactivés pendant l'évaluation ; prévoir un retour arrière réversible.
-- [ ] Valider affichage 3D, carte / inventaire, HUD, hotkeys et stabilité en jeu.
-- [ ] Suivre le **chantier HUD détaillé** dans [guides/HUD/README.md](guides/HUD/README.md) ; ne pas dupliquer ici ses choix et ses tests.
-
-Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ---
 
