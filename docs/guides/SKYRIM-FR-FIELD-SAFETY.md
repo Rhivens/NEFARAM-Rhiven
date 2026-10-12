@@ -1,6 +1,6 @@
 # Skyrim SE / NEFARAM — Référentiel de sécurité des champs pour la traduction FR
 
-> **État : brouillon évolutif (v0.1)** — à enrichir et vérifier sur des enregistrements réels avec xTranslator / xEdit avant toute automatisation.
+> **État : brouillon évolutif (v0.2)** — à enrichir et vérifier sur des enregistrements réels avec xTranslator / xEdit avant toute automatisation.
 >
 > **Objectif :** traduire NEFARAM Rhiven Modded rapidement et avec un maximum de qualité, sans casser les plugins ni les scripts. La référence technique est **le mod original installé**.
 
@@ -14,24 +14,34 @@
 
 ## Référentiel initial
 
-| Record parent | Champ / contenu | Classification | Règle |
-|---|---|---|---|
-| `NPC_` | `FULL` — nom propre d'un PNJ vanilla | **TRADUISIBLE sous référence** | Reprendre exactement le nom officiel de la VF Bethesda si une correspondance existe ; ne pas inventer de traduction. |
-| `NPC_` | `FULL` — nom propre d'un nouveau PNJ de mod | **À CONTRÔLER** | **Conserver le nom d'origine par défaut** (ex. `Elara Stone`), sauf choix de localisation explicitement établi et cohérent avec le mod. |
-| `NPC_` | `FULL` — désignation générique / fonction | **TRADUISIBLE** | Traduire le rôle ou titre (ex. `Guard of Castle Something` → `Garde du château de Something`), mais protéger les noms propres contenus dans la désignation. |
-| `NPC_` | `EDID` | **NON TRADUISIBLE** | Identifiant interne, pas un nom affiché à traduire. |
-| `DIAL` | Texte affiché (par ex. champ `FULL`, selon record) | **TRADUISIBLE** | Traduire uniquement la chaîne destinée au joueur ; préserver le reste du record. |
-| `INFO` | Réplique affichée (souvent `NAM1`) | **TRADUISIBLE** | Traduire le dialogue en contexte, préserver variables, balises et marqueurs. |
-| Tous | `EDID` | **NON TRADUISIBLE** | Préserver intégralement. |
-| Tous | `CTDA` / données de conditions | **NON TRADUISIBLE** | Logique de fonctionnement, pas de texte à localiser directement. |
-| Selon record | `FULL` / `DESC` | **À CONTRÔLER** | Habituellement du texte visible, mais vérifier le sens et le record parent. |
-| Selon record | `DNAM`, `VNAM` | **À CONTRÔLER** | Sous-records aux fonctions variables ; jamais classer globalement « safe » ou « non-safe » sans contexte. |
-| Selon record | `VMAD` | **À CONTRÔLER — HAUT RISQUE** | Contient des propriétés Papyrus ; certaines valeurs sont des textes visibles, d'autres des clés/identifiants indispensables. |
-| Fichiers `.pex` | Identifiants internes, noms de variables, fonctions, propriétés | **NON TRADUISIBLE** | Conserver strictement ; exploiter les protections du traducteur. |
-| Fichiers `.pex` | Littéraux de notification / boîte de dialogue | **À CONTRÔLER** | Peut être traduit si confirmé comme texte présenté au joueur ; inspecter les usages ambigus. |
-| Fichiers `.pex` | Chaînes littérales servant de clés, états, noms d'animation, chemins ou événements | **NON TRADUISIBLE** | Ne pas modifier même si ces chaînes ressemblent à de l'anglais ordinaire. |
-| MCM | Libellés, descriptions et aides visibles | **TRADUISIBLE** | Suivre le format du MCM concerné, sans modifier les clés techniques. |
-| MCM | Identifiants de réglages, clés JSON, variables | **NON TRADUISIBLE** | Préserver la structure et les identifiants. |
+| Record parent | Champ / contenu | Classification | Traitement API | Règle |
+|---|---|---|---|---|
+| `NPC_` | `FULL` — PNJ vanilla | **TRADUISIBLE sous référence** | **API avec glossaire verrouillé** | Reprendre exactement la VF Bethesda si attestée ; sinon ne pas inventer. |
+| `NPC_` | `FULL` — nom propre inédit | **À CONTRÔLER** | **EXCLURE de l'auto-traduction** | Conserver le nom original par défaut ; exception documentée. |
+| `NPC_` | `FULL` — désignation générique | **TRADUISIBLE** | **API sous contrainte** | Traduire la fonction ; protéger noms propres de lieux, familles, factions. |
+| `NPC_` | `EDID` | **NON TRADUISIBLE** | **EXCLURE** | Identifiant interne. |
+| `DIAL` | Texte affiché (par ex. `FULL`, selon record) | **TRADUISIBLE** | **API autorisée** | Ne traduire que la chaîne visible, jamais le record entier. |
+| `INFO` | Réplique affichée (`NAM1`, si présent) | **TRADUISIBLE** | **API autorisée** | Respecter contexte, variables, balises et marqueurs. |
+| Tous | `EDID` | **NON TRADUISIBLE** | **EXCLURE** | Préserver à l'identique. |
+| Tous | `CTDA` / conditions | **NON TRADUISIBLE** | **EXCLURE** | Logique de jeu. |
+| Selon record | `FULL` / `DESC` | **À CONTRÔLER** | **API autorisée après identification** | Le contenu est souvent visible ; vérifier le record parent. |
+| Selon record | `DNAM`, `VNAM` | **À CONTRÔLER** | **BLOQUÉ par défaut** | Autoriser seulement après validation du couple record/champ et du type de donnée. |
+| Selon record | `VMAD` | **À CONTRÔLER — HAUT RISQUE** | **BLOQUÉ par défaut** | Propriétés Papyrus : textes visibles et clés techniques peuvent coexister. |
+| `.pex` | Variables, propriétés, fonctions, identifiants | **NON TRADUISIBLE** | **EXCLURE** | Conserver strictement. |
+| `.pex` | Notifications / messages littéraux | **À CONTRÔLER** | **API après validation de l'usage** | Confirmer que la chaîne est affichée, puis traduire exclusivement sa valeur. |
+| `.pex` | Clés, états, animations, chemins, événements | **NON TRADUISIBLE** | **EXCLURE** | Même si cela ressemble à une phrase anglaise. |
+| MCM | Libellés / aides visibles | **TRADUISIBLE** | **API autorisée après validation du format** | Préserver variables et balises de formatage. |
+| MCM | Clés JSON, réglages, identifiants | **NON TRADUISIBLE** | **EXCLURE** | Préserver la structure. |
+
+### Signification de « Traitement API »
+
+- **API autorisée** : envoyer seulement la valeur textuelle extraite, jamais les octets techniques ni l'enregistrement complet ; préserver les marqueurs.
+- **API sous contrainte / avec glossaire verrouillé** : fournir les noms officiels et noms propres protégés, puis vérifier la sortie.
+- **API après validation** : exclu du traitement par lot tant que son usage réel n'a pas été confirmé.
+- **BLOQUÉ par défaut** : aucune traduction automatique sans décision explicite documentée sur un couple *record parent + champ* (et au besoin sa valeur).
+- **EXCLURE** : ne jamais transmettre comme texte à traduire et ne jamais modifier via traduction.
+
+**Principe de sécurité :** un filtre d'interface et un prompt ne garantissent pas la protection binaire. Contrôler le résultat et maintenir une copie intacte du mod original ; une chaîne visible peut contenir des références techniques.
 
 ## Cas de référence : nom des PNJ (`NPC_ / FULL`)
 
