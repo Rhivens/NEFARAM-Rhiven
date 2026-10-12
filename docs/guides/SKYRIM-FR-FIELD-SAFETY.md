@@ -1,6 +1,6 @@
 # Skyrim SE / NEFARAM — Référentiel de sécurité des champs pour la traduction FR
 
-> **État : brouillon évolutif (v0.2)** — à enrichir et vérifier sur des enregistrements réels avec xTranslator / xEdit avant toute automatisation.
+> **État : brouillon évolutif (v0.3)** — à enrichir et vérifier sur des enregistrements réels avec xTranslator / xEdit avant toute automatisation.
 >
 > **Objectif :** traduire NEFARAM Rhiven Modded rapidement et avec un maximum de qualité, sans casser les plugins ni les scripts. La référence technique est **le mod original installé**.
 
@@ -67,6 +67,59 @@ Exemples **fictifs** (illustratifs, non extraits d'un mod) :
 3. Utiliser l'**API OpenAI** et un prompt Skyrim ciblé, associés à un dictionnaire personnel séparé de Fallout 4.
 4. Protéger les noms propres, termes Bethesda, marqueurs, scripts et champs sensibles ; relire prioritairement les cas ambigus.
 5. Effectuer des tests en jeu ; conserver la traduction comme mod MO2 distinct dès que possible.
+
+## Inventaire complémentaire — records et sous-records (v0.3)
+
+Cette section est construite à partir de la liste fournie par Rhiven, avec des **règles prudentes de localisation**, et non une validation exhaustive des définitions binaires. Elle sépare volontairement les **types de records** des **sous-records**. Les signatures homonymes peuvent varier selon le record parent et les versions du jeu.
+
+### En-tête du plugin `TES4`
+
+| Sous-record ou donnée | Usage général | Traduction | Traitement API |
+|---|---|---|---|
+| `HEDR` | Version de format, compteurs, prochain FormID | **NON TRADUISIBLE** | **EXCLURE** |
+| `CNAM` | Auteur du plugin | **NON TRADUISIBLE** (métadonnée conservée) | **EXCLURE** |
+| `SNAM` | Description du plugin, lorsqu'elle est présente | **À CONTRÔLER** (métadonnée) | **BLOQUÉ par défaut** |
+| `MAST` | Noms des fichiers maîtres | **NON TRADUISIBLE** | **EXCLURE** |
+| `DATA` associé à `MAST` | Données techniques | **NON TRADUISIBLE** | **EXCLURE** |
+| `ONAM` | Références d'enregistrements surchargés (selon format) | **NON TRADUISIBLE** | **EXCLURE** |
+| `INTV`, `MODV`, `MREG`, `EFSF`, `EFSI`, `OBNK`, `OBNM` | Signatures mentionnées dans la liste de travail, à confirmer pour Skyrim SE | **NON TRADUISIBLE / PRÉSENCE À CONFIRMER** | **EXCLURE** |
+| `FULL` dans `TES4` | Mentionné dans la liste initiale ; sens et présence à vérifier | **À CONTRÔLER — PAS D'AUTOMATISME** | **BLOQUÉ par défaut** |
+
+**Note :** ne pas généraliser la valeur HEDR 0.94 donnée pour LE. Les en-têtes de plugins Skyrim SE peuvent utiliser notamment 1.70 et 1.71. `ONAM` n'est pas une « table ESL fixe de 16 384 FormIDs » dans sa définition générale.
+
+### Sous-records communs — règles par défaut
+
+| Signature | Sens indiqué dans la liste initiale | Traduction | Traitement API |
+|---|---|---|---|
+| `EDID` | Editor ID | **NON TRADUISIBLE** | **EXCLURE** |
+| `FULL` | Nom affiché | **À CONTRÔLER** (nom propre / générique / VF officielle) | **API avec règles de noms** |
+| `MODL`, `MODT`, `MODS` | Modèle et textures / chemins ou références | **NON TRADUISIBLE** | **EXCLURE** |
+| `KSIZ`, `KWDA` | Nombre et références de keywords | **NON TRADUISIBLE** | **EXCLURE** |
+| `DATA`, `OBND`, `ABDT`, `ENAM` | Données structurées, volumes, enchantements, etc. | **NON TRADUISIBLE par défaut** (préciser parent) | **EXCLURE** |
+| `SCNA`, `CDTA` | Données de scripts/conditions selon le record ; détail à vérifier | **NON TRADUISIBLE par défaut** | **EXCLURE** |
+| `XXXX` | Indicateur de taille étendue d'un sous-record | **NON TRADUISIBLE** | **EXCLURE** |
+
+**Attention :** la limite ordinaire d'un champ taille de sous-record est de 65 535 octets, pas 255 ; `XXXX` permet une taille étendue. Il ne faut pas confondre cela avec d'autres contraintes du format.
+
+### Familles de records répertoriées
+
+Les signatures ci-dessous sont des **conteneurs**, pas des autorisations de traduction. Les champs affichables qu'ils contiennent peuvent être traités selon la matrice principale. Éviter toute traduction automatique de **tous les sous-records** d'une famille.
+
+| Famille | Types cités dans l'inventaire | Règle API |
+|---|---|---|
+| Objets / équipements | `WEAP`, `ARMO`, `ALCH`, `AMMO`, `MISC`, `INGR`, `KEYM`, `BOOK`, `SPEL`, `ENCH`, `MGEF`, `SLGM`, `SCRL`, `PROJ` | **Champs textuels uniquement**, avec glossaire |
+| PNJ et apparence | `NPC_`, `ACHR`, `ACRE`, `RACE`, `OTFT`, `CLAS`, `PACK`, `CSTY`, `EYES`, `HAIR`, `HDPT` | **Champs textuels uniquement**, protéger les noms propres |
+| Monde et environnement | `CELL`, `WRLD`, `LCTN`, `REGN`, `WTHR`, `CLMT`, `REFR`, `ACTI`, `DOOR`, `FURN`, `TREE`, `FLOR`, `GRAS`, `LAND`, `LTEX`, `NAVM`, `LIGH`, `LGTM`, `LSCR` | **Champs textuels uniquement**, noms de lieux à contrôler |
+| Quêtes / dialogues | `QUST`, `SMBN`, `SMEN`, `SMQN`, `DIAL`, `DLBR`, `INFO`, `DLVW`, `MESG`, `SCEN` | **Textes affichés uniquement**, jamais conditions ou liens internes |
+| Gameplay et autres systèmes | `GMST`, `GLOB`, `FLST`, `LVLI`, `LVLN`, `LVSP`, `PERK`, `ASPC`, `ECZN`, `HAZD`, `PHZD`, `PGRE`, `RELA`, `FACT`, `KYWD`, `ASTP`, `MOVT`, `MATT`, `MUSC`, `VTYP`, `WATR`, `CAMS`, `CPTH`, `AACT`, `IDLE`, `ANIO`, `SPGD`, `RFCT`, `EFSH`, `EXPLO`, `IPCT`, `IPDS`, `FSTP`, `FSTS`, `SOUN`, `MUST`, `SNDR`, `SNCT`, `REVB`, `SOPM`, `SHOU`, `WOOP`, `IMGS`, `IMAD`, `TXST`, `COLL`, `ARTO`, `NOTE`, `COBJ`, `MSTT`, `STAT`, `APPAR`, `TACT`, `DOBJ` | **Bloqué par défaut**, sauf champs textuels identifiés dans un record précis |
+
+Certaines signatures de cette liste peuvent être issues de nomenclatures multi-jeux ou anciennes : **ne pas présumer de leur présence dans un plugin Skyrim SE** sans confirmation dans xEdit.
+
+### Sources techniques de contrôle
+
+- [Bethesda Modding Library — plugin file structure](https://baddogskyrim.github.io/BethesdaLibrary/file-formats/plugins/)
+- [esp-parser — TES4 record](https://esp-parser.readthedocs.io/en/latest/api/records/TES4.html)
+- [Nexus — format d'en-tête HEDR Skyrim SE](https://www.nexusmods.com/skyrimspecialedition/articles/9691)
 
 ## À compléter
 
