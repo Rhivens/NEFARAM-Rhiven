@@ -1,8 +1,14 @@
-# 15 - Roadmap de finalisation NEFARAM-Rhiven
+# 15 - Roadmap de finalisation NEFARAM-Rhiven 1.1
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-Principe général (roadmap locale **v1.2**) : **terminer les deux mods d'animations, installer et auditer le bloc tatouages, figer les ajouts gameplay, installer et valider techniquement l'UI / le HUD, finaliser le rendu graphique (ENB actuel vs Community Shaders), passer Skyrim et les mods en français, vérifier la checklist pré-finale, puis lancer la partie définitive et configurer les MCM.**
+**Avancement mis à jour le 13/10/2026 — cible : NEFARAM-Rhiven 1.1.**
+
+**L'installation de tous les mods prévus est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). La copie intégrale de `C:\JEUX\NEFARAM` est **en cours** pour conserver l'instance stable de référence et travailler sur une copie.
+
+Ordre de travail restant : **terminer et vérifier la copie de travail → audit graphique final et choix ENB / Community Shaders → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ de la nouvelle partie → paramétrage des MCM → validation et jeu.**
+
+Les phases 1 à 4 ci-dessous conservent l'historique et les contrôles détaillés. Leurs cases de tests non cochées restent à confirmer : **installation terminée ne signifie pas que tous les tests fonctionnels sont validés**. Elles ne constituent plus une liste de mods à installer.
 
 Baseline actuelle : **NEFARAM 17.3.7**, profil MO2 **ELEANOR Stable**.
 
@@ -52,11 +58,13 @@ Sources :
 
 ---
 
-## Phase 2 - Bloc tatouages : installation et audit complet
+## Phase 2 - Bloc tatouages : installation terminée, contrôles à confirmer
+
+**État au 13/10/2026 :** l'installation des mods prévus est terminée, conformément au point d'avancement de Fabien. Les audits et tests ci-dessous restent suivis séparément, sans les déclarer validés par cette seule annonce.
 
 Ce bloc doit être traité comme **un ensemble cohérent**, pas comme une suite de mods indépendants.
 
-### Ordre de travail proposé
+### Ordre de référence du bloc
 
 1. **Rape Tattoos Continued 2.0.3**
 2. **Fade Tattoos Continued 2.1.0**
@@ -122,23 +130,28 @@ Pour chaque pack contenant des JSON :
 
 ## Phase 3 - Gel fonctionnel du modpack
 
-Quand toutes les décisions des phases précédentes sont prises :
+**État au 13/10/2026 :** la liste d'installation est terminée et les snapshots sont à jour. Préserver cette base pendant la finalisation ; les corrections nécessaires et les changements retenus lors de l'étude graphique restent possibles sur la copie de travail.
 
 - [ ] Plus aucun mod gameplay ajouté sans nécessité réelle.
 - [ ] Mettre à jour `03-MODS-ADDED.md`.
 - [ ] Mettre à jour `04-MODS-REMOVED.md` pour les candidats rejetés / retirés si pertinent.
-- [ ] Mettre à jour le snapshot MO2 gauche.
-- [ ] Mettre à jour le snapshot plugins / load order.
-- [ ] Faire une sauvegarde / copie de sécurité du profil MO2 finalisé.
+- [x] Mettre à jour le snapshot MO2 gauche : [liste Rhiven actuelle](../load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md).
+- [x] Mettre à jour le snapshot plugins / load order : [liste Rhiven actuelle](../load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md).
+- [x] Terminer l'installation de tous les mods prévus.
+- [ ] Terminer la copie intégrale de `C:\JEUX\NEFARAM` — **copie en cours**.
+- [ ] Vérifier la copie avant modification : profil MO2, chemins des exécutables et des sorties, lancement et sauvegardes de test doivent pointer vers l'instance de travail.
+- [ ] Conserver l'instance stable d'origine comme référence de retour arrière.
 - [ ] Effectuer un premier test stabilité global avant le chantier graphique.
 
 ---
 
-## Phase 4 - Installation technique UI / HUD Eleanor
+## Phase 4 - UI / HUD Eleanor : intégration installée, validation à confirmer
 
-Ce chantier technique se déroule **avant l'étude graphique**, sur profil de test, sans reconstruire précipitamment l'interface NEFARAM. Installer et vérifier la compatibilité des composants UI ; **reporter les réglages détaillés des widgets et les préférences HUD à la session de configuration des MCM (phase 8)**. Leur ordre précis dans cette session reste à déterminer.
+**État au 13/10/2026 :** Vel'dun UI et Vel'dun UI Patches figurent dans le snapshot MO2 actuel ; l'installation globale est annoncée terminée. Les contrôles de compatibilité et de fonctionnement restent à confirmer ci-dessous.
 
-- [ ] Auditer et intégrer **Vel'Dun UI**, en vérifiant les versions de SkyUI et MCM Helper de NEFARAM, ainsi que les options FOMOD réellement utiles.
+Les éventuels correctifs techniques se font sur la copie de travail, sans reconstruire précipitamment l'interface NEFARAM. Vérifier la compatibilité des composants UI ; **reporter les réglages détaillés des widgets et les préférences HUD à la session de configuration des MCM (phase 8)**. Leur ordre précis dans cette session reste à déterminer.
+
+- [ ] Confirmer l'audit de **Vel'Dun UI** déjà installé, en vérifiant les versions de SkyUI et MCM Helper de NEFARAM, ainsi que les options FOMOD réellement utiles.
 - [ ] Contrôler la cohabitation avec Dear Diary Dark Mode, Wheeler, TrueHUD, les widgets et le système de menus actuel.
 - [ ] Conserver les reskins Dragonborn UI désactivés pendant l'évaluation ; prévoir un retour arrière réversible.
 - [ ] Valider le bon fonctionnement technique (affichage 3D, carte / inventaire, HUD de base, hotkeys essentielles et stabilité), sans figer la disposition des widgets.
@@ -150,13 +163,19 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ## Phase 5 - Étude graphique finale
 
-Cette phase commence **après le gel fonctionnel et l'installation technique de l'UI**, lorsque la liste des mods fonctionnels est figée.
+**Prochaine étape principale.** La construction du modpack est déclarée terminée : l'audit conservatoire de phase 1 peut désormais être suivi de l'audit graphique final de phase 2. Attendre la fin et la vérification de la copie avant toute modification graphique.
+
+- [ ] Prendre les load orders GitHub actuels comme référence documentaire et comparer avec l'état de l'audit conservatoire.
+- [ ] Relever les versions, configurations et fichiers gagnants réels avant de conclure sur une compatibilité.
+- [ ] Mesurer le rendu actuel sur la machine de Fabien : RTX 4070 12 Go, 64 Go RAM, résolution effective et fréquence écran à confirmer ; cible **60–70 FPS**.
+- [ ] Préparer un plan de migration progressif et réversible avec ordre d'installation, tests intermédiaires et points de retour arrière.
+- [ ] Effectuer les essais sur la copie de travail avec des sauvegardes de test dédiées.
 
 ### Option A - Optimisation de l'ENB actuel
 
-Candidat principal :
+Commencer par évaluer l'optimisation du preset ENB actuellement utilisé. Tester un autre preset reste une option, pas une décision acquise.
 
-**Silent Horizons 2**
+**Silent Horizons 2** — candidat à comparer après vérification de ses prérequis ; changer de preset ne se confond pas avec régler l'ENB actuel.
 https://www.nexusmods.com/skyrimspecialedition/mods/99398
 
 Travail :
@@ -170,7 +189,8 @@ Travail :
 
 ### Option B - Community Shaders
 
-- [ ] Lire la fiche officielle de modification / recommandations NEFARAM conservée sur GitHub.
+- [ ] Lire le [guide NEFARAM ENB → Community Shaders / NAT Effect 11](guides/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md), réorganisé à partir des notes Discord.
+- [ ] Revalider cette procédure pour **NEFARAM 17.3.7** et les versions retenues : le document source vise **17.2.1**.
 - [ ] Identifier les composants ENB remplacés ou non par Community Shaders.
 - [ ] Construire un test réversible.
 - [ ] Vérifier compatibilités avec météo, éclairages, parallax, grass, water, skin, SMP et UI.
@@ -179,7 +199,8 @@ Travail :
 
 ### Documentation NEFARAM et décision graphique
 
-- [ ] Retrouver et étudier la fiche officielle de modifications / recommandations graphiques NEFARAM Discord déjà conservée dans le dépôt GitHub.
+- [x] Localiser la fiche Discord déjà conservée : [NEFARAM — ENB vers Community Shaders avec NAT Effect 11](guides/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md).
+- [ ] Étudier ses recommandations et vérifier les compatibilités actuelles avant application.
 
 ### Décision graphique
 
@@ -266,7 +287,7 @@ Cette phase complète la checklist `13-PRE-PLAYTHROUGH-CHECKLIST.md`.
 
 ## Phase 8 - Lancement de la partie définitive
 
-### 8.1 Départ propre
+### 8.1 Nouvelle partie — départ propre
 
 - [ ] Démarrer depuis **NEFARAM_Start**.
 - [ ] Créer Rhiven / personnage définitif.
@@ -292,7 +313,8 @@ Cette phase complète la checklist `13-PRE-PLAYTHROUGH-CHECKLIST.md`.
 - [ ] Charger la sauvegarde MCM configurée.
 - [ ] Vérifier que les paramètres persistent.
 - [ ] Faire quelques tests représentatifs.
-- [ ] Si aucun problème bloquant n'apparaît : **NEFARAM-Rhiven est considéré finalisé pour le playthrough.**
+- [ ] Si aucun problème bloquant n'apparaît : **NEFARAM-Rhiven 1.1 est considéré finalisé pour le playthrough.**
+- [ ] Lancer la vraie partie et jouer.
 
 ---
 
