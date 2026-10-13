@@ -174,6 +174,7 @@ Travail :
 - [ ] Identifier les composants ENB remplacés ou non par Community Shaders.
 - [ ] Construire un test réversible.
 - [ ] Vérifier compatibilités avec météo, éclairages, parallax, grass, water, skin, SMP et UI.
+- [ ] **Vel'dun UI Patches** : lors des essais Community Shaders, Bottled Shaders ou Open Shaders, relancer le FOMOD de Vel'dun UI Patches (actuellement v1.0.7), réexaminer l'option **Community Shaders** de la page 5 (actuellement **Skip**) et l'activer uniquement si la pile de shaders correspondante est retenue ; vérifier ensuite les conflits MO2.
 - [ ] Mesurer performances et rendu dans les mêmes scènes que l'ENB.
 
 ### Documentation NEFARAM et décision graphique
