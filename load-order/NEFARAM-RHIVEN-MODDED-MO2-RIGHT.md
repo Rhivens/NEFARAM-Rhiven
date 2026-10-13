@@ -185,6 +185,8 @@ DynDOLOD.esm
 Helios.esp
 titkit.esl
 BeeingFemale.esm
+PamaFurnitureScr.esp
+PamaPrisonAlternative.esm
 Deep Chanterelle.esp
 ChanterelleENBPatch.esl
 iWant Status Bars.esp
@@ -1931,6 +1933,7 @@ MuElfStahlrimBikiniArmor.esp
 Dark Dreams.esp
 MiscHeelsEins_CBBE.esp
 [Predator] MME Harness.esp
+Next-Gen Decapitations.esp
 Phoenix_Katana_.esp
 NewStatueOfShalidorMagicLights.esp
 Optional.DibellaStatuesFixes.esp
@@ -1946,6 +1949,8 @@ LKVMII_LT01.esp
 LKVM CC Fishing Patch.esp
 Riverhome v1.4.esp
 BetterThirdPersonSelection.esp
+FadeTattoos.esp
+RapeTattoos.esp
 Fertility Adventures.esp
 BeeingFemaleAdultPack.esp
 BeeingFemaleBasicAddOn.esp
@@ -1955,7 +1960,37 @@ Xtended Stay.esp
 Xtended Stay - Close Dialogue.esp
 Xtended Stay - Bruma.esp
 Xtended Stay - Bruma - Close Dialogue.esp
+Regional Outfitters.esp
+Regional Outfitters - Capital Windhelm.esp
+Regional Outfitters - AI Overhaul.esp
+Regional Outfitters - Obscures College of Winterhold.esp
+Simple Offence Suppression MCM.esp
+DeviousCarriages.esp
+DeviousCarriages Redux CFTO Patch.esp
+PamaSovngardeAftermath.esp
+PaPunishmentPack1.esp
+PaOutdoorEventPack.esp
+PrisonAlternative_Executions_WindHelm.esp
+PAMA - Windhelm Navmesh Patch - Rhiven.esp
+PrisonAlternative_Executions_Riften.esp
+PrisonAlternative_Executions_Solitude.esp
+PAMA - Solitude Location Patch - Rhiven.esp
+OrkishBountyHunters.esp
+Missives.esp
+SL Dirty Deeds Missives.esp
+SL Dirty Deeds Missives - 1.4.2 - Race Edits.esp
+SL Dirty Deeds - Race Compatibility - Rhiven.esp
 ArousedBodyMorphs.esp
+TNTR.esp
+GR_TrapDefeat.esp
+GR_MimicPlacer.esp
+TNTR-MimicsTextFix.esp
+O Skyrim Has Insane Traps.esp
+watch your step.esp
+Private Needs - Orgasm.esp
+TDF Aroused Rape.esp
+SexLabDangerousNights2.esp
+UntarnishedUI_Subtitle.esp
 Water for ENB - Patch - FWMF for Fantasy Paper Maps.esp
 FWMF for Fantasy Paper Maps.esp
 MCM for FWMF.esp
