@@ -5,13 +5,6 @@ Current customized MO2 left-pane snapshot.
 Replace the content of the block below whenever the validated Rhiven setup changes.
 
 ```text
-# NEFARAM Rhiven Modded — MO2 Left Panel
-
-Current customized MO2 left-pane snapshot.
-
-Replace the content of the block below whenever the validated Rhiven setup changes.
-
-```text
 [NEFARAM 17.3.7]
 [01 - Major Patches]
 SSE Creation Kit Fonixdata Lip Sync Fix
@@ -327,13 +320,6 @@ The Dragonborn's Bestiary - Quest Patch Compendium AIO (FOMOD)
 Favorites Menu Effects Description
 Dear Diary Dark - The Unofficial Patches
 Map Menu Clouds Fix
-Dragonborn UI - SkyUI Reskin - Rhiven
-Dragonborn Reskin - Skyrim Character Sheet - Rhiven
-Wheeler - Quick Action Wheel Of Skyrim - Rhiven
-Perfected Wheeler - Apocrypha Menu Framework - Rhiven
-Dragonborn - Wheeler Reskin - Rhiven
-Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven
-Compare Equipment NG - Rhiven
 [05 - Landscape]
 Chanterelle World
 Chanterelle Horse Herds
@@ -964,6 +950,7 @@ Vampire Clothing Expansion
 Piercings of the Divines
 Atronach Armors - CBBE 3BA - HIMBO
 MAGECORE - hdt SMP (CBBE 3BA)
+Fancy Magecore - Rhiven
 Dawnguard Bikini armor 3BA HDT-SMP - Tawoba add-on
 Stormcloaks Bikini armor 3BA HDT-SMP - Tawoba add-on
 Stormcloak Officer Bikini armor 3BA HDT-SMP - Tawoba add-on
@@ -1316,6 +1303,7 @@ Potion Toxicity SSE
 Non-Exploitable Crossbow Reloading SE
 Non-Exploitable Crossbow Reload Auto Start
 Simple Offence Suppression
+Simple Offence Suppression MCM - Rhiven
 Suspicious City Guards
 Suspicious City Guard Improvements
 Atronach Friendly Fire
@@ -1529,7 +1517,7 @@ Blind people DAR animations
 Super Fast Get Up Animation
 Brastia Exhausted Idles and Bleedout Idles and Pose Pack
 Unlocked 1st Person Combat
-Labor Animations (Open Animation Replacer)
+Labor Animations (Open Animation Replacer) - DECOCHE
 GSPoses SE
 SkyParkour v3 - Procedural Parkour and Climbing Framework (SPPF)
 Axarien's Animations - Custom Followers - Val Serano Inigo Lucien Kaidan Auri Bishop
@@ -1549,6 +1537,12 @@ USSEP Nemesis or Pandora Patch
 Dynamic Feminine Female Modesty Animations OAR
 Female Merchant Counter Animations (OAR)
 Malignis Animations - Bathing in Skyrim Renewed - Rhiven
+Gulan0-Female Random Idle 1.0 - Rhiven - DECOCHE
+Gulan0-Female Random Idle 2.0 - Rhiven - DECOCHE
+Gulan0 OAR Settings - Rhiven - DECOCHE
+Gulan0 - Walk-Run-Sprint- OAR-player - Rhiven
+Gulan0 - Female-run-Update OAR - Rhiven
+Gulan0 Walk Run Sprint OAR Settings - Rhiven
 [25 - Camera]
 True Directional Movement - Modernized Third Person Gameplay
 Cinematic Conversation Camera
@@ -2057,6 +2051,14 @@ Simple Buyable Slaves
 Animated Gaping
 NymphoElf Public Whore Patch
 Advanced Nudity Detection
+Fade Tattoos Continued - Rhiven
+Rape Tattoos Continued - Rhiven
+Rape Tats Continued 2.0.3 QoL Extension-rev1 (Patch) - Rhiven
+Alpia Slavetats Pack - Rhiven
+Alpia Rtats Settings All in One - Rhiven
+Zaki Tattoos General Pack SE - Rhiven
+Zaki RTC Settings - Rhiven
+Eleanor RTC Settings - Rhiven
 [36 - AI Voices (Can be safely disabled any time)]
 Various Voice Packs
 Practical Defeat Reanimated Voicepack
@@ -2106,7 +2108,7 @@ PCA Output
 xEdit Output
 Synthesis Output
 Bodyslide Output
-xLODGen Resource - SSE Terrain Tamriel
+xLODGen Resource - SSE Terrain Tamriel - DECOCHE
 xLodGen Output
 TexGen Output
 DynDOLOD Output
@@ -2131,12 +2133,12 @@ SoulsyHUD - DECOCHE
 [BnP] SK fix 2.0
 [BnP] Cosplay Basics Patch
 [BnP] Goam's Elven Ears
-[Diamond Skin] Main Texture
-[Diamond Skin] Futanari Patch
-[Diamond Skin] Cosplay Basics Patch
-[Realore Skin Ultima] Main Texture
-[Realore Skin Ultima] Futanari patch
-[PB's Silky Skin] Main Texture - Rhiven
+[Diamond Skin] Main Texture - DECOCHE
+[Diamond Skin] Futanari Patch - DECOCHE
+[Diamond Skin] Cosplay Basics Patch - DECOCHE
+[Realore Skin Ultima] Main Texture - DECOCHE
+[Realore Skin Ultima] Futanari patch - DECOCHE
+[PB's Silky Skin] Main Texture - Rhiven - DECOCHE
 MuDynamicNormalMap - Rhiven
 [41 - Homes Eleanor]
 Road Signs Overhaul 2.0 - Rhiven
@@ -2150,11 +2152,36 @@ Lakeview Manor - As It Should Be - FR - Rhiven
 Fertility Adventures Redux - Rhiven
 Beeing Female NG - Rhiven
 BeeingFemale NG HUD Re Alignment Patch V1.0.1 - Rhiven
+Labor Animations - OAR - Rhiven
 [43 - Added Mods SFW]
-Simple Inn Bath
-Xtended Stay
+SkyPatcher - AE - Rhiven
+Object Impact Framework (OIF) - Rhiven
+Next-Gen Decapitations - Rhiven
+Outfit Gallery - Visual Outfit Manager - Rhiven - DECOCHE
+Outfit Gallery - Visual Outfit Manager 1.0.14 - Rhiven
+FLICK - Fuzz's Legally Intelligible Core Kit - Rhiven - DECOCHE
+Menu Studio - Rhiven - DECOCHE
+Fitting Room - Rhiven - DECOCHE
 Phoenix Katana - Rhiven
-[44 - Architecture NSFW]
+Simple Inn Bath - Rhiven
+Xtended Stay - Rhiven
+Regional Outfitters - Stalls of Skyrim - Rhiven
+[44 - PRISON PAMA SYSTEM]
+Next-Gen Decapitations - Sovngarde INI - Rhiven
+PamaDeadlyFurniture_V3.4.5_SE_AE (Revision2) - Rhiven
+Prison Alternative - Rhiven
+Prison Alternative - Scripts Sources - Rhiven - DECOCHE
+PamaSovngardeAftermath_V1.0.0_SE_AE - Rhiven
+PaPunishmentPack_V1.3.0_SE_AE - Rhiven
+PaOutdoorEventPack_V1.3_SE_AE - Rhiven
+PA_Extension_BadEndsRevived_WindHelm_V1.3.0_SE_AE - Rhiven
+PAMA - Windhelm Navmesh Patch - Rhiven
+PA_Extension_BadEndsRevived_Riften_V1.3.2_SE_AE - Rhiven
+PA_Extension_BadEndsRevived_Solitude_V1.8.0_SE_AE (Revision2) - Rhiven
+PAMA - Solitude Location Patch - Rhiven
+PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven
+OrkishBountyHunters_V0.4_SE_AE - Rhiven
+[45 - Architecture NSFW]
 New Statue of Shalidor SE 1A - Rhiven
 New Dibella Statues SE 2.0 - Rhiven
 New Dibella Statues SE 2.0 Fixes - Rhiven
@@ -2172,9 +2199,39 @@ New Nocturnal Statue SE V2 - Rhiven
 New Statue of Meridia 1.1. Dirty SE - Rhiven
 New Shrine of Azura 2.0 V1 SE - Rhiven
 New Shrine of Azura No Snow Shaders - Rhiven
-[44 - Added Mods NSFW]
-Aroused BodyMorphs
-[45 - FWMF Maps - Rhiven]
+[46 - Added Mods NSFW]
+Devious Carriages Redux - Rhiven
+DeviousCarriages Redux CFTO Patch - Rhiven
+Devious Carriages Redux Voicepack HQ - Rhiven
+Missives 2.03 SSE - Rhiven
+Replacing Boards for Missives - Rhiven
+SL Dirty Deeds Missives - Rhiven
+SL Dirty Deeds - Race Compatibility - Rhiven
+Aroused BodyMorphs - Rhiven
+Trap Needs to be Real Trap - Rhiven
+EET Extra Evil Traps - Rhiven
+O Skyrim Has Insane Traps - Rhiven
+OMNOMS Not So Obvious Mimics - Rhiven
+Deadly Bear Trap - Rhiven
+Watch Your Step - Rhiven
+Private Needs - Orgasm - Rhiven
+TDF SexLab Aroused Rape - Rhiven
+SL Dangerous Nights SE - Rhiven
+[47 - UI - Rhiven]
+Wheeler - Quick Action Wheel Of Skyrim - Rhiven
+Perfected Wheeler - Apocrypha Menu Framework - Rhiven
+Compare Equipment NG - Rhiven
+STB Widgets - Rhiven
+Vel'dun UI - Rhiven
+Vel'dun UI Patches - Rhiven
+Dragonborn - Wheeler Reskin - Rhiven
+Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven
+SkyHUD Settings - Rhiven
+TrueHUD Settings - Rhiven
+Compare Equipment NG Settings - Rhiven
+Oxygen Meter 2 Settings - Rhiven
+Casting Bar Settings - Rhiven
+[48 - FWMF Maps - Rhiven]
 Flat World Map Framework Lite - Rhiven
 Skyrim Paper Map by Caro Tuts for FWMF - Rhiven
 Overwrite
