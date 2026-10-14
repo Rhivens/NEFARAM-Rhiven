@@ -12,6 +12,18 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 
 ## Added mods
 
+### Mise à jour UI et garde-robe — 14 octobre 2026
+
+| Mod | Status | Section | Reason / Notes |
+|---|---|---|---|
+| Modern Wait Menu - Rhiven | Visuel validé ; fonctionnement complet à confirmer | 47 - UI - Rhiven | Menu d'attente circulaire visible in-game ; base fonctionnelle sous les habillages Vel'dun. |
+| Vel'dun UI - Rhiven + Vel'dun UI Patches - Rhiven | Conservés 1.0.6 | 47 - UI - Rhiven | Rester en 1.0.6 pour le module principal : essai 1.0.7 abandonné après souci du menu ESC. |
+| Vel'dun UI Overhauls - Rhiven | Visuel validé ; tests complémentaires attendus | 47 - UI - Rhiven | FOMOD affiché en 1.0.7 ; Modern Wait Menu, Dragonborn Bestiary 2A (16:9), Quest Journal Skip ; victoire MO2 sur principaux SWF associés. |
+| Dragonborn Reskin - SkyUI Inventory Category Icons - Rhiven | Visuel validé | 47 - UI - Rhiven | Icônes colorées constatées dans l'inventaire. |
+| Dragonborn Reskin - STB Active Effects - Rhiven | Installé ; test in-game à compléter | 47 - UI - Rhiven | Aucun effet sur le personnage temporaire lors du contrôle. |
+| Outfit Gallery - Visual Outfit Manager - Rhiven | Mise à jour 1.0.15 ; interface contrôlée | 43 - Added Mods SFW | Tenues compagnons non souhaitées et à désactiver ; traduction FR externe Translation.json envisagée ; usage presets à tester. |
+
+
 ### Road signs — replacement validated visually 2026-10-14
 
 | Mod | Status | Section | Reason / Notes |
