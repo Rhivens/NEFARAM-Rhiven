@@ -1,10 +1,24 @@
 # Sous-chantier HUD & Interface — NEFARAM-Rhiven
 
-> **Statut : planifié — installation et calibration différées.**
+> **Statut : interface Vel'Dun intégrée et testée visuellement le 14/10/2026 ; calibration détaillée HUD/MCM reportée à la partie définitive.**
 >
-> Ce document est une **feuille de route**, pas une configuration HUD déjà validée. La partie définitive d'Eleanor n'a pas commencé. On termine d'abord les ajouts classiques au modpack, puis on traite l'interface comme un chantier autonome, avant la checklist de lancement.
+> Ce document combine les **observations validées en jeu** et la **feuille de route** pour la calibration HUD restant à faire. La partie définitive d'Eleanor n'a pas commencé. On termine d'abord les ajouts classiques au modpack, puis on traite l'interface comme un chantier autonome, avant la checklist de lancement.
 >
 > **Base de référence :** NEFARAM 17.3.7 personnalisé, profil MO2 `ELEANOR Stable`. Les instantanés à actualiser lors du chantier sont `load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md` et `load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md`.
+
+
+## État réel au 14 octobre 2026 — personnalisation UI
+
+- **Vel'dun UI principal 1.0.6 + Patches 1.0.6 conservés.** La 1.0.7 du mod principal avait causé un problème avec le menu Échap ; ne pas proposer cette mise à jour comme acquise. Le FOMOD affiché pour **Vel'dun UI Overhauls** était quant à lui marqué **1.0.7** : distinguer les versions de ces modules.
+- **Modern Wait Menu original** installé en haut du bloc `47 - UI - Rhiven`. L'habillage Nithog se trouve dans **Vel'dun UI Overhauls**, option FOMOD `Wait/Sleep Menu → 2. Modern Wait Menu`. Le nouveau menu circulaire a été vu en jeu, sans test exhaustif du mécanisme d'attente.
+- **The Dragonborn's Bestiary** : FOMOD Overhauls `2A. Bestiary Patch` pour le 16:9. Habillage Vel'dun observé en jeu ; aucun contenu à ce stade sur le PJ de test.
+- **Quest Journal** : `1. Skip` car seul **Knotwork pour SkyUI V5 2.1.0** est installé, pas Quest Journal Overhaul ni sa déclinaison Knotwork.
+- **Reskins Dragonborn personnels réactivés** : `Dragonborn Reskin - SkyUI Inventory Category Icons - Rhiven` (icônes colorées observées) et `Dragonborn Reskin - STB Active Effects - Rhiven` (pas encore testé avec un effet actif). Les deux mods Wheeler Dragonborn sont également visibles actifs dans MO2.
+- Ordre panneau gauche (éléments clés) : `Modern Wait Menu` → `Vel'dun UI` → `Vel'dun UI Patches` → `Vel'dun UI Overhauls` → `Dragonborn - Wheeler Reskin` + options → `Dragonborn Reskin - SkyUI Inventory Category Icons` → `Dragonborn Reskin - STB Active Effects`. Priorité bas de liste pour les fichiers identiques.
+- Dans l'onglet Conflits de **Vel'dun UI Overhauls**, les fichiers `sleepwaitmenu.swf`, `PlatformButtons.swf`, `bestiarymenu.swf` et `bestiarywidget.swf` sont gagnants. `favoritesmenu.swf` gagne aussi ; tester les favoris pour exclure une régression inattendue.
+- **Outfit Gallery 1.0.15** : menu visible en jeu ; `External (Translation.json)` disponible comme piste pour une future traduction FR, après inspection du format. Tenues automatiques pour compagnons **à laisser désactivées**. Usage multiple et sauvegarde des tenues à tester sur la vraie Eleanor ; comparaison avec Fitting Room non close.
+- **Contrôles restant ouverts :** valider une attente complète, le menu Échap après cette combinaison, l'affichage STB avec effet actif, le Bestiaire avec du contenu, le menu Favoris, l'absence de conflit de touches, et le maintien des réglages au redémarrage. Ne pas confondre captures visuelles et validation fonctionnelle exhaustive.
+- Sources : [Vel'dun UI](https://www.nexusmods.com/skyrimspecialedition/mods/176230) ; [Modern Wait Menu](https://www.nexusmods.com/skyrimspecialedition/mods/117661) ; [Outfit Gallery](https://www.nexusmods.com/skyrimspecialedition/mods/193410).
 
 ## Objectif
 
