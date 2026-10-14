@@ -147,14 +147,18 @@ Pour chaque pack contenant des JSON :
 
 ## Phase 4 - UI / HUD Eleanor : intégration installée, validation à confirmer
 
-**État au 13/10/2026 :** Vel'dun UI et Vel'dun UI Patches figurent dans le snapshot MO2 actuel ; l'installation globale est annoncée terminée. Les contrôles de compatibilité et de fonctionnement restent à confirmer ci-dessous.
+**État au 14/10/2026 :** Vel'dun UI principal et Patches **1.0.6** conservés (la 1.0.7 du principal avait perturbé ESC), Vel'dun UI Overhauls installé, Modern Wait Menu et habillage Vel'dun visibles en jeu. Bestiaire Vel'dun et icônes Dragonborn colorées également observés ; validation fonctionnelle exhaustive toujours à faire. Voir le [guide HUD](guides/HUD/README.md).
 
 Les éventuels correctifs techniques se font sur la copie de travail, sans reconstruire précipitamment l'interface NEFARAM. Vérifier la compatibilité des composants UI ; **reporter les réglages détaillés des widgets et les préférences HUD à la session de configuration des MCM (phase 8)**. Leur ordre précis dans cette session reste à déterminer.
 
 - [ ] Confirmer l'audit de **Vel'Dun UI** déjà installé, en vérifiant les versions de SkyUI et MCM Helper de NEFARAM, ainsi que les options FOMOD réellement utiles.
 - [ ] Contrôler la cohabitation avec Dear Diary Dark Mode, Wheeler, TrueHUD, les widgets et le système de menus actuel.
-- [ ] Conserver les reskins Dragonborn UI désactivés pendant l'évaluation ; prévoir un retour arrière réversible.
+- [x] Réactiver après comparaison les reskins Dragonborn souhaités (Wheeler, icônes de catégories SkyUI et STB Active Effects) ; les icônes colorées sont visibles en jeu. Le test d'effets actifs STB reste différé.
 - [ ] Valider le bon fonctionnement technique (affichage 3D, carte / inventaire, HUD de base, hotkeys essentielles et stabilité), sans figer la disposition des widgets.
+- [x] Identifier l'emplacement du patch Modern Wait Menu dans **Vel'dun UI Overhauls** (et non dans Vel'dun UI Patches), sélectionner Modern Wait Menu et le reskin Bestiary 16:9, conserver Quest Journal sur Skip (QJO non installé).
+- [ ] Valider une attente complète, ESC, Favoris et Bestiaire avec contenu ; confirmer STB Active Effects lorsque le PJ a des effets.
+- [ ] Préparer la traduction externe `Translation.json` d'Outfit Gallery 1.0.15 dans la phase FR (format à vérifier). Conserver l'automatisation des tenues des compagnons désactivée.
+- [ ] Finaliser **Phoenix Katana** : installation, personnalisation des records dans un plugin Rhiven séparé, tests Eleanor ; tâche prévue avant les traductions.
 - [ ] Suivre le **chantier HUD détaillé** dans [guides/HUD/README.md](guides/HUD/README.md) ; ne pas dupliquer ici ses choix et ses tests.
 
 Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
