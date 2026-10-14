@@ -12,6 +12,14 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 
 ## Added mods
 
+### Road signs — replacement validated visually 2026-10-14
+
+| Mod | Status | Section | Reason / Notes |
+|---|---|---|---|
+| Point The Way - Rhiven | Testing — Riverwood visual check passed | 41 - Homes Eleanor | Adds road signs; tested with French retexture. Confirm long-distance / other locations during play; no DynDOLOD regeneration performed. |
+| My Road Signs are Beautiful - French | Testing — French textures visible in-game | 41 - Homes Eleanor | v1.6.1FR; weathered 4K–2K; Point The Way engraved 4K–2K; Bruma 4K–2K; Wyrmstooth 4K–2K; no Cutting Room Floor optional textures (separate CRF / French PNO not installed). |
+| Road Signs Overhaul 2.0 - Rhiven + two BOS patches | Disabled, retained for rollback | 41 - Homes Eleanor | Replaced following displaced extra sign near Riverwood; not part of active setup. See [disabled-mods register](04-MODS-REMOVED.md). |
+
 | Mod | Status | Section | Reason / Notes |
 |---|---|---|---|
 | Terrain Helper - Generated INI - Rhiven | Validated | 02 - SKSE Utility Mods | Isolates generated `TerrainHelper.ini` from MO2 Overwrite |
