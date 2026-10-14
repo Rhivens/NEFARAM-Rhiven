@@ -209,6 +209,15 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ---
 
+### Complément au gel des mods — signalisation française (14/10/2026)
+
+- [x] Désactiver l'ancien trio Road Signs Overhaul 2.0 / Questionable Clutter Remover BOS / Blended Roads BOS (conservé dans MO2 en retour arrière) après disparition du panneau supplémentaire mal placé près de Rivebois lors du diagnostic.
+- [x] Installer `Point The Way - Rhiven` avec `My Road Signs are Beautiful - French` et valider visuellement plusieurs panneaux en français près de Rivebois, en météo pluvieuse.
+- [ ] Vérifier le placement / les éventuelles incohérences LOD à distance et confirmer l'ordre exact des plugins depuis un nouvel export MO2 ; **aucune régénération DynDOLOD n'a été effectuée**.
+- [ ] Actualiser les deux snapshots MO2 Rhiven après export de l'état courant ; conserver les snapshots de la baseline originale inchangés.
+
+---
+
 ## Phase 6 - Passage complet en français
 
 A effectuer après gel du load order pour éviter de retraduire des plugins encore mouvants.
