@@ -2,6 +2,18 @@
 
 ## 2026-10-14
 
+### UI/HUD — Vel'Dun, Modern Wait Menu, Bestiaire et reskins Dragonborn (14/10/2026)
+
+- Conservé **Vel'dun UI 1.0.6** et **Vel'dun UI Patches 1.0.6** : la version principale 1.0.7 avait été écartée après un problème observé avec le menu Échap en jeu. Ne pas la réinstaller automatiquement.
+- Identifié dans le changelog de Nithog que l'habillage **Modern Wait Menu** appartient au module séparé **Vel'dun UI Overhauls** et non au principal ou au pack Patches. Installé **Modern Wait Menu - Rhiven** avec **Vel'dun UI Overhauls - Rhiven** ; capture du FOMOD Overhauls affichant la version **1.0.7**, option `Wait/Sleep Menu → 2. Modern Wait Menu`.
+- Dans le même FOMOD : **Dragonborn's Bestiary → 2A. Bestiary Patch** (16:9) ; **Quest Journal → Skip** (Knotwork SkyUI est présent, mais Quest Journal Overhaul n'est pas installé).
+- Rétabli les reskins personnels **Dragonborn Reskin - SkyUI Inventory Category Icons - Rhiven** et **Dragonborn Reskin - STB Active Effects - Rhiven**. L'ordre gauche MO2 constaté : Modern Wait Menu → Wheeler → Perfected Wheeler → Compare Equipment NG → STB Widgets → Vel'dun UI → Vel'dun UI Patches → Vel'dun UI Overhauls → Dragonborn Wheeler reskins → Dragonborn Category Icons → Dragonborn STB Active Effects → presets HUD.
+- MO2 montre Vel'dun Overhauls gagnant sur `interface/sleepwaitmenu.swf`, `interface/Shared Elements/PlatformButtons.swf`, `interface/bestiarymenu.swf` et `interface/exported/widgets/bestiary/bestiarywidget.swf`; `favoritesmenu.swf` est également remplacé (contrôle fonctionnel des favoris encore conseillé).
+- **Tests en jeu visuels réussis** : menu d'attente circulaire Vel'dun affiché, menu Bestiary redessiné affiché (vide sur le personnage de test), icônes d'inventaire Dragonborn colorées visibles. La présence d'effets actifs STB n'a pas été testée faute d'effet sur le PJ. La capture ne démontre pas encore l'exécution d'une attente complète, ni la persistance après redémarrage, ni un contrôle exhaustif du menu Échap.
+- **Outfit Gallery** mise à jour de **1.0.14 à 1.0.15** : ouverture de l'interface confirmée en jeu ; fonctions de galerie/presets multiples à approfondir dans la partie réelle ; automatisation des tenues des compagnons **non souhaitée**, vérifier et laisser désactivée. Une traduction FR externe `Translation.json` est envisagée via un mod MO2 indépendant, après vérification du format.
+- Avant francisation : reste **Phoenix Katana** à installer, puis à personnaliser dans un plugin Rhiven séparé pour Eleanor. Ne pas déclarer le katana déjà installé ni les traductions déjà effectuées.
+
+
 ### Panneaux routiers — remplacement RSO par Point The Way + My Road Signs are Beautiful FR
 
 - Found a visibly displaced / floating added sign near Riverwood. More Informative Console identified `RoadSignFalkreath01L`, base `000D8D9B`, reference `FE6B8849`, last changed by `RoadSignsOverhaul 2.0.esp` in the test load order.
