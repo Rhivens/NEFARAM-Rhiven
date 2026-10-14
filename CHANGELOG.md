@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-14
+
+### Choix graphique final — Silent Horizons 2 + ReShade Sswaye LUT13
+
+- Completed the graphics comparison on **NEFARAM 17.3.7** after finishing the planned mod installations. Reference setup: **1920×1080**, display **74.97 Hz**, RTX 4070 12 GB, target around **60–70 FPS**.
+- Tested **Silent Horizons 2 Universal Core 1.13** against the previous ENB preset. Saved the personalized configuration in ENB Manager **Slot 3**, including **Interior Exposure +0.50**, preserved DLAA and verified terrain/complex parallax settings. In-game checks showed good rendering for interiors, snow, night scenes and water; observations included roughly **74.9 FPS** in several test locations.
+- Trialed **Community Shaders 1.9.1 + Effects 11 + NAT Effect 11**, including Lux CS and related components, on a separate test configuration. The exterior color balance and water looked good, but overall graphical depth was less convincing to the user; a camera zoom regression was observed on the CS setup. The SkyParkour test issue was traced to its **MCM activation**, not proven to be caused by CS.
+- Investigated Water for ENB compatibility during the CS trial: **DynDOLOD.esm** and **_NEFARAM_____MAIN_____.esp** still depended on the Water for ENB plugin chain. Water for ENB was temporarily retained for that test rather than removing required masters; no speculative DynDOLOD edits were made.
+- **Decision:** do **not** retain Community Shaders for the final setup. Returned to the clean pre-experiment NEFARAM instance at `C:\JEUX\NEFARAM`; preserved the CS experiment separately as `C:\JEUX\NEFARAM_CS`. Reinstalled the previously validated **Silent Horizons 2 – Rhiven** preset from the saved Slot 3 files, confirmed Interior Exposure **+0.50**, parallax values, successful in-game launch and **working camera zoom**.
+- Installed **ReShade 6.8.0 Full Add-on Support** alongside ENB, using `dxgi.dll` for ReShade while retaining ENB's `d3d11.dll`. Installed Sswaye's provided shaders/textures, set ReShade effect/texture search paths and confirmed shaders compiled and loaded.
+- Compared **Sswaye ReShade Normal** against **LUT13** in the same exterior scene. **LUT13 selected** (enabled effects: `DPX.fx`, `Clarity.fx`, `LUT13.fx`); Normal judged too colorful and LUT21 too blue.
+- **Follow-up:** validate preset persistence after restart, test stability and FPS/frametimes in more scenes, save final ENB/ReShade configurations, then move on to French localization, pre-final checklist and the final game start via `NEFARAM_Start`.
+- Updated [finalization roadmap](docs/15-FINALISATION-ROADMAP.md) to reflect the decision and remaining checks.
+
 ## 2026-10-11
 
 ### Animations Eleanor — Seamless conservé, Gulan0 locomotion validé
