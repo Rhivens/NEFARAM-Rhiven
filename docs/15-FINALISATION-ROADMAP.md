@@ -2,11 +2,11 @@
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-**Avancement mis à jour le 13/10/2026 — cible : NEFARAM-Rhiven 1.1.**
+**Avancement mis à jour le 14/10/2026 — cible : NEFARAM-Rhiven 1.1.**
 
-**L'installation de tous les mods prévus est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). La copie intégrale de `C:\JEUX\NEFARAM` est **en cours** pour conserver l'instance stable de référence et travailler sur une copie.
+**L'installation de tous les mods prévus est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). Une copie complète de l'instance NEFARAM d'origine a permis les essais réversibles. L'instance stable a été remise en place sous `C:\JEUX\NEFARAM` ; l'instance expérimentale Community Shaders est conservée séparément sous `C:\JEUX\NEFARAM_CS`.
 
-Ordre de travail restant : **terminer et vérifier la copie de travail → audit graphique final et choix ENB / Community Shaders → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ de la nouvelle partie → paramétrage des MCM → validation et jeu.**
+Ordre de travail restant : **terminer les contrôles du choix graphique Silent Horizons 2 + ReShade LUT13 → gel graphique → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
 
 Les phases 1 à 4 ci-dessous conservent l'historique et les contrôles détaillés. Leurs cases de tests non cochées restent à confirmer : **installation terminée ne signifie pas que tous les tests fonctionnels sont validés**. Elles ne constituent plus une liste de mods à installer.
 
@@ -138,9 +138,9 @@ Pour chaque pack contenant des JSON :
 - [x] Mettre à jour le snapshot MO2 gauche : [liste Rhiven actuelle](../load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md).
 - [x] Mettre à jour le snapshot plugins / load order : [liste Rhiven actuelle](../load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md).
 - [x] Terminer l'installation de tous les mods prévus.
-- [ ] Terminer la copie intégrale de `C:\JEUX\NEFARAM` — **copie en cours**.
+- [x] Effectuer une copie intégrale de l'instance NEFARAM avant les essais graphiques et conserver le retour arrière.
 - [ ] Vérifier la copie avant modification : profil MO2, chemins des exécutables et des sorties, lancement et sauvegardes de test doivent pointer vers l'instance de travail.
-- [ ] Conserver l'instance stable d'origine comme référence de retour arrière.
+- [x] Conserver l'instance stable d'origine comme référence de retour arrière ; la remettre sous `C:\JEUX\NEFARAM` après le test CS.
 - [ ] Effectuer un premier test stabilité global avant le chantier graphique.
 
 ---
@@ -161,53 +161,51 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ---
 
-## Phase 5 - Étude graphique finale
+## Phase 5 - Étude graphique finale — choix effectué le 14/10/2026
 
-**Prochaine étape principale.** La construction du modpack est déclarée terminée : l'audit conservatoire de phase 1 peut désormais être suivi de l'audit graphique final de phase 2. Attendre la fin et la vérification de la copie avant toute modification graphique.
+**Décision : conserver la base NEFARAM 17.3.7 d'origine et adopter ENB + Silent Horizons 2, complété par ReShade 6.8.0 et le preset Sswaye LUT13.** Community Shaders a été essayé sur une instance séparée, puis écarté au profit du rendu préféré et du retour à la configuration fonctionnelle d'origine.
 
-- [ ] Prendre les load orders GitHub actuels comme référence documentaire et comparer avec l'état de l'audit conservatoire.
-- [ ] Relever les versions, configurations et fichiers gagnants réels avant de conclure sur une compatibilité.
-- [ ] Mesurer le rendu actuel sur la machine de Fabien : RTX 4070 12 Go, 64 Go RAM, résolution effective et fréquence écran à confirmer ; cible **60–70 FPS**.
-- [ ] Préparer un plan de migration progressif et réversible avec ordre d'installation, tests intermédiaires et points de retour arrière.
-- [ ] Effectuer les essais sur la copie de travail avec des sauvegardes de test dédiées.
+### 5.1 Comparatif réalisé
 
-### Option A - Optimisation de l'ENB actuel
+- [x] Préserver la base originale et effectuer les essais dans une copie réversible.
+- [x] Tester Silent Horizons 2 (SH2) sur la machine réelle : RTX 4070 12 Go.
+- [x] Vérifier des extérieurs, intérieurs, paysages enneigés et le rendu d'eau.
+- [x] Tester Community Shaders 1.9.1 + Effects 11 + NAT Effect 11 sur un profil expérimental.
+- [x] Vérifier les dépendances Water for ENB : `DynDOLOD.esm` et `_NEFARAM_____MAIN_____.esp` utilisent des masters / références de l'ancienne chaîne d'eau. Water for ENB a été conservé pendant l'essai CS ; Water for CS n'a pas été retenu.
+- [x] Comparer les deux solutions en jeu : tonalité extérieure CS appréciée, mais rendu SH2 globalement préféré. Le zoom caméra fonctionnait sur la base d'origine / SH2 et non dans la configuration CS expérimentale ; cause exacte non isolée. SkyParkour nécessitait simplement son activation MCM sur la partie de test.
+- [x] Écarter CS comme configuration finale **sans attribuer automatiquement tous les problèmes observés à son moteur**.
+- [x] Rétablir l'instance NEFARAM d'origine sous `C:\JEUX\NEFARAM` et conserver l'essai CS sous `C:\JEUX\NEFARAM_CS`.
 
-Commencer par évaluer l'optimisation du preset ENB actuellement utilisé. Tester un autre preset reste une option, pas une décision acquise.
+**Références :**
+- [Silent Horizons 2](https://www.nexusmods.com/skyrimspecialedition/mods/99398)
+- [Guide NEFARAM ENB → Community Shaders / NAT Effect 11](guides/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md) — documentation consultée pendant les essais ; procédure historique issue de NEFARAM 17.2.1, non retenue pour la configuration finale.
 
-**Silent Horizons 2** — candidat à comparer après vérification de ses prérequis ; changer de preset ne se confond pas avec régler l'ENB actuel.
-https://www.nexusmods.com/skyrimspecialedition/mods/99398
+### 5.2 Configuration retenue — Silent Horizons 2
 
-Travail :
+- [x] Restaurer les fichiers du preset SH2 personnalisé depuis le slot 3 sauvegardé : `enbseries/`, `enbseries.ini`, `enblocal.ini`.
+- [x] Conserver les binaires ENB de la base d'origine (`d3d11.dll`, `d3dcompiler_46e.dll`), sans reconstruire les plugins ou les sorties DynDOLOD.
+- [x] Contrôler les valeurs de parallaxe du preset SH2.
+- [x] Confirmer dans l'interface ENB : **Interior – Exposure (in EVs) = +0.50**.
+- [x] Valider le lancement en jeu, le retour du zoom caméra et le rendu extérieur. Relevé ponctuel d'environ **74,9 FPS** dans un essai ; ne constitue pas un benchmark complet.
+- [ ] Confirmer la stabilité sur plusieurs lieux / conditions et avec les fonctions essentielles du modpack.
 
-- [ ] Identifier précisément l'ENB / météo / éclairage actuels.
-- [ ] Contrôler les presets et overrides existants.
-- [ ] Tester Silent Horizons 2 sans démolir le socle graphique actuel.
-- [ ] Mesurer FPS, frametimes, VRAM et stabilité dans plusieurs scènes représentatives.
-- [ ] Vérifier intérieurs, extérieurs, nuit, météo, neige, eau, peau, transparences et effets.
-- [ ] Conserver l'existant si le gain esthétique ne justifie pas la modification.
+### 5.3 ReShade — finition graphique
 
-### Option B - Community Shaders
+- [x] Installer **ReShade 6.8.0 Full Add-on Support** à côté d'ENB, via `dxgi.dll`, sans remplacer `d3d11.dll`.
+- [x] Installer les ressources Sswaye dans `reshade-shaders/Shaders` et `reshade-shaders/Textures`, puis configurer leurs chemins dans ReShade.
+- [x] Tester les presets **Sswaye Normal** et **Sswaye LUT13** sur une scène extérieure comparable.
+- [x] **Retenir Sswaye LUT13** : rendu préféré ; le preset Normal est jugé trop coloré, LUT21 trop bleu.
+- [x] Vérifier que le preset LUT13 active bien `DPX.fx`, `Clarity.fx` et `LUT13.fx` et que les effets sont détectés.
+- [ ] Vérifier les FPS / frametimes sur plusieurs scènes, la météo et les intérieurs avec **SH2 + ReShade LUT13**.
+- [ ] Confirmer que le preset choisi persiste après redémarrage ; sauvegarder une copie définitive des configurations ENB et ReShade.
+- [ ] Finaliser les snapshots MO2 et documenter les fichiers graphiques retenus, si leur état diffère des listes de référence.
 
-- [ ] Lire le [guide NEFARAM ENB → Community Shaders / NAT Effect 11](guides/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md), réorganisé à partir des notes Discord.
-- [ ] Revalider cette procédure pour **NEFARAM 17.3.7** et les versions retenues : le document source vise **17.2.1**.
-- [ ] Identifier les composants ENB remplacés ou non par Community Shaders.
-- [ ] Construire un test réversible.
-- [ ] Vérifier compatibilités avec météo, éclairages, parallax, grass, water, skin, SMP et UI.
-- [ ] **Vel'dun UI Patches** : lors des essais Community Shaders, Bottled Shaders ou Open Shaders, relancer le FOMOD de Vel'dun UI Patches (actuellement v1.0.7), réexaminer l'option **Community Shaders** de la page 5 (actuellement **Skip**) et l'activer uniquement si la pile de shaders correspondante est retenue ; vérifier ensuite les conflits MO2.
-- [ ] Mesurer performances et rendu dans les mêmes scènes que l'ENB.
+### Décision et gel graphique
 
-### Documentation NEFARAM et décision graphique
+**Choix graphique arrêté le 14/10/2026 : Silent Horizons 2 + ReShade / Sswaye LUT13.** Ne pas reprendre la migration Community Shaders sans nouveau besoin explicite.
 
-- [x] Localiser la fiche Discord déjà conservée : [NEFARAM — ENB vers Community Shaders avec NAT Effect 11](guides/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md).
-- [ ] Étudier ses recommandations et vérifier les compatibilités actuelles avant application.
-
-### Décision graphique
-
-- [ ] Comparer **ENB optimisé vs Community Shaders** sur la machine réelle.
-- [ ] Décider sur rendu + stabilité + performances, pas sur préférence théorique.
-- [ ] Documenter la solution gagnante.
-- [ ] Une fois validée : **gel graphique**.
+- [x] Choisir la solution sur le rendu, les essais en jeu et le retour aux fonctionnalités connues.
+- [ ] **Prononcer le gel graphique définitif** après validation de la persistance et des tests de stabilité, sans modifications majeures supplémentaires.
 
 ---
 
