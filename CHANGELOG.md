@@ -2,6 +2,17 @@
 
 ## 2026-10-14
 
+### Panneaux routiers — remplacement RSO par Point The Way + My Road Signs are Beautiful FR
+
+- Found a visibly displaced / floating added sign near Riverwood. More Informative Console identified `RoadSignFalkreath01L`, base `000D8D9B`, reference `FE6B8849`, last changed by `RoadSignsOverhaul 2.0.esp` in the test load order.
+- Disabled `Road Signs Overhaul 2.0 - Rhiven` for a disposable-save diagnostic: the extra sign disappeared. Confirmed it was a **supplementary sign near the original**, not a broken vanilla sign.
+- Disabled (retained in MO2 for rollback): `Road Signs Overhaul 2.0 - Rhiven`, `Road Signs 2.0 - Questionable Clutter Remover (BOS) - Rhiven`, and `Road Signs Overhaul 2.0 - Blended Roads Patch(BOS) - Rhiven`.
+- Installed and enabled in left-pane block `41 - Homes Eleanor`: **`Point The Way - Rhiven`** (additional road signs) and **`My Road Signs are Beautiful - French`** (French inscription / weathered texture replacer, 1.6.1FR).
+- French FOMOD selections documented: principal **version abîmée 4K–2K**, Point The Way **texture gravée 4K–2K**, Beyond Skyrim – Bruma **4K–2K**, Wyrmstooth **4K–2K**, Cutting Room Floor **Non merci** (not separately installed; the French PNO bundle is not in this build); absent optional mods **Non merci**.
+- In a fresh disposable in-game test near Riverwood, French signs appeared legible (e.g. Rivebois, Blancherive, Solitude, Épervine). Signs were assembled properly in the observed locations; the former floating extra sign was gone. No purple missing-texture symptoms observed in the shared screenshots. Conditions were rainy/foggy; general weather and distance testing remain pending.
+- **No TexGen/DynDOLOD regeneration performed.** Since Point The Way adds placed objects, LOD integrity is not claimed fully validated; watch for distant mismatches during normal travel. No save from the diagnostic run should become the definitive playthrough baseline.
+- **Documentation note:** older historical entries for RSO refer to the former configuration, not the current active mod set. Full MO2 snapshot files await a new export from the actual installed setup.
+
 ### Choix graphique final — Silent Horizons 2 + ReShade Sswaye LUT13
 
 - Completed the graphics comparison on **NEFARAM 17.3.7** after finishing the planned mod installations. Reference setup: **1920×1080**, display **74.97 Hz**, RTX 4070 12 GB, target around **60–70 FPS**.
