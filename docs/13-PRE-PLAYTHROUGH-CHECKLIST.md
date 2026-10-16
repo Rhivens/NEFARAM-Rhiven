@@ -28,9 +28,9 @@ Rule:
   - Keep `Leave my face alone` / `Freeform` / `All dyes unlocked` unless intentionally changed; check transmog suspension during scenes and avoid assuming that cosmetically worn pieces count as real equipment.
 
 - [ ] Complete in-game visual / physics validation of the personal Eleanor outfit block.
-- [ ] Audit added Eleanor outfits against the existing Advanced Nudity Detection / OSL / modesty keyword stack.
-- [ ] Identify which personal outfits are already covered by existing KID rules.
-- [ ] Create a dedicated Rhiven KID INI for missing outfit keywords instead of editing NEFARAM's original files.
+- [x] Audit added Eleanor outfits against the existing Advanced Nudity Detection / OSL / modesty keyword stack.
+- [x] Identify which personal outfits are already covered by existing KID rules.
+- [x] Create and validate dedicated `Eleanor Modesty KID - Rhiven` / `Rhiven_Eleanor_Modesty_KID.ini` for missing `NoModesty*` outfit keywords instead of editing NEFARAM's original files. KID startup log confirms the file is loaded without a Rhiven parsing error; overlapping AND / SLA / BOOBIES files were reviewed and retained as complementary layers.
 - [ ] Validate representative outfit categories so reactions behave as expected.
 
 ### Translations
