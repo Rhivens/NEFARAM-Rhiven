@@ -2,11 +2,13 @@
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-**Avancement mis à jour le 14/10/2026 — cible : NEFARAM-Rhiven 1.1.**
+**Avancement mis à jour le 16/10/2026 — cible : NEFARAM-Rhiven 1.1.**
 
 **L'installation de tous les mods prévus est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). Une copie complète de l'instance NEFARAM d'origine a permis les essais réversibles. L'instance stable a été remise en place sous `C:\JEUX\NEFARAM` ; l'instance expérimentale Community Shaders est conservée séparément sous `C:\JEUX\NEFARAM_CS`.
 
-Ordre de travail restant : **terminer les contrôles du choix graphique Silent Horizons 2 + ReShade LUT13 → gel graphique → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
+Ordre de travail restant : **passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
+
+**Étape KID / modesty Eleanor validée le 16/10/2026 :** audit de la collection personnelle terminé, couverture existante AND / OSL / SLA / BOOBIES contrôlée, complément `Eleanor Modesty KID - Rhiven` créé avec `Rhiven_Eleanor_Modesty_KID.ini`, et chargement confirmé dans le log Keyword Item Distributor sans erreur de parsing propre au fichier Rhiven. Les réactions réelles aux tenues restent volontairement à vérifier pendant la partie définitive.
 
 Les phases 1 à 4 ci-dessous conservent l'historique et les contrôles détaillés. Leurs cases de tests non cochées restent à confirmer : **installation terminée ne signifie pas que tous les tests fonctionnels sont validés**. Elles ne constituent plus une liste de mods à installer.
 
