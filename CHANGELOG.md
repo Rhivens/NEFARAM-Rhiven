@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-16
+
+### Eleanor outfits — KID / modesty classification validated
+
+- Completed the full modesty / nudity-classification audit for Eleanor's personal outfit collection under `15.1 - Outfits Eleanor`.
+- Compared the added outfits against NEFARAM's existing `modesty_KID.ini` plus specialized Advanced Nudity Detection / OSL / SLA / BOOBIES KID files.
+- Kept existing community coverage when sufficient and created only the missing Rhiven `NoModesty*` rules.
+- Created the dedicated reversible MO2 mod `Eleanor Modesty KID - Rhiven` containing `Rhiven_Eleanor_Modesty_KID.ini`; no original NEFARAM/community KID file was edited.
+- Reviewed specialized KID coverage for Aradia Bikini, COCO Luscious Lady, Dark Dreams, COCO Caress of Venus, Aether, Nocturne Armor, ELLE Dark Rebel and Stalhrim Bikini; confirmed those files provide complementary AND / SLA / BOOBIES classifications rather than replacing the Rhiven modesty layer.
+- Keyword Item Distributor startup log confirms `Rhiven_Eleanor_Modesty_KID.ini` is detected and loaded; no parsing error attributable to the Rhiven file was found.
+- Remaining validation is intentionally post-start: verify actual modesty / AND / OSL reactions with Eleanor wearing representative outfits in the definitive playthrough.
+- Status: **KID / modesty integration complete; French translation pass is next.**
+
 ## 2026-10-14
 
 ### UI/HUD — Vel'Dun, Modern Wait Menu, Bestiaire et reskins Dragonborn (14/10/2026)
