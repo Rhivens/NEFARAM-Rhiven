@@ -113,6 +113,12 @@ This avoids scattering personal outfit plugins throughout the stock NEFARAM load
 - Zeroed Sliders used: **YES**
 - Plugins predominantly ESL-flagged / ESP-FE: **YES**
 - `Dark Dreams.esp` kept as a heavy ESP: **YES**
-- In-game visual validation: **PENDING**
+- KID / modesty audit against existing AND / OSL / community rules: **COMPLETED**
+- Dedicated complementary mod `Eleanor Modesty KID - Rhiven`: **YES**
+- Dedicated file `Rhiven_Eleanor_Modesty_KID.ini`: **VALIDATED / LOADED BY KID**
+- Existing specialized AND / SLA / BOOBIES KID files checked for overlap: **YES**
+- KID startup log parsing errors for the Rhiven file: **NONE DETECTED**
+- In-game visual / physics validation: **PENDING**
+- In-game reaction validation with Eleanor's actually worn outfits: **POST-INSTALL / NEW GAME**
 
-The outfit block is ready for the next in-game validation pass.
+The personal outfit classification pass is complete. The Rhiven KID file remains separate from NEFARAM's original files and only complements missing `NoModesty*` coverage. The outfit block is ready for the translation pass and later in-game validation.
