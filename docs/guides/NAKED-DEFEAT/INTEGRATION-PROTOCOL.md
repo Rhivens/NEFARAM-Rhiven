@@ -334,3 +334,46 @@ avec :
 **Naked Defeat → Defeat on Bleedout = OFF**
 
 La répartition finale des outcomes sera décidée uniquement après observation réelle des catégories et weights Acheron.
+
+
+---
+
+## 16. Sources techniques de référence
+
+### Dépôt crajjjj — Naked Defeat
+
+**GitHub :** https://github.com/crajjjj/Naked-Defeat-5-26
+
+Ce dépôt est une source technique particulièrement importante pour le chantier d’intégration. Malgré son nom historique `Naked-Defeat-5-26`, il a continué à évoluer jusqu’à des versions **6.46.x** et contient des correctifs détaillés autour de la chaîne :
+
+**Acheron defeat → Naked Defeat → punishment / furniture / whipping → release**
+
+Les points documentés dans son changelog qui devront être comparés à Naked Defeat 6.50 incluent notamment :
+
+- restauration centralisée de l’état joueur / Acheron après release, abort ou Unstuck ;
+- restauration correcte du bleedout recovery ;
+- remise à zéro de `PlayerDownAlready` après certains départs Acheron avortés ;
+- limitation des waits ragdoll pouvant provoquer un blocage ;
+- nettoyage des états résiduels des whippers lors d’un abort ;
+- correction du deuxième assaillant Acheron ;
+- correction des classifications erronées de type de défaite dues au friendly fire ou aux NPC lointains ;
+- rafraîchissement des followers au chargement, avec prise en compte de **Nether’s Follower Framework** ;
+- possibilité, dans certains cas de mort accidentelle et selon les réglages, de laisser la main à **Acheron / vanilla** plutôt que de forcer Naked Defeat.
+
+> [!WARNING]
+> Ce dépôt ne doit **pas** être appliqué tel quel sur Naked Defeat 6.50. La branche publique la plus récente observée cible une base 6.46.x et contient également des adaptations spécifiques **SexLab P+**. La documentation 6.50 indique qu’une partie des correctifs de crajjjj est progressivement intégrée upstream.
+>
+> Son intérêt pour NEFARAM-Rhiven est donc principalement **documentaire et comparatif** : chaque correction importante devra être vérifiée dans 6.50 avant de conclure qu’elle manque encore.
+
+### Audit futur à réaliser
+
+Lors de la reprise du chantier :
+
+1. comparer le changelog / les commits crajjjj avec les scripts de Naked Defeat 6.50 ;
+2. classer chaque correctif en :
+   - **intégré en 6.50** ;
+   - **intégré différemment** ;
+   - **toujours absent** ;
+   - **obsolète / non applicable** ;
+3. utiliser cette comparaison pour compléter le protocole de test Acheron et les cas NFF / followers ;
+4. ne créer un patch Rhiven que si un correctif réellement nécessaire manque encore dans la version utilisée.
