@@ -43,7 +43,6 @@ Les futurs guides techniques peuvent être ajoutés dans ce dossier lorsqu'ils d
 
 Les modifications spécifiques au build courant doivent continuer à être documentées dans les fiches principales du dossier `docs/` et dans le `CHANGELOG.md`.
 
-
 ## Chantier PAMA — Prison Alternative
 
 Un chantier dédié documente l'intégration progressive de l'écosystème **PAMA / Prison Alternative** dans NEFARAM-Rhiven : architecture, dépendances, compatibilités, risques de navmesh, ordre MO2 provisoire et protocole de test.
@@ -55,3 +54,11 @@ Un chantier dédié documente l'intégration progressive de l'écosystème **PAM
 ## Animations — OAR / Eleanor
 
 - [**Guide OAR / Gulan0 / Seamless — réglages Rhiven**](ANIMATIONS/README.md) : priorités, fichier `user.json`, configuration finale Player Only, correctif sprint et diagnostic des remplacements Legacy DAR.
+
+## Chantier Naked Defeat
+
+Un dossier dédié regroupe la documentation **Naked Defeat AE/SE 6.50 FULL** et le protocole prévu pour étudier son intégration à NEFARAM-Rhiven en remplacement éventuel de **Practical Defeat**, tout en conservant **Acheron** comme gestionnaire central et **Yamete Kudasai** pour les cas où il reste pertinent.
+
+**Dossier :** [NAKED-DEFEAT/README.md](NAKED-DEFEAT/README.md)
+
+> Statut actuel : documentation consolidée, architecture cible définie, intégration réelle reportée après stabilisation de NEFARAM 17.3.8.

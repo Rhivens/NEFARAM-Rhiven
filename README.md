@@ -35,8 +35,7 @@ This repository is used to keep a clean and reproducible record of every change 
 - [Guides techniques](docs/guides/README.md)
   - [Animations / OAR — réglages Eleanor](docs/guides/ANIMATIONS/README.md)
   - [PAMA / Prison Alternative integration project](docs/guides/PAMA/README.md)
-  - [Naked Defeat AE/SE 6.50 — Guide FR (Markdown)](docs/guides/Naked-Defeat-AE-FR.md)
-  - [Naked Defeat AE/SE 6.50 — Guide FR (Word)](docs/guides/Naked-Defeat-AE-FR.docx)
+  - [Naked Defeat — documentation & projet d’intégration](docs/guides/NAKED-DEFEAT/README.md)
 
 ### Load order snapshots
 
