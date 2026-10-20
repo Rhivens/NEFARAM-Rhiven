@@ -1,16 +1,17 @@
-# Ponyplay / Secluded Valley 0.3.0 — Integration & Test Protocol
+# RennasRanch 0.3.0 — Integration & Test Protocol
 
 > **Status:** candidate mod / not integrated  
 > **Target build:** NEFARAM-Rhiven after migration to **17.3.8** and full stabilization  
 > **Documented mod version:** **0.3.0**  
-> **Scope:** verification, integration, regression testing, and rollback procedure  
-> **Note:** the exact public mod title / source URL was not included in the source notes used to create this file. Add it here once confirmed.
+> **Mod:** **RennasRanch**  
+> **Source:** https://www.loverslab.com/files/file/45943-rennasranch/  
+> **Scope:** verification, integration, regression testing, and rollback procedure
 
 ---
 
 ## 1. Purpose
 
-This document defines a controlled procedure for evaluating a ponyplay-focused Skyrim mod built around a large custom worldspace called the **Secluded Valley**.
+This document defines a controlled procedure for evaluating **RennasRanch**, a ponyplay-focused Skyrim mod built around a large custom worldspace called the **Secluded Valley**.
 
 The mod adds:
 
