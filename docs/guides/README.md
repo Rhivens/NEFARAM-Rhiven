@@ -72,3 +72,14 @@ Documentation de référence pour une éventuelle intégration future de **Anima
 - [Technical Reference EN (Markdown)](Animal_Mansion_Reborn_1.8_Technical_Reference_EN.md)
 
 > Le document Word est destiné à la lecture humaine ; le fichier Markdown sert de référence technique rapide pour les futurs audits de compatibilité, l’intégration MO2/xEdit et le diagnostic.
+
+
+## Ponyplay / Secluded Valley 0.3.0
+
+A dedicated integration protocol is available for the ponyplay-focused mod built around the **Secluded Valley** worldspace.
+
+**File:** [PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md](PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md)
+
+The protocol covers dependency verification, MO2 isolation, Pandora, BodySlide, xEdit, Falkreath/worldspace compatibility, LOD generation, scripted-scene interference, tether/cart/contraption regression tests, Papyrus monitoring, save/reload validation and rollback.
+
+> Planned order: stabilize NEFARAM 17.3.8 → validate Animal Mansion Reborn → validate this ponyplay mod → then tackle Naked Defeat.
