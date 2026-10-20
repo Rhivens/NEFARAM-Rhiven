@@ -74,9 +74,11 @@ Documentation de référence pour une éventuelle intégration future de **Anima
 > Le document Word est destiné à la lecture humaine ; le fichier Markdown sert de référence technique rapide pour les futurs audits de compatibilité, l’intégration MO2/xEdit et le diagnostic.
 
 
-## Ponyplay / Secluded Valley 0.3.0
+## RennasRanch 0.3.0
 
-A dedicated integration protocol is available for the ponyplay-focused mod built around the **Secluded Valley** worldspace.
+A dedicated integration protocol is available for **RennasRanch 0.3.0**, built around the **Secluded Valley** worldspace.
+
+Source: https://www.loverslab.com/files/file/45943-rennasranch/
 
 **File:** [PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md](PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md)
 
