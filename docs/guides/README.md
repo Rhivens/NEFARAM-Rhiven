@@ -62,3 +62,13 @@ Un dossier dédié regroupe la documentation **Naked Defeat AE/SE 6.50 FULL** et
 **Dossier :** [NAKED-DEFEAT/README.md](NAKED-DEFEAT/README.md)
 
 > Statut actuel : documentation consolidée, architecture cible définie, intégration réelle reportée après stabilisation de NEFARAM 17.3.8.
+
+
+## Animal Mansion Reborn 1.8
+
+Documentation de référence pour une éventuelle intégration future de **Animal Mansion Reborn 1.8** dans NEFARAM-Rhiven.
+
+- [Guide FR illustré (Word)](Animal_Mansion_Reborn_1.8_Guide_FR_Rhiven.docx)
+- [Technical Reference EN (Markdown)](Animal_Mansion_Reborn_1.8_Technical_Reference_EN.md)
+
+> Le document Word est destiné à la lecture humaine ; le fichier Markdown sert de référence technique rapide pour les futurs audits de compatibilité, l’intégration MO2/xEdit et le diagnostic.
