@@ -85,3 +85,14 @@ Source: https://www.loverslab.com/files/file/45943-rennasranch/
 The protocol covers dependency verification, MO2 isolation, Pandora, BodySlide, xEdit, Falkreath/worldspace compatibility, LOD generation, scripted-scene interference, tether/cart/contraption regression tests, Papyrus monitoring, save/reload validation and rollback.
 
 > Planned order: stabilize NEFARAM 17.3.8 → validate Animal Mansion Reborn → validate this ponyplay mod → then tackle Naked Defeat.
+
+
+## SexLab Approach Redux 3.61
+
+A dedicated integration protocol is available for **SexLab Approach Redux 3.61**.
+
+**File:** [SEXLAB-APPROACH-REDUX-INTEGRATION.md](SEXLAB-APPROACH-REDUX-INTEGRATION.md)
+
+The protocol focuses on autonomous NPC approaches, MCM tuning, coexistence with SLHH Expansion and BaboDialogue, overlap with SexLab Survival / TDF Aroused Rape / Dangerous Nights, defeat-state protection, Papyrus monitoring and save/reload validation.
+
+> Historical note: Fabien recalls probably having used SexLab Approach Redux in an older NEFARAM v16 setup; this remains to be verified against an archived v16 load order.
