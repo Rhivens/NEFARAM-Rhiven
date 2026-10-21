@@ -187,6 +187,8 @@ titkit.esl
 BeeingFemale.esm
 PamaFurnitureScr.esp
 PamaPrisonAlternative.esm
+ModernWaitMenu.esl
+PerkEntryPointExtender.esl
 Deep Chanterelle.esp
 ChanterelleENBPatch.esl
 iWant Status Bars.esp
@@ -495,6 +497,7 @@ Adamant.esp
 Mundus.esp
 MundusUSSEP.esp
 Sacrosanct - Vampires of Skyrim.esp
+Acheron - Sacrosanct Patch.esp
 Shoo_TestCRVampFix.esp
 CoverYourHead - Sacrosanct.esp
 Manbeast.esp
@@ -1935,12 +1938,12 @@ MiscHeelsEins_CBBE.esp
 [Predator] MME Harness.esp
 Next-Gen Decapitations.esp
 Phoenix_Katana_.esp
+Rhiven_Eleanor_Katana.esp
 NewStatueOfShalidorMagicLights.esp
 Optional.DibellaStatuesFixes.esp
 MehrunesNoSnowShader.esp
 MalacathNoSnowShader.esp
 AzuraNoSnowShader.esp
-RoadSignsOverhaul 2.0.esp
 LKVM_LT04.esp
 LKVM Main House.esp
 LKVM Cellar and Exterior.esp
@@ -1948,6 +1951,7 @@ LKVM_NOGrass.esp
 LKVMII_LT01.esp
 LKVM CC Fishing Patch.esp
 Riverhome v1.4.esp
+point the way.esp
 BetterThirdPersonSelection.esp
 FadeTattoos.esp
 RapeTattoos.esp
@@ -1991,6 +1995,7 @@ Private Needs - Orgasm.esp
 TDF Aroused Rape.esp
 SexLabDangerousNights2.esp
 UntarnishedUI_Subtitle.esp
+KVSeranaLustOfAMother.esp
 Water for ENB - Patch - FWMF for Fantasy Paper Maps.esp
 FWMF for Fantasy Paper Maps.esp
 MCM for FWMF.esp
