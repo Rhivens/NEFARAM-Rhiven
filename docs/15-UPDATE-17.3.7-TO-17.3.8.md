@@ -1,6 +1,6 @@
 # 15 - Update NEFARAM 17.3.7 -> 17.3.8
 
-> **IN PROGRESS — controlled manual migration underway**  
+> **TECHNICAL MIGRATION COMPLETE — translation/customization pass still in progress**  
 > Prepared: 18 October 2026  
 > Last updated: 21 October 2026  
 > Installation: customized **NEFARAM-Rhiven**, manual upgrade only.
