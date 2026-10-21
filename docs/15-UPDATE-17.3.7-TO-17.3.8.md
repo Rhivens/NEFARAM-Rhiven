@@ -294,9 +294,17 @@ Other technical archives in the manifest delta require review **only if the acti
 
 ### 1. RaceMenu Portraits
 
-- Official archive identified: **1.1.2**.
-- Check prerequisites, output/overwrites, and whether the customized Rhiven setup benefits from this feature.
-- **Status: TO REVIEW (new, optionality not yet verified).**
+- Official NEFARAM 17.3.8 archive reference: **1.1.2**.
+- Rhiven deliberately installed **1.2.0** instead, because its documented fixes are directly relevant to this setup: reduced preset-generation freezing, RaceMenu closing/input fixes, safer handling of crashing portraits, and a fix for portrait creation with **XPMSE in-game options** installed.
+- Version 1.3.0 was reviewed but not selected; its headline change is **NPA 3.0 compatibility** plus unspecified minor fixes, which is not required for the current Rhiven setup.
+- Installed as **`RaceMenu Portraits - Rhiven`** directly below RaceMenu in the left pane.
+- Pure SKSE plugin: `SKSE\Plugins\RaceMenuPortraits.dll`; **no ESP/ESL, Papyrus script or load-order entry**.
+- No MO2 file conflicts.
+- Main menu and Unbound save loaded cleanly.
+- RaceMenu **Réglages / Presets** opened the Portraits interface correctly and detected **65 presets**.
+- One portrait was generated successfully without freeze/CTD; the counter dropped to 64 missing portraits.
+- The same preset was loaded onto the player successfully. Missing preset dependencies were reported and skipped cleanly instead of causing a failure.
+- **Status: VALIDATED.**
 
 ### 2. Skyrim Performance Solution (SPS)
 
@@ -320,16 +328,19 @@ Other technical archives in the manifest delta require review **only if the acti
 ### 5. Acheron and Sacrosanct Patch
 
 - **Acheron 1.11.3 is installed and startup/MCM validated.**
-- The **Sacrosanct Patch 1.1.0 remains TO REVIEW**.
-- Preserve any Rhiven-specific patches, French files, configs and save state.
-- **Status: PARTIAL.**
+- **Acheron — Sacrosanct Patch 1.1.0** is now installed and technically validated.
+- The patch was a new Rhiven addition, not a replacement of an existing 17.3.7 mod.
+- Its targeted Acheron script override, masters and ESPFE load-order position were verified in MO2/xEdit.
+- **Pending:** functional Feed/Drain test with a vampire character.
+- **Status: TECHNICALLY VALIDATED; gameplay interaction deferred.**
 
 ### 6. OBody / UBE-specific updates
 
 - Author announces an **UBE blacklist** addition, **Native EditorID Fix**, and a **PPA reinstall selecting UBE**.
 - Rhiven currently uses **CBBE/3BA**, not UBE.
 - The PPA 0.0.38 migration therefore deliberately retained the existing 3BA configuration and did **not** select UBE-specific files.
-- **Status: UBE-SPECIFIC PPA STEP NOT REQUIRED.** Other Native EditorID/OBody changes still require independent review where applicable.
+- **Native EditorID Fix 1.2.3 is independently migrated and VALIDATED**; its winning INI behavior remains unchanged.
+- **Status: UBE-SPECIFIC PPA STEP NOT REQUIRED; Native EditorID migration complete.**
 
 ## Files and profiles requiring explicit protection
 
@@ -350,11 +361,11 @@ Other technical archives in the manifest delta require review **only if the acti
 
 1. **Freeze baseline — DONE.** Stable/reference profiles and repository left/right snapshots checked before migration.
 2. **Build active-version table — IN PROGRESS.** Target replacements identified; each installed Rhiven version is still confirmed immediately before touching that module.
-3. **Technical prerequisites — IN PROGRESS.** Skyrim runtime and SKSE 2.2.8 are validated; S.L.A.C.K 1.5.1 is validated. Address Library and remaining native frameworks still need review.
-4. **Core SKSE frameworks — IN PROGRESS.** Continue independently and test startup/load/save after each native component.
-5. **Gameplay frameworks — IN PROGRESS.** Acheron, AND, SLSF, Modex and PPA migrated; Acheron full defeat test and PPA full scene/collision test remain deferred; Acheron Sacrosanct Patch still pending.
+3. **Technical prerequisites — DONE for the identified 17.3.8 replacements.** Skyrim 1.6.1170, SKSE 2.2.8, S.L.A.C.K 1.5.1, Address Library v13 and the listed native dependencies are validated.
+4. **Core SKSE frameworks — DONE for the known replacement matrix.** SPID, powerofthree's Tweaks, AnimObject Swapper, Native EditorID Fix, JContainers, PEPE, KID and XPMF are migrated and validated; Cinematic Conversation Camera is technically validated with real dialogue behavior deferred.
+5. **Gameplay frameworks — IN PROGRESS.** Acheron, AND, SLSF, Modex and PPA are migrated; Acheron Sacrosanct Patch is technically validated. Acheron defeat, vampire Feed/Drain and PPA collision/scene tests remain deferred to the definitive playthrough.
 6. **NPC/content — PENDING.** Valerica / Serana changes and visual-load-order compatibility not yet reviewed.
-7. **Opt-in decision — PENDING.** RaceMenu Portraits and especially Skyrim Performance Solution.
+7. **Opt-in decision — PARTIAL.** RaceMenu Portraits 1.2.0 is installed and validated; Skyrim Performance Solution still requires a deliberate compatibility/benchmark decision.
 8. **UBE special-case checks — PARTIALLY RESOLVED.** Rhiven is 3BA, so PPA UBE instructions are not applicable.
 9. **Final checks — PENDING.** Full MO2 conflict review, plugin masters/xEdit as applicable, definitive new-game gameplay tests and MCM tests after all components are migrated.
 10. **Documentation — IN PROGRESS.** This migration sheet is maintained during the work; final Rhiven MO2 left/right snapshots will be refreshed only after the complete 17.3.8 state is validated.
@@ -375,14 +386,32 @@ Other technical archives in the manifest delta require review **only if the acti
 | Modex 3.0.2 + Rhiven patch | **VALIDATED** |
 | Acheron 1.11.3 | **INSTALLED — startup/MCM validated; defeat-path test pending** |
 | PPA 0.0.38 | **INSTALLED — startup validated; functional scene test pending** |
-| Acheron Sacrosanct Patch 1.1.0 | PENDING |
-| Remaining technical/native replacements | PENDING / TO REVIEW |
+| Acheron Sacrosanct Patch 1.1.0 | **TECHNICALLY VALIDATED — Feed/Drain test deferred** |
+| Address Library v13 | **VALIDATED** |
+| SPID 7.3.3 | **VALIDATED** |
+| powerofthree's Tweaks 1.17.1 | **VALIDATED** |
+| AnimObject Swapper 2.0.0 | **VALIDATED** |
+| Cinematic Conversation Camera 1.5.0 | **TECHNICALLY VALIDATED — dialogue behavior deferred** |
+| Native EditorID Fix 1.2.3 | **VALIDATED** |
+| JContainers SE 4.3.3 / legacy Fix removal | **VALIDATED** |
+| PEPE 2.3.7.0 | **VALIDATED** |
+| KID 4.1.0 | **VALIDATED** |
+| XPMF 0.7.1 | **VALIDATED** |
+| RaceMenu Portraits 1.2.0 | **VALIDATED** |
+| Remaining technical/native replacements | **KNOWN MATRIX COMPLETE; review only additional manifest deltas if relevant** |
 | NPC/content additions and optional modules | PENDING / TO REVIEW |
 | xEdit, translations, plugins and final game validation | IN PROGRESS |
 | Migration status | **IN PROGRESS** |
 
 ## Next action (one step at a time)
 
-Resume from the **remaining 17.3.8 target replacements** after SKSE64 2.2.8 / S.L.A.C.K 1.5.1. For each module, first confirm the currently installed Rhiven version, inspect archive/FOMOD/config differences, preserve translations and local settings, then install as a separate mod and test before continuing.
+The known **technical replacement matrix is now complete**. Continue with the remaining **content/optional 17.3.8 additions**, one module at a time:
+
+1. **Skyrim Performance Solution 1.0.63** — review overlap with existing performance/SKSE tweaks before deciding whether to enable it.
+2. **Serana Revamped — Valerica Has It Goin On 1.25** — inspect facegen/NPC overhaul conflicts before installation.
+3. **Valerica Lust of a Mother 1.25 Slab Edition** — compare against the existing 1.24 Slab Edition, including plugins, assets and translation implications.
+4. Review any additional manifest-only deltas only where the active Rhiven version actually differs.
+
+Deferred functional tests remain: Acheron defeat path, Acheron/Sacrosanct vampire Feed/Drain, PPA collision/scene behavior, and Cinematic Conversation Camera during real dialogue.
 
 Do **not** run LOOT or Wabbajack, do not batch-enable/disable mods, and do not alter the stable rollback profiles.
