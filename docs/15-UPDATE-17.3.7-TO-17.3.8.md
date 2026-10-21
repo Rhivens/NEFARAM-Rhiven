@@ -308,22 +308,36 @@ Other technical archives in the manifest delta require review **only if the acti
 
 ### 2. Skyrim Performance Solution (SPS)
 
-- Official archive identified: **1.0.63**.
-- **Officially optional, enabled by default.** For Rhiven, do not enable it automatically.
-- Check overlaps with existing performance and SKSE tweaks; benchmark/stability check before and after.
-- **Status: TO REVIEW — decision required.**
+- Official NEFARAM 17.3.8 reference: **1.0.63**, optional and enabled by default.
+- Rhiven deliberately installed **1.0.64** instead as a stability-only deviation for a very large list.
+- Installed as **`Skyrim Performance Solution (SPS) - Rhiven`** with a separate **`Skyrim Performance Solution (SPS) INI - Rhiven`** override.
+- Quality-first settings disable actor-shadow, general shadow, point-light shadow and decal culling; cache/throttle/subtree-pruning and VRAM-budget texture streaming remain enabled.
+- Menu, Unbound save, forest and city tests were clean. Under high VRAM pressure SPS downscaled textures and later restored them; observed savings reached about **876 MB** with no visible degradation or load errors.
+- A global keyboard/hotkey audit is deferred to the final Eleanor setup.
+- **Status: VALIDATED.**
 
 ### 3. Serana Revamped — Valerica Has It Goin On
 
-- Official archive identified: **1.25**.
-- Check appearance and facegen collisions with the customized NPC overhaul, Serana/Valerica patches, and left-pane priorities.
-- **Status: TO REVIEW.**
+- Exact official 17.3.8 manifest entry verified: **`Serana Revamped - Valerica has it Goin On - 1.25`** (Nexus mod 185642, file 806187).
+- Installed as **`Serana Revamped - Lust of a Mother - Serana Voice Over - KerstynVoices Edition - Rhiven`**.
+- This package is a voice override plus a tiny ESL-flagged **`KVSeranaLustOfAMother.esp`**. xEdit confirms that plugin contains **0 records** and only Skyrim/Update/Dawnguard masters.
+- Existing **Serana Re-Imagined** remains the visual appearance layer; the new package contains no meshes, textures or FaceGen.
+- The separate Nexus **Dawnguard Revoice - KerstynVoices Edition** was searched in the exact Wabbajack 17.3.8 manifest and is **absent**, so it was deliberately not added.
+- Main menu and Unbound save loaded cleanly.
+- **Pending:** natural in-game verification of the new voiced lines during the definitive playthrough.
+- **Status: TECHNICALLY VALIDATED.**
 
 ### 4. Valerica Lust of a Mother
 
-- Target archive: **1.25 Slab Edition**; previous archive name indicates **1.24 Slab Edition**.
-- Compare plugins, meshes/scripts and translation files; verify dependency changes.
-- **Status: TO REVIEW.**
+- Previous Rhiven version: **1.24 Slab Edition**.
+- Installed separately as **`Valerica Lust of a Mother 1.25 Slab Edition - Rhiven`**; old 1.24 retained but disabled.
+- Normalized file comparison: **932** old functional files; **931 SHA-256 identical**; only **`abcd_valerica.esp`** changed.
+- Version 1.25 adds **91 functional files**: **89 Serana `.fuz` files** plus `aabcd_SeranaTransition.pex` and matching source.
+- Existing animations, scripts, sequence file and old voice assets are otherwise unchanged.
+- xEdit: ESL-flagged `abcd_valerica.esp`, expected masters, **Check for Errors: 0**.
+- Main menu and Unbound save loaded cleanly.
+- **Pending:** new dialogue/scene verification during the definitive playthrough.
+- **Status: TECHNICALLY VALIDATED.**
 
 ### 5. Acheron and Sacrosanct Patch
 
