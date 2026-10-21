@@ -5,30 +5,40 @@ Current customized MO2 left-pane snapshot.
 Replace the content of the block below whenever the validated Rhiven setup changes.
 
 ```text
-[NEFARAM 17.3.7]
+[NEFARAM 17.3.8]
 [01 - Major Patches]
 SSE Creation Kit Fonixdata Lip Sync Fix
 Skyrim Remastered - Optimized (Part 1)
 Skyrim Remastered - Optimized (Part 2)
 Unofficial Skyrim Special Edition Patch
+Unofficial Skyrim Special Edition Patch - FR
 Vanilla Remastered - USSEP Patch
 Unofficial Skyrim Modder's Patch - USMP SE
+Unofficial Skyrim Modder's Patch - FR
 Unofficial Skyrim Creation Club Content Patch
+Unofficial Skyrim Creation Club Content Patch - FR
 Vanilla Script (micro)Optimizations
+Vanilla Script (micro)Optimizations - FR
 Vanilla Scripting Enhancements
 Terrain Fixes for CC Mods
 [02 - SKSE Utility Mods]
-SKSE
+SKSE - DECOCHE UPDATED
+SKSE 2.2.8 - Rhiven
 SKSE64 ini
 Bug Fixes SSE
 Scrambled Bugs
-Address Library for SKSE Plugins
+Address Library for SKSE Plugins - DECOCHE UPDATED
+Address Library for SKSE Plugins - Rhiven
+Dynamic String Distributor (DSD) - Rhiven
 SSE Engine Fixes (skse64 plugin)
 SSE Display Tweaks
-powerofthree's Tweaks
-Spell Perk Item Distributor (SPID)
+powerofthree's Tweaks - DECOCHE UPDATED
+powerofthree's Tweaks 1.17.1 - Rhiven
+Spell Perk Item Distributor (SPID) - DECOCHE UPDATED
+Spell Perk Item Distributor (SPID) 7.3.3 - Rhiven
 powerofthree's Papyrus Extender
-Keyword Item Distributor (KID)
+Keyword Item Distributor (KID) - DECOCHE UPDATED
+Keyword Item Distributor (KID) 4.1.0 - Rhiven
 Scaleform Translation Plus Plus NG
 FileAccess Interface for Skyrim SE Scripts - FISSES
 FileAccess.Interface.for.Skyrim.SE.Scripts.NG-1.4.3
@@ -39,10 +49,12 @@ To Your Face SE - AE - VR
 Face Discoloration Fix
 MCM Helper
 MCM Recorder
+MCM Recorder - FR
 Powers Keyring
 PrivateProfileRedirector SE - Faster game start (INI file cacher)
 Papyrus Tweaks NG
-AnimObject Swapper
+AnimObject Swapper - DECOCHE UPDATED
+AnimObject Swapper 2.0.0 - Rhiven
 Faster HDT-SMP
 Auto Parallax
 Media Keys Fix SKSE
@@ -51,6 +63,7 @@ Dynamic Activation Key
 Dynamic Activation Key - MCM
 Dynamic Activation Key - Addons Collection
 DAK Helper
+DAK Helper - FR
 Rogue's Gallery
 Disk Cache Enabler
 FormList Manipulator - FLM
@@ -64,18 +77,21 @@ Mum's the Word NG
 LeveledList Crash Fix
 MergeMapper
 Dynamic Armor Variants
+Dynamic Armor Variants - FR
 Scrab's Papyrus Extender
 RaceMenu OverlayFix and Various Mod Fixes
 RemoveAllItems Freeze Fix
 dTry's Key Utils
 dTry Plugin Updates
-Perk Entry Point Extender
+Perk Entry Point Extender - DECOCHE UPDATED
+Perk Entry Point Extender 2.3.7 - Rhiven
 Skyrim Autocorrect - Dialogue Grammar Fixes
 Dynamic Dialogue Replacer
 Terrain Helper for ENB
 Terrain Helper - Generated INI - Rhiven
 Light Placer
 Magic Fixes and Tweaks SKSE
+Magic Fixes and Tweaks SKSE - FR
 FenixFixes
 Explosion Collision Fix
 KiLoader for Skyrim
@@ -83,7 +99,8 @@ ENB Extender for Skyrim
 CrosshairRefEventsFix
 Skyrim Cell load Freeze fix NG
 SKSE Menu Framework
-Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K
+Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K - DECOCHE UPDATED
+Save and Load Accelerator for SKSE Cosaves - S.L.A.C.K 1.5.1 - Rhiven
 Don't send me there again (dosemetha)
 sztkUtil
 Racemenu(SKEE) cosave Load Crash Fix
@@ -94,8 +111,9 @@ ConsolePlusPlus
 CopyPasteInMenus
 Papyrus Ini Manipulator
 ConsoleUtil Extended
-JContainers
-JContainers Fix
+JContainers - DECOCHE UPDATED
+JContainers Fix - DECOCHE UPDATED
+JContainers SE 4.3.3 - Rhiven
 Save Unbaker
 ENB Anti-Aliasing - AMD FSR 3.1 - NVIDIA DLAA
 Console Commands Extender - Anniversary Edition Update
@@ -111,24 +129,32 @@ Conjuration Limit Fix
 Actor Value Generator
 aTweaks and Utilities
 Simonrim SKSE Addons
+Simonrim SKSE Addons - FR
 Lexicon SKSE
 XEMI Utility
 Luma Utility
 Mini's Micro-Systems Framework (MMSF)
-Native EditorID Fix
+Native EditorID Fix - DECOCHE UPDATED
+Native EditorID Fix 1.2.3 - Rhiven
 Inventory Refresh Fix
-XPMF - Extended Projected Materials Framework
+XPMF - Extended Projected Materials Framework - DECOCHE UPDATED
+XPMF - Extended Projected Materials Framework 0.7.1 - Rhiven
 [03 - Fixes]
 Actor Limit Fix
 Hide Quest Items in Container Menu
 Sharpen Other Swords
 dunPOISoldiersRaidOnStart Script Tweak
+dunPOISoldiersRaidOnStart Script Tweak - FR
 First Person Sneak Strafe-Walk Stutter Fix
 Nifty AI Tweaks AIO - SSE
+Nifty AI Tweaks AIO - SSE - FR
 Dwemer Gates Don't Reset
+Dwemer Gates Don't Reset - FR
 Andrealphus' Exploit Fixes
 Fish Anywhere With Water
+Fish Anywhere With Water - FR Nexus
 Soul-Cairn Objects Secured
+Soul-Cairn Objects Secured - FR
 Bard Instrumentals Mostly - Sing Rarely
 Horns Are Forever (Persistent Argonian Horns)
 Stay At The System Page NG
@@ -141,21 +167,25 @@ Creation Club Content - Properly Environment Mapped
 FloraFixer - Mutagen Patcher and Data
 NPC AI Process Position Fix - NG
 HearthFires - Customizable Fertile Soil
+HearthFires - Customizable Fertile Soil - FR
 DynDOLOD Resources SE
 DynDOLOD DLL NG
 Far Object LOD Improvement Project SSE
 Static Mesh Improvement Mod
+Static Mesh Improvement Mod - FR
 Static Mesh improvement Mod - SMIM - Quality Addon
 Blackreach Tentacle Mesh Fix
 LOD Unloading Bug Fix
 Unofficial Material Fix
 Labyrinthian Shalidor's Maze Fixes
+Labyrinthian Shalidor's Maze Fixes - FR
 Assorted mesh fixes
 Dlizzio's Mesh Fixes
 Mesh Patch for Various Mods
 Thalmor Doesn't Report To Stormcloaks
 Nchuanthumz Papyrus Load Fix
 QUASIPC - Qwinn's Unified Automated Self Installing Patch Compendium
+QUASIPC - Qwinn's Unified Automated Self Installing Patch Compendium - FR
 Magic Student (WIChangeLocation04) Quest Fix
 Rock Traps Trigger Fixes
 I'm Walkin' Here NG with Pets
@@ -163,6 +193,7 @@ Sensible Sleepwalking - Wake up at nearest All-Maker Stone
 Alchemy Plus
 Animation Queue Fix
 lilebonymace's patches
+lilebonymace's patches - FR
 Sprint Sneak Movement Speed Fix
 Motionless Rocks Killing People Fix
 MuJointFix
@@ -170,11 +201,15 @@ Universal Cured Serana Eye Fix
 Dual Casting Fix
 Sound Fix for Large Sector Drives
 Adoption Spouse and Moving Fixes
+Adoption Spouse and Moving Fixes - FR
 World Encounter Hostility Fix
 Janquel's Arguably Needed Quixotically Unifying ESP Library
+Janquel's Arguably Needed Quixotically Unifying ESP Library - FR
 Zero Bounty Hostility Fix
 Enchantable Special Item Fix
+Enchantable Special Item Fix - FR
 Southfringe Sanctum Crash Fix
+Southfringe Sanctum Crash Fix - FR
 Dangerous Trap Fixes (D.T.F.)
 DLC2 Miraak BossFightScript Fix
 WIDeadBodyCleanupScript Crash Fix
@@ -193,11 +228,13 @@ Saving on Steed - Horse Save Load Fix SKSE
 Stuck on Screen Auto Load Door Fix SKSE
 [04 - User Interface]
 RaceMenu
+RaceMenu Portraits - Rhiven
 Racemenu Modified Overlay Meshes
 RaceMenu Undress
 ShowRaceMenu - NG
 Race Menu Player Rotation
 Heels Fix
+Heels Fix - FR
 AddItemMenu - Ultimate Mod Explorer
 AddItemMenu ESLified Patch
 Notification Log SSE NG
@@ -221,6 +258,7 @@ A Matter Of Time - Legacy Settings Loader
 Contextual Crosshair
 Sovngarde - A Nordic Font
 Lore-Friendly Load Screen Compendium (16-9) (2K)
+Lore-Friendly Load Screen Compendium (16-9) (2K) - FR
 SkyHUD
 Oxygen Meter 2
 TrueHUD - HUD Additions
@@ -242,6 +280,7 @@ Unique Map Weather Framework
 Unique Map Weather - Vanilla Additions
 Wyrmstooth World Map Unique Weather
 A Clear Map of Skyrim and Other Worlds
+A Clear Map of Skyrim and Other Worlds - FR
 Casting Bar
 Casting Bar HUD Variance
 Instantly Skip Dialogue - Dear Diary Dark Mode
@@ -258,8 +297,10 @@ I4 Shout Icons Overhaul
 Misc I4 Icons
 Sacrosanct - Custom I4 Icons
 Main Menu Randomizer SE
-Main Menu Redone
+Main Menu Redone - DECOCHE
+Main Menu Redone - Rhiven
 PhotoMode
+PhotoMode - FR
 Show Follower Carry Weight
 Show Mount Carry Weight
 Campfire Inventory Injector (I4) Icons
@@ -268,6 +309,7 @@ Subtitles
 Hotkey Reminder
 Menu Zoom
 CoMAP
+CoMAP - FR
 Infinity UI
 Compass Navigation Overhaul
 Dear Diary Dark Mode - Compass Navigation Overhaul Patch
@@ -286,6 +328,8 @@ Knotwork - Dear Diary Patch
 Knotwork Penitus Occulatus Consistency Patch
 Follower Panel
 Modex - A Mod Explorer Menu (AddItemMenu)
+Modex - A Mod Explorer Menu (AddItemMenu) 3.0.2 - Rhiven
+Modex - 3.0.2 Patch - Rhiven
 Immersive Illusion Spells - B.O.O.B.I.E.S support file
 Oxygen Meter 2 - DDDM Patch
 STB Active Effects
@@ -298,6 +342,7 @@ LoreBox Item and Spell Tooltips - Untarnished UI Reskin
 Widescreen Scale Removed for 1-6-1130 and higher
 Aura's Inventory Tweaks
 Rotols More Icons
+Rotols More Icons - FR
 Rotols More Icons Sacrosanct - Vampires of Skyrim
 Rotols Additional Icons AIT Sunhelm Patch
 MCM Unlocked
@@ -314,6 +359,7 @@ The Dragonborn's Bestiary Bruma
 The Dragonborn's Bestiary - Extra Addons
 The Dragonborn's Bestiary - Draugrs
 The Dragonborn's Fishiary - Bestiary Addon
+The Dragonborn's Fishiary - Bestiary Addon - FR
 The Dragonborn's Bestiary - Creature Variants
 The Dragonborn's Bestiary - Dragon Priests
 The Dragonborn's Bestiary - Quest Patch Compendium AIO (FOMOD)
@@ -322,10 +368,14 @@ Dear Diary Dark - The Unofficial Patches
 Map Menu Clouds Fix
 [05 - Landscape]
 Chanterelle World
+Chanterelle World - FR
 Chanterelle Horse Herds
+Chanterelle Horse Herds - FR
 Chanterelle World Expansion Pack
+Chanterelle World Expansion Pack - FR
 Chanterelle World LOD
 Chanterelle Expanded Tweaks and Enhancements
+Chanterelle Expanded Tweaks and Enhancements - FR
 Restarter's Random Patches for Chanterelle
 Chanterelle Collectable Deadwood and Branches
 Landscape Fixes For Grass Mods
@@ -1411,6 +1461,7 @@ Dynamic Female Modesty KID
 MistySkye NoModesty
 Advanced Nudity Detection KID Files Community All-In-One (Jan 25, 2025)
 OSL Aroused and Advanced Nudity Detection Armor Patch - Keyword Item Distributor
+Eleanor Modesty KID - Rhiven
 [24 - Animations]
 Assorted Animation Fixes
 Open Animation Replacer
@@ -1517,7 +1568,7 @@ Blind people DAR animations
 Super Fast Get Up Animation
 Brastia Exhausted Idles and Bleedout Idles and Pose Pack
 Unlocked 1st Person Combat
-Labor Animations (Open Animation Replacer) - DECOCHE
+Labor Animations (Open Animation Replacer) - DECOCHE UPDATED
 GSPoses SE
 SkyParkour v3 - Procedural Parkour and Climbing Framework (SPPF)
 Axarien's Animations - Custom Followers - Val Serano Inigo Lucien Kaidan Auri Bishop
@@ -1545,7 +1596,8 @@ Gulan0 - Female-run-Update OAR - Rhiven
 Gulan0 Walk Run Sprint OAR Settings - Rhiven
 [25 - Camera]
 True Directional Movement - Modernized Third Person Gameplay
-Cinematic Conversation Camera
+Cinematic Conversation Camera - DECOCHE UPDATED
+Cinematic Conversation Camera 1.5.0 - Rhiven
 SmoothCam
 Sepia - Smoothcam preset
 SmoothCam - Intimate
@@ -1931,14 +1983,16 @@ Sexlab - Cum Overlays Textures
 Sexlab Framework Sound Replacer AIO
 SCOE Texture Set
 SexlabAmmoUnequip
-Penetration Physics
+Penetration Physics - DECOCHE UPDATED
+PPA Penetration Physics 0.0.38 - Rhiven
 3BA SexLab SOS Strapon
 ZaZ Animation Pack
 ZAZ NPC Fixer
 SLO Aroused NG
 SL smooth expressions
-SLSF Reloaded - DECOCHE
-SLSF Reloaded 4.1.1
+SLSF Reloaded - DECOCHE UPDATED
+SLSF Reloaded 4.1.1 - DECOCHE UPDATED
+SLSF Reloaded 4.1.2 - Rhiven
 Amputator Framework Tweaked
 Patched SE SL TOOLS Updated
 Simple Slavery Plus Plus
@@ -2024,8 +2078,12 @@ Laura's Bondage Shop
 Selina Mage Follower or Serana Replacer - High Poly Head - 4k FaceTint
 The Trappings of Fate
 Flash Games - Struggling QTE
-MM Valerica Lust of a Mother
-Acheron - Death Alternative
+MM Valerica Lust of a Mother - DECOCHE UPDATED
+Valerica Lust of a Mother 1.25 Slab Edition - Rhiven
+Serana Revamped - Lust of a Mother - Serana Voice Over - KerstynVoices Edition - Rhiven
+Acheron - Death Alternative - DECOCHE UPDATED
+Acheron - Death Alternative 1.11.3 - Rhiven
+Acheron - Sacrosanct Patch - Rhiven
 Acheron - Simple Recover
 Acheron - Diary of Mine Extension
 YameteKudasai
@@ -2050,7 +2108,8 @@ Public Whore Jail Replacement
 Simple Buyable Slaves
 Animated Gaping
 NymphoElf Public Whore Patch
-Advanced Nudity Detection
+Advanced Nudity Detection - DECOCHE
+Advanced Nudity Detection 4.1.5 - Rhiven
 Fade Tattoos Continued - Rhiven
 Rape Tattoos Continued - Rhiven
 Rape Tats Continued 2.0.3 QoL Extension-rev1 (Patch) - Rhiven
@@ -2115,11 +2174,14 @@ DynDOLOD Output
 Pandora Output
 SKSE Output
 Bruma - All Fixes for Custom LODs - Seasons
+xTranslator Output - Rhiven
 [39 - OPTIONAL MODS]
 Auto Resolution
 Enable for MORE skimpy clothes distribution
 Texture Downscaler - DECOCHE
 Cached Recursive Directory Walk - A ACTIVER EN FIN DE CUSTOMISATION
+Skyrim Performance Solution (SPS) - Rhiven
+Skyrim Performance Solution (SPS) INI - Rhiven
 Disable skimpy clothes on NPCs (but you can still craft them) - DECOCHE
 Enable for Widescreen support - DECOCHE
 PI-CHO ENB Performance ini, READ THE INCLUDED FILE NOT PLUG AND PLAY - DECOCHE (Utilisation de Cabbage)
@@ -2141,9 +2203,8 @@ SoulsyHUD - DECOCHE
 [PB's Silky Skin] Main Texture - Rhiven - DECOCHE
 MuDynamicNormalMap - Rhiven
 [41 - Homes Eleanor]
-Road Signs Overhaul 2.0 - Rhiven
-Road Sings 2.0 - Questionable Clutter Remover (BOS) - Rhiven
-Road Signs Overhaul 2.0 - Blended Roads Patch(BOS) - Rhiven
+Point The Way - Rhiven
+My Road Signs are Beautiful - French - Rhiven
 Riverwood Riverhome - SE-AE Port - Rhiven
 Lakeview. Manor - As It Should Be - Rhiven
 Lakeview Manor - As It Should Be - (CC) Fishing Compatibility Patch - Rhiven
@@ -2157,12 +2218,12 @@ Labor Animations - OAR - Rhiven
 SkyPatcher - AE - Rhiven
 Object Impact Framework (OIF) - Rhiven
 Next-Gen Decapitations - Rhiven
-Outfit Gallery - Visual Outfit Manager - Rhiven - DECOCHE
-Outfit Gallery - Visual Outfit Manager 1.0.14 - Rhiven
+Outfit Gallery - Visual Outfit Manager - Rhiven
 FLICK - Fuzz's Legally Intelligible Core Kit - Rhiven - DECOCHE
 Menu Studio - Rhiven - DECOCHE
 Fitting Room - Rhiven - DECOCHE
 Phoenix Katana - Rhiven
+Phoenix Katana Eleanor - Rhiven
 Simple Inn Bath - Rhiven
 Xtended Stay - Rhiven
 Regional Outfitters - Stalls of Skyrim - Rhiven
@@ -2218,14 +2279,20 @@ Private Needs - Orgasm - Rhiven
 TDF SexLab Aroused Rape - Rhiven
 SL Dangerous Nights SE - Rhiven
 [47 - UI - Rhiven]
+Splash Screen - Rhiven
+Modern Wait Menu - Rhiven
 Wheeler - Quick Action Wheel Of Skyrim - Rhiven
 Perfected Wheeler - Apocrypha Menu Framework - Rhiven
 Compare Equipment NG - Rhiven
 STB Widgets - Rhiven
 Vel'dun UI - Rhiven
 Vel'dun UI Patches - Rhiven
+Vel'dun UI Overhauls - Rhiven
+Main Menu - Rhiven - DECOCHE
 Dragonborn - Wheeler Reskin - Rhiven
 Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven
+Dragonborn Reskin - SkyUI Inventory Category Icons - Rhiven
+Dragonborn Reskin - STB Active Effects - Rhiven
 SkyHUD Settings - Rhiven
 TrueHUD Settings - Rhiven
 Compare Equipment NG Settings - Rhiven
