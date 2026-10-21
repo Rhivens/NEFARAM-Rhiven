@@ -167,6 +167,129 @@ Other technical archives in the manifest delta require review **only if the acti
 - A new manual save completed successfully and console confirmed **S.L.A.C.K Cosave save timing** with no error.
 - **Status: VALIDATED.**
 
+### Address Library v13
+
+- Existing **All in One v11** replaced in the test profile by **`Address Library for SKSE Plugins v13 - Rhiven`**.
+- The v13 package includes both `versionlib-1-6-1170-0.bin` and `versionlib-1-6-1170-0-1.bin`, so the active **Skyrim 1.6.1170** runtime is covered.
+- v13 also contains newer runtime libraries (1.7.99 / 1.7.104), which do not interfere with 1.6.1170.
+- Old v11 disabled; main menu and Unbound save loaded with no popup, CTD or console error.
+- **Status: VALIDATED.**
+
+### SPID 7.3.3
+
+- Existing **7.3.2** replaced by separate **`Spell Perk Item Distributor (SPID) 7.3.3 - Rhiven`**.
+- Archive contains only `po3_SpellPerkItemDistributor.dll` and its PDB; conflicts were exactly the expected two files.
+- Old 7.3.2 disabled.
+- Main menu and Unbound save loaded cleanly.
+- **Status: VALIDATED.**
+
+### powerofthree's Tweaks 1.17.1
+
+- Existing **1.16.0** replaced by separate **`powerofthree's Tweaks 1.17.1 - Rhiven`**.
+- FOMOD selected **SSE/AE v1.6.1170**.
+- Expected replacements: `po3_Tweaks.dll`, PDB, compiled Papyrus script and source.
+- No Rhiven-specific INI was present to migrate.
+- Main menu and Unbound save loaded cleanly.
+- **Status: VALIDATED.**
+
+### AnimObject Swapper 2.0.0
+
+- Existing **1.1.0** replaced by separate **`AnimObject Swapper 2.0.0 - Rhiven`**.
+- FOMOD selected **SSE/AE v1.6.1170**.
+- Only the native DLL/PDB conflict with the old version.
+- Old 1.1.0 disabled; main menu and Unbound save loaded cleanly.
+- **Status: VALIDATED.**
+
+### Cinematic Conversation Camera 1.5.0
+
+- Existing **1.4.8** replaced by separate **`Cinematic Conversation Camera 1.5.0 - Rhiven`**.
+- Existing install used `SceneDirector.dll` + `SD.ini`; no `SD_user.ini` was present.
+- Semantic comparison found all **104 existing settings retained with the same values** in 1.5.0.
+- 1.5.0 adds nine settings: `iSceneWait`, `iSceneRange`, `bFollowFace`, `bPersuasionBeat`, `bFilmScenesAuto`, `iKeyFilmScene`, `bSubtitlesInBar`, `bStopWorkToTalk`, `bPlayerGestureCue`.
+- The fresh 1.5.0 `SD.ini` was kept as-is.
+- Main menu and Unbound save loaded cleanly.
+- **Pending:** real dialogue/camera behavior during the definitive playthrough.
+- **Status: TECHNICALLY VALIDATED.**
+
+### Native EditorID Fix 1.2.3
+
+- Existing **1.2.2** replaced by separate **`Native EditorID Fix 1.2.3 - Rhiven`**.
+- `First Person (FP) Inertia - SKSE` already overwrites `NativeEditorIDFix.ini`.
+- Old 1.2.2 INI, the FP Inertia winning override and the new 1.2.3 INI were compared and are semantically identical:
+  - `EnableLookupTable = true`
+  - `EnableNativeEditorIDLookup = false`
+  - `MaxEditorIDLength = 128`
+  - all three patch toggles remain `true`.
+- FP Inertia therefore continues to win the INI with no behavioral change.
+- Main menu and Unbound save loaded cleanly.
+- **Status: VALIDATED.**
+
+### JContainers SE 4.3.3
+
+- Previous state: **JContainers 4.2.13.2** plus separate **`JContainers Fix`** (`4.2.13.2-NDRFix-1.6.1170`) overriding only `JContainers64.dll`.
+- The official 17.3.8 manifest was searched for `JContainers Fix`, `JContainersFix` and `NDRFix`: no legacy fix package is present.
+- Installed separate **`JContainers SE 4.3.3 - Rhiven`** for **SKSE 2.2.8 / Skyrim 1.6.1170**.
+- Old JContainers 4.2.13.2 disabled.
+- Legacy `JContainers Fix` disabled to match the official 17.3.8 architecture.
+- Main menu, Unbound save and console checks clean.
+- **Status: VALIDATED.**
+
+### Perk Entry Point Extender (PEPE) 2.3.7.0
+
+- Existing **2.2.4.6** replaced by separate **`Perk Entry Point Extender 2.3.7.0 - Rhiven`**.
+- 2.3.7.0 adds, in addition to the updated DLL/script files:
+  - `PerkEntryPointExtender.esl`;
+  - `SKSE\Lexicon\scripts\Shared\PEPE.lsi`;
+  - `SKSE\Plugins\ActorValueData\PerkEntryPointExtender_AVG.toml`.
+- These additions are present in the official 17.3.8 manifest and are intentional.
+- MO2 automatically inserted `PerkEntryPointExtender.esl` at **priority 176**, ESL index **FE:06F**. It was deliberately **not moved without evidence of the official 17.3.8 plugin position**.
+- Old 2.2.4.6 disabled.
+- Main menu and Unbound save loaded successfully; inventory, perks, map and magic menus were exercised with no issue.
+- **Status: VALIDATED.**
+
+### Keyword Item Distributor (KID) 4.1.0
+
+- Existing **4.0.6** replaced by separate **`Keyword Item Distributor (KID) 4.1.0 - Rhiven`**.
+- FOMOD selected **SSE/AE v1.6.1170**.
+- Expected conflicts: DLL, INI and PDB.
+- Old and new INIs are identical:
+  ```ini
+  [Settings]
+  bVerboseLogging = false
+  ```
+- Old 4.0.6 disabled.
+- Main menu, Unbound save, multiple inventories, console and notifications checked with no anomaly.
+- **Status: VALIDATED.**
+
+### XPMF 0.7.1
+
+- Existing **0.6.1** replaced by separate **`XPMF - Extended Projected Materials Framework 0.7.1 - Rhiven`**.
+- XPMF supplies `XPMF.dll`, PDB and four generic material profiles: `ash.json`, `ash_pbr.json`, `snow.json`, `snow_pbr.json`.
+- Existing **`Simplicity of Snow Sulfur Ash Moss`** intentionally overwrites those four generic JSON files.
+- Inspection confirmed its generic overrides contain only **`{}`**, deliberately neutralizing XPMF's generic ash/snow profiles while the mod supplies its own more specific `sos - ...` XPMF profiles.
+- That overwrite relationship was preserved; XPMF 0.7.1 wins only the DLL/PDB while Simplicity of Snow Sulfur Ash Moss continues to win the four generic JSON files.
+- Old 0.6.1 disabled.
+- Main menu, Unbound save and visual sanity check completed cleanly.
+- **Status: VALIDATED.**
+
+### Acheron — Sacrosanct Patch 1.1.0
+
+- This patch was **not present in the current Rhiven 17.3.7 installation**; it is a new addition for the 17.3.8 migration.
+- Installed as **`Acheron - Sacrosanct Patch - Rhiven`**, using the main **1.1.0** file intended for **Acheron 1.11.3 + Sacrosanct 6.0.0**.
+- The mod contains:
+  - `Acheron - Sacrosanct Patch.esp` (ESPFE);
+  - `Scripts\AcheronHunterPride.pex`;
+  - matching Papyrus source.
+- Its script and source intentionally overwrite the files from **Acheron 1.11.3**.
+- xEdit confirms only three masters: `Skyrim.esm`, `Acheron.esm`, `Sacrosanct - Vampires of Skyrim.esp`.
+- The ESPFE was moved from MO2's automatic bottom position to immediately after `Sacrosanct - Vampires of Skyrim.esp`:
+  - Sacrosanct priority **484**;
+  - Acheron Sacrosanct Patch priority **485**, ESL index **FE:183**;
+  - followed by `Shoo_TestCRVampFix.esp` and `CoverYourHead - Sacrosanct.esp`.
+- Main menu and Unbound save loaded cleanly.
+- **Pending:** real vampire **Feed/Drain** behavior test during the definitive playthrough.
+- **Status: TECHNICALLY VALIDATED.**
+
 ## Added / content-sensitive modules
 
 ### 1. RaceMenu Portraits
