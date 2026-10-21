@@ -415,7 +415,7 @@ Other technical archives in the manifest delta require review **only if the acti
 | Remaining technical/native replacements | **KNOWN MATRIX COMPLETE; review only additional manifest deltas if relevant** |
 | NPC/content additions and optional modules | PENDING / TO REVIEW |
 | xEdit, translations, plugins and final game validation | IN PROGRESS |
-| Migration status | **IN PROGRESS** |
+| Migration status | **TECHNICAL MIGRATION COMPLETE — French translation/customization pass continues** |
 
 ## Next action (one step at a time)
 
