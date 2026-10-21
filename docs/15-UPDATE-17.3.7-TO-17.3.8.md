@@ -2,7 +2,7 @@
 
 > **IN PROGRESS — controlled manual migration underway**  
 > Prepared: 18 October 2026  
-> Last updated: 20 October 2026  
+> Last updated: 21 October 2026  
 > Installation: customized **NEFARAM-Rhiven**, manual upgrade only.
 
 This document tracks the controlled migration of the customized **NEFARAM-Rhiven** installation from the validated **17.3.7** baseline to official **17.3.8**. It follows [the preceding migration procedure](14-UPDATE-17.3.6-TO-17.3.7.md).
@@ -56,23 +56,23 @@ The validated 17.3.7 Rhiven baseline was checked against the repository snapshot
 | Mod / component | 17.3.7 archive | 17.3.8 archive | Risk / checks | Status |
 | --- | --- | --- | --- | --- |
 | **Acheron** | 1.11.2 | **1.11.3** | Installed separately; ESP and existing French translation unchanged; menu/save/MCM checked; full defeat-path test still pending | **INSTALLED — STARTUP/MCM VALIDATED** |
-| **Acheron — Sacrosanct Patch** | Previous archive to confirm | **1.1.0** | Check matching Acheron/Sacrosanct versions and plugin load order | TO REVIEW |
+| **Acheron — Sacrosanct Patch** | Not present in current Rhiven 17.3.7 | **1.1.0** | New Rhiven addition; ESPFE + targeted `AcheronHunterPride` script override; load order and masters verified; startup/save tested; vampire Feed/Drain functional test deferred | **TECHNICALLY VALIDATED** |
 | **Advanced Nudity Detection** | 4.1.4c | **4.1.5** | Separate install; ESP unchanged; DLL/script update; MCM and game load tested | **VALIDATED** |
 | **SLSF Reloaded LL** | 4.1.1 | **4.1.2** | Separate install; plugin position restored to exact baseline; menu/save/MCM tested. Official Friends/Lovers Ignore Sleep re-init caveat retained for the starter save | **VALIDATED — STARTER-SAVE CAVEAT** |
 | **Modex / AddItemMenu** | 3.0.0 | **3.0.2** | Separate install + Rhiven patch; French localization preserved; one new string translated; settings adapted to 3.0.2 format; menu tested in game | **VALIDATED** |
 | **PPA Penetration Physics** | 0.0.36 | **0.0.38** | Same FOMOD feature set reproduced; Rhiven hotkeys preserved; SKSE startup/load tested; full collision/scene test deferred to the definitive playthrough | **INSTALLED — STARTUP VALIDATED** |
 | **SKSE64 (Steam)** | 2.2.6 | **2.2.8** | Runtime confirmed **Skyrim 1.6.1170**; scripts installed as separate MO2 mod; Game Root loader/DLL backed up then replaced; load/save tested | **VALIDATED** |
-| **SPID** | 7.3.2 | **7.3.3** | Distribution configuration and version compatibility | TO REVIEW |
-| **powerofthree's Tweaks** | 1.16.0 | **1.17.1** | SKSE DLL/INI; technical dependencies | TO REVIEW |
-| **AnimObject Swapper** | 1.1.0 (archive name) | **2.0.0** | Major version; INI/data compatibility and downstream mods | TO REVIEW |
-| **Cinematic Conversation Camera** | 1.4.8 | **1.5.0** | Camera controls, custom presets/INI, conflicts | TO REVIEW |
+| **SPID** | 7.3.2 | **7.3.3** | Two-file DLL/PDB replacement; old version disabled; menu/save/console clean | **VALIDATED** |
+| **powerofthree's Tweaks** | 1.16.0 | **1.17.1** | FOMOD branch `SSE/AE v1.6.1170`; DLL/PDB + script/source replacement; menu/save clean | **VALIDATED** |
+| **AnimObject Swapper** | 1.1.0 | **2.0.0** | FOMOD branch `SSE/AE v1.6.1170`; DLL/PDB replacement only; menu/save clean | **VALIDATED** |
+| **Cinematic Conversation Camera** | 1.4.8 | **1.5.0** | Existing 104 settings preserved semantically; 9 new options accepted from 1.5.0; startup/save clean; real dialogue/camera behavior deferred | **TECHNICALLY VALIDATED** |
 | **Skyrim Cosave Accelerator / S.L.A.C.K** | 1.3.2 | **1.5.1** | 1.3.2 rejected SKSE 2.2.8; 1.5.1 AE 1.6.1170 / SKSE 2.2.8 branch installed; cosave load and save timings verified in game | **VALIDATED** |
-| **Native EditorID Fix** | 1.2.2 | **1.2.3** | Plugin/DLL compatibility; especially UBE setup | TO REVIEW |
-| **JContainers SE** | old package 4.2.13.2 (for 1.6.1170) | **4.3.3** | Runtime, plugins/scripts depending on JContainers | TO REVIEW |
-| **Perk Entry Point Extender (PEPE)** | 2.2.4.6 | **2.3.7.0** | Native DLL, dependent perks/mods | TO REVIEW |
-| **Keyword Item Distributor** | 4.0.6 | **4.1.0** | KID distributions, INI compatibility | TO REVIEW |
-| **Address Library** | All in One v11 (archive name) | **All in One (1.7.104.0) v13** | Verify exact edition/runtime match before installing | TO REVIEW |
-| **XPMF** | 0.6.1 | **0.7.1** | Framework compatibility with configured materials | TO REVIEW |
+| **Native EditorID Fix** | 1.2.2 | **1.2.3** | Old, new and First Person Inertia override INIs confirmed identical; DLL updated; startup/save clean | **VALIDATED** |
+| **JContainers SE** | 4.2.13.2 + separate `JContainers Fix` | **4.3.3** | 4.3.3 installed for SKSE 2.2.8 / Skyrim 1.6.1170; old package disabled; legacy NDR Fix absent from official 17.3.8 and disabled; startup/save clean | **VALIDATED** |
+| **Perk Entry Point Extender (PEPE)** | 2.2.4.6 | **2.3.7.0** | Adds `PerkEntryPointExtender.esl`, Lexicon data and AVG TOML; ESPFE left at MO2 automatic priority 176; inventory/perks/map/magic tested | **VALIDATED** |
+| **Keyword Item Distributor** | 4.0.6 | **4.1.0** | FOMOD branch `SSE/AE v1.6.1170`; INI unchanged (`bVerboseLogging = false`); startup/save/inventory checks clean | **VALIDATED** |
+| **Address Library** | All in One v11 | **All in One (1.7.104.0) v13** | v13 contains the required 1.6.1170 versionlib files; old v11 disabled; startup/save clean | **VALIDATED** |
+| **XPMF** | 0.6.1 | **0.7.1** | New DLL/PDB installed; `Simplicity of Snow Sulfur Ash Moss` intentionally continues to win on four generic JSON profiles with `{}` while supplying its own `sos - ...` profiles; startup/save/visual check clean | **VALIDATED** |
 
 Other technical archives in the manifest delta require review **only if the active Rhiven version differs**, including Base Object Swapper 3.5.0, AudioUtil 0.9.29, MfgFix NG 1.0.10, Actor Value Generator 2.3.6.0, Light Placer 5.0.0, Better Third Person Selection 0.9.0, Conditional Expressions Extended 2.3.0, Magic Fixes and Tweaks 2.4.5, Dynamic Dialogue Replacer 1.4.1, Andrealphus Papyrus Functions 1.10.1, Lexicon 0.6.3.0 and Rogue's Gallery 1.0.1.0. This is not confirmation that all of these need installation manually.
 
