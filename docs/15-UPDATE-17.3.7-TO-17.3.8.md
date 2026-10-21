@@ -374,15 +374,15 @@ Other technical archives in the manifest delta require review **only if the acti
 ## Recommended phased execution — live status
 
 1. **Freeze baseline — DONE.** Stable/reference profiles and repository left/right snapshots checked before migration.
-2. **Build active-version table — IN PROGRESS.** Target replacements identified; each installed Rhiven version is still confirmed immediately before touching that module.
+2. **Build active-version table — DONE.** The identified 17.3.8 migration targets were audited against the active Rhiven setup.
 3. **Technical prerequisites — DONE for the identified 17.3.8 replacements.** Skyrim 1.6.1170, SKSE 2.2.8, S.L.A.C.K 1.5.1, Address Library v13 and the listed native dependencies are validated.
 4. **Core SKSE frameworks — DONE for the known replacement matrix.** SPID, powerofthree's Tweaks, AnimObject Swapper, Native EditorID Fix, JContainers, PEPE, KID and XPMF are migrated and validated; Cinematic Conversation Camera is technically validated with real dialogue behavior deferred.
-5. **Gameplay frameworks — IN PROGRESS.** Acheron, AND, SLSF, Modex and PPA are migrated; Acheron Sacrosanct Patch is technically validated. Acheron defeat, vampire Feed/Drain and PPA collision/scene tests remain deferred to the definitive playthrough.
-6. **NPC/content — PENDING.** Valerica / Serana changes and visual-load-order compatibility not yet reviewed.
-7. **Opt-in decision — PARTIAL.** RaceMenu Portraits 1.2.0 is installed and validated; Skyrim Performance Solution still requires a deliberate compatibility/benchmark decision.
+5. **Gameplay frameworks — DONE for migration.** Acheron, AND, SLSF, Modex, PPA and the Acheron Sacrosanct Patch are migrated; gameplay-only checks remain deferred to the definitive playthrough.
+6. **NPC/content — DONE for migration.** Valerica 1.25 and Serana Revamped 1.25 were audited, installed and technically validated.
+7. **Opt-in decision — DONE.** RaceMenu Portraits 1.2.0 and Skyrim Performance Solution 1.0.64 are installed and validated as deliberate Rhiven choices.
 8. **UBE special-case checks — PARTIALLY RESOLVED.** Rhiven is 3BA, so PPA UBE instructions are not applicable.
-9. **Final checks — PENDING.** Full MO2 conflict review, plugin masters/xEdit as applicable, definitive new-game gameplay tests and MCM tests after all components are migrated.
-10. **Documentation — IN PROGRESS.** This migration sheet is maintained during the work; final Rhiven MO2 left/right snapshots will be refreshed only after the complete 17.3.8 state is validated.
+9. **Final structural checks — DONE.** MO2 left pane, active plugins and load order were audited; the pre-existing plugin order is preserved. Gameplay-only checks remain deferred.
+10. **Documentation — UPDATED.** This sheet now records completion of the technical migration. Final Rhiven MO2 left/right snapshots will be refreshed after translations and post-migration customization are finished.
 
 ## Validation register
 
@@ -413,19 +413,31 @@ Other technical archives in the manifest delta require review **only if the acti
 | XPMF 0.7.1 | **VALIDATED** |
 | RaceMenu Portraits 1.2.0 | **VALIDATED** |
 | Remaining technical/native replacements | **KNOWN MATRIX COMPLETE; review only additional manifest deltas if relevant** |
-| NPC/content additions and optional modules | PENDING / TO REVIEW |
-| xEdit, translations, plugins and final game validation | IN PROGRESS |
+| NPC/content additions and optional modules | **DONE for migration — technically validated** |
+| xEdit / plugin structure | **DONE**; French translations and gameplay-only checks remain **IN PROGRESS** |
 | Migration status | **TECHNICAL MIGRATION COMPLETE — French translation/customization pass continues** |
+
+## Final migration validation
+
+The final MO2 structural audit confirms that the controlled **17.3.7 → 17.3.8 technical migration is complete**:
+
+- the current load order contains **1,988 plugins** versus the validated **1,985-plugin** pre-migration baseline;
+- the only additions are `PerkEntryPointExtender.esl`, `Acheron - Sacrosanct Patch.esp` and `KVSeranaLustOfAMother.esp`;
+- all **1,985 pre-existing plugins keep the same relative order**;
+- the final FWMF tail remains unchanged.
+
+This closes the **migration phase**, not the entire customized build. The **French translation pass is still unfinished**, several gameplay-only checks are intentionally deferred, and additional Rhiven mods may still be audited individually.
 
 ## Next action (one step at a time)
 
-The known **technical replacement matrix is now complete**. Continue with the remaining **content/optional 17.3.8 additions**, one module at a time:
+Continue as **post-migration customization**:
 
-1. **Skyrim Performance Solution 1.0.63** — review overlap with existing performance/SKSE tweaks before deciding whether to enable it.
-2. **Serana Revamped — Valerica Has It Goin On 1.25** — inspect facegen/NPC overhaul conflicts before installation.
-3. **Valerica Lust of a Mother 1.25 Slab Edition** — compare against the existing 1.24 Slab Edition, including plugins, assets and translation implications.
-4. Review any additional manifest-only deltas only where the active Rhiven version actually differs.
+1. finish the remaining French translations;
+2. audit any additional Rhiven candidate mod one at a time before installation;
+3. preserve the validated MO2 structure while testing additions;
+4. perform the planned global keyboard/hotkey audit before the definitive Eleanor playthrough;
+5. refresh final repository MO2 left/right snapshots only when the customized 17.3.8 build itself is final.
 
-Deferred functional tests remain: Acheron defeat path, Acheron/Sacrosanct vampire Feed/Drain, PPA collision/scene behavior, and Cinematic Conversation Camera during real dialogue.
+Deferred gameplay checks remain: Acheron defeat path, Acheron/Sacrosanct Feed/Drain, PPA collision/scene behavior, Cinematic Conversation Camera during real dialogue, and natural Valerica/Serana dialogue/voice verification.
 
 Do **not** run LOOT or Wabbajack, do not batch-enable/disable mods, and do not alter the stable rollback profiles.
