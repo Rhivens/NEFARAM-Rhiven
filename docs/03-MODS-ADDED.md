@@ -1,6 +1,6 @@
 # 03 - Added mods
 
-This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
+This file tracks Rhiven additions originally built on the validated NEFARAM 17.3.7 customization and now carried forward to the current **NEFARAM 17.3.8 / Eleanor Stable 17.3.8** baseline.
 
 ## Status legend
 
