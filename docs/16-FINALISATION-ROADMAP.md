@@ -4,11 +4,11 @@ Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
 **Avancement documentaire mis à jour le 22/10/2026 — cible : NEFARAM-Rhiven 1.1.**
 
-**L'installation de tous les mods prévus est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). Une copie complète de l'instance NEFARAM d'origine a permis les essais réversibles. L'instance stable a été remise en place sous `C:\JEUX\NEFARAM` ; l'instance expérimentale Community Shaders est conservée séparément sous `C:\JEUX\NEFARAM_CS`.
+**L'installation du socle actuellement retenu est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). Une copie complète de l'instance NEFARAM d'origine a permis les essais réversibles. L'instance stable a été remise en place sous `C:\JEUX\NEFARAM` ; l'instance expérimentale Community Shaders est conservée séparément sous `C:\JEUX\NEFARAM_CS`. Une dernière vague de **mods candidats** est maintenant étudiée avant le gel définitif ; aucun de ces candidats n'est considéré comme intégré tant que son audit et, si nécessaire, ses tests dédiés ne sont pas terminés.
 
 La **migration technique 17.3.7 -> 17.3.8 est terminée et validée**. Les validations exclusivement liées au gameplay réel restent suivies dans la fiche de migration et la checklist ; elles ne remettent pas en cause la baseline technique 17.3.8.
 
-Ordre de travail restant : **passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
+Ordre de travail restant : **étude des derniers candidats → décisions d'intégration/rejet → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
 
 **Étape KID / modesty Eleanor validée le 16/10/2026 :** audit de la collection personnelle terminé, couverture existante AND / OSL / SLA / BOOBIES contrôlée, complément `Eleanor Modesty KID - Rhiven` créé avec `Rhiven_Eleanor_Modesty_KID.ini`, et chargement confirmé dans le log Keyword Item Distributor sans erreur de parsing propre au fichier Rhiven. Les réactions réelles aux tenues restent volontairement à vérifier pendant la partie définitive.
 
@@ -223,6 +223,155 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 - [x] Installer `Point The Way - Rhiven` avec `My Road Signs are Beautiful - French` et valider visuellement plusieurs panneaux en français près de Rivebois, en météo pluvieuse.
 - [ ] Vérifier le placement / les éventuelles incohérences LOD à distance et confirmer l'ordre exact des plugins depuis un nouvel export MO2 ; **aucune régénération DynDOLOD n'a été effectuée**.
 - [ ] Actualiser les deux snapshots MO2 Rhiven après export de l'état courant ; conserver les snapshots de la baseline originale inchangés.
+
+---
+
+## Phase 5 bis - Étude des derniers candidats avant gel définitif
+
+**État au 22/10/2026 :** cette phase est ouverte après la migration 17.3.8 et avant la francisation finale. Elle ne constitue **pas** une liste de mods à installer automatiquement. Chaque candidat doit être audité, classé puis seulement éventuellement intégré sur une copie/profil de test.
+
+### Procédure standard d'étude
+
+Pour chaque mod candidat :
+
+1. **Lire la description complète et les fichiers disponibles** ; pour LoversLab, utiliser une fiche locale propre basée sur la description copiée par Fabien afin de conserver une référence stable.
+2. **Lister les prérequis exacts** : Skyrim runtime, SKSE, Address Library, DLL, frameworks, SexLab, Papyrus, UI, animation, BodySlide, OAR/Pandora, etc.
+3. **Comparer avec la baseline réelle** `NEFARAM 17.3.8 / Eleanor Stable 17.3.8` et les snapshots MO2 gauche/droite.
+4. **Identifier les doublons fonctionnels** avec les mods déjà présents.
+5. **Auditer les dépendances et patches existants** avant tout remplacement d'un framework déjà intégré.
+6. **Classer le risque** :
+   - **Faible** : ajout isolé, sans remplacement structurel ;
+   - **Moyen** : chevauchement fonctionnel, nouveaux plugins/scripts ou réglages à harmoniser ;
+   - **Élevé** : remplacement de framework, dépendances transversales, animation/LOD/BodySlide ou impacts sur de nombreux patches.
+7. **Décider avant installation** :
+   - `CANDIDAT` ;
+   - `À TESTER` ;
+   - `RETENU` ;
+   - `REJETÉ` ;
+   - `REPORTÉ APRÈS PLAYTHROUGH`.
+8. Pour les mods classés **À TESTER**, utiliser un profil/copie jetable ; ne jamais faire le premier essai sur le futur save définitif.
+9. Si le mod est retenu : documenter installation, FOMOD, ordre MO2, plugins, patches, traductions, tests et retour arrière.
+10. Après validation : mettre à jour cette roadmap, `03-MODS-ADDED.md`, `04-MODS-REMOVED.md`, `08-TESTING.md` et les snapshots si l'état final du build change.
+
+### Ordre d'étude retenu
+
+#### 5 bis.1 - Graphismes : MESH2 + ENB Dynamic Cubemaps
+
+- [ ] Étudier **MESH2 ENB - Max's Edited Silent Horizons 2** comme évolution possible du Silent Horizons 2 actuellement retenu.
+- [ ] Étudier **ENB Dynamic Cubemaps** dans le même chantier ; ne pas l'évaluer isolément si MESH2 en dépend ou l'exploite.
+- [ ] Travailler sur une copie réversible de la configuration ENB actuelle.
+- [ ] Comparer visuellement avec **Silent Horizons 2 + ReShade Sswaye LUT13** sur des scènes identiques.
+- [ ] Mesurer FPS / frametimes dans plusieurs contextes : extérieur, forêt, ville, intérieur, neige, pluie et scène lourde.
+- [ ] Tester avec et sans DOF si MESH2 permet ce réglage afin d'isoler le coût réel.
+- [ ] Contrôler les réflexions problématiques éventuelles sur yeux, métaux, armures et surfaces brillantes.
+- [ ] Vérifier la persistance des réglages après redémarrage.
+- [ ] Verdict initial : **À TESTER — risque moyen, bénéfice visuel potentiel élevé**.
+
+#### 5 bis.2 - QoL / interface légère
+
+**Needs Widget AIO**
+
+- [ ] Vérifier les dépendances exactes et confirmer la compatibilité avec le runtime 1.6.1170.
+- [ ] Comparer avec le widget SunHelm / Nordic UI actuellement présent.
+- [ ] Vérifier la lecture des données SunHelm et Bathing in Skyrim Renewed.
+- [ ] Tester sans modifier les moteurs de besoins eux-mêmes.
+- [ ] Vérifier conflits UI, positionnement, sauvegarde des réglages et coût HUD.
+- [ ] Verdict initial : **CANDIDAT PRIORITAIRE — faible à moyen risque**.
+
+**Dino's Easy Quest Fix**
+
+- [ ] Vérifier prérequis et compatibilité 1.6.1170.
+- [ ] Tester sur une quête jetable / bloquée connue.
+- [ ] Confirmer que le mod sert d'outil d'assistance et ne remplace pas l'analyse via `sqs`, `sqv`, xEdit ou Papyrus lorsqu'une quête est réellement cassée.
+- [ ] Documenter le risque de saut d'étapes/récompenses avant adoption.
+- [ ] Verdict initial : **CANDIDAT PRIORITAIRE — faible risque si utilisé avec discipline**.
+
+**Item Vault - Plugin Explorer**
+
+- [ ] Comparer précisément avec **AddItemMenu** et **Modex 3.0.2** déjà installés.
+- [ ] Identifier les fonctions réellement nouvelles : navigation objets/plugins, NPC, sorts, lieux, prévisualisation, placement permanent.
+- [ ] Vérifier impact mémoire / indexation sur la très grande load order Rhiven.
+- [ ] Tester coexistence avant d'envisager le retrait d'AddItemMenu/Modex.
+- [ ] Ne supprimer aucun outil existant avant comparaison fonctionnelle complète.
+- [ ] Verdict initial : **À ÉTUDIER — risque faible à moyen, doublon partiel probable**.
+
+#### 5 bis.3 - Framework followers : Horde contre NFF
+
+- [ ] Étudier **Horde - A Light-Weight SKSE Follower Management System** comme remplacement potentiel de Nether's Follower Framework.
+- [ ] Traiter ce point comme un **chantier structurel séparé**, jamais comme un simple ajout.
+- [ ] Auditer tous les éléments NFF actuellement actifs :
+  - `Nether's Follower Framework`;
+  - `Generated Voice Pack for Nether's Follower Framework`;
+  - `Nether's Follower Framework - Legacy Settings Loader`;
+  - `nwsFollowerFramework.esp`;
+  - `Nether's Follower Framework - Settings Loader.esp`;
+  - `SDA NFF Patch.esp`.
+- [ ] Rechercher dans xEdit tous les plugins ayant NFF comme master ou patch direct.
+- [ ] Vérifier spécifiquement **Serana Dialogue Add-On** et son patch NFF.
+- [ ] Vérifier **Devious Followers** séparément : ne pas supposer qu'il nécessite ou n'utilise pas NFF avant audit de ses masters, scripts et description.
+- [ ] Étudier migration des followers actifs/configurations et comportement des followers spéciaux.
+- [ ] Préparer un rollback complet avant tout test.
+- [ ] Verdict initial : **À ÉTUDIER EN PROFONDEUR — risque élevé / remplacement de framework**.
+
+#### 5 bis.4 - LoversLab : intégrations légères et sociales
+
+Les fiches LoversLab sont préparées à partir des descriptions copiées par Fabien avant décision.
+
+- [ ] **SexLab Approach Redux 3.61** — fiche déjà présente ; reprendre l'audit après stabilisation 17.3.8.
+- [ ] **Unethical Alchemy 1.0.0** — créer la fiche technique, puis auditer prérequis, scripts, intégrations et conflits.
+- [ ] **SLSF Fame Comments Reloaded 1.3 SE** — créer la fiche ; vérifier particulièrement la cohérence avec **SLSF Reloaded 4.1.2** et les éléments Fame Comments déjà présents dans NEFARAM.
+- [ ] **Public Whore Comments 1.7** — créer la fiche ; étudier dépendances, système de commentaires/réactions et éventuel chevauchement avec SLSF/Fame/Approach.
+- [ ] Décider l'ordre d'intégration des mods sociaux uniquement après comparaison de leurs hooks, dialogues et fréquence d'événements.
+- [ ] Verdict global initial : **CANDIDATS — audit documentaire requis avant installation**.
+
+#### 5 bis.5 - LoversLab : gros contenus / systèmes lourds
+
+**RennasRanch 0.3.0**
+
+- [ ] Utiliser la fiche d'intégration déjà créée.
+- [ ] Reprendre l'audit sur la baseline 17.3.8 stable.
+- [ ] Vérifier worldspace, Falkreath, BodySlide, animations, DD, overlays, LOD et scripts.
+- [ ] Installer uniquement sur profil clone après validation documentaire.
+- [ ] Verdict initial : **À TESTER PLUS TARD — risque élevé / contenu conséquent**.
+
+**Naked Defeat AE/SE**
+
+- [ ] Utiliser la documentation et le protocole déjà créés.
+- [ ] Auditer le remplacement de **Practical Defeat** et la répartition avec Acheron / Yamete Kudasai.
+- [ ] Vérifier toutes les dépendances, outcomes, Local Slavery / Simple Slavery++, scènes et mécanismes de récupération.
+- [ ] Ne pas intégrer avant validation des autres candidats plus légers.
+- [ ] Verdict initial : **CHANTIER LOURD — à traiter en dernier**.
+
+#### 5 bis.6 - Outils de travail hors runtime
+
+Ces outils ne sont pas des composants du modpack actif et peuvent être évalués indépendamment.
+
+**ReSaver++**
+
+- [ ] Identifier précisément la version / provenance / différences avec ReSaver/FallrimTools.
+- [ ] Vérifier formats de sauvegarde supportés et fonctions de nettoyage/diagnostic.
+- [ ] Ne jamais effectuer de nettoyage automatique sur une sauvegarde importante sans copie préalable.
+- [ ] Statut : **À ÉTUDIER**.
+
+**Skyrim PEX to PSC Decompiler**
+
+- [ ] Installer/tester comme outil externe de diagnostic Papyrus.
+- [ ] Vérifier qualité de décompilation sur quelques scripts connus.
+- [ ] Conserver les sources décompilées uniquement comme aide d'analyse, jamais comme preuve absolue du code source original.
+- [ ] Statut : **OUTIL RECOMMANDÉ À TESTER**.
+
+**LL Integration 0.8**
+
+- [ ] Créer une fiche à partir de la description LoversLab.
+- [ ] Identifier précisément sa fonction, ses dépendances et son intérêt pour notre workflow.
+- [ ] Déterminer s'il s'agit d'un outil externe, d'un framework runtime ou des deux avant classement final.
+- [ ] Statut : **À DOCUMENTER / À ÉTUDIER**.
+
+### Critère de fermeture de la phase 5 bis
+
+Cette phase est terminée lorsque chaque candidat possède un verdict explicite : **retenu, rejeté, reporté ou testé avec succès**.
+
+Les mods retenus doivent être intégrés et documentés **avant** le passage complet en français afin d'éviter de traduire deux fois une load order encore mouvante.
 
 ---
 
