@@ -4,7 +4,8 @@
 >
 > Ce document combine les **observations validées en jeu** et la **feuille de route** pour la calibration HUD restant à faire. La partie définitive d'Eleanor n'a pas commencé. On termine d'abord les ajouts classiques au modpack, puis on traite l'interface comme un chantier autonome, avant la checklist de lancement.
 >
-> **Base de référence :** NEFARAM 17.3.7 personnalisé, profil MO2 `ELEANOR Stable`. Les instantanés à actualiser lors du chantier sont `load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md` et `load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md`.
+> **Validation initiale :** personnalisation réalisée sous NEFARAM 17.3.7, profil MO2 `ELEANOR Stable`.  
+> **Baseline actuelle :** NEFARAM-Rhiven 17.3.8, profil `Eleanor Stable 17.3.8`. Les instantanés `load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md` et `load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md` ont depuis été rafraîchis pour la 17.3.8.
 
 
 ## État réel au 14 octobre 2026 — personnalisation UI
