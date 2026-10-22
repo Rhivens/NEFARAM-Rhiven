@@ -247,3 +247,240 @@ This matches the current Rhiven philosophy of enriching the game without destabi
 **ACTIVE REFERENCE — expand as Eleanor's gameplay preferences are documented.**
 
 This file should be used as a decision filter during Phase 5 bis and future mod studies.
+
+
+---
+
+## 10. Armor, clothing and wardrobe
+
+Eleanor maintains a **large wardrobe** and makes active use of outfit-management tools.
+
+### Clothing philosophy
+
+- Very suggestive outfits are welcome.
+- Light armor is preferred.
+- Medium/intermediate protection is acceptable.
+- Heavy armor is **not** part of Eleanor's playstyle.
+- Jewelry is important: necklaces, rings and decorative accessories.
+
+### Contextual clothing
+
+Eleanor changes clothing depending on context:
+
+- **At home:** nightwear / lingerie-style homewear.
+- **In cities:** civilian clothing / city outfits.
+- **Dangerous quests:** armor.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- outfit managers;
+- wardrobe systems;
+- armor/clothing packs with many interchangeable pieces;
+- light armor collections;
+- jewelry/accessory packs;
+- context-aware outfit switching;
+- home/city/adventure outfit presets.
+
+Low relevance:
+
+- heavy-armor-only packs;
+- crafting-intensive armor systems;
+- mods whose value depends mainly on armor progression through smithing.
+
+---
+
+## 11. Survival and travel habits
+
+Eleanor uses survival mechanics actively.
+
+### Managed needs
+
+- hunger;
+- thirst;
+- sleep;
+- cold;
+- hygiene.
+
+### Hygiene
+
+Eleanor bathes frequently, often **several times per day**.
+
+Therefore hygiene/bathing systems are a recurring gameplay loop rather than a cosmetic detail.
+
+### Wilderness behavior
+
+Eleanor likes to:
+
+- create campfires;
+- pitch tents;
+- rest in the wilderness;
+- use camps as temporary safe points.
+
+She generally avoids traveling at night when possible.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- SunHelm/needs integration;
+- bathing/hygiene systems;
+- camping/tent/fire systems;
+- survival widgets;
+- weather/cold readability;
+- rest/camp QoL.
+
+Low relevance:
+
+- redundant hunger/thirst frameworks;
+- survival systems that add heavy micromanagement without meaningful benefit.
+
+---
+
+## 12. Homes, properties and follower storage
+
+Eleanor tries to acquire **as many properties as possible across Skyrim**.
+
+### Property strategy
+
+Properties serve as:
+
+- safe hubs distributed across the map;
+- wardrobe/outfit locations;
+- follower assignment locations;
+- rest points;
+- family housing.
+
+Followers are distributed among Eleanor's homes rather than traveling permanently with her.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- player-home mods;
+- property acquisition;
+- home-management systems;
+- follower home assignment;
+- reliable follower relocation/storage;
+- geographically distributed safe houses.
+
+This reinforces the importance of evaluating follower frameworks for **home assignment reliability**, not party combat.
+
+---
+
+## 13. Children
+
+If Eleanor has a child through birth or adoption:
+
+- children are sent to her **main property at Lakeview Manor**.
+
+### Mod-evaluation consequence
+
+Relevant features:
+
+- reliable child relocation;
+- Lakeview Manor compatibility;
+- family/home integration.
+
+Low priority:
+
+- large child-population systems;
+- NPC-wide fertility systems that generate many persistent children.
+
+---
+
+## 14. Crafting philosophy
+
+Eleanor does **very little crafting**.
+
+### Weapons
+
+Her legendary Katana is obtained through **AddItemMenu / item-browser tooling** rather than crafted through progression.
+
+### Clothing
+
+Most city outfits and zero-armor clothing are also obtained through AddItemMenu-style tooling.
+
+### Armor
+
+Combat armor is usually acquired organically from defeated enemies and assembled from found pieces.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- AddItemMenu / Modex / Item Vault-style tools;
+- lootable armor integration;
+- outfit management.
+
+Low relevance:
+
+- deep smithing progression;
+- crafting perk overhauls;
+- material-grind armor systems;
+- mods whose main value is crafting recipes.
+
+---
+
+## 15. Stealth philosophy
+
+Eleanor uses stealth **very rarely**.
+
+Stealth is mainly a last-resort option in situations of extreme danger.
+
+Her preferred fallback is to use surrender/pacification systems rather than building around sneak gameplay.
+
+### Mod-evaluation consequence
+
+Low relevance:
+
+- stealth overhauls;
+- assassin gameplay;
+- sneak-damage builds;
+- thief-style progression.
+
+Potentially high relevance:
+
+- surrender systems;
+- pacification mechanics;
+- defeat/capture systems;
+- mods that allow recovery of agency after surrender.
+
+---
+
+## 16. Quest philosophy
+
+Eleanor's preferred quest types include:
+
+- adult/NSFW quests;
+- Dragonborn/main heroic quest content;
+- small secondary quests.
+
+### Quest-management habit
+
+Eleanor normally keeps **one active quest at a time**.
+
+The usual pattern is:
+
+1. activate one quest in the journal;
+2. complete or progress it;
+3. then deliberately activate the next one.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- compact self-contained side quests;
+- modular quest packs;
+- small quest mods with limited cross-dependencies;
+- adult quest content;
+- mods that do not flood the journal.
+
+Potentially lower relevance:
+
+- huge interconnected quest frameworks;
+- mods that automatically start many parallel quests;
+- systems that spam objectives or force multiple active questlines.
+
+This reinforces the Rhiven preference for **several small, contained quest mods over one giant invasive framework**, when practical.
