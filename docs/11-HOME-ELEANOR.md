@@ -1,6 +1,6 @@
 # 11 - Home Eleanor
 
-This document tracks Eleanor's dedicated home / nearby world-addition block on top of **NEFARAM 17.3.7**.
+This document tracks Eleanor's dedicated home / nearby world-addition block, initially integrated under **NEFARAM 17.3.7** and carried forward to the current **NEFARAM 17.3.8 / Eleanor Stable 17.3.8** baseline.
 
 ## MO2 organization
 
