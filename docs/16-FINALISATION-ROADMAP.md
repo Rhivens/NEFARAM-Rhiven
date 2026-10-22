@@ -171,7 +171,7 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ## Phase 5 - Étude graphique finale — choix effectué le 14/10/2026
 
-**Décision : conserver la base NEFARAM 17.3.7 d'origine et adopter ENB + Silent Horizons 2, complété par ReShade 6.8.0 et le preset Sswaye LUT13.** Community Shaders a été essayé sur une instance séparée, puis écarté au profit du rendu préféré et du retour à la configuration fonctionnelle d'origine.
+**Décision graphique : conserver l'architecture ENB issue de la configuration validée sous 17.3.7 et maintenue après migration 17.3.8, avec Silent Horizons 2 complété par ReShade 6.8.0 et le preset Sswaye LUT13.** Community Shaders a été essayé sur une instance séparée, puis écarté au profit du rendu préféré et du retour à la configuration fonctionnelle d'origine.
 
 ### 5.1 Comparatif réalisé
 
