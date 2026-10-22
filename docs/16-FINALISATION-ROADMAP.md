@@ -259,7 +259,7 @@ Pour chaque mod candidat :
 
 - [ ] Étudier **MESH2 ENB - Max's Edited Silent Horizons 2** comme évolution possible du Silent Horizons 2 actuellement retenu.
 - [ ] Étudier **ENB Dynamic Cubemaps** dans le même chantier ; ne pas l'évaluer isolément si MESH2 en dépend ou l'exploite.
-- [ ] Travailler sur une copie réversible de la configuration ENB actuelle.
+- [x] Travailler sur une copie réversible de la configuration ENB actuelle. **Rollback confirmé le 22/10/2026 : ENB and ReShade Manager v5.1.1, Set 3 nommé `SH2 + ReShade Sswaye LUT13`, nom persistant après redémarrage et fichiers du slot vérifiés présents. Utiliser un autre slot (Set 4 recommandé) pour MESH2.**
 - [ ] Comparer visuellement avec **Silent Horizons 2 + ReShade Sswaye LUT13** sur des scènes identiques.
 - [ ] Mesurer FPS / frametimes dans plusieurs contextes : extérieur, forêt, ville, intérieur, neige, pluie et scène lourde.
 - [ ] Tester avec et sans DOF si MESH2 permet ce réglage afin d'isoler le coût réel.
