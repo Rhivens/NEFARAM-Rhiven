@@ -484,3 +484,182 @@ Potentially lower relevance:
 - systems that spam objectives or force multiple active questlines.
 
 This reinforces the Rhiven preference for **several small, contained quest mods over one giant invasive framework**, when practical.
+
+
+---
+
+## 17. Defeat / surrender / capture profile
+
+Eleanor uses surrender as a deliberate survival mechanic when combat is going badly.
+
+### Typical loop
+
+- surrender when health becomes critically low;
+- use the resulting pacification/event state to survive;
+- regain agency afterward;
+- resolve the encounter and continue the quest.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- surrender systems;
+- defeat frameworks;
+- reliable pacification;
+- clean recovery of player control;
+- post-event recovery;
+- systems that do not permanently derail quests.
+
+Low relevance:
+
+- punitive defeat systems with little player agency;
+- long unrecoverable capture states;
+- systems that make surrender less viable than simply reloading.
+
+For Eleanor, defeat mechanics are primarily a survival alternative, not a punishment simulator.
+
+---
+
+## 18. Early-game economy
+
+Eleanor's Skyrim Unbound start is intentionally harsh:
+
+- rags only;
+- no weapon;
+- no gold;
+- one water flask.
+
+### Early income options
+
+Important early-game income sources include:
+
+- adult-work/prostitution systems;
+- begging;
+- theft.
+
+This makes prostitution-related gameplay economically important during the opening phase rather than purely optional flavor.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- configurable prostitution systems;
+- solicitation;
+- reputation integration;
+- lightweight economic progression;
+- systems that work from a zero-resource start.
+
+Important checks:
+
+- payout balance;
+- exploit potential;
+- interaction with SLSF / Public Whore;
+- quest conflicts.
+
+---
+
+## 19. Adult-content gameplay profile
+
+Eleanor's adult-content preferences are strongly defined and should be used as a mod-selection filter.
+
+### Core orientation
+
+- strongly submissive-oriented;
+- low interest in dominant gameplay;
+- very high frequency of adult content;
+- consensual forced-roleplay / defeat-style scenarios are within the intended character fantasy;
+- creature-related adult content is within scope;
+- prostitution is a recurring gameplay activity.
+
+### Gameplay boundary
+
+Adult events should not:
+
+- create excessive lethal risk;
+- permanently remove player agency;
+- corrupt quest progression;
+- leave the character in an unrecoverable state.
+
+### Mod-evaluation consequence
+
+High relevance:
+
+- submissive-oriented adult systems;
+- surrender/defeat content;
+- prostitution;
+- creature-compatible adult content;
+- reputation systems;
+- contextual approach/event systems.
+
+Lower relevance:
+
+- domination-focused player systems;
+- content centered on controlling others;
+- systems whose main fantasy assumes Eleanor is the dominant/aggressive role.
+
+---
+
+## 20. Skyrim Unbound starting conditions
+
+Eleanor's intended new-game baseline is deliberately restrictive.
+
+### Starting state
+
+- clothing: rags only;
+- weapons: none;
+- gold: none;
+- supplies: one water flask.
+
+### Design intent
+
+The opening phase should feel precarious and force reliance on:
+
+- social/economic improvisation;
+- prostitution;
+- begging;
+- theft;
+- scavenging;
+- enemy loot;
+- camps and properties when available.
+
+### Mod-evaluation consequence
+
+Avoid candidate mods that trivialize this start by granting:
+
+- powerful starter gear;
+- large amounts of gold;
+- free armor or weapons;
+- easy bypasses for the intended survival/economy loop.
+
+---
+
+## 21. Combined gameplay implication
+
+Taken together, Eleanor's profile gives high priority to systems supporting:
+
+- harsh but survivable starts;
+- surrender as an alternative to death;
+- frequent adult encounters;
+- prostitution as early-game economy;
+- submissive-oriented play;
+- reputation consequences;
+- solo exploration;
+- recovery of agency after events;
+- lightweight modular quest content.
+
+This should strongly influence evaluation of:
+
+- Public Whore;
+- Public Whore Comments;
+- SLSF Fame Comments;
+- SexLab Approach Redux;
+- Naked Defeat;
+- Animal Mansion;
+- RennasRanch;
+- prostitution systems;
+- defeat frameworks;
+- creature-content mods.
+
+The decision criterion remains:
+
+> Does the mod support Eleanor's actual gameplay loop without destabilizing the validated Rhiven baseline?
