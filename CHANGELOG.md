@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-21
+
+### NEFARAM 17.3.8 — technical migration complete
+
+- Completed the controlled manual migration of the customized Rhiven build from **NEFARAM 17.3.7 to 17.3.8** without running Wabbajack against the customized installation.
+- Promoted **`Eleanor Stable 17.3.8`** as the current stable MO2 baseline; pre-migration profiles remain rollback references.
+- Migrated and validated the main 17.3.8 technical replacements, including **SKSE64 2.2.8**, **Address Library v13**, **SPID 7.3.3**, **powerofthree's Tweaks 1.17.1**, **AnimObject Swapper 2.0.0**, **S.L.A.C.K 1.5.1**, **JContainers SE 4.3.3**, **Native EditorID Fix 1.2.3**, **PEPE 2.3.7.0**, **KID 4.1.0** and **XPMF 0.7.1**.
+- Migrated gameplay/framework components including **Acheron 1.11.3**, **Advanced Nudity Detection 4.1.5**, **SLSF Reloaded 4.1.2**, **Modex 3.0.2**, **PPA 0.0.38** and **Cinematic Conversation Camera 1.5.0**. Startup/technical validation is complete; explicitly documented gameplay-only checks remain deferred to the definitive playthrough where appropriate.
+- Added and retained the 17.3.8 content-sensitive Rhiven choices: **RaceMenu Portraits 1.2.0**, **Skyrim Performance Solution 1.0.64** with a dedicated Rhiven INI, **Acheron — Sacrosanct Patch 1.1.0**, **Serana Revamped / Lust of a Mother voice layer**, and **Valerica Lust of a Mother 1.25 Slab Edition**.
+- Confirmed the setup remains **CBBE/3BA**, so official UBE-specific PPA steps are not applicable.
+- Final structural audit confirmed **1,988 plugins** versus the **1,985-plugin** pre-migration baseline; the three intended additions are `PerkEntryPointExtender.esl`, `Acheron - Sacrosanct Patch.esp` and `KVSeranaLustOfAMother.esp`, while all pre-existing plugins retain their relative order.
+- Refreshed the Rhiven MO2 left/right snapshots to reflect the active 17.3.8 setup.
+- The migration phase is closed, but the full customized build is not yet declared playthrough-ready: **French translations, final pre-playthrough checks and several gameplay-only validations remain in progress**.
+- Full procedure and validation register: [Update NEFARAM 17.3.7 -> 17.3.8](docs/15-UPDATE-17.3.7-TO-17.3.8.md).
+
 ## 2026-10-16
 
 ### Eleanor outfits — KID / modesty classification validated
