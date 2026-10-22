@@ -140,3 +140,14 @@ A dedicated integration study is available for **Unethical Alchemy 1.0.0**.
 The document covers the Heartwood Mill encounter, Joy mechanic, alchemy-record conflicts, explicit incompatibilities, SexLab/arousal checks and the important fertility mismatch between the mod's documented Hentai Pregnancy support and the current Rhiven Beeing Female NG architecture.
 
 > Current verdict: candidate to study; probably light structurally, but pregnancy functionality should be treated as RP-only unless BFNG compatibility is verified.
+
+
+## Eleanor — Gameplay Profile
+
+A living gameplay-reference sheet is available for evaluating mod relevance against Eleanor's actual playstyle.
+
+**File:** [ELEANOR-GAMEPLAY-PROFILE.md](ELEANOR-GAMEPLAY-PROFILE.md)
+
+It currently records Eleanor's no-Vampire/no-Werewolf rule, mostly-solo follower usage, follower storage philosophy, and Katana + left-hand Destruction combat setup. It should be expanded progressively with NSFW preferences, outfits/armor, homes, relationships, defeat/reputation systems and other gameplay priorities.
+
+> Purpose: use Eleanor's real playstyle as a decision filter before spending time on risky or low-value integrations.
