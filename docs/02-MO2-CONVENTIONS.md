@@ -4,7 +4,7 @@
 
 Main profile:
 
-- `ELEANOR Stable`
+- `Eleanor Stable 17.3.8`
 
 Possible temporary profiles:
 
