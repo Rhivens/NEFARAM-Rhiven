@@ -129,3 +129,14 @@ A dedicated technical review and adoption protocol is available for **LL Integra
 The document treats LL Integration as external workflow infrastructure rather than a Skyrim runtime mod. It covers browser capture, Firefox/Opera setup, MO2 metadata, active-instance detection, update modes, manual links, Voice Finder, privacy/security review, cookie handling, test deployment and rollback.
 
 > Current verdict: high-potential tool candidate, but beta status and browser/native-bridge trust surface justify isolated testing before adoption.
+
+
+## Unethical Alchemy 1.0.0
+
+A dedicated integration study is available for **Unethical Alchemy 1.0.0**.
+
+**File:** [UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md](UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md)
+
+The document covers the Heartwood Mill encounter, Joy mechanic, alchemy-record conflicts, explicit incompatibilities, SexLab/arousal checks and the important fertility mismatch between the mod's documented Hentai Pregnancy support and the current Rhiven Beeing Female NG architecture.
+
+> Current verdict: candidate to study; probably light structurally, but pregnancy functionality should be treated as RP-only unless BFNG compatibility is verified.
