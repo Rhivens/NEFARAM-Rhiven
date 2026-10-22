@@ -1,5 +1,8 @@
 # Chantier PAMA — Prison Alternative / NEFARAM-Rhiven (FR)
 
+> **Validation initiale :** bloc intégré et validé principalement sous NEFARAM-Rhiven 17.3.7.  
+> **Baseline actuelle :** **NEFARAM-Rhiven 17.3.8**, profil `Eleanor Stable 17.3.8`; le bloc PAMA a été conservé pendant la migration et les validations 17.3.7 restent l'historique de référence.
+
 > 🇫🇷 **Version française** — English version: [README_EN.md](README_EN.md)
 
 > **Statut : bloc PAMA installé et validé pour l’intégration dans NEFARAM-Rhiven**
