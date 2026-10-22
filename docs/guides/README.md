@@ -96,3 +96,14 @@ A dedicated integration protocol is available for **SexLab Approach Redux 3.61**
 The protocol focuses on autonomous NPC approaches, MCM tuning, coexistence with SLHH Expansion and BaboDialogue, overlap with SexLab Survival / TDF Aroused Rape / Dangerous Nights, defeat-state protection, Papyrus monitoring and save/reload validation.
 
 > Historical note: Fabien recalls probably having used SexLab Approach Redux in an older NEFARAM v16 setup; this remains to be verified against an archived v16 load order.
+
+
+## Public Whore Comments 1.7
+
+A dedicated integration study is available for **Public Whore Comments 1.7**.
+
+**File:** [PUBLIC-WHORE-COMMENTS-INTEGRATION.md](PUBLIC-WHORE-COMMENTS-INTEGRATION.md)
+
+The study covers Public Whore dependency checks, arousal-framework verification, SLSF Fame Comments coexistence, comment-frequency tuning, spouse behavior, SexLab-scene comments, first-person thoughts, save/reload validation and rollback.
+
+> Current verdict: promising candidate. Structural risk appears low to medium, but comment-density / immersion spam must be tested carefully.
