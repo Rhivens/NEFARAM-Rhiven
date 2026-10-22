@@ -1,6 +1,7 @@
 # Animations — OAR et configuration Eleanor
 
-**Build :** NEFARAM-Rhiven 17.3.7 · **Profil MO2 :** `ELEANOR Stable` · **État :** configuration active validée en jeu le 11/10/2026.
+**Validation initiale :** NEFARAM-Rhiven 17.3.7 · profil MO2 `ELEANOR Stable` · configuration active validée en jeu le 11/10/2026.  
+**Baseline actuelle :** NEFARAM-Rhiven 17.3.8 · profil `Eleanor Stable 17.3.8`. La configuration a été conservée pendant la migration ; les observations 17.3.7 ci-dessous restent l'historique de validation initial.
 
 ## 1. Choix final
 
