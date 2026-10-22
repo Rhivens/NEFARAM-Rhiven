@@ -47,7 +47,7 @@ Status: **VALIDATED**
 - Existing NEFARAM UI stack: **functional**
 - Dragonborn UI visual overrides: **OK**
 - No blocking compatibility issue observed
-- Safe to keep enabled in `ELEANOR Stable`
+- Safe to keep enabled in `Eleanor Stable 17.3.8`
 
 ### Dragonborn Reskin - Skyrim Character Sheet
 
@@ -57,7 +57,7 @@ Status: **VALIDATED**
 - Character Sheet opens normally: **OK**
 - Dragonborn visual style applied correctly: **OK**
 - No visible layout or text issue observed
-- Safe to keep enabled in `ELEANOR Stable`
+- Safe to keep enabled in `Eleanor Stable 17.3.8`
 
 ### Wheeler / Perfected Wheeler
 
@@ -82,7 +82,7 @@ Validation:
 - Test binding on `Caps Lock`: **OK**
 - No ESP/plugin added by the four Wheeler mods
 - Final hotkey layout intentionally deferred until the real playthrough setup
-- Decision: keep enabled in `ELEANOR Stable`
+- Decision: keep enabled in `Eleanor Stable 17.3.8`
 
 ### Compare Equipment NG 0.3.18
 
@@ -94,7 +94,7 @@ Status: **VALIDATED**
 - Difference indicators: **OK**
 - Armor-type mismatch color warning: **OK**
 - Dragonborn UI compatibility during test: **OK**
-- Decision: keep enabled in `ELEANOR Stable`
+- Decision: keep enabled in `Eleanor Stable 17.3.8`
 
 ### FWMF + Skyrim Paper Map by Caro Tuts
 
@@ -109,7 +109,7 @@ Status: **VALIDATED**
 - Map markers and map behavior: **OK**
 - Caro Tuts map adds no ESP
 - FWMF plugins remain at the bottom of the plugin order, after the late NEFARAM / LOD stack
-- Safe to keep enabled in `ELEANOR Stable`
+- Safe to keep enabled in `Eleanor Stable 17.3.8`
 
 ### Blood + Bathing in Skyrim Renewed stack
 
@@ -150,7 +150,7 @@ Pandora validation:
 
 Decision:
 
-- keep the complete stack enabled in `ELEANOR Stable`
+- keep the complete stack enabled in `Eleanor Stable 17.3.8`
 - `Dirtiness Lvl5 Fix` remains tracked only and will be installed only if the widget fails at dirtiness level 5
 
 ### Eleanor outfit block / BodySlide
