@@ -111,6 +111,15 @@ Any animation/combat mod should be tested specifically with:
 
 rather than with generic sword-and-shield or dual-wield assumptions.
 
+For spell-content evaluation, prioritize:
+
+- Fire-focused Destruction;
+- Shock as the secondary damage school;
+- spell packs/perk changes that support one-handed weapon + off-hand casting;
+- visual effects that remain readable in third-person combat.
+
+Frost-heavy content is lower priority unless it provides value beyond element choice.
+
 ---
 
 ## 5. Current relevance framework
