@@ -2,11 +2,12 @@
 
 ## NEFARAM
 
-- Version: **17.3.7**
+- Version: **17.3.8**
 - Installation method: Wabbajack
-- MO2 working profile: **ELEANOR Stable**
-- Stock install tested successfully before customization; Rhiven instance manually migrated and validated on 17.3.7
+- MO2 working profile: **Eleanor Stable 17.3.8**
+- Stock install tested successfully before customization; Rhiven instance manually migrated through 17.3.7 and then technically validated on 17.3.8
 - Start method: load the provided **NEFARAM_Start** save, not `New Game`
+- 17.3.7 -> 17.3.8 migration: **TECHNICAL MIGRATION COMPLETE**; French translation/customization and gameplay-only validation continue
 
 ## Installation paths
 
