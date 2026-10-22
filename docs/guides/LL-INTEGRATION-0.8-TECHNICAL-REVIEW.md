@@ -664,3 +664,310 @@ LL Integration 0.8 can be retained in the Rhiven workflow if:
 - no automatic replacement.
 
 **Roadmap verdict:** **TOOL CANDIDATE — HIGH POTENTIAL VALUE / MEDIUM OPERATIONAL RISK / NO SKYRIM RUNTIME RISK.**
+
+
+---
+
+## 24. Source-code audit — verified against the official GitHub repository
+
+Repository reviewed:
+
+`tricktricktrick/LL-Integration`
+
+The repository is **source-available**, not open-source under a permissive/FOSS license. The published license allows source inspection and personal use of official releases but restricts redistribution and unofficial builds.
+
+### 24.1 Official release status
+
+The official GitHub releases contain:
+
+- tag `v0.8beta`;
+- release name **LL Integration Beta 0.8**;
+- archive `LLIntegration-0.8.zip`.
+
+The current `main` branch contains newer source metadata than the original release documentation in places. For example, the Firefox manifest currently reports version **0.8.4**.
+
+Therefore:
+
+- use an **official GitHub/LoversLab release archive** for installation;
+- do not assume that current `main` exactly matches the packaged v0.8 beta archive;
+- when installing, record the exact release/tag/archive actually used.
+
+### 24.2 Firefox permissions — verified
+
+The current Firefox manifest requests:
+
+- `cookies`;
+- `downloads`;
+- `nativeMessaging`;
+- `activeTab`;
+- `tabs`;
+- LoversLab URL access;
+- Dwemer Mods URL access.
+
+Its content scripts are limited to LoversLab and Dwemer Mods pages in the manifest reviewed.
+
+This matches the stated purpose of the extension.
+
+### 24.3 Cookie export — verified
+
+The Firefox background code:
+
+- reads browser cookies;
+- filters them to domains containing `loverslab.com`;
+- sends only that LoversLab subset to the native bridge through the `save_ll_cookies` action.
+
+The native application then stores the payload locally in:
+
+`cookies_storage/cookies_ll.json`
+
+under the LL Integration local application directory.
+
+**Important:** the native code writes this file as ordinary UTF-8 JSON. It is therefore **not encrypted at rest by LL Integration itself**.
+
+Rhiven policy:
+
+- treat `cookies_ll.json` as a session credential;
+- do not copy it into GitHub, backups intended for sharing, screenshots or support bundles;
+- purge it before sharing LL Integration diagnostics;
+- if compromise is suspected, log out/revoke the LoversLab session and regenerate the cookie export.
+
+### 24.4 Local storage — verified
+
+The native bridge also uses local files for:
+
+- download events;
+- download completion records;
+- browser fetch cache;
+- browser download requests;
+- latest captured download metadata;
+- completion-worker logs.
+
+This aligns with the privacy policy's local-storage claims.
+
+No evidence was found in the reviewed paths of analytics/telemetry being sent to the developer.
+
+### 24.5 MO2 active Downloads path — verified
+
+The MO2 plugin resolves the download folder in this order:
+
+1. query the active organizer directly via `organizer.downloadsPath()`;
+2. if that fails, read the native configuration value `mo2_downloads_path`.
+
+This is a good design for multi-instance MO2 use because the running MO2 instance is preferred over stale static configuration.
+
+Even so, the first Rhiven test must explicitly verify the resolved path before any real archive is captured.
+
+### 24.6 Archive-copy behavior — verified
+
+The native configuration includes:
+
+- `copy_archives_to_mo2_downloads`;
+- `active_downloads_target`;
+- `overwrite_existing_downloads`.
+
+In the reviewed source/default configuration, `overwrite_existing_downloads` is **true**.
+
+This does not mean installed MO2 mods are silently replaced, but it means an archive with the same filename in the MO2 **downloads directory** may be overwritten by the native copy workflow.
+
+Rhiven policy:
+
+- before first use, verify whether the packaged installer exposes this option;
+- prefer disabling overwrite if practical;
+- otherwise test only with unique archive filenames and keep the MO2 downloads folder backed up / easily recoverable;
+- never rely on the Downloads directory itself as the sole archival copy of a rare LoversLab file.
+
+### 24.7 Update modes — verified
+
+The MO2 plugin defines the following modes:
+
+- **Manual install**;
+- **Download only**;
+- **Assisted install**;
+- **Automatic install (experimental, coming later)** — currently disabled in the UI definition reviewed;
+- **Skip updates**.
+
+Therefore our conservative adoption plan is directly supported by the tool.
+
+**Initial Rhiven mode: `Download only`.**
+
+Do not use Assisted install until several manual/update-only cycles have been validated.
+
+### 24.8 MO2 metadata writes — verified
+
+The reviewed plugin code updates the installed mod's `meta.ini` and can set fields in the `[General]` section including:
+
+- source URL;
+- custom URL flag;
+- repository = LoversLab;
+- version.
+
+The tool also uses LL Integration-specific metadata/sidecars for source tracking.
+
+The code reads the existing `meta.ini`, modifies relevant fields and writes it back.
+
+Rhiven validation requirement:
+
+- back up one test mod's original `meta.ini`;
+- link the mod;
+- diff before/after;
+- confirm only expected metadata changed;
+- restart MO2 and confirm mod priority, enabled state and plugin order are untouched.
+
+### 24.9 Update checks — verified
+
+Update checks are manual by design.
+
+The plugin:
+
+- uses the locally exported LoversLab cookie file;
+- performs paced update checks;
+- supports cached browser-fetched download information when direct access is unsuitable;
+- detects update archives already present in MO2 Downloads;
+- can leave a downloaded archive waiting for manual installation.
+
+This is compatible with the Rhiven rule that LL Integration may **detect and download** an update but does not decide whether that update should be integrated.
+
+### 24.10 Voice Finder — verified
+
+The current plugin source contains a substantial Voice Finder implementation.
+
+It:
+
+- normalizes mod/voice names;
+- scores likely matches;
+- recognizes several voice-like naming patterns;
+- supports manually fixed matches;
+- supports forced base/voice classifications;
+- stores manual matches / false matches / ignored states;
+- exposes a configurable match threshold;
+- can inspect installed voice candidates and source URLs.
+
+The source confirms this is a heuristic/scoring system.
+
+Rhiven policy:
+
+> Voice Finder is a discovery and inventory assistant, never an automatic authority.
+
+Every proposed voice-pack match must still be checked manually against the actual base mod/version.
+
+---
+
+## 25. Recommended Rhiven installation procedure
+
+### Stage 0 — preparation
+
+- [ ] Download LL Integration only from the official LoversLab page or official GitHub release.
+- [ ] Record exact tag/version/archive.
+- [ ] Keep a copy of the release archive outside the MO2 Downloads folder.
+- [ ] Back up the current MO2 configuration/plugin area and one representative mod `meta.ini`.
+- [ ] Note the exact current NEFARAM MO2 Downloads folder.
+- [ ] Close Skyrim.
+- [ ] Keep the stable `Eleanor Stable 17.3.8` profile unchanged from a game-content perspective.
+
+### Stage 1 — install native bridge + MO2 plugin
+
+Use the **normal installer**, not the experimental toolbar build.
+
+- [ ] Run the official installer.
+- [ ] Select the NEFARAM `ModOrganizer.exe`.
+- [ ] Select the NEFARAM MO2 Downloads folder.
+- [ ] Do not enable optional floating controls during the first validation unless required.
+- [ ] Restart MO2.
+- [ ] Confirm `Tools > LL Integration` appears.
+- [ ] Open Integration Paths/status and verify the expected Downloads path.
+
+### Stage 2 — Firefox only
+
+- [ ] Install the signed Firefox XPI supplied with the same official release.
+- [ ] Restart Firefox.
+- [ ] Confirm extension permissions.
+- [ ] Log in to LoversLab.
+- [ ] Export LoversLab cookies.
+- [ ] Verify that `%LOCALAPPDATA%\LLIntegration` is created.
+- [ ] Verify `cookies_storage/cookies_ll.json` exists.
+- [ ] Do not expose or commit that file.
+
+Do **not** install the Opera/Chromium extension yet.
+
+### Stage 3 — harmless capture test
+
+Use a small, expendable LoversLab archive with a unique filename.
+
+- [ ] Start download normally from Firefox.
+- [ ] Verify the archive reaches the expected MO2 Downloads folder.
+- [ ] Verify LL sidecar metadata is created.
+- [ ] Verify the source URL/version association.
+- [ ] Verify no unrelated archive was overwritten.
+- [ ] Verify MO2 itself remains stable after restart.
+
+### Stage 4 — installed-mod link test
+
+Choose one non-critical LoversLab mod.
+
+- [ ] Save its original `meta.ini`.
+- [ ] Create/link source metadata through LL Integration.
+- [ ] Diff `meta.ini` before/after.
+- [ ] Confirm expected URL/repository/version fields only.
+- [ ] Verify left-pane priority and enabled state are unchanged.
+- [ ] Verify plugin load order is unchanged.
+
+### Stage 5 — update test
+
+- [ ] Set update behavior to **Download only**.
+- [ ] Run one manual update check.
+- [ ] Confirm no installed mod is modified.
+- [ ] If an update exists, download it only.
+- [ ] Inspect archive manually exactly as we normally do for Rhiven.
+- [ ] Do not install until compatibility / translation / patches have been reviewed.
+
+### Stage 6 — Voice Finder test
+
+- [ ] Scan currently linked LoversLab base mods.
+- [ ] Compare proposed matches against known Rhiven voice packs.
+- [ ] Mark obvious false matches.
+- [ ] Manually bind one known correct voice pack.
+- [ ] Confirm the override persists after MO2 restart.
+- [ ] Do not download/install a voice pack purely from the score.
+
+### Stage 7 — adoption decision
+
+Adopt LL Integration into the normal Rhiven maintenance workflow only if:
+
+- [ ] Firefox capture is reliable;
+- [ ] the correct MO2 instance/path is always selected;
+- [ ] metadata writes are clean;
+- [ ] cookie storage is acceptable;
+- [ ] no unwanted archive overwrite is observed;
+- [ ] update checks remain fully user-controlled;
+- [ ] Voice Finder provides more signal than noise;
+- [ ] uninstall/rollback has been tested or is sufficiently clear.
+
+If accepted, document LL Integration as a **maintenance tool**, not as part of the Skyrim runtime baseline.
+
+---
+
+## 26. Updated recommendation after source audit
+
+**RECOMMENDED FOR CONTROLLED TRIAL.**
+
+The source audit increases confidence because the implementation broadly matches the published description:
+
+- LoversLab cookie filtering is scoped;
+- runtime data is local;
+- active MO2 Downloads path is queried from the active organizer first;
+- update checks are manual;
+- automatic installation is not active;
+- `Download only` is a native supported mode;
+- metadata writes are explicit;
+- Voice Finder is clearly heuristic and user-correctable.
+
+The remaining meaningful operational risks are:
+
+1. plaintext local session-cookie storage;
+2. beta maturity;
+3. archive overwrite behavior in Downloads;
+4. broad-but-justified browser permissions;
+5. wrong-path risk if MO2/native configuration becomes inconsistent;
+6. user error when accepting false source/voice matches.
+
+For the Rhiven workflow, the potential benefit is high enough to justify a careful trial.
