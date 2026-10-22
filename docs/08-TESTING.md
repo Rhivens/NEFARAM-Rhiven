@@ -2,7 +2,7 @@
 
 This file records important validation steps before the real playthrough.
 
-## Baseline validation
+## Baseline history
 
 ### Stock NEFARAM 17.3.6
 
@@ -11,13 +11,30 @@ This file records important validation steps before the real playthrough.
 - `NEFARAM_Start` save: **OK**
 - Waiting room / configuration screen: **OK**
 - Clean exit without creating a gameplay save: **OK**
+- Historical status: **VALIDATED STOCK BASELINE**
 
-### Current NEFARAM 17.3.7 baseline
+### NEFARAM-Rhiven 17.3.7
 
-- Manual 17.3.6 -> 17.3.7 migration: **COMPLETED**
+- Manual 17.3.6 -> 17.3.7 migration: **COMPLETED / VALIDATED**
 - MO2 launch: **OK**
 - Game launch: **OK**
-- Current Rhiven instance: **active on 17.3.7**
+- Rhiven customization and the majority of the documented integration work were initially built and tested on this baseline.
+- Historical profile reference: **ELEANOR Stable**
+- Historical status: **SUPERSEDED BY 17.3.8**, retained as migration history / rollback context.
+
+### Current NEFARAM-Rhiven 17.3.8 baseline
+
+- Controlled 17.3.7 -> 17.3.8 technical migration: **COMPLETED**
+- Current stable MO2 profile: **Eleanor Stable 17.3.8**
+- Skyrim runtime: **1.6.1170**
+- SKSE64: **2.2.8**
+- MO2 left/right structural audit: **COMPLETED**
+- Pre-existing plugin relative order preserved; intended migration additions documented.
+- Current Rhiven load-order snapshots: **REFRESHED**
+- Migration-level technical validation: **COMPLETE**
+- French translation pass: **IN PROGRESS**
+- Gameplay-only checks explicitly deferred in the migration sheet: **PENDING / NON-BLOCKING FOR TECHNICAL MIGRATION**
+- Detailed migration record: [15 - Update NEFARAM 17.3.7 -> 17.3.8](15-UPDATE-17.3.7-TO-17.3.8.md)
 
 ## Current tests
 
