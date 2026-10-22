@@ -326,6 +326,18 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 
 #### 5 bis.5 - LoversLab : gros contenus / systèmes lourds
 
+**Animal Mansion Reborn 1.8**
+
+- [ ] Utiliser la documentation déjà présente dans `docs/guides/` comme base d'étude.
+- [ ] Reprendre l'audit sur la baseline actuelle **NEFARAM-Rhiven 17.3.8 / Eleanor Stable 17.3.8**.
+- [ ] Vérifier les prérequis exacts, dépendances SexLab / créatures / animations, plugins, scripts, worldspace/cell edits et éventuels patches nécessaires.
+- [ ] Contrôler les interactions avec les systèmes déjà présents : SexLab, Aroused, Devious Devices si pertinent, SLSF, Babo/Approach éventuel et defeat stack.
+- [ ] Vérifier les besoins Pandora / animations et toute génération nécessaire avant test.
+- [ ] Effectuer un audit xEdit complet avant premier lancement.
+- [ ] Tester uniquement sur profil clone / sauvegarde jetable.
+- [ ] Décider explicitement : `RETENU`, `REJETÉ` ou `REPORTÉ` avant toute intégration au stable.
+- [ ] Verdict initial : **CANDIDAT À ÉTUDIER — contenu conséquent / risque moyen à élevé selon dépendances réelles**.
+
 **RennasRanch 0.3.0**
 
 - [ ] Utiliser la fiche d'intégration déjà créée.
