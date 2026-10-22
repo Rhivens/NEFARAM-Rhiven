@@ -319,7 +319,7 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 
 - [ ] **SexLab Approach Redux 3.61** — fiche déjà présente ; reprendre l'audit après stabilisation 17.3.8.
 - [ ] **Unethical Alchemy 1.0.0** — créer la fiche technique, puis auditer prérequis, scripts, intégrations et conflits.
-- [ ] **SLSF Fame Comments Reloaded 1.3 SE** — créer la fiche ; vérifier particulièrement la cohérence avec **SLSF Reloaded 4.1.2** et les éléments Fame Comments déjà présents dans NEFARAM.
+- [x] **SLSF Fame Comments Reloaded 1.3 SE** — fiche créée : [SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md](guides/SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md). Le mod est déjà actif dans la baseline avec `FameCommentsReloaded.esp` et `SLSF Comments Voice`; travail restant : confirmer l'archive 1.3, documenter/tuner le MCM, contrôler les Fame Events et préparer la coexistence avec Public Whore Comments / SexLab Approach.
 - [x] **Public Whore Comments 1.7** — fiche d'intégration créée : [PUBLIC-WHORE-COMMENTS-INTEGRATION.md](guides/PUBLIC-WHORE-COMMENTS-INTEGRATION.md). Public Whore et FameComments sont déjà présents ; audit restant : compatibilité réelle avec SLO/OSL Aroused NG et test de densité PWC + SLSF Fame Comments.
 - [ ] Décider l'ordre d'intégration des mods sociaux uniquement après comparaison de leurs hooks, dialogues et fréquence d'événements.
 - [ ] Verdict global initial : **CANDIDATS — audit documentaire requis avant installation**.
