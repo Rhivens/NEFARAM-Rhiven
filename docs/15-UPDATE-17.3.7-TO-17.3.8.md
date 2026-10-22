@@ -7,7 +7,7 @@
 
 This document tracks the controlled migration of the customized **NEFARAM-Rhiven** installation from the validated **17.3.7** baseline to official **17.3.8**. It follows [the preceding migration procedure](14-UPDATE-17.3.6-TO-17.3.7.md).
 
-The migration is being performed only in the dedicated MO2 test profile **`Eleanor 17.3.8 TEST`**. The validated profiles **`Eleanor Stable`** and **`Eleanor Stable - PRE 17.3.8`** remain the rollback references.
+The migration was performed in the dedicated MO2 test profile **`Eleanor 17.3.8 TEST`**. After successful technical validation, the resulting configuration was promoted to the stable profile **`Eleanor Stable 17.3.8`**. The former **`Eleanor Stable`** and **`Eleanor Stable - PRE 17.3.8`** profiles remain historical / rollback references.
 
 ## Official 17.3.8 announcement
 
@@ -359,9 +359,10 @@ Other technical archives in the manifest delta require review **only if the acti
 ## Files and profiles requiring explicit protection
 
 - `C:\JEUX\NEFARAM` — customized working installation.
-- **`Eleanor Stable`** — original validated stable profile.
+- **`Eleanor Stable 17.3.8`** — current validated stable profile after migration.
+- **`Eleanor Stable`** — former 17.3.7 validated stable profile, retained as historical rollback reference.
 - **`Eleanor Stable - PRE 17.3.8`** — rollback profile created before this migration.
-- **`Eleanor 17.3.8 TEST`** — only profile authorized for migration testing.
+- **`Eleanor 17.3.8 TEST`** — migration/test profile used during the controlled upgrade.
 - Profile `modlist.txt`, `plugins.txt`, `loadorder.txt` and any other profile settings.
 - `ModOrganizer.ini`, generated outputs and personal MO2 separators/priorities.
 - `Game Root/skse64_1_6_1170.dll` and `skse64_loader.exe` — current 2.2.8; previous 2.2.6 binaries backed up in `C:\JEUX\NEFARAM\SKSE_BACKUP_2.2.6`.
