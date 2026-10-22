@@ -12,12 +12,14 @@ Rule:
 ## Pre-install / Before New Game
 
 ### Build completion
+- [x] Migrate the customized build from NEFARAM 17.3.7 to 17.3.8 using the controlled manual migration procedure.
+- [x] Promote `Eleanor Stable 17.3.8` as the current stable baseline after technical validation.
 
 - [ ] Finish the NEFARAM-Rhiven customization pass.
 - [ ] Review remaining tracked / candidate mods and either install, reject or defer them explicitly.
 - [ ] Confirm the final MO2 separator structure and numbering.
-- [ ] Refresh the final MO2 left-pane snapshot.
-- [ ] Refresh the final plugin / load-order snapshot.
+- [x] Refresh the current NEFARAM-Rhiven 17.3.8 MO2 left-pane snapshot.
+- [x] Refresh the current NEFARAM-Rhiven 17.3.8 plugin / load-order snapshot.
 
 ### Outfit integration
 
@@ -182,4 +184,4 @@ Items here do **not** block the definitive playthrough.
 - [ ] **Inflation Framework NG:** keep on hold and only study / test it if BFNG + Fill Her Up + Milk Mod Economy BodyMorph behavior becomes unstable, cumulative or difficult to tune cleanly through their native MCM settings.
 - [x] **French road signs — replacement chosen:** retire the RSO 2.0 stack and its two BOS patches from the active MO2 profile; activate `Point The Way - Rhiven` + `My Road Signs are Beautiful - French` (1.6.1FR, weathered/engraved 4K–2K). In-game signs and inscriptions at Riverwood verified; displaced extra RSO sign removed.
 - [ ] **French road signs — final cross-check:** verify `Point The Way` plugin position / masters in the final exported MO2 right pane; check sign placement at additional intersections and watch for possible distant LOD mismatches. No DynDOLOD regeneration was performed or deemed mandatory from the limited visual test.
-- [ ] **Road signs — snapshot:** refresh the Rhiven MO2 left/right load-order lists from actual MO2 after this replacement; leave original baseline snapshots unchanged.
+- [x] **Road signs — snapshot:** Rhiven MO2 left/right load-order lists were refreshed from the actual 17.3.8 setup after the replacement; original baseline snapshots remain unchanged.
