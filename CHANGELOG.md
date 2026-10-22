@@ -63,7 +63,7 @@
 - Installed **ReShade 6.8.0 Full Add-on Support** alongside ENB, using `dxgi.dll` for ReShade while retaining ENB's `d3d11.dll`. Installed Sswaye's provided shaders/textures, set ReShade effect/texture search paths and confirmed shaders compiled and loaded.
 - Compared **Sswaye ReShade Normal** against **LUT13** in the same exterior scene. **LUT13 selected** (enabled effects: `DPX.fx`, `Clarity.fx`, `LUT13.fx`); Normal judged too colorful and LUT21 too blue.
 - **Follow-up:** validate preset persistence after restart, test stability and FPS/frametimes in more scenes, save final ENB/ReShade configurations, then move on to French localization, pre-final checklist and the final game start via `NEFARAM_Start`.
-- Updated [finalization roadmap](docs/15-FINALISATION-ROADMAP.md) to reflect the decision and remaining checks.
+- Updated [finalization roadmap](docs/16-FINALISATION-ROADMAP.md) to reflect the decision and remaining checks.
 
 ## 2026-10-11
 
