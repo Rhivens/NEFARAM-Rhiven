@@ -1,13 +1,13 @@
 # NEFARAM - Rhiven
 
-Personal customization, maintenance notes and technical documentation for **NEFARAM 17.3.7**.
+Personal customization, maintenance notes and technical documentation for **NEFARAM 17.3.8**.
 
 This repository is used to keep a clean and reproducible record of every change made to the stock NEFARAM installation: added/removed mods, patches, fixes, translations, UI work, load orders, generated outputs and testing notes.
 
 ## Current baseline
 
-- **NEFARAM:** 17.3.7
-- **MO2 profile:** `ELEANOR Stable`
+- **NEFARAM:** 17.3.8
+- **MO2 profile:** `Eleanor Stable 17.3.8`
 - Stock installation validated before customization
 - Real playthrough will start from the supplied **NEFARAM_Start** save
 - Personal additions use the suffix **`- Rhiven`**
@@ -31,7 +31,8 @@ This repository is used to keep a clean and reproducible record of every change 
 - [12 - Fertility system](docs/12-FERTILITY-SYSTEM.md)
 - [13 - Pre-playthrough checklist](docs/13-PRE-PLAYTHROUGH-CHECKLIST.md)
 - [14 - Update 17.3.6 -> 17.3.7](docs/14-UPDATE-17.3.6-TO-17.3.7.md)
-- [15 - Roadmap de finalisation](docs/15-FINALISATION-ROADMAP.md)
+- [15 - Update 17.3.7 -> 17.3.8](docs/15-UPDATE-17.3.7-TO-17.3.8.md)
+- [16 - Roadmap de finalisation](docs/16-FINALISATION-ROADMAP.md)
 - [Guides techniques](docs/guides/README.md)
   - [Animations / OAR — réglages Eleanor](docs/guides/ANIMATIONS/README.md)
   - [PAMA / Prison Alternative integration project](docs/guides/PAMA/README.md)
