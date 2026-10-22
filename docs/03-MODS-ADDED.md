@@ -12,6 +12,25 @@ This file tracks mods added on top of the stock NEFARAM 17.3.7 installation.
 
 ## Added mods
 
+### Load-order catch-up — NEFARAM 17.3.8
+
+The current **Eleanor Stable 17.3.8** snapshots were cross-checked against this sheet after the controlled migration. Pure version replacements remain documented in [15 - Update 17.3.7 -> 17.3.8](15-UPDATE-17.3.7-TO-17.3.8.md); the table below records meaningful Rhiven additions or content blocks that were missing from this sheet.
+
+| Mod / block | Status | MO2 area | Notes |
+|---|---|---|---|
+| RaceMenu Portraits - Rhiven | Validated | RaceMenu / character creation | Rhiven retained v1.2.0; portrait generation and preset loading tested successfully. |
+| Skyrim Performance Solution (SPS) - Rhiven + SPS INI - Rhiven | Validated | SKSE / performance | Rhiven retained v1.0.64 with a separate quality-first INI override. |
+| Acheron - Sacrosanct Patch - Rhiven | Technically validated | Acheron / vampire integration | New 17.3.8 Rhiven addition; script override, masters and ESPFE placement verified; Feed/Drain gameplay test deferred. |
+| Serana Revamped - Lust of a Mother - Serana Voice Over - KerstynVoices Edition - Rhiven | Technically validated | NPC / voiced content | Voice-layer addition retained alongside the existing Serana visual setup; natural dialogue verification deferred. |
+| Eleanor Modesty KID - Rhiven | Validated | Eleanor outfits / KID | Dedicated `Rhiven_Eleanor_Modesty_KID.ini`; loaded cleanly by KID without editing stock/community files. |
+| Phoenix Katana - Rhiven + Phoenix Katana Eleanor - Rhiven | Installed / current load order | Eleanor equipment | Katana and separate Eleanor customization are now present in the current 17.3.8 load order; final in-game/translation checks remain part of the pre-playthrough pass. |
+| Rape Tattoos Continued / Fade Tattoos Continued / Alpia / Zaki / Eleanor RTC settings block | Installed / validation tracked separately | Tattoos | Current load order includes the planned RTC/Fade/Alpia/Zaki stack and Rhiven settings; functional validation remains tracked in the tattoos guide/roadmap. |
+| Devious Carriages Redux + CFTO patch + voicepack | Installed / static audit completed | Added Mods NSFW | Retained in the build; functional gameplay testing remains deferred. |
+| TDF SexLab Aroused Rape - Rhiven | Installed / xEdit checked | Added Mods NSFW | Aroused Rape module only; in-game behavior deferred. |
+| SL Dangerous Nights SE - Rhiven | Installed / static audit completed | Added Mods NSFW | ESP/Papyrus/MCM reviewed; controlled sleep-event tests remain deferred. |
+| Main Menu Redone - Rhiven / Splash Screen - Rhiven | Installed / current load order | UI - Rhiven | Current 17.3.8 presentation layer; older experimental main-menu entry remains disabled where applicable. |
+| Rhiven shrine/statue visual replacer block | Installed / current load order | Visual additions | Includes the active Shalidor, Dibella, Mara, Mehrunes Dagon, Malacath, Talos, Nocturnal, Meridia and Azura visual replacers present in the current left pane. |
+
 ### Mise à jour UI et garde-robe — 14 octobre 2026
 
 | Mod | Status | Section | Reason / Notes |
