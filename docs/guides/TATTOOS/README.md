@@ -1,6 +1,7 @@
 # Tatouages — architecture et API de développement
 
-**Projet :** NEFARAM-Rhiven 17.3.7 · **Statut :** fiche technique évolutive, intégration et tests fonctionnels en cours.
+**Validation / installation initiale :** NEFARAM-Rhiven 17.3.7.  
+**Baseline actuelle :** NEFARAM-Rhiven 17.3.8 · profil `Eleanor Stable 17.3.8`. Le bloc a été conservé pendant la migration ; cette fiche reste évolutive et les tests fonctionnels non encore réalisés restent à effectuer.
 
 Objectif : conserver les interfaces utiles pour de futurs mods Papyrus exploitant les tatouages, sans confondre mécanismes documentés, hypothèses et tests réalisés.
 
