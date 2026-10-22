@@ -364,11 +364,11 @@ Ces outils ne sont pas des composants du modpack actif et peuvent être évalué
 
 - [x] Fiche technique créée : [LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md](guides/LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md).
 - [x] Classé comme **outil externe de workflow navigateur ↔ bridge local ↔ MO2**, sans impact direct sur le runtime Skyrim.
-- [ ] Auditer le dépôt officiel, la politique de confidentialité, les permissions Firefox et le stockage des cookies avant installation.
+- [x] Auditer le dépôt officiel, la politique de confidentialité, les permissions Firefox et le stockage des cookies avant installation. Audit source effectué sur `tricktricktrick/LL-Integration` : cookies LoversLab filtrés côté Firefox puis stockés localement en JSON non chiffré ; permissions et stockage documentés ; dépôt source-available.
 - [ ] Tester d'abord **Firefox + installateur MO2 normal**, sans toolbar expérimentale, sur une archive LoversLab inoffensive.
 - [ ] Utiliser initialement le mode d'update **Download only** ; ne jamais remplacer automatiquement un mod Rhiven.
 - [ ] Valider la détection de l'instance MO2, le chemin Downloads, les écritures `meta.ini`, le source linking, l'update check et Voice Finder avant adoption.
-- [ ] Statut : **OUTIL CANDIDAT — forte valeur potentielle / risque opérationnel moyen / risque runtime Skyrim nul**.
+- [ ] Statut : **RECOMMANDÉ POUR ESSAI CONTRÔLÉ — forte valeur potentielle / risque opérationnel moyen / risque runtime Skyrim nul**.
 
 ### Critère de fermeture de la phase 5 bis
 
