@@ -107,3 +107,14 @@ A dedicated integration study is available for **Public Whore Comments 1.7**.
 The study covers Public Whore dependency checks, arousal-framework verification, SLSF Fame Comments coexistence, comment-frequency tuning, spouse behavior, SexLab-scene comments, first-person thoughts, save/reload validation and rollback.
 
 > Current verdict: promising candidate. Structural risk appears low to medium, but comment-density / immersion spam must be tested carefully.
+
+
+## SLSF Fame Comments Reloaded 1.3 SE
+
+A dedicated reference and integration-tuning sheet is available for **SLSF Fame Comments Reloaded 1.3 SE**.
+
+**File:** [SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md](SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md)
+
+The document records the fact that Fame Comments Reloaded is already present in the active NEFARAM-Rhiven baseline, documents its SLSF Reloaded fame/event architecture, follower and spouse systems, Jarl warning/bounty behavior, voice-pack checks, MCM tuning, Public Whore Comments coexistence and future SexLab Approach regression testing.
+
+> Current verdict: retained baseline component; final MCM tuning and regression validation required.
