@@ -400,13 +400,13 @@ Other technical archives in the manifest delta require review **only if the acti
 | SLSF Reloaded 4.1.2 | **VALIDATED — starter-save caveat documented** |
 | Modex 3.0.2 + Rhiven patch | **VALIDATED** |
 | Acheron 1.11.3 | **INSTALLED — startup/MCM validated; defeat-path test pending** |
-| PPA 0.0.38 | **INSTALLED — startup validated; functional scene test pending** |
+| PPA 0.0.38 | **VALIDATED IN-GAME — functional scene test passed on a fresh test New Game using the `Start Nefaram` baseline; no test save retained** |
 | Acheron Sacrosanct Patch 1.1.0 | **TECHNICALLY VALIDATED — Feed/Drain test deferred** |
 | Address Library v13 | **VALIDATED** |
 | SPID 7.3.3 | **VALIDATED** |
 | powerofthree's Tweaks 1.17.1 | **VALIDATED** |
 | AnimObject Swapper 2.0.0 | **VALIDATED** |
-| Cinematic Conversation Camera 1.5.0 | **TECHNICALLY VALIDATED — dialogue behavior deferred** |
+| Cinematic Conversation Camera 1.5.0 | **VALIDATED IN-GAME — dialogue camera behavior confirmed on a fresh test New Game using the `Start Nefaram` baseline; no test save retained** |
 | Native EditorID Fix 1.2.3 | **VALIDATED** |
 | JContainers SE 4.3.3 / legacy Fix removal | **VALIDATED** |
 | PEPE 2.3.7.0 | **VALIDATED** |
@@ -417,6 +417,12 @@ Other technical archives in the manifest delta require review **only if the acti
 | NPC/content additions and optional modules | **DONE for migration — technically validated** |
 | xEdit / plugin structure | **DONE**; French translations and gameplay-only checks remain **IN PROGRESS** |
 | Migration status | **TECHNICAL MIGRATION COMPLETE — French translation/customization pass continues** |
+
+### In-game validation method
+
+For gameplay checks during finalization, tests are performed from a **fresh New Game using the modpack's `Start Nefaram` baseline save/start point**. These are disposable validation runs: no test save is retained unless explicitly documented otherwise.
+
+This method was used to validate **PPA 0.0.38** and **Cinematic Conversation Camera 1.5.0** in-game.
 
 ## Final migration validation
 
@@ -439,6 +445,6 @@ Continue as **post-migration customization**:
 4. perform the planned global keyboard/hotkey audit before the definitive Eleanor playthrough;
 5. refresh final repository MO2 left/right snapshots only when the customized 17.3.8 build itself is final.
 
-Deferred gameplay checks remain: Acheron defeat path, Acheron/Sacrosanct Feed/Drain, PPA collision/scene behavior, Cinematic Conversation Camera during real dialogue, and natural Valerica/Serana dialogue/voice verification.
+Deferred gameplay checks remain: Acheron defeat path, Acheron/Sacrosanct Feed/Drain, and natural Valerica/Serana dialogue/voice verification.
 
 Do **not** run LOOT or Wabbajack, do not batch-enable/disable mods, and do not alter the stable rollback profiles.
