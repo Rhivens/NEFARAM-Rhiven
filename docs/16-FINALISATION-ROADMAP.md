@@ -302,12 +302,15 @@ Pour chaque mod candidat :
 
 **Item Vault - Plugin Explorer**
 
-- [ ] Comparer précisément avec **AddItemMenu** et **Modex 3.0.2** déjà installés.
-- [ ] Identifier les fonctions réellement nouvelles : navigation objets/plugins, NPC, sorts, lieux, prévisualisation, placement permanent.
-- [ ] Vérifier impact mémoire / indexation sur la très grande load order Rhiven.
-- [ ] Tester coexistence avant d'envisager le retrait d'AddItemMenu/Modex.
-- [ ] Ne supprimer aucun outil existant avant comparaison fonctionnelle complète.
-- [ ] Verdict initial : **À ÉTUDIER — risque faible à moyen, doublon partiel probable**.
+- [x] Comparer précisément avec **AddItemMenu** et **Modex 3.0.2** déjà installés.
+- [x] Installer Item Vault sans ESP et sans conflit de fichiers MO2 ; intégration purement SKSE + assets.
+- [x] Vérifier l'ouverture et l'indexation sur la très grande load order Rhiven : ouverture instantanée observée avec environ **46 831 items / 466 plugins**.
+- [x] Vérifier la recherche globale et par plugin sur un cas réel : **Phoenix Katana - Eleanor** retrouvé en quelques secondes via `Rhiven_Eleanor_Katana.esp`.
+- [x] Confirmer les fonctions supplémentaires utiles : navigation items/plugins, NPC, sorts, objets, téléportation, inventaires, kits, recherche, actions directes et preview 3D.
+- [x] Comparaison d'usage retenue : **AddItemMenu** conservé comme outil rapide et familier ; **Item Vault** devient l'explorateur complet.
+- [x] **Modex 3.0.2 - Rhiven** et **Modex - 3.0.2 Patch - Rhiven** désactivés en test de remplacement ; aucun master manquant détecté après désactivation.
+- [x] Ne pas supprimer Modex immédiatement : le conserver temporairement en rollback et confirmer son inutilité pendant les premières heures de la partie finale.
+- [x] Verdict final : **RETENU — faible risque, excellente valeur QoL, performances d'indexation très satisfaisantes. Modex devient redondant dans l'usage actuel.**
 
 #### 5 bis.3 - Framework followers : Horde contre NFF
 
