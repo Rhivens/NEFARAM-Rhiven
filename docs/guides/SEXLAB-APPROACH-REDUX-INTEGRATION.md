@@ -1,8 +1,8 @@
-# SexLab Approach Redux 3.61 — Integration & Test Protocol
+# SexLab Approach Redux 3.62 — Integration & Test Protocol
 
 > **Status:** candidate mod / not currently present in the NEFARAM-Rhiven 17.3.7 snapshot  
 > **Target build:** NEFARAM-Rhiven after migration to **17.3.8** and stabilization  
-> **Documented version:** **3.61**  
+> **Documented version:** **3.62**  
 > **Scope:** compatibility verification, controlled integration, interaction testing, MCM tuning and rollback  
 > **Historical note:** Fabien recalls having probably used SexLab Approach Redux in an older NEFARAM v16 setup. This has not yet been verified against an archived v16 load order.
 
@@ -207,6 +207,79 @@ Do not clean automatically without confirming whether records are intentional.
 ---
 
 ## 12. Baseline MCM strategy
+
+### 12.1 Clean 3.62 initialization validated
+
+First in-game launch was performed with the **empty `SLAppAutoMCM.json` shipped by SexLab Approach Redux 3.62 winning the MO2 conflict** over the older file present in `SKSE Output`.
+
+Result:
+
+- MCM registered correctly;
+- all pages loaded normally;
+- no blank/broken fields observed;
+- new 3.61/3.62 options were present, including `OnlyinTown` and `Sex CoolTime`;
+- compatibility toggles for SLHH, BaboDialogue, FillHerUp, SexLab Survival and DDI were present;
+- therefore the empty JSON is a valid clean initialization state and does not need to be replaced for basic operation.
+
+### 12.2 Historical NEFARAM preset discovered in SKSE Output
+
+An older generated/exported file was found at:
+
+`SKSE Output/SKSE/Plugins/BakaFactory/SLAppAutoMCM.json`
+
+It identifies itself as:
+
+- `exportlabel = "NEFARAM - 263"`;
+- `version = "2"`.
+
+This file is treated as a **historical NEFARAM preset/reference**, not as the active 3.62 configuration.
+
+Useful historical values worth considering during the final MCM session include:
+
+- `basechancemultiplier = 0.7`;
+- Appearance / Breasts / Butt = `80 / 80 / 80`;
+- approach frequency = `70`;
+- PC minimum arousal = `25`;
+- NPC minimum arousal = `25`;
+- dialogue arousal = `80`;
+- morality = `0`;
+- character range = `0–3`;
+- relationship requirement = `2`;
+- 3P probability = `10`;
+- house visit chance = `5`;
+- house stay duration = `24`;
+- Asking for Sex = `20`;
+- Rape Chance = `10`;
+- Asking Name = `10`;
+- Sexual Harassment = `10`;
+- Relationship Change Chance = `40`;
+- SLHH integration = enabled;
+- BaboDialogue integration = enabled;
+- DDI integration = enabled;
+- SexLab Survival integration = enabled;
+- followers = disabled;
+- guards = disabled;
+- hirelings = disabled;
+- visitors = disabled;
+- Dremora = disabled;
+- elder race = disabled;
+- out-of-sight detection = disabled;
+- Unique Actor = enabled.
+
+The historical preset predates the current 3.62 options and therefore must **not** be imported blindly. In particular it contains no explicit values for newer settings such as `OnlyinTown` and `Sex CoolTime`.
+
+### 12.3 Final-playthrough policy
+
+For the final Eleanor playthrough:
+
+1. start from the clean 3.62 defaults;
+2. use `NEFARAM - 263` only as a tuning reference;
+3. re-enable integrations deliberately, one by one;
+4. prioritize SLHH / BaboDialogue / DDI / SexLab Survival only after confirming their current behavior;
+5. keep event density conservative;
+6. explicitly review `OnlyinTown`, `Sex CoolTime`, Unique Actor, relationship requirement and arousal thresholds during the Mega-session MCM;
+7. save a new Rhiven preset/export only after final settings are validated.
+
 
 For the first functional test:
 
@@ -540,7 +613,7 @@ After validation, record here:
 
 ## 29. Current decision
 
-**Candidate worth testing.**
+**Installed for controlled testing — 3.62 clean MCM initialization validated.**
 
 The mod is especially promising for NEFARAM-Rhiven because most of its required and optional ecosystem is already present.
 
