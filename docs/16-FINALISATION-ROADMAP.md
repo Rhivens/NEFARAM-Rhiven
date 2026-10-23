@@ -284,7 +284,7 @@ Pour chaque mod candidat :
 - [x] Confirmer la présence du preset `Vel'dun.ini` et son activation en jeu : preset **Vel'dun** affiché comme **In use** dans le menu du mod.
 - [x] Vérifier l'apparition et le fonctionnement du widget en jeu avec les besoins actifs ; intégration visuelle jugée propre et lisible.
 - [x] Confirmer qu'il agit comme couche d'affichage uniquement et ne remplace pas les moteurs de besoins existants.
-- [x] Prévoir la désactivation du widget Bathing in Skyrim ajouté séparément dans MO2 afin d'éviter un doublon immédiat.
+- [x] Prévoir la désactivation de **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** dans MO2 afin d'éviter un doublon immédiat avec Needs Widget AIO.
 - [ ] Reporter l'harmonisation complète avec SunHelm, STB Widgets et les autres éléments HUD à la **méga-session UI / MCM** de la partie définitive : positionnement, fading, opacité, doublons et priorités.
 - [x] Verdict final : **RETENU — faible risque, très bonne intégration avec Vel'dun, forte valeur QoL.**
 
