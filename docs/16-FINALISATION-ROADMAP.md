@@ -290,11 +290,15 @@ Pour chaque mod candidat :
 
 **Dino's Easy Quest Fix**
 
-- [ ] Vérifier prérequis et compatibilité 1.6.1170.
-- [ ] Tester sur une quête jetable / bloquée connue.
-- [ ] Confirmer que le mod sert d'outil d'assistance et ne remplace pas l'analyse via `sqs`, `sqv`, xEdit ou Papyrus lorsqu'une quête est réellement cassée.
-- [ ] Documenter le risque de saut d'étapes/récompenses avant adoption.
-- [ ] Verdict initial : **CANDIDAT PRIORITAIRE — faible risque si utilisé avec discipline**.
+- [x] Vérifier les prérequis et la compatibilité avec le runtime 1.6.1170 : SKSE64, Address Library et SkyUI déjà présents dans la baseline.
+- [x] Installer dans `43 - Added Mods SFW` sans conflit de fichiers MO2.
+- [x] Confirmer le plugin `DinosEasyQuestFix.esp` actif et flaggé ESL.
+- [x] Vérifier la présence des sources fournies par l'auteur : sources Papyrus et sources complètes du composant SKSE/native incluses dans l'archive.
+- [x] Valider le MCM en jeu : les quêtes actives sont correctement listées avec leur stage courant.
+- [x] Valider la vue détaillée sur une quête réelle : affichage du stage courant, texte associé, objectif actif, prochain stage disponible et commande `Advance to next stage`.
+- [x] Confirmer que le mod sert d'outil d'assistance et de diagnostic rapide et ne remplace pas l'analyse via `sqs`, `sqv`, xEdit ou Papyrus lorsqu'une quête est réellement cassée.
+- [x] Règle d'usage retenue : sauvegarde manuelle avant tout avancement forcé ; utiliser `Advance to next stage` uniquement lorsqu'un blocage est identifié, afin d'éviter de sauter récompenses, scripts ou branches nécessaires.
+- [x] Verdict final : **RETENU — faible risque, excellente valeur QoL / diagnostic, fonctionnement validé en jeu.**
 
 **Item Vault - Plugin Explorer**
 
