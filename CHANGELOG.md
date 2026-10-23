@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-23
+
+### Final candidate pass — graphics and QoL validations
+
+- Retained **MESH2 ENB - Max's Edited Silent Horizons 2 1.2.1** as the preferred evolution of the existing **Silent Horizons 2 1.13 + ReShade / Sswaye LUT13** setup.
+- Integrated MESH2 **selectively rather than by full overwrite**: kept the modern SH2 1.13 structure and merged targeted settings for eyes, skin SSS, AO/SSIL, IBL, Complex Grass, Complex Material, Dynamic Cubemap and selected water parameters.
+- Preserved **ENB Manager Set 3** as the clean rollback reference (`SH2 + ReShade Sswaye LUT13`) and retained **Set 4** as the active MESH2 variant (`SH2 + ReShade LUT13 + MESH2`).
+- Isolated the runtime-generated `Shaders/Features/TerrainHelper.ini` into the dedicated MO2 override **MESH2 - TerrainHelper Config**, enabled only with the MESH2 slot.
+- A/B testing favored the MESH2 rendering despite a moderate accepted performance cost on the reference scene (about **63.1 FPS MESH2 vs 70.7 FPS SH2**).
+- Installed and validated **ENB Dynamic Cubemaps 1.01** after **Quality CubeMaps - HD Cube Maps**. No abnormal eye reflections, broken materials or other obvious visual artifacts were observed in-game.
+- Kept `NEFARAM Patches` winning the three intentional cubemap exceptions `chrome_e.dds`, `glacierice_e.dds` and `ore_obsidian_e.dds`; the obsidian file is a genuine 64×64 static cubemap retained as an intentional NEFARAM visual exception.
+- Added and validated **Needs Widget AIO** with the supplied **Vel'dun** preset. It correctly appears in-game and consolidates survival/needs information without replacing the underlying survival systems.
+- Disabled **Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven** as a redundant widget layer; it remains installed for rollback until the final cleanup pass.
+- Added and validated **Dino's Easy Quest Fix**. Its MCM correctly lists active quests, current stages, objectives and next stages; it is retained as a diagnostic/assistance tool, with manual-save-before-advance as the usage rule.
+- Added and validated **Item Vault - Plugin Explorer**. On the Rhiven load order it opened instantly while indexing about **46,831 items across 466 plugins**, and found the custom **Phoenix Katana - Eleanor** within seconds.
+- **AddItemMenu remains active** as the fast familiar item tool. **Modex 3.0.2 - Rhiven** and **Modex - 3.0.2 Patch - Rhiven** were disabled as redundant during the Item Vault comparison; no missing masters appeared. Both remain installed temporarily for rollback until several hours of final-playthrough use confirm they are unnecessary.
+
 ## 2026-10-21
 
 ### NEFARAM 17.3.8 — technical migration complete
