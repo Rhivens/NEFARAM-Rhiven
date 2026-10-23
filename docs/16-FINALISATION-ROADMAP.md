@@ -257,15 +257,23 @@ Pour chaque mod candidat :
 
 #### 5 bis.1 - Graphismes : MESH2 + ENB Dynamic Cubemaps
 
-- [ ] Étudier **MESH2 ENB - Max's Edited Silent Horizons 2** comme évolution possible du Silent Horizons 2 actuellement retenu.
-- [ ] Étudier **ENB Dynamic Cubemaps** dans le même chantier ; ne pas l'évaluer isolément si MESH2 en dépend ou l'exploite.
-- [x] Travailler sur une copie réversible de la configuration ENB actuelle. **Rollback confirmé le 22/10/2026 : ENB and ReShade Manager v5.1.1, Set 3 nommé `SH2 + ReShade Sswaye LUT13`, nom persistant après redémarrage et fichiers du slot vérifiés présents. Utiliser un autre slot (Set 4 recommandé) pour MESH2.**
-- [ ] Comparer visuellement avec **Silent Horizons 2 + ReShade Sswaye LUT13** sur des scènes identiques.
-- [ ] Mesurer FPS / frametimes dans plusieurs contextes : extérieur, forêt, ville, intérieur, neige, pluie et scène lourde.
-- [ ] Tester avec et sans DOF si MESH2 permet ce réglage afin d'isoler le coût réel.
-- [ ] Contrôler les réflexions problématiques éventuelles sur yeux, métaux, armures et surfaces brillantes.
-- [ ] Vérifier la persistance des réglages après redémarrage.
-- [ ] Verdict initial : **À TESTER — risque moyen, bénéfice visuel potentiel élevé**.
+**Verdict au 23/10/2026 : bloc RETENU et validé en jeu.**
+
+- [x] Étudier **MESH2 ENB - Max's Edited Silent Horizons 2 1.2.1** comme évolution de Silent Horizons 2 1.13.
+- [x] Étudier **ENB Dynamic Cubemaps 1.01** dans le même chantier.
+- [x] Travailler sur une copie réversible de la configuration ENB actuelle. **Rollback confirmé : ENB and ReShade Manager v5.1.1, Set 3 = `SH2 + ReShade Sswaye LUT13` ; Set 4 = `SH2 + ReShade LUT13 + MESH2`.**
+- [x] MESH2 n'a **pas** été installé en overwrite brut : les helpers/DOF additionnels ont été ajoutés et les réglages utiles ont été fusionnés sélectivement dans la base SH2 1.13 afin de préserver les paramètres modernes de SH2 (LOD Shadow, weather, fog, extender, etc.).
+- [x] Réglages MESH2 repris de façon ciblée : yeux, SSS peau, AO/SSIL, IBL, Complex Grass, Complex Material, Dynamic Cubemap et une partie du tuning eau.
+- [x] Conserver dans le Slot 4 les valeurs structurelles SH2 1.13 : `EnableDepthOfField=false`, `EnableLens=false`, `EnablePrepass=false`, `EnableLODShadow=true`, `EnableMultipleWeathers=true`.
+- [x] Le fichier généré `Shaders/Features/TerrainHelper.ini` a été rangé dans un mod MO2 dédié **`MESH2 - TerrainHelper Config`**, à activer uniquement lorsque le Slot 4 MESH2 est utilisé.
+- [x] Comparer visuellement MESH2 avec **Silent Horizons 2 + ReShade Sswaye LUT13** sur des scènes identiques. Après plusieurs tests, le rendu MESH2 est préféré.
+- [x] Mesurer l'impact FPS sur scène comparable : relevé indicatif d'environ **63,1 FPS avec MESH2** contre **70,7 FPS avec SH2** sur le point de comparaison utilisé ; coût accepté après tests complémentaires.
+- [x] Contrôler les réflexions sur yeux, métaux, armures, eau et surfaces brillantes : aucun artefact notable observé après réglage.
+- [x] Installer **ENB Dynamic Cubemaps 1.01** après `Quality CubeMaps - HD Cube Maps` dans les Late Loaders afin qu'il gagne les conflits globaux de cubemaps.
+- [x] Conserver `NEFARAM Patches` gagnant sur `chrome_e.dds`, `glacierice_e.dds` et `ore_obsidian_e.dds`. Les deux premiers sont des DDS très légers ; `ore_obsidian_e.dds` est une vraie cubemap statique 64x64 (~25 Ko) conservée comme exception volontaire NEFARAM.
+- [x] Tester ENB Dynamic Cubemaps en jeu : pas d'yeux anormaux, pas de matériaux aberrants, pas de reflet visuellement cassé.
+- [x] Vérifier la persistance des réglages et le retour arrière via le Set 3.
+- [x] Verdict final : **RETENU — MESH2 intégré sélectivement à SH2 1.13 + ENB Dynamic Cubemaps validé. Risque résiduel faible, coût GPU modéré et accepté.**
 
 #### 5 bis.2 - QoL / interface légère
 
