@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-24
+
+### LoversLab final-candidate pass — Approach Redux and Unethical Alchemy
+
+- Installed **SexLab Approach Redux 3.62 - Rhiven** using the **OAR** branch. The only MO2 file conflict observed is with the historical `SKSE Output/SKSE/Plugins/BakaFactory/SLAppAutoMCM.json`; the empty 3.62 JSON is retained as the clean active baseline.
+- Confirmed the 3.62 MCM initializes correctly and exposes the current options, including **OnlyinTown**, **Sex CoolTime** and compatibility toggles for SLHH, BaboDialogue, FillHerUp, SexLab Survival and DDI.
+- Preserved the old `NEFARAM - 263` AutoMCM JSON as a **tuning reference only**. Selected historical values will be reconsidered during the final Mega-session MCM rather than imported blindly; Approach frequency/probability will be kept deliberately lower for Eleanor.
+- xEdit Check for Errors on `SexLab Approach.esp` processed **5,546 records** and identified one VMAD warning group in `SLApproachAskForSex2Quest`: the generated fragment still references aliases 0, 2 and 3 while the quest's current Aliases section is empty. No invasive correction is applied; the AskForSex2 branch is flagged for targeted in-game validation.
+- Installed **Unethical Alchemy 1.0.0 - Rhiven**. Archive is lightweight (ESP + scripts/source + sound), with no MO2 file conflicts and no DLL/OAR/Pandora payload identified.
+- xEdit found one genuine unresolved AI-package reference on **Agryn Gaering**: package FormID `xx002436` did not exist. Created **Unethical Alchemy - Rhiven Fix.esp** as a dedicated override removing only that orphaned package entry while preserving Agryn's seven valid packages.
+- The Rhiven fix passed xEdit **Check for Errors: 0 errors / 2 records** and is enabled immediately after the base mod.
+- Current status for both mods: **technical integration complete / retained for gameplay testing**. Approach still needs autonomous-dialogue/AskForSex2 and overlap testing; Unethical Alchemy still needs Heartwood Mill, Joy, Apothecary and BFNG/abortifacient behavior checks.
+
 ## 2026-10-23
 
 ### Final candidate pass — graphics and QoL validations
