@@ -12,6 +12,19 @@ This file tracks Rhiven additions originally built on the validated NEFARAM 17.3
 
 ## Added mods
 
+### Final candidate pass — validated 23 October 2026
+
+| Mod | Status | Section | Reason / Notes |
+|---|---|---|---|
+| MESH2 ENB - Max's Edited Silent Horizons 2 1.2.1 | Validated / retained | ENB Manager Set 4 / root graphics | Preferred visual variant over stock SH2 after A/B testing. Integrated selectively into SH2 1.13 rather than full overwrite; Set 3 remains rollback. |
+| MESH2 - TerrainHelper Config | Validated | MO2 generated / shader config | Dedicated mod containing generated `Shaders/Features/TerrainHelper.ini`; enable only with the MESH2 ENB slot. |
+| ENB Dynamic Cubemaps 1.01 | Validated | 37 - Late Loaders | Loaded after Quality CubeMaps so dynamic cubemap placeholders win globally; NEFARAM Patches intentionally remains winner for `chrome_e.dds`, `glacierice_e.dds` and `ore_obsidian_e.dds`. No visual anomalies observed in-game. |
+| Needs Widget AIO | Validated / retained | 47 - UI - Rhiven | No MO2 conflicts; Vel'dun preset detected and active in-game. Consolidates needs display while leaving SunHelm / Bathing systems untouched. |
+| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Disabled / rollback retained | 21 - Survival | Disabled because Needs Widget AIO now covers the same hygiene/widget role; keep installed until final cleanup after several stable play hours. |
+| Dino's Easy Quest Fix | Validated / retained | 43 - Added Mods SFW | ESL-flagged plugin; no MO2 conflicts. In-game MCM correctly reports active quest, current stage, objective and next stage. Use only with a manual save before forced advancement. |
+| Item Vault - Plugin Explorer | Validated / retained | 43 - Added Mods SFW | Pure SKSE + assets, no ESP and no MO2 conflicts. Opened instantly with ~46,831 indexed items / 466 plugins; custom Phoenix Katana located in seconds. |
+| Modex 3.0.2 - Rhiven + Modex - 3.0.2 Patch - Rhiven | Disabled / rollback retained | Added Mods SFW / UI helper | Disabled after Item Vault comparison; no missing masters. AddItemMenu remains active. Keep both Modex entries temporarily until the final playthrough confirms no functionality is missed. |
+
 ### Load-order catch-up — NEFARAM 17.3.8
 
 The current **Eleanor Stable 17.3.8** snapshots were cross-checked against this sheet after the controlled migration. Pure version replacements remain documented in [15 - Update 17.3.7 -> 17.3.8](15-UPDATE-17.3.7-TO-17.3.8.md); the table below records meaningful Rhiven additions or content blocks that were missing from this sheet.
@@ -74,7 +87,7 @@ The current **Eleanor Stable 17.3.8** snapshots were cross-checked against this 
 | Bathing in Skyrim - Renewed - Seamless Soap - Rhiven | Validated | 21 - Survival | Renewed-specific seamless soap visual effect |
 | Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES - Rhiven | Validated | 21 - Survival | Optional more-visible bubble effect for Seamless Soap |
 | Bathing in Skyrim - Wash Me - Rhiven | Validated | 21 - Survival | Wash Me Renewed 1.3; Any follower / NSFW / Big basin |
-| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Validated | 21 - Survival | Original widget addon 1.7.2, patched by BiSR for Renewed compatibility |
+| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Disabled / rollback retained | 21 - Survival | Original widget addon 1.7.2, patched by BiSR for Renewed compatibility; now disabled because Needs Widget AIO covers the hygiene widget role. |
 | Gulan0-Female Random Idle 1.0 - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Evaluated successfully with OAR; Seamless Varied Feminine Idles preferred for the player; retained locally as an optional future library. |
 | Gulan0-Female Random Idle 2.0 - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Over 100 additional idle variants; tested but not selected for final setup. |
 | Gulan0 OAR Settings - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Archived idle OAR user config: priority 900009 and 62 disabled variants; no active game files while unchecked. |
