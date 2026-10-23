@@ -2,7 +2,7 @@
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-**Avancement documentaire mis à jour le 22/10/2026 — cible : NEFARAM-Rhiven 1.1.**
+**Avancement documentaire mis à jour le 24/10/2026 — cible : NEFARAM-Rhiven 1.1.**
 
 **L'installation du socle actuellement retenu est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). Une copie complète de l'instance NEFARAM d'origine a permis les essais réversibles. L'instance stable a été remise en place sous `C:\JEUX\NEFARAM` ; l'instance expérimentale Community Shaders est conservée séparément sous `C:\JEUX\NEFARAM_CS`. Une dernière vague de **mods candidats** est maintenant étudiée avant le gel définitif ; aucun de ces candidats n'est considéré comme intégré tant que son audit et, si nécessaire, ses tests dédiés ne sont pas terminés.
 
@@ -138,7 +138,7 @@ Pour chaque pack contenant des JSON :
 **État au 13/10/2026 :** la liste d'installation est terminée et les snapshots sont à jour. Préserver cette base pendant la finalisation ; les corrections nécessaires et les changements retenus lors de l'étude graphique restent possibles sur la copie de travail.
 
 - [ ] Plus aucun mod gameplay ajouté sans nécessité réelle.
-- [ ] Mettre à jour `03-MODS-ADDED.md`.
+- [x] Mettre à jour `03-MODS-ADDED.md` au fil des candidats retenus ; dernière mise à jour : 24/10/2026.
 - [ ] Mettre à jour `04-MODS-REMOVED.md` pour les candidats rejetés / retirés si pertinent.
 - [x] Mettre à jour le snapshot MO2 gauche : [liste Rhiven actuelle](../load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md).
 - [x] Mettre à jour le snapshot plugins / load order : [liste Rhiven actuelle](../load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md).
@@ -163,7 +163,7 @@ Les éventuels correctifs techniques se font sur la copie de travail, sans recon
 - [x] Identifier l'emplacement du patch Modern Wait Menu dans **Vel'dun UI Overhauls** (et non dans Vel'dun UI Patches), sélectionner Modern Wait Menu et le reskin Bestiary 16:9, conserver Quest Journal sur Skip (QJO non installé).
 - [ ] Valider une attente complète, ESC, Favoris et Bestiaire avec contenu ; confirmer STB Active Effects lorsque le PJ a des effets.
 - [ ] Préparer la traduction externe `Translation.json` d'Outfit Gallery 1.0.15 dans la phase FR (format à vérifier). Conserver l'automatisation des tenues des compagnons désactivée.
-- [ ] Finaliser **Phoenix Katana** : installation, personnalisation des records dans un plugin Rhiven séparé, tests Eleanor ; tâche prévue avant les traductions.
+- [x] **Phoenix Katana** est désormais installé avec son plugin de personnalisation Eleanor ; validation finale en jeu/traduction reste suivie dans le contrôle pré-playthrough.
 - [ ] Suivre le **chantier HUD détaillé** dans [guides/HUD/README.md](guides/HUD/README.md) ; ne pas dupliquer ici ses choix et ses tests.
 
 Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
@@ -229,7 +229,7 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ## Phase 5 bis - Étude des derniers candidats avant gel définitif
 
-**État au 22/10/2026 :** cette phase est ouverte après la migration 17.3.8 et avant la francisation finale. Elle ne constitue **pas** une liste de mods à installer automatiquement. Chaque candidat doit être audité, classé puis seulement éventuellement intégré sur une copie/profil de test.
+**État au 24/10/2026 :** cette phase est toujours ouverte après la migration 17.3.8 et avant la francisation finale. Les blocs graphismes et QoL sont retenus ; Horde a été rejeté au profit de NFF ; LL Integration 0.8 a passé son essai contrôlé ; SexLab Approach Redux 3.62 et Unethical Alchemy 1.0.0 sont techniquement intégrés et passent désormais en validation gameplay. Les candidats lourds restent à traiter.
 
 ### Procédure standard d'étude
 
@@ -315,32 +315,30 @@ Pour chaque mod candidat :
 
 #### 5 bis.3 - Framework followers : Horde contre NFF
 
-- [ ] Étudier **Horde - A Light-Weight SKSE Follower Management System** comme remplacement potentiel de Nether's Follower Framework.
-- [ ] Traiter ce point comme un **chantier structurel séparé**, jamais comme un simple ajout.
-- [ ] Auditer tous les éléments NFF actuellement actifs :
-  - `Nether's Follower Framework`;
-  - `Generated Voice Pack for Nether's Follower Framework`;
-  - `Nether's Follower Framework - Legacy Settings Loader`;
-  - `nwsFollowerFramework.esp`;
-  - `Nether's Follower Framework - Settings Loader.esp`;
-  - `SDA NFF Patch.esp`.
-- [ ] Rechercher dans xEdit tous les plugins ayant NFF comme master ou patch direct.
-- [ ] Vérifier spécifiquement **Serana Dialogue Add-On** et son patch NFF.
-- [ ] Vérifier **Devious Followers** séparément : ne pas supposer qu'il nécessite ou n'utilise pas NFF avant audit de ses masters, scripts et description.
-- [ ] Étudier migration des followers actifs/configurations et comportement des followers spéciaux.
-- [ ] Préparer un rollback complet avant tout test.
-- [ ] Verdict initial : **À ÉTUDIER EN PROFONDEUR — risque élevé / remplacement de framework**.
+**Verdict au 23/10/2026 : HORDE REJETÉ / NFF CONSERVÉ.**
+
+- [x] Installer et auditer **Horde 3.0.1** comme remplacement potentiel de Nether's Follower Framework : archive propre, aucun conflit MO2, `Horde.esp` ESL-flagged.
+- [x] Confirmer que Horde couvre les fonctions principales recherchées : gestion de groupe, follow/wait/summon/dismiss, homes, sandbox, équipements, commandes et jusqu'à 20 followers.
+- [x] Tester la désactivation contrôlée du stack NFF.
+- [x] Le test de retrait a révélé que `nwsFollowerFramework.esp` est master direct de nombreux plugins générés / NEFARAM, notamment plusieurs `Synthesis_*.esp`, `_NEFARAM_PEGI16_DeviousFollower.esp`, `_NEFARAM_PEGI18_Babo.esp`, `_NEFARAM_____MAIN_____.esp` et `SDA NFF Patch.esp`.
+- [x] Conclusion : remplacer NFF imposerait une régénération Synthesis et une chirurgie sur plusieurs patches NEFARAM, sans bénéfice proportionné pour un gameplay où les followers sont rarement utilisés.
+- [x] Réactiver NFF et restaurer le load order d'origine après l'essai ; contrôle qualité effectué à partir du snapshot du panneau droit.
+- [x] **Horde a été supprimé du build.**
+- [x] **Nether's Follower Framework 2.8.5 reste la solution retenue.**
+- [x] `Outfit Gallery - Visual Outfit Manager 1.0.16` reste la solution existante pour les tenues ; aucun framework supplémentaire de type PrismaUI n'est ajouté.
+- [x] Nouvelle règle de sécurité issue de ce test : **backup panneau gauche + panneau droit/load order avant toute désactivation/réactivation de mods pour essai**.
+- [x] Verdict final : **REJETÉ — intérêt fonctionnel réel, mais coût d'intégration disproportionné et dépendances transversales trop nombreuses.**
 
 #### 5 bis.4 - LoversLab : intégrations légères et sociales
 
 Les fiches LoversLab sont préparées à partir des descriptions copiées par Fabien avant décision.
 
-- [ ] **SexLab Approach Redux 3.62** — installé en essai contrôlé. L'initialisation MCM avec le `SLAppAutoMCM.json` vide fourni par 3.62 est validée : MCM complet, nouvelles options `OnlyinTown` et `Sex CoolTime` présentes. Un ancien preset généré `NEFARAM - 263` a été retrouvé dans `SKSE Output` ; il sert désormais de **référence de tuning**, pas de configuration active. Voir [SEXLAB-APPROACH-REDUX-INTEGRATION.md](guides/SEXLAB-APPROACH-REDUX-INTEGRATION.md).
-- [x] **Unethical Alchemy 1.0.0** — fiche créée : [UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md](guides/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md). Petit contenu localisé à Heartwood Mill ; audit restant : implémentation de Joy, conflits alchimie/Apothecary, dépendances SexLab et comportement de l'abortifacient. L'intégration grossesse documentée par l'auteur vise Hentai Pregnancy, alors que Rhiven utilise Beeing Female NG : traiter cette fonction comme RP-only tant qu'une compatibilité BFNG n'est pas démontrée.
+- [x] **SexLab Approach Redux 3.62** — **TECHNIQUEMENT VALIDÉ / GAMEPLAY À TESTER**. Installé avec la branche OAR ; seul conflit MO2 notable : ancien `SLAppAutoMCM.json` dans `SKSE Output`. Le JSON vide 3.62 est conservé comme baseline propre ; MCM complet, `OnlyinTown`, `Sex CoolTime` et toggles SLHH/Babo/FillHerUp/Survival/DDI présents. xEdit : 5 546 records, un warning VMAD connu dans `SLApproachAskForSex2Quest` (aliases 0/2/3 orphelins dans le fragment généré, section Aliases actuelle vide). Aucun correctif invasif : la branche AskForSex2 sera testée in-game. Le preset `NEFARAM - 263` reste une **référence de tuning** ; fréquence/probabilité Approach volontairement réduite pour Eleanor. Voir [SEXLAB-APPROACH-REDUX-INTEGRATION.md](guides/SEXLAB-APPROACH-REDUX-INTEGRATION.md).
+- [x] **Unethical Alchemy 1.0.0** — **TECHNIQUEMENT CORRIGÉ / GAMEPLAY À TESTER**. Installé sans conflit MO2 ; archive légère (ESP + scripts/source + sons). xEdit a trouvé une référence AI-package orpheline sur `Agryn Gaering` (`xx002436`, introuvable). Création de `Unethical Alchemy - Rhiven Fix.esp`, chargé après le mod principal, supprimant uniquement cette entrée morte et conservant les 7 packages valides ; **Check for Errors du fix : 0 erreur / 2 records**. Reste à tester Heartwood Mill, dialogues/training, Joy, interactions Apothecary et comportement de l'abortifacient. L'intégration grossesse documentée vise Hentai Pregnancy ; sous Rhiven/Beeing Female NG, traiter l'abortifacient comme RP-only tant qu'une compatibilité BFNG n'est pas démontrée. Voir [UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md](guides/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md).
 - [x] **SLSF Fame Comments Reloaded 1.3 SE** — fiche créée : [SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md](guides/SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md). Le mod est déjà actif dans la baseline avec `FameCommentsReloaded.esp` et `SLSF Comments Voice`; travail restant : confirmer l'archive 1.3, documenter/tuner le MCM, contrôler les Fame Events et préparer la coexistence avec Public Whore Comments / SexLab Approach.
 - [x] **Public Whore Comments 1.7** — fiche d'intégration créée : [PUBLIC-WHORE-COMMENTS-INTEGRATION.md](guides/PUBLIC-WHORE-COMMENTS-INTEGRATION.md). Public Whore et FameComments sont déjà présents ; audit restant : compatibilité réelle avec SLO/OSL Aroused NG et test de densité PWC + SLSF Fame Comments.
 - [ ] Décider l'ordre d'intégration des mods sociaux uniquement après comparaison de leurs hooks, dialogues et fréquence d'événements.
-- [ ] Verdict global initial : **CANDIDATS — audit documentaire requis avant installation**.
+- [ ] Verdict global du bloc : **EN COURS** — Approach 3.62 et Unethical Alchemy sont techniquement intégrés ; SLSF Fame Comments est déjà actif ; Public Whore Comments reste à évaluer/tuner avec les autres systèmes sociaux avant fermeture du bloc.
 
 #### 5 bis.5 - LoversLab : gros contenus / systèmes lourds
 
@@ -395,10 +393,11 @@ Ces outils ne sont pas des composants du modpack actif et peuvent être évalué
 - [x] Fiche technique créée : [LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md](guides/LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md).
 - [x] Classé comme **outil externe de workflow navigateur ↔ bridge local ↔ MO2**, sans impact direct sur le runtime Skyrim.
 - [x] Auditer le dépôt officiel, la politique de confidentialité, les permissions Firefox et le stockage des cookies avant installation. Audit source effectué sur `tricktricktrick/LL-Integration` : cookies LoversLab filtrés côté Firefox puis stockés localement en JSON non chiffré ; permissions et stockage documentés ; dépôt source-available.
-- [ ] Tester d'abord **Firefox + installateur MO2 normal**, sans toolbar expérimentale, sur une archive LoversLab inoffensive.
-- [ ] Utiliser initialement le mode d'update **Download only** ; ne jamais remplacer automatiquement un mod Rhiven.
-- [ ] Valider la détection de l'instance MO2, le chemin Downloads, les écritures `meta.ini`, le source linking, l'update check et Voice Finder avant adoption.
-- [ ] Statut : **RECOMMANDÉ POUR ESSAI CONTRÔLÉ — forte valeur potentielle / risque opérationnel moyen / risque runtime Skyrim nul**.
+- [x] Tester **Firefox + installateur MO2 normal**, sans toolbar expérimentale : installation réussie, entrée `Tools > LL Integration` visible dans MO2.
+- [x] Politique retenue : mode d'update **Download only** / installation manuelle ; ne jamais remplacer automatiquement un mod Rhiven.
+- [x] Détection active validée : bridge natif `C:\Users\Rhiven\AppData\Local\LLIntegration\native-app`, plugin MO2 `C:\JEUX\NEFARAM\plugins\ll_integration`, cible active `C:\JEUX\NEFARAM`, Downloads `D:\SKYRIM SE - Downloads`, cookies LoversLab exportés vers le stockage local JSON.
+- [x] Capture navigateur validée depuis **LoversLab** puis depuis une source externe **SubscribeStar/CloudFront** : les archives ont été déposées correctement dans MO2 Downloads. **Statut : RETENU comme outil de maintenance externe**, avec risque runtime Skyrim nul et règles de prudence sur cookies/métadonnées.
+- [ ] **Voice Finder et update-check approfondis restent optionnels à valider plus tard** ; ils ne bloquent pas l'adoption du workflow capture/source actuel.
 
 ### Critère de fermeture de la phase 5 bis
 
