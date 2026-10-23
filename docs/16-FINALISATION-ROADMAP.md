@@ -279,12 +279,14 @@ Pour chaque mod candidat :
 
 **Needs Widget AIO**
 
-- [ ] Vérifier les dépendances exactes et confirmer la compatibilité avec le runtime 1.6.1170.
-- [ ] Comparer avec le widget SunHelm / Nordic UI actuellement présent.
-- [ ] Vérifier la lecture des données SunHelm et Bathing in Skyrim Renewed.
-- [ ] Tester sans modifier les moteurs de besoins eux-mêmes.
-- [ ] Vérifier conflits UI, positionnement, sauvegarde des réglages et coût HUD.
-- [ ] Verdict initial : **CANDIDAT PRIORITAIRE — faible à moyen risque**.
+- [x] Vérifier les dépendances exactes et confirmer la compatibilité avec le runtime 1.6.1170 : SKSE, Address Library et SKSE Menu Framework déjà présents dans la baseline.
+- [x] Installer le mod dans le bloc UI/HUD sans conflit de fichiers MO2 ; structure autonome `Interface/NeedsWidget` + `SKSE/Plugins/NeedsWidget`.
+- [x] Confirmer la présence du preset `Vel'dun.ini` et son activation en jeu : preset **Vel'dun** affiché comme **In use** dans le menu du mod.
+- [x] Vérifier l'apparition et le fonctionnement du widget en jeu avec les besoins actifs ; intégration visuelle jugée propre et lisible.
+- [x] Confirmer qu'il agit comme couche d'affichage uniquement et ne remplace pas les moteurs de besoins existants.
+- [x] Prévoir la désactivation du widget Bathing in Skyrim ajouté séparément dans MO2 afin d'éviter un doublon immédiat.
+- [ ] Reporter l'harmonisation complète avec SunHelm, STB Widgets et les autres éléments HUD à la **méga-session UI / MCM** de la partie définitive : positionnement, fading, opacité, doublons et priorités.
+- [x] Verdict final : **RETENU — faible risque, très bonne intégration avec Vel'dun, forte valeur QoL.**
 
 **Dino's Easy Quest Fix**
 
