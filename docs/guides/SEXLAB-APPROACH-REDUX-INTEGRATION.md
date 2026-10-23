@@ -1,6 +1,6 @@
 # SexLab Approach Redux 3.62 — Integration & Test Protocol
 
-> **Status:** candidate mod / not currently present in the NEFARAM-Rhiven 17.3.7 snapshot  
+> **Status:** installed / technical validation complete / gameplay validation pending  
 > **Target build:** NEFARAM-Rhiven after migration to **17.3.8** and stabilization  
 > **Documented version:** **3.62**  
 > **Scope:** compatibility verification, controlled integration, interaction testing, MCM tuning and rollback  
@@ -201,6 +201,31 @@ Check:
 - plugin errors.
 
 Run **Check for Errors**.
+
+### 11.1 xEdit result on 3.62
+
+`SexLab Approach.esp` was checked with SSEEdit 4.1.5.
+
+Result:
+
+- processed records: **5,546**;
+- xEdit result: **1 warning/error group**;
+- affected quest: `SLApproachAskForSex2Quest "SLApproachAsktoOtherQuest" [QUST:xx012AFD]`;
+- affected generated quest-fragment script: `SLApp_QF_AskForSex2Quest_04012AFD`;
+- three VMAD properties reference quest aliases that no longer exist:
+  - `Alias_initialActor -> Alias[0]`;
+  - `Alias_PlayerRef -> Alias[2]`;
+  - `Alias_TargetActor -> Alias[3]`;
+- the quest's current **Aliases** section is empty, confirming that these are orphaned alias references in the generated fragment.
+
+Decision:
+
+- **do not edit or auto-clean this VMAD/quest fragment**;
+- treat it as a known structural warning, most likely a leftover from an earlier quest layout;
+- specifically test the `AskForSex2` / ask-other branch in-game;
+- if the branch works and no Papyrus/scene failure appears, retain the mod without invasive correction.
+
+This warning does **not** prevent the plugin from loading, registering its MCM or exposing the new 3.62 settings.
 
 Do not clean automatically without confirming whether records are intentional.
 
@@ -613,10 +638,10 @@ After validation, record here:
 
 ## 29. Current decision
 
-**Installed for controlled testing — 3.62 clean MCM initialization validated.**
+**TECHNICALLY VALIDATED / RETAINED FOR IN-GAME TESTING — SexLab Approach Redux 3.62.**
 
 The mod is especially promising for NEFARAM-Rhiven because most of its required and optional ecosystem is already present.
 
-Its main integration challenge is not technical dependency coverage but preventing excessive or conflicting autonomous event triggers.
+Technical installation, file-conflict review and clean MCM initialization are validated. The single xEdit issue is the documented orphaned-alias VMAD warning in `SLApproachAskForSex2Quest`; no invasive correction is planned before functional testing.
 
-Test it on a cloned 17.3.8 profile before the final Eleanor game is started.
+Its main remaining integration challenge is gameplay: confirm autonomous approaches and the AskForSex2 branch, then tune event density conservatively alongside SLHH, BaboDialogue, SexLab Survival, TDF and Dangerous Nights. Final Eleanor settings should use a lower approach frequency/probability than an aggressive default stack.
