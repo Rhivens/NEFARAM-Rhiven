@@ -23,6 +23,7 @@ Baseline actuelle : **NEFARAM 17.3.8**, profil MO2 **Eleanor Stable 17.3.8**.
 ## Phase 0 - Règles de travail
 
 - [ ] Installer et tester **un bloc logique à la fois**.
+- [ ] **Avant toute désactivation/réactivation de mods pour un test MO2, créer un backup du panneau gauche et du panneau droit / load order des plugins.** Restaurer ou comparer après le test avant de poursuivre.
 - [ ] Conserver une sauvegarde de test jetable pour les validations pré-finales.
 - [ ] Ne pas considérer comme compatible un ancien mod uniquement parce qu'il fonctionnait sous l'ancien NEFARAM V16.
 - [ ] Pour les anciens mods issus de V16, contrôler les dépendances modernes avant installation : runtime Skyrim, SKSE, Address Library, DLL éventuelles, SexLab, Papyrus, animations et frameworks associés.
@@ -334,7 +335,7 @@ Pour chaque mod candidat :
 
 Les fiches LoversLab sont préparées à partir des descriptions copiées par Fabien avant décision.
 
-- [ ] **SexLab Approach Redux 3.61** — fiche déjà présente ; reprendre l'audit après stabilisation 17.3.8.
+- [ ] **SexLab Approach Redux 3.62** — installé en essai contrôlé. L'initialisation MCM avec le `SLAppAutoMCM.json` vide fourni par 3.62 est validée : MCM complet, nouvelles options `OnlyinTown` et `Sex CoolTime` présentes. Un ancien preset généré `NEFARAM - 263` a été retrouvé dans `SKSE Output` ; il sert désormais de **référence de tuning**, pas de configuration active. Voir [SEXLAB-APPROACH-REDUX-INTEGRATION.md](guides/SEXLAB-APPROACH-REDUX-INTEGRATION.md).
 - [x] **Unethical Alchemy 1.0.0** — fiche créée : [UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md](guides/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md). Petit contenu localisé à Heartwood Mill ; audit restant : implémentation de Joy, conflits alchimie/Apothecary, dépendances SexLab et comportement de l'abortifacient. L'intégration grossesse documentée par l'auteur vise Hentai Pregnancy, alors que Rhiven utilise Beeing Female NG : traiter cette fonction comme RP-only tant qu'une compatibilité BFNG n'est pas démontrée.
 - [x] **SLSF Fame Comments Reloaded 1.3 SE** — fiche créée : [SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md](guides/SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md). Le mod est déjà actif dans la baseline avec `FameCommentsReloaded.esp` et `SLSF Comments Voice`; travail restant : confirmer l'archive 1.3, documenter/tuner le MCM, contrôler les Fame Events et préparer la coexistence avec Public Whore Comments / SexLab Approach.
 - [x] **Public Whore Comments 1.7** — fiche d'intégration créée : [PUBLIC-WHORE-COMMENTS-INTEGRATION.md](guides/PUBLIC-WHORE-COMMENTS-INTEGRATION.md). Public Whore et FameComments sont déjà présents ; audit restant : compatibilité réelle avec SLO/OSL Aroused NG et test de densité PWC + SLSF Fame Comments.
@@ -493,6 +494,7 @@ Cette phase complète la checklist `13-PRE-PLAYTHROUGH-CHECKLIST.md`.
 ### 8.2 Mega-session MCM
 
 - [ ] Appliquer le preset NEFARAM prévu.
+- [ ] **SexLab Approach Redux 3.62 :** partir des defaults propres 3.62, puis reprendre sélectivement les bonnes idées du preset historique `NEFARAM - 263` plutôt que l'importer en bloc. À revoir explicitement : SLHH, BaboDialogue, DDI, SexLab Survival, `basechancemultiplier=0.7`, fréquence 70 s, seuils d'arousal 25/25/80, `Unique Actor`, relation minimum, `OnlyinTown` et `Sex CoolTime`. Conserver une densité d'événements modérée.
 - [ ] Configurer les MCM par blocs logiques.
 - [ ] Régler les systèmes SexLab / arousal / tatouages retenus.
 - [ ] Régler survie / besoins / hygiène.
