@@ -12,6 +12,14 @@ This file tracks Rhiven additions originally built on the validated NEFARAM 17.3
 
 ## Added mods
 
+### LoversLab final candidates — 24 October 2026
+
+| Mod | Status | Section | Reason / Notes |
+|---|---|---|---|
+| SexLab Approach Redux 3.62 - Rhiven | Technically validated / gameplay test pending | 46 - Added Mods NSFW | Installed with OAR. Clean 3.62 MCM initialization validated; historical `NEFARAM - 263` AutoMCM kept only as tuning reference. xEdit: 5,546 records, one orphaned-alias VMAD warning group in `SLApproachAskForSex2Quest`; no invasive fix, targeted AskForSex2 in-game test required. Final MCM will use lower approach frequency/probability. |
+| Unethical Alchemy - Rhiven | Technically corrected / gameplay test pending | 46 - Added Mods NSFW | Lightweight ESP/scripts/sound mod; no MO2 file conflicts. Original ESP contains one unresolved Agryn Gaering AI-package reference (`xx002436`). |
+| Unethical Alchemy - Rhiven Fix | xEdit validated / retained | 46 - Added Mods NSFW | Dedicated override removes only Agryn's orphaned package reference and preserves seven valid packages. Check for Errors: **0 errors / 2 records**. Load after base Unethical Alchemy. |
+
 ### Final candidate pass — validated 23 October 2026
 
 | Mod | Status | Section | Reason / Notes |
