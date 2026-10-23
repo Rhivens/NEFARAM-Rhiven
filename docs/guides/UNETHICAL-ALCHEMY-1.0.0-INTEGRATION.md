@@ -1,6 +1,6 @@
 # Unethical Alchemy 1.0.0 — Integration Study
 
-> **Status:** candidate / not yet integrated  
+> **Status:** installed / structural fix applied / gameplay validation pending  
 > **Target build:** NEFARAM-Rhiven **17.3.8** / profile **Eleanor Stable 17.3.8**  
 > **Documented version:** **1.0.0**  
 > **Source:** user-supplied LoversLab description  
@@ -256,7 +256,53 @@ Do not modify the fertility system merely to make this small side feature work.
 
 ---
 
-## 10. Required archive audit
+## 10. Installation and structural audit — 24/10/2026
+
+### Archive / MO2
+
+Installed as:
+
+- `Unethical Alchemy - Rhiven`;
+- archive content observed: `scripts/`, `sound/`, `source/`, `unethicalalchemy.esp`, `meta.ini`;
+- no DLL/SKSE binary;
+- no OAR/Pandora animation payload identified;
+- no MO2 file conflicts observed.
+
+### xEdit Check for Errors — original plugin
+
+SSEEdit 4.1.5 reported **1 real unresolved reference** in `unethicalalchemy.esp`:
+
+- NPC: `nec_slavemaster "Agryn Gaering" [NPC_:xx000D68]`;
+- package list entry #0 referenced `[xx002436]`;
+- xEdit result: `<Error: Could not be resolved>`;
+- direct FormID search confirmed that record `xx002436` does not exist in the loaded plugin/master set.
+
+Agryn's seven remaining AI packages resolve correctly.
+
+### Rhiven fix
+
+Created dedicated override:
+
+`Unethical Alchemy - Rhiven Fix.esp`
+
+Fix scope:
+
+- overrides only Agryn Gaering;
+- removes only the orphaned package entry `xx002436`;
+- preserves all seven valid AI packages and all other NPC data;
+- loaded after `unethicalalchemy.esp`.
+
+Validation:
+
+- `Unethical Alchemy - Rhiven Fix.esp` Check for Errors;
+- processed records: **2**;
+- **Errors found: 0**.
+
+This is a targeted compatibility/quality fix and the original mod plugin is not edited directly.
+
+---
+
+## 11. Required archive audit
 
 Before any install:
 
@@ -275,7 +321,7 @@ Before any install:
 
 ---
 
-## 11. Test profile
+## 12. Test profile
 
 Suggested profile:
 
@@ -287,7 +333,7 @@ Do not test first on the definitive stable save.
 
 ---
 
-## 12. Functional test plan
+## 13. Functional test plan
 
 ### Quest / dialogue
 
@@ -333,7 +379,7 @@ Without Hentai Pregnancy:
 
 ---
 
-## 13. xEdit checklist
+## 14. xEdit checklist
 
 Check conflicts with:
 
@@ -357,7 +403,7 @@ Priority focus:
 
 ---
 
-## 14. Translation implications
+## 15. Translation implications
 
 If retained, translate:
 
@@ -374,7 +420,7 @@ Add final translation work to `docs/07-TRANSLATIONS-FR.md` only when the mod is 
 
 ---
 
-## 15. Rollback
+## 16. Rollback
 
 If rejected during testing:
 
@@ -397,9 +443,9 @@ If retained later, document exact:
 
 ---
 
-## 16. Provisional verdict
+## 17. Current verdict
 
-**CANDIDATE — LOW/MEDIUM STRUCTURAL RISK, WITH ONE IMPORTANT FUNCTIONAL MISMATCH.**
+**TECHNICALLY CORRECTED / RETAINED FOR IN-GAME TESTING — LOW/MEDIUM STRUCTURAL RISK, WITH ONE IMPORTANT FUNCTIONAL MISMATCH.**
 
 ### Positive points
 
@@ -422,3 +468,25 @@ Moderate.
 Worth testing if Fabien likes the content, but there is no reason to alter the current fertility framework solely for this mod.
 
 **Roadmap verdict:** **CANDIDATE À ÉTUDIER — prometteur, probablement léger, fertilité à traiter séparément.**
+
+
+---
+
+## 18. 24/10/2026 checkpoint
+
+Current Rhiven state:
+
+- base mod installed and enabled;
+- no MO2 file conflicts;
+- one invalid Agryn AI-package reference found in the original ESP;
+- dedicated `Unethical Alchemy - Rhiven Fix.esp` created and enabled directly after the base mod;
+- fix passes xEdit with **0 errors**;
+- remaining work is functional rather than structural.
+
+Next gameplay checks:
+
+1. Agryn pathing / daily AI at Heartwood Mill;
+2. introduction/dialogue/training flow;
+3. Joy implementation and persistence;
+4. alchemy behavior under Apothecary;
+5. abortifacient behavior with **Beeing Female NG**, treated as RP-only unless compatibility is proven.
