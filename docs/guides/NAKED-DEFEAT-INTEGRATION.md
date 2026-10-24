@@ -1,11 +1,11 @@
 # NEFARAM 17.3.8 — Migration from Practical Defeat / Yamete Kudasai to Naked Defeat 6.50
 
-> **Status: TECHNICALLY VERIFIED AND VALIDATED — IN-GAME TESTING IN PROGRESS**
+> **Status: CORE GAMEPLAY VALIDATED — EXTENDED PLAYTESTING ONGOING**
 >
 > This guide documents the current NEFARAM-Rhiven migration from the stock / previous defeat stack based on **Acheron + Practical Defeat Reanimated + Yamete Kudasai** to a cleaner architecture based on **Acheron + Naked Defeat 6.50**.
 >
 > The integration has been reviewed at file, script, OAR, plugin and xEdit level. The required bridge and Rhiven corrective patch have both passed static validation.  
-> **The remaining phase is real in-game validation.** Until the smoke tests below are completed, this setup must be considered a tested technical integration rather than a final gameplay-certified release.
+> Core in-game defeat, recovery and consequence flows have now also been validated. Extended playtesting remains ongoing, so final MCM balance and edge-case tuning may still change during a full playthrough.
 
 ---
 
@@ -482,6 +482,8 @@ Use a disposable test save / dedicated test profile.
 
 ### Before testing
 
+> **First launch:** enable Naked Defeat in its MCM before configuring hotkeys. If the mod itself is not enabled, key rebinding may appear not to work.
+
 - [ ] `YameteKudasai` disabled in MO2
 - [ ] `YameteKudasai.esp` absent from active plugins
 - [ ] `Practical Defeat Reanimated` disabled
@@ -596,15 +598,24 @@ If Naked Defeat fails the smoke test, restore the previous defeat stack rather t
 
 ### Still in progress
 
-- [ ] Pandora regeneration after final disable state
-- [ ] humanoid defeat test
-- [ ] creature defeat test
+- [x] Pandora regeneration after final disable state
+- [x] humanoid defeat test
+- [x] creature defeat test
 - [ ] follower defeat test
-- [ ] bleedout recovery validation
-- [ ] repeated-event validation
-- [ ] save / reload validation
-- [ ] final MCM tuning
+- [x] bleedout recovery validation
+- [x] repeated-event validation
+- [x] save / reload validation
+- [ ] final MCM tuning during the final playthrough
 - [ ] final verdict for the stable NEFARAM-Rhiven profile
+
+### Known minor observations
+
+- **Bathing in Skyrim / Golden Shower:** the Naked Defeat handoff successfully triggers the Bathing in Skyrim cleaning animation, but dirt/cum visual layers may not always be removed correctly depending on the setup. This is currently treated as non-blocking.
+- After fully disabling **Yamete Kudasai** and **Practical Defeat**, old empty MCM entries may remain registered in an existing save. A SkyUI MCM refresh can remove those stale menus:
+
+```text
+setstage ski_configmanagerinstance 1
+```
 
 ---
 
@@ -628,17 +639,17 @@ The following parts have already been checked and validated:
 
 However:
 
-> **The migration is currently in the IN-GAME TESTING phase.**
+> **Core gameplay has now been validated in-game. Extended playtesting is still ongoing.**
 
-Do not present the current build as fully gameplay-certified until the smoke-test checklist has passed.
+The current build is suitable for continued playtesting, while final balancing and less common edge cases remain subject to adjustment during the final playthrough.
 
 For users who want maximum safety, keep a copy of the original NEFARAM defeat stack and do the first tests on a cloned MO2 profile.
 
 ---
 
-## 21. Rhiven target state after successful validation
+## 21. Rhiven target state after core validation
 
-If all in-game tests pass, the intended final defeat stack becomes:
+With the core in-game validation passed, the intended defeat stack is:
 
 ```text
 Acheron - Death Alternative 1.11.3 - Rhiven
