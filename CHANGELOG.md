@@ -2,6 +2,21 @@
 
 ## 2026-10-24
 
+### Defeat-system migration — Naked Defeat 6.50
+
+- Began the controlled migration of the NEFARAM defeat stack from **Acheron + Practical Defeat Reanimated + Yamete Kudasai** to **Acheron + Naked Defeat 6.50**.
+- Retained **Acheron 1.11.3**, **Acheron - Simple Recover** and **Acheron - Diary of Mine Extension** as the framework/support layer; disabled **Practical Defeat Reanimated**, its voicepack and the complete **YameteKudasai** MO2 mod for deterministic testing.
+- Installed and audited **Naked Defeat 6.50**, **Acheron - Naked Defeat Bridge**, and the optional OAR packages. **Bowed Animations - fixed** is retained; **Crawl Animations V2** remains installed but disabled because Bowed overwrites the same locomotion files.
+- Created **Naked Defeat - Rhiven Fix.esp** with only four targeted overrides: two malformed wrist-chain ARMA records and two malformed WEAP CRDT records. xEdit Check for Errors: **0 errors / 5 processed records**.
+- Validated **Acheron - Naked Defeat Bridge.esp** in xEdit: **0 errors / 3 processed records**. The target runtime chain is now **Acheron → Acheron Bridge → Naked Defeat**.
+- Identified an incomplete **Civilian Rape** branch in Naked Defeat 6.50: the active `qst2` property points to a missing quest. Required Rhiven workaround: **`IndecencyRapeProb = 0`** in the Naked Defeat MCM.
+- Audited Naked Defeat's remaining xEdit warnings and deliberately left obsolete / unreferenced quest, package, dialogue and scene residue untouched instead of performing blind cleanup.
+- Reviewed Yamete Kudasai scripts and Acheron consequence YAML; the overlap with Naked Defeat is high enough to make concurrent testing unreliable and community troubleshooting also identifies the combination as incompatible.
+- Reused the former Practical Defeat plugin area for the final relative order: **`Naked Defeat.esp → Naked Defeat - Rhiven Fix.esp → Acheron - Naked Defeat Bridge.esp`**.
+- Added a full English migration guide for NEFARAM users: [Naked Defeat integration](docs/guides/NAKED-DEFEAT-INTEGRATION.md), including a placeholder for the future public Rhiven Fix download.
+- Current status: **technical integration verified and validated; in-game testing in progress**. Remaining critical checks include humanoid/creature/follower defeat, repeated events, Acheron bleedout recovery, actor release/pacification cleanup, and save/reload stability.
+
+
 ### LoversLab final-candidate pass — Approach Redux and Unethical Alchemy
 
 - Installed **SexLab Approach Redux 3.62 - Rhiven** using the **OAR** branch. The only MO2 file conflict observed is with the historical `SKSE Output/SKSE/Plugins/BakaFactory/SLAppAutoMCM.json`; the empty 3.62 JSON is retained as the clean active baseline.
