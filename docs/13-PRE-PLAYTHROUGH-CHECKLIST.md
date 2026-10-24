@@ -83,6 +83,25 @@ Rule:
 - [ ] Check for obvious hotkey conflicts before the real start.
 - [ ] Confirm the final paper map / FWMF setup remains intact after all additions.
 
+### Naked Defeat migration — before definitive New Game
+
+- [ ] Keep the defeat stack in the validated Rhiven architecture:
+  - `Acheron - Death Alternative 1.11.3 - Rhiven`
+  - `Acheron - Simple Recover`
+  - `Acheron - Diary of Mine Extension`
+  - `Naked Defeat - Rhiven`
+  - `Naked Defeat - Rhiven Fix`
+  - `Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven`
+  - `Naked Defeat - EXTRA - OAR Bowed Animations fixed - Rhiven`
+- [ ] Keep `YameteKudasai`, `Practical Defeat Reanimated`, `Practical Defeat Reanimated Voicepack` and `Naked Defeat - EXTRA - OAR Crawl Animations V2` disabled unless a later documented rollback is intentionally performed.
+- [ ] Confirm active plugin order remains:
+  - `Naked Defeat.esp`
+  - `Naked Defeat - Rhiven Fix.esp`
+  - `Acheron - Naked Defeat Bridge.esp`
+- [ ] Run Pandora after the final Yamete Kudasai disable state and confirm generation completes without blocking errors.
+- [ ] Confirm the Naked Defeat migration guide remains current: [NAKED-DEFEAT-INTEGRATION.md](guides/NAKED-DEFEAT-INTEGRATION.md).
+- [ ] Do not mark the migration gameplay-validated until the dedicated in-game smoke tests pass.
+
 ### Final technical pass
 
 - [ ] Run Pandora after the last animation-related installation / update.
@@ -118,6 +137,13 @@ These tasks are intentionally performed only after the definitive playthrough ha
 
 ### Mega MCM session
 
+### Naked Defeat MCM requirements
+
+- [ ] In Naked Defeat MCM, set **`IndecencyRapeProb = 0`**. The Civilian Rape branch in Naked Defeat 6.50 references a missing quest and is not considered safe in the current Rhiven integration.
+- [ ] Keep this value at 0 unless a future Naked Defeat update restores/replaces the missing quest and the integration is re-audited.
+- [ ] Review the remaining Naked Defeat probabilities / consequences conservatively during the final MCM session rather than importing unknown legacy values.
+
+
 - [ ] Perform the full MCM configuration session.
 - [ ] **Enable Bathing in Skyrim Renewed (BiSR)** in its MCM; it is disabled by default.
 - [ ] **Enable Private Needs - Orgasm (PNO)** in its MCM; it is disabled by default.
@@ -141,6 +167,21 @@ These tasks are intentionally performed only after the definitive playthrough ha
 - [ ] Save configuration presets through Settings Loader / MCM Recorder where supported.
 
 ### Early-game validation
+
+### Naked Defeat / Acheron validation
+
+- [ ] Confirm a humanoid defeat routes through **Acheron → Acheron Bridge → Naked Defeat**.
+- [ ] Confirm a creature defeat routes through the same chain.
+- [ ] Confirm a defeat involving a follower completes normally.
+- [ ] Verify the player exits the **Acheron defeated / bleedout state** after the Naked Defeat sequence.
+- [ ] Verify player controls return normally after the scene.
+- [ ] Verify assailants are released correctly and do not remain permanently pacified.
+- [ ] Verify there is no permanent bleedout, stuck animation state, or globally disabled Acheron processing.
+- [ ] Verify stripping / theft / inventory consequences behave coherently.
+- [ ] Repeat more than one defeat in the same session; do not validate from a single successful event.
+- [ ] Save after a completed defeat event, exit Skyrim completely, reload, and confirm the defeat chain still works.
+- [ ] If any failure is reproducible, keep Practical Defeat / Yamete available only as rollback and investigate before declaring the final profile playthrough-ready.
+
 
 - [ ] Verify Advanced Nudity Detection / OSL / modesty reactions with Eleanor's actual worn outfits.
 - [ ] Verify Simple Inn Bath and Xtended Stay in normal gameplay with the final economy settings.
