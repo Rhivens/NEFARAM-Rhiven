@@ -16,9 +16,9 @@ This file tracks Rhiven additions originally built on the validated NEFARAM 17.3
 
 | Mod | Status | Section | Reason / Notes |
 |---|---|---|---|
-| Naked Defeat - Rhiven | Technically validated / gameplay test pending | Acheron / defeat stack | Naked Defeat 6.50 audited on dedicated profile. Main plugin issues classified; Civilian Rape branch incomplete, so `IndecencyRapeProb = 0` is mandatory in the final MCM. |
-| Naked Defeat - Rhiven Fix | xEdit validated / retained | Acheron / defeat stack | Four targeted overrides only: two wrist-chain ARMA fixes and two WEAP CRDT normalizations. Check for Errors: **0 errors / 5 records**. |
-| Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven | xEdit validated / retained | Acheron / defeat stack | Lightweight bridge from Acheron to Naked Defeat; 3 records, **0 errors**. Reference chain: Acheron → Bridge → Naked Defeat. |
+| Naked Defeat - Rhiven | Technically validated / in-game testing | Acheron / defeat stack | Naked Defeat 6.50 audited on dedicated profile. Main plugin issues classified; Civilian Rape branch incomplete, so `IndecencyRapeProb = 0` is mandatory in the final MCM. Current runtime validation focuses on repeated defeats, creature/follower handling and Acheron bleedout recovery. |
+| Naked Defeat - Rhiven Fix | xEdit validated / retained | Acheron / defeat stack | Four targeted overrides only: two wrist-chain ARMA fixes and two WEAP CRDT normalizations. Check for Errors: **0 errors / 5 records**. Standalone reversible override; public download link pending in the migration guide. |
+| Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven | xEdit validated / in-game testing | Acheron / defeat stack | Lightweight bridge from Acheron to Naked Defeat; 3 records, **0 errors**. Reference chain: Acheron → Bridge → Naked Defeat. Final validation requires clean exit from Acheron bleedout and stable repeated defeat events. |
 | Naked Defeat - EXTRA - OAR Bowed Animations fixed - Rhiven | Technically validated / retained | Acheron / defeat stack | OAR conditions are scoped to Naked Defeat faction state; retained as active movement set. |
 | Naked Defeat - EXTRA - OAR Crawl Animations V2 - Rhiven | Disabled / rollback retained | Acheron / defeat stack | Bowed overwrites the same OAR files; keep installed but unchecked for rollback/reference. |
 
