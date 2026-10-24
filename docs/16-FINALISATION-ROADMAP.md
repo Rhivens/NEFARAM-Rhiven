@@ -364,11 +364,20 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 
 **Naked Defeat AE/SE**
 
-- [ ] Utiliser la documentation et le protocole déjà créés.
-- [ ] Auditer le remplacement de **Practical Defeat** et la répartition avec Acheron / Yamete Kudasai.
-- [ ] Vérifier toutes les dépendances, outcomes, Local Slavery / Simple Slavery++, scènes et mécanismes de récupération.
-- [ ] Ne pas intégrer avant validation des autres candidats plus légers.
-- [ ] Verdict initial : **CHANTIER LOURD — à traiter en dernier**.
+- [x] Installer et auditer **Naked Defeat 6.50** sur le profil clone `Eleanor 17.3.8 - Naked Defeat`, après backup des panneaux gauche et droit.
+- [x] Auditer le plugin principal : 798 records ; les erreurs utiles ont été classées entre défauts réels et résidus anciens / sous-systèmes abandonnés.
+- [x] Créer `Naked Defeat - Rhiven Fix.esp` avec seulement quatre overrides ciblés : deux wrist chains et deux armes ; **Check for Errors : 0 erreur / 5 records**.
+- [x] Identifier la branche **Civilian Rape** comme incomplète dans 6.50 : propriété `qst2` active vers une quête absente. Décision : `IndecencyRapeProb = 0` dans le MCM, sans reconstruction artificielle de la quête.
+- [x] Installer et valider `Acheron - Naked Defeat Bridge.esp` : 3 records, **0 erreur xEdit** ; architecture retenue **Acheron → Bridge → Naked Defeat**.
+- [x] Auditer les extras OAR : **Bowed Animations - fixed** retenu ; **Crawl Animations V2** conservé décoché car Bowed écrase directement les mêmes fichiers OAR.
+- [x] Auditer Yamete Kudasai : chevauchement élevé avec les conséquences Acheron/Naked Defeat et événements YAML concurrents. Décision : désactiver le **mod MO2 complet YameteKudasai** pendant le smoke test.
+- [x] Auditer **Practical Defeat Reanimated** : chevauchement maximal avec Naked Defeat. Décision : désactiver Practical Defeat + voicepack pendant le smoke test ; retrait définitif conditionné à la validation gameplay.
+- [x] Conserver `Acheron - Simple Recover` et `Acheron - Diary of Mine Extension` actifs ; ils ne remplacent pas la chaîne principale Naked Defeat.
+- [ ] Relancer Pandora après désactivation de Yamete Kudasai.
+- [ ] Smoke test : défaite humanoïde, créature, follower, fin de scène/récupération, stripping/vol éventuel, absence de blocage bleedout.
+- [ ] Si le smoke test passe : considérer **Practical Defeat remplacé** et conserver Yamete Kudasai désactivé par défaut dans le build Rhiven.
+- [x] Documentation détaillée : [NAKED-DEFEAT-INTEGRATION.md](guides/NAKED-DEFEAT-INTEGRATION.md).
+- [ ] Verdict actuel : **TECHNIQUEMENT VALIDÉ / GAMEPLAY À TESTER**.
 
 #### 5 bis.6 - Outils de travail hors runtime
 
