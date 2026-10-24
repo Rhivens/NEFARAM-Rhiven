@@ -38,6 +38,67 @@ This file records important validation steps before the real playthrough.
 
 ## Current tests
 
+### Naked Defeat 6.50 / Acheron bridge smoke test
+
+Status: **TECHNICAL INTEGRATION VALIDATED — GAMEPLAY SMOKE TEST PENDING**
+
+Dedicated profile:
+
+- `Eleanor 17.3.8 - Naked Defeat`
+
+Active test chain:
+
+- `Acheron - Death Alternative 1.11.3 - Rhiven`
+- `Acheron - Simple Recover`
+- `Acheron - Diary of Mine Extension`
+- `Naked Defeat - Rhiven`
+- `Naked Defeat - Rhiven Fix`
+- `Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven`
+- `Naked Defeat - EXTRA - OAR Bowed Animations fixed - Rhiven`
+
+Temporarily disabled for deterministic testing:
+
+- `YameteKudasai` — complete MO2 mod
+- `Practical Defeat Reanimated`
+- `Practical Defeat Reanimated Voicepack`
+- `Naked Defeat - EXTRA - OAR Crawl Animations V2 - Rhiven`
+
+Static validation completed:
+
+- Naked Defeat Rhiven Fix: **0 xEdit errors / 5 processed records**
+- Acheron - Naked Defeat Bridge: **0 xEdit errors / 3 processed records**
+- Bowed OAR: scoped by Naked Defeat faction condition
+- Civilian Rape branch in Naked Defeat 6.50: incomplete; final MCM must keep `IndecencyRapeProb = 0`
+
+Required before first test:
+
+- relaunch Pandora after Yamete Kudasai is disabled;
+- confirm `YameteKudasai.esp` and `Practical Defeat.esp` are absent from the active plugin list.
+
+Smoke-test cases:
+
+- [ ] player defeat by humanoid
+- [ ] player defeat by creature
+- [ ] defeat with follower involved
+- [ ] Naked Defeat scene starts through Acheron bridge
+- [ ] scene ends correctly and player recovers
+- [ ] stripping / theft behavior remains coherent
+- [ ] no permanent bleedout / control lock
+- [ ] save / reload after completed defeat event
+- [ ] confirm no Practical Defeat or Yamete consequence is triggered
+
+Pass criterion:
+
+> Defeat events consistently follow **Acheron → Acheron Bridge → Naked Defeat**, with normal recovery and no blocking state.
+
+If passed:
+
+- Practical Defeat becomes superseded by Naked Defeat in Rhiven;
+- Yamete Kudasai remains disabled by default unless a later niche function justifies reintroduction with its Hostile/Surrender consequences neutralized.
+
+Detailed audit: [Naked Defeat integration](guides/NAKED-DEFEAT-INTEGRATION.md).
+
+
 ### Dragonborn UI
 
 Status: **VALIDATED**
