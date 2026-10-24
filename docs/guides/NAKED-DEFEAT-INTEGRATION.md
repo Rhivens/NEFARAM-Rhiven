@@ -99,15 +99,15 @@ The Bowed package overwrites a large part of the same OAR files used by Crawl, t
 
 > ### Naked Defeat - Rhiven Fix
 >
-> **DOWNLOAD PLACEHOLDER — RHIVEN FIX LINK WILL BE ADDED HERE**
->
-> Suggested file name:
->
-> `Naked Defeat - Rhiven Fix.7z`
->
-> The archive should contain:
->
-> `Naked Defeat - Rhiven Fix.esp`
+> **Download:** [Naked Defeat - Rhiven Fix.zip](NAKED-DEFEAT/Naked%20Defeat%20-%20Rhiven%20Fix.zip)
+
+The ZIP is MO2-ready and contains:
+
+```text
+Naked Defeat - Rhiven Fix/
+├─ Naked Defeat - Rhiven Fix.esp
+└─ meta.ini
+```
 
 Do not merge this patch into the original Naked Defeat plugin. Keeping it as a small standalone override makes the fix reversible and easy to audit.
 
