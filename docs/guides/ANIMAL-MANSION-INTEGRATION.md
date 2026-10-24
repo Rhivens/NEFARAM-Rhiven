@@ -1,6 +1,6 @@
 # NEFARAM-Rhiven — Animal Mansion Reborn Integration Plan
 
-> **Status: AUDIT / INTEGRATION PLANNING**
+> **Status: CONFLICT AUDIT COMPLETE — RHIVEN PATCH DESIGN IN PROGRESS**
 >
 > This document defines the integration workflow for **Animal Mansion Reborn 1.8** in the NEFARAM-Rhiven build.
 >
@@ -110,6 +110,133 @@ Review conflicts in at least these groups:
 - `QUST`
 
 Additional categories should be reviewed if the conflict filter shows AMR touching them.
+
+---
+
+## 4.3 Full conflict audit findings — 2026-10-24
+
+A full xEdit conflict pass was completed against the current NEFARAM-Rhiven load order.
+
+### Confirmed load-order strategy
+
+Placing `Animal Mansion Reborn.esp` high enough for modern city, lighting and generated patches to win works as intended.
+
+The following conflict families were repeatedly observed to resolve naturally without a Rhiven override:
+
+- interior CELL lighting;
+- image space / fog / ambient data;
+- Lux / Lux COTN values;
+- NEFARAM environment forwards;
+- Synthesis final CELL winners;
+- vanilla NPC placement where a later city overhaul already provides the correct modern position;
+- AMR-added `XLRL - Location Reference` data where later plugins preserve it.
+
+Representative examples verified during the audit include:
+
+- Rorikstead Cowflop Farm;
+- Battle-Born Farm;
+- Darkwater Crossing — Verner and Annekke's House;
+- Rorik's Manor;
+- Salvius Farmhouse;
+- Moorside Inn;
+- Jorgen and Lami's House;
+- Mor Khazgur — Larak's Longhouse;
+- Battle-Born House;
+- Hag's Cure.
+
+These records should **not** be duplicated in the Rhiven patch.
+
+### COTN Falkreath
+
+`COTN -Falkreath AMR.esp` is confirmed to be functionally important.
+
+It does more than forward CELL data: it repositions AMR-specific markers and quest triggers into the COTN Falkreath geometry, including locations such as:
+
+- Jarl's Longhouse;
+- Dead Man's Drink.
+
+The patch also adds appropriate `XLRL` location references to several AMR markers / triggers.
+
+Because the patch previously passed xEdit Check for Errors with **0 errors**, the current plan is:
+
+> **retain `COTN -Falkreath AMR.esp` as a separate active compatibility patch.**
+
+One record remains worth observing in-game:
+
+- `DelacourtREF [00072667]` — the COTN AMR patch removes its previous `XLCN - Persistent Location` while retaining the Dead Man's Drink `XLRL`. No correction should be made without a demonstrated gameplay issue.
+
+### MNC / Husky
+
+Confirmed conflict:
+
+- `HuskyBareAA [02018B35]`
+
+AMR restores the vanilla male Husky mesh and drops the MNC female mesh assignment, while the rest of the record remains compatible.
+
+Rhiven decision:
+
+> preserve the MNC male and female biped model paths in a minimal override.
+
+No wider MNC merge is currently indicated.
+
+### Shor's Stone
+
+The supplied `AMR The Great Town of Shor's Stone Patch.esp` remains **disabled** for the final setup because of its unresolved NAVI / navmesh issue.
+
+However, the patch is useful as a reference because it contains valid-looking repositioning work for AMR-specific content in Sylgja's redesigned house.
+
+The following records were identified as useful compatibility data candidates:
+
+- `CommonBedDouble01 [0009F417]`
+- `SylgjaRef [000C3A46]`
+- `AMR_SylgjaTalkSpot [AE5D2E10]`
+- `AMR_SylgjaSexSpot [AE5D2E11]`
+- `AMR_SylgjaFSpot [AE5D2E12]`
+- `AMR_SylgjasDog "Bandit" [AE5DD196]`
+- `defaultSetStageTRIGSpecificActor [AE5D2E20]`
+- `DogLayingDownIdleMarker [AE5DD197]`
+
+These should be reconstructed into the Rhiven patch from the final Shor's Stone geometry rather than copied blindly together with the broken navmesh data.
+
+A persistent exterior door reference also exposes a navmesh door link:
+
+- `REFR [000177DE]`
+- `XNDP - Navmesh Door Link`
+- target `NAVM [00106C48]`
+- teleport marker triangle `464`
+
+This record is **navmesh-sensitive** and must not be copied mechanically.
+
+### Dialogue topics
+
+AMR modifies several vanilla dialogue topics by extending their INFO order.
+
+Three DIAL records require a dedicated merge review because later NEFARAM / dialogue plugins appear to drop AMR-added INFO entries:
+
+- `DGCrimeForcegreetTopic [000267DE]`
+- `DGCrimeWantedTopic [0002A37F]`
+- `OfferServicesTopic [00076FBB]`
+
+The correct solution is **not** to force the whole AMR DIAL record to win.
+
+The final Rhiven patch should preserve the final winner's dialogue structure while restoring only the AMR INFO entries that are actually missing.
+
+By contrast, INFO records that differ only because AMR or another mod restores English text over French Skyrim strings are a **translation issue, not a compatibility issue**, and belong in the later French translation phase.
+
+### Worldspace / LOD
+
+AMR contains exterior worldspace content and at least one visible `LAND` record under:
+
+`WhiterunWorld -> WhiterunWindDistrict02`
+
+The existence of the `LAND` override alone is not sufficient to mandate xLODGen. The record still needs a direct comparison to determine whether it contains meaningful terrain changes or is effectively identical / negligible.
+
+Current LOD decision therefore remains:
+
+- if the LAND record is meaningful -> `xLODGen -> TexGen -> DynDOLOD`;
+- if the LAND record is not meaningful but exterior statics need LOD -> `TexGen -> DynDOLOD`;
+- do not regenerate until the final patch and Synthesis output are complete.
+
 
 ---
 
@@ -353,6 +480,21 @@ Where required, rebuild compatibility in Creation Kit / appropriate navmesh work
 ---
 
 ## 13. Phase K — Minimal Rhiven patch policy
+
+### Current patch candidate set
+
+At the end of the conflict audit, the Rhiven patch is expected to stay deliberately small.
+
+Confirmed / likely candidates:
+
+- 1 MNC/Husky armor-addon override;
+- 8 Shor's Stone placement/location records reconstructed from the safe parts of the supplied patch;
+- 3 dialogue-topic merges if the AMR INFO entries are confirmed missing from the final winners;
+- any strictly necessary Shor's Stone door/navmesh compatibility record only after navmesh validation.
+
+This candidate list is provisional until the dialogue INFO chains and the Shor's Stone navmesh dependency are fully verified.
+
+
 
 Create an `Animal Mansion Reborn - Rhiven Patch.esp` only if necessary.
 
