@@ -1,4 +1,4 @@
-# NEFARAM Rhiven Modded — MO2 Left Panel (dernière mise à jour le 07-10-2026 11h55)
+# NEFARAM Rhiven Modded — MO2 Left Panel (dernière mise à jour le 26-10-2026 00h00)
 
 Current customized MO2 left-pane snapshot.
 
@@ -169,7 +169,8 @@ NPC AI Process Position Fix - NG
 HearthFires - Customizable Fertile Soil
 HearthFires - Customizable Fertile Soil - FR
 DynDOLOD Resources SE
-DynDOLOD DLL NG
+DynDOLOD DLL NG - DECOCHE UPDATED
+DynDOLOD DLL NG alpha-43 - Rhiven
 Far Object LOD Improvement Project SSE
 Static Mesh Improvement Mod
 Static Mesh Improvement Mod - FR
@@ -328,8 +329,8 @@ Knotwork - Dear Diary Patch
 Knotwork Penitus Occulatus Consistency Patch
 Follower Panel
 Modex - A Mod Explorer Menu (AddItemMenu)
-Modex - A Mod Explorer Menu (AddItemMenu) 3.0.2 - Rhiven
-Modex - 3.0.2 Patch - Rhiven
+Modex - A Mod Explorer Menu (AddItemMenu) 3.0.2 - Rhiven - DECOCHE
+Modex - 3.0.2 Patch - Rhiven - DECOCHE
 Immersive Illusion Spells - B.O.O.B.I.E.S support file
 Oxygen Meter 2 - DDDM Patch
 STB Active Effects
@@ -1049,6 +1050,7 @@ Elf Stalhrim Bikini Armor - CBBE 3BA - Rhiven
 Dark Dreams - Rhiven
 Dark Dreams 3BA BodySlide - Rhiven
 Misc High Heels Stilettos Eins - SSE CBBE - Rhiven
+Animal Mansion Reborn BodySlide - Rhiven
 Bodyslide Output - Eleanor
 [16 - Weapons]
 Creation Club Base Content - Items Rebalanced
@@ -1325,7 +1327,7 @@ Simple Fishing Overhaul - Animations and Improved Quest Dialogue
 Simple Fishing Overhaul - Settings Loader
 Simple Fishing Overhaul - FLM Addon
 Sink of Scrubbing - Interactive Wash Basins
-Widget Addon - Keep It Clean - Bathing In Skyrim - Rhiven
+Widget Addon - Keep It Clean - Bathing In Skyrim - Rhiven - DECOCHE vs Needs Widgets
 Bathing in Skyrim - Renewed - Rhiven
 Bathing in Skyrim - BAIN (Multi-Language) - Rhiven
 Zaki 8K-4K Textures for Bathing in Skyrim Renewed - Rhiven
@@ -1972,6 +1974,10 @@ Stoja - High Poly Nord Female Preset - Rhiven
 Princess Nyx of Leyawiin - Character Preset - Rhiven
 CV Preset Pack I - Rhiven
 Foxy RaceMenu Preset - Rhiven
+Katarina Nyr - High Poly Character Preset RaceMenu - Rhiven
+AW Female Racemenu Presets Pack 7 - Rhiven
+Cherry Nyr - High Poly Character Preset RaceMenu - Rhiven
+Ariana Nyr - High Poly Character Preset RaceMenu - Rhiven
 [34 - Sexlab Frameworks]
 SexLab Framework
 SLGP
@@ -2033,7 +2039,7 @@ Sexlab Fill Her Up Baka Edition
 Milk Mod Economy
 Sexlab Survival
 SexLab Survival Patch
-FameCommentsReloadedSE
+SLSF Fame Comments Reloaded SE
 Devious Lore SE
 Radiant Prostitution
 SexLab Solutions
@@ -2086,9 +2092,14 @@ Acheron - Death Alternative 1.11.3 - Rhiven
 Acheron - Sacrosanct Patch - Rhiven
 Acheron - Simple Recover
 Acheron - Diary of Mine Extension
-YameteKudasai
+YameteKudasai - DECOCHE vs Naked Defeat
 SMUTbooks_SE
-Practical Defeat Reanimated
+Naked Defeat - Rhiven
+Naked Defeat - Rhiven Fix
+Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven
+Naked Defeat - EXTRA - OAR Crawl Animations V2 - Rhiven - DECOCHE vs Bowed
+Naked Defeat - EXTRA - OAR Bowed Animations fixed - Rhiven
+Practical Defeat Reanimated - DECOCHE vs Naked Defeat
 SLNights
 An Evening With Angi (Sexlab)
 Transformative Elixirs
@@ -2098,6 +2109,8 @@ Sex Grants Experience
 Balazar's Bitch
 Animal Research The Insatiable Scholar
 AnimalResearch Replacers
+Animal Mansion Reborn - Rhiven
+Animal Mansion Reborn - Rhiven Patch
 Daegon Sexlab
 Devious Chastity Piercing
 Devious Curses
@@ -2138,6 +2151,7 @@ SLSF Comments Voice
 Lola Voice
 [37 - Late Loaders]
 Quality CubeMaps - HD Cube Maps
+ENB Dynamic Cubemaps - Rhiven
 Statics of Skyrim - Improved Resources for Mods (SMIMed - HD - Optimized)
 OnMagicEffectApply Replacer
 Loading Screen Smoke Removed
@@ -2162,6 +2176,7 @@ TK Dodge Animation Pandora Fix Patch - Rhiven
 TK Dodge NG - Rhiven
 Dynamic Dodge Animation - Rhiven
 [38 - Overwrites]
+Falkreath LAND - Rhiven Fix
 Creation Kit Output
 PCA Output
 xEdit Output
@@ -2189,6 +2204,7 @@ ENB Frame Generation - A TESTER EN FIN DE CUSTOMISATION
 Fertility Mode - DECOCHE
 Better Third Person Selection - BTPS
 SoulsyHUD - DECOCHE
+MESH2 - TerrainHelper Config - A activer si ENB MESH2 slot 4 est actif
 [40 - Female Skin Options (Enable all mods with the same [prefix] and disable the others)]
 [BnP] Main Texture - Frostnip
 [BnP] Futanari Patch
@@ -2227,6 +2243,8 @@ Phoenix Katana Eleanor - Rhiven
 Simple Inn Bath - Rhiven
 Xtended Stay - Rhiven
 Regional Outfitters - Stalls of Skyrim - Rhiven
+Dino's Easy Quest Fix - Rhiven
+Item Vault - Plugin Explorer - Rhiven
 [44 - PRISON PAMA SYSTEM]
 Next-Gen Decapitations - Sovngarde INI - Rhiven
 PamaDeadlyFurniture_V3.4.5_SE_AE (Revision2) - Rhiven
@@ -2261,6 +2279,9 @@ New Statue of Meridia 1.1. Dirty SE - Rhiven
 New Shrine of Azura 2.0 V1 SE - Rhiven
 New Shrine of Azura No Snow Shaders - Rhiven
 [46 - Added Mods NSFW]
+Sexlab Approach Redux - Rhiven
+Unethical Alchemy - Rhiven
+Unethical Alchemy - Rhiven Fix
 Devious Carriages Redux - Rhiven
 DeviousCarriages Redux CFTO Patch - Rhiven
 Devious Carriages Redux Voicepack HQ - Rhiven
@@ -2298,6 +2319,7 @@ TrueHUD Settings - Rhiven
 Compare Equipment NG Settings - Rhiven
 Oxygen Meter 2 Settings - Rhiven
 Casting Bar Settings - Rhiven
+Needs Widget AIO - Rhiven
 [48 - FWMF Maps - Rhiven]
 Flat World Map Framework Lite - Rhiven
 Skyrim Paper Map by Caro Tuts for FWMF - Rhiven
