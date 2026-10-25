@@ -2,13 +2,12 @@
 
 ## 2026-10-25
 
-### Bathing in Skyrim guide and iNeeds status
+### Bathing in Skyrim guide and Needs Widget AIO status
 
 - Reworked `docs/09-SURVIVAL-BLOOD-HYGIENE.md` into a publication-ready English guide with a compact Quick Setup section followed by the complete technical procedure, validation register, troubleshooting and pre-playthrough checks.
-- Recorded **iNeeds** as the current replacement for both the retired Widget Addon and the intermediate Needs Widget AIO choice.
-- Kept the validated responsibility split unchanged: **EBT = environment / Just Blood = actors / BiSR = hygiene / SunHelm = needs / Campfire = camping**.
-- Did not invent undocumented iNeeds details: its exact version, MO2 name, plugins, options and final SunHelm/BiSR behavior remain explicitly pending confirmation.
-- Flagged the existing MO2 snapshots as stale for this specific change because they still list `Widget Addon - Keep It Clean - Bathing In Skyrim - Rhiven` and `WA_BathWidget.esp`.
+- Restored **Needs Widget AIO** as the final retained and validated display layer, with its supplied **Vel'Dun** preset present, active and tested in game.
+- Kept the validated responsibility split explicit: **EBT = environment / Just Blood = actors / BiSR = hygiene / SunHelm = needs / Campfire = camping / Needs Widget AIO = display only**.
+- Kept `Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven` and `WA_BathWidget.esp` classified as retired, disabled and available only for rollback.
 - Synchronized the added-mod inventory, finalization roadmap and pre-playthrough checklist with the same status language.
 
 ### Animal Mansion Reborn 1.8 — technical integration

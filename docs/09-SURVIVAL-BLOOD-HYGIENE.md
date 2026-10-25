@@ -13,7 +13,7 @@ This guide documents the Rhiven survival, blood and hygiene stack built on **NEF
 | Hygiene, dirt and bathing | **Bathing in Skyrim - Renewed (BiSR) 2.7.11** |
 | Needs and survival | **SunHelm** |
 | Camping | **Campfire** |
-| Hygiene/needs display | **iNeeds** — current replacement; exact setup still to be documented and validated |
+| Hygiene/needs display | **Needs Widget AIO** — display only; validated in game with the supplied **Vel'Dun** preset |
 
 ### Essential BiSR stack
 
@@ -30,9 +30,9 @@ This guide documents the Rhiven survival, blood and hygiene stack built on **NEF
 ### Critical points
 
 - Keep the BiSR block in MO2 section **`21 - Survival`** and Malignis in **`24 - Animations`**.
-- The old **Widget Addon - Keep It Clean - Bathing in Skyrim** is not part of the intended final active stack. It has been replaced by **iNeeds**.
-- **Needs Widget AIO is also no longer the final display choice.** It may be retained only as rollback material until cleanup is complete.
-- Do not infer undocumented iNeeds options. Its version, exact MO2 entry, integration settings and final HUD configuration are **to be confirmed**.
+- **Needs Widget AIO** is the final retained display layer. Its supplied **Vel'Dun** preset is present, active and validated in game.
+- Needs Widget AIO is **display only**: SunHelm remains the needs engine and BiSR remains the hygiene engine.
+- The old **Widget Addon - Keep It Clean - Bathing in Skyrim** is retired, disabled and retained only for rollback.
 - Run Pandora after the animation files are in place. The recorded successful generation detected all three BiSR lists and produced **38,349 animations**.
 - On the definitive New Game, **enable BiSR in its MCM**; it is disabled by default.
 - Before declaring the migration complete, confirm that `WA_BathWidget.esp` is inactive and refresh both MO2 snapshots.
@@ -55,8 +55,9 @@ The stack deliberately assigns one main responsibility to each subsystem:
 - **BiSR = hygiene**
 - **SunHelm = needs**
 - **Campfire = camping**
+- **Needs Widget AIO = display only**
 
-This avoids asking multiple mods to manage the same gameplay layer. iNeeds is documented here only as the current display/widget replacement; the repository does not yet contain enough information to claim a broader gameplay role or prescribe detailed settings for it.
+This avoids asking multiple mods to manage the same gameplay layer. **Needs Widget AIO is a display-only layer** and does not replace the SunHelm or BiSR gameplay systems.
 
 ## Blood layer
 
@@ -171,20 +172,18 @@ Requirement review:
 - NEFARAM already uses **ConsoleUtil Extended**;
 - the full Dirt and Blood mod is not required for the selected BiSR main file.
 
-## iNeeds and the retired widget layers
+## Needs Widget AIO and the retired widget layer
 
 ### Current decision
 
-**iNeeds replaces both the old Widget Addon solution and the later Needs Widget AIO choice in the intended final setup.** This replacement is user-confirmed, but its technical details are not yet recorded in the repository.
+**Needs Widget AIO is the final retained widget solution.** It has been tested in game with its supplied **Vel'Dun** preset and remains separate from the underlying needs and hygiene engines.
 
 | Item | Status |
 |---|---|
-| iNeeds selected as the current replacement | **Installed / configured — user-confirmed** |
-| Exact iNeeds version and MO2 display name | **To be confirmed** |
-| iNeeds FOMOD/options and HUD settings | **To be confirmed** |
-| iNeeds interaction with SunHelm and BiSR | **Pending in-game validation** |
-| Needs Widget AIO | **Superseded / rollback only** |
-| Widget Addon - Keep It Clean - Bathing in Skyrim | **Retired from the intended active stack / rollback history only** |
+| Needs Widget AIO | **Validated / retained as the final display layer** |
+| Vel'Dun preset | **Present, active and tested in game** |
+| Needs Widget AIO role | **Display only; SunHelm owns needs and BiSR owns hygiene** |
+| Widget Addon - Keep It Clean - Bathing in Skyrim | **Retired / disabled / rollback only** |
 
 Do not copy the old Widget Addon order or options into a new setup unless deliberately performing a rollback.
 
@@ -195,7 +194,7 @@ The current exported MO2 snapshots still list:
 - `Widget Addon - Keep It Clean - Bathing In Skyrim - Rhiven` in the left pane;
 - `WA_BathWidget.esp` in the right pane.
 
-Those snapshots predate the final iNeeds replacement. Confirm the actual MO2 checkbox/plugin state and export fresh snapshots before publication or final playthrough sign-off.
+Those snapshots predate the final Needs Widget AIO selection. Keep the retired Widget Addon and `WA_BathWidget.esp` inactive, and export fresh snapshots before final playthrough sign-off.
 
 ### Historical Widget Addon configuration
 
@@ -226,19 +225,17 @@ Use this as the documented relationship, not as an absolute priority number:
 9. Wash Me
 10. Malignis in the bottom area of **`24 - Animations`**
 
-iNeeds placement is **to be confirmed from the actual active MO2 profile**. Do not invent an order from the obsolete Widget Addon or Needs Widget AIO configuration.
+Needs Widget AIO belongs in MO2 section **`47 - UI - Rhiven`**. The recorded installation has no MO2 file conflicts; do not copy ordering rules from the retired Widget Addon configuration.
 
 ### Recorded BiSR-related plugins
 
 The last repository snapshot contains:
 
 - `Bathing in Skyrim.esp`
-- `WA_BathWidget.esp` — obsolete snapshot entry; must be confirmed inactive after the iNeeds replacement
+- `WA_BathWidget.esp` — obsolete snapshot entry from the retired Widget Addon; keep it inactive
 - `Bathing in Skyrim - Renewed Animal Fat and Linen.esp`
 - `Malignis Sound FX.esp`
 - `Bathing in Skyrim - Wash Me.esp`
-
-The snapshot does not yet document the definitive iNeeds plugin state.
 
 ### Known conflict decisions
 
@@ -281,7 +278,7 @@ This validates the recorded generation, not every future regeneration. Run Pando
 
 ### SunHelm
 
-SunHelm remains the needs/survival engine. BiSR handles hygiene. The exact way iNeeds displays or reads these systems is not yet documented and must be confirmed in game.
+SunHelm remains the needs/survival engine and BiSR handles hygiene. Needs Widget AIO only displays their information; this separation was tested in game with the Vel'Dun preset.
 
 ### Campfire
 
@@ -313,15 +310,11 @@ These are part of the planned inn/economy validation rather than a completed val
 - The blood/hygiene stack launched and functioned in the recorded test environment.
 - Recorded heavy-plugin count immediately after this stack: **203**.
 
-### Installed / configured, but not final-playthrough validated
-
-- iNeeds is the selected replacement for the previous widget layers.
-- The final iNeeds/SunHelm/BiSR display relationship has not been documented in detail.
-- The current MO2 snapshot has not yet been refreshed after the iNeeds replacement.
+- Needs Widget AIO is retained as the final display-only layer.
+- The supplied Vel'Dun preset is present, active and tested in game.
 
 ### Pending in-game validation
 
-- Confirm the exact active iNeeds version, entry name, plugins and configuration.
 - Confirm no duplicate survival or hygiene display remains.
 - Confirm `WA_BathWidget.esp` is inactive.
 - Enable BiSR in its MCM on the definitive New Game and verify that the setting persists after restart.
@@ -336,9 +329,9 @@ These are part of the planned inn/economy validation rather than a completed val
 
 ### Duplicate or overlapping widgets
 
-1. Confirm that Widget Addon and Needs Widget AIO are not active alongside iNeeds.
+1. Confirm that the retired Widget Addon is not active alongside Needs Widget AIO.
 2. Check the right pane for `WA_BathWidget.esp`.
-3. Review iNeeds, SunHelm, STB and other HUD entries during the final UI/MCM session.
+3. Review Needs Widget AIO, SunHelm, STB and other HUD entries during the final UI/MCM session.
 4. Change one layer at a time and retest on a disposable save.
 
 ### BiSR does not appear to run
@@ -368,21 +361,21 @@ These are part of the planned inn/economy validation rather than a completed val
 ### Rollback strategy
 
 - Keep a disposable test save and MO2 profile backup before changing widget or survival layers.
-- iNeeds is the intended final choice; Needs Widget AIO and Widget Addon may be kept temporarily only as disabled rollback references.
-- If rollback becomes necessary, restore one known configuration at a time. Do not activate all three display layers together.
+- Needs Widget AIO is the intended final choice; Widget Addon may be kept temporarily only as a disabled rollback reference.
+- If rollback becomes necessary, restore one known configuration at a time. Do not activate both display layers together.
 - Re-export both MO2 panes after the final choice is confirmed.
 
 ## Before the definitive playthrough
 
-- [ ] Confirm the active iNeeds entry, version, plugin state and settings.
-- [ ] Confirm Widget Addon and Needs Widget AIO are disabled or removed from the active profile.
+- [x] Keep Needs Widget AIO active as the final display-only layer with the validated Vel'Dun preset.
+- [ ] Confirm the retired Widget Addon is disabled or removed from the active profile.
 - [ ] Confirm `WA_BathWidget.esp` is inactive.
 - [ ] Refresh the MO2 left-pane and right-pane snapshots.
 - [ ] Run Pandora after the last animation-related change and verify a clean completion.
 - [ ] Inspect MO2 Overwrite and generated output mods.
 - [ ] Start from the supplied **NEFARAM_Start** save, as required by the project baseline.
 - [ ] Let MCM registration settle, then enable BiSR.
-- [ ] Complete the final SunHelm/BiSR/iNeeds HUD and MCM consistency pass.
+- [ ] Complete the final SunHelm/BiSR/Needs Widget AIO HUD and MCM consistency pass.
 - [ ] Test an inn with BiSR + Simple Inn Bath and the final economy settings.
 - [ ] Perform a save / full exit / reload test.
 - [ ] Mark remaining checks as validated only after they have been directly observed.
@@ -396,5 +389,6 @@ The retained architecture is:
 - **BiSR = hygiene**
 - **SunHelm = needs**
 - **Campfire = camping**
+- **Needs Widget AIO = display only**
 
-The core blood, BiSR and Pandora integration has a documented successful validation. The current iNeeds replacement is **installed/configured but still pending repository-detail and in-game validation**; it must not be presented as fully validated until the open checks above are completed.
+The core blood, BiSR and Pandora integration has a documented successful validation. **Needs Widget AIO is the retained and validated display-only layer**, with its supplied **Vel'Dun** preset tested in game; SunHelm remains the needs engine and BiSR remains the hygiene engine.

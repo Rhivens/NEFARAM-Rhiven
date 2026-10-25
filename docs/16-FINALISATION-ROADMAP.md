@@ -278,16 +278,16 @@ Pour chaque mod candidat :
 
 #### 5 bis.2 - QoL / interface légère
 
-**iNeeds — remplacement final des widgets précédents**
+**Needs Widget AIO — couche d'affichage finale**
 
-- [x] Retenir **iNeeds** comme remplacement actuel de `Widget Addon - Keep It Clean - Bathing in Skyrim` et de la solution intermédiaire Needs Widget AIO.
-- [ ] Relever depuis le profil MO2 actif la version exacte, le nom d'entrée, les plugins éventuels et les options réellement sélectionnées pour iNeeds ; ne pas les déduire des anciennes configurations.
-- [ ] Confirmer que **Needs Widget AIO** est désactivé ou conservé uniquement comme retour arrière.
-- [ ] Confirmer que **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** et `WA_BathWidget.esp` sont inactifs.
+- [x] Retenir **Needs Widget AIO** comme remplacement final de `Widget Addon - Keep It Clean - Bathing in Skyrim`.
+- [x] Confirmer la présence du preset fourni **Vel'Dun**, son activation et son fonctionnement en jeu.
+- [x] Confirmer la séparation des responsabilités : **Needs Widget AIO = affichage uniquement / SunHelm = besoins / BiSR = hygiène**.
+- [ ] Confirmer que **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** reste désactivé / rollback only et que `WA_BathWidget.esp` reste inactif.
 - [ ] Actualiser les snapshots MO2 gauche/droite après cette vérification ; les exports actuels montrent encore l'ancien Widget Addon.
-- [ ] Vérifier en jeu la cohabitation iNeeds / SunHelm / BiSR et l'absence de doublon de besoins ou d'hygiène.
+- [ ] Vérifier pendant la partie définitive l'absence de doublon d'affichage de besoins ou d'hygiène.
 - [ ] Reporter l'harmonisation complète avec SunHelm, STB Widgets et les autres éléments HUD à la **méga-session UI / MCM** de la partie définitive : positionnement, fading, opacité, doublons et priorités.
-- [ ] Verdict actuel : **INSTALLÉ / CONFIGURÉ, VALIDATION IN-GAME ET DOCUMENTATION TECHNIQUE À TERMINER.**
+- [x] Verdict final : **RETENU ET VALIDÉ EN JEU — preset Vel'Dun, couche d'affichage uniquement.**
 
 **Dino's Easy Quest Fix**
 

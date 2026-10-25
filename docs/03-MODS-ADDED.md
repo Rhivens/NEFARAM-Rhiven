@@ -53,9 +53,8 @@ Detailed audit: [NAKED-DEFEAT-INTEGRATION.md](guides/NAKED-DEFEAT-INTEGRATION.md
 | MESH2 ENB - Max's Edited Silent Horizons 2 1.2.1 | Validated / retained | ENB Manager Set 4 / root graphics | Preferred visual variant over stock SH2 after A/B testing. Integrated selectively into SH2 1.13 rather than full overwrite; Set 3 remains rollback. |
 | MESH2 - TerrainHelper Config | Validated | MO2 generated / shader config | Dedicated mod containing generated `Shaders/Features/TerrainHelper.ini`; enable only with the MESH2 ENB slot. |
 | ENB Dynamic Cubemaps 1.01 | Validated | 37 - Late Loaders | Loaded after Quality CubeMaps so dynamic cubemap placeholders win globally; NEFARAM Patches intentionally remains winner for `chrome_e.dds`, `glacierice_e.dds` and `ore_obsidian_e.dds`. No visual anomalies observed in-game. |
-| iNeeds | Installed / configured; validation pending | UI / hygiene display | Current replacement for the previous widget solutions. Exact version, MO2 name, options, plugins and SunHelm/BiSR interaction are not yet documented; confirm them in game before marking this choice validated. |
-| Needs Widget AIO | Superseded / rollback retained | 47 - UI - Rhiven | Previously validated with the Vel'dun preset, but no longer the final display choice after the move to iNeeds. Keep disabled if retained for rollback. |
-| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Retired / rollback only | 21 - Survival | Replaced by iNeeds and no longer intended to be active. Confirm that `WA_BathWidget.esp` is inactive; the current MO2 snapshots predate this replacement. |
+| Needs Widget AIO | Validated / retained | 47 - UI - Rhiven | Final display-only layer. No MO2 conflicts; the supplied Vel'Dun preset is present, active and tested in game. SunHelm remains the needs engine and BiSR remains the hygiene engine. |
+| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Retired / disabled / rollback only | 21 - Survival | Replaced by Needs Widget AIO and no longer intended to be active. Keep `WA_BathWidget.esp` inactive. |
 | Dino's Easy Quest Fix | Validated / retained | 43 - Added Mods SFW | ESL-flagged plugin; no MO2 conflicts. In-game MCM correctly reports active quest, current stage, objective and next stage. Use only with a manual save before forced advancement. |
 | Item Vault - Plugin Explorer | Validated / retained | 43 - Added Mods SFW | Pure SKSE + assets, no ESP and no MO2 conflicts. Opened instantly with ~46,831 indexed items / 466 plugins; custom Phoenix Katana located in seconds. |
 | Modex 3.0.2 - Rhiven + Modex - 3.0.2 Patch - Rhiven | Disabled / rollback retained | Added Mods SFW / UI helper | Disabled after Item Vault comparison; no missing masters. AddItemMenu remains active. Keep both Modex entries temporarily until the final playthrough confirms no functionality is missed. |
@@ -122,7 +121,7 @@ The current **Eleanor Stable 17.3.8** snapshots were cross-checked against this 
 | Bathing in Skyrim - Renewed - Seamless Soap - Rhiven | Validated | 21 - Survival | Renewed-specific seamless soap visual effect |
 | Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES - Rhiven | Validated | 21 - Survival | Optional more-visible bubble effect for Seamless Soap |
 | Bathing in Skyrim - Wash Me - Rhiven | Validated | 21 - Survival | Wash Me Renewed 1.3; Any follower / NSFW / Big basin |
-| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Retired / rollback only | 21 - Survival | Historical 1.7.2 configuration patched by BiSR for Renewed compatibility. Replaced by iNeeds; it is not part of the intended final active stack. |
+| Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven | Retired / disabled / rollback only | 21 - Survival | Historical 1.7.2 configuration patched by BiSR for Renewed compatibility. Replaced by Needs Widget AIO; it is not part of the intended final active stack. |
 | Gulan0-Female Random Idle 1.0 - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Evaluated successfully with OAR; Seamless Varied Feminine Idles preferred for the player; retained locally as an optional future library. |
 | Gulan0-Female Random Idle 2.0 - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Over 100 additional idle variants; tested but not selected for final setup. |
 | Gulan0 OAR Settings - Rhiven - DECOCHE | Rejected (disabled / retained) | 24 - Animations | Archived idle OAR user config: priority 900009 and 62 disabled variants; no active game files while unchecked. |
@@ -180,7 +179,7 @@ The current **Eleanor Stable 17.3.8** snapshots were cross-checked against this 
 
 No Wheeler-related legacy dependency is currently planned. The older `dMenu + dMenu NG + Wheeler Refined` stack was intentionally not restored because Perfected Wheeler works correctly with the SKSE Menu Framework already included in NEFARAM 17.3.7.
 
-The dirtiness level 5 widget fix is relevant only to a deliberate rollback to the retired Widget Addon. It is not part of the iNeeds setup.
+The dirtiness level 5 widget fix is relevant only to a deliberate rollback to the retired Widget Addon. It is not part of the Needs Widget AIO setup.
 
 `Inflation Framework NG` is also tracked only. The first real-playthrough tests will use native BodyMorph handling in BFNG, Fill Her Up and Milk Mod Economy; the framework will be reconsidered only if a reproducible morph-coexistence problem appears.
 
