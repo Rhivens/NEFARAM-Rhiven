@@ -33,6 +33,7 @@ This community guide starts from **official NEFARAM 17.3.8** and documents how t
 - Place the BiSR mods together in your survival/gameplay area.
 - Place Malignis with your animation mods, then rerun Pandora.
 - **BiSR 2.7.11 has been tested in game and is functional** for the documented core integration, MCM availability and bathing animations.
+- To use Malignis in game, enable BiSR in its MCM, select custom animations, then assign Malignis a percentage weight alongside any other installed bathing animation sets, such as Baka.
 - **Needs Widget AIO** is the final retained display layer. Its supplied **Vel'Dun** preset is present, active and validated in game.
 - Needs Widget AIO is **display only**: SunHelm remains the needs engine and BiSR remains the hygiene engine.
 - Run Pandora after the animation files are in place. The recorded successful generation detected all three BiSR lists and produced **38,349 animations**.
@@ -224,6 +225,15 @@ The documented BiSR integration uses:
 
 Place Malignis with your animation mods, after the other files it is intended to overwrite, then rerun Pandora.
 
+BiSR is disabled by default on its first start. After MCM registration has completed:
+
+1. Open the BiSR MCM and enable the mod.
+2. In the animation settings, select the option to use custom animations.
+3. Configure the percentage weighting for Malignis relative to the other installed bathing animation sets, such as Baka. Choose the distribution according to how often each set should play.
+4. Test several bathing events in game to confirm that the selected animation sets are being used with the intended balance.
+
+Pandora registration makes the animation files available, but the BiSR MCM settings above are still required to activate and distribute the custom animations in game.
+
 ### Pandora paths
 
 - Pandora output: the root of your dedicated `Pandora Output` MO2 mod
@@ -316,6 +326,7 @@ These are part of the planned inn/economy validation rather than a completed val
 - Confirm the BiSR, Wash Me and Malignis animation files are enabled.
 - Re-run Pandora to the dedicated output mod.
 - Check that all three recorded BiSR lists are detected.
+- Confirm that BiSR is enabled in its MCM, custom animations are selected and Malignis has a non-zero percentage weight.
 - Inspect MO2 Overwrite and the Pandora output mod before testing again.
 
 ### Actor/environment blood overlap
@@ -341,7 +352,7 @@ These are part of the planned inn/economy validation rather than a completed val
 - [ ] Run Pandora after the last animation-related change and verify a clean completion.
 - [ ] Inspect MO2 Overwrite and generated output mods.
 - [ ] Start from the supplied **NEFARAM_Start** save, as required by the project baseline.
-- [ ] Let MCM registration settle, then enable BiSR.
+- [ ] Let MCM registration settle, enable BiSR, select custom animations and configure the percentage weighting for Malignis and any other animation sets such as Baka.
 - [ ] Complete the final SunHelm/BiSR/Needs Widget AIO HUD and MCM consistency pass.
 - [ ] Test an inn with BiSR + Simple Inn Bath and the final economy settings.
 - [ ] Perform a save / full exit / reload test.
