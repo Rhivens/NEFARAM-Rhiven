@@ -174,14 +174,9 @@ RAEQuestRequirements.esp
 Amputator.esm
 Tamrielic Distribution.esp
 JELSnowyMountainFlowers.esl
+DynDOLOD.esm
 Helios.esp
 titkit.esl
-BeeingFemale.esm
-PamaFurnitureScr.esp
-PamaPrisonAlternative.esm
-ModernWaitMenu.esl
-PerkEntryPointExtender.esl
-DynDOLOD.esm
 Deep Chanterelle.esp
 ChanterelleENBPatch.esl
 iWant Status Bars.esp
@@ -440,8 +435,6 @@ KSHairdosSMP.esp
 KSWigsSMP.esp
 [dint999] HairPack02.esp
 [dint999] HairPack0.esp
-[dint999] HairPack02 A (female).esp
-[dint999] HairPack02 B (female).esp
 [Dint999] BDOr_Hairstyles.esp
 KaliliesBrows.esp
 Lamenthia's Marks of Beauty.esp
@@ -472,6 +465,7 @@ UnholyBodyTattoo.esp
 BM_Brows_HPH.esp
 VanillaArgoniansRedux.esp
 ALT1 Facial Hair HPH Standalone AIO.esp
+GoamElvenEars.esp
 RaceMenu.esp
 RaceMenuPlugin.esp
 RaceMenu Undress.esp
@@ -490,7 +484,6 @@ Adamant.esp
 Mundus.esp
 MundusUSSEP.esp
 Sacrosanct - Vampires of Skyrim.esp
-Acheron - Sacrosanct Patch.esp
 Shoo_TestCRVampFix.esp
 CoverYourHead - Sacrosanct.esp
 Manbeast.esp
@@ -568,7 +561,6 @@ GTS Spells Addon.esp
 GTS Spells Addon - Mysticism Patch.esp
 GTS Spells Addon - Adamant Patch.esp
 Paralysis Freezes Objects.esp
-Sillyspells.esp
 JS Instruments of Skyrim SE - Uniques.esp
 StormLightning.esp
 Embers XD.esp
@@ -1116,14 +1108,13 @@ Vigilant - Book Covers.esp
 Skyrim Unbound - Book Covers Skyrim Patch.esp
 Skyrim Unbound - Trade & Barter Patch.esp
 Skyrim Unbound Addon - Skyrim's Got Talent.esp
+YameteKudasai.esp
 DwarvenDeviousCuirass.esp
 SexGrantsExperience.esp
 TheTrappingsOfFate.esp
 abcd_valerica.esp
 SLNights.esp
-Naked Defeat.esp
-Naked Defeat - Rhiven Fix.esp
-Acheron - Naked Defeat Bridge.esp
+Practical Defeat.esp
 BaboInteractiveDia.esp
 GenderBenderTNG.esp
 Laura's Bondage Shop.esp
@@ -1133,7 +1124,6 @@ TransformativeElixirs.esp
 BalazarTheHusky.esp
 Animal_Research.esp
 Animal ResearchReplacers.esp
-Animal Mansion Reborn.esp
 daegon_dirty.esp
 Devious Chastity Piercing.esp
 Devious Curses.esp
@@ -1450,7 +1440,6 @@ Environs - Whiterun Watchtower.esp
 Environs - Abandoned Abodes - Simple Children Patch.esp
 Environs - Abandoned Abodes - 3DNPCs Patch.esp
 Environs - Hroggars House - Lawless Patch.esp
-StandingStonesAIO PsBoss.esp
 Ryn's Standing Stones.esp
 Ryn's Standing Stones - USSEP patch.esp
 StandingSoundStones_Ryns Patch.esp
@@ -1554,7 +1543,6 @@ RYFTEN - Roof Tile.esp
 RyftenDown3DNPC.esp
 Resources - The Great Cities.esp
 The Great Town of Ivarstead.esp
-AMR The Great Town of Shor's Stone Patch.esp
 Landscape For Grass Mods - The Great Town of Ivarstead PATCH.esp
 Great Town of Ivarstead - Redguard Elite Armaments Patch.esp
 COTN - Winterhold.esp
@@ -1591,7 +1579,6 @@ COTN Dawnstar - AI Overhaul Patch.esp
 COTN Winterhold - AI Overhaul Patch.esp
 COTN Morthal - AI Overhaul Patch.esp
 COTN Falkreath - AI Overhaul patch.esp
-COTN -Falkreath AMR.esp
 A Lot More Idle Marker.esp
 A Lot More Idle Marker - COTN AIO.esp
 Skyrim Unbound - Capital Whiterun Expansion Patch.esp
@@ -1857,6 +1844,7 @@ Bruma Map Adjustment.esp
 WyrmstoothMapTweaks.esp
 _NEFARAM_Start.esp
 _NEFARAM_____MAIN_____.esp
+_NEFARAM_CustomDistrib.esp
 _NEFARAM_GhaanDistribution.esp
 _NEFARAM_StringsFixes.esp
 _NEFARAM_Seasons NAT.esp
@@ -1865,8 +1853,6 @@ _NEFARAM_NinirimSlot49.esp
 _NEFARAM_Chanterelle.esp
 _NEFARAM_Vicn.esp
 _NEFARAM_Meridia.esp
-GoamElvenEars.esp
-_NEFARAM_CustomDistrib.esp
 _NEFARAM_PantiesDistrib.esp
 _NEFARAM_Hair.esp
 _NEFARAM_GuardPatch.esp
@@ -1891,116 +1877,6 @@ Synthesis_2.esp
 Synthesis_3.esp
 Synthesis_4.esp
 _NEFARAM_____AFTERSynthesis_____.esp
-Animal Mansion Reborn - Rhiven Patch.esp
-Racemenu Handnails.esp
-ZMDs Feet Nail Art for RaceMenu v1.esp
-[Dint999] FacePartMod.esp
-[Dint999] FacePartMod+Mikan_Eyes.esp
-[Dint999] FacePartMod+Kala_Eyes.esp
-Brows.esp
-Pocky Punk's Make Up Addon_females.esp
-YMMP.esp
-evgmodularSMPhair.esp
-EvgModularWigs.esp
-dD - Enhanced Blood Main.esp
-Bathing in Skyrim.esp
-Bathing in Skyrim - Renewed Animal Fat and Linen.esp
-Malignis Sound FX.esp
-Bathing in Skyrim - Wash Me.esp
-hdm_InvictaBlackRose.esp
-[qdaro] Silver Witch.esp
-DX FetishFashion II.esp
-hdm_InvictaLingerie.esp
-MuChainBikiniArmor.esp
-[ELLE] Dark Rebel.esp
-Aradia Bikini SE.esp
-Aether Outfit.esp
-LadyRitual.esp
-Bisquits Priestess of Mara.esp
-[Dint999] Fogotten Princess Set.esp
-[COCO] 2B Wedding Outfit.esp
-NocturneArmor.esp
-[ELLE] Delicate Zhuque.esp
-[Odd] RyanReos Spartan Hoplite.esp
-HB_archmage.esp
-[CV] Sexy Tsun Armor.esp
-Leolic.esp
-MuElfStahlrimBikiniArmor.esp
-[COCO] Luscious Lady.esp
-[COCO] CaressofVenus.esp
-Dark Dreams.esp
-MiscHeelsEins_CBBE.esp
-[Predator] MME Harness.esp
-Next-Gen Decapitations.esp
-Phoenix_Katana_.esp
-Rhiven_Eleanor_Katana.esp
-NewStatueOfShalidorMagicLights.esp
-Optional.DibellaStatuesFixes.esp
-MehrunesNoSnowShader.esp
-MalacathNoSnowShader.esp
-AzuraNoSnowShader.esp
-LKVM_LT04.esp
-LKVM Main House.esp
-LKVM Cellar and Exterior.esp
-LKVM_NOGrass.esp
-LKVMII_LT01.esp
-LKVM CC Fishing Patch.esp
-Riverhome v1.4.esp
-point the way.esp
-BetterThirdPersonSelection.esp
-FadeTattoos.esp
-RapeTattoos.esp
-Fertility Adventures.esp
-BeeingFemaleAdultPack.esp
-BeeingFemaleBasicAddOn.esp
-BeeingFemaleSE_Opt.esp
-InnBath.esp
-Xtended Stay.esp
-Xtended Stay - Close Dialogue.esp
-Xtended Stay - Bruma.esp
-Xtended Stay - Bruma - Close Dialogue.esp
-Regional Outfitters.esp
-Regional Outfitters - Capital Windhelm.esp
-Regional Outfitters - AI Overhaul.esp
-Regional Outfitters - Obscures College of Winterhold.esp
-Simple Offence Suppression MCM.esp
-SexLab Approach.esp
-unethicalalchemy.esp
-Unethical Alchemy - Rhiven Fix.esp
-DeviousCarriages.esp
-DeviousCarriages Redux CFTO Patch.esp
-PamaSovngardeAftermath.esp
-PaPunishmentPack1.esp
-PaOutdoorEventPack.esp
-PrisonAlternative_Executions_WindHelm.esp
-PAMA - Windhelm Navmesh Patch - Rhiven.esp
-PrisonAlternative_Executions_Riften.esp
-PrisonAlternative_Executions_Solitude.esp
-PAMA - Solitude Location Patch - Rhiven.esp
-OrkishBountyHunters.esp
-Missives.esp
-SL Dirty Deeds Missives.esp
-SL Dirty Deeds Missives - 1.4.2 - Race Edits.esp
-SL Dirty Deeds - Race Compatibility - Rhiven.esp
-ArousedBodyMorphs.esp
-TNTR.esp
-GR_TrapDefeat.esp
-GR_MimicPlacer.esp
-TNTR-MimicsTextFix.esp
-O Skyrim Has Insane Traps.esp
-watch your step.esp
-Private Needs - Orgasm.esp
-TDF Aroused Rape.esp
-SexLabDangerousNights2.esp
-UntarnishedUI_Subtitle.esp
-KVSeranaLustOfAMother.esp
-DinosEasyQuestFix.esp
-Falkreath LAND - Rhiven Fix.esp
-Synthesis_Food.esp
 DynDOLOD.esp
 Occlusion.esp
-Water for ENB - Patch - FWMF for Fantasy Paper Maps.esp
-FWMF for Fantasy Paper Maps.esp
-MCM for FWMF.esp
-Lux patch for FWMF.esp
 ```
