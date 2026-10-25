@@ -1,5 +1,19 @@
 # Animal Mansion Reborn 1.8 — NEFARAM 17.3.8 Community Guide
 
+> ⚠️ **IMPORTANT — ADVANCED MODPACK MODIFICATION**
+>
+> This integration is **not a simple plug-and-play installation**.
+>
+> A dedicated **Rhiven compatibility patch is provided with this guide**, but integrating Animal Mansion Reborn into NEFARAM still requires significant changes to the modpack and a good understanding of Skyrim modding.
+>
+> The installation involves load-order management, compatibility patches, Synthesis regeneration, xEdit validation and a full LOD regeneration workflow with xLODGen, TexGen and DynDOLOD.
+>
+> This guide is therefore intended for users who already have **some experience modifying large Skyrim modlists** and who are comfortable troubleshooting conflicts and generated outputs.
+>
+> Always work from a backup or cloned NEFARAM instance before starting the integration.
+>
+> If you are not comfortable using xEdit and regenerating LODs, keeping the original NEFARAM setup is strongly recommended.
+
 > **Baseline:** official NEFARAM 17.3.8
 > **Current status:** **TECHNICALLY INTEGRATED — LOD GENERATION IN PROGRESS — FINAL GAMEPLAY VALIDATION PENDING**
 >
