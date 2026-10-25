@@ -1,6 +1,5 @@
 # NEFARAM Rhiven Modded — MO2 Right Panel / Plugins (Dernière mise à jour le 26-10-2026 à 00h02)
 
-```text
 Current customized plugin load order for the Rhiven setup.
 
 Replace the content of the block below whenever the validated plugin order changes.
