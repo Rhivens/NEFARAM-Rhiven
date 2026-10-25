@@ -1,6 +1,6 @@
 # 09 - Survival, Blood & Hygiene Stack
 
-This community guide documents a reproducible survival, blood and hygiene stack for **NEFARAM**. It distinguishes validated results from checks that each user should complete in their own game.
+This community guide starts from **official NEFARAM 17.3.8** and documents how to integrate **Bathing in Skyrim - Renewed (BiSR) 2.7.11** on top of that baseline. It preserves the official needs, camping and blood responsibilities while adding a tested hygiene layer and a recommended display layer. Validated results remain clearly separated from checks that each user should complete in their own game.
 
 ## Quick Setup / TL;DR
 
@@ -29,14 +29,14 @@ This community guide documents a reproducible survival, blood and hygiene stack 
 
 ### Critical points
 
+- Start from an unmodified **official NEFARAM 17.3.8** installation; the steps below are additions to that baseline.
 - Place the BiSR mods together in your survival/gameplay area.
 - Place Malignis with your animation mods, then rerun Pandora.
+- **BiSR 2.7.11 has been tested in game and is functional** for the documented core integration, MCM availability and bathing animations.
 - **Needs Widget AIO** is the final retained display layer. Its supplied **Vel'Dun** preset is present, active and validated in game.
 - Needs Widget AIO is **display only**: SunHelm remains the needs engine and BiSR remains the hygiene engine.
-- The old **Widget Addon - Keep It Clean - Bathing in Skyrim** is retired, disabled and retained only for rollback.
 - Run Pandora after the animation files are in place. The recorded successful generation detected all three BiSR lists and produced **38,349 animations**.
 - On a new game, **enable BiSR in its MCM**; it is disabled by default.
-- Before declaring the migration complete, confirm that `WA_BathWidget.esp` is inactive and refresh your exported MO2 mod and plugin lists.
 
 ---
 
@@ -45,7 +45,6 @@ This community guide documents a reproducible survival, blood and hygiene stack 
 - **Validated** — directly observed or successfully tested in the documented setup.
 - **Installed / configured** — present or selected, but not fully validated in a normal playthrough.
 - **Pending in-game validation** — must not be presented as confirmed yet.
-- **Historical / rollback** — records an earlier working state, not the intended final active choice.
 
 ## Stack architecture
 
@@ -113,7 +112,6 @@ Install **Bathing in Skyrim - Renewed 2.7.11**.
 | Base Object Swapper | **Yes** |
 | Description Framework | **Yes** |
 | SkyPatcher | **Yes** |
-| Widget Addon compatibility | **Yes — historical installation choice; review during final cleanup because the addon is no longer active** |
 | Bathing Token | **No** |
 | First Person Messages | **No** |
 | Source Scripts | **Yes** |
@@ -172,41 +170,17 @@ Requirement review:
 - NEFARAM already uses **ConsoleUtil Extended**;
 - the full Dirt and Blood mod is not required for the selected BiSR main file.
 
-## Needs Widget AIO and the retired widget layer
+## Needs Widget AIO
 
 ### Current decision
 
-**Needs Widget AIO is the final retained widget solution.** It has been tested in game with its supplied **Vel'Dun** preset and remains separate from the underlying needs and hygiene engines.
+**Needs Widget AIO is the recommended display addition for this guide.** It has been tested in game with its supplied **Vel'Dun** preset and remains separate from the underlying needs and hygiene engines.
 
 | Item | Status |
 |---|---|
 | Needs Widget AIO | **Validated / retained as the final display layer** |
 | Vel'Dun preset | **Present, active and tested in game** |
 | Needs Widget AIO role | **Display only; SunHelm owns needs and BiSR owns hygiene** |
-| Widget Addon - Keep It Clean - Bathing in Skyrim | **Retired / disabled / rollback only** |
-
-Do not copy the old Widget Addon order or options into a new setup unless deliberately performing a rollback.
-
-### Retired plugin warning
-
-Older exported MO2 lists may still contain:
-
-- `Widget Addon - Keep It Clean - Bathing In Skyrim` in the left pane;
-- `WA_BathWidget.esp` in the right pane.
-
-These entries belong to the retired Widget Addon setup. Keep the mod and `WA_BathWidget.esp` inactive, and export fresh MO2 mod and plugin lists before playthrough sign-off.
-
-### Historical Widget Addon configuration
-
-For rollback reference only, the retired configuration used Widget Addon 1.7.2 with:
-
-- iNeed: **No**
-- Vitality Mode: **No**
-- iWant RND: **No**
-- None of the above: **Yes**
-- Widget Addon above BiSR so the BiSR Renewed compatibility files won conflicts.
-
-The tracked `Dirtiness Lvl5 Fix for Widget Addon` was never installed. It is irrelevant while Widget Addon remains inactive and should not be added pre-emptively.
 
 ## MO2 order, plugins and conflicts
 
@@ -225,14 +199,13 @@ Use this as the documented relationship, not as an absolute priority number:
 9. Wash Me
 10. Malignis with the animation mods, after the other files it is intended to overwrite
 
-Place Needs Widget AIO with the other interface and HUD mods. The validated installation has no MO2 file conflicts; do not copy ordering rules from the retired Widget Addon configuration.
+Place Needs Widget AIO with the other interface and HUD mods. The validated installation has no MO2 file conflicts.
 
 ### Recorded BiSR-related plugins
 
-Older exported plugin lists may contain:
+The documented BiSR integration uses:
 
 - `Bathing in Skyrim.esp`
-- `WA_BathWidget.esp` — obsolete entry from the retired Widget Addon; keep it inactive
 - `Bathing in Skyrim - Renewed Animal Fat and Linen.esp`
 - `Malignis Sound FX.esp`
 - `Bathing in Skyrim - Wash Me.esp`
@@ -301,22 +274,20 @@ These are part of the planned inn/economy validation rather than a completed val
 - Just Blood retained for actor blood.
 - EBT / Just Blood body patch installed with no added plugin.
 - BiSR 2.7.11 MCM detected.
+- BiSR 2.7.11 tested in game and functional for the documented core integration.
 - Blood-related MCM/options detected.
 - BiSR addon stack detected.
 - BiSR options visible in game.
 - Bathing animations worked without an observed animation error.
 - Wash Me and Malignis were detected by Pandora.
 - Pandora generation completed with **38,349 animations**.
-- The blood/hygiene stack launched and functioned in the recorded test environment.
-- Recorded heavy-plugin count immediately after this stack: **203**.
-
+- The blood/hygiene stack launched and functioned in game.
 - Needs Widget AIO is retained as the final display-only layer.
 - The supplied Vel'Dun preset is present, active and tested in game.
 
 ### Pending in-game validation
 
 - Confirm no duplicate survival or hygiene display remains.
-- Confirm `WA_BathWidget.esp` is inactive.
 - Enable BiSR in its MCM on a new game and verify that the setting persists after restart.
 - Validate BiSR plus Simple Inn Bath in at least one inn.
 - Validate Simple Inn Bath plus Xtended Stay with the final inn-price configuration.
@@ -325,14 +296,13 @@ These are part of the planned inn/economy validation rather than a completed val
 - Confirm HUD positioning, fading, opacity and hotkey coexistence during the final UI/MCM session.
 - Save, exit Skyrim completely, reload and confirm that the configuration persists.
 
-## Troubleshooting and rollback
+## Troubleshooting
 
 ### Duplicate or overlapping widgets
 
-1. Confirm that the retired Widget Addon is not active alongside Needs Widget AIO.
-2. Check the right pane for `WA_BathWidget.esp`.
-3. Review Needs Widget AIO, SunHelm, STB and other HUD entries during the final UI/MCM session.
-4. Change one layer at a time and retest on a disposable save.
+1. Review Needs Widget AIO, SunHelm, STB and other HUD entries during the final UI/MCM session.
+2. Confirm that only one interface element is assigned to each displayed value.
+3. Change one layer at a time and retest on a disposable save.
 
 ### BiSR does not appear to run
 
@@ -358,18 +328,15 @@ These are part of the planned inn/economy validation rather than a completed val
 - Keep the selected Seamless Soap and More Visible Bubbles combination.
 - Do not add Artisan Soaps unless deliberately re-auditing the visual layer.
 
-### Rollback strategy
+### Safe retesting
 
-- Keep a disposable test save and an MO2 backup before changing widget or survival layers.
-- Needs Widget AIO is the intended final choice; Widget Addon may be kept temporarily only as a disabled rollback reference.
-- If rollback becomes necessary, restore one known configuration at a time. Do not activate both display layers together.
-- Re-export both MO2 panes after the final choice is confirmed.
+- Keep a disposable test save and an MO2 backup before changing interface or survival layers.
+- Restore one known configuration at a time if a test fails.
+- Re-export both MO2 panes after the final configuration is confirmed.
 
 ## Before a long-term playthrough
 
 - [x] Keep Needs Widget AIO active as the final display-only layer with the validated Vel'Dun preset.
-- [ ] Confirm the retired Widget Addon is disabled or removed from the active mod list.
-- [ ] Confirm `WA_BathWidget.esp` is inactive.
 - [ ] Refresh the exported MO2 left-pane and right-pane lists.
 - [ ] Run Pandora after the last animation-related change and verify a clean completion.
 - [ ] Inspect MO2 Overwrite and generated output mods.
@@ -391,4 +358,4 @@ The retained architecture is:
 - **Campfire = camping**
 - **Needs Widget AIO = display only**
 
-The core blood, BiSR and Pandora integration has a documented successful validation. **Needs Widget AIO is the retained and validated display-only layer**, with its supplied **Vel'Dun** preset tested in game; SunHelm remains the needs engine and BiSR remains the hygiene engine.
+Starting from **official NEFARAM 17.3.8**, the core blood, BiSR and Pandora integration has a documented successful in-game validation. **BiSR 2.7.11 is functional in game**, and **Needs Widget AIO is the recommended and validated display-only addition**, with its supplied **Vel'Dun** preset present, active and tested; SunHelm remains the needs engine and BiSR remains the hygiene engine.
