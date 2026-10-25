@@ -60,6 +60,9 @@ Rule:
 - [ ] Align Simple Inn Bath cost with the chosen inn economy.
 - [ ] Validate Xtended Stay with the final inn-price configuration.
 - [ ] Review survival / hygiene interaction after all related mods are finalized.
+- [ ] Confirm the exact active iNeeds version, MO2 entry, plugins and selected options; do not copy undocumented settings from the retired widget layers.
+- [ ] Confirm Needs Widget AIO and `Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven` are disabled or retained only for rollback, and confirm `WA_BathWidget.esp` is inactive.
+- [ ] Refresh both MO2 snapshots after the iNeeds replacement; the current exports still show the retired Widget Addon state.
 - [ ] **SexLab Dangerous Nights 2 SE 2.6:** once installed in `[46 - Added Mods NSFW]`, check its MO2 file conflicts, plugin dependencies and xEdit errors before the definitive new game; static Papyrus review is preliminary, not an in-game compatibility guarantee.
 - [ ] Verify that **SexLab Adventures → Sleep Rape** (if installed) is disabled to avoid competing sleep-triggered events; keep **SL Nightlife** disabled before starting the definitive game, as already planned. Check the exact installed names rather than treating SL Nights and SL Nightlife as interchangeable.
 - [ ] Confirm Bathing in Skyrim Renewed + Simple Inn Bath behavior in at least one inn.
@@ -174,6 +177,7 @@ These tasks are intentionally performed only after the definitive playthrough ha
   - Mark special player homes / cells safe if needed; do not activate competing sleep-event systems.
   - Once validated, raise chances or re-enable individual options one by one and record Eleanor's final MCM preset.
 - [ ] Configure the remaining gameplay / survival systems consistently with the selected difficulty.
+- [ ] Validate the final iNeeds / SunHelm / BiSR relationship and remove duplicate hygiene or needs displays before finalizing HUD positions.
 - [ ] Finalize Wheeler hotkeys and layout.
 - [ ] Finalize all other hotkeys.
 - [ ] Resolve any hotkey conflicts found during real gameplay.
@@ -200,6 +204,7 @@ These tasks are intentionally performed only after the definitive playthrough ha
 - [ ] Verify Advanced Nudity Detection / OSL / modesty reactions with Eleanor's actual worn outfits.
 - [ ] Verify Simple Inn Bath and Xtended Stay in normal gameplay with the final economy settings.
 - [ ] Verify Bathing in Skyrim Renewed integration during normal play.
+- [ ] Verify iNeeds during normal play and record its confirmed settings only after the display and persistence checks pass.
 - [ ] Verify BFNG widgets and cycle state during normal play.
 - [ ] Verify Wheeler / UI / map behavior in normal gameplay.
 - [ ] Watch the first sessions for repeated errors or abnormal save growth.

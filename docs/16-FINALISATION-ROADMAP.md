@@ -278,16 +278,16 @@ Pour chaque mod candidat :
 
 #### 5 bis.2 - QoL / interface légère
 
-**Needs Widget AIO**
+**iNeeds — remplacement final des widgets précédents**
 
-- [x] Vérifier les dépendances exactes et confirmer la compatibilité avec le runtime 1.6.1170 : SKSE, Address Library et SKSE Menu Framework déjà présents dans la baseline.
-- [x] Installer le mod dans le bloc UI/HUD sans conflit de fichiers MO2 ; structure autonome `Interface/NeedsWidget` + `SKSE/Plugins/NeedsWidget`.
-- [x] Confirmer la présence du preset `Vel'dun.ini` et son activation en jeu : preset **Vel'dun** affiché comme **In use** dans le menu du mod.
-- [x] Vérifier l'apparition et le fonctionnement du widget en jeu avec les besoins actifs ; intégration visuelle jugée propre et lisible.
-- [x] Confirmer qu'il agit comme couche d'affichage uniquement et ne remplace pas les moteurs de besoins existants.
-- [x] Prévoir la désactivation de **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** dans MO2 afin d'éviter un doublon immédiat avec Needs Widget AIO.
+- [x] Retenir **iNeeds** comme remplacement actuel de `Widget Addon - Keep It Clean - Bathing in Skyrim` et de la solution intermédiaire Needs Widget AIO.
+- [ ] Relever depuis le profil MO2 actif la version exacte, le nom d'entrée, les plugins éventuels et les options réellement sélectionnées pour iNeeds ; ne pas les déduire des anciennes configurations.
+- [ ] Confirmer que **Needs Widget AIO** est désactivé ou conservé uniquement comme retour arrière.
+- [ ] Confirmer que **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** et `WA_BathWidget.esp` sont inactifs.
+- [ ] Actualiser les snapshots MO2 gauche/droite après cette vérification ; les exports actuels montrent encore l'ancien Widget Addon.
+- [ ] Vérifier en jeu la cohabitation iNeeds / SunHelm / BiSR et l'absence de doublon de besoins ou d'hygiène.
 - [ ] Reporter l'harmonisation complète avec SunHelm, STB Widgets et les autres éléments HUD à la **méga-session UI / MCM** de la partie définitive : positionnement, fading, opacité, doublons et priorités.
-- [x] Verdict final : **RETENU — faible risque, très bonne intégration avec Vel'dun, forte valeur QoL.**
+- [ ] Verdict actuel : **INSTALLÉ / CONFIGURÉ, VALIDATION IN-GAME ET DOCUMENTATION TECHNIQUE À TERMINER.**
 
 **Dino's Easy Quest Fix**
 
