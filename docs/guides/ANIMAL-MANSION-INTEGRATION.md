@@ -1,6 +1,6 @@
 # NEFARAM-Rhiven — Animal Mansion Reborn Integration Plan
 
-> **Status: CONFLICT AUDIT COMPLETE — RHIVEN PATCH DESIGN IN PROGRESS**
+> **Status: TECHNICAL INTEGRATION VALIDATED — LOD GENERATION IN PROGRESS — FINAL IN-GAME SMOKE TESTS PENDING**
 >
 > This document defines the integration workflow for **Animal Mansion Reborn 1.8** in the NEFARAM-Rhiven build.
 >
@@ -10,19 +10,20 @@
 
 ## 1. Current known state
 
-Previous preliminary review established the following:
+The technical integration now has the following confirmed state:
 
+- the full conflict audit is complete;
 - the main Animal Mansion Reborn plugin completed an xEdit Check for Errors with **0 errors**;
-- the provided **Cities of the North - Falkreath** compatibility patch completed an xEdit Check for Errors with **0 errors**;
-- the provided **The Great Town of Shor's Stone** compatibility patch contains an unresolved navmesh / NAVI problem and is therefore **not trusted as-is**;
-- several conflicts appear to be ordinary record-winning conflicts that may be resolved by load-order placement rather than by creating unnecessary duplicate overrides;
-- known areas requiring particular attention include:
-  - **Shor's Stone**;
-  - **Husky / MNC-related armor or race records**;
-  - exterior and CELL conflicts with **Lux / NEFARAM patches / Synthesis**;
-  - possible LOD implications if Animal Mansion adds or changes exterior structures.
+- the provided **Cities of the North - Falkreath** compatibility patch completed an xEdit Check for Errors with **0 errors** and remains active;
+- the provided **The Great Town of Shor's Stone** compatibility patch remains disabled because of its unresolved navmesh / NAVI problem;
+- `Animal Mansion Reborn - Rhiven Patch.esp` has been created as a minimal compatibility layer;
+- the Rhiven patch passed xEdit Check for Errors with **21 processed records / 0 errors**;
+- the patch preserves the MNC Husky model assignments, reconstructs the useful Shor's Stone placement data without forwarding the broken NAVI, restores the required AMR dialogue additions, and carries the necessary localized CELL adjustments;
+- Synthesis has been regenerated after the final AMR plugin and patch placement;
+- the selected LOD workflow is now **xLODGen → TexGen → DynDOLOD** and is in progress;
+- final AMR in-game smoke tests remain pending.
 
-The integration must therefore start with **load-order strategy first, patch creation second**.
+The current status is therefore **technically integrated, not yet gameplay-validated**.
 
 ---
 
@@ -196,7 +197,7 @@ The following records were identified as useful compatibility data candidates:
 - `defaultSetStageTRIGSpecificActor [AE5D2E20]`
 - `DogLayingDownIdleMarker [AE5DD197]`
 
-These should be reconstructed into the Rhiven patch from the final Shor's Stone geometry rather than copied blindly together with the broken navmesh data.
+These records were reconstructed into the Rhiven patch from the final Shor's Stone geometry without copying the broken NAVI / navmesh data.
 
 A persistent exterior door reference also exposes a navmesh door link:
 
@@ -211,15 +212,13 @@ This record is **navmesh-sensitive** and must not be copied mechanically.
 
 AMR modifies several vanilla dialogue topics by extending their INFO order.
 
-Three DIAL records require a dedicated merge review because later NEFARAM / dialogue plugins appear to drop AMR-added INFO entries:
+Three DIAL records required a dedicated merge because later NEFARAM / dialogue plugins dropped AMR-added INFO entries:
 
 - `DGCrimeForcegreetTopic [000267DE]`
 - `DGCrimeWantedTopic [0002A37F]`
 - `OfferServicesTopic [00076FBB]`
 
-The correct solution is **not** to force the whole AMR DIAL record to win.
-
-The final Rhiven patch should preserve the final winner's dialogue structure while restoring only the AMR INFO entries that are actually missing.
+The Rhiven patch preserves the final winner's dialogue structure while restoring only the AMR INFO entries that were missing; it does **not** force the whole AMR DIAL record to win.
 
 By contrast, INFO records that differ only because AMR or another mod restores English text over French Skyrim strings are a **translation issue, not a compatibility issue**, and belong in the later French translation phase.
 
@@ -229,13 +228,15 @@ AMR contains exterior worldspace content and at least one visible `LAND` record 
 
 `WhiterunWorld -> WhiterunWindDistrict02`
 
-The existence of the `LAND` override alone is not sufficient to mandate xLODGen. The record still needs a direct comparison to determine whether it contains meaningful terrain changes or is effectively identical / negligible.
+The final technical review retained the complete terrain/object LOD path for this integration.
 
-Current LOD decision therefore remains:
+Current LOD state:
 
-- if the LAND record is meaningful -> `xLODGen -> TexGen -> DynDOLOD`;
-- if the LAND record is not meaningful but exterior statics need LOD -> `TexGen -> DynDOLOD`;
-- do not regenerate until the final patch and Synthesis output are complete.
+- the Rhiven patch and regenerated Synthesis output are complete;
+- the selected workflow is `xLODGen -> TexGen -> DynDOLOD`;
+- xLODGen terrain generation is in progress;
+- TexGen and DynDOLOD remain to be run afterward;
+- the generated outputs must not be marked validated until the full chain completes and the result is checked.
 
 
 ---
@@ -406,30 +407,35 @@ Only category 1 normally needs preservation from AMR.
 
 ## 10. Phase H — Synthesis
 
-Do **not** regenerate Synthesis during the early audit.
+Synthesis has been regenerated after enabling the final AMR plugin set and placing `Animal Mansion Reborn - Rhiven Patch.esp` in its intended position.
 
-First determine the intended final Animal Mansion load-order position and any required Rhiven patches.
+Completed:
 
-Once Animal Mansion is accepted into the build:
+1. final AMR plugin set enabled;
+2. AMR and compatibility patches placed in their intended order;
+3. minimal Rhiven compatibility patch created;
+4. Synthesis rerun;
+5. final xEdit validation completed for the Rhiven patch: **21 processed records / 0 errors**.
 
-1. enable the final AMR plugin set;
-2. place AMR and compatibility patches in their final positions;
-3. rebuild any manual Rhiven compatibility patch;
-4. **rerun Synthesis**;
-5. compare the newly generated Synthesis output against the previous one;
-6. re-open xEdit and confirm the final winners.
-
-Reason:
-
-> the existing Synthesis output was generated without Animal Mansion in its final load-order position and should not be treated as authoritative after AMR integration.
+The regenerated Synthesis output is now the technical baseline used by the LOD workflow. This does not replace the remaining in-game smoke tests.
 
 ---
 
-## 11. Phase I — LOD decision tree
+## 11. Phase I — LOD decision and current execution
 
-Do not regenerate the complete LOD chain automatically.
+The decision review is complete: the integration is using the full **xLODGen → TexGen → DynDOLOD** chain.
 
-First inspect whether Animal Mansion modifies:
+Current execution state:
+
+- [x] final AMR plugin placement complete;
+- [x] Rhiven patch complete and xEdit-validated;
+- [x] Synthesis regenerated;
+- [ ] xLODGen terrain generation complete — **currently in progress**;
+- [ ] TexGen complete;
+- [ ] DynDOLOD complete;
+- [ ] generated outputs visually checked in-game.
+
+The decision criteria retained for future maintenance are:
 
 - `LAND` records;
 - terrain height;
@@ -481,22 +487,18 @@ Where required, rebuild compatibility in Creation Kit / appropriate navmesh work
 
 ## 13. Phase K — Minimal Rhiven patch policy
 
-### Current patch candidate set
+### Final Rhiven patch
 
-At the end of the conflict audit, the Rhiven patch is expected to stay deliberately small.
+`Animal Mansion Reborn - Rhiven Patch.esp` has been created and validated.
 
-Confirmed / likely candidates:
+Confirmed result:
 
-- 1 MNC/Husky armor-addon override;
-- 8 Shor's Stone placement/location records reconstructed from the safe parts of the supplied patch;
-- 3 dialogue-topic merges if the AMR INFO entries are confirmed missing from the final winners;
-- any strictly necessary Shor's Stone door/navmesh compatibility record only after navmesh validation.
-
-This candidate list is provisional until the dialogue INFO chains and the Shor's Stone navmesh dependency are fully verified.
-
-
-
-Create an `Animal Mansion Reborn - Rhiven Patch.esp` only if necessary.
+- **21 processed records / 0 errors** in xEdit Check for Errors;
+- MNC male and female Husky biped model paths preserved;
+- useful Shor's Stone placement/location data reconstructed without importing the supplied patch's broken NAVI;
+- required AMR dialogue INFO additions merged into the final dialogue winners;
+- localized CELL adjustments included only where required;
+- no broad or blind forwarding of whole conflict groups.
 
 The patch should contain **only** records that cannot be resolved safely by:
 
@@ -557,20 +559,21 @@ Use a disposable test save first.
 
 ## 15. Final integration order
 
-Only after all preceding checks pass:
+Current finalization state:
 
-1. finalize AMR plugin placement;
-2. finalize AMR compatibility patches;
-3. create / finalize Rhiven AMR patch if required;
-4. rerun Synthesis;
-5. re-check xEdit winners;
-6. determine whether xLODGen is required;
-7. run TexGen if required;
-8. run DynDOLOD if required;
-9. final xEdit verification;
-10. final in-game smoke test;
-11. update NEFARAM-Rhiven documentation;
-12. publish compatibility notes / patch if appropriate.
+1. [x] finalize AMR plugin placement;
+2. [x] finalize AMR compatibility patches;
+3. [x] create and validate the Rhiven AMR patch;
+4. [x] rerun Synthesis;
+5. [x] re-check the Rhiven patch in xEdit;
+6. [x] select the full `xLODGen → TexGen → DynDOLOD` workflow;
+7. [ ] complete xLODGen — **in progress**;
+8. [ ] run TexGen;
+9. [ ] run DynDOLOD;
+10. [ ] verify the generated outputs;
+11. [ ] complete the final in-game AMR smoke tests;
+12. [x] update NEFARAM-Rhiven documentation;
+13. [ ] publish compatibility notes / patch if appropriate after validation.
 
 ---
 
