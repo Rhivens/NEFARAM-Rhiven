@@ -15,10 +15,10 @@ The technical integration now has the following confirmed state:
 - the full conflict audit is complete;
 - the main Animal Mansion Reborn plugin completed an xEdit Check for Errors with **0 errors**;
 - the provided **Cities of the North - Falkreath** compatibility patch completed an xEdit Check for Errors with **0 errors** and remains active;
-- the provided **The Great Town of Shor's Stone** compatibility patch remains disabled because of its unresolved navmesh / NAVI problem;
-- `Animal Mansion Reborn - Rhiven Patch.esp` has been created as a minimal compatibility layer;
+- the provided **The Great Town of Shor's Stone** compatibility patch remains active in the final tested AMR stack;
+- `Animal Mansion Reborn - Rhiven Patch.esp` has been created and validated with that patch active, as a complementary minimal compatibility layer rather than a replacement;
 - the Rhiven patch passed xEdit Check for Errors with **21 processed records / 0 errors**;
-- the patch preserves the MNC Husky model assignments, reconstructs the useful Shor's Stone placement data without forwarding the broken NAVI, restores the required AMR dialogue additions, and carries the necessary localized CELL adjustments;
+- the Rhiven patch preserves the MNC Husky model assignments, restores the required AMR dialogue additions, and carries the necessary localized CELL adjustments while complementing the active Shor's Stone patch;
 - Synthesis has been regenerated after the final AMR plugin and patch placement;
 - the selected LOD workflow is now **xLODGen → TexGen → DynDOLOD** and is in progress;
 - final AMR in-game smoke tests remain pending.
@@ -63,7 +63,7 @@ Install:
 - its required dependencies;
 - only compatibility patches that are individually validated.
 
-Do not enable the Shor's Stone patch until its navmesh issue has been resolved or replaced.
+Enable `AMR The Great Town of Shor's Stone Patch.esp` in the final AMR stack. Load `Animal Mansion Reborn - Rhiven Patch.esp` after it as the complementary compatibility layer used for the xEdit-validated configuration.
 
 ---
 
@@ -182,9 +182,9 @@ No wider MNC merge is currently indicated.
 
 ### Shor's Stone
 
-The supplied `AMR The Great Town of Shor's Stone Patch.esp` remains **disabled** for the final setup because of its unresolved NAVI / navmesh issue.
+The supplied `AMR The Great Town of Shor's Stone Patch.esp` remains **active** in the final tested setup. `Animal Mansion Reborn - Rhiven Patch.esp` was built and validated in xEdit with it active and does not replace it.
 
-However, the patch is useful as a reference because it contains valid-looking repositioning work for AMR-specific content in Sylgja's redesigned house.
+The supplied patch contains repositioning work for AMR-specific content in Sylgja's redesigned house.
 
 The following records were identified as useful compatibility data candidates:
 
@@ -197,7 +197,7 @@ The following records were identified as useful compatibility data candidates:
 - `defaultSetStageTRIGSpecificActor [AE5D2E20]`
 - `DogLayingDownIdleMarker [AE5DD197]`
 
-These records were reconstructed into the Rhiven patch from the final Shor's Stone geometry without copying the broken NAVI / navmesh data.
+These records remain relevant to the combined compatibility stack. Earlier audit concerns around NAVI / navmesh and door links are retained as technical cautions, not as instructions to disable or replace the supplied patch.
 
 A persistent exterior door reference also exposes a navmesh door link:
 
@@ -279,7 +279,7 @@ Shor's Stone is currently the most important compatibility area.
 
 ### Known concern
 
-The supplied AMR patch for **The Great Town of Shor's Stone** previously showed an unresolved **NAVI / navmesh-related reference**.
+An earlier audit of the supplied AMR patch for **The Great Town of Shor's Stone** flagged a **NAVI / navmesh-related reference** for special attention. The patch is nevertheless active in the final stack used to build and validate the Rhiven patch in xEdit; complete pathing and transition validation remains pending in the gameplay smoke tests.
 
 ### Required checks
 
@@ -301,7 +301,7 @@ Inspect:
 
 ### Rule
 
-Do not copy the broken supplied patch blindly.
+Do not mechanically forward NAVI / NAVM or door-link records into another patch. Keep the supplied Shor's Stone patch active and audit the final winners in the complete stack.
 
 If a navmesh conflict must be resolved:
 
@@ -495,7 +495,7 @@ Confirmed result:
 
 - **21 processed records / 0 errors** in xEdit Check for Errors;
 - MNC male and female Husky biped model paths preserved;
-- useful Shor's Stone placement/location data reconstructed without importing the supplied patch's broken NAVI;
+- complementary Shor's Stone compatibility records built and xEdit-validated with the supplied Shor's Stone patch active;
 - required AMR dialogue INFO additions merged into the final dialogue winners;
 - localized CELL adjustments included only where required;
 - no broad or blind forwarding of whole conflict groups.

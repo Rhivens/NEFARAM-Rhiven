@@ -89,9 +89,9 @@ Rule:
 ### Animal Mansion Reborn 1.8 — before definitive New Game
 
 - [x] Complete the full AMR conflict audit on the current NEFARAM-Rhiven 17.3.8 baseline.
-- [x] Keep `COTN -Falkreath AMR.esp` active and keep the broken supplied Shor's Stone patch disabled.
+- [x] Keep `COTN -Falkreath AMR.esp` and `AMR The Great Town of Shor's Stone Patch.esp` active in the final AMR stack.
 - [x] Create and validate `Animal Mansion Reborn - Rhiven Patch.esp`: **21 records / 0 xEdit errors**.
-- [x] Confirm the patch preserves the required MNC Husky data, safe Shor's Stone placements, AMR dialogue additions and localized CELL adjustments without importing the broken NAVI.
+- [x] Confirm `Animal Mansion Reborn - Rhiven Patch.esp` was built and xEdit-validated with the Shor's Stone patch active and complements it with the required MNC Husky data, AMR dialogue additions and localized CELL adjustments.
 - [x] Regenerate Synthesis after final AMR / Rhiven patch placement.
 - [ ] Complete the LOD chain in order: **xLODGen currently in progress → TexGen → DynDOLOD**.
 - [ ] Inspect the final generated outputs before gameplay validation.

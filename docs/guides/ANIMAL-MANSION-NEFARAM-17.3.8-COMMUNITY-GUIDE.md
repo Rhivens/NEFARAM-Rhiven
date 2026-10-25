@@ -11,8 +11,8 @@
 2. Install **Animal Mansion Reborn 1.8** and its documented requirements.
 3. Enable `Animal Mansion Reborn.esp`.
 4. Keep `COTN -Falkreath AMR.esp` enabled.
-5. Keep the supplied `AMR The Great Town of Shor's Stone Patch.esp` **disabled**. It contains unresolved NAVI / navmesh references.
-6. Enable `Animal Mansion Reborn - Rhiven Patch.esp` after the plugins whose AMR conflicts it resolves.
+5. Keep the supplied `AMR The Great Town of Shor's Stone Patch.esp` **enabled** alongside `COTN -Falkreath AMR.esp`.
+6. Enable `Animal Mansion Reborn - Rhiven Patch.esp` after the Shor's Stone patch and the other plugins whose AMR conflicts it resolves. It complements the supplied compatibility patches; it does not replace them.
 7. Keep Animal Mansion early enough for the established NEFARAM, Lux and generated-patch winners to retain their intended final values. Do not use personal MO2 separators or copy another user's absolute plugin positions.
 8. Rerun **Synthesis** after the final plugin placement.
 9. For this integration, rebuild generated LOD in this order: **xLODGen -> TexGen -> DynDOLOD**.
@@ -26,6 +26,7 @@ Do not describe the setup as gameplay-validated until the LOD workflow and every
 - **Animal Mansion Reborn 1.8**.
 - All requirements documented by Animal Mansion Reborn 1.8. This guide does not add or guess at a separate dependency list.
 - The supplied `COTN -Falkreath AMR.esp` compatibility patch.
+- The supplied `AMR The Great Town of Shor's Stone Patch.esp` compatibility patch.
 - `Animal Mansion Reborn - Rhiven Patch.esp`.
 - MO2 and the existing NEFARAM tools used to regenerate Synthesis and LOD outputs.
 - A disposable test save for validation.
@@ -39,8 +40,8 @@ The exact separator names and absolute positions vary between installations. Use
 1. Install and enable **Animal Mansion Reborn 1.8**.
 2. Place `Animal Mansion Reborn.esp` before the late NEFARAM environment, city, lighting and generated-patch layers where those later plugins already contain the correct final state.
 3. Load `COTN -Falkreath AMR.esp` after its required masters and keep it active. It repositions AMR-specific markers and quest triggers for the COTN Falkreath geometry.
-4. Disable `AMR The Great Town of Shor's Stone Patch.esp`.
-5. Load `Animal Mansion Reborn - Rhiven Patch.esp` after Animal Mansion and after the records it is intended to merge or correct.
+4. Load `AMR The Great Town of Shor's Stone Patch.esp` after its required masters and keep it active.
+5. Load `Animal Mansion Reborn - Rhiven Patch.esp` after the active Shor's Stone patch and after the other records it is intended to merge or correct.
 6. Preserve the established later Lux / NEFARAM winners where they already provide the correct environment state.
 7. Regenerate Synthesis only after the AMR plugin set and compatibility patch placement are final.
 8. Run the LOD tools only after Synthesis and the manual compatibility patch are in their intended final state.
@@ -56,12 +57,12 @@ The intended principle is simple: use load-order placement for conflicts that ar
 The patch:
 
 - preserves the current MNC male and female Husky biped model paths;
-- reconstructs the useful Shor's Stone placement and location changes against the final settlement geometry without importing the supplied patch's broken NAVI data;
+- complements the active Shor's Stone compatibility patch in the final audited stack;
 - restores the missing AMR dialogue INFO additions while retaining the final dialogue structure supplied by later winners;
 - includes only the localized CELL adjustments required by the audited conflicts;
 - avoids broad or blind forwarding of whole CELL or conflict groups.
 
-The patch does not replace the COTN Falkreath patch, does not make the supplied Shor's Stone patch safe to enable, and does not replace Synthesis or LOD generation.
+The Rhiven patch does not replace either the COTN Falkreath patch or the supplied Shor's Stone patch, and it does not replace Synthesis or LOD generation. It was built and xEdit-validated with the Shor's Stone patch active.
 
 ## Compatibility notes
 
@@ -71,9 +72,9 @@ The patch does not replace the COTN Falkreath patch, does not make the supplied 
 
 ### The Great Town of Shor's Stone
 
-Keep `AMR The Great Town of Shor's Stone Patch.esp` disabled. Its useful placement work was selectively reconstructed in the Rhiven patch, but its unresolved NAVI / navmesh references were not imported.
+Keep `AMR The Great Town of Shor's Stone Patch.esp` active. The Rhiven patch was built and xEdit-validated with it active and is a complementary layer, not a reconstruction or replacement of the supplied patch.
 
-Do not try to solve Shor's Stone by mechanically copying the supplied patch or by changing load order alone. Navmesh and door-link records are sensitive to the final settlement geometry.
+Earlier audit concerns around NAVI / navmesh and door-link records remain useful technical cautions because those records are sensitive to the final settlement geometry. They were audited in the active final stack; complete NPC pathing, follower pathing and door-transition validation remains pending in the gameplay smoke tests.
 
 ### MNC and Husky models
 
@@ -150,10 +151,10 @@ Gameplay validation requires the complete generated-output chain plus reproducib
 
 ### Shor's Stone NPC or follower pathing is broken
 
-- Confirm that `AMR The Great Town of Shor's Stone Patch.esp` is disabled.
+- Confirm that `AMR The Great Town of Shor's Stone Patch.esp` is active and that the Rhiven patch loads after it.
 - Confirm that the Rhiven patch is enabled and loads after the records it corrects.
 - Test NPC pathing, followers, doors and transitions on a disposable save.
-- Stop validation if the problem is reproducible; do not copy NAVI / NAVM records from the supplied patch as a quick fix.
+- Stop validation if the problem is reproducible; do not mechanically forward NAVI / NAVM records into another patch as a quick fix.
 
 ### A door or transition is broken
 

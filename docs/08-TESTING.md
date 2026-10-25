@@ -47,9 +47,9 @@ Completed technical checks:
 - full AMR conflict audit completed;
 - main plugin: **30,175 records / 0 xEdit errors**;
 - `COTN -Falkreath AMR.esp`: **0 xEdit errors**, retained;
-- supplied Shor's Stone patch: unresolved NAVI / navmesh references, kept disabled;
+- supplied Shor's Stone patch: active in the final tested AMR stack; its navmesh-sensitive records remain covered by the pending smoke tests;
 - `Animal Mansion Reborn - Rhiven Patch.esp`: **21 processed records / 0 errors**;
-- Rhiven patch includes only the required MNC Husky forwarding, safe Shor's Stone placement reconstruction, AMR dialogue merges and localized CELL adjustments;
+- Rhiven patch was built and xEdit-validated with the Shor's Stone patch active and complements it with only the required MNC Husky forwarding, AMR dialogue merges and localized CELL adjustments;
 - Synthesis regenerated after final AMR and Rhiven patch placement;
 - full `xLODGen → TexGen → DynDOLOD` workflow selected; xLODGen currently in progress.
 

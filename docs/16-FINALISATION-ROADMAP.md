@@ -346,10 +346,10 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 
 - [x] Audit complet effectué sur la baseline actuelle **NEFARAM-Rhiven 17.3.8** ; plugin principal : **30 175 records / 0 erreur xEdit**.
 - [x] Patch COTN Falkreath contrôlé : **0 erreur** ; conservé actif pour ses repositionnements AMR propres à la géométrie COTN.
-- [x] Patch Great Town of Shor's Stone identifié comme problématique : références NAVI / navmesh non résolues ; il reste désactivé.
+- [x] Patch `AMR The Great Town of Shor's Stone Patch.esp` conservé actif dans la pile AMR finale testée ; ses records sensibles NAVI / navmesh ont été audités dans cette pile et restent à confirmer par les smoke tests gameplay.
 - [x] Stratégie de load order confirmée : laisser Lux, NEFARAM et Synthesis gagner lorsqu'ils portent déjà le bon état final, sans duplication inutile.
 - [x] Créer `Animal Mansion Reborn - Rhiven Patch.esp` comme couche minimale et réversible.
-- [x] Préserver le correctif MNC/Husky, reconstruire les placements utiles de Shor's Stone sans reprendre le NAVI cassé, fusionner les ajouts de dialogue AMR et appliquer les ajustements CELL strictement nécessaires.
+- [x] Construire et valider le patch Rhiven avec le patch Shor's Stone actif, comme complément minimal : préserver le correctif MNC/Husky, fusionner les ajouts de dialogue AMR et appliquer les ajustements CELL strictement nécessaires.
 - [x] Valider le patch Rhiven dans xEdit : **21 records / 0 erreur**.
 - [x] Régénérer Synthesis après placement final d'AMR et du patch Rhiven.
 - [x] Retenir le workflow LOD complet **xLODGen → TexGen → DynDOLOD**.
