@@ -12,6 +12,19 @@ This file tracks Rhiven additions originally built on the validated NEFARAM 17.3
 
 ## Added mods
 
+### Animal Mansion Reborn integration — 25 October 2026
+
+| Mod | Status | Section | Reason / Notes |
+|---|---|---|---|
+| Animal Mansion Reborn 1.8 | Technically integrated / gameplay smoke tests pending | 46 - Added Mods NSFW | Full conflict audit completed. Main plugin passed xEdit with **30,175 records / 0 errors**. Final load-order strategy lets later Lux / NEFARAM / Synthesis records win where appropriate. |
+| COTN -Falkreath AMR.esp | xEdit validated / retained | AMR compatibility | Passed Check for Errors with **0 errors** and retains AMR-specific marker / trigger placement required by COTN Falkreath. Final in-game observation remains pending. |
+| Animal Mansion Reborn - Rhiven Patch.esp | xEdit validated / retained | AMR compatibility | Minimal compatibility layer: MNC Husky model forwarding, safe Shor's Stone placement reconstruction without the broken NAVI, required AMR dialogue merges, and localized CELL adjustments. Check for Errors: **21 records / 0 errors**. |
+| AMR The Great Town of Shor's Stone Patch.esp | Disabled / not retained in active setup | AMR compatibility | Supplied patch contains unresolved NAVI / navmesh references. Useful placement data was reconstructed selectively in the Rhiven patch; the original patch remains disabled. |
+| Synthesis Output | Regenerated | Generated outputs | Regenerated after final AMR and Rhiven patch placement. |
+| xLODGen / TexGen / DynDOLOD outputs | In progress | Generated outputs | Full `xLODGen → TexGen → DynDOLOD` workflow selected. xLODGen is currently running; later stages and final visual checks remain pending. |
+
+Detailed audit and remaining tests: [ANIMAL-MANSION-INTEGRATION.md](guides/ANIMAL-MANSION-INTEGRATION.md).
+
 ### Naked Defeat integration — 24 October 2026
 
 | Mod | Status | Section | Reason / Notes |
