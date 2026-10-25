@@ -2,13 +2,13 @@
 
 Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
-**Avancement documentaire mis à jour le 24/10/2026 — cible : NEFARAM-Rhiven 1.1.**
+**Avancement documentaire mis à jour le 25/10/2026 — cible : NEFARAM-Rhiven 1.1.**
 
 **L'installation du socle actuellement retenu est terminée.** Les snapshots des deux panneaux MO2 ont été mis à jour dans [load-order](../load-order/README.md). Une copie complète de l'instance NEFARAM d'origine a permis les essais réversibles. L'instance stable a été remise en place sous `C:\JEUX\NEFARAM` ; l'instance expérimentale Community Shaders est conservée séparément sous `C:\JEUX\NEFARAM_CS`. Une dernière vague de **mods candidats** est maintenant étudiée avant le gel définitif ; aucun de ces candidats n'est considéré comme intégré tant que son audit et, si nécessaire, ses tests dédiés ne sont pas terminés.
 
 La **migration technique 17.3.7 -> 17.3.8 est terminée et validée**. Les validations exclusivement liées au gameplay réel restent suivies dans la fiche de migration et la checklist ; elles ne remettent pas en cause la baseline technique 17.3.8.
 
-Ordre de travail restant : **validation in-game de Naked Defeat → étude communautaire d'Animal Mansion Reborn → création/test/publication éventuelle d'un patch NEFARAM-Rhiven pour AMR → gel fonctionnel → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
+Ordre de travail restant : **terminer la chaîne LOD xLODGen → TexGen → DynDOLOD pour Animal Mansion Reborn → effectuer les smoke tests AMR et Naked Defeat encore ouverts → décider d'une publication éventuelle du patch AMR après validation → gel fonctionnel → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
 
 **Étape KID / modesty Eleanor validée le 16/10/2026 :** audit de la collection personnelle terminé, couverture existante AND / OSL / SLA / BOOBIES contrôlée, complément `Eleanor Modesty KID - Rhiven` créé avec `Rhiven_Eleanor_Modesty_KID.ini`, et chargement confirmé dans le log Keyword Item Distributor sans erreur de parsing propre au fichier Rhiven. Les réactions réelles aux tenues restent volontairement à vérifier pendant la partie définitive.
 
@@ -229,7 +229,7 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ## Phase 5 bis - Étude des derniers candidats avant gel définitif
 
-**État au 24/10/2026 :** cette phase est toujours ouverte après la migration 17.3.8 et avant la francisation finale. Les blocs graphismes et QoL sont retenus ; Horde a été rejeté au profit de NFF ; LL Integration 0.8 a passé son essai contrôlé ; SexLab Approach Redux 3.62 et Unethical Alchemy 1.0.0 sont techniquement intégrés et passent désormais en validation gameplay. **Naked Defeat 6.50 est techniquement validé et entre maintenant en smoke test in-game. Animal Mansion Reborn 1.8 devient ensuite le dernier chantier communautaire prioritaire avant gel fonctionnel et traduction FR.**
+**État au 25/10/2026 :** cette phase reste ouverte avant la francisation finale. Les blocs graphismes et QoL sont retenus ; Horde a été rejeté au profit de NFF ; LL Integration 0.8 a passé son essai contrôlé ; SexLab Approach Redux 3.62 et Unethical Alchemy 1.0.0 sont techniquement intégrés et passent désormais en validation gameplay. **Naked Defeat 6.50 reste techniquement validé avec smoke tests in-game à terminer. Animal Mansion Reborn 1.8 a franchi l'audit, la création du patch Rhiven, la validation xEdit et la régénération Synthesis ; la chaîne LOD est en cours et les smoke tests AMR restent à faire.**
 
 ### Procédure standard d'étude
 
@@ -342,28 +342,25 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 
 #### 5 bis.5 - LoversLab : gros contenus / systèmes lourds
 
-**Animal Mansion Reborn 1.8 — chantier communautaire prioritaire après Naked Defeat**
+**Animal Mansion Reborn 1.8 — intégration technique terminée, validation finale en cours**
 
-- [x] Première passe d'audit effectuée : plugin principal **30 175 records / 0 erreur xEdit**.
-- [x] Patch COTN Falkreath contrôlé : **0 erreur**.
-- [x] Patch Great Town of Shor's Stone identifié comme problématique : plusieurs références NAVI / navmesh non résolues ; patch désactivé et déplacé en Optional ESP pendant l'audit.
-- [x] Conflits déjà repérés : Shor's Stone, MNC Husky, Lux / NEFARAM / Synthesis CELL forwarding et autres ajustements localisés.
-- [x] Verdict personnel initial : intégration possible mais coût de maintenance trop élevé pour un simple ajout privé.
-- [x] Repositionnement du 24/10/2026 : **réouverture du chantier pour la communauté NEFARAM**, plusieurs utilisateurs ayant exprimé leur intérêt pour une intégration propre d'AMR.
-- [ ] Reprendre l'audit sur la baseline actuelle **NEFARAM-Rhiven 17.3.8** après validation in-game de Naked Defeat.
-- [ ] Utiliser la documentation déjà présente dans `docs/guides/` et les résultats du premier audit comme base ; ne pas repartir de zéro.
-- [ ] Vérifier les prérequis exacts, dépendances SexLab / créatures / animations, plugins, scripts, worldspace/cell edits et patches nécessaires.
-- [ ] Construire un **patch NEFARAM-Rhiven dédié** uniquement si les conflits identifiés peuvent être corrigés proprement sans modification destructive des plugins d'origine.
-- [ ] Corriger / remplacer le patch Shor's Stone uniquement après analyse des navmeshes et références réellement nécessaires.
-- [ ] Forwarder proprement les CELL / lighting / ownership / encounter data nécessaires depuis Lux, NEFARAM et Synthesis.
-- [ ] Vérifier MNC / races créatures / Husky et toute dépendance animation.
-- [ ] Vérifier les besoins Pandora / animations et toute génération nécessaire.
-- [ ] Effectuer un Check for Errors complet sur le patch Rhiven final.
+- [x] Audit complet effectué sur la baseline actuelle **NEFARAM-Rhiven 17.3.8** ; plugin principal : **30 175 records / 0 erreur xEdit**.
+- [x] Patch COTN Falkreath contrôlé : **0 erreur** ; conservé actif pour ses repositionnements AMR propres à la géométrie COTN.
+- [x] Patch Great Town of Shor's Stone identifié comme problématique : références NAVI / navmesh non résolues ; il reste désactivé.
+- [x] Stratégie de load order confirmée : laisser Lux, NEFARAM et Synthesis gagner lorsqu'ils portent déjà le bon état final, sans duplication inutile.
+- [x] Créer `Animal Mansion Reborn - Rhiven Patch.esp` comme couche minimale et réversible.
+- [x] Préserver le correctif MNC/Husky, reconstruire les placements utiles de Shor's Stone sans reprendre le NAVI cassé, fusionner les ajouts de dialogue AMR et appliquer les ajustements CELL strictement nécessaires.
+- [x] Valider le patch Rhiven dans xEdit : **21 records / 0 erreur**.
+- [x] Régénérer Synthesis après placement final d'AMR et du patch Rhiven.
+- [x] Retenir le workflow LOD complet **xLODGen → TexGen → DynDOLOD**.
+- [ ] Terminer xLODGen — **génération en cours**.
+- [ ] Exécuter TexGen puis DynDOLOD et contrôler les outputs générés.
 - [ ] Tester uniquement sur profil clone / sauvegarde jetable.
-- [ ] Tester au minimum : démarrage de quête, mansion, Falkreath, Shor's Stone, scènes créatures, navigation NPC, changement de cellules, sauvegarde/rechargement.
-- [ ] Si validé : publier le patch et la documentation d'intégration, puis annoncer la disponibilité sur le Discord NEFARAM avec demande de retours communautaires.
-- [ ] Si le patch devient trop invasif ou impose une maintenance disproportionnée : documenter précisément les blocages et reporter.
-- [ ] Statut actuel : **COMMUNITY CANDIDATE / CHANTIER À REPRENDRE APRÈS NAKED DEFEAT**.
+- [ ] Smoke tests minimum : démarrage de quête, mansion, Falkreath, Shor's Stone, scènes créatures, navigation NPC/follower, portes et transitions de cellules, sauvegarde/rechargement, absence de CTD reproductible.
+- [ ] Si les smoke tests passent : décider de la publication du patch et de la note d'intégration, puis annoncer éventuellement la disponibilité sur le Discord NEFARAM avec demande de retours communautaires.
+- [ ] Statut actuel : **TECHNIQUEMENT INTÉGRÉ / PATCH XEDIT VALIDÉ / LOD EN COURS / GAMEPLAY NON ENCORE VALIDÉ**.
+
+Guide détaillé : [ANIMAL-MANSION-INTEGRATION.md](guides/ANIMAL-MANSION-INTEGRATION.md).
 
 **RennasRanch 0.3.0**
 
@@ -423,11 +420,13 @@ Ces outils ne sont pas des composants du modpack actif et peuvent être évalué
 
 ### Critère de fermeture de la phase 5 bis
 
-Ordre de fermeture retenu au 24/10/2026 :
+Ordre de fermeture mis à jour au 25/10/2026 :
 
-1. **Terminer les tests in-game de Naked Defeat** et prononcer le verdict final sur le remplacement de Practical Defeat / Yamete Kudasai.
-2. **Reprendre Animal Mansion Reborn 1.8 comme chantier communautaire NEFARAM** : audit final, patch Rhiven si faisable, tests, documentation et publication / message Discord en cas de succès.
-3. Donner à chaque autre candidat restant un verdict explicite : **retenu, rejeté ou reporté**.
+1. **Terminer la chaîne LOD d'Animal Mansion Reborn** : xLODGen en cours, puis TexGen et DynDOLOD.
+2. **Effectuer les smoke tests AMR** et ne déclarer l'intégration gameplay validée qu'après réussite reproductible.
+3. **Terminer les tests in-game de Naked Defeat** et prononcer le verdict final sur le remplacement de Practical Defeat / Yamete Kudasai.
+4. Donner à chaque autre candidat restant un verdict explicite : **retenu, rejeté ou reporté**.
+5. Ne publier / annoncer le patch AMR qu'après validation finale ou avec un statut de test explicitement indiqué.
 4. **Geler fonctionnellement la load order.**
 5. Passer à la **Phase 6 — traduction FR**.
 
