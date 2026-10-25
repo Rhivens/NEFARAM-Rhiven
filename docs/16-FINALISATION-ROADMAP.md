@@ -8,7 +8,9 @@ Cette fiche fixe l'ordre de travail jusqu'au lancement de la partie définitive.
 
 La **migration technique 17.3.7 -> 17.3.8 est terminée et validée**. Les validations exclusivement liées au gameplay réel restent suivies dans la fiche de migration et la checklist ; elles ne remettent pas en cause la baseline technique 17.3.8.
 
-Ordre de travail restant : **terminer la chaîne LOD xLODGen → TexGen → DynDOLOD pour Animal Mansion Reborn → effectuer les smoke tests AMR et Naked Defeat encore ouverts → décider d'une publication éventuelle du patch AMR après validation → gel fonctionnel → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
+Ordre de travail restant : **chaîne LOD d'Animal Mansion Reborn terminée et techniquement validée → smoke tests gameplay complets AMR et Naked Defeat volontairement reportés à la partie définitive, avec risque résiduel accepté par Rhiven et corrections en cours de partie si nécessaire → gel fonctionnel → passage de Skyrim en français → traduction des mods → checklist pré-finale → départ via NEFARAM_Start → paramétrage des MCM → validation et jeu.**
+
+**Statut global au 25/10/2026 : la prochaine phase active est désormais la Phase 6 — francisation de Skyrim et traduction des mods.** AMR et Naked Defeat restent techniquement intégrés, sans être déclarés validés en gameplay ; leurs smoke tests complets sont reportés à la partie définitive.
 
 **Étape KID / modesty Eleanor validée le 16/10/2026 :** audit de la collection personnelle terminé, couverture existante AND / OSL / SLA / BOOBIES contrôlée, complément `Eleanor Modesty KID - Rhiven` créé avec `Rhiven_Eleanor_Modesty_KID.ini`, et chargement confirmé dans le log Keyword Item Distributor sans erreur de parsing propre au fichier Rhiven. Les réactions réelles aux tenues restent volontairement à vérifier pendant la partie définitive.
 
@@ -229,7 +231,7 @@ Source : https://www.nexusmods.com/skyrimspecialedition/mods/176230
 
 ## Phase 5 bis - Étude des derniers candidats avant gel définitif
 
-**État au 25/10/2026 :** cette phase reste ouverte avant la francisation finale. Les blocs graphismes et QoL sont retenus ; Horde a été rejeté au profit de NFF ; LL Integration 0.8 a passé son essai contrôlé ; SexLab Approach Redux 3.62 et Unethical Alchemy 1.0.0 sont techniquement intégrés et passent désormais en validation gameplay. **Naked Defeat 6.50 reste techniquement validé avec smoke tests in-game à terminer. Animal Mansion Reborn 1.8 a franchi l'audit, la création du patch Rhiven, la validation xEdit et la régénération Synthesis ; la chaîne LOD est en cours et les smoke tests AMR restent à faire.**
+**État au 25/10/2026 :** cette phase est close pour permettre le passage à la francisation finale. Les blocs graphismes et QoL sont retenus ; Horde a été rejeté au profit de NFF ; LL Integration 0.8 a passé son essai contrôlé ; SexLab Approach Redux 3.62 et Unethical Alchemy 1.0.0 sont techniquement intégrés. **Naked Defeat 6.50 reste techniquement validé, sans validation gameplay. La chaîne LOD d'Animal Mansion Reborn 1.8 est terminée et techniquement validée. Les smoke tests gameplay complets d'AMR et de Naked Defeat sont volontairement reportés à la partie définitive, avec risque résiduel accepté par Rhiven ; les problèmes éventuels seront corrigés lorsqu'ils seront rencontrés, si possible sans modification structurelle du socle.**
 
 ### Procédure standard d'étude
 
@@ -342,7 +344,7 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 
 #### 5 bis.5 - LoversLab : gros contenus / systèmes lourds
 
-**Animal Mansion Reborn 1.8 — intégration technique terminée, validation finale en cours**
+**Animal Mansion Reborn 1.8 — intégration technique et chaîne LOD terminées / gameplay reporté à la partie définitive**
 
 - [x] Audit complet effectué sur la baseline actuelle **NEFARAM-Rhiven 17.3.8** ; plugin principal : **30 175 records / 0 erreur xEdit**.
 - [x] Patch COTN Falkreath contrôlé : **0 erreur** ; conservé actif pour ses repositionnements AMR propres à la géométrie COTN.
@@ -353,12 +355,16 @@ Les fiches LoversLab sont préparées à partir des descriptions copiées par Fa
 - [x] Valider le patch Rhiven dans xEdit : **21 records / 0 erreur**.
 - [x] Régénérer Synthesis après placement final d'AMR et du patch Rhiven.
 - [x] Retenir le workflow LOD complet **xLODGen → TexGen → DynDOLOD**.
-- [ ] Terminer xLODGen — **génération en cours**.
-- [ ] Exécuter TexGen puis DynDOLOD et contrôler les outputs générés.
-- [ ] Tester uniquement sur profil clone / sauvegarde jetable.
-- [ ] Smoke tests minimum : démarrage de quête, mansion, Falkreath, Shor's Stone, scènes créatures, navigation NPC/follower, portes et transitions de cellules, sauvegarde/rechargement, absence de CTD reproductible.
-- [ ] Si les smoke tests passent : décider de la publication du patch et de la note d'intégration, puis annoncer éventuellement la disponibilité sur le Discord NEFARAM avec demande de retours communautaires.
-- [ ] Statut actuel : **TECHNIQUEMENT INTÉGRÉ / PATCH XEDIT VALIDÉ / LOD EN COURS / GAMEPLAY NON ENCORE VALIDÉ**.
+- [x] **xLODGen terminé et vérifié.**
+- [x] **TexGen terminé avec succès.**
+- [x] **DynDOLOD terminé avec succès.**
+- [x] Contrôle xEdit final : `DynDOLOD.esp` = **0 erreur**, `Occlusion.esp` = **0 erreur** ; `DynDOLOD.esm` ne présente que les faux positifs documentés liés aux records de terrain underside.
+- [x] Test InGame LOD global effectué, sans problème apparent majeur.
+- [x] Correction locale Falkreath validée via `Falkreath LAND - Rhiven Fix.esp`, qui restaure `LAND:0000AC81` après `PaOutdoorEventPack.esp` ; le trou visible à l'entrée de Falkreath a disparu.
+- [x] Une anomalie visuelle mineure reste présente en forêt, hors zone normale de passage ; elle est considérée comme non bloquante.
+- [ ] **DEFERRED TO DEFINITIVE PLAYTHROUGH / REPORTÉ À LA PARTIE DÉFINITIVE** — smoke tests gameplay complets : démarrage de quête, mansion, Falkreath, Shor's Stone, scènes créatures, navigation NPC/follower, portes et transitions de cellules, sauvegarde/rechargement, absence de CTD reproductible.
+- [ ] Après validation gameplay en partie définitive : décider de la publication du patch et de la note d'intégration, puis annoncer éventuellement la disponibilité sur le Discord NEFARAM avec demande de retours communautaires.
+- [x] Statut actuel : **TECHNIQUEMENT INTÉGRÉ / PATCH XEDIT VALIDÉ / CHAÎNE LOD TERMINÉE ET VALIDÉE TECHNIQUEMENT / GAMEPLAY NON VALIDÉ — DEFERRED TO DEFINITIVE PLAYTHROUGH**. Risque résiduel accepté par Rhiven ; corriger les problèmes lorsqu'ils seront rencontrés, si possible sans modification structurelle du socle.
 
 Guide détaillé : [ANIMAL-MANSION-INTEGRATION.md](guides/ANIMAL-MANSION-INTEGRATION.md).
 
@@ -381,13 +387,13 @@ Guide détaillé : [ANIMAL-MANSION-INTEGRATION.md](guides/ANIMAL-MANSION-INTEGRA
 - [x] Auditer Yamete Kudasai : chevauchement élevé avec les conséquences Acheron/Naked Defeat et événements YAML concurrents. Décision : désactiver le **mod MO2 complet YameteKudasai** pendant le smoke test.
 - [x] Auditer **Practical Defeat Reanimated** : chevauchement maximal avec Naked Defeat. Décision : désactiver Practical Defeat + voicepack pendant le smoke test ; retrait définitif conditionné à la validation gameplay.
 - [x] Conserver `Acheron - Simple Recover` et `Acheron - Diary of Mine Extension` actifs ; ils ne remplacent pas la chaîne principale Naked Defeat.
-- [ ] Relancer Pandora après désactivation de Yamete Kudasai.
-- [ ] Smoke test : plusieurs défaites, dont humanoïde, créature et follower ; contrôler fin de scène, stripping/vol éventuel, récupération et absence de blocage bleedout.
-- [ ] Vérifier explicitement la sortie de l'état Acheron defeated / bleedout, le retour des contrôles et la libération correcte des assaillants.
-- [ ] Vérifier une répétition de plusieurs événements dans la même session puis save / exit / reload.
+- [ ] Relancer Pandora après désactivation de Yamete Kudasai, au plus tard lors de la checklist pré-finale.
+- [ ] **DEFERRED TO DEFINITIVE PLAYTHROUGH / REPORTÉ À LA PARTIE DÉFINITIVE** — smoke test gameplay complet : plusieurs défaites, dont humanoïde, créature et follower ; contrôler fin de scène, stripping/vol éventuel, récupération et absence de blocage bleedout.
+- [ ] **DEFERRED TO DEFINITIVE PLAYTHROUGH / REPORTÉ À LA PARTIE DÉFINITIVE** — vérifier explicitement la sortie de l'état Acheron defeated / bleedout, le retour des contrôles et la libération correcte des assaillants.
+- [ ] **DEFERRED TO DEFINITIVE PLAYTHROUGH / REPORTÉ À LA PARTIE DÉFINITIVE** — vérifier une répétition de plusieurs événements dans la même session puis save / exit / reload.
 - [ ] Si le smoke test passe : considérer **Practical Defeat remplacé** et conserver Yamete Kudasai désactivé par défaut dans le build Rhiven.
 - [x] Documentation détaillée : [NAKED-DEFEAT-INTEGRATION.md](guides/NAKED-DEFEAT-INTEGRATION.md).
-- [ ] Verdict actuel : **TECHNIQUEMENT VALIDÉ / TESTS IN-GAME EN COURS**.
+- [x] Verdict actuel : **TECHNIQUEMENT VALIDÉ / GAMEPLAY NON VALIDÉ — DEFERRED TO DEFINITIVE PLAYTHROUGH**. Risque résiduel accepté par Rhiven ; corriger les problèmes lorsqu'ils seront rencontrés, si possible sans modification structurelle du socle.
 
 #### 5 bis.6 - Outils de travail hors runtime
 
@@ -422,13 +428,11 @@ Ces outils ne sont pas des composants du modpack actif et peuvent être évalué
 
 Ordre de fermeture mis à jour au 25/10/2026 :
 
-1. **Terminer la chaîne LOD d'Animal Mansion Reborn** : xLODGen en cours, puis TexGen et DynDOLOD.
-2. **Effectuer les smoke tests AMR** et ne déclarer l'intégration gameplay validée qu'après réussite reproductible.
-3. **Terminer les tests in-game de Naked Defeat** et prononcer le verdict final sur le remplacement de Practical Defeat / Yamete Kudasai.
-4. Donner à chaque autre candidat restant un verdict explicite : **retenu, rejeté ou reporté**.
-5. Ne publier / annoncer le patch AMR qu'après validation finale ou avec un statut de test explicitement indiqué.
-4. **Geler fonctionnellement la load order.**
-5. Passer à la **Phase 6 — traduction FR**.
+1. [x] **Terminer et valider techniquement la chaîne LOD d'Animal Mansion Reborn** : xLODGen, TexGen et DynDOLOD terminés ; contrôles xEdit et InGame LOD effectués.
+2. [x] **Reporter explicitement les smoke tests gameplay complets AMR et Naked Defeat à la partie définitive**, sans déclarer ces mods validés en gameplay ; risque résiduel accepté par Rhiven.
+3. [x] Adopter la règle de correction en cours de partie : traiter les problèmes lorsqu'ils seront rencontrés, si possible sans modification structurelle du socle.
+4. [x] **Clore la phase d'intégration et geler fonctionnellement la load order.**
+5. [x] Passer à la **Phase 6 — francisation de Skyrim et traduction des mods**, désormais phase active.
 
 Les mods retenus doivent être intégrés et documentés **avant** le passage complet en français afin d'éviter de traduire deux fois une load order encore mouvante.
 
