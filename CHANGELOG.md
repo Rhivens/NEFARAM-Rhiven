@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-25
+
+### Animal Mansion Reborn 1.8 — technical integration
+
+- Completed the full AMR conflict audit against the current **NEFARAM-Rhiven 17.3.8** baseline.
+- Retained `COTN -Falkreath AMR.esp` after its clean xEdit result and confirmed functional placement role.
+- Kept the supplied Shor's Stone patch disabled because of unresolved NAVI / navmesh references.
+- Created **`Animal Mansion Reborn - Rhiven Patch.esp`** as a minimal compatibility layer covering the MNC Husky model assignment, safe Shor's Stone placement reconstruction, required AMR dialogue merges and localized CELL adjustments.
+- Validated the Rhiven patch with xEdit Check for Errors: **21 processed records / 0 errors**.
+- Regenerated **Synthesis Output** after final AMR and Rhiven patch placement.
+- Selected the complete **xLODGen → TexGen → DynDOLOD** workflow; xLODGen generation is currently in progress.
+- Current status: **technical integration complete; generated-output chain and final AMR in-game smoke tests still pending**. No gameplay validation is claimed yet.
+- Updated the AMR guide, finalization roadmap, added-mod inventory, testing sheet and pre-playthrough checklist to reflect the same status.
+
 ## 2026-10-24
 
 ### Defeat-system migration — Naked Defeat 6.50
