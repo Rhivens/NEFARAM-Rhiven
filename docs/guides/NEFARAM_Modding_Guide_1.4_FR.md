@@ -480,7 +480,26 @@ Pour TexGen et DynDOLOD, définir le chemin de sortie directement dans les progr
    - Object LOD
    - Trees
    - Occlusion
-7. Appliquer les réglages LOD4 / LOD8 / LOD16 / LOD32 des captures du DOCX original.
+7. Appliquer les réglages xLODGen suivants, relevés sur les captures du guide original :
+
+### Réglages Terrain LOD xLODGen
+
+| Niveau | Build meshes | Quality | Max Vertices | Optimize Unseen | Protect Borders | Diffuse | Format | Diffuse MipMap | Gamma | Normal | Format | Normal MipMap | Raise steepness | Bake normal-maps | Vertex Color Intensity | Default size Diffuse | Default size Normal |
+|---|---:|---:|---:|---|---|---:|---|---|---:|---:|---|---|---|---|---:|---|---|
+| **LOD4** | Oui | **0** | 32767 | **off** | Non | **256** | DXT1 | Oui | **1.00** | **256** | DXT1 | Non | Non | Oui | **1.00** | None | None |
+| **LOD8** | Oui | **4** | 32767 | **550** | Non | **256** | DXT1 | Non | **1.25** | **256** | DXT1 | Non | Non | Oui | **1.00** | None | None |
+| **LOD16** | Oui | **6** | 32767 | **550** | Non | **256** | DXT1 | Non | **1.25** | **256** | DXT1 | Non | Non | Oui | **1.00** | None | None |
+| **LOD32** | Oui | **0** | 32767 | **550** | Non | **2048** | DXT1 | Non | **1.00** | **2048** | DXT1 | Non | Non | Oui | **1.00** | None | None |
+
+Autres réglages visibles sur les captures du guide :
+- **Objects LOD** : décoché
+- **Trees LOD** : décoché
+- **Terrain LOD** : coché
+- **Occlusion** : décoché
+- **Specific chunk** : décoché
+- **Seasons** : coché
+- Sélection Seasons : `Default,SPR,SUM,AUT,WIN`
+
 8. Lancer la génération.
 
 Le guide indique que cette étape peut prendre plusieurs heures.
