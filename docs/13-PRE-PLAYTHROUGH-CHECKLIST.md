@@ -83,6 +83,20 @@ Rule:
 - [ ] Check for obvious hotkey conflicts before the real start.
 - [ ] Confirm the final paper map / FWMF setup remains intact after all additions.
 
+### Animal Mansion Reborn 1.8 — before definitive New Game
+
+- [x] Complete the full AMR conflict audit on the current NEFARAM-Rhiven 17.3.8 baseline.
+- [x] Keep `COTN -Falkreath AMR.esp` active and keep the broken supplied Shor's Stone patch disabled.
+- [x] Create and validate `Animal Mansion Reborn - Rhiven Patch.esp`: **21 records / 0 xEdit errors**.
+- [x] Confirm the patch preserves the required MNC Husky data, safe Shor's Stone placements, AMR dialogue additions and localized CELL adjustments without importing the broken NAVI.
+- [x] Regenerate Synthesis after final AMR / Rhiven patch placement.
+- [ ] Complete the LOD chain in order: **xLODGen currently in progress → TexGen → DynDOLOD**.
+- [ ] Inspect the final generated outputs before gameplay validation.
+- [ ] Run the dedicated AMR smoke tests on a disposable save: quest start/progression, Mansion, Falkreath, Shor's Stone, NPC/follower pathing, doors/transitions, creature scenes, save/reload and repeatable-CTD check.
+- [ ] Keep the status at **technically integrated / gameplay pending** until every required smoke test has passed.
+- [ ] Confirm the integration guide remains current: [ANIMAL-MANSION-INTEGRATION.md](guides/ANIMAL-MANSION-INTEGRATION.md).
+- [ ] Decide whether to publish / announce the Rhiven patch only after final validation, or label it clearly as a test build.
+
 ### Naked Defeat migration — before definitive New Game
 
 - [ ] Keep the defeat stack in the validated Rhiven architecture:
