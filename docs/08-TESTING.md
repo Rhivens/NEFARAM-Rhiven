@@ -38,6 +38,42 @@ This file records important validation steps before the real playthrough.
 
 ## Current tests
 
+### Animal Mansion Reborn 1.8 integration smoke test
+
+Status: **TECHNICAL INTEGRATION VALIDATED — LOD GENERATION IN PROGRESS — GAMEPLAY SMOKE TEST PENDING**
+
+Completed technical checks:
+
+- full AMR conflict audit completed;
+- main plugin: **30,175 records / 0 xEdit errors**;
+- `COTN -Falkreath AMR.esp`: **0 xEdit errors**, retained;
+- supplied Shor's Stone patch: unresolved NAVI / navmesh references, kept disabled;
+- `Animal Mansion Reborn - Rhiven Patch.esp`: **21 processed records / 0 errors**;
+- Rhiven patch includes only the required MNC Husky forwarding, safe Shor's Stone placement reconstruction, AMR dialogue merges and localized CELL adjustments;
+- Synthesis regenerated after final AMR and Rhiven patch placement;
+- full `xLODGen → TexGen → DynDOLOD` workflow selected; xLODGen currently in progress.
+
+Required before the gameplay verdict:
+
+- [ ] complete xLODGen;
+- [ ] run TexGen;
+- [ ] run DynDOLOD;
+- [ ] inspect the generated outputs for obvious terrain/object LOD problems;
+- [ ] confirm Animal Mansion starts and its quest progression begins normally;
+- [ ] verify the Mansion and required AMR interiors;
+- [ ] verify Falkreath exterior/interiors and AMR markers;
+- [ ] verify Shor's Stone exterior/interior, NPC and follower pathing;
+- [ ] verify doors, teleport markers and cell transitions;
+- [ ] verify SexLab / creature scenes and MNC behavior where relevant;
+- [ ] confirm no repeatable CTD or missing asset;
+- [ ] complete save / exit / reload validation on a disposable test save.
+
+Pass criterion:
+
+> AMR quest content and modified world areas remain functional after the final generated-output chain, with stable navigation, transitions, scenes and save/reload behavior.
+
+Detailed audit: [Animal Mansion Reborn integration](guides/ANIMAL-MANSION-INTEGRATION.md).
+
 ### Naked Defeat 6.50 / Acheron bridge smoke test
 
 Status: **TECHNICAL INTEGRATION VALIDATED — GAMEPLAY SMOKE TEST PENDING**
