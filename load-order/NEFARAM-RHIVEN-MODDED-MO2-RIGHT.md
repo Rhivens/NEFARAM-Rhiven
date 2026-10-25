@@ -1,4 +1,4 @@
-# NEFARAM Rhiven Modded — MO2 Right Panel / Plugins (Dernière mise à jour le 07-10-2026 à 11h55)
+# NEFARAM Rhiven Modded — MO2 Right Panel / Plugins (Dernière mise à jour le 26-10-2026 à 00h02)
 
 Current customized plugin load order for the Rhiven setup.
 
@@ -181,7 +181,6 @@ RAEQuestRequirements.esp
 Amputator.esm
 Tamrielic Distribution.esp
 JELSnowyMountainFlowers.esl
-DynDOLOD.esm
 Helios.esp
 titkit.esl
 BeeingFemale.esm
@@ -189,6 +188,7 @@ PamaFurnitureScr.esp
 PamaPrisonAlternative.esm
 ModernWaitMenu.esl
 PerkEntryPointExtender.esl
+DynDOLOD.esm
 Deep Chanterelle.esp
 ChanterelleENBPatch.esl
 iWant Status Bars.esp
@@ -1123,13 +1123,14 @@ Vigilant - Book Covers.esp
 Skyrim Unbound - Book Covers Skyrim Patch.esp
 Skyrim Unbound - Trade & Barter Patch.esp
 Skyrim Unbound Addon - Skyrim's Got Talent.esp
-YameteKudasai.esp
 DwarvenDeviousCuirass.esp
 SexGrantsExperience.esp
 TheTrappingsOfFate.esp
 abcd_valerica.esp
 SLNights.esp
-Practical Defeat.esp
+Naked Defeat.esp
+Naked Defeat - Rhiven Fix.esp
+Acheron - Naked Defeat Bridge.esp
 BaboInteractiveDia.esp
 GenderBenderTNG.esp
 Laura's Bondage Shop.esp
@@ -1139,6 +1140,7 @@ TransformativeElixirs.esp
 BalazarTheHusky.esp
 Animal_Research.esp
 Animal ResearchReplacers.esp
+Animal Mansion Reborn.esp
 daegon_dirty.esp
 Devious Chastity Piercing.esp
 Devious Curses.esp
@@ -1559,6 +1561,7 @@ RYFTEN - Roof Tile.esp
 RyftenDown3DNPC.esp
 Resources - The Great Cities.esp
 The Great Town of Ivarstead.esp
+AMR The Great Town of Shor's Stone Patch.esp
 Landscape For Grass Mods - The Great Town of Ivarstead PATCH.esp
 Great Town of Ivarstead - Redguard Elite Armaments Patch.esp
 COTN - Winterhold.esp
@@ -1595,6 +1598,7 @@ COTN Dawnstar - AI Overhaul Patch.esp
 COTN Winterhold - AI Overhaul Patch.esp
 COTN Morthal - AI Overhaul Patch.esp
 COTN Falkreath - AI Overhaul patch.esp
+COTN -Falkreath AMR.esp
 A Lot More Idle Marker.esp
 A Lot More Idle Marker - COTN AIO.esp
 Skyrim Unbound - Capital Whiterun Expansion Patch.esp
@@ -1894,8 +1898,7 @@ Synthesis_2.esp
 Synthesis_3.esp
 Synthesis_4.esp
 _NEFARAM_____AFTERSynthesis_____.esp
-DynDOLOD.esp
-Occlusion.esp
+Animal Mansion Reborn - Rhiven Patch.esp
 Racemenu Handnails.esp
 ZMDs Feet Nail Art for RaceMenu v1.esp
 [Dint999] FacePartMod.esp
@@ -1908,7 +1911,6 @@ evgmodularSMPhair.esp
 EvgModularWigs.esp
 dD - Enhanced Blood Main.esp
 Bathing in Skyrim.esp
-WA_BathWidget.esp
 Bathing in Skyrim - Renewed Animal Fat and Linen.esp
 Malignis Sound FX.esp
 Bathing in Skyrim - Wash Me.esp
@@ -1969,6 +1971,9 @@ Regional Outfitters - Capital Windhelm.esp
 Regional Outfitters - AI Overhaul.esp
 Regional Outfitters - Obscures College of Winterhold.esp
 Simple Offence Suppression MCM.esp
+SexLab Approach.esp
+unethicalalchemy.esp
+Unethical Alchemy - Rhiven Fix.esp
 DeviousCarriages.esp
 DeviousCarriages Redux CFTO Patch.esp
 PamaSovngardeAftermath.esp
@@ -1996,6 +2001,11 @@ TDF Aroused Rape.esp
 SexLabDangerousNights2.esp
 UntarnishedUI_Subtitle.esp
 KVSeranaLustOfAMother.esp
+DinosEasyQuestFix.esp
+Falkreath LAND - Rhiven Fix.esp
+Synthesis_Food.esp
+DynDOLOD.esp
+Occlusion.esp
 Water for ENB - Patch - FWMF for Fantasy Paper Maps.esp
 FWMF for Fantasy Paper Maps.esp
 MCM for FWMF.esp
