@@ -1,6 +1,6 @@
 # 09 - Survival, Blood & Hygiene Stack
 
-This guide documents the Rhiven survival, blood and hygiene stack built on **NEFARAM 17.3.8**. It is intended as a reproducible setup reference for experienced NEFARAM users while keeping a clear distinction between confirmed results and checks that still require the definitive playthrough.
+This community guide documents a reproducible survival, blood and hygiene stack for **NEFARAM**. It distinguishes validated results from checks that each user should complete in their own game.
 
 ## Quick Setup / TL;DR
 
@@ -17,32 +17,33 @@ This guide documents the Rhiven survival, blood and hygiene stack built on **NEF
 
 ### Essential BiSR stack
 
-1. `Bathing in Skyrim - Renewed - Rhiven` **2.7.11**
-2. `Bathing in Skyrim - BAIN (Multi-Language) - Rhiven`
-3. `Zaki 8K-4K Textures for Bathing in Skyrim Renewed - Rhiven`
-4. `Bathing in Skyrim - Renewed - Animal Fat and Linen - Rhiven`
-5. `Bathing in Skyrim - Generic Soap Distribution - Rhiven`
-6. `Bathing in Skyrim - Renewed - Seamless Soap - Rhiven`
-7. `Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES - Rhiven`
-8. `Bathing in Skyrim - Wash Me - Rhiven` **1.3**
-9. `Malignis Animations - Bathing in Skyrim Renewed - Rhiven` in the animation block
+1. `Bathing in Skyrim - Renewed` **2.7.11**
+2. `Bathing in Skyrim - BAIN (Multi-Language)`
+3. `Zaki 8K-4K Textures for Bathing in Skyrim Renewed`
+4. `Bathing in Skyrim - Renewed - Animal Fat and Linen`
+5. `Bathing in Skyrim - Generic Soap Distribution`
+6. `Bathing in Skyrim - Renewed - Seamless Soap`
+7. `Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES`
+8. `Bathing in Skyrim - Wash Me` **1.3**
+9. `Malignis Animations - Bathing in Skyrim Renewed` with the animation mods
 
 ### Critical points
 
-- Keep the BiSR block in MO2 section **`21 - Survival`** and Malignis in **`24 - Animations`**.
+- Place the BiSR mods together in your survival/gameplay area.
+- Place Malignis with your animation mods, then rerun Pandora.
 - **Needs Widget AIO** is the final retained display layer. Its supplied **Vel'Dun** preset is present, active and validated in game.
 - Needs Widget AIO is **display only**: SunHelm remains the needs engine and BiSR remains the hygiene engine.
 - The old **Widget Addon - Keep It Clean - Bathing in Skyrim** is retired, disabled and retained only for rollback.
 - Run Pandora after the animation files are in place. The recorded successful generation detected all three BiSR lists and produced **38,349 animations**.
-- On the definitive New Game, **enable BiSR in its MCM**; it is disabled by default.
-- Before declaring the migration complete, confirm that `WA_BathWidget.esp` is inactive and refresh both MO2 snapshots.
+- On a new game, **enable BiSR in its MCM**; it is disabled by default.
+- Before declaring the migration complete, confirm that `WA_BathWidget.esp` is inactive and refresh your exported MO2 mod and plugin lists.
 
 ---
 
 ## Status legend
 
 - **Validated** — directly observed or successfully tested in the documented setup.
-- **Installed / configured** — present or selected, but not fully validated for the definitive playthrough.
+- **Installed / configured** — present or selected, but not fully validated in a normal playthrough.
 - **Pending in-game validation** — must not be presented as confirmed yet.
 - **Historical / rollback** — records an earlier working state, not the intended final active choice.
 
@@ -63,7 +64,7 @@ This avoids asking multiple mods to manage the same gameplay layer. **Needs Widg
 
 ### Enhanced Blood Textures 4.0
 
-Installed as `Enhanced Blood Textures - Rhiven`.
+Install **Enhanced Blood Textures 4.0** with the following options.
 
 | FOMOD option | Selection |
 |---|---|
@@ -73,13 +74,13 @@ Installed as `Enhanced Blood Textures - Rhiven`.
 | Wounds | **EBT - Default** |
 | Drips | **Default** |
 | Screen blood | **Default** |
-| Blood color | Personal visual choice |
+| Blood color | User preference |
 
 The MO2 conflict review found no direct file conflict with Just Blood.
 
 ### EBT Settings Loader
 
-Installed as `Enhanced Blood Textures SE - Settings Loader (SPID Version) - Rhiven`.
+Install **Enhanced Blood Textures SE - Settings Loader (SPID Version)**.
 
 - Version: **SPID 2.0.2**
 - Selected to match the SPID installation of EBT 4.0.
@@ -90,7 +91,7 @@ The stock NEFARAM mod is retained for actor blood visuals. It remains separate f
 
 ### EBT / Just Blood body patch
 
-Installed as `EBT - Just Blood Body Patch - Rhiven`.
+Install the **EBT - Just Blood Body Patch**.
 
 Source: [Enhanced Blood Textures Just Blood Just Not Enhanced Body Blood](https://www.nexusmods.com/skyrimspecialedition/mods/93414)
 
@@ -98,11 +99,10 @@ It disables EBT body-blood decals, leaves actor body blood to Just Blood, and pr
 
 ## Bathing in Skyrim - Renewed core
 
-Installed as `Bathing in Skyrim - Renewed - Rhiven`.
+Install **Bathing in Skyrim - Renewed 2.7.11**.
 
 - Version: **2.7.11**
-- MO2 section: **`21 - Survival`**
-- Recorded position: near the existing wash-basin and survival mods.
+- Placement: keep it with the other survival/gameplay mods, near the existing wash-basin, SunHelm and Campfire files.
 
 ### Recorded main FOMOD choices
 
@@ -128,7 +128,7 @@ Patches not selected:
 
 ### Multi-language BAIN package
 
-Installed as `Bathing in Skyrim - BAIN (Multi-Language) - Rhiven`.
+Install **Bathing in Skyrim - BAIN (Multi-Language)** directly after the BiSR core.
 
 - Localized plugin support was enabled.
 - Language was left at **None**.
@@ -141,12 +141,12 @@ Install the following below the BiSR core unless a later conflict audit establis
 
 | Order | Mod | Role / recorded choice |
 |---:|---|---|
-| 1 | `Zaki 8K-4K Textures for Bathing in Skyrim Renewed - Rhiven` | Dirt overlays. Female **Level 4 (Recommended)**; male dirt level **None**. |
-| 2 | `Bathing in Skyrim - Renewed - Animal Fat and Linen - Rhiven` | BiSR crafting and washing resources. |
-| 3 | `Bathing in Skyrim - Generic Soap Distribution - Rhiven` | Soap and wash-rag distribution. |
-| 4 | `Bathing in Skyrim - Renewed - Seamless Soap - Rhiven` | Renewed-specific seamless soap file, version **1.2**. |
-| 5 | `Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES - Rhiven` | Optional effect producing approximately 30% more visible bubbles. |
-| 6 | `Bathing in Skyrim - Wash Me - Rhiven` | Follower washing interactions. |
+| 1 | `Zaki 8K-4K Textures for Bathing in Skyrim Renewed` | Dirt overlays. Female **Level 4 (Recommended)**; male dirt level **None**. |
+| 2 | `Bathing in Skyrim - Renewed - Animal Fat and Linen` | BiSR crafting and washing resources. |
+| 3 | `Bathing in Skyrim - Generic Soap Distribution` | Soap and wash-rag distribution. |
+| 4 | `Bathing in Skyrim - Renewed - Seamless Soap` | Renewed-specific seamless soap file, version **1.2**. |
+| 5 | `Bathing in Skyrim SE - SST MORE VISIBLE BUBBLES` | Optional effect producing approximately 30% more visible bubbles. |
+| 6 | `Bathing in Skyrim - Wash Me` | Follower washing interactions. |
 
 The legacy Bathing in Skyrim SE conversion is not required for the selected Seamless Soap file.
 
@@ -156,7 +156,7 @@ The legacy Bathing in Skyrim SE conversion is not required for the selected Seam
 
 ### Wash Me - Renewed
 
-Installed as `Bathing in Skyrim - Wash Me - Rhiven`, version **1.3**.
+Install **Bathing in Skyrim - Wash Me 1.3**.
 
 | FOMOD option | Selection |
 |---|---|
@@ -187,14 +187,14 @@ Requirement review:
 
 Do not copy the old Widget Addon order or options into a new setup unless deliberately performing a rollback.
 
-### Repository snapshot warning
+### Retired plugin warning
 
-The current exported MO2 snapshots still list:
+Older exported MO2 lists may still contain:
 
-- `Widget Addon - Keep It Clean - Bathing In Skyrim - Rhiven` in the left pane;
+- `Widget Addon - Keep It Clean - Bathing In Skyrim` in the left pane;
 - `WA_BathWidget.esp` in the right pane.
 
-Those snapshots predate the final Needs Widget AIO selection. Keep the retired Widget Addon and `WA_BathWidget.esp` inactive, and export fresh snapshots before final playthrough sign-off.
+These entries belong to the retired Widget Addon setup. Keep the mod and `WA_BathWidget.esp` inactive, and export fresh MO2 mod and plugin lists before playthrough sign-off.
 
 ### Historical Widget Addon configuration
 
@@ -223,16 +223,16 @@ Use this as the documented relationship, not as an absolute priority number:
 7. Seamless Soap
 8. More Visible Bubbles
 9. Wash Me
-10. Malignis in the bottom area of **`24 - Animations`**
+10. Malignis with the animation mods, after the other files it is intended to overwrite
 
-Needs Widget AIO belongs in MO2 section **`47 - UI - Rhiven`**. The recorded installation has no MO2 file conflicts; do not copy ordering rules from the retired Widget Addon configuration.
+Place Needs Widget AIO with the other interface and HUD mods. The validated installation has no MO2 file conflicts; do not copy ordering rules from the retired Widget Addon configuration.
 
 ### Recorded BiSR-related plugins
 
-The last repository snapshot contains:
+Older exported plugin lists may contain:
 
 - `Bathing in Skyrim.esp`
-- `WA_BathWidget.esp` — obsolete snapshot entry from the retired Widget Addon; keep it inactive
+- `WA_BathWidget.esp` — obsolete entry from the retired Widget Addon; keep it inactive
 - `Bathing in Skyrim - Renewed Animal Fat and Linen.esp`
 - `Malignis Sound FX.esp`
 - `Bathing in Skyrim - Wash Me.esp`
@@ -249,12 +249,12 @@ The last repository snapshot contains:
 
 ### Malignis Animations
 
-Install in **`24 - Animations`**, at the bottom of the animation block.
+Place Malignis with your animation mods, after the other files it is intended to overwrite, then rerun Pandora.
 
 ### Pandora paths
 
-- Pandora output: `C:\JEUX\NEFARAM\mods\Pandora Output`
-- Skyrim Data: `C:\JEUX\NEFARAM\Game Root\Data`
+- Pandora output: the root of your dedicated `Pandora Output` MO2 mod
+- Skyrim Data: the `Data` directory in your NEFARAM game root
 
 Point Pandora to the root of the `Pandora Output` MO2 mod. Do not target a `meshes` subfolder and do not write generated behavior files directly into the game Data directory.
 
@@ -290,7 +290,7 @@ Just Blood handles blood on actors, while EBT handles environmental blood. The d
 
 ### Simple Inn Bath and Xtended Stay
 
-These are part of the planned inn/economy validation rather than a completed validation claim. Confirm at least one normal inn flow with the final room-price configuration before the definitive playthrough.
+These are part of the planned inn/economy validation rather than a completed validation claim. Confirm at least one normal inn flow with the final room-price configuration before starting a long-term playthrough.
 
 ## Validation register
 
@@ -317,7 +317,7 @@ These are part of the planned inn/economy validation rather than a completed val
 
 - Confirm no duplicate survival or hygiene display remains.
 - Confirm `WA_BathWidget.esp` is inactive.
-- Enable BiSR in its MCM on the definitive New Game and verify that the setting persists after restart.
+- Enable BiSR in its MCM on a new game and verify that the setting persists after restart.
 - Validate BiSR plus Simple Inn Bath in at least one inn.
 - Validate Simple Inn Bath plus Xtended Stay with the final inn-price configuration.
 - Validate dirt progression, bathing, soap consumption/effects and follower washing during normal play.
@@ -360,17 +360,17 @@ These are part of the planned inn/economy validation rather than a completed val
 
 ### Rollback strategy
 
-- Keep a disposable test save and MO2 profile backup before changing widget or survival layers.
+- Keep a disposable test save and an MO2 backup before changing widget or survival layers.
 - Needs Widget AIO is the intended final choice; Widget Addon may be kept temporarily only as a disabled rollback reference.
 - If rollback becomes necessary, restore one known configuration at a time. Do not activate both display layers together.
 - Re-export both MO2 panes after the final choice is confirmed.
 
-## Before the definitive playthrough
+## Before a long-term playthrough
 
 - [x] Keep Needs Widget AIO active as the final display-only layer with the validated Vel'Dun preset.
-- [ ] Confirm the retired Widget Addon is disabled or removed from the active profile.
+- [ ] Confirm the retired Widget Addon is disabled or removed from the active mod list.
 - [ ] Confirm `WA_BathWidget.esp` is inactive.
-- [ ] Refresh the MO2 left-pane and right-pane snapshots.
+- [ ] Refresh the exported MO2 left-pane and right-pane lists.
 - [ ] Run Pandora after the last animation-related change and verify a clean completion.
 - [ ] Inspect MO2 Overwrite and generated output mods.
 - [ ] Start from the supplied **NEFARAM_Start** save, as required by the project baseline.
