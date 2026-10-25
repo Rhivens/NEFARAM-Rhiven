@@ -278,16 +278,16 @@ Pour chaque mod candidat :
 
 #### 5 bis.2 - QoL / interface légère
 
-**Needs Widget AIO**
+**Needs Widget AIO — couche d'affichage finale**
 
-- [x] Vérifier les dépendances exactes et confirmer la compatibilité avec le runtime 1.6.1170 : SKSE, Address Library et SKSE Menu Framework déjà présents dans la baseline.
-- [x] Installer le mod dans le bloc UI/HUD sans conflit de fichiers MO2 ; structure autonome `Interface/NeedsWidget` + `SKSE/Plugins/NeedsWidget`.
-- [x] Confirmer la présence du preset `Vel'dun.ini` et son activation en jeu : preset **Vel'dun** affiché comme **In use** dans le menu du mod.
-- [x] Vérifier l'apparition et le fonctionnement du widget en jeu avec les besoins actifs ; intégration visuelle jugée propre et lisible.
-- [x] Confirmer qu'il agit comme couche d'affichage uniquement et ne remplace pas les moteurs de besoins existants.
-- [x] Prévoir la désactivation de **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** dans MO2 afin d'éviter un doublon immédiat avec Needs Widget AIO.
+- [x] Retenir **Needs Widget AIO** comme remplacement final de `Widget Addon - Keep It Clean - Bathing in Skyrim`.
+- [x] Confirmer la présence du preset fourni **Vel'Dun**, son activation et son fonctionnement en jeu.
+- [x] Confirmer la séparation des responsabilités : **Needs Widget AIO = affichage uniquement / SunHelm = besoins / BiSR = hygiène**.
+- [ ] Confirmer que **`Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven`** reste désactivé / rollback only et que `WA_BathWidget.esp` reste inactif.
+- [ ] Actualiser les snapshots MO2 gauche/droite après cette vérification ; les exports actuels montrent encore l'ancien Widget Addon.
+- [ ] Vérifier pendant la partie définitive l'absence de doublon d'affichage de besoins ou d'hygiène.
 - [ ] Reporter l'harmonisation complète avec SunHelm, STB Widgets et les autres éléments HUD à la **méga-session UI / MCM** de la partie définitive : positionnement, fading, opacité, doublons et priorités.
-- [x] Verdict final : **RETENU — faible risque, très bonne intégration avec Vel'dun, forte valeur QoL.**
+- [x] Verdict final : **RETENU ET VALIDÉ EN JEU — preset Vel'Dun, couche d'affichage uniquement.**
 
 **Dino's Easy Quest Fix**
 
