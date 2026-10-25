@@ -1,0 +1,223 @@
+# Animal Mansion Reborn 1.8 — NEFARAM 17.3.8 Community Guide
+
+> **Baseline:** official NEFARAM 17.3.8
+> **Current status:** **TECHNICALLY INTEGRATED — LOD GENERATION IN PROGRESS — FINAL GAMEPLAY VALIDATION PENDING**
+>
+> This is a community installation guide, not a gameplay-final release notice. The compatibility work has passed its technical checks, but the complete LOD chain and the final in-game smoke tests are still pending.
+
+## Quick Setup / TL;DR
+
+1. Start from an unmodified **official NEFARAM 17.3.8** baseline.
+2. Install **Animal Mansion Reborn 1.8** and its documented requirements.
+3. Enable `Animal Mansion Reborn.esp`.
+4. Keep `COTN -Falkreath AMR.esp` enabled.
+5. Keep the supplied `AMR The Great Town of Shor's Stone Patch.esp` **disabled**. It contains unresolved NAVI / navmesh references.
+6. Enable `Animal Mansion Reborn - Rhiven Patch.esp` after the plugins whose AMR conflicts it resolves.
+7. Keep Animal Mansion early enough for the established NEFARAM, Lux and generated-patch winners to retain their intended final values. Do not use personal MO2 separators or copy another user's absolute plugin positions.
+8. Rerun **Synthesis** after the final plugin placement.
+9. For this integration, rebuild generated LOD in this order: **xLODGen -> TexGen -> DynDOLOD**.
+10. Inspect the generated outputs, then complete the smoke-test checklist in this guide on a disposable save.
+
+Do not describe the setup as gameplay-validated until the LOD workflow and every required smoke test have passed.
+
+## Requirements and prerequisites
+
+- **Official NEFARAM 17.3.8** as the baseline.
+- **Animal Mansion Reborn 1.8**.
+- All requirements documented by Animal Mansion Reborn 1.8. This guide does not add or guess at a separate dependency list.
+- The supplied `COTN -Falkreath AMR.esp` compatibility patch.
+- `Animal Mansion Reborn - Rhiven Patch.esp`.
+- MO2 and the existing NEFARAM tools used to regenerate Synthesis and LOD outputs.
+- A disposable test save for validation.
+
+Before changing the profile, back up the MO2 left pane and plugin order. Preserve the existing generated outputs until the final plugin placement is settled.
+
+## Installation and relative order
+
+The exact separator names and absolute positions vary between installations. Use the following relationships rather than a personal load-order screenshot:
+
+1. Install and enable **Animal Mansion Reborn 1.8**.
+2. Place `Animal Mansion Reborn.esp` before the late NEFARAM environment, city, lighting and generated-patch layers where those later plugins already contain the correct final state.
+3. Load `COTN -Falkreath AMR.esp` after its required masters and keep it active. It repositions AMR-specific markers and quest triggers for the COTN Falkreath geometry.
+4. Disable `AMR The Great Town of Shor's Stone Patch.esp`.
+5. Load `Animal Mansion Reborn - Rhiven Patch.esp` after Animal Mansion and after the records it is intended to merge or correct.
+6. Preserve the established later Lux / NEFARAM winners where they already provide the correct environment state.
+7. Regenerate Synthesis only after the AMR plugin set and compatibility patch placement are final.
+8. Run the LOD tools only after Synthesis and the manual compatibility patch are in their intended final state.
+
+The intended principle is simple: use load-order placement for conflicts that are already resolved correctly, and use the Rhiven patch only for the records that require an explicit merge. Do not broadly forward entire conflict groups into another patch.
+
+## Rhiven Compatibility Patch — What it fixes
+
+`Animal Mansion Reborn - Rhiven Patch.esp` is a minimal compatibility layer. Its xEdit **Check for Errors** result is:
+
+> **21 processed records / 0 errors**
+
+The patch:
+
+- preserves the current MNC male and female Husky biped model paths;
+- reconstructs the useful Shor's Stone placement and location changes against the final settlement geometry without importing the supplied patch's broken NAVI data;
+- restores the missing AMR dialogue INFO additions while retaining the final dialogue structure supplied by later winners;
+- includes only the localized CELL adjustments required by the audited conflicts;
+- avoids broad or blind forwarding of whole CELL or conflict groups.
+
+The patch does not replace the COTN Falkreath patch, does not make the supplied Shor's Stone patch safe to enable, and does not replace Synthesis or LOD generation.
+
+## Compatibility notes
+
+### COTN Falkreath
+
+`COTN -Falkreath AMR.esp` is required for this integration and must remain active. It passed xEdit Check for Errors with **0 errors** and contains functional AMR marker and trigger placement for the COTN layout. Its final in-game observation is still part of the pending smoke tests.
+
+### The Great Town of Shor's Stone
+
+Keep `AMR The Great Town of Shor's Stone Patch.esp` disabled. Its useful placement work was selectively reconstructed in the Rhiven patch, but its unresolved NAVI / navmesh references were not imported.
+
+Do not try to solve Shor's Stone by mechanically copying the supplied patch or by changing load order alone. Navmesh and door-link records are sensitive to the final settlement geometry.
+
+### MNC and Husky models
+
+AMR's `HuskyBareAA [02018B35]` override restores the vanilla male Husky mesh and drops the MNC female assignment. The Rhiven patch preserves the MNC male and female biped model paths without performing a wider MNC merge.
+
+### Dialogue
+
+Later dialogue winners can omit AMR-added INFO entries. The Rhiven patch merges only the missing AMR additions into the final dialogue structure. Text differences caused by English strings overriding another language are translation issues, not compatibility fixes covered by this patch.
+
+### Lux, NEFARAM and Synthesis winners
+
+Later Lux, NEFARAM and Synthesis records should continue to win when they already contain the intended final environment state. Typical examples include CELL lighting, image space, fog, ambient data and other environment forwards. Do not duplicate those correct winners in the Rhiven patch.
+
+## Generated outputs
+
+The required order is:
+
+1. settle the final AMR and compatibility-patch placement;
+2. rerun **Synthesis**;
+3. run **xLODGen**;
+4. run **TexGen**;
+5. run **DynDOLOD**;
+6. inspect the generated terrain and object LOD in game.
+
+The full chain is required for this integration because AMR contains exterior worldspace content and at least one visible `LAND` record under:
+
+`WhiterunWorld -> WhiterunWindDistrict02`
+
+Current documented state:
+
+- Synthesis: complete;
+- xLODGen: in progress;
+- TexGen: pending;
+- DynDOLOD: pending;
+- generated-output visual inspection: pending.
+
+Do not skip ahead or mark the generated outputs as validated before the complete chain and visual inspection are finished.
+
+## In-game smoke-test checklist
+
+Use a disposable save first.
+
+### Quest and Mansion
+
+- [ ] Animal Mansion starts correctly.
+- [ ] Initial quest progression begins normally.
+- [ ] Required quest NPCs are present.
+- [ ] The Mansion and required AMR interiors load correctly.
+- [ ] AMR dialogue is available where expected.
+
+### Falkreath and Shor's Stone
+
+- [ ] Falkreath exterior and AMR-used interiors work with the COTN layout.
+- [ ] AMR markers and triggers in Falkreath are reachable and correctly placed.
+- [ ] Shor's Stone exterior and relevant interiors load correctly.
+- [ ] NPCs can navigate the modified areas.
+- [ ] Followers can enter, leave and follow through the modified areas.
+- [ ] Doors, teleport markers and cell transitions work in both directions.
+- [ ] Combat, waiting, sleeping and travel do not expose repeatable pathing or transition failures.
+
+### Framework behavior and stability
+
+- [ ] SexLab scenes start and end correctly where relevant.
+- [ ] Creature scenes work where relevant.
+- [ ] MNC creature behavior and Husky models are correct.
+- [ ] No actor remains in a stuck animation state.
+- [ ] Save and reload work after AMR activity and after visiting modified areas.
+- [ ] No missing asset or persistent missing/distant object is visible.
+- [ ] No repeatable CTD occurs when entering or leaving an AMR-modified cell.
+
+Gameplay validation requires the complete generated-output chain plus reproducible success across these checks.
+
+## Troubleshooting
+
+### Shor's Stone NPC or follower pathing is broken
+
+- Confirm that `AMR The Great Town of Shor's Stone Patch.esp` is disabled.
+- Confirm that the Rhiven patch is enabled and loads after the records it corrects.
+- Test NPC pathing, followers, doors and transitions on a disposable save.
+- Stop validation if the problem is reproducible; do not copy NAVI / NAVM records from the supplied patch as a quick fix.
+
+### A door or transition is broken
+
+- Check both sides of the transition and the associated teleport marker.
+- Verify that the correct settlement and compatibility plugins are active.
+- Treat Shor's Stone door links as navmesh-sensitive rather than as ordinary placement records.
+
+### A Husky uses the wrong mesh
+
+- Confirm that `Animal Mansion Reborn - Rhiven Patch.esp` wins the `HuskyBareAA [02018B35]` conflict.
+- Verify that no later plugin restores AMR's older model assignment or removes the MNC female path.
+
+### Expected AMR dialogue is missing
+
+- Confirm that the Rhiven patch loads after the dialogue records it merges.
+- Inspect whether another later plugin removes the AMR INFO entries from the final DIAL winner.
+- Treat language-only string changes separately from compatibility behavior.
+
+### Objects are missing nearby or at distance
+
+- Confirm that Synthesis was rebuilt after the final plugin placement.
+- Confirm that the full `xLODGen -> TexGen -> DynDOLOD` chain completed in that order.
+- Inspect the final generated outputs before treating the issue as an AMR plugin problem.
+
+### A modified cell repeatedly crashes
+
+- Reproduce the issue on a disposable save.
+- Check whether it occurs on entry, exit or only after quest activity.
+- Treat a persistent CTD in an AMR-modified cell as a stop condition. The integration is not gameplay-valid while it remains reproducible.
+
+## Advanced technical notes
+
+The public patch is intentionally small. The audit found that many apparent AMR conflicts were already resolved correctly by later Lux, NEFARAM or Synthesis winners, so those records were not copied into the compatibility patch.
+
+Useful reference points:
+
+- `HuskyBareAA [02018B35]`: preserves the modern MNC male and female biped model paths.
+- `DGCrimeForcegreetTopic [000267DE]`: final DIAL winner needs the missing AMR INFO additions.
+- `DGCrimeWantedTopic [0002A37F]`: final DIAL winner needs the missing AMR INFO additions.
+- `OfferServicesTopic [00076FBB]`: final DIAL winner needs the missing AMR INFO additions.
+- Shor's Stone exterior door `REFR [000177DE]`: exposes an `XNDP - Navmesh Door Link` and is navmesh-sensitive; it must not be forwarded mechanically.
+- `WhiterunWorld -> WhiterunWindDistrict02`: contains at least one visible AMR `LAND` record, which is why this integration uses the complete LOD chain.
+
+The base `Animal Mansion Reborn.esp` also passed xEdit Check for Errors with **30,175 processed records / 0 errors**. That result and the Rhiven patch's **21 processed records / 0 errors** establish technical validation only; they do not prove quest, navigation, scene or save-game behavior in play.
+
+## Status and release notes
+
+**TECHNICALLY INTEGRATED — LOD GENERATION IN PROGRESS — FINAL GAMEPLAY VALIDATION PENDING**
+
+Completed:
+
+- full conflict audit;
+- base AMR xEdit Check for Errors;
+- COTN Falkreath patch xEdit validation;
+- minimal Rhiven compatibility patch creation and xEdit validation;
+- Synthesis regeneration;
+- selection of the full LOD workflow.
+
+Still pending:
+
+- completion of xLODGen;
+- TexGen;
+- DynDOLOD;
+- generated-output visual inspection;
+- the complete in-game smoke-test checklist.
+
+Until those items pass, distribute or discuss the patch only as a technically validated test build. Do not present it as gameplay-final.
