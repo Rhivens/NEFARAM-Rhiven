@@ -64,6 +64,7 @@ A simplified working block is:
 
 ```text
 Acheron - Death Alternative 1.11.3
+Acheron - Sacrosanct Patch
 Acheron - Simple Recover
 Acheron - Diary of Mine Extension
 
@@ -73,7 +74,7 @@ Acheron - Naked Defeat Bridge
 Naked Defeat - EXTRA - OAR Bowed Animations fixed
 ```
 
-If `Acheron - Sacrosanct Patch` is already part of your setup, it may remain active.
+If Sacrosanct is part of your build, keep `Acheron - Sacrosanct Patch` enabled in this position. It is part of the validated NEFARAM-Rhiven stack.
 
 ### Disable
 
