@@ -1,10 +1,36 @@
 # Changelog
 
+## 2026-10-26
+
+### Animal Mansion Reborn 1.8 — technical integration finalized
+
+- Completed the full **xLODGen → TexGen → DynDOLOD** chain successfully.
+- xLODGen considered **63 worldspaces** and generated **60** with the expected mesh/texture pairing. The three valid skips were `AXDarkRoseSailingWorld` (no useful LAND), `AXSpringRainSailingWorld` (1×1) and `AXGodsforsakenRockWorld` (3×3).
+- Generated LOD with **DynDOLOD 3 Alpha-216**, **DynDOLOD Resources Alpha-59** and **DynDOLOD DLL NG Scripts Alpha-43**.
+- The first DynDOLOD run failed on stale `Synthesis_Food.esp` references. Regenerated the Food-Remover-Plus output with **16,765 placed food references disabled**, then confirmed **19,762 records / 0 errors** in xEdit; the second DynDOLOD run succeeded.
+- Final generated-plugin xEdit results: **DynDOLOD.esp — 25,080 records / 0 errors**; **Occlusion.esp — 26,162 records / 0 errors**; **DynDOLOD.esm — 27,861 records**, with only **46 known terrain-underside `<Unknown: 2 $2>` false positives**.
+- Installed and generated **Animal Mansion Reborn BodySlide - Rhiven** with the NEFARAM **Zeroed Sliders** preset and **Build Morphs** into `Bodyslide Output - Eleanor`.
+- Current status: **technical integration validated and LOD workflow complete; AMR quest and gameplay validation is intentionally deferred to the definitive/normal playthrough**.
+
+### Falkreath terrain fix
+
+- Created `Falkreath LAND - Rhiven Fix.esp` for Tamriel cell **-9,-22**, LAND **0000AC81**.
+- Identified `PaOutdoorEventPack.esp` overriding the later compatibility chain as the cause; the terrain hole was not caused by AMR or PAMA.
+- Copied the LAND winner from `Northern Roads - COTN Falkreath - LFFGM patch.esp` and placed the fix after `PaOutdoorEventPack.esp`.
+- Validated the correction in game: the Falkreath terrain hole is removed.
+- No Synthesis or LOD rerun was required for this fix.
+
+### Documentation and repository organization
+
+- Aligned the documentation tree to numbered `Docs/01` through `Docs/12`, plus `Docs/VALIDATION` and `Load-Order`.
+- Defined `Docs/01` through `Docs/11` and `Docs/VALIDATION` as the internal Rhiven workshop/reference material, although the repository remains public and readable. Only `Docs/12 - COMMUNITY GUIDES` is intended as simplified community-facing guidance.
+- Community materials currently include the Animal Mansion Reborn and Bathing in Skyrim packages, together with the existing Naked Defeat, PAMA Prison System and NEFARAM Modding Guide materials.
+
 ## 2026-10-25
 
 ### Bathing in Skyrim guide and Needs Widget AIO status
 
-- Reworked `docs/09-SURVIVAL-BLOOD-HYGIENE.md` into a publication-ready English guide with a compact Quick Setup section followed by the complete technical procedure, validation register, troubleshooting and pre-playthrough checks.
+- Reworked `Docs/06 - GAMEPLAY/BATHING IN SKYRIM/09-SURVIVAL-BLOOD-HYGIENE.md` into a publication-ready English guide with a compact Quick Setup section followed by the complete technical procedure, validation register, troubleshooting and pre-playthrough checks.
 - Restored **Needs Widget AIO** as the final retained and validated display layer, with its supplied **Vel'Dun** preset present, active and tested in game.
 - Kept the validated responsibility split explicit: **EBT = environment / Just Blood = actors / BiSR = hygiene / SunHelm = needs / Campfire = camping / Needs Widget AIO = display only**.
 - Kept `Widget Addon - Keep It Clean - Bathing in Skyrim - Rhiven` and `WA_BathWidget.esp` classified as retired, disabled and available only for rollback.
@@ -35,7 +61,7 @@
 - Audited Naked Defeat's remaining xEdit warnings and deliberately left obsolete / unreferenced quest, package, dialogue and scene residue untouched instead of performing blind cleanup.
 - Reviewed Yamete Kudasai scripts and Acheron consequence YAML; the overlap with Naked Defeat is high enough to make concurrent testing unreliable and community troubleshooting also identifies the combination as incompatible.
 - Reused the former Practical Defeat plugin area for the final relative order: **`Naked Defeat.esp → Naked Defeat - Rhiven Fix.esp → Acheron - Naked Defeat Bridge.esp`**.
-- Added a full English migration guide for NEFARAM users: [Naked Defeat integration](docs/guides/NAKED-DEFEAT-INTEGRATION.md), including a placeholder for the future public Rhiven Fix download.
+- Added a full English migration guide for NEFARAM users: [Naked Defeat integration](Docs/06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md), including a placeholder for the future public Rhiven Fix download.
 - Current status: **technical integration verified and validated; in-game testing in progress**. Remaining critical checks include humanoid/creature/follower defeat, repeated events, Acheron bleedout recovery, actor release/pacification cleanup, and save/reload stability.
 
 
@@ -80,7 +106,7 @@
 - Final structural audit confirmed **1,988 plugins** versus the **1,985-plugin** pre-migration baseline; the three intended additions are `PerkEntryPointExtender.esl`, `Acheron - Sacrosanct Patch.esp` and `KVSeranaLustOfAMother.esp`, while all pre-existing plugins retain their relative order.
 - Refreshed the Rhiven MO2 left/right snapshots to reflect the active 17.3.8 setup.
 - The migration phase is closed, but the full customized build is not yet declared playthrough-ready: **French translations, final pre-playthrough checks and several gameplay-only validations remain in progress**.
-- Full procedure and validation register: [Update NEFARAM 17.3.7 -> 17.3.8](docs/15-UPDATE-17.3.7-TO-17.3.8.md).
+- Full procedure and validation register: [Update NEFARAM 17.3.7 -> 17.3.8](Docs/02%20-%20UPDATES%20&%20MIGRATIONS/15-UPDATE-17.3.7-TO-17.3.8.md).
 
 ## 2026-10-16
 
@@ -130,7 +156,7 @@
 - Installed **ReShade 6.8.0 Full Add-on Support** alongside ENB, using `dxgi.dll` for ReShade while retaining ENB's `d3d11.dll`. Installed Sswaye's provided shaders/textures, set ReShade effect/texture search paths and confirmed shaders compiled and loaded.
 - Compared **Sswaye ReShade Normal** against **LUT13** in the same exterior scene. **LUT13 selected** (enabled effects: `DPX.fx`, `Clarity.fx`, `LUT13.fx`); Normal judged too colorful and LUT21 too blue.
 - **Follow-up:** validate preset persistence after restart, test stability and FPS/frametimes in more scenes, save final ENB/ReShade configurations, then move on to French localization, pre-final checklist and the final game start via `NEFARAM_Start`.
-- Updated [finalization roadmap](docs/16-FINALISATION-ROADMAP.md) to reflect the decision and remaining checks.
+- Updated [finalization roadmap](Docs/ROADMAP.md) to reflect the decision and remaining checks.
 
 ## 2026-10-11
 
@@ -142,7 +168,7 @@
 - Found Legacy DAR submod 1000001 winning original movement events. Applied a Gulan0 female priority override **1000002** via a separate OAR user.json and verified walk/run/sprint replacements in Animation Log.
 - Compared August 2026 female_run_Update with original Gulan0 running animations and **removed the five update HKX** by aesthetic preference; kept the **female Sprint Revised** replacement `mt_sprintforward.hkx` only.
 - Preserved the original animations and unmodified conditions of NEFARAM's special animation frameworks. OAR user configurations staged in dedicated Rhiven MO2 mods; future-new-game settings do not depend on the temporary start-save.
-- Added [ANIMATIONS technical guide](docs/guides/ANIMATIONS/README.md) with installation, diagnostics, priority/persistence and rollback procedures.
+- Added [ANIMATIONS technical guide](Docs/04%20-%20ANIMATIONS/README.md) with installation, diagnostics, priority/persistence and rollback procedures.
 - Status: **animation configuration selected and observed working; rare gameplay states still to be monitored during Eleanor's real playthrough**.
 
 ## 2026-10-09

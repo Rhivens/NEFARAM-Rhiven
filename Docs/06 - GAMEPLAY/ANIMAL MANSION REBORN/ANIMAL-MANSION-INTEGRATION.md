@@ -1,6 +1,6 @@
 # NEFARAM-Rhiven — Animal Mansion Reborn Integration Plan
 
-> **Status: TECHNICAL INTEGRATION VALIDATED — LOD GENERATION IN PROGRESS — FINAL IN-GAME SMOKE TESTS PENDING**
+> **Status: TECHNICAL INTEGRATION VALIDATED — LOD WORKFLOW COMPLETE — GAMEPLAY VALIDATION DEFERRED TO DEFINITIVE/NORMAL PLAYTHROUGH**
 >
 > This document defines the integration workflow for **Animal Mansion Reborn 1.8** in the NEFARAM-Rhiven build.
 >
@@ -20,10 +20,11 @@ The technical integration now has the following confirmed state:
 - the Rhiven patch passed xEdit Check for Errors with **21 processed records / 0 errors**;
 - the Rhiven patch preserves the MNC Husky model assignments, restores the required AMR dialogue additions, and carries the necessary localized CELL adjustments while complementing the active Shor's Stone patch;
 - Synthesis has been regenerated after the final AMR plugin and patch placement;
-- the selected LOD workflow is now **xLODGen → TexGen → DynDOLOD** and is in progress;
-- final AMR in-game smoke tests remain pending.
+- the complete **xLODGen → TexGen → DynDOLOD** workflow finished successfully and its generated plugins passed the final xEdit checks;
+- the AMR BodySlide files have been generated into the dedicated Eleanor output;
+- AMR quest and gameplay validation is intentionally deferred to the definitive/normal playthrough.
 
-The current status is therefore **technically integrated, not yet gameplay-validated**.
+The current status is therefore **technically integrated and validated, with gameplay validation still pending**.
 
 ---
 
@@ -162,6 +163,8 @@ Because the patch previously passed xEdit Check for Errors with **0 errors**, th
 
 > **retain `COTN -Falkreath AMR.esp` as a separate active compatibility patch.**
 
+The separate Falkreath terrain hole investigation did **not** identify AMR or PAMA as the cause. `PaOutdoorEventPack.esp` was overriding the later compatibility chain for Tamriel cell **-9,-22** / LAND **0000AC81**. The dedicated `Falkreath LAND - Rhiven Fix.esp` now forwards the LAND from `Northern Roads - COTN Falkreath - LFFGM patch.esp`, loads after `PaOutdoorEventPack.esp`, and has been validated in game.
+
 One record remains worth observing in-game:
 
 - `DelacourtREF [00072667]` — the COTN AMR patch removes its previous `XLCN - Persistent Location` while retaining the Dead Man's Drink `XLRL`. No correction should be made without a demonstrated gameplay issue.
@@ -230,13 +233,16 @@ AMR contains exterior worldspace content and at least one visible `LAND` record 
 
 The final technical review retained the complete terrain/object LOD path for this integration.
 
-Current LOD state:
+Final LOD state:
 
 - the Rhiven patch and regenerated Synthesis output are complete;
-- the selected workflow is `xLODGen -> TexGen -> DynDOLOD`;
-- xLODGen terrain generation is in progress;
-- TexGen and DynDOLOD remain to be run afterward;
-- the generated outputs must not be marked validated until the full chain completes and the result is checked.
+- the full `xLODGen -> TexGen -> DynDOLOD` chain completed successfully;
+- xLODGen considered **63 worldspaces** and generated **60** with the expected mesh/texture pairing;
+- the three valid skips were `AXDarkRoseSailingWorld` (no useful LAND), `AXSpringRainSailingWorld` (1×1) and `AXGodsforsakenRockWorld` (3×3);
+- DynDOLOD used **DynDOLOD 3 Alpha-216**, **Resources Alpha-59** and **DLL NG Scripts Alpha-43**;
+- the first DynDOLOD run failed on stale `Synthesis_Food.esp` references; the Food-Remover-Plus output was regenerated with **16,765 placed food references disabled**, then passed xEdit with **19,762 records / 0 errors**;
+- the second DynDOLOD run succeeded;
+- final xEdit results were **DynDOLOD.esp — 25,080 records / 0 errors**, **Occlusion.esp — 26,162 records / 0 errors**, and **DynDOLOD.esm — 27,861 records** with only **46 known terrain-underside `<Unknown: 2 $2>` false positives**.
 
 
 ---
@@ -421,19 +427,26 @@ The regenerated Synthesis output is now the technical baseline used by the LOD w
 
 ---
 
-## 11. Phase I — LOD decision and current execution
+## 11. Phase I — LOD decision and completed execution
 
 The decision review is complete: the integration is using the full **xLODGen → TexGen → DynDOLOD** chain.
 
-Current execution state:
+Final execution state:
 
 - [x] final AMR plugin placement complete;
 - [x] Rhiven patch complete and xEdit-validated;
 - [x] Synthesis regenerated;
-- [ ] xLODGen terrain generation complete — **currently in progress**;
-- [ ] TexGen complete;
-- [ ] DynDOLOD complete;
-- [ ] generated outputs visually checked in-game.
+- [x] xLODGen terrain generation complete;
+- [x] TexGen complete;
+- [x] DynDOLOD complete after regeneration of the stale Food-Remover-Plus output;
+- [x] final generated plugins validated in xEdit;
+- [ ] extended visual observation during the definitive/normal playthrough.
+
+### Final BodySlide output
+
+- Installed `Animal Mansion Reborn BodySlide - Rhiven` in `[15.1 - Outfits Eleanor]`, immediately above `Bodyslide Output - Eleanor`.
+- Ran Batch Build with the NEFARAM **Zeroed Sliders** preset, **Build Morphs** enabled, and output directed to `Bodyslide Output - Eleanor`.
+- This BodySlide-only step required no xEdit, Synthesis or LOD rerun.
 
 The decision criteria retained for future maintenance are:
 
@@ -525,6 +538,7 @@ Use a disposable test save first.
 
 ### Core AMR
 
+- Starting instruction: enter **Dead Man's Drink in Falkreath**, hear the introduction, then talk to **Valga Vinicia**.
 - [ ] Animal Mansion starts correctly
 - [ ] quest progression begins normally
 - [ ] quest NPCs exist
@@ -567,10 +581,10 @@ Current finalization state:
 4. [x] rerun Synthesis;
 5. [x] re-check the Rhiven patch in xEdit;
 6. [x] select the full `xLODGen → TexGen → DynDOLOD` workflow;
-7. [ ] complete xLODGen — **in progress**;
-8. [ ] run TexGen;
-9. [ ] run DynDOLOD;
-10. [ ] verify the generated outputs;
+7. [x] complete xLODGen;
+8. [x] run TexGen;
+9. [x] run DynDOLOD;
+10. [x] validate the generated plugins in xEdit;
 11. [ ] complete the final in-game AMR smoke tests;
 12. [x] update NEFARAM-Rhiven documentation;
 13. [ ] publish compatibility notes / patch if appropriate after validation.

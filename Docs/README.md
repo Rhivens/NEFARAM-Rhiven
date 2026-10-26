@@ -1,153 +1,88 @@
-# Guides NEFARAM
+# NEFARAM-Rhiven documentation index
 
-Ce dossier regroupe les **guides pratiques et procédures techniques** liés à la personnalisation et à la maintenance de **NEFARAM-Rhiven**.
+This directory contains both the working documentation for the Rhiven build and the guides prepared for wider community use.
 
-Contrairement aux fiches numérotées du dossier `docs/`, qui documentent directement l'état du build personnel NEFARAM-Rhiven, les fichiers présents ici sont des **guides autonomes** pouvant servir de procédure de référence.
+## Documentation convention
 
-## Guides disponibles
+- `01` through `11`, together with `VALIDATION`, are the **internal Rhiven workshop and reference**: technical research, integration notes, xEdit reasoning, patch records and testing. They remain public and readable, but are not simplified end-user guides.
+- `12 - COMMUNITY GUIDES` contains the **simplified and validated guides intended for the NEFARAM community**.
 
-### ENB → Community Shaders avec NAT Effect 11
+## Internal workshop and reference
 
-Document Word réorganisé et nettoyé à partir d'un guide NEFARAM et d'échanges Discord utiles.
+### 01 - CORE
 
-Le document couvre notamment :
+- [Baseline](01%20-%20CORE/01-BASELINE.md)
+- [MO2 conventions](01%20-%20CORE/02-MO2-CONVENTIONS.md)
+- [Mods added](01%20-%20CORE/03-MODS-ADDED.md)
+- [Mods removed or disabled](01%20-%20CORE/04-MODS-REMOVED.md)
 
-- la suppression des composants ENB incompatibles ;
-- l'installation de Community Shaders et Effects 11 ;
-- l'utilisation de NAT.ENB III avec NAT Effect 11 ;
-- les composants complémentaires comme ISL Helper SKSE et Lux CS ;
-- le placement conseillé dans MO2, panneau gauche et panneau droit ;
-- les conflits de touches avec OBody ;
-- les réglages de base de Community Shaders / Effects 11 ;
-- les précautions liées à KiLoader, EVLaS, Sky Reflection Fix et PrivateProfileRedirector ;
-- une section séparée sur l'alternative Bottled Shaders ;
-- une checklist finale de validation.
+### 02 - UPDATES & MIGRATIONS
 
-Le document d'origine contenait plusieurs captures et échanges Discord. Les discussions ont été supprimées dans la version finale ; seuls les détails techniques utiles ont été conservés. Des placeholders indiquent les emplacements où les captures peuvent être réinsérées manuellement.
+- [Update 17.3.6 to 17.3.7](02%20-%20UPDATES%20&%20MIGRATIONS/14-UPDATE-17.3.6-TO-17.3.7.md)
+- [Update 17.3.7 to 17.3.8](02%20-%20UPDATES%20&%20MIGRATIONS/15-UPDATE-17.3.7-TO-17.3.8.md)
 
-**Fichier :**
+### 03 - PATCHES FIXES
 
-[NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.docx](NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.docx)
+- [Patch and fix register](03%20-%20PATCHES%20FIXES/PATCHES-FIXES.md)
 
-> **Attention :** la procédure source avait été rédigée pour une version antérieure de NEFARAM. Avant toute application sur le build actuel, les versions, prérequis et éventuels changements du load order doivent être revalidés.
+### 04 - ANIMATIONS
 
-## Convention
+- [OAR / Gulan0 / Seamless — Rhiven settings](04%20-%20ANIMATIONS/README.md)
 
-Les futurs guides techniques peuvent être ajoutés dans ce dossier lorsqu'ils décrivent une procédure réutilisable, par exemple :
+### 05 - UI-HUD
 
-- migration d'un système graphique ;
-- remplacement d'un framework ;
-- procédure de génération ou de régénération ;
-- configuration complexe d'un outil ;
-- procédure de diagnostic ou de dépannage.
+- [UI status and configuration](05%20-%20UI-HUD/06-UI.md)
+- [Vel'Dun notes](05%20-%20UI-HUD/VEL'DUN.md)
 
-Les modifications spécifiques au build courant doivent continuer à être documentées dans les fiches principales du dossier `docs/` et dans le `CHANGELOG.md`.
+### 06 - GAMEPLAY
 
-## Chantier PAMA — Prison Alternative
+- [Eleanor gameplay profile](06%20-%20GAMEPLAY/ELEANOR-GAMEPLAY-PROFILE.md)
+- [Animal Mansion Reborn integration](06%20-%20GAMEPLAY/ANIMAL%20MANSION%20REBORN/ANIMAL-MANSION-INTEGRATION.md) — technical integration validated and LOD workflow complete; quest and gameplay validation is deferred to the definitive/normal playthrough.
+- [Bathing in Skyrim integration](06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/BATHING-IN-SKYRIM-INTEGRATION.md) and [survival, blood and hygiene reference](06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/09-SURVIVAL-BLOOD-HYGIENE.md)
+- [Beeing Female NG fertility system](06%20-%20GAMEPLAY/BEEING%20FEMALE%20NG/12-FERTILITY-SYSTEM.md)
+- [Naked Defeat integration](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md) — core gameplay integration is validated; extended playtesting remains ongoing.
+- [PAMA Prison System technical files](06%20-%20GAMEPLAY/PAMA%20Prison%20System/) — internal mod-by-mod and optional-component reference.
+- [Public Whore Comments integration](06%20-%20GAMEPLAY/PUBLIC%20WHORE/PUBLIC-WHORE-COMMENTS-INTEGRATION.md)
+- [Rennas Ranch / Secluded Valley integration](06%20-%20GAMEPLAY/RENNAS%20RANCH/PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md)
+- [SexLab Approach Redux 3.62 integration](06%20-%20GAMEPLAY/SEXLAB%20APPROACH%20REDUX/SEXLAB-APPROACH-REDUX-INTEGRATION.md) — technical integration complete; gameplay validation pending.
+- [Tattoo documentation](06%20-%20GAMEPLAY/TATTOOS/README.md)
+- [TK Dodge documentation](06%20-%20GAMEPLAY/TK-DODGE/NEFARAM_Guide_TK_Dodge_FR.md)
+- [Unethical Alchemy 1.0.0 integration](06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md) — technical integration and structural fix complete; gameplay validation pending.
 
-Un chantier dédié documente l'intégration progressive de l'écosystème **PAMA / Prison Alternative** dans NEFARAM-Rhiven : architecture, dépendances, compatibilités, risques de navmesh, ordre MO2 provisoire et protocole de test.
+### 07 - HOMES
 
-**Dossier :** [PAMA/README.md](PAMA/README.md)
+- [Eleanor home](07%20-%20HOMES/11-HOME-ELEANOR.md)
 
-> Statut actuel : audit terminé, intégration et tests à venir.
+### 08 - OUTFITS
 
-## Animations — OAR / Eleanor
+- [Eleanor outfits](08%20-%20OUTFITS/10-OUTFITS-ELEANOR.md)
 
-- [**Guide OAR / Gulan0 / Seamless — réglages Rhiven**](ANIMATIONS/README.md) : priorités, fichier `user.json`, configuration finale Player Only, correctif sprint et diagnostic des remplacements Legacy DAR.
+### 09 - VISUALS
 
-## Chantier Naked Defeat
+- [ENB to Community Shaders / NAT Effect 11 reference](09%20-%20VISUALS/ENB-CS-RESHADE/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md)
 
-Un dossier dédié regroupe la documentation **Naked Defeat AE/SE 6.50 FULL** et le protocole prévu pour étudier son intégration à NEFARAM-Rhiven en remplacement éventuel de **Practical Defeat**, tout en conservant **Acheron** comme gestionnaire central et **Yamete Kudasai** pour les cas où il reste pertinent.
+### 10 - TRANSLATIONS
 
-**Dossier :** [NAKED-DEFEAT/README.md](NAKED-DEFEAT/README.md)
+- [French translations](10%20-%20TRANSLATIONS/07-TRANSLATIONS-FR.md)
+- [Skyrim FR field safety](10%20-%20TRANSLATIONS/SKYRIM-FR-FIELD-SAFETY.md)
 
-> Statut actuel : documentation consolidée, architecture cible définie, intégration réelle reportée après stabilisation de NEFARAM 17.3.8.
+### 11 - TOOLS
 
+- [LL Integration 0.8 technical review](11%20-%20TOOLS/LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md)
+- [Creation Kit installation with MO2](11%20-%20TOOLS/NEFARAM_Guide_Installation_Creation_Kit_MO2_FR.md)
 
-## Animal Mansion Reborn 1.8
+### VALIDATION
 
-Documentation de référence pour une éventuelle intégration future de **Animal Mansion Reborn 1.8** dans NEFARAM-Rhiven.
+- [Testing and validation](VALIDATION/08-TESTING.md)
+- [Pre-playthrough checklist](VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md)
+- [Finalization roadmap](ROADMAP.md)
 
-- [Guide FR illustré (Word)](Animal_Mansion_Reborn_1.8_Guide_FR_Rhiven.docx)
-- [Technical Reference EN (Markdown)](Animal_Mansion_Reborn_1.8_Technical_Reference_EN.md)
+## 12 - COMMUNITY GUIDES
 
-> Le document Word est destiné à la lecture humaine ; le fichier Markdown sert de référence technique rapide pour les futurs audits de compatibilité, l’intégration MO2/xEdit et le diagnostic.
+These are the simplified or publication-oriented materials intended for NEFARAM users:
 
-
-## RennasRanch 0.3.0
-
-A dedicated integration protocol is available for **RennasRanch 0.3.0**, built around the **Secluded Valley** worldspace.
-
-Source: https://www.loverslab.com/files/file/45943-rennasranch/
-
-**File:** [PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md](PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md)
-
-The protocol covers dependency verification, MO2 isolation, Pandora, BodySlide, xEdit, Falkreath/worldspace compatibility, LOD generation, scripted-scene interference, tether/cart/contraption regression tests, Papyrus monitoring, save/reload validation and rollback.
-
-> Planned order: stabilize NEFARAM 17.3.8 → validate Animal Mansion Reborn → validate this ponyplay mod → then tackle Naked Defeat.
-
-
-## SexLab Approach Redux 3.61
-
-A dedicated integration protocol is available for **SexLab Approach Redux 3.61**.
-
-**File:** [SEXLAB-APPROACH-REDUX-INTEGRATION.md](SEXLAB-APPROACH-REDUX-INTEGRATION.md)
-
-The protocol focuses on autonomous NPC approaches, MCM tuning, coexistence with SLHH Expansion and BaboDialogue, overlap with SexLab Survival / TDF Aroused Rape / Dangerous Nights, defeat-state protection, Papyrus monitoring and save/reload validation.
-
-> Historical note: Fabien recalls probably having used SexLab Approach Redux in an older NEFARAM v16 setup; this remains to be verified against an archived v16 load order.
-
-
-## Public Whore Comments 1.7
-
-A dedicated integration study is available for **Public Whore Comments 1.7**.
-
-**File:** [PUBLIC-WHORE-COMMENTS-INTEGRATION.md](PUBLIC-WHORE-COMMENTS-INTEGRATION.md)
-
-The study covers Public Whore dependency checks, arousal-framework verification, SLSF Fame Comments coexistence, comment-frequency tuning, spouse behavior, SexLab-scene comments, first-person thoughts, save/reload validation and rollback.
-
-> Current verdict: promising candidate. Structural risk appears low to medium, but comment-density / immersion spam must be tested carefully.
-
-
-## SLSF Fame Comments Reloaded 1.3 SE
-
-A dedicated reference and integration-tuning sheet is available for **SLSF Fame Comments Reloaded 1.3 SE**.
-
-**File:** [SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md](SLSF-FAME-COMMENTS-RELOADED-INTEGRATION.md)
-
-The document records the fact that Fame Comments Reloaded is already present in the active NEFARAM-Rhiven baseline, documents its SLSF Reloaded fame/event architecture, follower and spouse systems, Jarl warning/bounty behavior, voice-pack checks, MCM tuning, Public Whore Comments coexistence and future SexLab Approach regression testing.
-
-> Current verdict: retained baseline component; final MCM tuning and regression validation required.
-
-
-## LL Integration 0.8
-
-A dedicated technical review and adoption protocol is available for **LL Integration 0.8**.
-
-**File:** [LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md](LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md)
-
-The document treats LL Integration as external workflow infrastructure rather than a Skyrim runtime mod. It covers browser capture, Firefox/Opera setup, MO2 metadata, active-instance detection, update modes, manual links, Voice Finder, privacy/security review, cookie handling, test deployment and rollback.
-
-> Current verdict: high-potential tool candidate, but beta status and browser/native-bridge trust surface justify isolated testing before adoption.
-
-
-## Unethical Alchemy 1.0.0
-
-A dedicated integration study is available for **Unethical Alchemy 1.0.0**.
-
-**File:** [UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md](UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md)
-
-The document covers the Heartwood Mill encounter, Joy mechanic, alchemy-record conflicts, explicit incompatibilities, SexLab/arousal checks and the important fertility mismatch between the mod's documented Hentai Pregnancy support and the current Rhiven Beeing Female NG architecture.
-
-> Current verdict: candidate to study; probably light structurally, but pregnancy functionality should be treated as RP-only unless BFNG compatibility is verified.
-
-
-## Eleanor — Gameplay Profile
-
-A living gameplay-reference sheet is available for evaluating mod relevance against Eleanor's actual playstyle.
-
-**File:** [ELEANOR-GAMEPLAY-PROFILE.md](ELEANOR-GAMEPLAY-PROFILE.md)
-
-It currently records Eleanor's no-Vampire/no-Werewolf rule, mostly-solo follower usage, follower storage philosophy, and Katana + left-hand Destruction combat setup. It should be expanded progressively with NSFW preferences, outfits/armor, homes, relationships, defeat/reputation systems and other gameplay priorities.
-
-> Purpose: use Eleanor's real playstyle as a decision filter before spending time on risky or low-value integrations.
+- [Animal Mansion Reborn](12%20-%20COMMUNITY%20GUIDES/ANIMAL-MANSION-REBORN/ANIMAL-MANSION-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
+- [Bathing in Skyrim](12%20-%20COMMUNITY%20GUIDES/BATHING-IN-SKYRIM/BATHING-IN-SKYRIM-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
+- [Naked Defeat](12%20-%20COMMUNITY%20GUIDES/NAKED-DEFEAT/README.md)
+- [PAMA Prison System — English](12%20-%20COMMUNITY%20GUIDES/PAMA-Prison-System/README-EN.md) / [French](12%20-%20COMMUNITY%20GUIDES/PAMA-Prison-System/README-FR.md)
+- [NEFARAM Modding Guide by SkinnyPete](12%20-%20COMMUNITY%20GUIDES/NEFARAM-MODDING-GUIDE-by-SkinnyPete/NEFARAM_Modding_Guide_1.4_FR.md)
