@@ -15,9 +15,9 @@
 > If you are not comfortable using xEdit and regenerating LODs, keeping the original NEFARAM setup is strongly recommended.
 
 > **Baseline:** official NEFARAM 17.3.8
-> **Current status:** **TECHNICALLY INTEGRATED — LOD GENERATION IN PROGRESS — FINAL GAMEPLAY VALIDATION PENDING**
+> **Current status:** **TECHNICALLY INTEGRATED — LOD WORKFLOW COMPLETE — GAMEPLAY VALIDATION DEFERRED TO A NORMAL/DEFINITIVE PLAYTHROUGH**
 >
-> This is a community installation guide, not a gameplay-final release notice. The compatibility work has passed its technical checks, but the complete LOD chain and the final in-game smoke tests are still pending.
+> This community integration has passed its technical checks, completed the full LOD workflow and passed generated-output visual inspection. Broader quest, navigation, scene and save-game validation is intentionally deferred to a normal/definitive playthrough.
 
 ## Quick Setup / TL;DR
 
@@ -30,9 +30,9 @@
 7. Keep Animal Mansion early enough for the established NEFARAM, Lux and generated-patch winners to retain their intended final values. Do not use personal MO2 separators or copy another user's absolute plugin positions.
 8. Rerun **Synthesis** after the final plugin placement.
 9. For this integration, rebuild generated LOD in this order: **xLODGen -> TexGen -> DynDOLOD**.
-10. Inspect the generated outputs, then complete the smoke-test checklist in this guide on a disposable save.
+10. Confirm the generated outputs are enabled, then start Animal Mansion as described below.
 
-Do not describe the setup as gameplay-validated until the LOD workflow and every required smoke test have passed.
+The LOD workflow and generated-output visual inspection are complete. Broader gameplay validation will continue during a normal/definitive playthrough.
 
 ## Requirements and prerequisites
 
@@ -43,7 +43,7 @@ Do not describe the setup as gameplay-validated until the LOD workflow and every
 - The supplied `AMR The Great Town of Shor's Stone Patch.esp` compatibility patch.
 - `Animal Mansion Reborn - Rhiven Patch.esp`.
 - MO2 and the existing NEFARAM tools used to regenerate Synthesis and LOD outputs.
-- A disposable test save for validation.
+- A normal/definitive playthrough for broader gameplay validation.
 
 Before changing the profile, back up the MO2 left pane and plugin order. Preserve the existing generated outputs until the final plugin placement is settled.
 
@@ -78,17 +78,29 @@ The patch:
 
 The Rhiven patch does not replace either the COTN Falkreath patch or the supplied Shor's Stone patch, and it does not replace Synthesis or LOD generation. It was built and xEdit-validated with the Shor's Stone patch active.
 
+## Optional AMR BodySlide addon
+
+If you install the optional **AMR BodySlide addon**:
+
+1. Keep NEFARAM on the **Zeroed Sliders** preset.
+2. Enable **Build Morphs**.
+3. Filter the outfit list for **AMR**.
+4. Run **Batch Build** for the filtered AMR entries.
+5. Ideally, direct the generated files to a dedicated MO2 output mod so they remain isolated and easy to manage.
+
+A BodySlide-only rebuild changes meshes only. It does **not** require rerunning Synthesis, xLODGen, TexGen or DynDOLOD.
+
 ## Compatibility notes
 
 ### COTN Falkreath
 
-`COTN -Falkreath AMR.esp` is required for this integration and must remain active. It passed xEdit Check for Errors with **0 errors** and contains functional AMR marker and trigger placement for the COTN layout. Its final in-game observation is still part of the pending smoke tests.
+`COTN -Falkreath AMR.esp` is required for this integration and must remain active. It passed xEdit Check for Errors with **0 errors** and contains functional AMR marker and trigger placement for the COTN layout. Its broader in-game validation is deferred to the normal/definitive playthrough.
 
 ### The Great Town of Shor's Stone
 
 Keep `AMR The Great Town of Shor's Stone Patch.esp` active. The Rhiven patch was built and xEdit-validated with it active and is a complementary layer, not a reconstruction or replacement of the supplied patch.
 
-Earlier audit concerns around NAVI / navmesh and door-link records remain useful technical cautions because those records are sensitive to the final settlement geometry. They were audited in the active final stack; complete NPC pathing, follower pathing and door-transition validation remains pending in the gameplay smoke tests.
+Earlier audit concerns around NAVI / navmesh and door-link records remain useful technical cautions because those records are sensitive to the final settlement geometry. They were audited in the active final stack; broader NPC pathing, follower pathing and door-transition validation is deferred to the normal/definitive playthrough.
 
 ### MNC and Husky models
 
@@ -120,46 +132,18 @@ The full chain is required for this integration because AMR contains exterior wo
 Current documented state:
 
 - Synthesis: complete;
-- xLODGen: in progress;
-- TexGen: pending;
-- DynDOLOD: pending;
-- generated-output visual inspection: pending.
+- xLODGen: complete;
+- TexGen: complete;
+- DynDOLOD: complete;
+- generated-output visual inspection: complete.
 
-Do not skip ahead or mark the generated outputs as validated before the complete chain and visual inspection are finished.
+The complete generated-output chain and its visual inspection are finished.
 
-## In-game smoke-test checklist
+## Starting Animal Mansion
 
-Use a disposable save first.
-
-### Quest and Mansion
-
-- [ ] Animal Mansion starts correctly.
-- [ ] Initial quest progression begins normally.
-- [ ] Required quest NPCs are present.
-- [ ] The Mansion and required AMR interiors load correctly.
-- [ ] AMR dialogue is available where expected.
-
-### Falkreath and Shor's Stone
-
-- [ ] Falkreath exterior and AMR-used interiors work with the COTN layout.
-- [ ] AMR markers and triggers in Falkreath are reachable and correctly placed.
-- [ ] Shor's Stone exterior and relevant interiors load correctly.
-- [ ] NPCs can navigate the modified areas.
-- [ ] Followers can enter, leave and follow through the modified areas.
-- [ ] Doors, teleport markers and cell transitions work in both directions.
-- [ ] Combat, waiting, sleeping and travel do not expose repeatable pathing or transition failures.
-
-### Framework behavior and stability
-
-- [ ] SexLab scenes start and end correctly where relevant.
-- [ ] Creature scenes work where relevant.
-- [ ] MNC creature behavior and Husky models are correct.
-- [ ] No actor remains in a stuck animation state.
-- [ ] Save and reload work after AMR activity and after visiting modified areas.
-- [ ] No missing asset or persistent missing/distant object is visible.
-- [ ] No repeatable CTD occurs when entering or leaving an AMR-modified cell.
-
-Gameplay validation requires the complete generated-output chain plus reproducible success across these checks.
+1. Enter **Dead Man's Drink** in Falkreath.
+2. Listen to the introductory conversation.
+3. Speak to **Valga Vinicia**.
 
 ## Troubleshooting
 
@@ -216,7 +200,7 @@ The base `Animal Mansion Reborn.esp` also passed xEdit Check for Errors with **3
 
 ## Status and release notes
 
-**TECHNICALLY INTEGRATED — LOD GENERATION IN PROGRESS — FINAL GAMEPLAY VALIDATION PENDING**
+**TECHNICALLY INTEGRATED — LOD WORKFLOW COMPLETE — GAMEPLAY VALIDATION DEFERRED TO A NORMAL/DEFINITIVE PLAYTHROUGH**
 
 Completed:
 
@@ -225,14 +209,13 @@ Completed:
 - COTN Falkreath patch xEdit validation;
 - minimal Rhiven compatibility patch creation and xEdit validation;
 - Synthesis regeneration;
-- selection of the full LOD workflow.
+- xLODGen generation;
+- TexGen generation;
+- DynDOLOD generation;
+- generated-output visual inspection.
 
-Still pending:
+Deferred:
 
-- completion of xLODGen;
-- TexGen;
-- DynDOLOD;
-- generated-output visual inspection;
-- the complete in-game smoke-test checklist.
+- broader gameplay validation during a normal/definitive playthrough.
 
-Until those items pass, distribute or discuss the patch only as a technically validated test build. Do not present it as gameplay-final.
+The integration is technically validated and LOD-complete. Gameplay validation remains intentionally deferred and should not be presented as complete until established through normal play.
