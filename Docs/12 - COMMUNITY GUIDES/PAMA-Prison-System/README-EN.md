@@ -142,6 +142,41 @@ Outdoor Event Pack documentation mentions that badly timed deflation can produce
 
 No blocking issue has been observed so far, but this remains a real-playthrough observation point.
 
+## Rhiven compatibility patches
+
+These downloads are built specifically for the documented **NEFARAM-Rhiven compatibility stack**. Do not install them blindly on unrelated setups; first confirm that you use the same mods and have the same conflicts.
+
+### NEFARAM ZaZ ankle-chain mesh
+
+[Download the NEFARAM ZaZ Ankle Chains patch](PAMA%20-%20NEFARAM%20ZaZ%20Ankle%20Chains%20Patch%20-%20Rhiven.zip)
+
+Bad Ends Windhelm includes an older copy of `meshes\ZaZ-UltimateDataPack\ZaZ - HDT\ZaZAnkleChainsRagdolls_1.nif`. Because the PAMA block is placed late, that file could overwrite the NEFARAM-patched mesh. Install and enable this archive after Bad Ends Windhelm, or late enough in the MO2 left pane to win that file conflict. This is a mesh override, not an ESP patch.
+
+### Windhelm navmesh
+
+[Download the Windhelm Navmesh patch](PAMA%20-%20Windhelm%20Navmesh%20Patch%20-%20Rhiven.zip)
+
+Bad Ends Windhelm reintroduces older, effectively vanilla-like navmesh data. This ESL-flagged ESP preserves the intended final winners:
+
+- `000FC117` / `WindhelmBridge04` from `WindhelmSSE - Exterior NavMesh Fixes.esp`
+- `0004B66C` / `WindhelmCandlehearthHallExterior` from `CapitalWindhelmExpansion - SkyrimSewers.esp`
+
+Load it after Bad Ends Windhelm and the relevant source/fix plugins that it reconciles. xEdit validation: **0 errors / 7 records**.
+
+### Solitude location
+
+[Download the Solitude Location patch](PAMA%20-%20Solitude%20Location%20Patch%20-%20Rhiven.zip)
+
+This minimal ESL-flagged patch restores `XLCN - Location = SolitudeLocation [00018A5A]` on `SolitudeOrigin [00037EE9]` while preserving the PAMA-winning cell data. Load it after Bad Ends Solitude so the restored assignment wins. No navmesh merge was retained because observed Solitude pathing worked correctly. xEdit validation: **0 errors / 17 records**.
+
+### Falkreath terrain
+
+[Download the Falkreath LAND fix](PAMA%20-%20Falkreath%20LAND%20-%20Rhiven%20Fix.zip)
+
+This ESPFE/ESL patch fixes the terrain hole at the Falkreath entrance in Tamriel cell `-9,-22`, LAND `0000AC81` (CELL `00009C81`). The issue was caused by `PaOutdoorEventPack.esp` overriding the later compatibility chain; it was **not** caused by Animal Mansion Reborn or the PAMA core itself.
+
+The patch copies the correct LAND override from `Northern Roads - COTN Falkreath - LFFGM patch.esp` and must load after `PaOutdoorEventPack.esp`. In-game validation confirmed that the terrain hole is removed. No Synthesis or LOD regeneration is required for this specific fix.
+
 ## Windhelm audit
 
 Bad Ends Windhelm was installed and audited against the current NEFARAM-Rhiven Windhelm stack.
