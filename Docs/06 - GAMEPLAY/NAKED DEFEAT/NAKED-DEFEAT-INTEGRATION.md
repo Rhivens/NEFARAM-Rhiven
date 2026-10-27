@@ -1,11 +1,10 @@
-# NEFARAM 17.3.8 — Migration from Practical Defeat / Yamete Kudasai to Naked Defeat 6.50
+# NEFARAM 17.3.8 — Migration from Practical Defeat / Yamete Kudasai to Naked Defeat 6.51
 
-> **Status: CORE GAMEPLAY VALIDATED — EXTENDED PLAYTESTING ONGOING**
+> **Status: NAKED DEFEAT 6.51 CORE INTEGRATION VALIDATED — EXTENDED PLAYTESTING ONGOING**
 >
-> This guide documents the current NEFARAM-Rhiven migration from the stock / previous defeat stack based on **Acheron + Practical Defeat Reanimated + Yamete Kudasai** to a cleaner architecture based on **Acheron + Naked Defeat 6.50**.
+> This guide documents the NEFARAM-Rhiven migration from the previous **Acheron + Practical Defeat Reanimated + Yamete Kudasai** stack to **Acheron + Naked Defeat 6.50 FULL + the 6.51 incremental patch**.
 >
-> The integration has been reviewed at file, script, OAR, plugin and xEdit level. The required bridge and Rhiven corrective patch have both passed static validation.  
-> Core in-game defeat, recovery and consequence flows have now also been validated. Extended playtesting remains ongoing, so final MCM balance and edge-case tuning may still change during a full playthrough.
+> File structure, xEdit records, the available Papyrus sources, the Acheron Bridge and the corrective patches were audited. Core in-game defeat, recovery, repeated-event and save/reload flows passed on 6.51. Follower defeat, untested changelog branches and final MCM tuning remain outside the validated set.
 
 ---
 
@@ -34,7 +33,7 @@ Acheron
 ├─ Simple Recover
 ├─ Diary of Mine Extension
 └─ Acheron - Naked Defeat Bridge
-   └─ Naked Defeat 6.50
+   └─ Naked Defeat 6.50 FULL + 6.51 patch
       └─ Naked Defeat - Rhiven Fix
 ```
 
@@ -60,7 +59,7 @@ Validated against:
 - **NEFARAM 17.3.8**
 - Skyrim AE runtime **1.6.1170**
 - Acheron **1.11.3**
-- Naked Defeat **6.50**
+- Naked Defeat **6.50 FULL + patch 6.51**
 - Mod Organizer 2
 - xEdit / SSEEdit **4.1.5f**
 - Open Animation Replacer
@@ -79,7 +78,11 @@ The stable profile was not used for the first integration pass.
 ### Required
 
 - `Naked Defeat 6-50 - FULL - (AE + SE).7z`
+- patch incrémental **Naked Defeat 6.51**, installé après la 6.50 FULL
+- traduction **MCM FR 6.51**, installée après le patch 6.51
 - `Naked Defeat - EXTRA - Acheron Bridge (SE).zip`
+
+Les textures **WhipMarks** sont déjà intégrées au paquet depuis la 6.50 ; aucun ancien ajout WhipMarks séparé ne doit écraser cette version.
 
 ### Optional OAR package retained
 
@@ -121,7 +124,9 @@ Do not merge this patch into the original Naked Defeat plugin. Keeping it as a s
 - `Acheron - Sacrosanct Patch - Rhiven` if already part of the NEFARAM-Rhiven setup
 - `Acheron - Simple Recover`
 - `Acheron - Diary of Mine Extension`
-- `Naked Defeat - Rhiven`
+- `Naked Defeat 6.50 FULL - Rhiven`
+- `Naked Defeat 6.51 patch - Rhiven`
+- `Naked Defeat MCM FR 6.51 - Rhiven`
 - `Naked Defeat - Rhiven Fix`
 - `Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven`
 - `Naked Defeat - EXTRA - OAR Bowed Animations fixed - Rhiven`
@@ -148,7 +153,9 @@ Acheron - Simple Recover
 Acheron - Diary of Mine Extension
 YameteKudasai - DISABLED vs Naked Defeat
 SMUTbooks_SE
-Naked Defeat - Rhiven
+Naked Defeat 6.50 FULL - Rhiven
+Naked Defeat 6.51 patch - Rhiven
+Naked Defeat MCM FR 6.51 - Rhiven
 Naked Defeat - Rhiven Fix
 Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven
 Naked Defeat - EXTRA - OAR Crawl Animations V2 - DISABLED vs Bowed
@@ -284,7 +291,7 @@ Static verdict:
 
 ---
 
-## 10. Naked Defeat 6.50 xEdit audit
+## 10. Naked Defeat 6.50 / 6.51 xEdit and Papyrus audit
 
 `Naked Defeat.esp` contains approximately **798 records**.
 
@@ -335,6 +342,27 @@ Check for Errors:
 Static verdict:
 
 > **VALIDATED**
+
+---
+
+### 10.3 Continuity audit for 6.51
+
+The 6.51 plugin contains **800 records** and reports the same 18 xEdit error/warning groups that were reviewed rather than automatically cleaned. The Rhiven Fix still contains **5 records / 0 errors**, and the Acheron Bridge remains at **3 records / 0 errors**.
+
+The 6.51 archive ships changed compiled `.pex` files without matching sources. Papyrus validation therefore combines:
+
+- source-level inspection of the available 6.50 scripts and the Bridge;
+- VMAD and record cross-checks in the 6.51 plugin;
+- in-game confirmation of the paths that matter to the integration.
+
+This supports the following conclusions without overclaiming a full 6.51 decompilation:
+
+- the missing Civilian Rape quest remains protected by `IndecencyRapeProb = 0`;
+- old whip packages and old follower crucifixion scenes remain documented and untouched because available sources show inactive/disabled paths;
+- the Acheron handoff and recovery paths are confirmed functionally by the 6.51 tests;
+- historical warnings are not reclassified as fixed merely because core gameplay passed.
+
+A separate `Naked Defeat - Synthesis Fix.esp` was created to restore the `nade_Stick` CRDT correction after `Synthesis_1.esp`. Its final explicit Check for Errors result was not part of the received test evidence and therefore remains pending.
 
 ---
 
@@ -596,17 +624,23 @@ If Naked Defeat fails the smoke test, restore the previous defeat stack rather t
 - [x] final plugin relative order defined
 - [x] deterministic test architecture defined
 
-### Still in progress
+### Naked Defeat 6.51 validation
 
-- [x] Pandora regeneration after final disable state
+- [x] 6.51 incremental patch installed over 6.50 FULL
+- [x] 6.51 plugin audited in xEdit
+- [x] Rhiven Fix continuity confirmed
+- [x] Acheron Bridge handoff tested
 - [x] humanoid defeat test
 - [x] creature defeat test
-- [ ] follower defeat test
 - [x] bleedout recovery validation
 - [x] repeated-event validation
-- [x] save / reload validation
+- [x] save / exit / reload validation
+- [x] furniture escape flow validated with timed Space presses and progress messages
+- [ ] follower defeat test
+- [ ] individual validation of every 6.51 changelog feature
+- [ ] final Check for Errors result for the Synthesis Fix
 - [ ] final MCM tuning during the final playthrough
-- [ ] final verdict for the stable NEFARAM-Rhiven profile
+- [ ] final verdict for rare edge cases in the stable profile
 
 ### Known minor observations
 
@@ -619,7 +653,7 @@ setstage ski_configmanagerinstance 1
 
 ---
 
-## 20. Final warning for NEFARAM users
+## 20. Final 6.51 validation boundary
 
 This integration is **not an untested theory**.
 
@@ -639,7 +673,7 @@ The following parts have already been checked and validated:
 
 However:
 
-> **Core gameplay has now been validated in-game. Extended playtesting is still ongoing.**
+> **Core gameplay has been validated in-game on Naked Defeat 6.51. Extended playtesting is still ongoing.**
 
 The current build is suitable for continued playtesting, while final balancing and less common edge cases remain subject to adjustment during the final playthrough.
 
@@ -656,7 +690,9 @@ Acheron - Death Alternative 1.11.3 - Rhiven
 Acheron - Sacrosanct Patch - Rhiven
 Acheron - Simple Recover
 Acheron - Diary of Mine Extension
-Naked Defeat - Rhiven
+Naked Defeat 6.50 FULL - Rhiven
+Naked Defeat 6.51 patch - Rhiven
+Naked Defeat MCM FR 6.51 - Rhiven
 Naked Defeat - Rhiven Fix
 Naked Defeat - EXTRA - Acheron Bridge (SE) - Rhiven
 Naked Defeat - EXTRA - OAR Bowed Animations fixed - Rhiven
