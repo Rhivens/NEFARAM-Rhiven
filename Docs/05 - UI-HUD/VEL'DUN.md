@@ -10,18 +10,31 @@
 > **Baseline actuelle :** NEFARAM-Rhiven 17.3.8, profil `Eleanor Stable 17.3.8`. Les instantanés `load-order/NEFARAM-RHIVEN-MODDED-MO2-LEFT.md` et `load-order/NEFARAM-RHIVEN-MODDED-MO2-RIGHT.md` ont depuis été rafraîchis pour la 17.3.8.
 
 
-## État réel au 14 octobre 2026 — personnalisation UI
+## État réel au 27 octobre 2026 — personnalisation UI
 
 - **Vel'dun UI principal 1.0.6 + Patches 1.0.6 conservés.** La 1.0.7 du mod principal avait causé un problème avec le menu Échap ; ne pas proposer cette mise à jour comme acquise. Le FOMOD affiché pour **Vel'dun UI Overhauls** était quant à lui marqué **1.0.7** : distinguer les versions de ces modules.
 - **Modern Wait Menu original** installé en haut du bloc `47 - UI - Rhiven`. L'habillage Nithog se trouve dans **Vel'dun UI Overhauls**, option FOMOD `Wait/Sleep Menu → 2. Modern Wait Menu`. Le nouveau menu circulaire a été vu en jeu, sans test exhaustif du mécanisme d'attente.
 - **The Dragonborn's Bestiary** : FOMOD Overhauls `2A. Bestiary Patch` pour le 16:9. Habillage Vel'dun observé en jeu ; aucun contenu à ce stade sur le PJ de test.
 - **Quest Journal** : `1. Skip` car seul **Knotwork pour SkyUI V5 2.1.0** est installé, pas Quest Journal Overhaul ni sa déclinaison Knotwork.
 - **Reskins Dragonborn personnels réactivés** : `Dragonborn Reskin - SkyUI Inventory Category Icons - Rhiven` (icônes colorées observées) et `Dragonborn Reskin - STB Active Effects - Rhiven` (pas encore testé avec un effet actif). Les deux mods Wheeler Dragonborn sont également visibles actifs dans MO2.
-- Ordre panneau gauche (éléments clés) : `Modern Wait Menu` → `Vel'dun UI` → `Vel'dun UI Patches` → `Vel'dun UI Overhauls` → `Dragonborn - Wheeler Reskin` + options → `Dragonborn Reskin - SkyUI Inventory Category Icons` → `Dragonborn Reskin - STB Active Effects`. Priorité bas de liste pour les fichiers identiques.
+- **Needs Widget AIO - Rhiven** est désormais retenu comme widget unifié des besoins **SunHelm + Bathing in Skyrim**. Sa disposition prévue pour Vel'Dun s'intègre correctement à l'ensemble actuel. L'ancien widget complémentaire BiS n'est plus nécessaire et reste explicitement désactivé dans le load order.
+- Ordre panneau gauche (éléments clés) : `Modern Wait Menu` → `Wheeler` → `Perfected Wheeler` → `Compare Equipment NG` → `STB Widgets` → `Vel'dun UI` → `Vel'dun UI Patches` → `Vel'dun UI Overhauls` → reskins Dragonborn conservés → réglages SkyHUD/TrueHUD/Compare Equipment NG/Oxygen Meter 2/Casting Bar → `Needs Widget AIO`. Priorité bas de liste pour les fichiers identiques.
 - Dans l'onglet Conflits de **Vel'dun UI Overhauls**, les fichiers `sleepwaitmenu.swf`, `PlatformButtons.swf`, `bestiarymenu.swf` et `bestiarywidget.swf` sont gagnants. `favoritesmenu.swf` gagne aussi ; tester les favoris pour exclure une régression inattendue.
 - **Outfit Gallery 1.0.15** : menu visible en jeu ; `External (Translation.json)` disponible comme piste pour une future traduction FR, après inspection du format. Tenues automatiques pour compagnons **à laisser désactivées**. Usage multiple et sauvegarde des tenues à tester sur la vraie Eleanor ; comparaison avec Fitting Room non close.
 - **Contrôles restant ouverts :** valider une attente complète, le menu Échap après cette combinaison, l'affichage STB avec effet actif, le Bestiaire avec du contenu, le menu Favoris, l'absence de conflit de touches, et le maintien des réglages au redémarrage. Ne pas confondre captures visuelles et validation fonctionnelle exhaustive.
 - Sources : [Vel'dun UI](https://www.nexusmods.com/skyrimspecialedition/mods/176230) ; [Modern Wait Menu](https://www.nexusmods.com/skyrimspecialedition/mods/117661) ; [Outfit Gallery](https://www.nexusmods.com/skyrimspecialedition/mods/193410).
+
+## Stack UI/HUD actuelle
+
+Le bloc actif `47 - UI - Rhiven` confirme la stack de référence suivante :
+
+- **Menus et fonctions :** `Modern Wait Menu - Rhiven`, `Wheeler - Quick Action Wheel Of Skyrim - Rhiven`, `Perfected Wheeler - Apocrypha Menu Framework - Rhiven`, `Compare Equipment NG - Rhiven` et `STB Widgets - Rhiven`.
+- **Socle Vel'Dun :** `Vel'dun UI - Rhiven`, `Vel'dun UI Patches - Rhiven` et `Vel'dun UI Overhauls - Rhiven`.
+- **Reskins Dragonborn conservés :** `Dragonborn - Wheeler Reskin - Rhiven`, `Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven`, `Dragonborn Reskin - SkyUI Inventory Category Icons - Rhiven` et `Dragonborn Reskin - STB Active Effects - Rhiven`.
+- **Réglages Rhiven :** `SkyHUD Settings - Rhiven`, `TrueHUD Settings - Rhiven`, `Compare Equipment NG Settings - Rhiven`, `Oxygen Meter 2 Settings - Rhiven` et `Casting Bar Settings - Rhiven`.
+- **Besoins :** `Needs Widget AIO - Rhiven`, retenu pour centraliser l'affichage SunHelm et Bathing in Skyrim dans une disposition adaptée à Vel'Dun.
+
+`Splash Screen - Rhiven` fait également partie du bloc. `Main Menu - Rhiven - DECOCHE` est désactivé et ne fait donc pas partie de la stack active.
 
 ## Objectif
 
@@ -34,7 +47,8 @@ Construire le HUD personnel d'Eleanor : menus harmonisés avec Vel'dun, widgets 
 - Lors de la bascule initiale, les quatre **reskins Dragonborn** suivants avaient été désactivés dans MO2 : `Dragonborn UI - SkyUI Reskin - Rhiven`, `Dragonborn Reskin - Skyrim Character Sheet - Rhiven`, `Dragonborn - Wheeler Reskin - Rhiven`, `Dragonborn - Wheeler Reskin Edge UI Color Options - Rhiven`. Les deux reskins Wheeler ont ensuite été explicitement réactivés, de même que les reskins d'icônes d'inventaire et de STB Active Effects recensés plus haut. **Wheeler**, **Perfected Wheeler**, **Compare Equipment NG** et **Skyrim Character Sheet** restent des fonctionnalités distinctes. L'ancienne configuration complète est conservée dans [`DRAGONBORN-UI.md`](DRAGONBORN-UI.md).
 - **Dear Diary Dark Mode** et ses patchs sont conservés ; Vel'dun gagne les conflits d'apparence pertinents observés. Ne pas conclure pour autant à une compatibilité fonctionnelle exhaustive avant la fin de l'audit MO2 et des tests reportés.
 - Le FOMOD principal et les modules complémentaires ont été sélectionnés **selon les composants installés**, et non tous d'office. **Vel'dun UI Patches 1.0.6** et **Vel'dun UI Overhauls** sont intégrés ; RaceMenu DIP, Wheeler et QuickLoot ne doivent être retenus que si leur besoin réel est confirmé.
-- **STB Active Effects est déjà présent** ; **STB Widgets est un ajout envisagé**, connu de l'ancienne installation mais pas encore restauré.
+- **STB Active Effects** et **STB Widgets - Rhiven** sont tous deux présents et actifs dans le load order actuel. Leur position, leur échelle, leur raccourci et leur persistance restent à vérifier sur la partie définitive.
+- **Needs Widget AIO - Rhiven** centralise désormais l'affichage des besoins SunHelm et Bathing in Skyrim. La question générale des doublons entre ces deux sources est donc résolue ; il reste à vérifier la calibration et la persistance en conditions réelles.
 - La capture HUD issue de Nolvus fournie en conversation sert à identifier **quel mod affiche quoi**, **pas** à imposer des coordonnées, des dimensions ou une disposition.
 - On travaille de préférence sur un **profil MO2 de laboratoire** avec sauvegardes séparées et on protège `ELEANOR Stable`. Vérifier également les sorties partagées entre profils.
 
@@ -42,17 +56,20 @@ Construire le HUD personnel d'Eleanor : menus harmonisés avec Vel'dun, widgets 
 
 | Composant | Usage envisagé | État / vérification |
 |---|---|---|
-| STB Widgets | Résistances, armure et statistiques complémentaires | À installer ou évaluer ; menu via touche End selon référence Nolvus, raccourci réel à vérifier |
+| STB Widgets | Résistances, armure et statistiques complémentaires | Actif comme `STB Widgets - Rhiven` ; position, échelle, raccourci réel et persistance à vérifier |
 | STB Active Effects | Effets actifs | Présent ; vérifier son interaction avec Vel'dun et STB Widgets |
 | SL Widgets | Informations SexLab | Présent ; réglages et persistance à auditer |
-| A Matter of Time | Horloge et calendrier | Présent ; MCM et éventuel preset Seasons |
+| A Matter of Time | Horloge et calendrier | Actif avec Legacy Settings Loader et `Edit for Seasons` ; position, échelle et persistance à vérifier |
 | Compass Navigation Overhaul | Boussole et marqueurs de navigation | Présent ; réglages/INI et raccourcis à relever |
-| TrueHUD | Barres et informations de combat | Présent ; MCM Player Info |
-| SunHelm | Faim, soif, fatigue / survie | Présent ; décider quoi afficher pour éviter les doublons |
-| Widget complémentaire Bathing in Skyrim Renewed (BiSR) | Hygiène / bain | Présent ; ne pas confondre avec Dirt & Blood de l'exemple Nolvus |
+| TrueHUD | Infrastructure HUD, barres et informations de combat | Actif avec HUD Additions, réglages Rhiven et configurations de barres de boss ; calibration finale à vérifier |
+| Needs Widget AIO | Widget visible unifié pour les besoins SunHelm + Bathing in Skyrim | Actif comme `Needs Widget AIO - Rhiven` ; solution retenue, visuellement intégrée à Vel'Dun ; positions, échelles et persistance finales à vérifier |
+| Widget complémentaire Bathing in Skyrim / Keep It Clean | Ancien affichage complémentaire d'hygiène | Désactivé (`DECOCHE vs Needs Widgets`) et remplacé par Needs Widget AIO ; conservé ici uniquement comme historique |
 | Equipment Durability System NG | Usure de l'équipement | Présent ; preset et paramètres visuels à déterminer |
+| Oxygen Meter 2 | Jauge visible d'oxygène | Actif avec `Oxygen Meter 2 Settings - Rhiven` ; placement et comportement à vérifier |
+| Casting Bar | Barre d'incantation visible | Actif avec Casting Bar HUD Variance et `Casting Bar Settings - Rhiven` ; placement et comportement à vérifier |
+| iWant Widgets / iWant Status Bars | Infrastructure et barres configurables pour d'autres affichages | Actifs ; distinguer les dépendances techniques des éléments réellement visibles et relever leurs réglages utiles |
 | Vel'dun UI | Thème visuel des menus | Principal 1.0.6 + Patches 1.0.6 intégrés et validés visuellement/en jeu ; Overhauls observé fonctionnel visuellement ; contrôles fonctionnels détaillés encore ouverts |
-| SkyHUD / autres interfaces NEFARAM | Positionnement et intégration HUD | Présents ; auditer les conflits de fichiers et les réglages |
+| SkyHUD | Infrastructure de positionnement et d'intégration HUD | Actif avec `SkyHUD Settings - Rhiven` ; auditer les conflits de fichiers et les réglages |
 
 Les indications de touches dans une image Nolvus ne sont **pas** des raccourcis déjà validés pour NEFARAM-Rhiven.
 
@@ -61,7 +78,7 @@ Les indications de touches dans une image Nolvus ne sont **pas** des raccourcis 
 ### 1. Préparation — après les mods classiques
 - [ ] Terminer les ajouts hors interface et mettre à jour les deux instantanés MO2.
 - [ ] Créer un profil de test `ELEANOR HUD TEST`, avec sauvegardes spécifiques au profil et vérification des sorties communes.
-- [ ] Inventorier tous les widgets, leurs dépendances, les éventuels doublons et les modules réellement nécessaires.
+- [ ] Finaliser l'inventaire des dépendances et des éléments réellement visibles ; la centralisation SunHelm + BiS via Needs Widget AIO est déjà arrêtée.
 - [ ] Déterminer la résolution, le format d'écran, les réglages d'échelle et les touches déjà utilisées.
 
 ### 2. Intégration Vel'dun
