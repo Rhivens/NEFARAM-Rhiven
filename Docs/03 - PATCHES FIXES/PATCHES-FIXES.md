@@ -78,7 +78,52 @@ Ne pas utiliser ce patch comme prétexte pour « nettoyer » automatiquement les
 
 ---
 
-### 1.2 PAMA - Windhelm Navmesh Patch - Rhiven
+### 1.2 Naked Defeat - Synthesis Fix - Rhiven
+
+**Archive :** `Naked Defeat - Synthesis Fix - Rhiven.zip`
+
+**Plugin :** `Naked Defeat - Synthesis Fix - Rhiven.esp`
+
+**Cible :** `nade_Stick` — FormID observé dans le build : `A90E70C7`
+
+#### Pourquoi nous l’avons créé
+
+`Synthesis_1.esp` charge après `Naked Defeat - Rhiven Fix.esp` et réintroduit des données conflictuelles sur le record Naked Defeat `nade_Stick`. Il annule ainsi une partie de la correction Rhiven originale.
+
+Ce patch est volontairement minimal : il ne contient que l’override tardif nécessaire pour préserver le gagnant final souhaité de `nade_Stick` après chaque génération Synthesis.
+
+#### Gagnants retenus
+
+- **`CRDT - Critical Data > Effect` :** conserver la valeur corrigée et normalisée `NULL - Null Reference [00000000]`, au lieu de laisser la sortie Synthesis générée restaurer les données mal formées ou conflictuelles.
+- **`TNAM - Sound` :** conserver la valeur Naked Defeat / Rhiven `WPNSwingBladeAxeSD`, au lieu de la valeur générée par Synthesis `WPNSwingAxe2Hand`.
+
+Aucune autre donnée ni aucun autre record ne doit être ajouté à ce patch sans nouveau diagnostic explicite.
+
+#### Ordre de chargement retenu
+
+```text
+Naked Defeat.esp
+Naked Defeat - Rhiven Fix.esp
+...
+Synthesis_1.esp
+Naked Defeat - Synthesis Fix - Rhiven.esp
+```
+
+Le Synthesis Fix doit rester **après `Synthesis_1.esp`** afin que son override ciblé soit le dernier gagnant pour `nade_Stick`.
+
+#### Principe de maintenance
+
+Ne jamais modifier manuellement `Synthesis_1.esp` : ce plugin est généré et toute correction directe serait écrasée à la régénération suivante. Conserver à la place ce petit patch Rhiven permanent après Synthesis.
+
+#### Validation
+
+- conflit de `Synthesis_1.esp` sur `nade_Stick` identifié ;
+- patch créé et placé après Synthesis ;
+- contrôle final explicite du plugin et vérification en jeu de `nade_Stick` encore à confirmer.
+
+---
+
+### 1.3 PAMA - Windhelm Navmesh Patch - Rhiven
 
 **Archive :** `PAMA - Windhelm Navmesh Patch - Rhiven.zip`  
 **Plugin :** `PAMA - Windhelm Navmesh Patch - Rhiven.esp`  
@@ -134,7 +179,7 @@ Ne pas déplacer tout le bloc PAMA uniquement pour régler ces deux conflits : c
 
 ---
 
-### 1.3 PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven
+### 1.4 PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven
 
 **Archive :** `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven.zip`  
 **Type :** override de fichier, sans ESP
@@ -184,7 +229,7 @@ dans le système de conflits de fichiers MO2.
 
 ---
 
-### 1.4 PAMA - Solitude Location Patch - Rhiven
+### 1.5 PAMA - Solitude Location Patch - Rhiven
 
 **Archive :** `PAMA - Solitude Location Patch - Rhiven.zip`  
 **Plugin :** `PAMA - Solitude Location Patch - Rhiven.esp`  
@@ -236,7 +281,7 @@ Un merge navmesh aurait ajouté du risque sans symptôme réel à corriger.
 
 ---
 
-### 1.5 PAMA - Falkreath LAND - Rhiven Fix
+### 1.6 PAMA - Falkreath LAND - Rhiven Fix
 
 **Archive :** `PAMA - Falkreath LAND - Rhiven Fix.zip`  
 **Plugin :** `Falkreath LAND - Rhiven Fix.esp`  
