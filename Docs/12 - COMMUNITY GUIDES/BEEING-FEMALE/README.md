@@ -24,6 +24,7 @@ The replacement stack is:
 Fertility Adventures Redux
 Beeing Female NG 3.6.0
 Beeing Female NG HUD Re-Alignment addon    # optional
+Labor Animations - OAR
 ```
 
 ---
@@ -73,15 +74,19 @@ Install the new stack under the original NEFARAM separator:
 [41 - Added Mods]
 ├─ Fertility Adventures Redux
 ├─ Beeing Female NG 3.6.0
-└─ Beeing Female NG HUD Re-Alignment addon    # optional
+├─ Beeing Female NG HUD Re-Alignment addon    # optional
+└─ Labor Animations - OAR
 ```
 
 This is a relative layout, not a prescription for exact absolute positions. NEFARAM installations can differ after user customization.
+
+Original NEFARAM already contains an older **Labor Animations (Open Animation Replacer)** entry in `[24 - Animations]`. In the validated integration, that older entry was disabled and replaced by the newer **Labor Animations - OAR** entry installed with the Beeing Female stack in `[41 - Added Mods]`. This is a replacement: do not enable or run both Labor Animations entries together.
 
 The important rules are:
 
 - keep **Fertility Mode** disabled in `[39 - OPTIONAL MODS]`;
 - keep Fertility Adventures Redux and Beeing Female NG together in `[41 - Added Mods]`;
+- keep the older **Labor Animations (Open Animation Replacer)** entry disabled and the newer **Labor Animations - OAR** entry enabled;
 - place the optional HUD addon after Beeing Female NG so its additional HUD presets are available;
 - allow Beeing Female NG's P.A.I.A patches to win their relevant OAR configuration conflicts.
 
@@ -155,7 +160,7 @@ Beeing Female NG, SexLab Fill Her Up Baka Edition, and Milk Mod Economy may all 
 
 ## 8. Pandora regeneration
 
-Rerun **Pandora Behaviour Engine** after installing Beeing Female NG. Before regeneration, Beeing Female NG may report its animations as incompatible.
+Rerun and regenerate **Pandora Behaviour Engine** after installing Beeing Female NG and after replacing the older Labor Animations entry with **Labor Animations - OAR**, because both changes affect the animation setup. If both changes are made in the same installation pass, perform one complete Pandora regeneration after both are in place. Before regeneration, Beeing Female NG may report its animations as incompatible.
 
 During generation, confirm that Pandora detects:
 
@@ -217,6 +222,7 @@ On a disposable test save, confirm all of the following:
 - [ ] SexLab compatibility is detected.
 - [ ] Bathing in Skyrim compatibility is detected.
 - [ ] Beeing Female item distribution is operational.
+- [ ] The older `Labor Animations (Open Animation Replacer)` entry is disabled and `Labor Animations - OAR` is enabled.
 - [ ] Pandora detected `FNIS_BeeingFemale_List` during regeneration.
 - [ ] The Beeing Female NG System page reports its animations as **COMPATIBLE**.
 - [ ] No blocking Beeing Female NG console error is observed.
@@ -224,15 +230,15 @@ On a disposable test save, confirm all of the following:
 - [ ] Morph changes remain reasonable when Beeing Female NG, FHU, and MME are exercised.
 - [ ] A complete cycle, pregnancy, and birth test succeeds before the setup is used for a long playthrough.
 
-The first eight items were confirmed during technical validation. HUD preference, final morph tuning, and full pregnancy/birth gameplay remain user- and setup-dependent.
+The first nine items were confirmed during technical validation. HUD preference, final morph tuning, and full pregnancy/birth gameplay remain user- and setup-dependent.
 
 ---
 
 ## 12. Troubleshooting
 
-### Beeing Female animations show as incompatible
+### Beeing Female or labor animations are missing or incompatible
 
-Rerun Pandora, confirm that it detects `FNIS_BeeingFemale_List`, then relaunch the game and check the Beeing Female NG System page again.
+Confirm that the older **Labor Animations (Open Animation Replacer)** entry in `[24 - Animations]` is disabled and the newer **Labor Animations - OAR** entry in `[41 - Added Mods]` is enabled. Then rerun Pandora, confirm that it detects `FNIS_BeeingFemale_List`, relaunch the game, and check the Beeing Female NG System page again.
 
 ### The Beeing Female NG MCM is missing
 
