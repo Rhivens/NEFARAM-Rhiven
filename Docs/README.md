@@ -31,7 +31,7 @@ This directory contains both the working documentation for the Rhiven build and 
 
 ### 05 - UI-HUD
 
-- [UI status and configuration](05%20-%20UI-HUD/06-UI.md)
+- [UI status and configuration](05%20-%20UI-HUD/DRAGONBORN-UI.md)
 - [Vel'Dun notes](05%20-%20UI-HUD/VEL'DUN.md)
 
 ### 06 - GAMEPLAY
@@ -83,7 +83,12 @@ These are the simplified or publication-oriented materials intended for NEFARAM 
 
 - [Animal Mansion Reborn](12%20-%20COMMUNITY%20GUIDES/ANIMAL-MANSION-REBORN/ANIMAL-MANSION-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
 - [Bathing in Skyrim](12%20-%20COMMUNITY%20GUIDES/BATHING-IN-SKYRIM/BATHING-IN-SKYRIM-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
+- [Beeing Female](12%20-%20COMMUNITY%20GUIDES/BEEING-FEMALE/README.md)
 - [Lakeview Manor - As It Should Be](12%20-%20COMMUNITY%20GUIDES/LAKEVIEW-MANOR-AS-IT-SHOULD-BE/README.md)
 - [Naked Defeat](12%20-%20COMMUNITY%20GUIDES/NAKED-DEFEAT/README.md)
-- [PAMA Prison System — English](12%20-%20COMMUNITY%20GUIDES/PAMA-Prison-System/README-EN.md) / [French](12%20-%20COMMUNITY%20GUIDES/PAMA-Prison-System/README-FR.md)
 - [NEFARAM Modding Guide by SkinnyPete](12%20-%20COMMUNITY%20GUIDES/NEFARAM-MODDING-GUIDE-by-SkinnyPete/NEFARAM_Modding_Guide_1.4_FR.md)
+- [PAMA Prison System](12%20-%20COMMUNITY%20GUIDES/PAMA-Prison-System/README-EN.md)
+- [SexLab Approach Redux](12%20-%20COMMUNITY%20GUIDES/SEXLAB-APPROACH-REDUX/README.md)
+- [Tattoos](12%20-%20COMMUNITY%20GUIDES/TATTOOS/README.md)
+- [TK Dodge](12%20-%20COMMUNITY%20GUIDES/TK-DODGE/README.md)
+- [Vel'Dun](12%20-%20COMMUNITY%20GUIDES/VEL'DUN/README.md)
