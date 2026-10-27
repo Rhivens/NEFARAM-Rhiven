@@ -8,19 +8,23 @@ Cette roadmap ne conserve que les travaux encore à réaliser. Les intégrations
 
 > La partie définitive doit démarrer depuis la sauvegarde fournie **NEFARAM_Start**, et non depuis le bouton vanilla `New Game`.
 
-## 1. Validation technique restante — Unethical Alchemy 1.0.0
+## 1. Validation fonctionnelle restante — Unethical Alchemy 1.0.0
 
-L'archive publique `Unethical Alchemy - Rhiven Fix.zip` est désormais conservée sous `Docs/03 - PATCHES FIXES/`. Le correctif ciblé d'Agryn Gaering passe déjà `Check for Errors` avec **2 records / 0 erreur**. Les vérifications suivantes restent ouvertes et ne doivent pas être confondues avec la publication désormais terminée :
+Les vérifications structurelles et la publication documentaire sont terminées :
 
-- [ ] Vérifier dans xEdit les deux signalements LoversLab :
-  - `[CELL:0000BCFB]` dans Tamriel 32,-25 : `CELL \ XCWT - Water -> Found a NULL reference, expected: WATR` ;
-  - `HeartwoodMillExterior [CELL:0000BCDA]` dans Tamriel 32,-24 : même signalement `XCWT - Water = NULL`.
-- [ ] Confirmer que ces entrées sont réellement erronées avant toute correction.
-- [ ] Si l'erreur est confirmée, étendre le correctif en supprimant uniquement les `XCWT` invalides et en préservant toutes les autres données des CELL.
-- [ ] Lancer `Check for Errors` sur le mod de base et le patch, avec une cible de **0 erreur**.
-- [ ] Créer le guide communautaire Unethical Alchemy seulement après cette validation complémentaire.
+- [x] Le correctif ciblé d'Agryn Gaering retire uniquement la référence de package orpheline, préserve ses sept packages valides et passe `Check for Errors` avec **2 records / 0 erreur**.
+- [x] Les deux signalements LoversLab `XCWT - Water = NULL` ont été contrôlés dans la stack NEFARAM 17.3.8 actuelle : ils **ne sont pas reproduits**. `[CELL:0000BCFB]` et `HeartwoodMillExterior [CELL:0000BCDA]` contiennent tous deux une référence `WATR` valide vers `RiverWaterFlow`. Il ne faut donc pas supprimer ces `XCWT` sur la base de l'ancien signalement.
+- [x] Le [guide communautaire Unethical Alchemy](Docs/12%20-%20COMMUNITY%20GUIDES/UNETHICAL-ALCHEMY/README.md) est créé et accompagne l'archive publique `Unethical Alchemy - Rhiven Fix.zip`.
 
-Référence technique : [Unethical Alchemy 1.0.0](Docs/06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md).
+Les validations fonctionnelles réellement ouvertes restent :
+
+- [ ] Vérifier le pathing et les packages quotidiens d'Agryn Gaering à Heartwood Mill.
+- [ ] Valider le parcours d'introduction, les dialogues, l'entraînement et la scène SexLab.
+- [ ] Valider l'implémentation de Joy, sa persistance après sauvegarde/rechargement, son interaction avec l'arousal et son expiration.
+- [ ] Vérifier les effets, valeurs, mots-clés et recettes sous les overhauls d'alchimie actifs.
+- [ ] Confirmer sur une sauvegarde jetable que le contenu abortif reste sans danger en l'absence de Hentai Pregnancy, sans revendiquer de compatibilité avec un autre framework de fertilité.
+
+Références : [fiche technique Unethical Alchemy 1.0.0](Docs/06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md) · [guide communautaire](Docs/12%20-%20COMMUNITY%20GUIDES/UNETHICAL-ALCHEMY/README.md).
 
 ## 2. Examen différé du patch PAMA candidat partagé sur Discord
 

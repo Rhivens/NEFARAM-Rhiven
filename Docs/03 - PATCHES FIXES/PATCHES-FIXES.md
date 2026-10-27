@@ -364,9 +364,11 @@ Le patch est la couche de compatibilité minimale déjà documentée dans la [fi
 
 - **Archive :** `Unethical Alchemy - Rhiven Fix.zip`
 - **Plugin :** `Unethical Alchemy - Rhiven Fix.esp`
-- **Statut :** publié dans ce dossier
+- **Statut :** publié dans ce dossier et fourni avec le [guide communautaire Unethical Alchemy](../12%20-%20COMMUNITY%20GUIDES/UNETHICAL-ALCHEMY/README.md)
 
-Le correctif retire uniquement la référence de package orpheline d'Agryn Gaering et préserve ses sept packages valides. Le plugin publié passe `Check for Errors` avec **2 records / 0 erreur**. Les deux signalements `XCWT - Water = NULL` restent à examiner séparément, conformément à la roadmap. Les détails déjà validés du patch figurent dans la [fiche d'intégration Unethical Alchemy](../06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md).
+Le correctif retire uniquement la référence de package orpheline d'Agryn Gaering et préserve ses sept packages valides. Le plugin publié passe `Check for Errors` avec **2 records / 0 erreur**.
+
+Les deux anciens signalements LoversLab `XCWT - Water = NULL` ne sont **pas reproduits dans la stack NEFARAM 17.3.8 actuelle** : `[CELL:0000BCFB]` et `HeartwoodMillExterior [CELL:0000BCDA]` contiennent tous deux une référence `WATR` valide vers `RiverWaterFlow`. Il ne faut pas supprimer ces `XCWT` sur la base de l'ancien rapport. Les détails validés figurent dans la [fiche d'intégration Unethical Alchemy](../06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md) et le [guide communautaire](../12%20-%20COMMUNITY%20GUIDES/UNETHICAL-ALCHEMY/README.md).
 
 ---
 
