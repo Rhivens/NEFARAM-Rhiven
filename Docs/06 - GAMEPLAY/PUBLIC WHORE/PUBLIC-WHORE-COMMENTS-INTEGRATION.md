@@ -1,10 +1,12 @@
 # Public Whore Comments 1.7 — Integration & Test Protocol
 
-> **Status:** candidate mod / not currently integrated  
+> **Status:** not retained / historical study
 > **Target build:** NEFARAM-Rhiven **17.3.8** / profile **Eleanor Stable 17.3.8**  
 > **Documented version:** **1.7**  
 > **Source:** user-supplied LoversLab description  
 > **Scope:** dependency verification, dialogue-density control, coexistence with Public Whore / SLSF Fame Comments, arousal integration, in-game validation and rollback
+
+> **Final decision:** Public Whore Comments 1.7 was treated and rejected for the Rhiven build. This document is retained for historical traceability and is no longer an active integration protocol. See [mods not retained](../../MODS-NOT-RETAINED.md).
 
 ---
 

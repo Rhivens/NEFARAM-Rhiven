@@ -35,7 +35,7 @@ Start with the [Docs index](Docs/README.md).
 - [03 - PATCHES FIXES](Docs/03%20-%20PATCHES%20FIXES/PATCHES-FIXES.md)
 - [04 - ANIMATIONS](Docs/04%20-%20ANIMATIONS/README.md)
 - [05 - UI-HUD](Docs/05%20-%20UI-HUD/)
-  - [UI](Docs/05%20-%20UI-HUD/06-UI.md)
+  - [UI](Docs/05%20-%20UI-HUD/DRAGONBORN-UI.md)
   - [Vel'Dun](Docs/05%20-%20UI-HUD/VEL'DUN.md)
 - [06 - GAMEPLAY](Docs/06%20-%20GAMEPLAY/)
   - [Survival, blood and hygiene](Docs/06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/09-SURVIVAL-BLOOD-HYGIENE.md)
@@ -52,7 +52,7 @@ Start with the [Docs index](Docs/README.md).
 - [VALIDATION](Docs/VALIDATION/)
   - [Testing and validation](Docs/VALIDATION/08-TESTING.md)
   - [Pre-playthrough checklist](Docs/VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md)
-- [Finalization roadmap](Docs/ROADMAP.md)
+- [Finalization roadmap](ROADMAP.md)
 
 ### Community guides
 
@@ -75,6 +75,7 @@ Start with the [Docs index](Docs/README.md).
 ### History
 
 - [Changelog](CHANGELOG.md)
+- [Mods not retained](Docs/MODS-NOT-RETAINED.md)
 
 ## Working principle
 

@@ -4,6 +4,8 @@
 > **Target build:** NEFARAM-Rhiven after migration to **17.3.8** and full stabilization  
 > **Documented mod version:** **0.3.0**  
 > **Mod:** **RennasRanch**  
+
+> **Final decision:** RennasRanch 0.3.0 was not retained for the Rhiven build. This document is preserved as a historical study and is no longer an active integration protocol. See [mods not retained](../../MODS-NOT-RETAINED.md).
 > **Source:** https://www.loverslab.com/files/file/45943-rennasranch/  
 > **Scope:** verification, integration, regression testing, and rollback procedure
 

@@ -1,7 +1,9 @@
 # Animations — OAR et configuration Eleanor
 
 **Validation initiale :** NEFARAM-Rhiven 17.3.7 · profil MO2 `ELEANOR Stable` · configuration active validée en jeu le 11/10/2026.  
-**Baseline actuelle :** NEFARAM-Rhiven 17.3.8 · profil `Eleanor Stable 17.3.8`. La configuration a été conservée pendant la migration ; les observations 17.3.7 ci-dessous restent l'historique de validation initial.
+**Baseline actuelle :** NEFARAM-Rhiven 17.3.8 · profil `Eleanor Stable 17.3.8`. La configuration a été conservée pendant la migration et validée après plusieurs tests en jeu sans problème observé.
+
+**Statut : VALIDÉ sur la configuration actuelle.** Les éventuelles anomalies rares de locomotion, d'entrave, de combat ou de transition découvertes pendant la partie définitive seront traitées au cas par cas comme du dépannage normal de gros modpack ; elles ne constituent plus une validation en attente dans la roadmap.
 
 ## 1. Choix final
 
@@ -117,7 +119,7 @@ L'avertissement OAR `Detected mods sharing the same priority` concernait notamme
 
 - **Confirmé en jeu :** idles Gulan0 (lors du test), puis Seamless retenu ; remplacement Gulan0 de marche, course et sprint ; conditions Player Only ; fonctionnement du réglage de priorité OAR.
 - **Confirmé sur fichiers :** six HKX du patch provisoire correctement superposés au mod principal ; puis décision finale de ne garder que le correctif sprint.
-- **À surveiller pendant la partie :** transitions particulières, états d'entrave, combat, posture avec armes, animations spéciales et absence de régression sur des scènes rares.
+- **Suivi non bloquant :** si une anomalie apparaît sur une transition particulière, un état d'entrave, le combat, une posture avec arme ou une scène rare, la diagnostiquer au cas par cas avec OAR et les fichiers gagnants.
 - **Aucun changement** aux règles de DeviousFollowers, Amputator, XPMSE ou autres anciens packs DAR.
 
 ## 8. Sources

@@ -36,16 +36,17 @@ This directory contains both the working documentation for the Rhiven build and 
 
 ### 06 - GAMEPLAY
 
+- [Dino's Easy Quest Fix](06%20-%20GAMEPLAY/DINOS-EASY-QUEST-FIX.md) — validated quest assistance and diagnostic tool.
 - [Eleanor gameplay profile](06%20-%20GAMEPLAY/ELEANOR-GAMEPLAY-PROFILE.md)
 - [Animal Mansion Reborn integration](06%20-%20GAMEPLAY/ANIMAL%20MANSION%20REBORN/ANIMAL-MANSION-INTEGRATION.md) — technical integration validated and LOD workflow complete; quest and gameplay validation is deferred to the definitive/normal playthrough.
 - [Bathing in Skyrim integration](06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/BATHING-IN-SKYRIM-INTEGRATION.md) and [survival, blood and hygiene reference](06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/09-SURVIVAL-BLOOD-HYGIENE.md)
 - [Beeing Female NG fertility system](06%20-%20GAMEPLAY/BEEING%20FEMALE%20NG/12-FERTILITY-SYSTEM.md)
-- [Naked Defeat integration](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md) — core gameplay integration is validated; extended playtesting remains ongoing.
+- [Naked Defeat 6.50 integration](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md) — treated and validated baseline; superseded active work is tracked in the [6.51 preliminary integration study](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-6.51-PRELIMINARY-INTEGRATION-STUDY.md).
 - [PAMA Prison System technical files](06%20-%20GAMEPLAY/PAMA%20Prison%20System/) — internal mod-by-mod and optional-component reference.
-- [Public Whore Comments integration](06%20-%20GAMEPLAY/PUBLIC%20WHORE/PUBLIC-WHORE-COMMENTS-INTEGRATION.md)
-- [Rennas Ranch / Secluded Valley integration](06%20-%20GAMEPLAY/RENNAS%20RANCH/PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md)
-- [SexLab Approach Redux 3.62 integration](06%20-%20GAMEPLAY/SEXLAB%20APPROACH%20REDUX/SEXLAB-APPROACH-REDUX-INTEGRATION.md) — technical integration complete; gameplay validation pending.
-- [Tattoo documentation](06%20-%20GAMEPLAY/TATTOOS/README.md)
+- [Public Whore Comments historical study](06%20-%20GAMEPLAY/PUBLIC%20WHORE/PUBLIC-WHORE-COMMENTS-INTEGRATION.md) — not retained.
+- [Rennas Ranch / Secluded Valley historical study](06%20-%20GAMEPLAY/RENNAS%20RANCH/PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md) — not retained.
+- [SexLab Approach Redux 3.62 integration](06%20-%20GAMEPLAY/SEXLAB%20APPROACH%20REDUX/SEXLAB-APPROACH-REDUX-INTEGRATION.md) — treated and validated.
+- [Tattoo documentation](06%20-%20GAMEPLAY/TATTOOS/README.md) — functional application validated in game.
 - [TK Dodge documentation](06%20-%20GAMEPLAY/TK-DODGE/NEFARAM_Guide_TK_Dodge_FR.md)
 - [Unethical Alchemy 1.0.0 integration](06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md) — technical integration and structural fix complete; gameplay validation pending.
 
@@ -59,6 +60,7 @@ This directory contains both the working documentation for the Rhiven build and 
 
 ### 09 - VISUALS
 
+- [Retained SH2 / MESH2 / Dynamic Cubemap / ReShade configuration](09%20-%20VISUALS/ENB-CS-RESHADE/SILENT-HORIZONS-2-MESH2-DYNAMIC-CUBEMAP-RESHADE.md)
 - [ENB to Community Shaders / NAT Effect 11 reference](09%20-%20VISUALS/ENB-CS-RESHADE/NEFARAM_Guide_ENB_vers_Community_Shaders_NAT_Effect_11.md)
 
 ### 10 - TRANSLATIONS
@@ -68,14 +70,16 @@ This directory contains both the working documentation for the Rhiven build and 
 
 ### 11 - TOOLS
 
-- [LL Integration 0.8 technical review](11%20-%20TOOLS/LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md)
+- [Item Vault - Plugin Explorer](11%20-%20TOOLS/ITEM-VAULT-PLUGIN-EXPLORER.md)
+- [LL Integration 0.8 technical review](11%20-%20TOOLS/LL-INTEGRATION-0.8-TECHNICAL-REVIEW.md) — validated external maintenance workflow.
 - [Creation Kit installation with MO2](11%20-%20TOOLS/NEFARAM_Guide_Installation_Creation_Kit_MO2_FR.md)
 
 ### VALIDATION
 
 - [Testing and validation](VALIDATION/08-TESTING.md)
 - [Pre-playthrough checklist](VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md)
-- [Finalization roadmap](ROADMAP.md)
+- [Finalization roadmap](../ROADMAP.md)
+- [Mods not retained](MODS-NOT-RETAINED.md)
 
 ## 12 - COMMUNITY GUIDES
 

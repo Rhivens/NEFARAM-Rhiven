@@ -5,6 +5,8 @@
 
 Objectif : conserver les interfaces utiles pour de futurs mods Papyrus exploitant les tatouages, sans confondre mécanismes documentés, hypothèses et tests réalisés.
 
+**Statut fonctionnel : VALIDÉ pour sortir de la roadmap.** Une application réelle de tatouage a été observée en jeu pendant les tests Naked Defeat. Les réglages fins, la persistance, Fade Tattoos et les cas particuliers restent documentés ici et dans les fiches dédiées ; ils seront traités au besoin pendant la partie définitive, sans rouvrir un chantier générique dans la roadmap.
+
 ## Guides des intégrations RTC (11/10/2026)
 
 - [**Fiche d'intégration Alpia + RTC QoL rev1**](./ALPIA-08-2026-QOL.md) — état MO2, emplacements des JSON, audit croisé et checklist de test.
