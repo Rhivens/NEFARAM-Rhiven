@@ -1,6 +1,6 @@
 # Naked Defeat for NEFARAM-Rhiven
 
-This guide documents the validated **Naked Defeat 6.50** setup used with **NEFARAM-Rhiven 17.3.8**.
+This guide documents the validated **Naked Defeat 6.51** setup used with **NEFARAM-Rhiven 17.3.8**. Version 6.51 is an incremental patch installed over **Naked Defeat 6.50 FULL**.
 
 It is intended as a practical community guide: enough information to reproduce the working setup without carrying over the full internal xEdit / script audit.
 
@@ -11,7 +11,7 @@ This setup was validated with:
 - **NEFARAM-Rhiven 17.3.8**
 - **Skyrim AE runtime 1.6.1170**
 - **Acheron 1.11.3**
-- **Naked Defeat 6.50**
+- **Naked Defeat 6.50 FULL + patch 6.51**
 - **Mod Organizer 2**
 - **Open Animation Replacer**
 - **Pandora Behaviour Engine+**
@@ -21,7 +21,7 @@ This setup was validated with:
 ```text
 Acheron
 → Acheron - Naked Defeat Bridge
-→ Naked Defeat
+→ Naked Defeat 6.50 FULL + patch 6.51
 → Naked Defeat - Rhiven Fix
 ```
 
@@ -41,8 +41,12 @@ The intended principle is:
 ### Required
 
 - `Naked Defeat 6-50 - FULL - (AE + SE).7z`
+- patch incrémental **Naked Defeat 6.51**, installé juste après la 6.50 FULL
+- **MCM FR 6.51**, installé après le patch 6.51
 - `Naked Defeat - EXTRA - Acheron Bridge (SE).zip`
 - `Naked Defeat - Rhiven Fix.zip`
+
+Les textures **WhipMarks** sont déjà intégrées depuis Naked Defeat 6.50. Ne réactivez pas un ancien ajout WhipMarks séparé par-dessus cette installation.
 
 ### OAR package retained
 
@@ -68,7 +72,9 @@ Acheron - Sacrosanct Patch
 Acheron - Simple Recover
 Acheron - Diary of Mine Extension
 
-Naked Defeat
+Naked Defeat 6.50 FULL
+Naked Defeat 6.51 patch
+Naked Defeat MCM FR 6.51
 Naked Defeat - Rhiven Fix
 Acheron - Naked Defeat Bridge
 Naked Defeat - EXTRA - OAR Bowed Animations fixed
@@ -111,7 +117,12 @@ The essential internal order is:
 Naked Defeat.esp
 → Naked Defeat - Rhiven Fix.esp
 → Acheron - Naked Defeat Bridge.esp
+...
+Synthesis_1.esp
+→ Naked Defeat - Synthesis Fix.esp
 ```
+
+The 6.51 patch and MCM FR are left-panel file overrides and do not add a second `Naked Defeat.esp`. `Naked Defeat - Synthesis Fix.esp` belongs after `Synthesis_1.esp`; its final explicit xEdit validation remains to be recorded.
 
 The Rhiven Fix must load after `Naked Defeat.esp` so its corrected records win. The Acheron Bridge then loads after both as the integration layer.
 
@@ -149,6 +160,31 @@ IndecencyRapeProb = 0
 ```
 
 Do not attempt to reconstruct the missing quest manually.
+
+## Audio, TTS and SKSE configuration
+
+For the 6.51 setup:
+
+- replace **AudioUtil 0.9.13** with **AudioUtil 0.9.30**; do not keep both versions active;
+- add **AudioUtil TTS 0.5.1**;
+- add the **Kokoro English** voice/model package required by the chosen TTS setup;
+- keep these SKSE/audio components before Naked Defeat in the MO2 left panel so the 6.51 files and its translation can win where intended.
+
+Suggested left-panel relationship:
+
+```text
+AudioUtil 0.9.30
+AudioUtil TTS 0.5.1
+Kokoro English
+...
+Naked Defeat 6.50 FULL
+Naked Defeat 6.51 patch
+Naked Defeat MCM FR 6.51
+Naked Defeat - Rhiven Fix
+Acheron - Naked Defeat Bridge
+```
+
+AudioUtil TTS is optional from Naked Defeat's plugin-master point of view, but it is part of the documented Rhiven audio setup. The 6.51 SKSE menu exposes many configurable options. Only the functional base is retained here; fine MCM/SKSE tuning and balancing are deliberately reserved for the final playthrough.
 
 ## Pandora and OAR
 
@@ -267,18 +303,21 @@ Use this only after the old mods are fully disabled.
 - Acheron → Naked Defeat handoff;
 - bleedout recovery;
 - repeated defeat events;
-- save / exit / reload after completed events.
+- save / exit / reload after completed events;
+- furniture escape: press Space once, wait for the progress messages, then press Space again only when the message says the restraints are loose enough.
 
 ### Still pending / extended playtesting
 
 - follower defeat;
-- final MCM tuning;
+- individual validation of every 6.51 changelog branch;
+- final xEdit result for `Naked Defeat - Synthesis Fix.esp`;
+- final MCM/SKSE tuning;
 - final stable-profile verdict;
 - less common edge cases during the definitive playthrough.
 
 Current status:
 
-> **CORE GAMEPLAY VALIDATED — EXTENDED PLAYTESTING ONGOING**
+> **NAKED DEFEAT 6.51 CORE GAMEPLAY VALIDATED — EXTENDED PLAYTESTING ONGOING**
 
 ## Known minor observation
 
@@ -305,3 +344,5 @@ If the setup fails your own tests, restore the previous defeat stack rather than
 For the complete internal audit, xEdit reasoning, bridge inspection, detailed test protocol and known unused / malformed records, see:
 
 [NEFARAM-Rhiven Naked Defeat internal integration guide](../../06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md)
+
+[Closed Naked Defeat 6.51 integration study](../../06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-6.51-PRELIMINARY-INTEGRATION-STUDY.md)
