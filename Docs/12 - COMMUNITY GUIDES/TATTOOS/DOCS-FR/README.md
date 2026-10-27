@@ -26,9 +26,9 @@ Les éléments suivants sont de véritables ajouts à NEFARAM 17.3.x d'origine :
 5. `Alpia Rtats Settings All in One`
 6. `Zaki Tattoos General Pack SE` **1.1.1** — Full Pack, avec textures corps/pieds 4K et mains/visage 2K
 7. `Zaki RTC Settings`
-8. Un futur override communautaire facultatif nommé `zzz-Rhiven-RTC.json`
+8. L'override communautaire facultatif `Rhiven RTC Settings`, distribué sous le nom `Rhiven RTC Settings.zip`
 
-Le huitième élément est un preset facultatif prévu. **Il n'est actuellement ni publié ni téléchargeable dans ce dépôt.** Ne vous attendez pas à le trouver dans le dossier du guide ou ailleurs dans le dépôt public.
+Le huitième élément est disponible publiquement dans le dossier parent de ce guide sous le nom [`Rhiven RTC Settings.zip`](../Rhiven%20RTC%20Settings.zip). Le mod/l'archive MO2 se nomme **Rhiven RTC Settings**, tandis que le preset réel qu'il contient se nomme `zzz-Rhiven-RTC.json`.
 
 RTC et Fade Tattoos Continued remplacent leurs anciens équivalents. N'installez pas simultanément les anciennes versions et les versions Continued.
 
@@ -103,10 +103,10 @@ Alpia Slavetats Pack
 Alpia Rtats Settings All in One
 Zaki Tattoos General Pack SE
 Zaki RTC Settings
-preset d'override utilisateur facultatif
+Rhiven RTC Settings (facultatif)
 ```
 
-La dernière entrée est un emplacement générique pour un override final délibéré. Le futur `zzz-Rhiven-RTC.json`, une fois réellement publié, y aurait sa place sous forme de mod MO2 séparé ou d'une autre source de fichiers isolée.
+La dernière entrée est une couche d'override finale volontaire. Installez l'archive publique `Rhiven RTC Settings.zip` comme mod MO2 séparé ; son fichier interne `zzz-Rhiven-RTC.json` porte délibérément ce nom afin d'être chargé tard après les presets Alpia et Zaki. Un override utilisateur personnalisé peut occuper le même emplacement logique si le preset Rhiven n'est pas utilisé.
 
 Règle de conflit essentielle :
 
@@ -171,15 +171,21 @@ peut être utile. Vérifiez toujours l'ordre réel avec `Test / Reload configs` 
 
 Le test interne a aussi montré que l'absence du dossier facultatif `JCUser/rTats/presets/` pouvait produire un avertissement sans empêcher la fusion des presets situés dans le chemin Data.
 
-## 9. Preset Rhiven facultatif — raison d'être
+## 9. Preset Rhiven facultatif — distribution et raison d'être
 
-Le nom public prévu est :
+Le téléchargement public se nomme :
 
 ```text
-zzz-Rhiven-RTC.json
+Rhiven RTC Settings.zip
 ```
 
-**Ce preset est facultatif et n'est pas encore publié. Il n'est actuellement inclus nulle part dans le dépôt public.**
+Il est disponible à côté du guide anglais sous le nom [`Rhiven RTC Settings.zip`](../Rhiven%20RTC%20Settings.zip). L'archive installe le preset à cet emplacement :
+
+```text
+SKSE/Plugins/RapeTattoos/zzz-Rhiven-RTC.json
+```
+
+Le nom de l'archive/du mod et celui du preset sont volontairement différents : **Rhiven RTC Settings** est le paquet MO2 public, tandis que `zzz-Rhiven-RTC.json` est le véritable preset RTC ; son préfixe `zzz-` indique son rôle prévu de couche d'override tardive.
 
 Il ne corrige pas un framework, ne remplace pas la QoL Extension et n'est pas requis pour faire fonctionner RTC, Alpia ou Zaki. Son rôle prévu est de fournir une couche d'override finale cohérente après le chargement des presets des auteurs Alpia et Zaki.
 
@@ -191,9 +197,9 @@ D'après le delta personnalisé validé en interne, un tel preset peut :
 - définir un comportement volontaire pour les entrées Full Body et Full Face ;
 - garder la personnalisation isolée, vérifiable et amovible.
 
-Les exclusions de contenu employées lors de la validation interne relevaient d'une politique personnelle, non de corrections techniques ou de valeurs universelles. Tout preset public doit faire réexaminer explicitement ces choix avant publication plutôt que de les présenter comme la bonne configuration pour tous.
+Les exclusions de contenu de ce preset relèvent d'une politique personnelle, non de corrections techniques ou de valeurs universelles. Examinez-les avant utilisation au lieu de les considérer comme la bonne configuration pour tous.
 
-S'il est publié ultérieurement, ce preset doit être ajouté comme fichier JSON téléchargeable séparé. Ce guide devra alors être mis à jour avec un lien direct, une somme de contrôle ou le chemin exact du dépôt. D'ici là, ne créez pas de fichier factice et ne considérez pas son nom comme une instruction de téléchargement.
+Installez le ZIP comme mod MO2 distinct et conservez-le après les réglages RTC d'Alpia et Zaki dans le panneau gauche. Exécutez ensuite `Test / Reload configs` et vérifiez l'ordre de fusion observé ; le nom tardif est volontaire, mais le journal RTC effectif reste la référence.
 
 ## 10. Installation et audit d'Alpia
 
@@ -324,7 +330,7 @@ Les tatouages Full Body et Full Face peuvent aussi chevaucher d'autres entrées 
 
 Utilisez une sauvegarde jetable et distinguez les contrôles statiques des résultats d'exécution.
 
-- [ ] Confirmez les huit composants installés prévus pour votre configuration, à l'exclusion du preset facultatif non publié sauf si vous avez créé votre propre équivalent.
+- [ ] Confirmez les huit composants installés prévus pour votre configuration, à l'exclusion du preset Rhiven facultatif si vous avez choisi de ne pas l'installer.
 - [ ] Vérifiez que la QoL Extension gagne ses conflits de scripts RTC.
 - [ ] Reconstruisez ou actualisez le registre SlaveTats si le workflow SlaveTats installé l'exige.
 - [ ] Exécutez `LOAD TATTOO CONFIG PAGES` après l'initialisation de RTC.

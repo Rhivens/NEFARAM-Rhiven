@@ -350,6 +350,26 @@ Un second petit raccord terrain en forêt, cellule `Tamriel -16,-26`, a été ob
 
 ---
 
+### 1.7 Animal Mansion Reborn - Rhiven Patch
+
+- **Archive :** `Animal Mansion Reborn - Rhiven Patch.zip`
+- **Plugin :** `Animal Mansion Reborn - Rhiven Patch.esp`
+- **Statut :** publié dans ce dossier et fourni avec le [guide communautaire AMR](../12%20-%20COMMUNITY%20GUIDES/ANIMAL-MANSION-REBORN/ANIMAL-MANSION-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
+
+Le patch est la couche de compatibilité minimale déjà documentée dans la [fiche d'intégration AMR](../06%20-%20GAMEPLAY/ANIMAL%20MANSION%20REBORN/ANIMAL-MANSION-INTEGRATION.md). Il a été construit avec le patch Shor's Stone actif et validé dans xEdit avec **21 records / 0 erreur**. Cette entrée indexe l'archive publiée sans modifier les conclusions techniques existantes.
+
+---
+
+### 1.8 Unethical Alchemy - Rhiven Fix
+
+- **Archive :** `Unethical Alchemy - Rhiven Fix.zip`
+- **Plugin :** `Unethical Alchemy - Rhiven Fix.esp`
+- **Statut :** publié dans ce dossier
+
+Le correctif retire uniquement la référence de package orpheline d'Agryn Gaering et préserve ses sept packages valides. Le plugin publié passe `Check for Errors` avec **2 records / 0 erreur**. Les deux signalements `XCWT - Water = NULL` restent à examiner séparément, conformément à la roadmap. Les détails déjà validés du patch figurent dans la [fiche d'intégration Unethical Alchemy](../06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md).
+
+---
+
 ## 2. Autres correctifs / configurations Rhiven à retenir
 
 Ces éléments ne correspondent pas forcément à un ZIP présent dans ce dossier, mais ils font partie de notre historique de corrections et restent utiles comme aide-mémoire.
@@ -453,6 +473,17 @@ Ces éléments ne correspondent pas forcément à un ZIP présent dans ce dossie
   - General Vendors
 - **But :** distribuer le scroll `Banish Mimic` sans ajouter une distribution trop large.
 - **Statut :** initialisation validée ; acquisition réelle à surveiller en jeu.
+
+---
+
+### 2.9 Rhiven RTC Settings — preset public
+
+- **Archive MO2 :** `Rhiven RTC Settings.zip`
+- **Fichier interne :** `SKSE\Plugins\RapeTattoos\zzz-Rhiven-RTC.json`
+- **Copie communautaire :** [guide Tattoos et archive](../12%20-%20COMMUNITY%20GUIDES/TATTOOS/README.md)
+- **Rôle :** couche d'override RTC facultative destinée à fusionner tard après les presets Alpia et Zaki.
+
+Le nom du mod public et celui du fichier interne sont volontairement différents. Les exclusions et regroupements du preset représentent des choix personnels ; ils ne constituent pas des corrections universelles. Vérifier l'ordre réel avec `Test / Reload configs`.
 
 ---
 

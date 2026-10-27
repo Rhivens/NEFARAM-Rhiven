@@ -8,43 +8,19 @@ Cette roadmap ne conserve que les travaux encore à réaliser. Les intégrations
 
 > La partie définitive doit démarrer depuis la sauvegarde fournie **NEFARAM_Start**, et non depuis le bouton vanilla `New Game`.
 
-## 1. Publications à récupérer depuis le PC maison
+## 1. Validation technique restante — Unethical Alchemy 1.0.0
 
-### Animal Mansion Reborn
+L'archive publique `Unethical Alchemy - Rhiven Fix.zip` est désormais conservée sous `Docs/03 - PATCHES FIXES/`. Le correctif ciblé d'Agryn Gaering passe déjà `Check for Errors` avec **2 records / 0 erreur**. Les vérifications suivantes restent ouvertes et ne doivent pas être confondues avec la publication désormais terminée :
 
-- [ ] Récupérer `Animal Mansion Reborn - Rhiven Patch` depuis l'installation MO2.
-- [ ] L'empaqueter en ZIP si nécessaire et le publier sous `Docs/03 - PATCHES FIXES/`.
-- [ ] Mettre à jour le [registre des patches](Docs/03%20-%20PATCHES%20FIXES/PATCHES-FIXES.md).
-- [ ] Mettre à jour le [guide communautaire AMR](Docs/12%20-%20COMMUNITY%20GUIDES/ANIMAL-MANSION-REBORN/ANIMAL-MANSION-NEFARAM-17.3.8-COMMUNITY-GUIDE.md) avec le lien du patch publié.
-
-Le patch est déjà validé techniquement dans xEdit avec **21 records / 0 erreur**. Les éventuels problèmes rencontrés pendant la partie définitive seront traités au cas par cas dans la [fiche d'intégration AMR](Docs/06%20-%20GAMEPLAY/ANIMAL%20MANSION%20REBORN/ANIMAL-MANSION-INTEGRATION.md), sans constituer une phase active de cette roadmap.
-
-### Unethical Alchemy 1.0.0
-
-- [ ] Récupérer `Unethical Alchemy - Rhiven Fix.esp` depuis l'installation MO2.
 - [ ] Vérifier dans xEdit les deux signalements LoversLab :
   - `[CELL:0000BCFB]` dans Tamriel 32,-25 : `CELL \ XCWT - Water -> Found a NULL reference, expected: WATR` ;
   - `HeartwoodMillExterior [CELL:0000BCDA]` dans Tamriel 32,-24 : même signalement `XCWT - Water = NULL`.
 - [ ] Confirmer que ces entrées sont réellement erronées avant toute correction.
 - [ ] Si l'erreur est confirmée, étendre le correctif en supprimant uniquement les `XCWT` invalides et en préservant toutes les autres données des CELL.
 - [ ] Lancer `Check for Errors` sur le mod de base et le patch, avec une cible de **0 erreur**.
-- [ ] Publier le ZIP final sous `Docs/03 - PATCHES FIXES/` et mettre à jour le registre des patches.
-- [ ] Créer le guide communautaire Unethical Alchemy seulement après récupération, validation et publication du patch.
+- [ ] Créer le guide communautaire Unethical Alchemy seulement après cette validation complémentaire.
 
 Référence technique : [Unethical Alchemy 1.0.0](Docs/06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md).
-
-### Preset RTC public
-
-- [ ] Récupérer `zzz-Eleanor-RTC.json` depuis l'installation MO2.
-- [ ] Relire et valider le JSON avant publication.
-- [ ] Renommer la version publique en `zzz-Rhiven-RTC.json`.
-- [ ] Vérifier que les choix personnels sont présentés comme tels et non comme des réglages universels.
-- [ ] Publier le JSON dans un emplacement logique du dépôt.
-- [ ] Mettre à jour le [guide communautaire Tattoos](Docs/12%20-%20COMMUNITY%20GUIDES/TATTOOS/README.md) avec le lien et les notes d'utilisation.
-
-### Registre final des patches
-
-- [ ] Après ces publications, relire le [registre des patches](Docs/03%20-%20PATCHES%20FIXES/PATCHES-FIXES.md) et confirmer que tous les patches Rhiven publiés y sont indexés.
 
 ## 2. Migration Naked Defeat 6.51
 
