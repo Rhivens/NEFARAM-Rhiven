@@ -13,7 +13,7 @@ This guide describes a conservative way to use **Beeing Female NG 3.6.0** as NEF
 Original NEFARAM includes **Fertility Mode** as an optional fertility framework under:
 
 ```text
-[39 - OPTIONAL MODS]
+[OPTIONAL MODS]
 ```
 
 When using the stack in this guide, keep **Fertility Mode disabled**. Running it alongside Beeing Female NG would duplicate the fertility-framework role and is outside the validated setup.
