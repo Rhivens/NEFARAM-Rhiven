@@ -55,7 +55,7 @@ Do **not** install duplicate copies of frameworks that NEFARAM already supplies.
 
 ## MO2 placement
 
-Place SexLab Approach Redux in or near the original NEFARAM `[35 - Sexlab Content]` section.
+Place SexLab Approach Redux in or near the original NEFARAM `[Sexlab Content]` section.
 
 Use relative placement principles:
 
