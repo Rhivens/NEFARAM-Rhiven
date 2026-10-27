@@ -22,6 +22,45 @@ Baseline actuelle : **NEFARAM 17.3.8**, profil MO2 **Eleanor Stable 17.3.8**.
 
 ---
 
+## TODO du soir - publications en attente depuis le PC maison
+
+> **Rappel :** les fichiers ci-dessous sont encore locaux et ne sont pas publiés. Toutes les tâches de cette section restent en attente.
+
+### Animal Mansion Reborn
+
+- [ ] Récupérer `Animal Mansion Reborn - Rhiven Patch` depuis le PC maison / l'installation MO2.
+- [ ] L'empaqueter en ZIP si nécessaire, puis le publier sous `Docs/03 - PATCHES FIXES/`.
+- [ ] Mettre à jour `Docs/03 - PATCHES FIXES/PATCHES-FIXES.md`.
+- [ ] Mettre à jour le guide communautaire AMR existant pour référencer et lier le patch publié.
+- [ ] Conserver le statut exact : patch déjà validé techniquement dans xEdit avec **21 records / 0 erreur** ; smoke tests gameplay complets reportés à la partie définitive.
+
+### Unethical Alchemy 1.0.0
+
+- [ ] Récupérer `Unethical Alchemy - Rhiven Fix.esp` depuis le PC maison / l'installation MO2.
+- [ ] Rouvrir le mod et le patch dans xEdit, puis vérifier les deux erreurs CELL signalées sur LoversLab :
+  - `[CELL:0000BCFB]` dans Tamriel 32,-25 : `CELL \ XCWT - Water -> Found a NULL reference, expected: WATR` ;
+  - `HeartwoodMillExterior [CELL:0000BCDA]` dans Tamriel 32,-24 : même problème `XCWT - Water = NULL` invalide.
+- [ ] Confirmer que ces entrées `XCWT = NULL` sont réellement erronées avant toute suppression ou surcharge.
+- [ ] Si l'erreur est confirmée, étendre le correctif Rhiven existant en préservant toutes les autres données des CELL.
+- [ ] Lancer `Check for Errors` sur le mod de base + patch et viser **0 erreur**.
+- [ ] Publier le ZIP final sous `Docs/03 - PATCHES FIXES/`, puis mettre à jour `Docs/03 - PATCHES FIXES/PATCHES-FIXES.md`.
+- [ ] Créer le guide communautaire Unethical Alchemy **seulement après** récupération, validation et publication du patch.
+
+### Écosystème tatouages / preset RTC
+
+- [ ] Récupérer `zzz-Eleanor-RTC.json` depuis le PC maison / l'installation MO2.
+- [ ] Relire et valider le JSON avant publication.
+- [ ] Renommer la version publique en `zzz-Rhiven-RTC.json`.
+- [ ] Vérifier que les choix de contenu personnels sont documentés volontairement et adaptés à un preset public optionnel ; ne pas présenter silencieusement des exclusions personnelles comme des réglages universels.
+- [ ] Publier le JSON dans un emplacement logique du dépôt.
+- [ ] Mettre à jour `Docs/12 - COMMUNITY GUIDES/TATTOOS/README.md`, qui précise actuellement que le preset est optionnel et non publié, avec le chemin ou lien final et les notes d'utilisation.
+
+### Contrôle documentaire final
+
+- [ ] Après ces publications, relire `Docs/03 - PATCHES FIXES/PATCHES-FIXES.md` et confirmer que tous les patches Rhiven publiquement disponibles sont indexés, sans oubli.
+
+---
+
 ## Phase 0 - Règles de travail
 
 - [ ] Installer et tester **un bloc logique à la fois**.
