@@ -1,10 +1,10 @@
-# NEFARAM-Rhiven — Étude préliminaire d’intégration de Naked Defeat 6.51
+# NEFARAM-Rhiven — Étude d’intégration de Naked Defeat 6.51
 
-> **Statut : AUDIT xEdit PRÉLIMINAIRE ACHEVÉ — COMPATIBILITÉ EN JEU NON VALIDÉE**
+> **Statut : ÉTUDE CONCLUE — INTÉGRATION CŒUR VALIDÉE EN JEU**
 >
-> Cette fiche consigne uniquement les informations fournies avec le patch 6.51, les observations faites dans MO2 et les résultats du contrôle xEdit réalisé.
+> Cette fiche clôt l’étude préliminaire de Naked Defeat 6.51. Elle rassemble les contrôles MO2, l’audit xEdit, l’audit de cohérence Papyrus et les essais InGame effectivement réalisés sur le profil dédié.
 >
-> Naked Defeat 6.51 est un **patch incrémental à installer sur Naked Defeat 6.50 FULL**. La configuration 6.50 demeure la référence de retour arrière tant que l’audit Papyrus et les essais en jeu ne sont pas terminés.
+> Naked Defeat 6.51 reste un **patch incrémental à installer sur Naked Defeat 6.50 FULL**. La validation porte sur le cœur de l’intégration Acheron → Bridge → Naked Defeat ; les cas rares, la défaite avec follower et les réglages fins du MCM restent réservés à la partie finale.
 
 ---
 
@@ -20,7 +20,7 @@ Cette étude vise à :
 - isoler les erreurs xEdit qui nécessitent encore une analyse Papyrus ;
 - préparer les essais en jeu sans déclarer prématurément la compatibilité.
 
-Cette fiche ne valide ni la stabilité en partie, ni la compatibilité complète de la chaîne Acheron → Bridge → Naked Defeat 6.51.
+Cette fiche valide le fonctionnement central observé de la chaîne Acheron → Bridge → Naked Defeat 6.51. Elle ne transforme pas en succès les cas non joués : les fonctions ciblées du changelog qui n’ont pas été reproduites, la défaite avec follower et les réglages fins MCM restent en suivi.
 
 ---
 
@@ -165,7 +165,7 @@ Il doit être chargé après `Synthesis_1.esp` et conserver pour `nade_Stick` :
 - **CRDT - Effect** : `NULL` ;
 - **TNAM** : le son original de Naked Defeat.
 
-Le contrôle final de ce nouveau patch n’a pas été explicitement confirmé. Son état doit donc rester **à vérifier** avant validation.
+Le contrôle final explicite de ce nouveau patch n’a pas été consigné dans les essais reçus. Son état reste donc **à vérifier** et il n’est pas compté parmi les éléments validés en jeu.
 
 ---
 
@@ -198,90 +198,93 @@ Cependant :
 - cette scène utilise les deux packages `nade_WhipAction_01` et `nade_WalkTo_01` ;
 - la branche 02, `nde_WhipAction_02`, possède un QNAM valide `A90059E0`.
 
-L’anomalie de la branche 01 n’est pas corrigée à ce stade. Elle peut correspondre à une branche inachevée ou à une erreur, mais aucune de ces hypothèses n’est retenue sans analyse des scripts.
+L’anomalie de la branche 01 n’est pas corrigée. La lecture des sources Papyrus disponibles pour la 6.50 indique que la logique actuelle de whipping ne semble pas s’appuyer sur ces anciens packages ; la 6.51 ne fournissant que les scripts compilés modifiés, cette conclusion reste une analyse de cohérence et non une preuve de suppression interne.
 
-> **Décision : attendre l’analyse Papyrus avant toute modification.**
+> **Décision maintenue : ne pas modifier ces records sans symptôme InGame reproductible.**
 
 ### 8.3 Scènes follower
 
-Des scènes liées aux followers ont également été signalées par xEdit.
+Des scènes historiques `crux`, `crux2` et `crux3` liées aux followers ont également été signalées par xEdit. Dans les sources Papyrus disponibles, leurs appels sont désactivés ou commentés ; `cruxSAVE` apparaît comme une sauvegarde de développement sans référence active.
 
-Aucune correction n’a été appliquée : leur rôle et leur chemin d’exécution doivent être examinés lors de l’audit Papyrus, puis vérifiés en jeu.
+Aucune correction n’a été appliquée. La défaite avec follower n’ayant pas été validée InGame, ces anomalies restent documentées et surveillées.
 
 ---
 
-## 9. État des contrôles
+## 9. Audit de cohérence Papyrus
 
-### Terminé
+Le patch 6.51 fournit des scripts Papyrus compilés `.pex`, mais pas leurs sources correspondantes. L’audit n’a donc pas prétendu reconstituer ligne par ligne les changements internes de la 6.51.
 
-- [x] nature incrémentale du patch documentée ;
-- [x] base 6.50 FULL requise consignée ;
-- [x] ordre MO2 observé consigné ;
-- [x] contenu principal de l’archive 6.51 relevé ;
-- [x] masters de `Naked Defeat.esp` vérifiés ;
-- [x] Check for Errors de `Naked Defeat.esp` exécuté ;
-- [x] Check for Errors du Rhiven Fix exécuté ;
-- [x] quatre overrides du Rhiven Fix vérifiés ;
-- [x] Check for Errors de l’Acheron Bridge exécuté ;
-- [x] conflit `Synthesis_1.esp` sur `nade_Stick` identifié ;
-- [x] nouveau `Naked Defeat - Synthesis Fix.esp` créé et placé après Synthesis ;
-- [x] références manquantes principales et scènes concernées consignées.
+Le contrôle a consisté à :
 
-### À vérifier ou à réaliser
+- inspecter le flux du Bridge, qui envoie `StartNakedDefeatExternal` avec jusqu’à six assaillants ;
+- recouper les propriétés VMAD et les records signalés par xEdit avec les sources Papyrus disponibles de la 6.50 ;
+- vérifier que la récupération Acheron prévue par les scripts utilise les chemins de libération d’acteurs attendus ;
+- distinguer les anomalies historiques inactives des chemins encore appelés ;
+- confirmer par les essais InGame que le handoff, la fin de scène et la récupération fonctionnent réellement en 6.51.
+
+Résultats et limites :
+
+- le Bridge reste un adaptateur léger et son plugin conserve **0 erreur xEdit** ;
+- la propriété `qst2` de `nade_CrimeEffect` pointe toujours vers la quête Civilian Rape absente : `IndecencyRapeProb = 0` reste obligatoire ;
+- les anciens packages de whipping et les anciennes scènes follower restent volontairement intacts faute de chemin actif démontré ;
+- aucune décompilation complète des `.pex` 6.51 n’est revendiquée ;
+- aucune anomalie historique n’est déclarée corrigée simplement parce que le cœur du gameplay a passé les tests.
+
+---
+
+## 10. État des contrôles
+
+### Validé
+
+- [x] nature incrémentale du patch et base 6.50 FULL documentées ;
+- [x] ordre MO2 observé et masters vérifiés ;
+- [x] `Naked Defeat.esp` 6.51 contrôlé dans xEdit : **800 records, 18 signalements audités** ;
+- [x] Rhiven Fix contrôlé : **5 records, 0 erreur**, quatre overrides toujours pertinents ;
+- [x] Acheron Bridge contrôlé : **3 records, 0 erreur** ;
+- [x] conflit de `Synthesis_1.esp` sur `nade_Stick` identifié et correctif séparé créé ;
+- [x] propriétés VMAD, anciens packages et scènes historiques recoupés avec les sources Papyrus disponibles ;
+- [x] chaîne Acheron → Bridge → Naked Defeat 6.51 validée InGame sur le profil dédié ;
+- [x] récupération du bleedout, retour des contrôles, répétition d’événements et sauvegarde/rechargement validés ;
+- [x] évasion d’un furniture confirmée : une pression sur Espace, attente des messages de progression, puis dernière pression lorsque les liens sont assez lâches.
+
+### Non validé ou restant en suivi
 
 - [ ] contrôle final explicite de `Naked Defeat - Synthesis Fix.esp` ;
-- [ ] décompilation et audit comparatif des scripts Papyrus ;
-- [ ] analyse de la référence `A90E2541` et des chemins Civilian Rape ;
-- [ ] analyse de la référence `A90008D7` dans la branche whipping 01 ;
-- [ ] analyse des scènes follower signalées ;
-- [ ] vérification fonctionnelle d’AudioUtilTTS facultatif si nécessaire ;
-- [ ] tests de la chaîne Acheron → Bridge → Naked Defeat 6.51 ;
-- [ ] tests ciblés des fonctions citées dans le changelog ;
-- [ ] tests de non-régression ;
-- [ ] verdict de compatibilité.
-
----
-
-## 10. Plan de tests en jeu
-
-Les essais doivent être effectués uniquement depuis **Start NEFARAM**.
-
-### Socle de non-régression
-
-- [ ] défaite par humanoïde ;
-- [ ] défaite par créature ;
 - [ ] défaite avec follower ;
-- [ ] transmission correcte des assaillants par le Bridge ;
-- [ ] lancement et fin correcte d’une scène Naked Defeat ;
-- [ ] sortie correcte du bleedout Acheron ;
-- [ ] retour normal des contrôles ;
-- [ ] libération correcte des assaillants ;
-- [ ] absence de pacification permanente ;
-- [ ] stripping et conséquences d’inventaire ;
-- [ ] absence d’animation bloquée ;
-- [ ] plusieurs défaites dans la même session ;
-- [ ] sauvegarde après un événement terminé ;
-- [ ] fermeture complète du jeu ;
-- [ ] rechargement et poursuite normale de la partie.
-
-### Cas ciblés 6.51
-
-- [ ] détection et sélection des scènes ;
-- [ ] Afterlife ;
-- [ ] NymBETA ;
-- [ ] Naked Falling ;
-- [ ] Tripping ;
-- [ ] Naked Curses ;
-- [ ] pièges de serrures ;
-- [ ] pièges de conteneurs ;
-- [ ] branche whipping 01 ;
-- [ ] scènes follower signalées ;
-- [ ] comportement avec `IndecencyRapeProb = 0` ;
-- [ ] vérification en jeu de `nade_Stick` avec le Synthesis Fix.
+- [ ] fonctions du changelog 6.51 non reproduites individuellement (Afterlife, NymBETA, Naked Curses et pièges selon les cas) ;
+- [ ] validation fonctionnelle exhaustive de toute la chaîne TTS ;
+- [ ] cas rares et longue durée de la partie définitive ;
+- [ ] réglages fins et équilibrage du MCM, volontairement réservés à la partie finale.
 
 ---
 
-## 11. Sécurité et rollback
+## 11. Tests InGame et couverture
+
+Les essais ont été conduits depuis le profil/socle **Start NEFARAM** prévu pour cette intégration.
+
+### Confirmé InGame
+
+- défaite par humanoïde ;
+- défaite par créature ;
+- déclenchement de Naked Defeat via l’Acheron Bridge ;
+- fin de scène et sortie correcte du bleedout Acheron ;
+- retour des contrôles et absence de pacification permanente observée ;
+- plusieurs défaites dans une même session ;
+- sauvegarde après événement terminé, fermeture complète, rechargement et poursuite normale ;
+- mécanique d’évasion des furnitures avec progression affichée et pression finale sur Espace.
+
+### Resté hors validation
+
+- défaite avec follower ;
+- validation séparée de chaque fonction annoncée par le changelog 6.51 ;
+- contrôle final documenté du Synthesis Fix ;
+- réglages fins du MCM et équilibrage de la partie finale.
+
+Le verdict ne couvre donc pas « tout Naked Defeat », mais bien le socle nécessaire pour retenir le patch 6.51 dans l’architecture NEFARAM-Rhiven.
+
+---
+
+## 12. Sécurité et rollback
 
 Jusqu’au verdict final :
 
@@ -297,16 +300,16 @@ Jusqu’au verdict final :
 
 ---
 
-## 12. Verdict provisoire
+## 13. Verdict final de l’étude
 
-> **AUDIT xEdit PRÉLIMINAIRE ACHEVÉ — COMPATIBILITÉ EN JEU NON VALIDÉE**
+> **NAKED DEFEAT 6.51 VALIDÉ POUR L’INTÉGRATION CŒUR — PLAYTEST ÉTENDU EN COURS**
 >
-> Naked Defeat 6.51 s’installe comme patch incrémental au-dessus de la 6.50 FULL. Le Rhiven Fix reste nécessaire au vu des quatre corrections toujours observées. L’Acheron Bridge ne présente pas d’erreur xEdit. Un conflit de `Synthesis_1.esp` avec la correction CRDT de `nade_Stick` a nécessité un nouveau **Naked Defeat - Synthesis Fix.esp**, dont le contrôle final reste à confirmer.
+> L’audit xEdit confirme la continuité du Rhiven Fix et l’absence d’erreur dans le Bridge. L’audit de cohérence Papyrus explique les anomalies historiques sans les « nettoyer » arbitrairement, tout en maintenant `IndecencyRapeProb = 0` pour la quête Civilian Rape absente.
 >
-> Les références manquantes `A90E2541` et `A90008D7`, ainsi que les scènes follower signalées, ne sont pas corrigées sans analyse Papyrus. `IndecencyRapeProb` doit rester à `0`.
+> Les essais InGame confirment le handoff Acheron → Bridge → Naked Defeat 6.51, la récupération, les événements répétés, la sauvegarde/rechargement et l’évasion des furnitures. Les éléments non testés restent explicitement ouverts.
 >
-> Aucun verdict de compatibilité ne sera prononcé avant l’audit Papyrus et les tests en jeu depuis **Start NEFARAM**.
+> Le patch 6.51 est donc retenu. Les réglages fins du MCM, l’équilibrage et les cas rares seront traités pendant la partie finale.
 
 ---
 
-*Fiche d’étude préliminaire — NEFARAM-Rhiven.*
+*Étude conclue — NEFARAM-Rhiven.*
