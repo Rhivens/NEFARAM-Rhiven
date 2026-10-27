@@ -415,4 +415,4 @@ This keeps the migration reversible and avoids unnecessary changes to the rest o
 
 The detailed integration notes used to build this community guide are available here:
 
-[Vel'Dun UI / HUD internal integration notes](../../../05%20-%20UI-HUD/VEL'DUN.md)
+[Vel'Dun UI / HUD internal integration notes](../../05%20-%20UI-HUD/VEL'DUN.md)
