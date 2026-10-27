@@ -22,18 +22,9 @@ L'archive publique `Unethical Alchemy - Rhiven Fix.zip` est désormais conservé
 
 Référence technique : [Unethical Alchemy 1.0.0](Docs/06%20-%20GAMEPLAY/UNETHICAL%20ALCHEMY/UNETHICAL-ALCHEMY-1.0.0-INTEGRATION.md).
 
-## 2. Migration Naked Defeat 6.51
+## 2. Examen différé du patch PAMA candidat partagé sur Discord
 
-La configuration Naked Defeat 6.50 est traitée et ne fait plus partie des travaux actifs. La migration 6.51 reste ouverte dans la [fiche d'étude dédiée](Docs/06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-6.51-PRELIMINARY-INTEGRATION-STUDY.md).
-
-- [ ] Contrôler explicitement `Naked Defeat - Synthesis Fix.esp`.
-- [ ] Terminer l'audit comparatif des scripts Papyrus et l'analyse des références/scènes signalées dans la fiche.
-- [ ] Effectuer les tests ciblés 6.51 et de non-régression depuis **Start NEFARAM**.
-- [ ] Prononcer le verdict de compatibilité et mettre à jour la documentation Naked Defeat.
-
-## 3. Examen différé du patch PAMA candidat partagé sur Discord
-
-Cet examen ne doit commencer **qu'après la validation de Naked Defeat 6.51**. Le fichier partagé est un candidat de test construit pour **NEFARAM 17.0.3** ; il ne doit pas être intégré à la baseline actuelle sans audit préalable.
+Naked Defeat 6.51 est désormais **intégré et fonctionnel** ; sa [fiche d'étude](Docs/06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-6.51-PRELIMINARY-INTEGRATION-STUDY.md) reste conservée comme référence technique. Après la validation complémentaire d'Unethical Alchemy 1.0.0 déjà placée en tête de cette roadmap, cet examen PAMA devient le prochain chantier technique majeur. Le fichier partagé est un candidat de test construit pour **NEFARAM 17.0.3** ; il ne doit pas être intégré à la baseline actuelle sans audit préalable.
 
 Le patch proposé :
 
@@ -50,7 +41,7 @@ Le patch proposé :
 - [ ] Contrôler les interactions avec l'éclairage NEFARAM, Lux et la sortie Synthesis actuelle avant de décider du placement final.
 - [ ] Prononcer un verdict séparé : rejet, adoption partielle, remplacement ciblé ou intégration complète après validation xEdit et tests en jeu.
 
-## 4. Phase 6 — passage complet en français
+## 3. Phase 6 — passage complet en français
 
 - [ ] Passer Skyrim et les ressources prévues en français selon la méthode retenue.
 - [ ] Traduire les mods ajoutés qui le nécessitent.
@@ -59,7 +50,7 @@ Le patch proposé :
 - [ ] Tester dialogues, notifications, menus et MCM.
 - [ ] Mettre à jour la [fiche des traductions françaises](Docs/10%20-%20TRANSLATIONS/07-TRANSLATIONS-FR.md).
 
-## 5. Phase 7 — contrôle technique pré-final
+## 4. Phase 7 — contrôle technique pré-final
 
 Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](Docs/VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md) et la [fiche de validation](Docs/VALIDATION/08-TESTING.md).
 
@@ -70,7 +61,7 @@ Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](
 - [ ] Régénérer uniquement les sorties BodySlide, morphs ou physiques qui doivent réellement l'être.
 - [ ] Effectuer le test de stabilité pré-final depuis MO2 : lancement, chargement, sauvegarde/rechargement, changements de cellules, combat et scènes représentatives.
 
-## 6. Phase 8 — lancement de la partie définitive
+## 5. Phase 8 — lancement de la partie définitive
 
 - [ ] Démarrer depuis **NEFARAM_Start** et créer le personnage définitif.
 - [ ] Laisser les scripts de démarrage et les enregistrements MCM se stabiliser, puis créer une sauvegarde propre.
@@ -82,7 +73,7 @@ Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](
 
 Les anomalies rares découvertes ensuite seront traitées au cas par cas, sans rouvrir une validation générique de chaque intégration déjà retenue.
 
-## 7. Backlog non bloquant
+## 6. Backlog non bloquant
 
 - [ ] Évaluer **ReSaver++** : provenance, différences avec ReSaver/FallrimTools et formats pris en charge. Ne jamais nettoyer automatiquement une sauvegarde importante sans copie préalable.
 

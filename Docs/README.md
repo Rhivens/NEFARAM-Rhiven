@@ -41,7 +41,7 @@ This directory contains both the working documentation for the Rhiven build and 
 - [Animal Mansion Reborn integration](06%20-%20GAMEPLAY/ANIMAL%20MANSION%20REBORN/ANIMAL-MANSION-INTEGRATION.md) — technical integration validated and LOD workflow complete; quest and gameplay validation is deferred to the definitive/normal playthrough.
 - [Bathing in Skyrim integration](06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/BATHING-IN-SKYRIM-INTEGRATION.md) and [survival, blood and hygiene reference](06%20-%20GAMEPLAY/BATHING%20IN%20SKYRIM/09-SURVIVAL-BLOOD-HYGIENE.md)
 - [Beeing Female NG fertility system](06%20-%20GAMEPLAY/BEEING%20FEMALE%20NG/12-FERTILITY-SYSTEM.md)
-- [Naked Defeat 6.50 integration](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md) — treated and validated baseline; superseded active work is tracked in the [6.51 preliminary integration study](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-6.51-PRELIMINARY-INTEGRATION-STUDY.md).
+- [Naked Defeat 6.50 integration](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-INTEGRATION.md) — treated and validated baseline; Naked Defeat 6.51 is now integrated and functional, with its technical history retained in the [6.51 preliminary integration study](06%20-%20GAMEPLAY/NAKED%20DEFEAT/NAKED-DEFEAT-6.51-PRELIMINARY-INTEGRATION-STUDY.md).
 - [PAMA Prison System technical files](06%20-%20GAMEPLAY/PAMA%20Prison%20System/) — internal mod-by-mod and optional-component reference.
 - [Public Whore Comments historical study](06%20-%20GAMEPLAY/PUBLIC%20WHORE/PUBLIC-WHORE-COMMENTS-INTEGRATION.md) — not retained.
 - [Rennas Ranch / Secluded Valley historical study](06%20-%20GAMEPLAY/RENNAS%20RANCH/PONYPLAY-SECLUDED-VALLEY-INTEGRATION.md) — not retained.
