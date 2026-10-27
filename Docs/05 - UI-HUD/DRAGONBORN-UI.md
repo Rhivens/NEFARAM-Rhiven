@@ -1,4 +1,12 @@
-# 06 - User Interface
+# Dragonborn UI — Historical validated setup
+
+> **Status: HISTORICAL / VALIDATED / SUPERSEDED BY VEL'DUN**
+>
+> Dragonborn UI was genuinely installed in NEFARAM-Rhiven, tested in-game, and validated as functional. It was not abandoned because it failed.
+>
+> This setup was superseded after the author of Vel'Dun confirmed that SkyUI 6.0 was not actually mandatory and that Vel'Dun could work with the SkyUI 5.2 already used by NEFARAM. Following that confirmation, Rhiven moved to Vel'Dun, which was then integrated and validated visually and in-game through multiple tests.
+>
+> This document preserves the technical record of the former Dragonborn UI setup. For the current NEFARAM-Rhiven UI/HUD direction, see [`VEL'DUN.md`](VEL'DUN.md).
 
 ## Stock NEFARAM UI stack
 
