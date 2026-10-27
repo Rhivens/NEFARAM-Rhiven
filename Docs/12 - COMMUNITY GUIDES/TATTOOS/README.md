@@ -91,7 +91,7 @@ Stock NEFARAM already contains the principal framework pieces above. This guide 
 
 ## 6. MO2 installation and left-pane order
 
-Use the stock `[35 - Sexlab Content]` section as the public reference point. Add the extension block near the end of that section, after the existing content. The validated project placed it after `Advanced Nudity Detection`.
+Use the stock `[Sexlab Content]` section as the public reference point. Add the extension block near the end of that section, after the existing content. The validated project placed it after `Advanced Nudity Detection`.
 
 Use this order from top to bottom in the MO2 left pane:
 
