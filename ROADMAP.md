@@ -55,7 +55,26 @@ La configuration Naked Defeat 6.50 est traitée et ne fait plus partie des trava
 - [ ] Effectuer les tests ciblés 6.51 et de non-régression depuis **Start NEFARAM**.
 - [ ] Prononcer le verdict de compatibilité et mettre à jour la documentation Naked Defeat.
 
-## 3. Phase 6 — passage complet en français
+## 3. Examen différé du patch PAMA candidat partagé sur Discord
+
+Cet examen ne doit commencer **qu'après la validation de Naked Defeat 6.51**. Le fichier partagé est un candidat de test construit pour **NEFARAM 17.0.3** ; il ne doit pas être intégré à la baseline actuelle sans audit préalable.
+
+Le patch proposé :
+
+- fusionne trois plugins ESP en un seul plugin marqué ESL ;
+- corrige trois zones de terrain à Falkreath ;
+- restaure les navmeshes vanilla de Morthal, Dawnstar et Falkreath écrasés par Punishment Pack ;
+- retire les tenues de prison des factions criminelles des différentes châtellenies ;
+- conserve le mod de mesh **ZaZ Ankle Chains** ;
+- est conçu pour respecter l'éclairage NEFARAM et les données issues de Synthesis, avec un placement annoncé comme sûr après les sorties Synthesis et les plugins Lux.
+
+- [ ] Auditer le plugin candidat contre **NEFARAM-Rhiven 17.3.8**, sans reprendre comme acquises les conclusions établies pour 17.0.3.
+- [ ] Vérifier en priorité que ses corrections de navmesh sont toujours actuelles dans Morthal, Dawnstar et Falkreath.
+- [ ] Comparer chaque override avec les patches PAMA Rhiven existants, notamment les correctifs de Windhelm, Solitude, Falkreath et ZaZ Ankle Chains, afin d'identifier les doublons, régressions ou remplacements possibles.
+- [ ] Contrôler les interactions avec l'éclairage NEFARAM, Lux et la sortie Synthesis actuelle avant de décider du placement final.
+- [ ] Prononcer un verdict séparé : rejet, adoption partielle, remplacement ciblé ou intégration complète après validation xEdit et tests en jeu.
+
+## 4. Phase 6 — passage complet en français
 
 - [ ] Passer Skyrim et les ressources prévues en français selon la méthode retenue.
 - [ ] Traduire les mods ajoutés qui le nécessitent.
@@ -64,7 +83,7 @@ La configuration Naked Defeat 6.50 est traitée et ne fait plus partie des trava
 - [ ] Tester dialogues, notifications, menus et MCM.
 - [ ] Mettre à jour la [fiche des traductions françaises](Docs/10%20-%20TRANSLATIONS/07-TRANSLATIONS-FR.md).
 
-## 4. Phase 7 — contrôle technique pré-final
+## 5. Phase 7 — contrôle technique pré-final
 
 Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](Docs/VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md) et la [fiche de validation](Docs/VALIDATION/08-TESTING.md).
 
@@ -75,7 +94,7 @@ Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](
 - [ ] Régénérer uniquement les sorties BodySlide, morphs ou physiques qui doivent réellement l'être.
 - [ ] Effectuer le test de stabilité pré-final depuis MO2 : lancement, chargement, sauvegarde/rechargement, changements de cellules, combat et scènes représentatives.
 
-## 5. Phase 8 — lancement de la partie définitive
+## 6. Phase 8 — lancement de la partie définitive
 
 - [ ] Démarrer depuis **NEFARAM_Start** et créer le personnage définitif.
 - [ ] Laisser les scripts de démarrage et les enregistrements MCM se stabiliser, puis créer une sauvegarde propre.
@@ -87,7 +106,7 @@ Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](
 
 Les anomalies rares découvertes ensuite seront traitées au cas par cas, sans rouvrir une validation générique de chaque intégration déjà retenue.
 
-## 6. Backlog non bloquant
+## 7. Backlog non bloquant
 
 - [ ] Évaluer **ReSaver++** : provenance, différences avec ReSaver/FallrimTools et formats pris en charge. Ne jamais nettoyer automatiquement une sauvegarde importante sans copie préalable.
 
