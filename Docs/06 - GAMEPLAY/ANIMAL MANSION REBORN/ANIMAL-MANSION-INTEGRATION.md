@@ -1,6 +1,6 @@
 # NEFARAM-Rhiven — Animal Mansion Reborn Integration Plan
 
-> **Status: TECHNICAL INTEGRATION VALIDATED — LOD WORKFLOW COMPLETE — GAMEPLAY VALIDATION DEFERRED TO DEFINITIVE/NORMAL PLAYTHROUGH**
+> **Status: TECHNICAL INTEGRATION VALIDATED — LOD WORKFLOW COMPLETE — AMR / NORTHERN ROADS TERRAIN FIX VALIDATED IN GAME — BROADER GAMEPLAY VALIDATION DEFERRED TO DEFINITIVE/NORMAL PLAYTHROUGH**
 >
 > This document defines the integration workflow for **Animal Mansion Reborn 1.8** in the NEFARAM-Rhiven build.
 >
@@ -21,10 +21,13 @@ The technical integration now has the following confirmed state:
 - the Rhiven patch preserves the MNC Husky model assignments, restores the required AMR dialogue additions, and carries the necessary localized CELL adjustments while complementing the active Shor's Stone patch;
 - Synthesis has been regenerated after the final AMR plugin and patch placement;
 - the complete **xLODGen → TexGen → DynDOLOD** workflow finished successfully and its generated plugins passed the final xEdit checks;
+- a dedicated `Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp` has been created for the AMR / Northern Roads exterior terrain boundary;
+- the LAND seam fix passed a dedicated automated xEdit VHGT border comparison with **144 borders checked / 0 mismatches** after correction;
+- the corrected terrain, the removal of one misplaced rock reference and one floating tree reference were all validated directly in game;
 - the AMR BodySlide files have been generated into the dedicated Eleanor output;
-- AMR quest and gameplay validation is intentionally deferred to the definitive/normal playthrough.
+- broader AMR quest and gameplay validation is intentionally deferred to the definitive/normal playthrough.
 
-The current status is therefore **technically integrated and validated, with gameplay validation still pending**.
+The current status is therefore **technically integrated and validated, with the AMR / Northern Roads terrain correction additionally validated in game; broader gameplay validation is still pending**.
 
 ---
 
@@ -65,6 +68,8 @@ Install:
 - only compatibility patches that are individually validated.
 
 Enable `AMR The Great Town of Shor's Stone Patch.esp` in the final AMR stack. Load `Animal Mansion Reborn - Rhiven Patch.esp` after it as the complementary compatibility layer used for the xEdit-validated configuration.
+
+Also enable `Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp` after Animal Mansion Reborn, Northern Roads and any compatibility plugin that could otherwise win the affected LAND / REFR records.
 
 ---
 
@@ -224,6 +229,130 @@ Three DIAL records required a dedicated merge because later NEFARAM / dialogue p
 The Rhiven patch preserves the final winner's dialogue structure while restoring only the AMR INFO entries that were missing; it does **not** force the whole AMR DIAL record to win.
 
 By contrast, INFO records that differ only because AMR or another mod restores English text over French Skyrim strings are a **translation issue, not a compatibility issue**, and belong in the later French translation phase.
+
+### AMR / Northern Roads exterior LAND seam — 2026-10-28
+
+A separate exterior-terrain issue was identified around the Animal Mansion area after the complete Synthesis / xLODGen / TexGen / DynDOLOD regeneration.
+
+The visible symptom in game was a large straight terrain fissure / crack. Initial investigation ruled out the nearby placed rock as the cause: disabling the rock in the console did not remove the terrain split.
+
+A dedicated read-only xEdit script, `RH_Check_LAND_Seams.pas`, was then used to compare the winning `LAND\VHGT` edge heights over a **9 × 9 Tamriel cell area**:
+
+- X range: **-24 -> -16**
+- Y range: **-33 -> -25**
+- **81 cells indexed**
+- **81 LAND records indexed**
+- **144 shared borders checked**
+
+Initial result:
+
+> **3 borders with mismatch**
+
+The three broken borders were:
+
+1. east border `(-17,-27) -> (-16,-27)`
+   - AMR LAND: `0000AD2E`
+   - Northern Roads LAND: `0000AD2D`
+   - 21 / 33 vertices mismatched
+   - maximum height difference: **136**
+
+2. east border `(-17,-26) -> (-16,-26)`
+   - AMR LAND: `0000AD0D`
+   - Northern Roads LAND: `0000AD0C`
+   - 32 / 33 vertices mismatched
+   - maximum height difference: **288**
+
+3. north border `(-16,-26) -> (-16,-25)`
+   - Northern Roads LAND: `0000AD0C`
+   - AMR LAND: `0000ACEB`
+   - 21 / 33 vertices mismatched
+   - maximum height difference: **304**
+
+The surrounding 141 tested borders were continuous. This established that the problem was a **localized AMR / Northern Roads LAND-border incompatibility**, not a global AMR terrain failure and not a generated-LOD defect.
+
+#### Patch strategy
+
+The chosen strategy was deliberately minimal:
+
+> **preserve the AMR terrain shape and modify only the two Northern Roads LAND border overrides required to stitch the shared edges.**
+
+Patch:
+
+`Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp`
+
+The plugin is **ESL-flagged**.
+
+It contains two LAND overrides:
+
+- `LAND 0000AD2D`
+  - west edge copied from the east edge of AMR `LAND 0000AD2E`;
+
+- `LAND 0000AD0C`
+  - west edge copied from the east edge of AMR `LAND 0000AD0D`;
+  - north edge copied from the south edge of AMR `LAND 0000ACEB`.
+
+The shared corner between the two corrections was explicitly checked before write:
+
+> **shared corner height = 1424**
+
+The first automated creation attempt exposed an xEdit scripting issue where a second `wbCopyElementToFile` attempted to recreate `Tamriel [WRLD:0000003C]` in the same patch and aborted with a duplicate FormID error.
+
+Final procedure:
+
+1. create the two LAND overrides manually in xEdit;
+2. apply `RH_Apply_AMR_NR_Seam_Fix.pas` only to the already-existing patch records;
+3. rewrite only the necessary VHGT border data;
+4. rerun `RH_Check_LAND_Seams.pas`.
+
+Final automated result:
+
+> **144 borders checked / 0 borders with mismatch**
+
+The large visible fissure then disappeared in game.
+
+#### Local object cleanup after terrain correction
+
+Once the terrain was corrected, two isolated placement issues became visually obvious.
+
+**Rock**
+
+- runtime reference observed in game: `B22E93E3`;
+- xEdit reference: `AE2E93E3`;
+- base object: `RockCliff02PineForest02 [STAT:00054C32]`;
+- reference defined by: `Animal Mansion Reborn.esp`.
+
+The base static is vanilla. Only the AMR-placed reference was problematic.
+
+The reference was tested in game with `disable`; the local scene became visually correct. The patch therefore forwards the REFR and marks it:
+
+- `Initially Disabled`
+
+**Tree**
+
+- reference: `000FA984`;
+- base object: `TreePineForestSnowL02 [TREE:0005D2DA]`;
+- base defined by Skyrim.esm;
+- reference last changed by Animal Mansion Reborn.
+
+After the rock was disabled, this tree was visibly floating above the corrected ground. It was also tested individually with `disable` in game and could be removed without harming the scene.
+
+The patch therefore forwards the REFR and marks it:
+
+- `Initially Disabled`
+
+Do **not** modify the vanilla base records `STAT 00054C32` or `TREE 0005D2DA`.
+
+#### Validation level
+
+This terrain fix has a stronger validation level than most of the broader AMR integration:
+
+- automated xEdit VHGT comparison before patch: **3 / 144 broken borders**;
+- automated xEdit VHGT comparison after patch: **0 / 144 broken borders**;
+- large terrain fissure: **confirmed fixed in game**;
+- isolated rock cleanup: **confirmed in game**;
+- floating tree cleanup: **confirmed in game**.
+
+This patch is therefore considered **technically and visually validated for its exact scope**.
 
 ### Worldspace / LOD
 
@@ -420,8 +549,10 @@ Completed:
 1. final AMR plugin set enabled;
 2. AMR and compatibility patches placed in their intended order;
 3. minimal Rhiven compatibility patch created;
-4. Synthesis rerun;
-5. final xEdit validation completed for the Rhiven patch: **21 processed records / 0 errors**.
+4. dedicated AMR / Northern Roads LAND seam patch created and positioned as a late targeted winner;
+5. Synthesis rerun;
+6. final xEdit validation completed for the Rhiven compatibility patch: **21 processed records / 0 errors**;
+7. LAND seam detector validation completed: **144 borders / 0 mismatches** after correction.
 
 The regenerated Synthesis output is now the technical baseline used by the LOD workflow. This does not replace the remaining in-game smoke tests.
 
@@ -440,6 +571,9 @@ Final execution state:
 - [x] TexGen complete;
 - [x] DynDOLOD complete after regeneration of the stale Food-Remover-Plus output;
 - [x] final generated plugins validated in xEdit;
+- [x] AMR / Northern Roads LAND seam patch validated by automated VHGT border comparison;
+- [x] corrected AMR / Northern Roads terrain validated in game;
+- [x] isolated rock and floating-tree cleanup validated in game;
 - [ ] extended visual observation during the definitive/normal playthrough.
 
 ### Final BodySlide output
@@ -500,6 +634,23 @@ Where required, rebuild compatibility in Creation Kit / appropriate navmesh work
 
 ## 13. Phase K — Minimal Rhiven patch policy
 
+Two separate Rhiven patches are intentionally retained instead of merging everything into one plugin:
+
+1. `Animal Mansion Reborn - Rhiven Patch.esp`
+   - dialogue / MNC / localized compatibility work;
+   - **21 processed records / 0 errors**.
+
+2. `Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp`
+   - two targeted LAND border overrides;
+   - one AMR rock REFR disabled;
+   - one floating tree REFR disabled;
+   - ESL-flagged;
+   - **144 / 144 LAND borders continuous after correction**;
+   - validated in game.
+
+Keeping the terrain correction separate makes the scope explicit and easier to audit, replace or remove independently if either Animal Mansion Reborn or Northern Roads changes in a future update.
+
+
 ### Final Rhiven patch
 
 `Animal Mansion Reborn - Rhiven Patch.esp` has been created and validated.
@@ -550,6 +701,10 @@ Use a disposable test save first.
 
 ### World compatibility
 
+- [x] Animal Mansion / Northern Roads terrain seam visually corrected
+- [x] no remaining VHGT border mismatch in the audited 9 × 9 cell zone
+- [x] problematic AMR rock reference removed
+- [x] floating tree reference removed
 - [ ] Falkreath exterior
 - [ ] Falkreath interiors used by AMR
 - [ ] Shor's Stone exterior
@@ -577,17 +732,20 @@ Current finalization state:
 
 1. [x] finalize AMR plugin placement;
 2. [x] finalize AMR compatibility patches;
-3. [x] create and validate the Rhiven AMR patch;
-4. [x] rerun Synthesis;
-5. [x] re-check the Rhiven patch in xEdit;
-6. [x] select the full `xLODGen → TexGen → DynDOLOD` workflow;
-7. [x] complete xLODGen;
-8. [x] run TexGen;
-9. [x] run DynDOLOD;
-10. [x] validate the generated plugins in xEdit;
-11. [ ] complete the final in-game AMR smoke tests;
-12. [x] update NEFARAM-Rhiven documentation;
-13. [ ] publish compatibility notes / patch if appropriate after validation.
+3. [x] create and validate the main Rhiven AMR patch;
+4. [x] create and validate the dedicated AMR / Northern Roads LAND seam patch;
+5. [x] rerun Synthesis;
+6. [x] re-check the Rhiven compatibility patch in xEdit;
+7. [x] validate the LAND seam patch with the dedicated VHGT detector (**144 / 0 mismatches**);
+8. [x] select the full `xLODGen → TexGen → DynDOLOD` workflow;
+9. [x] complete xLODGen;
+10. [x] run TexGen;
+11. [x] run DynDOLOD;
+12. [x] validate the generated plugins in xEdit;
+13. [x] validate the corrected AMR / Northern Roads terrain and local object cleanup in game;
+14. [ ] complete the broader final in-game AMR smoke tests;
+15. [x] update NEFARAM-Rhiven documentation;
+16. [x] publish the dedicated LAND seam compatibility patch in the community-guide folder.
 
 ---
 
@@ -616,3 +774,5 @@ Best-case result:
 This is preferable to forwarding dozens of records into a large monolithic patch.
 
 The final decision will be based on reproducible xEdit and in-game evidence, not on conflict count alone.
+
+The AMR / Northern Roads terrain correction already follows this rule: the conflict was isolated numerically at the VHGT border level, corrected with a minimal two-LAND patch, rechecked to **0 / 144 mismatches**, and confirmed visually in game.
