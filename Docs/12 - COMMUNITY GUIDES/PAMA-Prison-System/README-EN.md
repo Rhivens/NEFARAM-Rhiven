@@ -1,6 +1,6 @@
 # PAMA Integration — Prison Alternative / NEFARAM-Rhiven (EN)
 
-> 🇬🇧 **English version** — French version: [README.md](README.md)
+> 🇬🇧 **English version** — French version: [README-FR.md](README-FR.md)
 >
 > **Status: PAMA core block installed and validated for integration into NEFARAM-Rhiven**
 >
@@ -27,11 +27,11 @@ This separator does **not** exist in stock NEFARAM. It is part of the Rhiven org
 5. Punishment Pack 1.3.0
 6. Outdoor Event Pack 1.3
 7. Bad Ends Windhelm 1.3.0
-8. Rhiven Windhelm patches
+8. PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven
 9. Bad Ends Riften 1.3.2
 10. Bad Ends Solitude 1.8.0 Revision 2
-11. PAMA - Solitude Location Patch - Rhiven
-12. Orkish Bounty Hunters 0.4
+11. Orkish Bounty Hunters 0.4
+12. Nefaram - PAMA Patch
 
 This mainly describes the **MO2 left-pane / functional architecture**. Do not blindly copy it into the right-pane plugin order without checking masters and winning overrides.
 
@@ -146,36 +146,36 @@ No blocking issue has been observed so far, but this remains a real-playthrough 
 
 These downloads are built specifically for the documented **NEFARAM-Rhiven compatibility stack**. Do not install them blindly on unrelated setups; first confirm that you use the same mods and have the same conflicts.
 
+### Consolidated NEFARAM PAMA patch
+
+[Download the consolidated NEFARAM PAMA patch](Nefaram%20-%20PAMA%20Patch.zip)
+
+The previously separate Rhiven ESP fixes for **Windhelm navmesh**, **Solitude location** and **Falkreath terrain** have been superseded by the consolidated `Nefaram - PAMA Patch.esp`.
+
+This patch is the final compatibility layer used by the current NEFARAM-Rhiven 17.3.8 setup. It retains the targeted corrections that were previously distributed as separate ESPs, while avoiding the maintenance burden of several small plugins.
+
+Important load-order rule:
+
+> **Load `Nefaram - PAMA Patch.esp` before the regenerated Synthesis outputs.**
+
+During validation, several parent CELL records in the PAMA patch contained older Synthesis-derived values. Loading the patch after current Synthesis could overwrite newer `XCLR` region assignments and water values. With the PAMA patch placed **before Synthesis**, the current Synthesis outputs correctly reapply the intended final CELL data.
+
+The sensitive cells explicitly rechecked after this placement were:
+
+- `DawnstarExterior04 [00008E96]` — `xxxMapDawnstar` preserved;
+- `MorthalExterior03 [0000939C]` — `xxxMapMorthal` and `MorthalWater` preserved;
+- `SolitudeOrigin [00037EE9]` — `SolitudeLocation` preserved;
+- `FalkreathExterior02 [00009C7F]` — `xxxMapFalkreath` preserved.
+
+The final generated outputs were then regenerated and rechecked successfully.
+
 ### NEFARAM ZaZ ankle-chain mesh
 
 [Download the NEFARAM ZaZ Ankle Chains patch](PAMA%20-%20NEFARAM%20ZaZ%20Ankle%20Chains%20Patch%20-%20Rhiven.zip)
 
-Bad Ends Windhelm includes an older copy of `meshes\ZaZ-UltimateDataPack\ZaZ - HDT\ZaZAnkleChainsRagdolls_1.nif`. Because the PAMA block is placed late, that file could overwrite the NEFARAM-patched mesh. Install and enable this archive after Bad Ends Windhelm, or late enough in the MO2 left pane to win that file conflict. This is a mesh override, not an ESP patch.
+This remains a **separate required mesh override**. Bad Ends Windhelm includes an older copy of `meshes\ZaZ-UltimateDataPack\ZaZ - HDT\ZaZAnkleChainsRagdolls_1.nif`. Because the PAMA block is placed late in the MO2 left pane, that file could overwrite the NEFARAM-patched mesh.
 
-### Windhelm navmesh
-
-[Download the Windhelm Navmesh patch](PAMA%20-%20Windhelm%20Navmesh%20Patch%20-%20Rhiven.zip)
-
-Bad Ends Windhelm reintroduces older, effectively vanilla-like navmesh data. This ESL-flagged ESP preserves the intended final winners:
-
-- `000FC117` / `WindhelmBridge04` from `WindhelmSSE - Exterior NavMesh Fixes.esp`
-- `0004B66C` / `WindhelmCandlehearthHallExterior` from `CapitalWindhelmExpansion - SkyrimSewers.esp`
-
-Load it after Bad Ends Windhelm and the relevant source/fix plugins that it reconciles. xEdit validation: **0 errors / 7 records**.
-
-### Solitude location
-
-[Download the Solitude Location patch](PAMA%20-%20Solitude%20Location%20Patch%20-%20Rhiven.zip)
-
-This minimal ESL-flagged patch restores `XLCN - Location = SolitudeLocation [00018A5A]` on `SolitudeOrigin [00037EE9]` while preserving the PAMA-winning cell data. Load it after Bad Ends Solitude so the restored assignment wins. No navmesh merge was retained because observed Solitude pathing worked correctly. xEdit validation: **0 errors / 17 records**.
-
-### Falkreath terrain
-
-[Download the Falkreath LAND fix](PAMA%20-%20Falkreath%20LAND%20-%20Rhiven%20Fix.zip)
-
-This ESPFE/ESL patch fixes the terrain hole at the Falkreath entrance in Tamriel cell `-9,-22`, LAND `0000AC81` (CELL `00009C81`). The issue was caused by `PaOutdoorEventPack.esp` overriding the later compatibility chain; it was **not** caused by Animal Mansion Reborn or the PAMA core itself.
-
-The patch copies the correct LAND override from `Northern Roads - COTN Falkreath - LFFGM patch.esp` and must load after `PaOutdoorEventPack.esp`. In-game validation confirmed that the terrain hole is removed. No Synthesis or LOD regeneration is required for this specific fix.
+Install and enable this archive after Bad Ends Windhelm, or late enough in the MO2 left pane to win that file conflict. It is a mesh override, not an ESP patch, and it is **not replaced by the consolidated PAMA ESP**.
 
 ## Windhelm audit
 
@@ -193,16 +193,11 @@ The intended winners are:
 - `WindhelmSSE - Exterior NavMesh Fixes.esp` for `000FC117`
 - `CapitalWindhelmExpansion - SkyrimSewers.esp` for `0004B66C`
 
-A dedicated ESL-flagged patch was created:
+The Windhelm navmesh correction is now carried by the consolidated:
 
-`PAMA - Windhelm Navmesh Patch - Rhiven.esp`
+`Nefaram - PAMA Patch.esp`
 
-Bad Ends Windhelm was added as an explicit master.
-
-xEdit Check for Errors:
-
-- **0 errors**
-- **7 records**
+The older standalone `PAMA - Windhelm Navmesh Patch - Rhiven.esp` is obsolete and should not be installed alongside the consolidated patch.
 
 ### ZaZ ankle-chain mesh conflict
 
@@ -213,6 +208,14 @@ Bad Ends Windhelm also shipped an older copy of:
 The current NEFARAM-patched version is intentionally restored after PAMA with:
 
 `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`
+
+## Falkreath terrain audit
+
+The Falkreath entrance terrain hole in Tamriel cell `-9,-22`, LAND `0000AC81` (CELL `00009C81`), was traced to `PaOutdoorEventPack.esp` overriding the later Northern Roads / COTN compatibility chain.
+
+The correction previously distributed as `PAMA - Falkreath LAND - Rhiven Fix.esp` is now included in `Nefaram - PAMA Patch.esp`. The standalone Falkreath archive is obsolete.
+
+In-game validation confirmed that the terrain hole is removed.
 
 ## Riften audit
 
@@ -259,16 +262,9 @@ PAMA's winning `SolitudeOrigin [00037EE9]` cell record dropped:
 
 `XLCN - Location = SolitudeLocation [00018A5A]`
 
-A minimal ESL-flagged patch was created:
+This correction is now included in `Nefaram - PAMA Patch.esp`. The older standalone `PAMA - Solitude Location Patch - Rhiven.esp` is obsolete.
 
-`PAMA - Solitude Location Patch - Rhiven.esp`
-
-Its purpose is only to restore the missing location assignment while preserving the PAMA-winning cell data.
-
-xEdit Check for Errors:
-
-- **0 errors**
-- **17 records**
+Because the consolidated PAMA patch is loaded before current Synthesis, the regenerated Synthesis output remains the final winner for the modern CELL region/location state.
 
 ## Orkish Bounty Hunters 0.4
 
@@ -384,6 +380,8 @@ Technical no-ESP resource. Kept as a possible troubleshooting tool if a specific
 ## Current conclusion
 
 The **complete planned PAMA core is installed and accepted for integration** in NEFARAM-Rhiven.
+
+The current compatibility layout uses **one consolidated ESP** — `Nefaram - PAMA Patch.esp` — plus the separate **ZaZ ankle-chain mesh override**. The older standalone Windhelm, Solitude and Falkreath ESP archives are no longer part of the recommended installation.
 
 The main remaining items are deliberately deferred rather than blocked:
 
