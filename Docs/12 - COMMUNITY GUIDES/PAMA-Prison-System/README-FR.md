@@ -3,7 +3,7 @@
 > **Validation initiale :** bloc intégré et validé principalement sous NEFARAM-Rhiven 17.3.7.  
 > **Baseline actuelle :** **NEFARAM-Rhiven 17.3.8**, profil `Eleanor Stable 17.3.8`; le bloc PAMA a été conservé pendant la migration et les validations 17.3.7 restent l'historique de référence.
 
-> 🇫🇷 **Version française** — English version: [README_EN.md](README_EN.md)
+> 🇫🇷 **Version française** — English version: [README-EN.md](README-EN.md)
 
 > **Statut : bloc PAMA installé et validé pour l’intégration dans NEFARAM-Rhiven**
 >
@@ -24,11 +24,11 @@
 > 5. Punishment Pack 1.3.0
 > 6. Outdoor Event Pack 1.3
 > 7. Bad Ends Windhelm 1.3.0
-> 8. patches Rhiven Windhelm
+> 8. PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven
 > 9. Bad Ends Riften 1.3.2
 > 10. Bad Ends Solitude 1.8.0 Revision 2
-> 11. PAMA - Solitude Location Patch - Rhiven
-> 12. Orkish Bounty Hunters 0.4
+> 11. Orkish Bounty Hunters 0.4
+> 12. Nefaram - PAMA Patch
 >
 > Cet ordre décrit surtout la **position MO2 gauche / architecture fonctionnelle**. Il ne doit pas être recopié mécaniquement dans le panneau droit sans contrôle des masters et des overrides.
 
@@ -126,6 +126,45 @@ Ordre actuellement retenu pour l'intégration :
 Cet ordre reflète les couches fonctionnelles et les dépendances.  
 Il **ne doit pas être recopié aveuglément dans le panneau droit**.
 
+## Patchs de compatibilité Rhiven
+
+### Patch PAMA consolidé
+
+[Télécharger le patch PAMA consolidé](Nefaram%20-%20PAMA%20Patch.zip)
+
+Les anciens correctifs ESP séparés pour **Windhelm**, **Solitude** et **Falkreath** sont désormais remplacés par un seul plugin :
+
+`Nefaram - PAMA Patch.esp`
+
+Ce plugin constitue la couche de compatibilité PAMA finale utilisée avec **NEFARAM-Rhiven 17.3.8**.
+
+Règle de placement importante :
+
+> **`Nefaram - PAMA Patch.esp` doit se charger avant les sorties Synthesis régénérées.**
+
+Pendant l'audit, plusieurs CELL parents du patch PAMA contenaient encore des valeurs issues d'une ancienne génération Synthesis. Placé après Synthesis, le patch pouvait réécraser des données plus récentes, notamment des régions `XCLR` et certaines valeurs d'eau.
+
+Avec le patch PAMA placé **avant Synthesis**, les sorties Synthesis actuelles reprennent correctement la main.
+
+Cellules sensibles revérifiées :
+
+- `DawnstarExterior04 [00008E96]` — `xxxMapDawnstar` conservé ;
+- `MorthalExterior03 [0000939C]` — `xxxMapMorthal` et `MorthalWater` conservés ;
+- `SolitudeOrigin [00037EE9]` — `SolitudeLocation` conservé ;
+- `FalkreathExterior02 [00009C7F]` — `xxxMapFalkreath` conservé.
+
+Les sorties générées finales ont ensuite été régénérées et contrôlées avec succès.
+
+### Patch mesh ZaZ Ankle Chains
+
+[Télécharger le patch ZaZ Ankle Chains](PAMA%20-%20NEFARAM%20ZaZ%20Ankle%20Chains%20Patch%20-%20Rhiven.zip)
+
+Ce correctif reste **séparé et nécessaire**. Bad Ends Windhelm fournit une ancienne copie de :
+
+`meshes\ZaZ-UltimateDataPack\ZaZ - HDT\ZaZAnkleChainsRagdolls_1.nif`
+
+Le patch réapplique la version NEFARAM correcte après Bad Ends Windhelm dans le panneau gauche MO2. Il s'agit d'un override de mesh, sans ESP, et il **n'est pas remplacé par le patch PAMA consolidé**.
+
 ## Compatibilités et risques connus
 
 ### Devious Devices
@@ -180,11 +219,18 @@ Le build NEFARAM-Rhiven contient déjà **Capital Windhelm Expansion** avec plus
 - `PrisonAlternative_Executions_WindHelm.esp` réinjectait des données de navmesh anciennes / proches du vanilla par-dessus le stack Windhelm ;
 - `000FC117` (`WindhelmBridge04`) doit conserver la version de `WindhelmSSE - Exterior NavMesh Fixes.esp` ;
 - `0004B66C` (`WindhelmCandlehearthHallExterior`) doit conserver la version de `CapitalWindhelmExpansion - SkyrimSewers.esp` ;
-- création du patch ESL-flagged `PAMA - Windhelm Navmesh Patch - Rhiven.esp` ;
-- `PrisonAlternative_Executions_WindHelm.esp` ajouté explicitement comme master du patch ;
-- xEdit `Check for Errors` : **0 erreur / 7 records**.
+- la correction Windhelm est désormais intégrée au patch consolidé `Nefaram - PAMA Patch.esp` ;
+- l'ancien `PAMA - Windhelm Navmesh Patch - Rhiven.esp` est obsolète et ne doit plus être installé en parallèle.
 
 Un conflit de mesh ZaZ sur `ZaZAnkleChainsRagdolls_1.nif` a également été résolu avec le mod dédié `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`, qui réapplique la version issue de `NEFARAM Patches` après Bad Ends Windhelm.
+
+### Falkreath — terrain
+
+Le trou de terrain à l'entrée de Falkreath, dans la cellule Tamriel `-9,-22`, LAND `0000AC81` (CELL `00009C81`), provenait de `PaOutdoorEventPack.esp`, qui écrasait la chaîne de compatibilité Northern Roads / COTN chargée plus tard.
+
+La correction auparavant distribuée sous forme de `PAMA - Falkreath LAND - Rhiven Fix.esp` est désormais incluse dans `Nefaram - PAMA Patch.esp`.
+
+L'ancien patch Falkreath séparé est donc obsolète. La disparition du trou de terrain a été validée en jeu.
 
 ### Riften — priorité élevée
 
@@ -272,8 +318,8 @@ Ordre actuellement installé :
 5. `PAPunishmentPack_V1.3.0_SE_AE - Rhiven`
 6. `PAOutdoorEventPack_V1.3_SE_AE - Rhiven`
 7. `PA_Extension_BadEndsRevived_WindHelm_V1.3.0_SE_AE - Rhiven`
-8. `PAMA - Windhelm Navmesh Patch - Rhiven`
-9. `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`
+8. `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven`
+9. `Nefaram - PAMA Patch`
 
 Les sources Papyrus de Prison Alternative sont conservées séparément dans `Prison Alternative - Scripts Sources - Rhiven` et restent désactivées en jeu.
 
@@ -347,7 +393,7 @@ Les sources Papyrus de Prison Alternative sont conservées séparément dans `Pr
 ### Validation finale du cœur PAMA — 2026-10-08
 
 - **Bad Ends Riften 1.3.2** : installé ; Pandora **39 252** ; audit xEdit ciblé terminé ; aucun patch navmesh requis. Un léger chevauchement visuel avec un puits vanilla sera corrigé directement en partie réelle après identification de la référence.
-- **Bad Ends Solitude 1.8.0 Revision 2** : installé ; Pandora **39 298** ; audit xEdit et contrôle de pathing terminés. Le patch `PAMA - Solitude Location Patch - Rhiven.esp` restaure `SolitudeLocation` sur `SolitudeOrigin [00037EE9]` ; xEdit : **0 erreur / 17 records**.
+- **Bad Ends Solitude 1.8.0 Revision 2** : installé ; Pandora **39 298** ; audit xEdit et contrôle de pathing terminés. La restauration de `SolitudeLocation` sur `SolitudeOrigin [00037EE9]` est désormais intégrée au patch consolidé `Nefaram - PAMA Patch.esp`.
 - **Orkish Bounty Hunters 0.4** : installé et testé sur les branches principales (ambush, KO scripté, transfert, camp, escape, recapture). Un CTD isolé pendant une recapture n'a pas été reproduit lors des essais suivants.
 - **Pandora final du bloc testé : 39 298 animations**.
 - **Bloc PAMA : validé pour intégration**.
@@ -409,6 +455,15 @@ docs/guides/PAMA/
     ├── Interactive-Gallows-3.0.md
     └── Furniture-Alignment-Correction-4.0.0.md
 ```
+
+## État actuel des patchs
+
+La configuration finale recommandée conserve :
+
+- `Nefaram - PAMA Patch.esp` — patch ESP consolidé pour les corrections PAMA/NEFARAM ;
+- `PAMA - NEFARAM ZaZ Ankle Chains Patch - Rhiven` — override de mesh séparé.
+
+Les anciens ESP Rhiven séparés pour **Windhelm**, **Solitude** et **Falkreath** ne font plus partie de l'installation recommandée.
 
 ## État du chantier
 
