@@ -1,0 +1,145 @@
+# SexLab Approach / SLHH – Actor Frozen at Dialogue Start
+
+## Status
+
+- **Source:** Community report
+- **Reported on:** Baka Discord
+- **Reported date:** 20/10/2026
+- **NEFARAM-Rhiven reproduction:** Not tested / not reproduced
+- **Community fix available:** No confirmed direct fix
+- **Fix integrated into NEFARAM-Rhiven:** No
+- **Current action:** Keep for reference only
+
+---
+
+## Affected Mods
+
+Potentially related to:
+
+- SexLab Horrible Harassment
+- SLHH Expansion
+- SexLab Approach / SexLab Approach Redux
+- Open Animation Replacer
+
+Exact mod versions used by the reporting user are currently unknown.
+
+---
+
+## Reported Symptoms
+
+At the beginning of a conversation, an NPC may remain completely motionless.
+
+The actor is not in a T-pose, but appears rigid and inactive.
+
+As the conversation progresses, Open Animation Replacer eventually applies the expected poses correctly.
+
+The issue therefore appears to affect the initial stage of the dialogue or scene.
+
+---
+
+## Original Community Report
+
+**Discord user:** `はまん`
+
+Reported behaviour:
+
+> Characters may stand completely still at the start of a conversation.  
+> OAR applies the correct poses later during the conversation, but appears to be ignored when the conversation first begins.
+
+---
+
+## Current Assessment
+
+The report suggests a possible timing or scene-initialization issue involving dialogue and OAR conditions.
+
+However, the information currently available does not confirm whether the problem originates from:
+
+- SLHH;
+- SLHH Expansion;
+- SexLab Approach;
+- OAR;
+- animation priorities;
+- scene timing;
+- actor state;
+- dialogue conditions;
+- or another mod interaction.
+
+The issue should therefore not currently be attributed to a specific component.
+
+---
+
+## NEFARAM-Rhiven Status
+
+This issue has not currently been reproduced on NEFARAM-Rhiven.
+
+No configuration change or patch has been applied.
+
+The current behaviour should be observed during normal gameplay before any modification is considered.
+
+---
+
+## Recommended Procedure If Reproduced
+
+If the same behaviour occurs on NEFARAM-Rhiven:
+
+1. Identify which mod initiated the dialogue or approach.
+2. Record the NPC, location and event type.
+3. Determine whether the issue occurs:
+   - on every approach;
+   - only on specific dialogue branches;
+   - only in certain cities;
+   - only after loading a save;
+   - only after another SexLab scene.
+4. Check whether OAR eventually applies the correct animation.
+5. Check OAR priority and condition logs if available.
+6. Test whether the actor returns to normal after dialogue progression.
+7. Check Papyrus logs for related errors.
+8. Compare behaviour with SLHH and SexLab Approach events separately.
+
+---
+
+## Integration Decision
+
+### Current decision
+
+**DO NOT modify the current configuration.**
+
+Reason:
+
+The issue has only been reported by another user and no direct cause or confirmed fix has been identified.
+
+---
+
+## Validation Status
+
+| Test | Status |
+|---|---|
+| Bug reproduced on NEFARAM-Rhiven | No |
+| OAR conditions checked | No |
+| SLHH event confirmed | No |
+| SexLab Approach event confirmed | No |
+| Papyrus log checked | No |
+| Direct fix available | No |
+| Fix integrated | No |
+
+---
+
+## Source
+
+**Baka Discord**
+
+Community report dated:
+
+**20 October 2026**
+
+---
+
+## Notes
+
+This entry is part of the NEFARAM-Rhiven:
+
+`KNOWN ISSUES & COMMUNITY FIXES`
+
+collection.
+
+The purpose of this file is to preserve community-reported behaviour for future troubleshooting without modifying the stable modlist prematurely.
