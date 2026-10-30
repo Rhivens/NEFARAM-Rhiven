@@ -1,0 +1,306 @@
+# SLHH – Community Fixed Korean Version
+
+## Status
+
+- **Source:** Community package
+- **Reported on:** Baka Discord
+- **Reported date:** 23/10/2026
+- **NEFARAM-Rhiven evaluation:** Not performed
+- **Community fix available:** Yes
+- **Fix integrated into NEFARAM-Rhiven:** No
+- **Current action:** Archive for future investigation
+
+---
+
+## Affected Mods
+
+The community package concerns primarily:
+
+- SexLab Horrible Harassment
+- SLHH Expansion
+
+It also reportedly includes fixes or reset support related to:
+
+- SexLab Approach / SLAPP
+
+NEFARAM-Rhiven currently uses these systems and may therefore potentially be affected by some of the issues addressed by this package.
+
+---
+
+## Community Package Origin
+
+**Discord user:** `Knightly`
+
+The package is described as a working Korean version of SLHH that was translated back into English and then further patched.
+
+The author states that the package should completely replace the existing SLHH installation.
+
+---
+
+## Reported Changes and Fixes
+
+According to the community author, the package includes fixes and improvements for:
+
+- broken or unreliable SLHH events;
+- aura behaviour;
+- approach-type sliders;
+- inconsistent scene conditions;
+- dialogue branches that start scenes;
+- house-visit events;
+- deployed actors remaining in cities;
+- missing dialogue after scenes;
+- manual approaches;
+- scene stop control;
+- configurable spanking variants;
+- quest reset functionality.
+
+The author also mentions additional small fixes that were not individually documented.
+
+---
+
+## Reported Functional Changes
+
+### Event Conditions
+
+Scene conditions were reportedly made consistent across dialogue branches that start the same event.
+
+This was intended to correct cases where different branches used inconsistent conditions.
+
+---
+
+### Aura Fixes
+
+The package reportedly corrects aura-related behaviour.
+
+Exact implementation details are currently unknown.
+
+---
+
+### Approach Sliders
+
+Sliders controlling approach types were reportedly fixed.
+
+This may affect event selection or approach behaviour.
+
+---
+
+### House Visit
+
+The house-visit event was reportedly modified.
+
+The author states that it worked correctly during limited testing.
+
+---
+
+### Spanking Variants
+
+Additional MCM options were reportedly added to disable selected spanking variants.
+
+---
+
+### Manual Approach
+
+An option for manually triggering an approach was reportedly added.
+
+---
+
+### Stop Scene Hotkey
+
+A manual hotkey for stopping a scene was reportedly added.
+
+---
+
+### Actor Cleanup
+
+The author states that actors deployed in cities should be removed correctly when their deployment options are disabled.
+
+This may address actors remaining active after the related MCM options are unchecked.
+
+---
+
+### Quest Reset
+
+The package reportedly includes reset functionality for both:
+
+- SLHH;
+- SLAPP / SexLab Approach.
+
+---
+
+### Dialogue Changes
+
+Missing dialogue following scenes was reportedly filled in.
+
+The author notes that the added dialogue is functional but not necessarily polished.
+
+---
+
+## Original Community Description
+
+**Discord user:** `Knightly`
+
+Summary of the provided information:
+
+- Completely replace SLHH with the provided version.
+- Based on the working Korean version translated to English.
+- Additional patching was performed.
+- The addon patch must overwrite the addon.
+- Events were fixed where possible.
+- Missing post-scene dialogue was added.
+- Auras were fixed.
+- Approach sliders were fixed.
+- Scene-starting dialogue conditions were standardized.
+- House visit was partially fixed.
+- Optional spanking variants were added.
+- Manual approach was added.
+- Stop-scene hotkey was added.
+- Deployed actors should correctly disappear when disabled.
+- SLHH and SLAPP quest reset functionality was added.
+
+---
+
+## NEFARAM-Rhiven Status
+
+This package has **not been installed or evaluated** on NEFARAM-Rhiven.
+
+The current stable configuration remains unchanged.
+
+The community package should be considered:
+
+**Reference material only.**
+
+---
+
+## Important Warning
+
+This package is significantly more invasive than a simple script hotfix.
+
+The author recommends completely replacing SLHH.
+
+Because NEFARAM-Rhiven currently contains an established SLHH / SLHH Expansion / SexLab Approach environment, replacing the entire system may affect:
+
+- scripts;
+- quests;
+- dialogue;
+- MCM settings;
+- scene conditions;
+- existing save data;
+- integrations with other Baka-related mods.
+
+The package must therefore not be installed directly into the stable profile without prior analysis.
+
+---
+
+## Recommended Investigation Procedure
+
+If problems with SLHH or SexLab Approach are reproduced on NEFARAM-Rhiven:
+
+1. Confirm the exact symptoms.
+2. Record installed versions of:
+   - SLHH;
+   - SLHH Expansion;
+   - SexLab Approach.
+3. Archive the current versions.
+4. Inspect the community package contents.
+5. Compare:
+   - ESP/ESM records;
+   - Papyrus scripts;
+   - MCM files;
+   - interface files;
+   - configuration files.
+6. Determine whether the package replaces or modifies:
+   - quests;
+   - scenes;
+   - dialogue;
+   - aliases;
+   - scripts;
+   - properties.
+7. Compare modified `.pex` files using Champollion when possible.
+8. Test only on a copied profile or dedicated test save.
+9. Verify whether the addon patch correctly overwrites SLHH Expansion.
+10. Confirm that all existing NEFARAM integrations still function.
+11. Check Papyrus logs.
+12. Test repeated approaches and scene cleanup.
+13. Test save/reload behaviour.
+14. Only integrate the package after successful validation.
+
+---
+
+## Symptoms That May Justify Testing This Package
+
+Consider investigating this package if NEFARAM-Rhiven exhibits:
+
+- approaches that fail to trigger;
+- scenes that fail to start;
+- dialogue branches that skip expected events;
+- incorrect approach-type behaviour;
+- aura problems;
+- house-visit failures;
+- deployed actors remaining in cities;
+- scenes that cannot be stopped;
+- missing post-scene dialogue;
+- SLHH or SLAPP quests becoming stuck.
+
+---
+
+## Integration Decision
+
+### Current decision
+
+**DO NOT integrate into the stable build.**
+
+Reason:
+
+The package is a community overhaul of an existing gameplay system and has not yet been inspected or validated against the exact NEFARAM-Rhiven configuration.
+
+It should only be considered if the associated problems are reproduced.
+
+---
+
+## Validation Status
+
+| Test | Status |
+|---|---|
+| Package downloaded | Not documented |
+| Package contents inspected | No |
+| SLHH version compatibility confirmed | No |
+| SLHH Expansion compatibility confirmed | No |
+| SexLab Approach compatibility confirmed | No |
+| Scripts compared | No |
+| xEdit comparison performed | No |
+| MCM tested | No |
+| InGame approaches tested | No |
+| House visit tested | No |
+| Actor cleanup tested | No |
+| Save/reload tested | No |
+| Package integrated | No |
+
+---
+
+## Source
+
+**Baka Discord**
+
+Community post dated:
+
+**23 October 2026**
+
+Author:
+
+`Knightly`
+
+---
+
+## Notes
+
+This entry is part of the NEFARAM-Rhiven:
+
+`KNOWN ISSUES & COMMUNITY FIXES`
+
+collection.
+
+The purpose of this file is to preserve potentially useful community fixes while keeping the stable NEFARAM-Rhiven installation unchanged until a real need for the fix is demonstrated.
+
+Recommended validation path:
+
+**Reproduce → Inspect → Compare → Test → Validate → Integrate**
