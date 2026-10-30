@@ -28,10 +28,13 @@
 5. Keep the supplied `AMR The Great Town of Shor's Stone Patch.esp` **enabled** alongside `COTN -Falkreath AMR.esp`.
 6. Enable `Animal Mansion Reborn - Rhiven Patch.esp` after the Shor's Stone patch and the other plugins whose AMR conflicts it resolves. It complements the supplied compatibility patches; it does not replace them.
 7. Enable `Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp` after Animal Mansion Reborn, Northern Roads and any AMR / Northern Roads compatibility records that could otherwise win the affected LAND references.
-8. Keep Animal Mansion early enough for the established NEFARAM, Lux and generated-patch winners to retain their intended final values. Do not use personal MO2 separators or copy another user's absolute plugin positions.
-9. Rerun **Synthesis** after the final plugin placement.
-10. For this integration, rebuild generated LOD in this order: **xLODGen -> TexGen -> DynDOLOD**.
-11. Confirm the generated outputs are enabled, then start Animal Mansion as described below.
+8. Keep Animal Mansion early enough for the established NEFARAM and Lux winners to retain their intended final values. Do not use personal MO2 separators or copy another user's absolute plugin positions.
+9. **Before regenerating anything, move/reorganize the existing NEFARAM generated-output layer so that all newly added AMR mods and compatibility patches are part of the finalized load order before the new generated outputs.**
+10. In the **MO2 left pane**, keep regenerated output mods such as Synthesis, xLODGen, TexGen and DynDOLOD in the lower/final generated-output section, after the mods they are meant to process or overwrite.
+11. In the **MO2 right pane**, the regenerated plugins must also be placed in their proper late-load generated positions. Do not assume the stock NEFARAM positions of the pre-generated DynDOLOD files are still valid after a full regeneration.
+12. Rerun **Synthesis** after the final plugin placement.
+13. For this integration, rebuild generated LOD in this order: **xLODGen -> TexGen -> DynDOLOD**.
+14. Confirm the regenerated outputs are enabled and occupying the intended late/final layer, then start Animal Mansion as described below.
 
 The LOD workflow and generated-output visual inspection are complete. The AMR / Northern Roads exterior terrain correction is also validated in game. Broader gameplay validation will continue during a normal/definitive playthrough.
 
@@ -49,6 +52,12 @@ The LOD workflow and generated-output visual inspection are complete. The AMR / 
 
 Before changing the profile, back up the MO2 left pane and plugin order. Preserve the existing generated outputs until the final plugin placement is settled.
 
+> **Important — stock NEFARAM generated outputs are not a fixed template for regeneration.**
+>
+> NEFARAM ships with pre-generated Synthesis / LOD outputs built for its original load order. Once AMR and its compatibility patches are added, those old output positions must not be treated as immutable. Before a complete regeneration, reorganize the generated-output layer so the added mods are part of the finalized input load order, then generate fresh outputs and place those outputs back in the lower/final generated section.
+>
+> The screenshots in this guide show one validated final arrangement. They are **examples of the intended relationship**, not absolute MO2 priority numbers to copy.
+
 ## Installation and relative order
 
 The exact separator names and absolute positions vary between installations. Use the following relationships rather than a personal load-order screenshot:
@@ -60,8 +69,11 @@ The exact separator names and absolute positions vary between installations. Use
 5. Load `Animal Mansion Reborn - Rhiven Patch.esp` after the active Shor's Stone patch and after the other records it is intended to merge or correct.
 6. Load `Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp` after Animal Mansion Reborn, Northern Roads and the relevant AMR compatibility layer so that its two LAND overrides and two disabled exterior references remain the final winners.
 7. Preserve the established later Lux / NEFARAM winners where they already provide the correct environment state.
-8. Regenerate Synthesis only after the AMR plugin set and compatibility patch placement are final.
-9. Run the LOD tools only after Synthesis and the manual compatibility patches are in their intended final state.
+8. Before regeneration, move/reorganize the old NEFARAM generated-output block as needed so it does not sit in the middle of the newly modified load order.
+9. In the **MO2 left pane**, regenerated output mods belong in the lower/final generated-output section, after the source mods and compatibility patches they must process or overwrite.
+10. In the **MO2 right pane**, regenerated plugins must likewise occupy their correct late-load positions. A full regeneration can require changing the stock positions of pre-generated NEFARAM plugins such as the DynDOLOD files.
+11. Regenerate Synthesis only after the AMR plugin set and compatibility patch placement are final.
+12. Run the LOD tools only after Synthesis and the manual compatibility patches are in their intended final state.
 
 The intended principle is simple: use load-order placement for conflicts that are already resolved correctly, and use the Rhiven patches only for records that require an explicit merge or targeted correction. Do not broadly forward entire conflict groups into another patch.
 
@@ -168,14 +180,32 @@ Later Lux, NEFARAM and Synthesis records should continue to win when they alread
 
 ## Generated outputs
 
-The required order is:
+### Important: reorganize the generated layer before rebuilding
+
+The pre-generated outputs included with stock NEFARAM were built for the stock NEFARAM load order. After adding Animal Mansion Reborn and its compatibility patches, **do not simply leave the old generated block in its original position and rebuild on top of it**.
+
+Before a full regeneration:
+
+1. finalize the placement of AMR and all compatibility patches;
+2. move/reorganize the existing generated-output section so the newly added mods are part of the load order that the generators actually see;
+3. in the **MO2 left pane**, keep the fresh Synthesis / xLODGen / TexGen / DynDOLOD output mods in the lower/final generated-output section;
+4. in the **MO2 right pane**, make sure the generated plugins are also placed in their proper late-load positions after generation;
+5. do not copy absolute priority numbers from the screenshots — use the relative load-order relationships.
+
+This matters especially for DynDOLOD: the `DynDOLOD.esm` supplied by NEFARAM is a pre-generated stock file. During a fresh generation, DynDOLOD validates the current master order, so a stock plugin position that worked for the original packaged output may no longer be valid for the regenerated setup.
+
+The two screenshots in this folder — **Animal Mansion MO2 Left Panel.png** and **Animal Mansion Plugins Right Panel.png** — illustrate the validated final arrangement used for this integration.
+
+The required regeneration order is:
 
 1. settle the final AMR and compatibility-patch placement;
-2. rerun **Synthesis**;
-3. run **xLODGen**;
-4. run **TexGen**;
-5. run **DynDOLOD**;
-6. inspect the generated terrain and object LOD in game.
+2. reorganize the old generated-output layer as described above;
+3. rerun **Synthesis**;
+4. run **xLODGen**;
+5. run **TexGen**;
+6. run **DynDOLOD**;
+7. enable and place the new generated outputs in the intended lower/final layer;
+8. inspect the generated terrain and object LOD in game.
 
 The full chain is required for this integration because AMR contains exterior worldspace content and at least one visible `LAND` record under:
 
