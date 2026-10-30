@@ -1,0 +1,234 @@
+# BaboDialogue – New Gnisis Corner Club Event
+
+## Status
+
+- **Source:** Community report
+- **Reported on:** Baka Discord
+- **Reported date:** 26/10/2026
+- **NEFARAM-Rhiven reproduction:** Not tested / not reproduced
+- **Community fix available:** Yes
+- **Fix integrated into NEFARAM-Rhiven:** No
+- **Current action:** Keep for reference only
+
+---
+
+## Affected Mod
+
+**BaboDialogue / Baka-related event**
+
+Exact mod version used by the reporting user is currently unknown.
+
+---
+
+## Event
+
+**New Gnisis Corner Club Event**
+
+Location:
+
+**New Gnisis Cornerclub – Windhelm**
+
+The issue reportedly occurs during the event involving the Argonian characters entering the inn.
+
+---
+
+## Reported Symptoms
+
+According to the community report, the event can begin normally when speaking with the innkeeper.
+
+However, when the Argonian characters enter the scene, the expected dialogue sequence is skipped.
+
+The player therefore misses part or all of the scripted interaction.
+
+The reporting user was unsure whether the event continued correctly afterward.
+
+---
+
+## Original Community Report
+
+**Discord user:** `FallenLegend362`
+
+> Anyone able to do the New Gnisis Corner Club Event?  
+> I talk to the innkeep and then it skips the whole dialogue when the lizards come in.  
+> Dont know if it does anything after that.
+
+---
+
+## Proposed Community Fix
+
+**Discord user:** `Trolls`
+
+The proposed fix consists of replacing the following compiled Papyrus script:
+
+```text
+BaboEventNewgnisisMasterScript.pex
+```
+
+According to the author of the fix, the original event script contains an incorrectly written section which prevents the scene from running normally.
+
+The revised script reportedly restores normal operation of the New Gnisis Corner Club event.
+
+---
+
+## Community Fix Description
+
+Reported explanation:
+
+> The event he called for was somehow written incorrectly.
+
+A revised version of:
+
+```text
+BaboEventNewgnisisMasterScript.pex
+```
+
+was provided on the Baka Discord.
+
+After replacing the original script with the revised version, the reporting user states that the New Gnisis event runs normally.
+
+---
+
+## NEFARAM-Rhiven Status
+
+This issue has **not currently been confirmed on NEFARAM-Rhiven**.
+
+No replacement script has been installed.
+
+The current NEFARAM-Rhiven version therefore continues to use the original script provided by the installed Babo/Baka mod package.
+
+Until the issue is reproduced, the community patch should be considered:
+
+**Reference material only.**
+
+---
+
+## Recommended Procedure If the Bug Is Reproduced
+
+If the same behaviour occurs during a NEFARAM-Rhiven playthrough:
+
+1. Confirm that the symptoms match the community report.
+2. Record the exact installed version of the affected Babo/Baka mod.
+3. Back up the original:
+
+```text
+BaboEventNewgnisisMasterScript.pex
+```
+
+4. Obtain the community-fixed version from the original Discord source.
+5. Compare the original and patched scripts before installation.
+6. Preferably decompile both `.pex` files using **Champollion**.
+7. Compare the resulting Papyrus code to identify the exact modification.
+8. Check for differences in:
+   - script properties;
+   - quest stages;
+   - scene handling;
+   - actor aliases;
+   - conditions;
+   - waits / event sequencing;
+   - functions added or removed.
+9. Confirm that the patched script belongs to the same mod version used by NEFARAM-Rhiven.
+10. Install the patched script only on a test profile or test save.
+11. Reproduce the New Gnisis event.
+12. Verify that:
+   - all dialogue plays correctly;
+   - the event advances normally;
+   - no quest stage becomes stuck;
+   - no Papyrus errors are generated;
+   - no regression appears in other Babo events.
+
+---
+
+## Integration Decision
+
+### Current decision
+
+**DO NOT integrate automatically.**
+
+Reason:
+
+The issue has only been reported by other users and has not yet been reproduced on NEFARAM-Rhiven.
+
+Replacing a compiled Papyrus script without confirming its exact source version could potentially introduce regressions.
+
+The patch should therefore remain available as a troubleshooting reference.
+
+---
+
+## If Validated Later
+
+If the issue is reproduced and the community fix is confirmed compatible:
+
+Possible integration method:
+
+```text
+Babo Dialogue - New Gnisis Fix - Rhiven
+└── Scripts
+    └── BaboEventNewgnisisMasterScript.pex
+```
+
+The fix should be installed as a separate MO2 mod rather than overwriting the original Babo installation.
+
+This allows:
+
+- easy rollback;
+- clear overwrite visibility in MO2;
+- version tracking;
+- preservation of the original mod files.
+
+---
+
+## Validation Status
+
+| Test | Status |
+|---|---|
+| Event starts correctly | Not tested |
+| Argonian arrival dialogue | Not tested |
+| Scene progression | Not tested |
+| Quest completion | Not tested |
+| Papyrus log | Not tested |
+| Community patch inspected | No |
+| Patch compatible with current NEFARAM version | Unknown |
+| Patch installed | No |
+
+---
+
+## Source
+
+**Baka Discord**
+
+Community discussion dated:
+
+**25–26 October 2026**
+
+Users involved:
+
+- `FallenLegend362`
+- `Trolls`
+
+A revised version of:
+
+```text
+BaboEventNewgnisisMasterScript.pex
+```
+
+was attached to the Discord discussion.
+
+The patch itself is **not currently included in the NEFARAM-Rhiven repository**.
+
+---
+
+## Notes
+
+This entry is part of the NEFARAM-Rhiven:
+
+```text
+KNOWN ISSUES & COMMUNITY FIXES
+```
+
+collection.
+
+Its purpose is to preserve potentially useful community discoveries without introducing unverified fixes into the stable modlist.
+
+A community-reported fix should only become part of NEFARAM-Rhiven after:
+
+**Reproduction → Analysis → Compatibility Check → InGame Validation → Documentation**
