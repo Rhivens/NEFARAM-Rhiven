@@ -1,8 +1,13 @@
 # Naked Defeat for NEFARAM-Rhiven
 
-This guide documents the validated **Naked Defeat 6.51** setup used with **NEFARAM-Rhiven 17.3.8**. Version 6.51 is an incremental patch installed over **Naked Defeat 6.50 FULL**.
+This guide documents the current **Naked Defeat 6.52** setup used with **NEFARAM-Rhiven 17.3.8**. Version 6.52 is an incremental patch installed over **Naked Defeat 6.50 FULL**.
 
 It is intended as a practical community guide: enough information to reproduce the working setup without carrying over the full internal xEdit / script audit.
+
+To avoid turning one tested modlist into a universal rule, this page uses two scopes:
+
+- **Validated on NEFARAM-Rhiven** means the item was observed or tested on the Rhiven profile.
+- **General recommendation** means a safe setup or troubleshooting practice that other lists should adapt to their own load order.
 
 ## Validated baseline
 
@@ -11,7 +16,7 @@ This setup was validated with:
 - **NEFARAM-Rhiven 17.3.8**
 - **Skyrim AE runtime 1.6.1170**
 - **Acheron 1.11.3**
-- **Naked Defeat 6.50 FULL + patch 6.51**
+- **Naked Defeat 6.50 FULL + patch 6.52**
 - **Mod Organizer 2**
 - **Open Animation Replacer**
 - **Pandora Behaviour Engine+**
@@ -21,7 +26,7 @@ This setup was validated with:
 ```text
 Acheron
 → Acheron - Naked Defeat Bridge
-→ Naked Defeat 6.50 FULL + patch 6.51
+→ Naked Defeat 6.50 FULL + patch 6.52
 → Naked Defeat - Rhiven Fix
 ```
 
@@ -41,24 +46,23 @@ The intended principle is:
 ### Required
 
 - `Naked Defeat 6-50 - FULL - (AE + SE).7z`
-- patch incrémental **Naked Defeat 6.51**, installé juste après la 6.50 FULL
-- **MCM FR 6.51**, installé après le patch 6.51
+- patch incrémental **Naked Defeat 6.52**, installé juste après la 6.50 FULL
+- traduction MCM compatible avec la **6.52**, installée après le patch si elle est utilisée
 - `Naked Defeat - EXTRA - Acheron Bridge (SE).zip`
 - `Naked Defeat - Rhiven Fix.zip`
 
 Les textures **WhipMarks** sont déjà intégrées depuis Naked Defeat 6.50. Ne réactivez pas un ancien ajout WhipMarks séparé par-dessus cette installation.
 
-### OAR package retained
-
-- `Naked Defeat - EXTRA - OAR Bowed Animations - fixed.7z`
-
-### OAR package not used together with Bowed
+### Optional OAR packages
 
 - `Naked Defeat - EXTRA - OAR Crawl Animations V2.7z`
+- `Naked Defeat - EXTRA - OAR Bowed Animations - fixed.7z`
 
-The Bowed package overlaps heavily with Crawl, so the validated Rhiven setup keeps:
+The packages overlap heavily and should not be active together. The current Rhiven test preference is:
 
-> **Bowed active / Crawl disabled**
+> **Crawl active / Bowed disabled**
+
+This is a preference/test choice, not an absolute technical requirement. Bowed can be used instead if Crawl is disabled.
 
 ## MO2 setup
 
@@ -73,11 +77,11 @@ Acheron - Simple Recover
 Acheron - Diary of Mine Extension
 
 Naked Defeat 6.50 FULL
-Naked Defeat 6.51 patch
-Naked Defeat MCM FR 6.51
+Naked Defeat 6.52 patch
+Naked Defeat MCM translation compatible with 6.52
 Naked Defeat - Rhiven Fix
 Acheron - Naked Defeat Bridge
-Naked Defeat - EXTRA - OAR Bowed Animations fixed
+Naked Defeat - EXTRA - OAR Crawl Animations V2
 ```
 
 If Sacrosanct is part of your build, keep `Acheron - Sacrosanct Patch` enabled in this position. It is part of the validated NEFARAM-Rhiven stack.
@@ -88,7 +92,7 @@ If Sacrosanct is part of your build, keep `Acheron - Sacrosanct Patch` enabled i
 Yamete Kudasai
 Practical Defeat Reanimated
 Practical Defeat Reanimated Voicepack
-Naked Defeat - EXTRA - OAR Crawl Animations V2
+Naked Defeat - EXTRA - OAR Bowed Animations fixed
 ```
 
 Important:
@@ -122,7 +126,7 @@ Synthesis_1.esp
 → Naked Defeat - Synthesis Fix.esp
 ```
 
-The 6.51 patch and MCM FR are left-panel file overrides and do not add a second `Naked Defeat.esp`. `Naked Defeat - Synthesis Fix.esp` belongs after `Synthesis_1.esp`; its final explicit xEdit validation remains to be recorded.
+The 6.52 patch and MCM translation are left-panel file overrides and do not add a second `Naked Defeat.esp`. `Naked Defeat - Synthesis Fix.esp` is still required after `Synthesis_1.esp` so Synthesis does not overwrite the corrected `nade_Stick` record; its final explicit Check for Errors result remains to be recorded.
 
 The Rhiven Fix must load after `Naked Defeat.esp` so its corrected records win. The Acheron Bridge then loads after both as the integration layer.
 
@@ -151,7 +155,7 @@ Acheron already owns the defeat / bleedout handoff. Allowing Naked Defeat to tri
 
 ### Why IndecencyRapeProb must be 0
 
-Naked Defeat 6.50 still contains a script reference to a missing **Civilian Rape** quest.
+In Naked Defeat 6.52, the `nade_CrimeEffect` property `qst2` still points to the missing **Civilian Rape** quest.
 
 The safest current workaround is:
 
@@ -163,12 +167,12 @@ Do not attempt to reconstruct the missing quest manually.
 
 ## Audio, TTS and SKSE configuration
 
-For the 6.51 setup:
+For the tested Rhiven audio setup:
 
 - replace **AudioUtil 0.9.13** with **AudioUtil 0.9.30**; do not keep both versions active;
 - add **AudioUtil TTS 0.5.1**;
 - add the **Kokoro English** voice/model package required by the chosen TTS setup;
-- keep these SKSE/audio components before Naked Defeat in the MO2 left panel so the 6.51 files and its translation can win where intended.
+- keep these SKSE/audio components before Naked Defeat in the MO2 left panel so the 6.52 files and its translation can win where intended.
 
 Suggested left-panel relationship:
 
@@ -178,13 +182,13 @@ AudioUtil TTS 0.5.1
 Kokoro English
 ...
 Naked Defeat 6.50 FULL
-Naked Defeat 6.51 patch
-Naked Defeat MCM FR 6.51
+Naked Defeat 6.52 patch
+Naked Defeat MCM translation compatible with 6.52
 Naked Defeat - Rhiven Fix
 Acheron - Naked Defeat Bridge
 ```
 
-AudioUtil TTS is optional from Naked Defeat's plugin-master point of view, but it is part of the documented Rhiven audio setup. The 6.51 SKSE menu exposes many configurable options. Only the functional base is retained here; fine MCM/SKSE tuning and balancing are deliberately reserved for the final playthrough.
+AudioUtil TTS is optional from Naked Defeat's plugin-master point of view, but it is part of the documented Rhiven audio setup. On the Rhiven profile, AudioTTS tracking has been validated InGame. Fine MCM/SKSE tuning and balancing are still reserved for the final playthrough.
 
 ## Pandora and OAR
 
@@ -196,13 +200,15 @@ After disabling YK:
 2. regenerate Pandora;
 3. verify there is no blocking generation error.
 
-The **OAR Bowed Animations fixed** package itself does not require Pandora merely because it is an OAR replacement package.
+The OAR replacement packages do not require Pandora merely because they are OAR replacements.
 
 Use:
 
-> **OAR Bowed active / OAR Crawl disabled**
+> **OAR Crawl active / OAR Bowed disabled**
 
-because the two packages overlap heavily.
+because the two packages overlap heavily. This is Rhiven's current test preference; selecting Bowed instead is valid if Crawl is disabled.
+
+The **6.52 incremental patch itself contains only ESP, PEX and PSC files**, so updating to 6.52 does **not** require another Pandora run. The earlier Pandora run documented above was required because Yamete Kudasai behavior content was removed, not because of the 6.52 patch.
 
 ## Naked Defeat - Rhiven Fix
 
@@ -251,6 +257,21 @@ No weapon stats or gameplay values are changed.
 
 Keep the patch as a standalone plugin. Do **not** merge it into `Naked Defeat.esp`.
 
+## 6.52 static audit notes
+
+### Validated on NEFARAM-Rhiven
+
+- xEdit Check for Errors on `Naked Defeat.esp` 6.52: **1228 records / 18 errors**;
+- `Naked Defeat - Rhiven Fix.esp` remains required for `nade_Stick`, `nade_BoneMace`, `nade_WristChains_R` and `nade_WristChains_L`;
+- `Naked Defeat - Synthesis Fix.esp` remains required after `Synthesis_1.esp` to preserve the `nade_Stick` correction;
+- `nade_CrimeEffect.qst2` still targets the missing Civilian Rape quest, so `IndecencyRapeProb = 0` remains mandatory;
+- `nade_WhipAction_01` and `nade_WalkTo_01` remain invalid legacy packages and were deliberately left unpatched;
+- old follower `crux`, `crux2` and `crux3` scenes remain malformed/legacy and were deliberately left intact.
+
+### General recommendation
+
+Do not automatically “clean” every xEdit warning. Patch only a record whose current code path or reproducible gameplay symptom demonstrates that it is active and broken. Other modlists should verify their own winning overrides, especially after Synthesis or similar generated patches.
+
 ## Recommended smoke test
 
 If possible, use a cloned MO2 profile and a disposable test save before committing the change to your main playthrough.
@@ -296,7 +317,7 @@ Use this only after the old mods are fully disabled.
 
 ## Validation status
 
-### Validated
+### Validated on NEFARAM-Rhiven
 
 - humanoid defeat;
 - creature defeat;
@@ -305,11 +326,29 @@ Use this only after the old mods are fully disabled.
 - repeated defeat events;
 - save / exit / reload after completed events;
 - furniture escape: press Space once, wait for the progress messages, then press Space again only when the message says the restraints are loose enough.
+- MO2 and the MCM display **6.52** after activation;
+- new `Resist` and `Progress` hotkeys are visible;
+- new robbery options are visible;
+- Chest Quest Robbery spawns its chest;
+- the player's belongings transfer into the chest;
+- the items can be recovered from the chest;
+- AudioTTS tracking works.
+
+The general defeat-flow save/exit/reload test above was completed previously. It must not be confused with Chest Quest Robbery persistence: **save → full Skyrim exit → reload while the robbery chest is still active has not been tested**.
+
+### General recommendations for other setups
+
+- use a cloned MO2 profile and a disposable save for first tests;
+- keep `IndecencyRapeProb = 0` while the missing quest reference remains;
+- keep only one of Crawl or Bowed active;
+- preserve the required relative plugin order and inspect generated-patch overrides;
+- independently verify recovery, repeated defeats and save/reload behavior on your own list.
 
 ### Still pending / extended playtesting
 
 - follower defeat;
-- individual validation of every 6.51 changelog branch;
+- Chest Quest Robbery persistence with an active chest across save → full exit → reload;
+- individual validation of every untested 6.52 branch;
 - final xEdit result for `Naked Defeat - Synthesis Fix.esp`;
 - final MCM/SKSE tuning;
 - final stable-profile verdict;
@@ -317,7 +356,7 @@ Use this only after the old mods are fully disabled.
 
 Current status:
 
-> **NAKED DEFEAT 6.51 CORE GAMEPLAY VALIDATED — EXTENDED PLAYTESTING ONGOING**
+> **NAKED DEFEAT 6.52 CURRENT PATCH — CORE INTEGRATION, CHEST QUEST ROBBERY FLOW AND AUDIOTTS TRACKING VALIDATED ON NEFARAM-RHIVEN; EXTENDED PLAYTESTING ONGOING**
 
 ## Known minor observation
 
@@ -334,7 +373,7 @@ Until you are satisfied with the setup:
 - keep Yamete Kudasai installed but disabled;
 - keep Practical Defeat Reanimated installed but disabled;
 - keep the Practical Defeat voicepack installed but disabled;
-- keep OAR Crawl installed but disabled;
+- keep the unused OAR alternative installed but disabled;
 - keep a backup of the MO2 left-panel and plugin order.
 
 If the setup fails your own tests, restore the previous defeat stack rather than editing `Naked Defeat.esp` destructively.
