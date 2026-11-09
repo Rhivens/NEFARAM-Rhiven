@@ -1,4 +1,4 @@
-# NEFARAM Rhiven Modded — MO2 Left Panel (dernière mise à jour le 26-10-2026 00h00)
+# NEFARAM Rhiven Modded — MO2 Left Panel (dernière mise à jour le 09-11-2026 16h42)
 
 Current customized MO2 left-pane snapshot.
 
