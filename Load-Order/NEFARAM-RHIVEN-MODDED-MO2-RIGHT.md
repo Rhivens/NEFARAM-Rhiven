@@ -1,4 +1,4 @@
-# NEFARAM Rhiven Modded — MO2 Right Panel / Plugins (Dernière mise à jour le 26-10-2026 à 00h02)
+# NEFARAM Rhiven Modded — MO2 Right Panel / Plugins (Dernière mise à jour le 09-11-2026 à 16h43)
 
 Current customized plugin load order for the Rhiven setup.
 
@@ -442,6 +442,9 @@ KSWigsSMP.esp
 [dint999] HairPack0.esp
 [dint999] HairPack02 A (female).esp
 [dint999] HairPack02 B (female).esp
+Xing SMP Hairs and Wigs - HHairstyles.esp
+Xing SMP Hairs and Wigs - Dint999.esp
+Xing SMP Hairs and Wigs - Fuse.esp
 [Dint999] BDOr_Hairstyles.esp
 KaliliesBrows.esp
 Lamenthia's Marks of Beauty.esp
@@ -1298,6 +1301,7 @@ FDE Erik.esp
 FDE Jordis.esp
 FDE Lydia.esp
 FDE Jenassa.esp
+FDE Jenassa Part 2.esp
 FDE Jenassa Inigo.esp
 FDE Jenassa Auri.esp
 FDE Uthgerd.esp
@@ -1885,13 +1889,6 @@ _NEFARAM_PEGI18_Hydra.esp
 _NEFARAM_PEGI18_DeviousVanilla.esp
 _NEFERAM_SexDialogue.esp
 _NEFARAM_LoadScreen.esp
-Synthesis_0.esp
-Synthesis_1.esp
-Synthesis_2.esp
-Synthesis_3.esp
-Synthesis_4.esp
-_NEFARAM_____AFTERSynthesis_____.esp
-Animal Mansion Reborn - Rhiven Patch.esp
 Racemenu Handnails.esp
 ZMDs Feet Nail Art for RaceMenu v1.esp
 [Dint999] FacePartMod.esp
@@ -1911,6 +1908,8 @@ hdm_InvictaBlackRose.esp
 [qdaro] Silver Witch.esp
 DX FetishFashion II.esp
 hdm_InvictaLingerie.esp
+Animal Mansion Reborn - Rhiven Patch.esp
+Animal Mansion - Northern Roads LAND Seam Fix - Rhiven.esp
 MuChainBikiniArmor.esp
 [ELLE] Dark Rebel.esp
 Aradia Bikini SE.esp
@@ -1954,6 +1953,8 @@ Fertility Adventures.esp
 BeeingFemaleAdultPack.esp
 BeeingFemaleBasicAddOn.esp
 BeeingFemaleSE_Opt.esp
+BeeingFemaleSimpleChildren.esp
+BFACreatureChildActorsSE_ESPFE.esp
 InnBath.esp
 Xtended Stay.esp
 Xtended Stay - Close Dialogue.esp
@@ -1973,10 +1974,8 @@ PamaSovngardeAftermath.esp
 PaPunishmentPack1.esp
 PaOutdoorEventPack.esp
 PrisonAlternative_Executions_WindHelm.esp
-PAMA - Windhelm Navmesh Patch - Rhiven.esp
 PrisonAlternative_Executions_Riften.esp
 PrisonAlternative_Executions_Solitude.esp
-PAMA - Solitude Location Patch - Rhiven.esp
 OrkishBountyHunters.esp
 Missives.esp
 SL Dirty Deeds Missives.esp
@@ -1992,11 +1991,22 @@ watch your step.esp
 Private Needs - Orgasm.esp
 TDF Aroused Rape.esp
 SexLabDangerousNights2.esp
+EnslavedByThalmor.esp
+Devious Brothels.esp
 UntarnishedUI_Subtitle.esp
 KVSeranaLustOfAMother.esp
 DinosEasyQuestFix.esp
-Falkreath LAND - Rhiven Fix.esp
+UnreadBooksGlow.esp
+Tailor.esp
+Nefaram - PAMA Patch.esp
+Synthesis_0.esp
+Synthesis_1.esp
+Synthesis_2.esp
+Synthesis_3.esp
+Synthesis_4.esp
 Synthesis_Food.esp
+Naked Defeat - Synthesis Fix.esp
+_NEFARAM_____AFTERSynthesis_____.esp
 DynDOLOD.esp
 Occlusion.esp
 Water for ENB - Patch - FWMF for Fantasy Paper Maps.esp
