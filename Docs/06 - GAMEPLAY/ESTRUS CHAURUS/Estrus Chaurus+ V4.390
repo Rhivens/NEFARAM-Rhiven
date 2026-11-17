@@ -1,15 +1,17 @@
-Estrus Chaurus+ V4.390
+# Estrus Chaurus+ — v4.390
 
-About This File
+> **Reference:** Original mod description and maintainer notes, preserved in English. This document is source documentation, not a verified NEFARAM-Rhiven compatibility report.
+
+## About this mod
 
 All credits go to the original author of this mod, Jbezorg. Since he has taken a hiatus, I will be maintaining this mod for the time being. Thanks to Min for helping to keep the Mod alive by updating it for SL1.5+
 
-Original Mod Description by Jbezorg
+## Original mod description — Jbezorg
 
-WHAT DOES THIS MOD DO?
+### What does this mod do?
 Chaurus spit attacks or Sex with Chaurus can trigger an Estrus Tentacle attack and impregnation. In roughly 3 days, they Chaurus Eggs will be expelled from the host's body.
 
-WHAT CAN YOU DO?
+### Configurable features
 
     If the skeleton supports node scaling the breasts will enlarge during that time. MCM will auto-configure Estrus Chaurus based on your skeleton and it will be available if the skeleton and body mesh supports it. If this is available, you can set how large the breasts will grow.
     You can set how long the impregnation will last.
@@ -18,9 +20,9 @@ WHAT CAN YOU DO?
     You can choose to have some residual breast growth. Breast size is not returned fully to the original size.
     You can remove all impregnation effects from NPCs, Companions & the Player by enabling "Prepare for uninstall" ( this can take a few min. to run).
 
-The breast enlargement feature is very experimental. It's very likely to cause CTDs. You can disable this feature in MCM by setting breast growth to "NONE".
+**CTD warning (original maintainer):** The breast enlargement feature is experimental and may cause CTDs. It can be disabled in the MCM with **Breast Growth = NONE**.
 
-SOME THINGS TO KEEP IN MIND
+## Important warnings and gameplay notes
 Don't update to a new version without first enabling "Prepare for Uninstall" and letting it cure everyone.
 
     Estrus shout abilities AND THE ESTRUS MOD ITSELF is completely unrelated to this mod.
@@ -33,11 +35,11 @@ Don't update to a new version without first enabling "Prepare for Uninstall" and
 
 setstage SKI_ConfigManagerInstance 1
 
- EC+ Version 4.390
+## Version 4.390 — save compatibility
 
  
 
-As version 4.390 has major changes to the esp file I do not recommend trying to upgrade - a new game is required
+**Upgrade warning:** v4.390 substantially changes the ESP. The maintainer recommends a **new game** instead of upgrading an existing playthrough.
 
  
 
@@ -65,15 +67,18 @@ Chaurus Spit can also trigger Tentacle attacks on non-follower NPCs! At present 
  
 
 
-Updating
+### Updating from v4.381 to v4.390
 
  
 
-Updating from version 4.381 to version 4.390 requires a clean save or new game.
+Updating from **v4.381 to v4.390** requires a **clean save or new game**, according to the maintainer.
 
  
 
-For Modders 
+## Modder reference — Papyrus ModEvents
+
+> **Developer material:** The examples below are quoted from the original documentation. Their signatures and event arguments have deliberately not been modernized.
+```papyrus
 
  ;The EC interface uses ModEvents. This method can be used without loading EC as a master or using GetFormFromFile
 ;
@@ -141,14 +146,14 @@ EC sends the following ModEvents:
 
  
 
-Please do not link directly to EC functions - they are likely to change and break your mod! 
+Please do not link directly to EC functions - they are likely to change and break your mod!
+```
 
-Required Mods and Versions
+## Requirements (as listed in the original description)
 
  
 
-Legendary Edition 
-
+### Legendary Edition (LE)
 Estrus For Skyrim V2.41r1 (Must be installed but the mod does not have to be activated)
 
 Sexlab 1.62
@@ -160,8 +165,7 @@ Net Immerse Override 3.2.2+ or Racemenu 3.0+ (includes NIO)
 
  
 
-Special Edition 
-
+### Special Edition (SE)
 Estrus For Skyrim SE V2.45 (Must be installed but the mod does not have to be activated)
 
 Sexlab 1.63 Beta 9+
@@ -173,7 +177,7 @@ Racemenu SE 0.4.16+ (includes SKEE - required for pregnancy scaling)
 
  
 
-Known Issues
+## Known issues (maintainer statement)
 
  
 
@@ -181,7 +185,7 @@ None - please report any problems (or success) and I will try and sort them.
 
  
 
-Credits
+## Credits
 
  
 
@@ -196,10 +200,22 @@ osmelmc for the automatic EC animation registration patch
 Edited June 9, 2022 by Bane Master 
 
 
-What's New in Version V4.390 (29/08/2021)
+## Changelog — v4.390 (29 August 2021)
 
 Released June 9, 2022
 
     Added fully converted SE Version
     Replaced deprecated "Tentacle Double" animation with "Tentacle Upright"
     Reworked all animations for compatibility with current Estrus for Skyrim LE/SE Versions
+
+
+---
+
+## NEFARAM-Rhiven integration notes (local project)
+
+- **BeeingFemale NG 3.6.8:** already installed in the Rhiven setup. Its precise interactions with EC+ must be tested in game; this source document does not establish them.
+- **OviBody and Curse of Life:** intentionally omitted from the planned integration; neither is listed as a requirement in this EC+ description.
+- **Estrus Unified:** included in the broader Yiin & PastryFish installation guide, but its relationship with the legacy Estrus for Skyrim requirement above must be verified before changing dependencies.
+- **Body inflation:** evaluate EC+ breast-growth settings and SLIF NG interactions during the MCM validation phase.
+
+*Formatting adapted from the mod page text copied into this repository. Original author's notes, requirements and developer event documentation retained.*
