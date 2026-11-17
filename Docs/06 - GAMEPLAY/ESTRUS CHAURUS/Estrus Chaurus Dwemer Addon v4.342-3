@@ -1,0 +1,115 @@
+ Estrus Chaurus Dwemer Addon v4.342-3
+
+ About This File
+
+GitHub:EC V4.xx, ED V4.xx
+
+ 
+
+If you like my mods, you can support me on Subscribestar
+
+ 
+
+Required Mods
+Estrus Chaurus+ v4.xx and everything Estrus Chaurus requires
+
+ 
+
+Optional (Sexlab animations for dwemer automatons sexing through sexlab):
+SexLab Animation Loader
+SLAL_Billyy_Creature2
+or other animation pack that adds dwarwen animations
+
+You must put this mod after Estrus Chaurus
+
+ 
+
+If you use Devious Devices, install:
+
+    Devious Devices - Integration
+    ED DDI Patch
+
+ 
+
+You must put this mod after Estrus Chaurus+ in your load order
+
+ 
+
+Notes(TODO n STUFF):
+
+Consider mod Alpha Early Access Beta, so make backup saves.
+
+Hatchery is not implemented as automatons are mechanical and dont really grow up, so im not sure how to handle it
+
+Only machine attacks were tested as im not sure how to install SLAL and all that fancy stuff
+
+As dragonborn, you can eat birthed dwemer spheres, dont forget to pour some dwemer oil for better taste. LOL
+
+ 
+
+wait for someone to make mcm picture with dwemer sphere racing and spiders hanging from top and sides, cuz why not xD
+
+ 
+
+Description
+
+ 
+
+Estrus Chaurus but with Dwarwen automatons, because everyone loves steampunk tech!
+This mod is an addon, so it is compatible with EC+ v4.31 and, maybe, future versions.
+
+ 
+
+There are four methods by which the ED effect can be applied to the player or a follower:
+
+    Dwarwen attacks can trigger machine attack - the chance of attack is configurable via the MCM
+    Dwarwen attacks can trigger paralyze attack - the chance of attack is configurable via the MCM(disabled by default as it needs SLAL and animation pack installed)
+    Sexlab scenes involving a Dwaren Spiders, Spheres, Balistas, Centurions
+    ED+ scenes triggered by other mods through mod events
+
+ 
+
+Known Issues
+
+ 
+
+Mod will conflict with other mods that modify:
+
+ShockDamageFFAimedDwarvenSpider - Lightning Bolt
+
+crDwarvenSteamBreath - Steam breath
+
+ 
+
+Credits
+
+ 
+
+Ed86 =D
+Bane Master
+Jbezorg
+Tokinklownz420
+What's New in Version v4.342-3
+
+Released March 2, 2021
+
+    v4.342-3
+
+    disabled paralyze effect
+
+     
+
+    v4.342-2
+
+    added non english mcm translation files
+
+     
+
+    v4.342-1
+    fix for SSE Nio
+     
+    v4.342
+    patch for slif_butt node
+    added 60s cooldown spell for animations, so 2+ paralyze/machine animations wont trigger on same actor
+    added detection for hentaipregnancy, if actor is pregnant Oviposition wont happen
+
