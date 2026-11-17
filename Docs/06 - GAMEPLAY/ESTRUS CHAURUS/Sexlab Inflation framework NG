@@ -1,15 +1,12 @@
-Inflation framework NG
+# SexLab Inflation Framework NG (SLIF NG)
+
+> **Reference:** Mod-page description preserved and organized for the NEFARAM-Rhiven project. This is the author's stated functionality, not a completed in-game compatibility test.
+
+## Overview
 
 Native SKSE rewrite (CommonLibSSE-NG) of SL Inflation Framework. Install it INSTEAD of SLIF: same plugin name, same API, same math, so legacy mods keep working unpatched. Old SLIF saves migrate themselves via mcm button. Zero configuration - pick your body in the installer and play. Runs on SE, AE & VR. (UBE support built-in, espfe)
 
-Requirements
-Address Library for SKSE Plugins 	
-PapyrusUtil SE - Modders Scripting Utility Functions 	
-RaceMenu 
-
-SLIF NG
- Inflation Framework, rebuilt as an SKSE plugin
-
+### What SLIF NG does
 
 SLIF NG is a modern, zero-configuration replacement for SL Inflation Framework SE by qotsafan.
 
@@ -21,101 +18,100 @@ What a body inflation framework is for: plenty of mods want to change the shape 
 
 Supported versions: Skyrim SE • AE • VR
 
-
-
-TL;DR - Why replace SLIF?
+## Why replace the old SLIF?
 
 The old framework is ~11,700 lines of Papyrus and ~90 public functions, but installed mods only ever call a small fraction of it. What players meet is the other side: heavy script load, a nine-page MCM of body-specific JSON editing, and silent failure when any of it is misconfigured.
 
-    Native engine - the aggregation and the ramp run in C++, not on the script engine
-    Zero configuration - one installer question instead of nine MCM pages
-    No patches needed - the API is pinned from SLIF 1.2.2 bytecode, signature for signature
-    One-button migration - your characters keep their shape
-    Diagnoses instead of failing silently - an actor page that shows who inflates what
-    User guide !!! Check before asking questions
+- Native engine - the aggregation and the ramp run in C++, not on the script engine
+- Zero configuration - one installer question instead of nine MCM pages
+- No patches needed - the API is pinned from SLIF 1.2.2 bytecode, signature for signature
+- One-button migration - your characters keep their shape
+- Diagnoses instead of failing silently - an actor page that shows who inflates what
+- User guide !!! Check before asking questions
 
+## Core features
 
+The same math, kept on purpose
+-     All six of SLIF's calculation types, its numbering, its default (Top X)
+-     Same clamps, multipliers and defaults, formula for formula
+-     The calculation type now applies to BodySlide sliders the same way it applies to nodes
+- Bodies without homework
+-     Pick your body once in the FOMOD: CBBE 3BA (or SOFTBODY), generic CBBE, BHUNP, or "none - node scaling" (works with any body, exactly like old SLIF)
+-     Verified slider names, no hand-edited JSON
+-     UBE 2.0 support installs automatically and matches by race, even alongside a 3BA game
+-     Per-actor body profiles, tunable through overlays that updates cannot overwrite
+- Incremental inflation, for free
+-     Bodies swell toward new sizes in steps instead of snapping
+-     A native ramp, off the script engine entirely - on by default
+-     MCM speed slider from 0.10x to 5.00x, retiming even inflation already in progress
+- Diagnostics instead of guesswork
+-     Per-actor page: who inflates what, what it becomes on your body, what RaceMenu actually shows
+-     Foreign RaceMenu keys stacking on the same slider are named - the usual culprit when a body is bigger than the numbers explain
+-     Full ledger dump to the log, verbose mode, per-actor reset
+- Save-friendly state
+-     One compact native co-save record instead of hundreds of StorageUtil keys
+-     Recomputed and re-applied on every load, self-healing
+-     One-button old-SLIF import, reported in a notification
+- One page of settings
+-     Calculation type, incremental inflation, inflation speed, overall magnitude
+-     Overall magnitude is a display knob: it never edits what mods stored
 
-
-
-Core Features
-
-    The same math, kept on purpose
-        All six of SLIF's calculation types, its numbering, its default (Top X)
-        Same clamps, multipliers and defaults, formula for formula
-        The calculation type now applies to BodySlide sliders the same way it applies to nodes
-    Bodies without homework
-        Pick your body once in the FOMOD: CBBE 3BA (or SOFTBODY), generic CBBE, BHUNP, or "none - node scaling" (works with any body, exactly like old SLIF)
-        Verified slider names, no hand-edited JSON
-        UBE 2.0 support installs automatically and matches by race, even alongside a 3BA game
-        Per-actor body profiles, tunable through overlays that updates cannot overwrite
-    Incremental inflation, for free
-        Bodies swell toward new sizes in steps instead of snapping
-        A native ramp, off the script engine entirely - on by default
-        MCM speed slider from 0.10x to 5.00x, retiming even inflation already in progress
-    Diagnostics instead of guesswork
-        Per-actor page: who inflates what, what it becomes on your body, what RaceMenu actually shows
-        Foreign RaceMenu keys stacking on the same slider are named - the usual culprit when a body is bigger than the numbers explain
-        Full ledger dump to the log, verbose mode, per-actor reset
-    Save-friendly state
-        One compact native co-save record instead of hundreds of StorageUtil keys
-        Recomputed and re-applied on every load, self-healing
-        One-button old-SLIF import, reported in a notification
-    One page of settings
-        Calculation type, incremental inflation, inflation speed, overall magnitude
-        Overall magnitude is a display knob: it never edits what mods stored
-
-
-
-
-Compatibility
+## Compatibility
 
 Compatibility was pinned by decompiling old SLIF 1.2.2 and every consumer in a large live load order - the implemented API is exactly what installed mods actually call, verified in bytecode. No patches, no compatibility versions.
 
+## Requirements
 
-Requirements
+SKSE64 (or SKSE VR)
+- SkyUI - the MCM
+- RaceMenu - its skee plugin performs the actual body changes
+- XPMSSE - the standard skeleton nodes
+- PapyrusUtil - used once, to read an old SLIF save during migration
 
-    SKSE64 (or SKSE VR)
-    SkyUI - the MCM
-    RaceMenu - its skee plugin performs the actual body changes
-    XPMSSE - the standard skeleton nodes
-    PapyrusUtil - used once, to read an old SLIF save during migration
+**Also listed in the page's initial requirements:** Address Library for SKSE Plugins, PapyrusUtil SE, RaceMenu.
 
+## Installation and migration
 
+Uninstall or disable SexLab Inflation Framework and its patches. SLIF NG replaces it file for file
+- Install with the FOMOD and answer its one question: which body did you build in BodySlide
+- Load your game. There is no step 3
+- If the save ran old SLIF, open the MCM once and press Old-SLIF import - it reports how many values it carried over
+- Going back is a plain mod-manager swap: applied values live under old SLIF's own RaceMenu key, so the original framework finds and overwrites them
 
-
-Installation
-
-    Uninstall or disable SexLab Inflation Framework and its patches. SLIF NG replaces it file for file
-    Install with the FOMOD and answer its one question: which body did you build in BodySlide
-    Load your game. There is no step 3
-    If the save ran old SLIF, open the MCM once and press Old-SLIF import - it reports how many values it carried over
-    Going back is a plain mod-manager swap: applied values live under old SLIF's own RaceMenu key, so the original framework finds and overwrites them
-
-For Mod Authors
+## Mod author API
 
 The write API is old SLIF's, unchanged - SLIF_Main.inflate, SLIF_Morph.morph, the mod events, all pinned from 1.2.2 bytecode. If your mod worked against SLIF, it works here.
 
 New on top:
 
-    Query API in Papyrus (IsTracked, GetTrackedActors, GetModsDriving, GetApplied, HasTarget, DrivenBy, ...) and in C++ for other SKSE plugins
-    SLIFNG_Settled mod event - act on a finished shape instead of polling
-    Semantic regions (region:weight) and batched writes
-    Integration kit shipped as a separate API download
-    Developer documentation - architecture, write API, query API, the aggregation math, the body profile format
+- Query API in Papyrus (IsTracked, GetTrackedActors, GetModsDriving, GetApplied, HasTarget, DrivenBy, ...) and in C++ for other SKSE plugins
+- SLIFNG_Settled mod event - act on a finished shape instead of polling
+- Semantic regions (region:weight) and batched writes
+- Integration kit shipped as a separate API download
+- Developer documentation - architecture, write API, query API, the aggregation math, the body profile format
 
-  Credits
+## Credits and attribution
 
-    qotsafan - author of SexLab Inflation Framework, and everyone who contributed to it over the years. SLIF NG is a reimplementation of their framework: the API, the node vocabulary, the six calculation types and their formulas are all theirs, kept deliberately intact so the ecosystem built on SLIF keeps running. None of this exists without that work
-    RaceMenu / skee, which does the actual body changes
-    The SKSE team, and CommonLibSSE-NG (Ryan-rsm-McKenzie, alandtse and contributors)
+qotsafan - author of SexLab Inflation Framework, and everyone who contributed to it over the years. SLIF NG is a reimplementation of their framework: the API, the node vocabulary, the six calculation types and their formulas are all theirs, kept deliberately intact so the ecosystem built on SLIF keeps running. None of this exists without that work
+- RaceMenu / skee, which does the actual body changes
+- The SKSE team, and CommonLibSSE-NG (Ryan-rsm-McKenzie, alandtse and contributors)
 
 
 Note: SLIF NG ships a clean-room plugin that reuses the SexLab Inflation Framework.esp name and its FormIDs. That is not a copy of qotsafan's plugin - it is how existing mods detect the framework without needing a single patch.
 
+## Source code and documentation
+
+- [GitHub repository](https://github.com/crajjjj/SLIFNG)
+- [Developer documentation](https://crajjjj.github.io/SLIFNG/)
+
 ---
 
-Source Code
-GitHub Repository • Documentation
-https://github.com/crajjjj/SLIFNG
-https://crajjjj.github.io/SLIFNG/
+## NEFARAM-Rhiven integration notes (local project)
+
+- **Body:** CBBE 3BA is used in the Rhiven setup; choose **CBBE 3BA** in the FOMOD if that matches the built body.
+- **Old SLIF:** do not run the old framework and SLIF NG together; review existing old-SLIF patches before installation.
+- **Estrus Chaurus+:** its copied description credits SLIF integration, but real behavior with this NG replacement still needs in-game testing.
+- **BeeingFemale NG 3.6.8:** already installed; monitor simultaneous inflation requests and the actor diagnostics page during tests.
+- **OviBody / Curse of Life:** not part of the intended Rhiven setup.
+
+*The statements above are integration checkpoints, not claims that a complete compatibility test has passed.*
