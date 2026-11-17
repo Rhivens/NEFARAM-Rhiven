@@ -1,0 +1,328 @@
+Estrus Unified 
+
+ Estrus Unified 1.2 brings Chaurus, Spider and Dwemer together in one mod. You can now hatch and raise Chaurus and Spider companions.
+ 
+
+You no longer need separate downloads of Estrus Chaurus, Estrus Spider, Estrus Dwemer or Estrus for Skyrim. Their required Estrus animation assets and the P+ conversion are included. The normal framework requirements listed below still apply.
+
+Credits
+
+    The original Estrus Chaurus authors and contributors, including Bane Master, Jbezorg and Tokinklownz420
+    Ed86 for the Spider and Dwemer add-ons
+    Cotyounoyume for Estrus for Skyrim and Estrus for Skyrim NG
+    WareWare for the original 3BA/body fixes
+    crajjjj for the Ovibody support contribution
+    Thanks to Preguissoso for VisualEffect.Play(SKSE) helped find fitting effects for burrow.
+    The SexLab, SkyUI, PapyrusUtil, SLIF and animation-conversion contributors
+     
+
+Please support the original authors. Unified would not be possible without their work.
+
+
+Features
+
+    One MCM, one ESP and one DLL. Chaurus, Spider and Dwemer each have their own attack, animation and pregnancy settings
+    Choose solo Estrus animations or creature scenes. Preview included animations without triggering Unified pregnancy
+    Skeleton scaling or body morphs for CBBE / 3BA and UUNP / BHUNP, with optional SLIF and Ovibody support
+    Separate attack cooldown and post-scene calm timers, settings remembered across saves, and pregnancy and hatchery tracking
+
+Raise your own brood
+
+Companions is optional and off by default. Enable it in the Companions tab to raise Chaurus and Spider hatchlings. Eligible offspring from active followers can join your roster too.
+
+Raise and name your companions. By default they reach Juvenile at 1 day, Adolescent at 4 days and Adult at 6 in-game days. Feeding them speeds up growth
+Carry babies on your back to protect them. Up to five are visible at once, and each carried baby adds 5 carry weight. Babies do not use summon slots
+Summon grown companions from the ground with a snap, then use the command wheel to direct them. Five active summons by default; configurable up to 25
+Order them to attack, feed, wait, follow or burrow away. Choose Passive or Aggressive behavior. 
+Hatchlings can have different patterns and colors, and keep their look as they grow
+
+ Requirements
+
+    SKSE64 and Address Library, matching your Skyrim version
+    SexLab SE or SexLab P+, with their normal requirements and a version suitable for your game
+    SkyUI and PapyrusUtil
+    RaceMenu, a compatible body and XPMSSE (in FOMOD Choose Extended, then any Ingame Customizing option except None)
+    Pandora Behaviour Engine Plus or FNIS to generate behaviors
+     
+
+Optional support
+
+    Compatible creature animation packs for Creature scenes and companion Defeat. Unified includes its solo Estrus animations, not a full creature animation pack
+    SLIF NG and Ovibody for egg visuals. Ovibody needs SLIF NG 0.4.17+ and a body built with Build Morphs Tutorial
+    BodySlide for body-morph setups. Build your body with Build Morphs enabled
+    Devious Devices NG for restraint compatibility
+    Oninus Lactis for optional milk leak visuals
+    Open Animation Replacer and Behavior Data Injector for Third-person summon snap animation
+    ConsoleUtil Extended only if you want the optional spawn commands listed under Good to know
+
+Installation
+
+Start a new game if switching from the separate Estrus plugins or the old patch-based release. Keep your old setup for saves that still use those plugins.
+
+    Install the framework requirements above
+    Disable the old Unified patch and the separate Estrus Chaurus, Spider, Dwemer and Estrus for Skyrim installs in your new-game profile
+    Install Estrus Unified 1.2 and enable EstrusUnified.esp. Let Unified win Estrus animation conflicts. Select an optional FOMOD patch only if you use the matching mod
+    Run Pandora or FNIS for Estrus behaviors. For the optional snap animation, use Pandora or Nemesis with Estrus Unified - Summon Snap checked. Keep the generated output enabled, then launch Skyrim through SKSE and open Estrus Unified in the MCM
+
+Compatibility
+
+Compatible
+
+    SexLab SE and SexLab P+, including separate orgasm event support. Use the framework version for your game
+    CBBE / 3BA and UUNP / BHUNP, with optional SLIF, SLIF NG, Ovibody, Devious Devices NG and Oninus Lactis support
+    SL Widgets and Beeing Female NG versions that recognize Estrus Unified
+    Naked Defeat, FMEA and Deviously Enchanted Chests: original supported events are retained
+    Fertility Mode Reloaded: choose how pregnancy overlap is handled under General. No extra patch needed
+
+Optional FOMOD patches
+
+    Milk Mod Economy (Scripts 20220522): adds pregnancy detection for Unified. Using MME Extensions? Leave the MME FOMOD option unchecked
+    SexLab Parasites (ParasitesSE20250105): adds Unified Chaurus pregnancy detection and updates Chaurus Queen egg references (will remove if asked)
+
+Overlap or no integration
+
+    Curse of Life: has its own pregnancy system. Both systems can run at once; there is no automatic handoff
+    Mother of Chaurus and Brood Mother: overlapping companion features; no dedicated integration
+    Deviously Cursed Loot: no patch included for integrations that still look for the old Estrus plugin
+    OviMovement: Uses different morphs, it will not work with my mod natively.
+
+Do not install alongside Unified
+
+    Old plugins: EstrusChaurus.esp, EstrusSpider.esp, EstrusDwemer.esp and zzEstrus.esp
+    Old helper and patches: EstrusForSkyrimNG.dll, the separate Estrus SLSB conversion, and old Estrus DD, SLP, 3BA or Ovibody script patches. 
+    Chaurus Infestation: Overlapping features looks for old estrus plugin
+
+Good to know
+
+Companion hotkey: Hold to open the wheel, Double tap the key but hold on the 2nd tap to charge summons or tap once to desummon. You can assign a separate Summon / desummon key in the MCM. Select Use one key to clear it again.
+
+Optional console commands: With ConsoleUtil Extended installed and Companions enabled, use a count from 1 to 5:
+
+    add chbaby 1-5 ; chaurus baby
+    add spbaby 1-5 ; spider baby
+    add chadult 1-5 ; chaurus adult
+    add spadult 1-5 ; spider adult
+    remove euspawn ; removes only console-spawned companions,
+
+ What is shared?
+The scaling method, direct-morph body profile and swelling speeds are shared. Each integration has its own enable switch, attacks, pregnancy controls, growth amounts, optional size limits and Ovibody preference.
+ 
+
+What does Infestation do?
+It allows laid Chaurus and Spider eggs to hatch. Fertile egg chance controls the chance for each egg, not the chance of becoming pregnant. At 100%, every checked egg is fertile when Infestation is enabled.
+ 
+
+What does Short birth duration do?
+It reduces extra laying repetitions rather than speeding up the animation clips. The total number of items laid can be lower.
+ 
+
+What does Breast growth per birth do?
+It controls lasting breast growth after birth. A value of 1.0 keeps the starting scale; 1.2 adds 20% to it. Further pregnancies can add more. Turning the option off does not undo growth already retained.
+ 
+
+What are Creature scenes?
+These request a SexLab scene with the attacking creature, rather than the solo tentacle or machine scene. They need compatible creature animations. Both attack types can be enabled; each rolls its chance, and one is selected if both succeed.
+ 
+
+What do the two timers do?
+Estrus event cooldown controls how soon another Estrus event can start, not normal combat. Post-scene calm temporarily stops the handled attacker from attacking; hitting it ends the calm early.
+ 
+
+What does DD support do?
+Belts and some restraints can block a scene. An unprotected armbinder can be unlocked and removed through DD's API; it is not automatically re-equipped afterward. Protected and quest devices are left alone.
+ 
+
+What does the reset clear?
+Reset pregnancy and morphs clears current Estrus pregnancies and their temporary growth, including tracked NPCs. Reset residual breast growth clears only lasting breast growth. Saved preferences and hatchery totals are kept.
+ 
+
+What do hatchery totals include?
+Player pregnancies, items laid and hatchlings from player-owned eggs, tracked from the update onward. Earlier play history is not reconstructed. Dwemer items do not hatch.
+ 
+
+Where are settings saved?
+Preferences use SKSE/Plugins/StorageUtilData/EstrusChaurus/Settings.json. Scaling method and body profile use ECScaling.json in the same folder. No import/export buttons are needed. 
+
+Known issues
+
+    Some tentacle flickering between stages remains
+
+CHANGELOG:
+1.3 - BugFix Update
+ MCM now registers as Estrus Unified immediately
+Simplified optional patch descriptions in the installer
+Restored Slime ETC01’s missing wrist props, including cleanup after interrupted scenes
+Added exhausted recovery after Chaurus, Spider and Dwemer births: players press Space / Jump to get up; NPCs rest for two minutes
+Improved birth cleanup to prevent interrupted animations and getting stuck standing
+Fixed the Wrye Bash INGR.DEST error while keeping Chaurus and Spider eggs breakable
+Addressed a crash after killing hatchlings by moving combat cleanup onto the game thread and excluding dying or dead companions
+Added threading safeguards for creature-size preservation and NPC fleeing checks
+Removed personal build paths from the DLL 
+
+Previous changelog
+ 1.2 - Raise your own brood
+
+Raise Your Own Brood
+
+    Raise Chaurus and Spider companions. The new Companions tab is optional and off by default.
+    Watch them grow from Baby to Juvenile, Adolescent and Adult. The default milestones are 1, 4 and 6 in-game days. Existing preferences are kept.
+    Tap Activate on a baby to carry it, or hold Activate on a companion to give it a name. Up to five babies are visible on your back, and each carried baby adds 5 carry weight.
+    Babies don't count toward the summon limit. Ownership and active summon limits are configurable.
+    With follower adoption enabled, eligible hatchlings from active female followers can join your roster, including when you play a male character.
+    Hatchlings can have distinct patterns and colors. There are 480 combinations across both species, with a configurable 35% chance by default. They keep their appearance as they grow.
+    Set movement speed separately for each species. Companion spiders gain poison spit at Juvenile.
+    Order companions to feed on corpses to shorten their growth time. The body fades as they feed and drops its gear at the end.
+
+Commands and Summoning
+
+    Use the command wheel to Move, Attack, Defeat, Eat, Wait/Follow, Hop On/Hop Off or Desummon. Preview targets and destinations with animated markers before confirming.
+    Choose Passive or Aggressive behavior. Direct orders work in either mode without changing your stance.
+    With one key, hold for the wheel, tap then hold to choose how many to summon, or tap once to desummon. You can also bind summoning and desummoning to a separate key.
+    Summon with a finger snap and watch companions emerge in staggered bursts of dirt, smoke and shadow. When dismissed, grown companions burrow back underground.
+    Optional console commands spawn baby or adult companions and remove only those console spawns, even after they've grown.
+
+Companion Defeat
+
+    Defeat is a separate, nonlethal order. Adult companions qualify by default; you can also allow Adolescents or Juveniles.
+    Defeat looks for a matching SexLab scene with up to four companions of the same species. It supports vaginal and anal-only animations, with an option to include oral-only animations.
+    Defeated NPCs drop their weapons and shield. Dropping their main outfit is on by default and can be turned off.
+    NPCs stay down for a configurable recovery period after the scene. If no scene can start, they go straight to knockdown recovery.
+
+Pregnancy and Hatchery
+
+    With Fertility Mode Reloaded installed, choose whether the two systems run independently, Estrus takes priority without interrupting FMR labor, or Estrus skips actors who are already pregnant through FMR. This applies to all three Estrus types.
+    Chaurus and Spider eggs are easier to hit and roll fertility only once. Breaking an egg prevents it from hatching.
+    Hatchlings grow through the same stages even with Companions off, including NPC-born hatchlings. Wild babies are slower, have growth-scaled health and fight back only if attacked. Older wild offspring become hostile.
+
+Performance and Fixes
+
+    Faster startup and first-scene setup by removing the full animation-folder scan.
+    Separate switches for gameplay, attack and debug notifications. Startup and scene-stage debug messages are off by default.
+    Fixed separate-orgasm detection for SLSO and SexLab P+, and fixed Keep Chaurus size during P+ scene setup.
+    Fixed some NPC pregnancies stalling without growth, and improved player birth cleanup to prevent movement staying locked after get-up.
+    Improved scene recovery when loading a save or when a scene fails. Wild attackers can resume combat after their calm period without the previous crash.
+    Corrected recovery timers and Dwemer birth reporting. Fixed older milk effects interfering with newer ones.
+
+Compatibility and API
+
+    The FOMOD includes optional patches for Milk Mod Economy pregnancy detection and SexLab Parasites pregnancy and egg detection.
+    Mod authors can request pregnancy, delivery with eggs, or hatchable eggs on their own.
+    Mods can block new attacks or pregnancies separately, by creature type or for all three, globally or per actor, without changing the player's settings.
+    Added actor-specific birth events that distinguish delivery from resets and cancellations. The older Dwemer callback still works.
+
+Installing the updated Summon Snap behavior patch? Rerun Pandora or Nemesis afterward.
+ 
+
+1.1 - Merged build
+ 
+
+Merged installation
+
+    Combined Chaurus, Spider and Dwemer into EstrusUnified.esp and EstrusUnified.dll
+    Included required Estrus animation assets and the P+ conversion. Separate Estrus installs, their helper DLL and their script patches are no longer needed
+    Kept the previous menu, growth, Ovibody, milk-effect, settings and recovery improvements
+     
+
+Compatibility
+
+    Supports Skyrim SE / AE, including 1.5.97, 1.6.1170 and 1.7.104, with one multi-runtime DLL instead of a version-specific Estrus helper. Matching SKSE and Address Library are still required
+    Supports regular SexLab and SexLab P+, with script build checks for SexLab 1.63, 1.66b and P+
+    Retained the original EC / ES / ED scene events, stage callbacks and quest editor IDs. Mods using old ESP filenames or form IDs need an integration update
+    Updated the legacy Devious Devices helper and guarded optional device checks
+     
+
+Animations and attacks
+
+    Added Creature sex scenes for Chaurus and renamed the paralysis options to Creature scenes for all three integrations. Eligible vaginal creature animations can be aggressive or non-aggressive as I could only find 1 spider animation tagged aggressive/forced with vaginal tag.
+    Nearby attackers can join compatible group scenes or take turns in smaller scenes. Added Stop queued attackers; queues clear on load and the event cooldown starts after the last scene
+    Added separate saved animation checklists for Chaurus, Spider and Dwemer, including additional slime and ooze scenes
+    Added Play beside each animation and Stop preview, without pregnancy or machine debuffs. Corrected the extra scenes' P+ animation events and props
+    Added clearer readiness and missing-animation checks, with repair for incomplete Unified animation registrations in regular SexLab
+    Added optional Keep Chaurus size for Unified-started P+ creature scenes, with a warning about possible animation misalignment (its fine in my tests)
+     
+
+Pregnancy and recovery
+
+    Kept animation-only requests from Naked Defeat, FMEA and other mods pregnancy-free when they request effects off
+    Replaced lasting attacker alliances with adjustable post-scene calm, 120 seconds by default. Hitting the attacker ends calm early, and hostile attackers resume combat afterward
+    Improved failed-scene cleanup and movement recovery
+    Improved the player pregnancy display and merged-plugin reset lookups, and restored a missing Dwemer hatchling script alias
+     
+
+API for mod authors
+
+    Added EstrusUnifiedAPI.psc, a read-only pregnancy API for both the player and NPCs, without hardcoded spell IDs
+    GetPregnancyType returns fixed values: 0 = None, 1 = Chaurus, 2 = Spider, 3 = Dwemer
+    GetPregnancyProgress returns a percentage, including time passed while waiting or sleeping. GetPregnancyEndTime provides the due date
+    Added OnEstrusUnifiedPregnancyChanged notifications when pregnancy starts, ends, is cancelled or is reset. Timing and listener registrations are saved with SKSE
+    IsReady and GetAPIVersion let other mods check that the API is available. Pregnancy type values remain stable for future integrations
+
+1.0 - Previous patch-based release
+The original-plugin requirements mentioned below applied to 1.0 only, not the current merged build.
+Menu
+- Combined Chaurus, Spider and Dwemer settings into one Estrus Unified MCM
+- Hidden the original Chaurus, Spider and Dwemer MCM entries so only Estrus Unified is shown
+- Faster MCM startup and page switching, especially the Animations tab
+- Improved animation registration and toggles for SexLab and P+, including a missing animation registration fix
+- Settings save and load automatically, including on new games
+- Existing-save upgrades import missing settings and animation choices without overwriting saved preferences
+- Settings stay saved when loading older saves, without needing to save the game after changing them
+- Added an opening splash image with softly fading transparent edges and simplified General and body growth controls
+- Simplified tooltips without changing existing slider ranges or saved setting IDs
+- Clean up previously registered Estrus menus on existing saves, retrying when SkyUI is busy without resetting unrelated menus
+- Added read-only breast, butt and belly growth values under active pregnancies, labelled for morphs, SLIF or skeleton scaling
+ 
+
+Animations and attacks
+- Added optional Skyrim notifications for player attack results, with cooldown time, restraint blocks and animation/startup problems
+- Repeated messages are limited; NPC attacks and missed chance rolls stay quiet
+- Adjusted converted P+ stages to play once before advancing
+- Smoothed stage transitions and reduced brief standing or T-poses
+- Fixed repeated get-up playback and added completion-based redressing for P+ and regular SexLab
+- Prevented jumping from interrupting birth, with recovery safeguards
+- Added a shared attack cooldown that starts after getting up: 60 seconds by default, adjustable from 0-600 seconds
+- Prevented attacks from overlapping an active scene
+- Added per-actor cleanup so rapid stage skipping cannot restart scene sounds or props after the scene ends
+- Death and scene-timeout recovery also clean up sounds and scene props
+- Pregnancy checks tolerate skipped stages without forcing pregnancy when a scene ends too early
+- Spit/machine effects and paralysis creature scenes can both be enabled; each rolls its own chance and one is chosen randomly if both succeed
+- Corrected creature animation selection for regular SexLab and P+, with a check before starting when no matching scene is available
+ 
+
+Body growth
+- Raised the maximum breast, belly and butt size sliders to 10 while keeping their existing defaults
+- Added a choice between skeleton scaling and body morphs, with automatic SLIF support when installed
+- Added CBBE / 3BA and UUNP / BHUNP body profiles, with CBBE / 3BA selected by default
+- Shared scaling method, body type and swelling speed controls, with separate growth amounts and optional size limits for each integration
+- Corrected morph restoration and residual breast growth for new pregnancies
+- Renamed the residual growth setting to Breast growth per birth, with a clearer tooltip
+- Ongoing pregnancies keep their starting scaling settings through recovery
+- Added Ovibody support for player and NPC pregnancies, with eggs growing during pregnancy and gradually disappearing as they are laid
+- Ovibody visuals can be enabled separately for Chaurus, Spider and Dwemer; normal bodies remain supported without Ovibody
+- Separate Run actions reset pregnancies and temporary growth, or reset only residual breast growth without ending pregnancies
+- Breast, belly and butt growth reaches the configured full-term size at 100% growth, instead of stopping near the old default size
+- Direct morph changes refresh the loaded model; larger belly targets keep egg morphs within their own limits
+- Stronger breast growth for Estrus with SLIF NG's 3BA and BHUNP profiles, using body-specific blends
+ 
+
+Milk visuals
+- Choose the original Estrus effect or Oninus Lactis squirts for breast leaking, with automatic detection
+- Added a 10-second visual-only test in General that closes the MCM automatically, with start/finish notifications
+- Adjusted the Estrus 3BA emitters outward while keeping them attached to the moving breast bones so milk leaking is closer to the nipples (not a perfect solution bodies vary alot)
+- Fixed an interrupted milk effect leaving an emitter equipped after cleanup
+
+Pregnancy and hatchery
+- Separate enable switches for Chaurus, Spider and Dwemer
+- Prevented overlapping Estrus pregnancies on the same actor, including NPCs
+- Improved Dwemer pregnancy detection, with duplicate-request protection and clearer rejection logs
+- Short birth duration and Infestation are enabled by default on fresh setup without saved preferences
+- Fertile egg chance defaults to 15% for Chaurus and Spider and can be set from 0-100%
+- Added player totals for pregnancies, items laid and hatchlings, with per-integration counts; earlier play history is not counted
+
+Compatibility
+- Preserved the original ESP names, quest IDs, scripts and external events for other mods
+- Original quests continue running; the base Spider and Dwemer mods are still required to use their integrations
+- Updated Devious Devices handling to use its device APIs and respect protected items 
+
+Permission:
+All perms belong to the original authors; any work i helped build can be adapted copied and used as you see fit without my permission or credit as long as its opensource 
