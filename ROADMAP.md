@@ -67,12 +67,12 @@
 ### Suppressions prévues
 
 - [ ] **Enslaved by the Thalmor** — retirer le mod et contrôler ses éventuels dépendants / patches.
-- [ ] **Unethical Alchemy** — retirer le mod **et son correctif Rhiven associé**, après vérification des dépendances.
+- [ ] **Unethical Alchemy 1.0.0** — retirer le mod de base, **sa traduction FR** et **`Unethical Alchemy - Rhiven Fix.esp`**, après vérification des dépendances. Le correctif Agryn existant **ne doit pas être réutilisé** sans nouvel audit xEdit.
 - [ ] **SexLab Approach / Approach Redux** — retirer le mod, ses éventuels patches, ses traductions dédiées et ses dépendants ; abandonner les anciens réglages MCM correspondants.
 
 ### Ajouts / évolutions prévues
 
-- [ ] **Unethical SpellCraft** — intégrer selon l'étude déjà menée ; revérifier la version retenue, les requirements, conflits et traduction avant installation.
+- [ ] **Unethical SpellCraft 2.0.0 — module Enchanting UNIQUEMENT** : installer le scénario d'enchantement à Heartwood Mill, **sans le module Alchemy** (modules mutuellement incompatibles selon l'auteur). Vérifier les requirements, le nouveau plugin et les packages IA dans xEdit, les conflits à Heartwood Mill, ainsi que la traduction FR. **L'auteur indique que le module Enchanting ne requiert pas SLA.**
 - [ ] **Estrus Unified 1.3** — intégrer en version fusionnée (voir phase 3).
 - [ ] **SLIF NG** — évaluer l'ajout et son profil **CBBE 3BA**, avec vérification de l'ancien SLIF et de ses patches.
 - [ ] **Fill Her Up** — **étude seulement** : comparer la Baka Edition actuellement installée (+ FR) à **FHU Crajjj Edition 1.0.5**, notamment les scripts, dépendances, intégration SLIF NG et traduction. **Aucun remplacement automatique décidé.**
@@ -165,7 +165,7 @@
 | Recréer Eleanor via preset RaceMenu JSON | **Prévu** |
 | Évaluer MCM Memory avant modification | **Priorité n° 1**, restauration à éprouver |
 | Supprimer Enslaved by the Thalmor, Unethical Alchemy, SexLab Approach | **Prévu**, dépendances à contrôler |
-| Ajouter Unethical SpellCraft | **Prévu**, version et intégration à confirmer |
+| Remplacer Unethical Alchemy par **Unethical SpellCraft 2.0.0 — Enchanting uniquement** | **Décidé** ; suppression base + FR + correctif Rhiven, audit xEdit et traduction du nouveau module à effectuer |
 | Ajouter Estrus Unified 1.3 sans les anciens modules Estrus | **Décidé**, vérification des dépendants encore requise |
 | OviBody / Curse of Life / compagnons Estrus | **Exclus / désactivés** |
 | SLIF NG et coexistence des BodyMorphs | **Étude et validation à mener** |
