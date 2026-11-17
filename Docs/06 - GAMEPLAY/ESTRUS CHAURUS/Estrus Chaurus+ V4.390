@@ -1,0 +1,205 @@
+Estrus Chaurus+ V4.390
+
+About This File
+
+All credits go to the original author of this mod, Jbezorg. Since he has taken a hiatus, I will be maintaining this mod for the time being. Thanks to Min for helping to keep the Mod alive by updating it for SL1.5+
+
+Original Mod Description by Jbezorg
+
+WHAT DOES THIS MOD DO?
+Chaurus spit attacks or Sex with Chaurus can trigger an Estrus Tentacle attack and impregnation. In roughly 3 days, they Chaurus Eggs will be expelled from the host's body.
+
+WHAT CAN YOU DO?
+
+    If the skeleton supports node scaling the breasts will enlarge during that time. MCM will auto-configure Estrus Chaurus based on your skeleton and it will be available if the skeleton and body mesh supports it. If this is available, you can set how large the breasts will grow.
+    You can set how long the impregnation will last.
+    You can turn on / off impregnation by enabling / disabling the pregnancy option. The tentacle attack will still happen but no impregnation.
+    You can turn on / off the chaurus eggs hatching by enabling / disabling the Chaurus Infestation option. An impregnated NPC will still lay chaurus eggs. They just will not hatch.
+    You can choose to have some residual breast growth. Breast size is not returned fully to the original size.
+    You can remove all impregnation effects from NPCs, Companions & the Player by enabling "Prepare for uninstall" ( this can take a few min. to run).
+
+The breast enlargement feature is very experimental. It's very likely to cause CTDs. You can disable this feature in MCM by setting breast growth to "NONE".
+
+SOME THINGS TO KEEP IN MIND
+Don't update to a new version without first enabling "Prepare for Uninstall" and letting it cure everyone.
+
+    Estrus shout abilities AND THE ESTRUS MOD ITSELF is completely unrelated to this mod.
+    When the pregnancy effect ends:
+        The original breast scale is restored.
+        The victim is removed to the Chaurus Faction ( if still in it )
+        The perk is removed.
+
+    [*]Don't save or game wait while the Estrus Tentacle magic effect is active. You'll most likely CTD. Wait a few min. before to allow for the first NiNode update to occur. [*]Breast enlargement and pregnancy will only work on body meshes that support skeletal scaling e.g. TBBP, BBP body meshes. [*]If You don't see MCM updating, use the following console command.
+
+setstage SKI_ConfigManagerInstance 1
+
+ EC+ Version 4.390
+
+ 
+
+As version 4.390 has major changes to the esp file I do not recommend trying to upgrade - a new game is required
+
+ 
+
+For the LE version NiOverride and XPMSE are required for pregnancy scaling to work in EC+ 4.20 onwards
+
+ 
+
+For the SE version SKEE and XPMSE are required for pregnancy scaling to work.
+
+ 
+
+Thanks to t3h0th3r for providing the updated scaling code!
+
+ 
+
+There are three methods by which the EC effect can be applied to the player or a follower:
+
+    Chaurus spit attacks can trigger tentacle attacks - the chance of attack is configurable via the EC MCM
+    Sexlab scenes involving a Chaurus triggered by another mod (e.g. Sexlab Defeat)
+    EC+ scenes triggered by other mods (e.g. FMEA, Deviously Enchanted Chests, Sexlab Parasites, Deviously Cursed Loot)
+
+
+Chaurus Spit can also trigger Tentacle attacks on non-follower NPCs! At present NPC pregnancies will be lost if you or the NPC changes cell.
+
+ 
+
+
+Updating
+
+ 
+
+Updating from version 4.381 to version 4.390 requires a clean save or new game.
+
+ 
+
+For Modders 
+
+ ;The EC interface uses ModEvents. This method can be used without loading EC as a master or using GetFormFromFile
+;
+;To call an EC event use the following code:
+;
+; int ECTrap = ModEvent.Create("ECStartAnimation")   ; Int      Int does not have to be named "ECTrap" any name would do
+; if (ECTrap);    ModEvent.PushForm(ECTrap, self)          ; Form Pass the calling form to the event
+;    ModEvent.PushForm(ECTrap, akActor)                     ; Form  The animation target
+;    ModEvent.PushInt(ECTrap, EstrusTraptype)              ; Int      The animation required:
+
+                                                                                       ;  -1 = Impregnation only with No Amimation, 0 = Tentacles, 1 = Machines 2 = Slime 3 = Ooze
+;    ModEvent.PushBool(ECTrap, true)                             ; Bool   Apply the linked EC effect (Ovipostion for Tentacles, Slime & Ooze, Exhaustion for Machine)
+;    ModEvent.Pushint(ECTrap, 500)                                ; Int      Alarm radius in units (0 to disable)
+;    ModEvent.PushBool(ECTrap, true)                             ; Bool  Use EC (basic) crowd control on hostiles if the Player is trapped by tentacles
+;    ModEvent.Send(ECtrap)
+; else
+;    ;EC is not installed
+; endIf
+;
+; Setting the animation required to -1 applies EC breeder effect without any animation or visual effects, alarms,
+; chastity device ; checks, or crowd control however ALL 6 parameters still
+; need to be passed for the modevent to function. To use impregnation only
+; the required parameter values  are: self, akActor, -1, False, 0, False; To register a callback to trigger on a specific stage of the next animation played
+;Use this modevent immediately BEFORE calling the EC event
+;
+; To register for a callback when an EC event triggered by your mod reaches a specific animation stage use:
+; SendModEvent("ECRegisterforStage,"MyModsCallbackName", CallbackAnimationStage as Float)
+;
+; **NB** Only one stage can be registered & the callback registration is cleared once the animation plays, it must therefore be
+;             sent each time you trigger the EC animation event that needs a stage callback
+;             Don't forget to Register for the callback event (e.g. RegisterForModEvent("MyModsCallbackName", "OnECStage" ) in your own mod
+;             (and handle any potential failure by unregistering as well!)
+;
+
+ 
+
+;To call an EC Birth event use the following code:
+;
+;    int ECBirth = ModEvent.Create("ECGiveBirth")      ; Int              Int does not have to be named "ECBirth" any name would do
+;    if (ECBirth)
+;        ModEvent.PushForm(ECBirth, self)                    ; Form          Pass the calling form to the event
+;        ModEvent.PushForm(ECBirth, akActor)             ; Form          The actor to give birth
+;        ModEvent.PushForm(ECBirth, akItem)               ; Form          The Item that the actor will give birth to -  if None the actor will birth Chaurus Eggs
+;        ModEvent.PushInt(ECBirth, aiNumItems)           ; Int             The number of Items to give birth too
+;        ModEvent.Send(ECBirth)
+;    else
+;        ;EC is not installed
+;    endIf
+;
+;   **NB** The birth event will not fire if the actor is already infected with the Chaurus Parasite effect
+;               The birth event is unaware of calling mods effects on Breast/Belly/Butt nodes - Any changes to inflation of these nodes at birth must be handled
+
+;               by the calling mod
+
+ 
+
+ 
+
+EC sends the following ModEvents:
+
+ 
+
+    "ECBirthStarted" After the actor completes the lay down animation and as the roll onto back animation starts.
+    "ECBirthCompleted" when pregnancy and Egg birthing are complete
+
+ 
+
+Please do not link directly to EC functions - they are likely to change and break your mod! 
+
+Required Mods and Versions
+
+ 
+
+Legendary Edition 
+
+Estrus For Skyrim V2.41r1 (Must be installed but the mod does not have to be activated)
+
+Sexlab 1.62
+FNIS 6.1+
+FNIS Creature Pack 6.1+
+SkyUI 5.1
+XPMSE 2.80+
+Net Immerse Override 3.2.2+ or Racemenu 3.0+ (includes NIO)
+
+ 
+
+Special Edition 
+
+Estrus For Skyrim SE V2.45 (Must be installed but the mod does not have to be activated)
+
+Sexlab 1.63 Beta 9+
+FNIS 7.6SE +
+FNIS Creature Pack SE 7.6+
+SkyUI 5.2SE
+XPMSE 4.80+
+Racemenu SE 0.4.16+ (includes SKEE - required for pregnancy scaling)
+
+ 
+
+Known Issues
+
+ 
+
+None - please report any problems (or success) and I will try and sort them.
+
+ 
+
+Credits
+
+ 
+
+qotsafan for the Sexlab Inflation Framework integration cod
+
+osmelmc for the automatic EC animation registration patch
+
+ 
+
+ 
+
+Edited June 9, 2022 by Bane Master 
+
+
+What's New in Version V4.390 (29/08/2021)
+
+Released June 9, 2022
+
+    Added fully converted SE Version
+    Replaced deprecated "Tentacle Double" animation with "Tentacle Upright"
+    Reworked all animations for compatibility with current Estrus for Skyrim LE/SE Versions
