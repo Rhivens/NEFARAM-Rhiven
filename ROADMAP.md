@@ -1,70 +1,183 @@
-# Roadmap de finalisation NEFARAM-Rhiven 1.1
+# NEFARAM-Rhiven — Roadmap nouvelle partie & évolution du modpack
 
-Cette roadmap retrace les étapes finales validées et les derniers contrôles de début de partie. Les intégrations terminées, les validations historiques et les candidats non retenus sont documentés dans leurs fiches techniques, le [changelog](CHANGELOG.md) et l'[historique des mods non retenus](Docs/MODS-NOT-RETAINED.md).
+**Version de travail :** 2.0 — chantier ouvert le **17 novembre 2026**  
+**Socle de référence :** NEFARAM **17.3.8** · profil MO2 `Eleanor 17.3.8 - Naked Defeat`  
+**État :** **PLANIFICATION / AUCUNE MIGRATION VALIDÉE**  
+**Objectif :** préparer une **nouvelle partie propre**, intégrer les derniers changements ciblés, et **récupérer au maximum les réglages MCM** déjà réalisés pour éviter environ quatre heures de reconfiguration.
 
-**Baseline actuelle :** NEFARAM 17.3.8 · profil MO2 `Eleanor 17.3.8 - Naked Defeat`.
+> [!IMPORTANT]
+> La configuration NEFARAM-Rhiven précédente a été finalisée (phases 6 à 8 de l'ancienne roadmap) puis testée pendant **plusieurs jours de jeu**. **Ces validations ne sont pas à recommencer intégralement** : seuls les changements du présent chantier et leurs interactions sont à contrôler.
+>
+> Cette roadmap **remplace** l'ancienne procédure de finalisation. Les étapes historiques restent consultables via l'historique Git de `ROADMAP.md`, le [changelog](CHANGELOG.md) et les [documents de validation](Docs/VALIDATION/08-TESTING.md).
 
-**État au 10 novembre 2026 :** phases 6 et 7 déclarées terminées ; phase 8 (création d'Eleanor, paramétrage et vérification de persistance) validée. **PLAYTHROUGH READY / ACTIVE** pour le démarrage, avec contrôles des scénarios en jeu restant à effectuer. Le socle fonctionnel est gelé.
+---
 
-> La partie définitive doit démarrer depuis la sauvegarde fournie **NEFARAM_Start**, et non depuis le bouton vanilla `New Game`.
+## 0. Scénario de départ et principe de sécurité
 
-## 1. Phase 6 — passage complet en français ✅
+### Sauvegardes déjà disponibles
 
-- [x] Passer Skyrim et les ressources prévues en français selon la méthode retenue.
-- [x] Traduire les mods ajoutés qui le nécessitent.
-- [x] Vérifier les textes des ESP/ESM/ESL, MCM, fichiers Interface, strings et scripts sources lorsque pertinent.
-- [x] Ne jamais laisser une traduction écraser scripts, DLL, meshes ou autres assets sans justification.
-- [x] Tester dialogues, notifications, menus et MCM.
-- [x] Mettre à jour la [fiche des traductions françaises](Docs/10%20-%20TRANSLATIONS/07-TRANSLATIONS-FR.md).
+- **`NEFARAM_Start`** : sauvegarde d'origine à charger pour entrer dans la salle d'attente **Skyrim Unbound**, puis créer le personnage et lancer la partie.
+- **`Eleanor_Start`** : sauvegarde personnelle réalisée **après** environ 2 h de création d'Eleanor et 4 h de réglages MCM, **avant** son départ pour Bordeciel.
+- **Eleanor** : preset RaceMenu **JSON** déjà sauvegardé ; l'apparence peut être restaurée indépendamment de `Eleanor_Start`. Préserver également les éléments éventuels nécessaires à la tête et aux overlays.
 
-## 2. Phase 7 — contrôle technique pré-final ✅
+### Stratégie privilégiée
 
-Le détail opérationnel reste centralisé dans la [checklist pré-playthrough](Docs/VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md) et la [fiche de validation](Docs/VALIDATION/08-TESTING.md).
+1. **Exporter les MCM de `Eleanor_Start`**, dans un profil de test qui conserve **tous les mods actuels**.
+2. Modifier le modpack **sur une copie du profil / de l'installation**, puis régénérer les sorties nécessaires.
+3. Charger **`NEFARAM_Start`** avec le modpack modifié.
+4. Réimporter les paramètres MCM **compatibles**, recréer Eleanor via RaceMenu et initialiser les nouveaux mods.
+5. Créer une **nouvelle sauvegarde de départ** et effectuer des tests avant de quitter Skyrim Unbound.
 
-- [x] Vérifier le panneau gauche MO2, l'ordre des plugins, les conflits importants, les sorties générées et `Overwrite`.
-- [x] Mettre à jour les snapshots MO2 Rhiven après le dernier état retenu.
-- [x] Contrôler masters manquants, erreurs xEdit, ESL/ESPFE et DLL SKSE ajoutées.
-- [x] Lancer Pandora après le dernier changement d'animations et vérifier l'absence d'erreur bloquante.
-- [x] Régénérer uniquement les sorties BodySlide, morphs ou physiques qui doivent réellement l'être.
-- [x] Effectuer le test de stabilité pré-final depuis MO2 : lancement, chargement, sauvegarde/rechargement, changements de cellules, combat et scènes représentatives.
+**Solution secondaire, seulement si nécessaire :** examiner sur une **copie** si `Eleanor_Start` peut être réutilisée après les suppressions. Ce n'est **pas** la voie par défaut, car des quêtes, scripts et aliases peuvent déjà être initialisés dans cette sauvegarde.
 
-## 3. Phase 8 — configuration définitive validée ✅
+> [!CAUTION]
+> **Ne jamais écraser `NEFARAM_Start`, `Eleanor_Start`, le preset RaceMenu, les fichiers MCM exportés ou le profil MO2 validé.** Ne pas désinstaller des mods scriptés sur la sauvegarde d'origine et ne pas lancer de nettoyage ReSaver automatique.
 
-- [x] Démarrer depuis **NEFARAM_Start** et créer le personnage définitif.
-- [x] Laisser les scripts de démarrage et les enregistrements MCM se stabiliser, puis créer une sauvegarde propre.
-- [x] Configurer les MCM par blocs logiques : gameplay, SexLab/arousal/tatouages, survie, fertilité, UI/HUD, Wheeler et raccourcis.
-- [x] Régler les widgets et préférences HUD pendant cette session finale, conformément aux fiches UI/validation.
-- [ ] **Suivi de début de partie :** confirmer en jeu le réglage conservateur de SexLab Approach Redux 3.62 depuis les valeurs propres 3.62 ; ne pas importer aveuglément les anciennes valeurs. Voir sa [fiche d'intégration](Docs/06%20-%20GAMEPLAY/SEXLAB%20APPROACH%20REDUX/SEXLAB-APPROACH-REDUX-INTEGRATION.md).
-- [x] Quitter complètement Skyrim, relancer, charger la sauvegarde configurée et vérifier la persistance des paramètres.
-- [x] Si aucun problème bloquant n'apparaît, considérer NEFARAM-Rhiven 1.1 finalisé et lancer la partie.
+---
 
-### Réglages et contrôles confirmés pendant la finalisation
+## Phase 1 — Sauvegarder et éprouver la récupération MCM [PRIORITÉ ABSOLUE]
 
-- Profil définitif : `Eleanor 17.3.8 - Naked Defeat` ; snapshots MO2 et traductions FR mis à jour.
-- Pandora : **39 546 animations ajoutées**, génération terminée en **11,36 s** (message de fin reçu).
-- SkyHUD : boussole replacée en haut ; crosshair permanent fonctionnel.
-- TrueHUD repositionné ; widgets Beeing Female NG ajustés ; profil BodyMorph `CBBE 3BA.ini`.
-- SkyUI > Avancé > Carte d'objets : **alignement Centre**, **axe horizontal -20**, **axe vertical -120** (test avec un livre).
-- Tailor **3.0.1** retenu pour les tenues d'Eleanor : raccourci AZERTY **Maj+W** fonctionnel.
-- Naked Defeat : Naked Loot désactivé ; Naked Curses à 0 %. Vérification SSEEdit de la propriété `IndecencyRapeProb` : **Float = 0** dans `nade_ConfigQuest` ; curseur MCM absent/commenté, aucun changement de l'ESP nécessaire.
-- Sauvegarde manuelle créée ; fermeture complète du jeu, relancement et rechargement réussis ; **persistance des MCM, HUD et raccourcis confirmée**.
+**But :** vérifier que les ~4 h de configuration MCM peuvent être transférées avant la moindre modification structurelle.
 
-### Vérifications de gameplay restantes (non bloquantes pour commencer, mais non validées)
+- [ ] Sauvegarder `Eleanor_Start`, `NEFARAM_Start`, le preset RaceMenu JSON et les fichiers de configuration hors du dossier de travail.
+- [ ] Créer une **copie de test du profil MO2 actuel** ; conserver intact le profil validé.
+- [ ] Vérifier **MCM Memory** : version, compatibilité Skyrim/SKSE, dépendances, éventuels conflits avec **MCM Recorder** et mode de restauration manuelle sur sauvegarde préexistante.
+- [ ] Installer MCM Memory **sur la copie de test uniquement**.
+- [ ] Charger `Eleanor_Start` avec sa **modlist d'origine**, attendre l'initialisation de tous les MCM et réaliser un **export complet** vers un profil externe.
+- [ ] Vérifier concrètement la **liste des MCM et le nombre de paramètres exportés** ; noter les menus absents ou incomplets.
+- [ ] Examiner spécialement les mods avec **activation / initialisation préalable** : **BeeingFemale NG**, **Private Needs**, **Bathing in Skyrim**, et tout autre MCM utilisant des pages dynamiques.
+- [ ] Tester, idéalement sur une **copie de `NEFARAM_Start` et à modlist inchangée**, une **restauration manuelle** des paramètres ; vérifier les activations, valeurs, raccourcis, widgets et états effectivement restaurés.
+- [ ] Inventorier les configurations **non couvertes** : JSON externes, profils propres à certains mods, UI/HUD, Wheeler, touches, widgets, etc.
+- [ ] Sauvegarder l'export MCM et rédiger un bref bilan **réussi / partiel / insuffisant**.
 
-- [ ] Tester sur sauvegarde jetable la chaîne **Acheron → bridge → Naked Defeat**, contre humanoïdes et créatures, avec retour des contrôles, nettoyage des assaillants et sauvegarde/rechargement après événement.
-- [ ] Vérifier les risques de déclenchements simultanés entre événements civils, Public Whore, autres mods et châtiments publics.
-- [ ] Tester Dangerous Nights et ses interactions de sommeil sur une sauvegarde de test.
-- [ ] Confirmer en jeu les interactions d'équipement/tenues et les systèmes de survie/fertilité au fil des premières sessions.
-- [ ] Reporter les corrections pertinentes dans la [checklist détaillée](Docs/VALIDATION/13-PRE-PLAYTHROUGH-CHECKLIST.md) et la [fiche de validation](Docs/VALIDATION/08-TESTING.md).
+**Critère de passage :** un export utilisable **et une restauration réellement testée**. Ne pas présumer que tous les MCM, boutons d'activation ou états de scripts sont transférables ; prévoir les réglages manuels résiduels.
 
-Les anomalies rares découvertes ensuite seront traitées au cas par cas, sans rouvrir une validation générique de chaque intégration déjà retenue.
+---
 
-## 4. Backlog non bloquant
+## Phase 2 — Préparer la nouvelle configuration MO2
 
-- [ ] Évaluer **ReSaver++** : provenance, différences avec ReSaver/FallrimTools et formats pris en charge. Ne jamais nettoyer automatiquement une sauvegarde importante sans copie préalable.
+**But :** intervenir uniquement sur un environnement réversible.
 
-## Règle après finalisation
+- [ ] Dupliquer / sauvegarder le profil MO2 et les sorties générées importantes (Pandora, Synthesis, BodySlide si concerné).
+- [ ] Relever la **version exacte des mods actuels**, les dépendances et les correctifs Rhiven avant les modifications.
+- [ ] Contrôler les conflits et dépendances des ESP/ESL concernés avec **MO2, LOOT/xEdit et la liste des masters**.
+- [ ] Conserver une liste **avant / après** (modlist, plugins et load order) pour la documentation GitHub.
+- [ ] Ne pas réouvrir sans raison la validation de toutes les traductions, de l'UI et des systèmes déjà éprouvés.
 
-> **Pas de modification structurelle du socle sans raison sérieuse.**
+### Suppressions prévues
 
-Un ajout futur doit apporter un bénéfice réel, pouvoir être intégré proprement à une partie en cours et justifier son risque sur une instance stable. Dans le doute, le reporter au prochain playthrough.
+- [ ] **Enslaved by the Thalmor** — retirer le mod et contrôler ses éventuels dépendants / patches.
+- [ ] **Unethical Alchemy** — retirer le mod **et son correctif Rhiven associé**, après vérification des dépendances.
+- [ ] **SexLab Approach / Approach Redux** — retirer le mod, ses éventuels patches, ses traductions dédiées et ses dépendants ; abandonner les anciens réglages MCM correspondants.
+
+### Ajouts / évolutions prévues
+
+- [ ] **Unethical SpellCraft** — intégrer selon l'étude déjà menée ; revérifier la version retenue, les requirements, conflits et traduction avant installation.
+- [ ] **Estrus Unified 1.3** — intégrer en version fusionnée (voir phase 3).
+- [ ] **SLIF NG** — évaluer l'ajout et son profil **CBBE 3BA**, avec vérification de l'ancien SLIF et de ses patches.
+- [ ] **Fill Her Up** — **étude seulement** : comparer la Baka Edition actuellement installée (+ FR) à **FHU Crajjj Edition 1.0.5**, notamment les scripts, dépendances, intégration SLIF NG et traduction. **Aucun remplacement automatique décidé.**
+- [ ] Vérifier si les autres frameworks corporels demandent des ajustements : **BeeingFemale NG, Aroused BodyMorphs, Milk Mod Economy**, et les mods déjà présents.
+
+---
+
+## Phase 3 — Estrus Unified 1.3 : intégration ciblée
+
+**Documentation de référence :** [Estrus Unified](Docs/06%20-%20GAMEPLAY/ESTRUS%20CHAURUS/Estrus%20Unified) et [dossier Estrus](Docs/06%20-%20GAMEPLAY/ESTRUS%20CHAURUS/).
+
+### Architecture confirmée
+
+À partir de **Unified 1.1**, Chaurus, Spider et Dwemer sont fusionnés dans **`EstrusUnified.esp` + `EstrusUnified.dll`**. La version **1.3** inclut les ressources / animations Estrus nécessaires. Le guide historique Yiin & PastryFish reposait sur les anciens modules séparés ; **PastryFish a confirmé sur Discord NEFARAM le 17 novembre 2026 que ces anciens modules ne sont plus à installer et a corrigé son guide**. Le chargement sans masters manquants a été confirmé, mais les tests de stabilité / gameplay restent à faire.
+
+- [ ] Installer **Estrus Unified 1.3** et ses **dépendances générales** correspondant à notre version de Skyrim.
+- [ ] **Ne pas installer / activer** les anciens `EstrusChaurus.esp`, `EstrusSpider.esp`, `EstrusDwemer.esp`, `zzEstrus.esp`, `EstrusForSkyrimNG.dll` et leurs anciens patches de scripts.
+- [ ] Chercher d'éventuels **mods tiers qui référencent encore les anciens noms de plugins ou FormIDs** ; les examiner avant d'activer le nouveau profil.
+- [ ] Vérifier le **FOMOD 1.3** : `Core` obligatoire ; patch **MME** uniquement si version / configuration correspondante et **sans cocher ce patch si MME Extensions est utilisé** ; patch **SexLab Parasites** selon sa version et les autres patches de scripts.
+- [ ] Contrôler **`EstrusUnified.dll`**, animation assets et sortie Pandora. Ne pas confondre le dossier `SLIFNG` inclus dans Unified avec une installation complète du framework SLIF NG.
+- [ ] **BeeingFemale NG** : confirmer dans le MCM la détection de Unified et la gestion des grossesses / morphs.
+- [ ] **SLIF NG / CBBE 3BA** : tester les changements de ventre / poitrine / fesses, leur cumul et remise à zéro.
+- [ ] **Devious Devices** : vérifier l'intégration native de Unified ; ne pas ajouter préventivement les anciens patches ED/ES DDI des addons séparés.
+- [ ] **Oninus Lactis NG 2.1.0** : optionnel, décision et compatibilité à valider ; vérifier slot FOMOD / CBPC si retenu.
+- [ ] **Companions Chaurus / Spider : désactivés** dans le MCM ; ne pas activer **Summon Snap** dans Pandora.
+- [ ] **OviBody : exclu** ; **Curse of Life : exclu**.
+- [ ] Tester, sur sauvegarde jetable, les déclenchements Chaurus / Spider / Dwemer, les animations, la récupération du contrôle et les interactions avec SexLab.
+
+> **Nuance :** l'absence de masters manquants et la réussite du chargement ne prouvent pas à elles seules la stabilité prolongée ni la compatibilité de tous les mods tiers.
+
+---
+
+## Phase 4 — Génération des sorties et contrôles pré-lancement
+
+- [ ] Vérifier les règles de priorité MO2 et les scripts écrasés par les patches sélectionnés.
+- [ ] Régénérer **Pandora** après le changement d'animations/comportements ; conserver la sortie dédiée active et confirmer la fin sans erreurs bloquantes.
+- [ ] **Synthesis : inspecter les patchers actifs** et les changements de plugins / records. Régénérer si la nouvelle modlist invalide ou modifie les sorties produites ; ne pas conserver un patch obsolète.
+- [ ] Régénérer **BodySlide** uniquement pour les ajouts qui le nécessitent ; vérifier **Build Morphs** pour le corps concerné.
+- [ ] Contrôler les masters manquants, les warnings LOOT pertinents, les conflits xEdit et les plugins générés.
+- [ ] Examiner `Overwrite` et actualiser les snapshots **MO2 gauche / droite / loadorder / modlist / plugins** une fois la configuration figée.
+
+---
+
+## Phase 5 — Nouvelle partie, MCM et restauration d'Eleanor
+
+1. [ ] Charger la sauvegarde officielle **`NEFARAM_Start`**, **pas** le bouton vanilla `New Game`.
+2. [ ] Attendre l'enregistrement / la stabilisation des MCM du **nouveau** modpack.
+3. [ ] Effectuer la **restauration MCM manuelle** depuis l'export validé en phase 1.
+4. [ ] Activer et initialiser les MCM qui l'exigent (**BeeingFemale NG, Private Needs, Bathing in Skyrim**, etc.) avant ou pendant la restauration **selon le fonctionnement réel de chaque mod**.
+5. [ ] Vérifier l'absence d'erreurs dues aux **mods retirés** : leurs réglages ne doivent pas être réinjectés dans des systèmes inexistants.
+6. [ ] Configurer manuellement les **nouveaux MCM** (notamment Estrus Unified et, si retenu, SLIF NG / nouveau FHU).
+7. [ ] Contrôler les réglages hérités : survie, SexLab, fertilité, overlays, HUD, widgets, TrueHUD, SkyHUD, Wheeler, raccourcis AZERTY.
+8. [ ] Recréer **Eleanor** à partir du preset **RaceMenu JSON** ; vérifier la tête, cheveux, overlays, équipement et morphologie.
+9. [ ] Créer une nouvelle sauvegarde distincte, par exemple **`Eleanor_Start_Rhiven_v2`**, sans écraser les points de départ historiques.
+10. [ ] **Quitter complètement Skyrim**, relancer, charger cette nouvelle sauvegarde et vérifier la **persistance** des MCM, de l'apparence, des menus et raccourcis.
+11. [ ] Quand la sauvegarde de départ est validée, quitter la salle Unbound et commencer la nouvelle partie en Bordeciel.
+
+---
+
+## Phase 6 — Validation ciblée en jeu et clôture
+
+- [ ] Valider démarrage, chargement, sauvegarde/rechargement, changement de cellule, déplacements et combats.
+- [ ] Contrôler les scénarios affectés par les suppressions / ajouts de mods.
+- [ ] Vérifier **Estrus Unified** (scènes et sortie sans blocage, gestion des grossesses, restauration des morphs, compatibilité BeeingFemale NG).
+- [ ] Vérifier **SLIF NG** et le cumul des demandes corporelles provenant de **BeeingFemale NG, Fill Her Up, Aroused BodyMorphs, MME et Estrus Unified**, uniquement pour les intégrations réellement présentes.
+- [ ] Tester les interactions **Devious Devices / SexLab**, les animations créatures concernées et les éventuels dispositifs de récupération.
+- [ ] Contrôler les journaux utiles et, si nécessaire, **inspecter** les sauvegardes avec ReSaver **sans nettoyage automatique**.
+- [ ] Vérifier la persistance et la stabilité sur **plusieurs sessions de jeu**, plutôt que sur un simple chargement.
+- [ ] Mettre à jour [CHANGELOG.md](CHANGELOG.md), les fiches de mods, les snapshots MO2 et la [documentation de validation](Docs/VALIDATION/08-TESTING.md).
+- [ ] Marquer la nouvelle baseline **VALIDÉE / PLAYTHROUGH READY** seulement après ces tests.
+
+### Critères de réussite
+
+- **Nouvelle partie issue de `NEFARAM_Start`**, sans héritage des scripts des mods supprimés.
+- **Eleanor recréée** avec succès via RaceMenu.
+- **Maximum de paramètres MCM conservés**, et écarts résiduels répertoriés.
+- **Aucun master manquant**, sorties Pandora/Synthesis cohérentes et contrôles principaux concluants.
+- **Persistance vérifiée** après fermeture complète de Skyrim et plusieurs reprises de sauvegarde.
+- Aucun défaut bloquant lié aux changements ciblés lors des premières sessions.
+
+---
+
+## Décisions actées et questions ouvertes
+
+| Sujet | État |
+|---|---|
+| Repartir d'une **nouvelle partie** | **Décidé** |
+| Utiliser `NEFARAM_Start` comme point de départ privilégié | **Décidé**, sous réserve d'une restauration MCM satisfaisante |
+| Protéger `Eleanor_Start` et l'ancien profil MO2 | **Obligatoire** |
+| Recréer Eleanor via preset RaceMenu JSON | **Prévu** |
+| Évaluer MCM Memory avant modification | **Priorité n° 1**, restauration à éprouver |
+| Supprimer Enslaved by the Thalmor, Unethical Alchemy, SexLab Approach | **Prévu**, dépendances à contrôler |
+| Ajouter Unethical SpellCraft | **Prévu**, version et intégration à confirmer |
+| Ajouter Estrus Unified 1.3 sans les anciens modules Estrus | **Décidé**, vérification des dépendants encore requise |
+| OviBody / Curse of Life / compagnons Estrus | **Exclus / désactivés** |
+| SLIF NG et coexistence des BodyMorphs | **Étude et validation à mener** |
+| Remplacer Fill Her Up Baka par Crajjj Edition | **Non décidé** ; étude comparative requise |
+| Oninus Lactis NG | **Facultatif**, décision à finaliser |
+| Pandora | **À régénérer** |
+| Synthesis | **À contrôler puis régénérer si nécessaire** |
+
+---
+
+## Règle de conduite
+
+> **Sauvegarder → exporter les MCM → tester leur restauration → modifier sur un profil de travail → régénérer → charger `NEFARAM_Start` → restaurer → valider → partir en Bordeciel.**
+>
+> Les anciennes heures de test restent acquises. **Nous validons les différences, pas l'ensemble du modpack depuis zéro.**
