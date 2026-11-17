@@ -80,10 +80,10 @@ The following tables reflect the **MO2 left-panel order** and FOMOD choices in t
 2. In **Filter Outfits** (top right), type `ovi`.
 3. In **Outfit/Body** (top left), select one of the two OviBody entries.
 4. Select the **Zeroed Sliders** preset.
-5. Build the **two OviBody BodySlide entries**.
+5. Keep **Build Morphs** checked, then build the **two OviBody BodySlide entries**.
 6. Use **Ctrl + Click** when batch-building to direct the generated files into the dedicated empty BodySlide output mod created in Part 1.
 
-The original guide refers to an accompanying post for images showing the BodySlide options.
+**Discord NEFARAM screenshot supplement (provided 17 November 2026):** the annotated screenshot identifies (1) `Filter Outfits` → `ovi`, (2) `Outfit/Body` → `CBBE 3BBB Ovibody Amazing (Separated Eggs...)`, (3) `Preset` → `- Zeroed Sliders -`, and (4) the bottom-left `Build Morphs` checkbox and `Batch Build` button. This screenshot is supplementary to the original DOCX.
 
 ### Pandora Behavior Engine+
 
@@ -96,7 +96,21 @@ The original guide refers to an accompanying post for images showing the BodySli
 
 According to the original guide, the **Estrus-related plugins** are the ones whose relative order appears to matter.
 
-**Reference missing:** The author mentions a screenshot showing their plugin load order, but that screenshot is not present in this text copy. Do not treat the MO2 left-panel tables above as a verified right-panel plugin order.
+The original DOCX does not include the plugin-order screenshot referenced by its author. A **supplementary screenshot found on the NEFARAM Discord** provides the following right-panel example, immediately after `Synthesis_0.esp`:
+
+| Relative order | Plugin | Discord screenshot index |
+|---:|---|---:|
+| 1 | `SexLab Inflation Framework.esp` | 1894 |
+| 2 | `OviMorphs.esp` | 1895 |
+| 3 | `EstrusChaurus.esp` | 1896 |
+| 4 | `EstrusDwemer.esp` | 1897 |
+| 5 | `EstrusSpider.esp` | 1898 |
+| 6 | `EstrusUnified.esp` | 1899 |
+| 7 | `OninusLactis.esp` | 1900 |
+| 8 | `CurseOfLife.esp` | 1901 |
+
+> [!IMPORTANT]
+> These are **relative plugin-order references from one Discord configuration**, not mandatory absolute indices for NEFARAM-Rhiven. Optional plugins apply only when their corresponding mods are installed. The MO2 left-panel installation order and right-panel plugin order are different things.
 
 ## Part 5 — MCM settings
 
@@ -120,4 +134,4 @@ The guide author states that MCM changes are generally down to personal preferen
 
 ---
 
-*Markdown restructuring for the NEFARAM-Rhiven reference repository. Technical claims, FOMOD choices, versions and credits remain attributed to Yiin & PastryFish; missing material is explicitly identified rather than reconstructed.*
+*Markdown restructuring for the NEFARAM-Rhiven reference repository. Original guide: Yiin & PastryFish (beta). The BodySlide and plugin-order screenshot supplements were supplied from the NEFARAM Discord on 17 November 2026; they are labelled separately from the original authors' content.*
