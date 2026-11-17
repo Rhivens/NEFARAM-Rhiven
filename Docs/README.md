@@ -88,6 +88,7 @@ These are the simplified or publication-oriented materials intended for NEFARAM 
 - [Animal Mansion Reborn](12%20-%20COMMUNITY%20GUIDES/ANIMAL-MANSION-REBORN/ANIMAL-MANSION-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
 - [Bathing in Skyrim](12%20-%20COMMUNITY%20GUIDES/BATHING-IN-SKYRIM/BATHING-IN-SKYRIM-NEFARAM-17.3.8-COMMUNITY-GUIDE.md)
 - [Beeing Female](12%20-%20COMMUNITY%20GUIDES/BEEING-FEMALE/README.md)
+- [Fill Her Up Baka — stuck inflation troubleshooting (FR)](12%20-%20COMMUNITY%20GUIDES/FILL-HER-UP/FHU-BAKA-STUCK-INFLATION-FIX-FR.md) — Discord community workaround, **unverified locally; use on backed-up saves only**.
 - [Lakeview Manor - As It Should Be](12%20-%20COMMUNITY%20GUIDES/LAKEVIEW-MANOR-AS-IT-SHOULD-BE/README.md)
 - [Naked Defeat](12%20-%20COMMUNITY%20GUIDES/NAKED-DEFEAT/README.md)
 - [NEFARAM Modding Guide by SkinnyPete](12%20-%20COMMUNITY%20GUIDES/NEFARAM-MODDING-GUIDE-by-SkinnyPete/NEFARAM_Modding_Guide_1.4_FR.md)
