@@ -1,80 +1,123 @@
-Yiin & PastryFish Estrus Guide
-Nefaram Version: 17.3.8				Guide Version: Beta
-Author: PastryFish				     Technical Details: Yiin
-Intro:	2
-Preamble:	2
-Compatibility:	2
-Install:	3
-Part 1 - Setup:	3
-Part 2 - Installing the Mods:	3
-Part 3 - Bodyslide Building & Pandora:	5
-Part 3 - Plugin Order:	5
-Part 4 - MCM Settings🛠️:	5
-Curse of Life:	5
-Mod Extras:	5
-Credits:	6
+# Estrus Guide — Yiin & PastryFish
 
- 
-Intro:
-Preamble:
-This guide is currently in the beta testing phase, this just means the mods run but haven’t been tested for any bugs or strange interactions/crashes that would happen later into a playthrough.
+> **NEFARAM version:** 17.3.8  
+> **Guide status:** Beta  
+> **Guide author:** PastryFish  
+> **Technical details:** Yiin
 
-This guide will run through how to install Estrus Unified and its prerequisites as well as Ovibody and Curse of Life (optional), and is intended for those of you that also have an oviposition kink. I’ve tried to make this as beginner friendly as possible and it should be a pretty quick install process (~10 mods needed).
-Compatibility:
-This set of mods is incompatible with Thoshy’s UBE guide. The optional Fertility mode in Nefaram might be compatible but you will get overlapping pregnancies if you use both Fertility mode and Curse of Life, so I don’t recommend using both mods.
-This mod set does work with Vokriinator Black as that is what I run it with as well as the preset compendium mods.
+> [!NOTE]
+> This is a Markdown formatting and navigation adaptation of the guide by **Yiin & PastryFish**, preserved for reference in the **NEFARAM-Rhiven** project. The original recommendations and mod versions have not been independently validated or changed.
 
-Install:
-Part 1 - Setup:
-Create the separators Estrus Requirements and Estrus and place them between AI Voices and Late Loaders. The [NoDelete] is optional 
+## Contents
 
-Next create an empty mod (right click in MO2 and select create empty mod) for your own bodyslide outputs and place it below Nefarams bodyslide output in the overwrites separator. 
-We do this so we don’t accidentally break the Nefaram bodyslide outputs.
-Part 2 - Installing the Mods:
-This table acts as the load order and any fomod options that you need to click (If the fomod option isn’t mentioned just don’t touch it). Ovibody and Curse of Life are linked.
- 
-Mod Name	Link to Mod & Fomod Options
-[NoDelete] Estrus Requirements
-Mu Dynamic Normal Map	https://www.nexusmods.com/skyrimspecialedition/mods/154657
+- [Introduction & beta status](#introduction--beta-status)
+- [Compatibility](#compatibility)
+- [Part 1 — MO2 setup](#part-1--mo2-setup)
+- [Part 2 — Installing the mods](#part-2--installing-the-mods)
+- [Part 3 — BodySlide & Pandora](#part-3--bodyslide--pandora)
+- [Part 4 — Plugin order](#part-4--plugin-order)
+- [Part 5 — MCM settings](#part-5--mcm-settings)
+- [Curse of Life](#curse-of-life)
+- [Mod extras](#mod-extras)
+- [Credits](#credits)
 
-OviBody (Optional)	https://www.loverslab.com/files/file/44392-3bagt-softbody-ovibody-reupload/
+## Introduction & beta status
 
-	CBBE 3BA
-	Separate
-Curse of Life (Optional)	https://www.loverslab.com/files/file/35438-curse-of-life-alternate-pregnancy-mod/
+This guide is currently in **beta testing**. The mods run, but have not yet been tested for bugs, unexpected interactions or crashes that might occur later in a playthrough.
 
-SLIF NG	https://www.nexusmods.com/skyrimspecialedition/mods/192276
+It covers installing **Estrus Unified** and its prerequisites, along with the optional **OviBody** and **Curse of Life** mods. It is intended for players interested in oviposition-themed gameplay. The installation is designed to be beginner-friendly and involves approximately 10 mods.
 
-[NoDelete] Estrus
-Estrus Chaurus v4.390	https://www.loverslab.com/files/file/1033-estrus-chaurus/
+## Compatibility
 
-Estrus Chaurus Dwemer Addon v4.342-3	https://www.loverslab.com/files/file/5546-estrus-chaurus-dwemer-addon/
+- **Thoshy's UBE guide:** Incompatible with this mod setup.
+- **NEFARAM's optional Fertility Mode:** Might be compatible, but using it with **Curse of Life** can result in overlapping pregnancies. The original guide recommends **not** using both together.
+- **Vokriinator Black:** Reported working by the guide author.
+- **Preset compendium mods:** Reported working by the guide author.
 
-Estrus Chaurus Spider Addon v4.342-5	https://www.loverslab.com/files/file/2438-estrus-chaurus-spider-addon-%E2%95%B2-%E2%80%A2%CC%80-%CF%89-%E2%80%A2%CC%81-%E2%95%B1/
+## Part 1 — MO2 setup
 
-Estrus Unified	https://www.loverslab.com/files/file/52434-estrus-unified/
+1. Create two separators in the **MO2 left panel**:
+   - `Estrus Requirements`
+   - `Estrus`
+2. Place them **between AI Voices and Late Loaders**. The `[NoDelete]` prefix used by the original guide is optional.
+3. In MO2, right-click and choose **Create empty mod** to make a dedicated **BodySlide output** mod.
+4. Place this empty output mod **below NEFARAM's BodySlide Output** in the **Overwrites** separator.
 
-	Milk Mod
-Oninus Lactis NG (optional)	https://www.loverslab.com/files/file/41560-oninus-lactis-ng/
+**Why?** This keeps the new BodySlide outputs separate and avoids unintentionally overwriting NEFARAM's existing output files.
 
-	Devious Devices
+## Part 2 — Installing the mods
 
-Part 3 - Bodyslide Building & Pandora:
-Once you’ve installed the above mods you’ll need to build the ovibody in bodyslide if you know how to build bodyslides just build the two ovibody bodyslides to zeroed. For the first time users open bodyslide in MO2 (drop down under the regular launcher). If you need a reference image for bodyslide locations check the guide post. 
-In the top right under filter outfits type in ovi.
-Next select one of the ovibody’s in the top left outfit/body selection. Then select zeroes sliders just below that.
-Then ctrl + click batch build and build it in the bodyslide empty mod you created in part 1.
+The following tables reflect the **MO2 left-panel order** and FOMOD choices in the original guide. Leave unmentioned FOMOD options at their defaults.
 
-You’ll next need to run Pandora Behaviour Engine+ and select the optional summon snap at the top. If you haven’t done this before you’ll find it in the same menu as bodyslide in MO2, just open the app, tick the optional snap animation at the top and click the run button on the right hand side. It should only take a few seconds to run, then just close it.
-Part 3 - Plugin Order:
-I’ve posted a screenshot of my plugin order, the only ones that order appears to matter are the estrus ones.
-Part 4 - MCM Settings🛠️:
-Still under construction but any mcm changes here are down to personal preference.
-Curse of Life:
-Mod Extras:
-	SLIF Framework
+### Separator: Estrus Requirements
 
-Credits:
-Most of the credit goes to Yiin who sent me a screenshot of their working load order with Estrus. I just documented my install process and put it in this guide with Yiin’s blessing.
+| Order | Mod | Link | FOMOD / notes |
+|---|---|---|---|
+| 1 | Mu Dynamic Normal Map | [Nexus Mods](https://www.nexusmods.com/skyrimspecialedition/mods/154657) | — |
+| 2 | OviBody **(optional)** | [LoversLab](https://www.loverslab.com/files/file/44392-3bagt-softbody-ovibody-reupload/) | **CBBE 3BA**, then **Separate** |
+| 3 | Curse of Life **(optional)** | [LoversLab](https://www.loverslab.com/files/file/35438-curse-of-life-alternate-pregnancy-mod/) | See compatibility warning above |
+| 4 | SLIF NG | [Nexus Mods](https://www.nexusmods.com/skyrimspecialedition/mods/192276) | — |
 
-No AI was used in the creation and formatting of this guide (idk about the easter egg background though as I just took it off pinterest)
+> **Note:** The original guide states that **OviBody and Curse of Life are linked**. Their precise dependency relationship is not explained in the available text.
+
+### Separator: Estrus
+
+| Order | Mod | Link | FOMOD / notes |
+|---|---|---|---|
+| 1 | Estrus Chaurus **v4.390** | [LoversLab](https://www.loverslab.com/files/file/1033-estrus-chaurus/) | — |
+| 2 | Estrus Chaurus Dwemer Addon **v4.342-3** | [LoversLab](https://www.loverslab.com/files/file/5546-estrus-chaurus-dwemer-addon/) | — |
+| 3 | Estrus Chaurus Spider Addon **v4.342-5** | [LoversLab](https://www.loverslab.com/files/file/2438-estrus-chaurus-spider-addon-%E2%95%B2-%E2%80%A2%CC%80-%CF%89-%E2%80%A2%CC%81-%E2%95%B1/) | — |
+| 4 | Estrus Unified | [LoversLab](https://www.loverslab.com/files/file/52434-estrus-unified/) | **Milk Mod** |
+| 5 | Oninus Lactis NG **(optional)** | [LoversLab](https://www.loverslab.com/files/file/41560-oninus-lactis-ng/) | **Devious Devices** |
+
+## Part 3 — BodySlide & Pandora
+
+### BodySlide: build OviBody meshes
+
+*Only applicable if OviBody is installed.*
+
+1. Launch **BodySlide** from MO2's executable dropdown.
+2. In **Filter Outfits** (top right), type `ovi`.
+3. In **Outfit/Body** (top left), select one of the two OviBody entries.
+4. Select the **Zeroed Sliders** preset.
+5. Build the **two OviBody BodySlide entries**.
+6. Use **Ctrl + Click** when batch-building to direct the generated files into the dedicated empty BodySlide output mod created in Part 1.
+
+The original guide refers to an accompanying post for images showing the BodySlide options.
+
+### Pandora Behavior Engine+
+
+1. Launch **Pandora Behaviour Engine+** through MO2.
+2. Enable the optional **Summon Snap** animation near the top.
+3. Click **Run** on the right-hand side.
+4. Once the process finishes, close Pandora.
+
+## Part 4 — Plugin order
+
+According to the original guide, the **Estrus-related plugins** are the ones whose relative order appears to matter.
+
+**Reference missing:** The author mentions a screenshot showing their plugin load order, but that screenshot is not present in this text copy. Do not treat the MO2 left-panel tables above as a verified right-panel plugin order.
+
+## Part 5 — MCM settings
+
+**Under construction in the original beta guide.**
+
+The guide author states that MCM changes are generally down to personal preference. No specific MCM values are documented in the supplied text.
+
+## Curse of Life
+
+**Section present in the original guide but not yet documented.** See the compatibility note about overlapping pregnancies when combining Curse of Life with Fertility Mode.
+
+## Mod extras
+
+- **SLIF Framework** — mentioned by the original author; no additional instructions were included.
+
+## Credits
+
+**PastryFish** wrote and documented the installation process, with **Yiin's** blessing. **Yiin** supplied the working Estrus load-order screenshot and technical guidance.
+
+> **Original author's note:** No AI was used in creating or formatting the original guide. The author also noted that the Easter egg background image came from Pinterest.
+
+---
+
+*Markdown restructuring for the NEFARAM-Rhiven reference repository. Technical claims, FOMOD choices, versions and credits remain attributed to Yiin & PastryFish; missing material is explicitly identified rather than reconstructed.*
