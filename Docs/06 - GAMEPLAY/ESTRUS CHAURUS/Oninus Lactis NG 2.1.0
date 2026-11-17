@@ -1,121 +1,131 @@
-Oninus Lactis NG 2.1.0
+# Oninus Lactis NG — v2.1.0
 
-About This File
+> **Source:** Mod-page text deposited in the NEFARAM-Rhiven repository. Reorganized in English while preserving the author's technical claims. Project-specific notes are identified separately.
 
-A simple framework for lactating/nipple squirt visual effects. Supports individual player and NPC effect offset and scaling.
+## Overview
 
+A standalone, sex-framework-independent **lactation / nipple-squirt visual effects framework**, providing individual effect offset and scaling for the player and NPCs.
 
-[Original Mod]
+The original listing references an **“Original Mod”** but supplies no URL for it.
 
- 
+## Requirements
 
-Requirements
+As listed by the author:
 
-    Skyrim: Special Edition (1.5.39+) or VR
-    [SKSE64]
-    [PapyrusUtil SE v3.9+]
-    [CBBE 3BA (3BBB)] (or UNP)
-    [XPMSSE]
+- **Skyrim Special Edition 1.5.39+**, or **Skyrim VR**
+- **SKSE64**
+- **PapyrusUtil SE v3.9+**
+- **CBBE 3BA (3BBB)** or **UNP**
+- **XPMSSE**
 
-Compatible Mods
+## Compatible mods explicitly listed
 
-    Dripping When Aroused NG
-    Soul Gem Oven 4: Integration Fork
+- **Dripping When Aroused NG**
+- **Soul Gem Oven 4: Integration Fork**
 
-Features
+> This is the complete named compatibility list in the copied Oninus Lactis NG description. **Estrus Unified is not explicitly listed on this page**; its own documentation separately mentions optional Oninus Lactis visual effects.
 
-    Updated, enhanced, and localized
-    Sex framework independent
-    Alternative equipment slot installation option (for compatibility with DD, OBody, OCum Ascended meshes, jewelry, etc.)
-    Customizable player and NPC nipple squirt offset and scaling.
-    (Optional) CBBE nipple leak overlay. UNP-B replacement included.
-    For mod authors: Public API to integrate the effect into other mods.
+## Features
 
-Standalone mode
+- Updated, enhanced and localized.
+- **Sex-framework independent:** visual effects can run in standalone mode.
+- **Alternative equipment-slot installation option** for compatibility with Devious Devices, OBody, OCum Ascended meshes, jewelry and other slot users.
+- Player- and NPC-specific emitter offset and scaling.
+- Optional CBBE nipple-leak overlay, with UNP-B replacement included.
+- Public API for other mod authors to request effects.
 
-    Press "K" with no NPC under the crosshair to toggle the effect on/off for the player.
-    Press "K" key to toggle the effect on/off for any female NPC under the crosshair. Supports up to 20 simultaneous effects.
+## Installation
 
-Installation
+Install with a mod manager; the author states development and testing were performed using **MO2**.
 
-Install with your favorite mod manager (developed and tested with MO2).
+The **alternative equipment-slot option** may be relevant when using Devious Devices or other equipment/overlay systems. The source does not name the exact slot numbers or dictate a specific FOMOD selection for every modpack.
 
- 
+## Standalone mode
 
-Uninstall
+- Default hotkey: **K** (configurable in the MCM).
+- Press **K** with **no NPC under the crosshair** to toggle the effect on the player.
+- Press **K** while aiming at a **female NPC** to toggle the effect on that NPC.
+- The effect can be toggled when the actor is clothed if configured accordingly.
 
-Click the uninstall option in the MCM menu. This will stop all running effects, delete all stored actor settings, and prepare the mod for removal.
+### Important limit discrepancy in the original text
 
-After clicking the option you need to exit MCM, then save and exit the game. Deactivate the Lactis mod and restart the game again. Load your save, play for a little while, change cell, save and exit game again.
+The source gives **two different limits**:
 
- 
+- Under “Standalone mode”: **up to 20 simultaneous effects**.
+- Under “MCM configuration”: **up to 10 NPCs plus the player**.
 
-When using standalone mode (key K) on various NPCs, don't save or travel. Leaving cells and saving/reloading save games may cause issues with save game bloat.
+The actual limit in **v2.1.0** needs confirmation from the mod in game or its current author documentation. Neither statement has been silently discarded.
 
- 
+> **Save warning (original author):** When using the standalone K-key effect across multiple NPCs, **do not save or travel**. Leaving cells and saving/reloading may cause save-game bloat or related issues.
 
-MCM settings export
+## MCM configuration
 
-The MCM setting can be exported to and imported from a file. Choose the option "Export MCM settings" in the MCM menu and find the file in your Data folder at 'SKSE/Plugins/Lactis/MCM_Settings.json'.
+### Settings page
 
- 
+- **Toggle nipple squirt key:** remap the target/player effect hotkey (default **K**).
+- **Player Nipple Offset:** align the emitter origin to the player's body.
+- **Enable while clothed:** allow effects without the actor being naked, including with revealing outfits.
+- **Nipple leak overlay:** CBBE EffectShader texture; a UNP-B replacement is included.
+- **Debug axis:** display an alignment aid for the player and NPCs.
+- **Global emitter scale:** adjust left and right emitter sizing.
 
-Choose "Import MCM settings" to import from the file at the location mentioned above.
+### Actor offsets page
 
- 
+1. Choose the actor under the crosshair or an entry from **Stored actor offset**.
+2. Configure the actor's emitter offset and scaling.
+3. Changes are automatically stored.
+4. **Exit the MCM and re-toggle the effect** to apply the updated values.
 
-Note that NPC offsets are NOT exported for now. This feature will be added in a future release.
+### MCM export / import
 
- 
+The author documents:
 
-Physics
+- **Export MCM settings** → `Data/SKSE/Plugins/Lactis/MCM_Settings.json`
+- **Import MCM settings** ← the same file
 
-Developed and works best with CBPC. With SMP nipple offset is somewhat off/delayed.
+**NPC-specific offsets are not exported** in the documented release; the author says support may be added later.
 
- 
+## Body physics and technical notes
 
-Technical details
+- Developed with **XPMSSE and CBBE 3BA**.
+- The author reports a successful **BHUNP** user test.
+- **CBPC** is recommended: the emitter alignment performs best with CBPC.
+- Under **SMP**, the nipple offset can be delayed or misaligned.
 
-This mod was developed using XPMSSE and the 3BA body. It was tested by a BHUNP user who confirmed that this works, too.
+## Known issues
 
- 
+- Particle effects may appear odd from some camera angles.
+- SMP may delay or misalign emitter offsets relative to CBPC.
+- During **OStim** scenes, face lighting can cause flickering facial effects on players and NPCs.
+- Save/travel concerns when manually using the effect on multiple NPCs are described above.
 
-Known issues
+## Uninstallation procedure (as documented)
 
-    Particles look weird from some angles.
-    When using SMP nipple offset is somehow delayed (CBPC works better)
-    During OStim scenes: Flickering face effects when using face lights. Affects player and NPCs.
+1. In the MCM, choose the **uninstall** option. This stops active effects and removes stored actor settings.
+2. Exit the MCM, **save**, then exit the game.
+3. Deactivate Oninus Lactis NG and restart Skyrim.
+4. Load the save, play briefly, **change cell**, then save and exit again.
 
-MCM configuration
+> These steps are copied from the author's advice. In heavily scripted setups, keep a backup save before removing any active mod.
 
-Use MCM to configure nipple offset and scale for the player and NPCs. You can enable a debug axis to make this step easier. Use other parameters to adjust effect if desired.
+## Credits and assets
 
- 
+- **Orbus Ninus** — original mod.
+- The author acknowledges permitted texture usage from [SexLab Hentai Pregnancy Special Edition](https://www.loverslab.com/topic/98782-sexlab-hentai-pregnancy-special-edition/).
 
-The standalone nipple squirt effect can be toggled on/off via the key "K" (can be configured via MCM). This works for up to 10 NPCS and the player actor. The effect can be toggled on/off at any time even when your character or the NPC is not naked.
+---
 
- 
+## NEFARAM-Rhiven integration checkpoints (project notes)
 
-Settings page
+These are **verification tasks**, not conclusions that testing has already passed.
 
-    Toggle nipple squirt key - remaps toggle nipples squirting on a target actor or the player (Default K).
-    Player Nipple Offset for the nipple squirt emitter origin. Adjust to match the player's body.
-    Enable nipple squirt even when actor is not naked. This might help with revealing armors/clothing.
-    Enable nipple leak (CBBE EffectShader) overlay texture which simulates nipple leak. A UNP-B replacement texture is also included.
-    Enable debug axis for nipple offset adjustments. Applies to player and NPCs.
-    Global emitter scale for left and right emitters. Applies to player and NPCs.
+1. **Optional status:** Oninus Lactis is optional in the Estrus Unified documentation; it adds **milk-leak visuals**, not a separate pregnancy framework.
+2. **CBBE 3BA / CBPC:** check emitter alignment for the current Rhiven body and physics settings.
+3. **Devious Devices:** inspect the FOMOD alternative equipment-slot choice and any known slot conflicts; do not assume a particular slot is free.
+4. **Estrus Unified:** confirm its optional Oninus Lactis effect choice, visual triggering and cleanup.
+5. **BeeingFemale NG / MME:** the Oninus page does not explicitly document these integrations. Do not infer either compatibility or conflict solely from this source.
+6. **Standalone mode:** avoid routine K-key testing on many NPCs until the author's save warning is understood.
+7. **Limit discrepancy:** check whether v2.1.0 supports 20 effects, or 10 NPCs plus player, as the copied text is inconsistent.
+8. **Final integration decision:** postpone until all mod fiches and NEFARAM Discord notes have been reviewed.
 
-Actor offsets page
-
-    Select actor under crosshair or from *Stored actor offset*
-    Configure the offset and scale, all changes are automatically saved. You have to exit MCM and re-toggle the effect to have the new values applied.
-
-Thanks & asset contributors
-
- 
-
-Thanks to Orbus Ninus for the original mod.
-
-
-Uses some textures from
-https://www.loverslab.com/topic/98782-sexlab-hentai-pregnancy-special-edition/ with permission.
+*Original technical details preserved; potential contradictions and project-specific assumptions are flagged rather than silently reconciled.*
