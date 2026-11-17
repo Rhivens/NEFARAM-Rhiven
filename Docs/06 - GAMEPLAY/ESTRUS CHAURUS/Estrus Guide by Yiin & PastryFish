@@ -1,5 +1,8 @@
 # Estrus Guide — Yiin & PastryFish
 
+> [!WARNING]
+> **Legacy installation guide — not applicable as written to merged Estrus Unified 1.1+ (including the documented 1.2/1.3 builds).** The original guide instructs installing Estrus Chaurus, Spider and Dwemer separately. Current merged Unified **replaces** those plugins and their animation assets. For a new-game installation, read the [Estrus Unified technical reference](./Estrus%20Unified) first. This document remains preserved as a credited historical guide; do not apply its separate-plugin installation list or plugin-order screenshot to Unified 1.1+.
+
 > **NEFARAM version:** 17.3.8  
 > **Guide status:** Beta  
 > **Guide author:** PastryFish  
