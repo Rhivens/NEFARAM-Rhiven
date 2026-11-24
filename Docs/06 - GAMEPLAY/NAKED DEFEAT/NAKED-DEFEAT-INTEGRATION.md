@@ -1,4 +1,132 @@
-# NEFARAM 17.3.8 — Migration from Practical Defeat / Yamete Kudasai to Naked Defeat 6.52
+# NEFARAM-Rhiven 17.3.8 — Naked Defeat 7.00 + Hotfix 1 integration (November 2026)
+
+> **STATUS — STATIC AUDIT COMPLETED; SAVE MIGRATION / BASIC WORLD INTERACTIONS OBSERVED; DEFEAT GAMEPLAY VALIDATION PENDING.**
+>
+> This is the **current integration section**. Everything under **Historical integration archive (6.50–6.52)** is preserved for traceability, not as an instruction to install those older versions.
+
+## Current target and migration
+
+- Skyrim AE **1.6.1170**; NEFARAM-Rhiven **17.3.8**; Acheron **1.11.3**; MO2 test profile **`Eleanor 17.3.8 - Naked Defeat`**.
+- Naked Defeat **7.00 FULL + official Hotfix 1** replaces **6.50 FULL and all incremental 6.52/6.53 patches**. Disable old bases, patches and old translations; never allow 6.53 `.pex` files to override 7.00.
+- New **hard dependency: Papyrus Ini Manipulator** (Rhiven already has 1.9.8).
+- **Acheron → Acheron - Naked Defeat Bridge → Naked Defeat 7.00** remains the tested *static* architecture. Acheron detects bleedout; Naked Defeat handles consequences. Do not run **Yamete Kudasai** (including its consequence YAML assets) or **Practical Defeat Reanimated / voicepack** alongside this stack.
+- **Crawl OAR V2 enabled / Bowed OAR disabled** on this profile; keep only one alternative enabled.
+- Nymra states that **save compatibility is a first priority** and Naked Defeat is designed not to require a new game. This is an author intention, not a guarantee for every setup or third-party bridge. Keep the 6.53 save and a cloned MO2 profile as rollback points.
+
+### MO2 — actual Rhiven test layout
+
+```text
+DISABLED: Naked Defeat 6.50 FULL / 6.52 / 6.53 / old FR
+DISABLED: separate 7.00 FULL and Hotfix modules (after creating fusion)
+ENABLED:  Naked Defeat 7.00 FULL + Hotfix 1 — FUSION (Hotfix PEX files winning)
+ENABLED:  Naked Defeat 7.00 FUSION FR (built from the hotfixed 7.00 scripts)
+DISABLED: Naked Defeat - EXTRA - Profile JSONs (legacy)
+ENABLED:  Naked Defeat - EXTRA - ConfigINIs
+ENABLED:  Naked Defeat - Rhiven Fix (provisional)
+ENABLED:  Acheron - Naked Defeat Bridge (provisional 7.00 compatibility)
+ENABLED:  Naked Defeat - EXTRA - OAR Crawl Animations V2
+DISABLED: Naked Defeat - EXTRA - OAR Bowed Animations
+DISABLED: Yamete Kudasai / Practical Defeat Reanimated / its voicepack
+ENABLED:  Naked Defeat - Synthesis Fix after Synthesis_1.esp (provisional)
+```
+
+The **FUSION is a Rhiven maintenance choice**, not an official requirement: community users can instead keep FULL → Hotfix → compatible FR override, provided the **translated PEX files originate from the Hotfix**, not from 6.53. Check MO2's **Data** and **Conflicts** tabs; priority alone does not prove the final assets are correct.
+
+### New external configuration
+
+Naked Defeat 7.00 replaces `nadeConfig.JSON` and legacy hairstyle JSON files with **`NakedConfig/*.ini`**. Papyrus looks for paths such as `Data/NakedConfig/nade_HairStyles.ini`. The Rhiven EXTRA module uses:
+
+```text
+Naked Defeat - EXTRA - ConfigINIs/
+└── NakedConfig/
+    ├── nade_Config.ini
+    ├── nade_DefeatSex.ini
+    ├── nade_FactionBehavior.ini
+    ├── nade_Followers.ini
+    ├── nade_Furniture.ini
+    ├── nade_HairStyles.ini
+    ├── nade_NakedLoot.ini
+    ├── nade_PublicPunishment.ini
+    └── nade_TTS_Options.ini
+```
+
+The nine default EXTRA INIs were compared with FULL and matched. The Hotfix archive also included `nade_Config_Factions.ini` (internal version 653), which was not found among the INI paths referenced by examined 7.00 sources; leave it untouched rather than overwriting `nade_FactionBehavior.ini`. In MO2, the red **No valid game data** flag on this INI-only package was non-blocking: MO2's Conflicts view showed its nine INIs overriding the FULL equivalents. Verify virtual paths, not the icon alone.
+
+**Eleanor's hairstyles** were migrated from three 6.53 JSON profiles into `nade_HairStyles.ini`: ten Free, ten Messy and ten Slave entries, preserving original names and the repeated `HairFemaleRedguard04` weighting. Old JSONs are kept disabled for rollback.
+
+### Translation and animation tags
+
+- xTranslator / ESP-ESM Translator can reuse 6.53 translations, but only apply textual changes to **7.00 FULL + Hotfix 1** assets. Never copy translated 6.53 compiled scripts on top of Hotfix 1.
+- Rhiven created a separate French override of the fused 7.00 package. The final compiled output still requires **in-game smoke tests**.
+- The new **Nymra Action Log** (`NymLogVersion022`) must be registered / reapplied through **SLATE**; refresh Naked Defeat MCM afterward to re-evaluate soft dependencies. Check the SLATE requirement indicator.
+- Nymra notes **SLATE does not natively work with SexLab P+**; a third-party converter exists but is not validated here. This build uses the existing SexLab setup; do not assume compatibility from reports about P+.
+- **Bathing in Skyrim Renewed** is the preferred bathing integration. One reported issue after defeat concerns the bathing mod's watcher detection; compare its own hotkey with Naked Defeat's Shift+K Bathing action if reproduced.
+
+## 7.00 source, xEdit and Bridge audit
+
+### Version comparison
+
+Source archives reviewed: `ND_Sources_6.53.zip`, `ND_Sources_7.0.zip`, `ND_Sources_7.0_Hotfix.zip`.
+
+| Comparison | Changed `.psc` scripts | Added / removed |
+| --- | ---: | ---: |
+| 6.53 → 7.00 FULL | 18 | 0 |
+| 7.00 FULL → Hotfix 1 | 6 | 0 |
+| 6.53 → 7.00 Hotfix 1 | 18 | 0 |
+
+Each archive contains 244 `.psc` files. These counts describe the **sources inspected**, not the number of shipped compiled scripts.
+
+### Confirmed upstream correction
+
+In `nade_storage_qf_scr.psc`, `GetDefeatType_FromFaction()`, the duplicate `FactionsPredators[7]` condition formerly mapping both Sabrecats and Chaurus was corrected; Chaurus now uses `FactionsPredators[3]`. Nymra acknowledged Rhivens_'s report and stated it was fixed; the correction was also observed in 7.00.
+
+### Acheron Bridge
+
+- Quest `achnadeBridgeQuest` uses scripts `achnadeBridgeQuestScript.psc` and `QF_achnadeBridgeQuest_0A005900.psc`.
+- Bridge sends `StartNakedDefeatExternal` with **six assailant slots**; the matching event handler in `nade_configquest_scr.psc` remained unchanged between 6.53, FULL and Hotfix.
+- **Potential diagnostic weakness:** the Bridge does not confirm a successful start after event dispatch. If first assailant (`Enemy00`) is missing, Naked Defeat can decline to start. This is **not a reproduced root cause** of a defeat loop.
+- Bridge overrides `nade_Sandbox` (12 PKCU inputs vs 2 in the 7.00 base). The newer Naked Defeat AI package management uses Skyrim.esm sandbox packages in one examined path, reducing a presumed direct override conflict; **complete package interaction remains untested**.
+- Do **not** rewrite the Bridge or its sandbox package preemptively. Revisit on reproducible defeat issues.
+
+### ESP record anomalies / corrective patches
+
+SSEEdit review reconfirmed `nade_WristChains_L/R` (invalid `REFR` references inside Additional Races) and `nade_Stick` / `nade_BoneMace` (malformed `CRDT → Effect`). Rhiven Fix normalizes those; Synthesis Fix protects `nade_Stick` after `Synthesis_1.esp`.
+
+**Author clarification:** Nymra says those four records are **legacy Naked Dungeons artifacts that are never called/used**. Therefore these patches are **optional cleanup / local overrides**, not confirmed gameplay requirements for Naked Defeat 7.00. The patches remain enabled **provisionally** on Rhiven's test profile, pending final review of masters and winning overrides. Avoid presenting them as universally mandatory.
+
+`HighHrothgar` CELL and `RuinsCandleSconceOn2` REFR conflicts were inspected; no reproducible 7.00 issue established.
+
+### Open Papyrus observations — NOT confirmed bugs
+
+- `nade_allegiancequest_qf_scr.psc`, `AreaScanDuplicateEnemies()`: `storqst.CurrentLocationDefeatType; = "NoDefeatType"` has a semicolon that comments out the assignment. Determine whether the surrounding revised first-match scan intentionally makes this obsolete.
+- `nade_storage_qf_scr.psc`, `Actor_ResetPackages()`: `ActorUtil.ClearPackageOverride(akActor)` may clear overrides owned by other mods; investigate API semantics and test before calling it a compatibility defect.
+- `nade_calmquest_qf_scr.psc` Hotfix adds a control-release path for non-Escape-Crawl endings. Other exits (captivity, interrupted scenes, rescue) still require gameplay testing.
+- First assailant validity, scenario selection failures and repeat knockdown/recovery loops remain diagnostic targets; none is proven to originate from the Bridge.
+
+## Actual 7.00 migration observations and limits
+
+**Observed:** existing 6.53 save loaded under the 7.00 FR fusion; Eleanor changed cells, used bathing and saved again. No specific Naked Defeat issue was isolated in initial ReSaver++ inspection. This is **not** proof that defeat scenarios or bridge recovery work.
+
+ReSaver baseline (6.53 save): about **191,218 script instances**, **365 missing spawned-object instances**, **11 suspended stacks** (Animated Carriage-related), zero queued unbinds. First 7.00 save: about **191,427 instances**, **380 missing**, **11 suspended**; after a separate *experimental cleaned-copy* load, bathing and cell changes: about **191,269 instances**, **22 missing** and no suspended stacks observed. These data are **time-dependent snapshots**, not evidence of a Naked Defeat regression or proof that cleaning helped. Preserve original saves; do not treat ReSaver cleanup as required for this upgrade. Some missing ActorBase references were still held by `FWAbilityBeeingFemale`; attribution of their creation remains unverified.
+
+### Mandatory first live tests — PENDING
+
+1. Confirm Naked Defeat MCM registration and dependency indicators, especially **Papyrus Ini Manipulator** and SLATE, and register the new Action Log.
+2. With Acheron Bridge, **Defeat on Bleedout must be 0** to avoid duplicate handlers. Confirm Acheron handling enabled. Keep `IndecencyRapeProb = 0` until the legacy missing-quest path is rechecked specifically in 7.00; do not assume the 6.52 result was retested.
+3. Trigger a simple human enemy defeat **without follower**, check assailant classification, scenario start, end, controls restored and Acheron rescue/release.
+4. Test repeated defeats, creature defeat, captivity / furniture escape, non-Escape-Crawl ending and save → quit → reload after a completed event.
+5. Check Bathing in Skyrim Renewed both through its own shortcut and Naked Defeat Shift+K after defeat; compare watcher detection only if an issue arises.
+6. Monitor new package behavior and search radius (Nymra confirms enemies converging from the scan radius is intentional); adjust in MCM/INI as appropriate.
+7. Revisit bridge scripts and `nade_Sandbox` only if a reproducible failure warrants investigation.
+
+**Verdict:** 7.00 **is ready for controlled gameplay testing**, not yet certified as fully validated on Rhiven's main save.
+
+---
+
+# Historical integration archive — Naked Defeat 6.50–6.52 (retain for reference)
+
+> **Archived baseline only.** Following sections reflect what was true at the time of the 6.52 integration. References to “current”, mandatory Rhiven Fix, 6.52 filenames, record counts and old MCM settings must **not** override the current 7.00 guidance above.
+
 
 > **Status: NAKED DEFEAT 6.52 CORE INTEGRATION VALIDATED — EXTENDED PLAYTESTING ONGOING**
 >
